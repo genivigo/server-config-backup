@@ -540,6 +540,9 @@
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform -c populate_sdk</arg>
               </exec>
             </tasks>
+            <artifacts>
+              <artifact src="gdp-src-build/tmp/deploy/sdk" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
