@@ -541,7 +541,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>big_disk</resource>
+              <resource>ga_test</resource>
             </resources>
             <artifacts>
               <artifact src="gdp-src-build/tmp/deploy/sdk" />
