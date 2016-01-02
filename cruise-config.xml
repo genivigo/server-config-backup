@@ -580,6 +580,35 @@
   </pipelines>
   <pipelines group="franca_install_automation" />
   <templates>
+    <pipeline name="franca_install_automation">
+      <stage name="install_stage">
+        <jobs>
+          <job name="install_job">
+            <environmentvariables>
+              <variable name="EXIT_ON_FAILURE">
+                <value>true</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <exec command="./script.sh" />
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cd /var/go/tools &amp;&amp; tar cfz ${GO_PIPELINE_NAME}_${GO_REVISION_FRANCA_INSTALL_AUTOMATION_GIT}.tar.gz autoeclipse</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mv /var/go/tools/${GO_PIPELINE_NAME}_${GO_REVISION_FRANCA_INSTALL_AUTOMATION_GIT}.tar.gz .</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <artifacts>
+              <artifact src="franca_install*.tar.gz" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
     <pipeline name="Yocto_GDP_Build_4_thread_limit">
       <stage name="build">
         <jobs>
