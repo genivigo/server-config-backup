@@ -578,6 +578,7 @@
       </admins>
     </authorization>
   </pipelines>
+  <pipelines group="franca_install_automation" />
   <templates>
     <pipeline name="Yocto_GDP_Build_4_thread_limit">
       <stage name="build">
