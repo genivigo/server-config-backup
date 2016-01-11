@@ -228,6 +228,7 @@
                 <arg>-Dtarget.id=org.genivi.commonapi.dbus.target</arg>
                 <arg>clean</arg>
                 <arg>verify</arg>
+                <runif status="passed" />
               </exec>
               <exec command="mkdir">
                 <arg>bin</arg>
