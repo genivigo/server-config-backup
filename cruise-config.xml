@@ -601,7 +601,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="common-api-cpp-someip-tools">
+    <pipeline name="common-api-cpp-someip-tools" labeltemplate="${COUNT}:master:${cpp-someip-tools.git[:8]}" isLocked="false">
       <materials>
         <git url="http://git.projects.genivi.org/common-api/cpp-someip-tools.git" dest="cpp-someip-tools" materialName="cpp-someip-tools.git" />
         <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
