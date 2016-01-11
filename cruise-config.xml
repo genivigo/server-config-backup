@@ -207,7 +207,7 @@
     </pipeline>
     <pipeline name="common-api-cpp-dbus-tools" labeltemplate="${COUNT}:master:${common-api-dbus-tools.git[:8]}" isLocked="false">
       <materials>
-        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-tools.git" materialName="common-api-dbus-tools.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-tools.git" dest="common-api-dbus-tools" materialName="common-api-dbus-tools.git" />
       </materials>
       <stage name="build">
         <jobs>
