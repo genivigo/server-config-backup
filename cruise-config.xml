@@ -205,59 +205,6 @@
         <git url="http://git.projects.genivi.org/ipc/common-api-runtime.git" materialName="common-api-runtime.git" />
       </materials>
     </pipeline>
-    <pipeline name="common-api-cpp-dbus-tools" labeltemplate="${COUNT}:master:${common-api-dbus-tools.git[:8]}" isLocked="false">
-      <materials>
-        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-tools.git" dest="common-api-dbus-tools" materialName="common-api-dbus-tools.git" />
-        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
-      </materials>
-      <stage name="build">
-        <jobs>
-          <job name="build">
-            <tasks>
-              <exec command="mkdir">
-                <arg>-p</arg>
-                <arg>patch</arg>
-                <arg>bin</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="curl" workingdir="patch">
-                <arg>-Lo</arg>
-                <arg>0001-Fixed-incorrect-relative-paths-in-commonapi.dbus-mav.patch</arg>
-                <arg>http://bugs.genivi.org/attachment.cgi?id=180</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="sh" workingdir="common-api-dbus-tools">
-                <arg>-c</arg>
-                <arg>patch -p1 &lt;../patch/0001-Fixed-incorrect-relative-paths-in-commonapi.dbus-mav.patch</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="mvn" workingdir="common-api-tools/org.genivi.commonapi.core.releng">
-                <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
-                <arg>clean</arg>
-                <arg>verify</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="mvn" workingdir="common-api-dbus-tools/org.genivi.commonapi.dbus.releng">
-                <arg>-Dtarget.id=org.genivi.commonapi.dbus.target</arg>
-                <arg>clean</arg>
-                <arg>verify</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="unzip" workingdir="bin">
-                <arg>../common-api-dbus-tools/org.genivi.commonapi.dbus.cli.product/target/products/commonapi_dbus_generator.zip</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>maven</resource>
-            </resources>
-            <artifacts>
-              <artifact src="bin" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="common-api-cpp-dbus-runtime" labeltemplate="${COUNT}:master:${common-api-dbus-runtime.git[:8]}" isLocked="false">
       <materials>
         <git url="http://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" materialName="common-api-dbus-runtime.git" />
@@ -600,7 +547,61 @@
     </authorization>
   </pipelines>
   <pipelines group="franca_install_automation" />
-  <pipelines group="Tools" />
+  <pipelines group="Tools">
+    <pipeline name="common-api-cpp-dbus-tools" labeltemplate="${COUNT}:master:${common-api-dbus-tools.git[:8]}" isLocked="false">
+      <materials>
+        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-tools.git" dest="common-api-dbus-tools" materialName="common-api-dbus-tools.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
+      </materials>
+      <stage name="build">
+        <jobs>
+          <job name="build">
+            <tasks>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>patch</arg>
+                <arg>bin</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="curl" workingdir="patch">
+                <arg>-Lo</arg>
+                <arg>0001-Fixed-incorrect-relative-paths-in-commonapi.dbus-mav.patch</arg>
+                <arg>http://bugs.genivi.org/attachment.cgi?id=180</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="sh" workingdir="common-api-dbus-tools">
+                <arg>-c</arg>
+                <arg>patch -p1 &lt;../patch/0001-Fixed-incorrect-relative-paths-in-commonapi.dbus-mav.patch</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mvn" workingdir="common-api-tools/org.genivi.commonapi.core.releng">
+                <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
+                <arg>clean</arg>
+                <arg>verify</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mvn" workingdir="common-api-dbus-tools/org.genivi.commonapi.dbus.releng">
+                <arg>-Dtarget.id=org.genivi.commonapi.dbus.target</arg>
+                <arg>clean</arg>
+                <arg>verify</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="unzip" workingdir="bin">
+                <arg>../common-api-dbus-tools/org.genivi.commonapi.dbus.cli.product/target/products/commonapi_dbus_generator.zip</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>maven</resource>
+            </resources>
+            <artifacts>
+              <artifact src="bin" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+  </pipelines>
   <templates>
     <pipeline name="franca_install_automation">
       <stage name="install_stage">
