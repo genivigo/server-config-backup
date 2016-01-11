@@ -235,7 +235,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="unzip" workingdir="bin">
-                <arg>../org.genivi.commonapi.dbus.cli.product/target/products/commonapi_dbus_generator.zip</arg>
+                <arg>../common-api-dbus-tools/org.genivi.commonapi.dbus.cli.product/target/products/commonapi_dbus_generator.zip</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
