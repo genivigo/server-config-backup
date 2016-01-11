@@ -167,39 +167,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="common-api-cpp-tools" labeltemplate="${COUNT}:master:${common-api-tools.git[:8]}" isLocked="false">
-      <materials>
-        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" materialName="common-api-tools.git" />
-      </materials>
-      <stage name="build">
-        <jobs>
-          <job name="build">
-            <tasks>
-              <exec command="mvn" workingdir="org.genivi.commonapi.core.releng">
-                <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
-                <arg>clean</arg>
-                <arg>verify</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="mkdir">
-                <arg>bin</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="unzip" workingdir="bin">
-                <arg>../org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>maven</resource>
-            </resources>
-            <artifacts>
-              <artifact src="bin" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="common-api-cpp-runtime" labeltemplate="${COUNT}:master:${common-api-runtime.git[:8]}" isLocked="false" template="CMAKE_build">
       <materials>
         <git url="http://git.projects.genivi.org/ipc/common-api-runtime.git" materialName="common-api-runtime.git" />
@@ -588,6 +555,39 @@
               </exec>
               <exec command="unzip" workingdir="bin">
                 <arg>../common-api-dbus-tools/org.genivi.commonapi.dbus.cli.product/target/products/commonapi_dbus_generator.zip</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>maven</resource>
+            </resources>
+            <artifacts>
+              <artifact src="bin" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="common-api-cpp-tools" labeltemplate="${COUNT}:master:${common-api-tools.git[:8]}" isLocked="false">
+      <materials>
+        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" materialName="common-api-tools.git" />
+      </materials>
+      <stage name="build">
+        <jobs>
+          <job name="build">
+            <tasks>
+              <exec command="mvn" workingdir="org.genivi.commonapi.core.releng">
+                <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
+                <arg>clean</arg>
+                <arg>verify</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mkdir">
+                <arg>bin</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="unzip" workingdir="bin">
+                <arg>../org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
