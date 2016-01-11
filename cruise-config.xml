@@ -601,6 +601,20 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="common-api-cpp-someip-tools">
+      <materials>
+        <git url="http://git.projects.genivi.org/common-api/cpp-someip-tools.git" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <ant />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <templates>
     <pipeline name="franca_install_automation">
