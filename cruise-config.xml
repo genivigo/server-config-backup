@@ -224,13 +224,13 @@
                 <arg>clean</arg>
                 <arg>verify</arg>
               </exec>
-              <exec command="mkdir">
-                <arg>bin</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="sh" workingdir="common-api-dbus-tools">
                 <arg>-c</arg>
                 <arg>patch -p1 &lt;../patch/0001-Fixed-incorrect-relative-paths-in-commonapi.dbus-mav.patch</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mkdir">
+                <arg>bin</arg>
                 <runif status="passed" />
               </exec>
               <exec command="unzip" workingdir="bin">
