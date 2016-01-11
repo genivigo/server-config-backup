@@ -219,15 +219,15 @@
                 <arg>http://bugs.genivi.org/attachment.cgi?id=180</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mvn" workingdir="org.genivi.commonapi.dbus.releng">
-                <arg>-Dtarget.id=org.genivi.commonapi.dbus.target</arg>
-                <arg>clean</arg>
-                <arg>verify</arg>
-              </exec>
               <exec command="sh" workingdir="common-api-dbus-tools">
                 <arg>-c</arg>
                 <arg>patch -p1 &lt;../patch/0001-Fixed-incorrect-relative-paths-in-commonapi.dbus-mav.patch</arg>
                 <runif status="passed" />
+              </exec>
+              <exec command="mvn" workingdir="org.genivi.commonapi.dbus.releng">
+                <arg>-Dtarget.id=org.genivi.commonapi.dbus.target</arg>
+                <arg>clean</arg>
+                <arg>verify</arg>
               </exec>
               <exec command="mkdir">
                 <arg>bin</arg>
