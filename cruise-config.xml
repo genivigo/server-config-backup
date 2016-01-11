@@ -239,6 +239,12 @@
                 <arg>../common-api-dbus-tools/org.genivi.commonapi.dbus.cli.product/target/products/commonapi_dbus_generator.zip</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="mvn" workingdir="common-api-tools">
+                <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
+                <arg>clean</arg>
+                <arg>verify</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>maven</resource>
