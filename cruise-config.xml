@@ -607,10 +607,13 @@
       </materials>
       <stage name="build">
         <jobs>
-          <job name="defaultJob">
+          <job name="build">
             <tasks>
               <ant />
             </tasks>
+            <resources>
+              <resource>maven</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
