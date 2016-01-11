@@ -232,6 +232,11 @@
                 <arg>../org.genivi.commonapi.dbus.cli.product/target/products/commonapi_dbus_generator.zip</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="sh" workingdir="common-api-dbus-tools">
+                <arg>-c</arg>
+                <arg>patch -p1 &lt;../patch/0001-Fixed-incorrect-relative-paths-in-commonapi.dbus-mav.patch</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>maven</resource>
