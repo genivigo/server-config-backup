@@ -224,7 +224,7 @@
                 <arg>patch -p1 &lt;../patch/0001-Fixed-incorrect-relative-paths-in-commonapi.dbus-mav.patch</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mvn" workingdir="org.genivi.commonapi.dbus.releng">
+              <exec command="mvn" workingdir="common-api-dbus-tools/org.genivi.commonapi.dbus.releng">
                 <arg>-Dtarget.id=org.genivi.commonapi.dbus.target</arg>
                 <arg>clean</arg>
                 <arg>verify</arg>
