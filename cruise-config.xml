@@ -162,6 +162,7 @@
             </tasks>
             <resources>
               <resource>cmake</resource>
+              <resource>lbs</resource>
             </resources>
           </job>
         </jobs>
