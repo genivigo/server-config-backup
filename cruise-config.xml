@@ -201,6 +201,15 @@
               <resource>lbs</resource>
             </resources>
           </job>
+          <job name="plain-dbus_dlt_gpsd">
+            <tasks>
+              <ant />
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+              <resource>lbs</resource>
+            </resources>
+          </job>
         </jobs>
       </stage>
     </pipeline>
