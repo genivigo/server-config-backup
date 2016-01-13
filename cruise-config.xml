@@ -165,11 +165,7 @@
               <resource>lbs</resource>
             </resources>
           </job>
-          <job name="common-api-dbus_dlt_logreplayer">
-            <tasks>
-              <ant />
-            </tasks>
-          </job>
+          <job name="common-api-dbus_dlt_logreplayer" />
         </jobs>
       </stage>
     </pipeline>
