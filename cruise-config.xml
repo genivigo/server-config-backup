@@ -990,6 +990,7 @@
         <resource>maven</resource>
         <resource>ga_test</resource>
         <resource>libtool</resource>
+        <resource>lbs</resource>
       </resources>
     </agent>
   </agents>
