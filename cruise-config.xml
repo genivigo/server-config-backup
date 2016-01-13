@@ -201,7 +201,7 @@
               <resource>lbs</resource>
             </resources>
           </job>
-          <job name="plain-dbus_dlt_gpsd">
+          <job name="gnssservice_dlt_gpsd">
             <tasks>
               <exec command="/bin/bash">
                 <arg>-c</arg>
