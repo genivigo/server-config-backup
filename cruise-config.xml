@@ -220,6 +220,11 @@
             </resources>
           </job>
           <job name="sensorsservice_gnssservice_nmea_logger">
+            <tasks>
+              <exec command="/bin/bash">
+                <runif status="passed" />
+              </exec>
+            </tasks>
             <resources>
               <resource>cmake</resource>
               <resource>lbs</resource>
