@@ -220,9 +220,6 @@
             </resources>
           </job>
           <job name="sensorsservice_gnssservice_nmea_logger">
-            <tasks>
-              <ant />
-            </tasks>
             <resources>
               <resource>cmake</resource>
               <resource>lbs</resource>
