@@ -219,7 +219,7 @@
               <resource>lbs</resource>
             </resources>
           </job>
-          <job name="sensorsservice_gnssservice_nmea_logger">
+          <job name="sensorsservice_gnssservice_nmea_logger_stdout">
             <tasks>
               <exec command="/bin/bash">
                 <arg>-c</arg>
