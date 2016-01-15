@@ -223,7 +223,7 @@
             <tasks>
               <exec command="/bin/bash">
                 <arg>-c</arg>
-                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake cmake -DWITH_ENHANCED_POSITION_SERVICE=OFF -DWITH_NMEA=ON -DWITH_MPU6050=ON -DWITH_LOGGER=ON -DWITH_TESTS=ON -DWITH_DEBUG=ON -DGNSS_DEVICE=\"/dev/ttyACM0\" -DGNSS_BAUDRATE=B38400 -DGNSS_CHIPSET=UBLOX -DGNSS_DELAY=400 ../</arg>
+                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_ENHANCED_POSITION_SERVICE=OFF -DWITH_NMEA=ON -DWITH_MPU6050=ON -DWITH_LOGGER=ON -DWITH_TESTS=ON -DWITH_DEBUG=ON -DGNSS_DEVICE=\"/dev/ttyACM0\" -DGNSS_BAUDRATE=B38400 -DGNSS_CHIPSET=UBLOX -DGNSS_DELAY=400 ../</arg>
                 <runif status="passed" />
               </exec>
               <exec command="/bin/bash">
