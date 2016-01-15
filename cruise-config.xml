@@ -170,7 +170,7 @@
               <resource>cmake</resource>
             </resources>
             <artifacts>
-              <artifact src="build" />
+              <artifact src="build/src/lib" />
             </artifacts>
           </job>
         </jobs>
