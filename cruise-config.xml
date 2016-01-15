@@ -138,10 +138,43 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="DLT-daemon-native" isLocked="false" template="CMAKE_build">
+    <pipeline name="DLT-daemon-native" isLocked="false">
       <materials>
         <git url="http://git.projects.genivi.org/dlt-daemon.git" materialName="dlt-daemon.git" />
       </materials>
+      <stage name="build">
+        <jobs>
+          <job name="cmake_and_make">
+            <tasks>
+              <exec command="rm">
+                <arg>-rf</arg>
+                <arg>build</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>build</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="cmake" workingdir="build">
+                <arg>..</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="make" workingdir="build">
+                <arg>V=1</arg>
+                <arg>-j2</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+            </resources>
+            <artifacts>
+              <artifact src="build" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
     <pipeline name="GENIVI_Positioning" isLocked="false">
       <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
