@@ -361,7 +361,14 @@
     <authorization>
       <view>
         <role>Guest</role>
+        <role>Developer</role>
       </view>
+      <operate>
+        <role>Developer</role>
+      </operate>
+      <admins>
+        <role>Developer</role>
+      </admins>
     </authorization>
     <pipeline name="common-api-cpp-dbus-tools" labeltemplate="${COUNT}:master:${common-api-dbus-tools.git[:8]}" isLocked="false">
       <materials>
