@@ -51,13 +51,9 @@
     <authorization>
       <view>
         <role>Guest</role>
-        <role>GDP_Developer</role>
       </view>
-      <operate>
-        <role>GDP_Developer</role>
-      </operate>
       <admins>
-        <role>GDP_Developer</role>
+        <role>Developer</role>
       </admins>
     </authorization>
     <pipeline name="yocto-baseline" labeltemplate="9.0:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-kronos">
