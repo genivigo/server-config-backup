@@ -595,11 +595,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="dev-GDP-porter8" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
-      <materials>
-        <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="dev-porter-8" materialName="genivi-demo-platform.git" />
-      </materials>
-    </pipeline>
     <pipeline name="DiskStatistics-build0" isLocked="false">
       <materials>
         <git url="http://github.com/gunnarx/gocd-setup.git" />
