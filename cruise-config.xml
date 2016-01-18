@@ -64,7 +64,7 @@
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-next" labeltemplate="10.0:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-leviathan">
+    <pipeline name="yocto-baseline-next" labeltemplate="10.0:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build">
       <environmentvariables>
         <variable name="IMAGE_NAME">
           <value>leviathan-image</value>
@@ -939,7 +939,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="meta-ivi-build-leviathan">
+    <pipeline name="meta-ivi-build">
       <stage name="Build">
         <jobs>
           <job name="init_and_bitbake">
