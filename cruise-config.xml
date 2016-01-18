@@ -57,6 +57,11 @@
       </admins>
     </authorization>
     <pipeline name="yocto-baseline" labeltemplate="9.0:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build">
+      <environmentvariables>
+        <variable name="IMAGE_NAME">
+          <value>kronos-image</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="git://git.yoctoproject.org/meta-ivi" branch="9.0" dest="meta-ivi" materialName="meta-ivi" />
         <git url="git://git.yoctoproject.org/poky" branch="fido" dest="poky" autoUpdate="false" materialName="poky_fido" />
