@@ -953,7 +953,7 @@
                 <arg>config</arg>
                 <arg>--global</arg>
                 <arg>user.name</arg>
-                <arg>Go Server</arg>
+                <arg>Go Agent</arg>
                 <runif status="passed" />
               </exec>
               <exec command="git" workingdir="meta-ivi">
