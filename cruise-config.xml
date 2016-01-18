@@ -975,7 +975,7 @@
               </exec>
               <exec command="/bin/bash">
                 <arg>-c</arg>
-                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake leviathan-image</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake $IMAGE_NAME</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
