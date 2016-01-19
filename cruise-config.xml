@@ -507,6 +507,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="mvn" workingdir="cpp-someip-tools/org.genivi.commonapi.someip.releng">
+                <arg>-DCOREPATH=../../common-api-tools</arg>
                 <arg>-Dtarget.id=org.genivi.commonapi.someip.target</arg>
                 <arg>clean</arg>
                 <arg>verify</arg>
