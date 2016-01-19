@@ -432,6 +432,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="mvn" workingdir="common-api-dbus-tools/org.genivi.commonapi.dbus.releng">
+                <arg>-DCOREPATH=../../common-api-tools</arg>
                 <arg>-Dtarget.id=org.genivi.commonapi.dbus.target</arg>
                 <arg>clean</arg>
                 <arg>verify</arg>
