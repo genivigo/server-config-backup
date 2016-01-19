@@ -422,7 +422,6 @@
             <tasks>
               <exec command="mkdir">
                 <arg>-p</arg>
-                <arg>patch</arg>
                 <arg>bin</arg>
                 <runif status="passed" />
               </exec>
