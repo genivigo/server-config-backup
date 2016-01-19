@@ -426,12 +426,6 @@
                 <arg>bin</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="curl" workingdir="patch">
-                <arg>-Lo</arg>
-                <arg>0001-Fixed-incorrect-relative-paths-in-commonapi.dbus-mav.patch</arg>
-                <arg>http://bugs.genivi.org/attachment.cgi?id=180</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="sh" workingdir="common-api-dbus-tools">
                 <arg>-c</arg>
                 <arg>patch -p1 &lt;../patch/0001-Fixed-incorrect-relative-paths-in-commonapi.dbus-mav.patch</arg>
