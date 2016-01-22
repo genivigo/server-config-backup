@@ -759,6 +759,7 @@
     </authorization>
   </pipelines>
   <pipelines group="franca_install_automation" />
+  <pipelines group="test" />
   <templates>
     <pipeline name="franca_install_automation">
       <stage name="install_stage">
