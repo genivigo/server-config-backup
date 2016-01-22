@@ -743,6 +743,20 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="test">
+      <materials>
+        <git url="https://github.com/gunnarx/build-capi" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <ant />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="Retired_Pipelines">
     <authorization>
