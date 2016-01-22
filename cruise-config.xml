@@ -751,7 +751,6 @@
         <jobs>
           <job name="defaultJob">
             <tasks>
-              <ant />
               <exec command="/bin/bash">
                 <arg>uname -a</arg>
                 <runif status="passed" />
