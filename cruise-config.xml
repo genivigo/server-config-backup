@@ -1093,7 +1093,11 @@
     </pipeline>
   </templates>
   <environments>
-    <environment name="gm_test" />
+    <environment name="gm_test">
+      <agents>
+        <physical uuid="8c586826-69e7-487c-bba2-0629c280c011" />
+      </agents>
+    </environment>
   </environments>
   <agents>
     <agent hostname="build0.genivigo.com" ipaddress="10.0.0.103" uuid="7cc5ab78-8c05-4c86-9dd4-0b7a1bf8388f">
