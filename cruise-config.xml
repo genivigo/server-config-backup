@@ -751,8 +751,8 @@
         <jobs>
           <job name="defaultJob">
             <tasks>
-              <exec command="/bin/bash">
-                <arg>uname -a</arg>
+              <exec command="uname">
+                <arg>-a</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
