@@ -1144,7 +1144,11 @@
         <resource>gm_test</resource>
       </resources>
     </agent>
-    <agent hostname="agent_test.13692" ipaddress="172.17.0.2" uuid="31360232-0b17-43e9-b7f9-ce037a7d921a" />
+    <agent hostname="agent_test.13692" ipaddress="172.17.0.2" uuid="31360232-0b17-43e9-b7f9-ce037a7d921a">
+      <resources>
+        <resource>gm_test</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
