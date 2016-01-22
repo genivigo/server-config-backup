@@ -1144,7 +1144,7 @@
         <resource>gm_test</resource>
       </resources>
     </agent>
-    <agent hostname="ga_test_1" ipaddress="94.234.170.199" uuid="cbb97946-c722-4d9f-afed-7c0edace72b2">
+    <agent hostname="ga_test_1" ipaddress="172.17.0.2" uuid="cbb97946-c722-4d9f-afed-7c0edace72b2">
       <resources>
         <resource>gm_test</resource>
       </resources>
