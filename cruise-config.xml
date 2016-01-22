@@ -1114,6 +1114,9 @@
       <agents>
         <physical uuid="8c586826-69e7-487c-bba2-0629c280c011" />
       </agents>
+      <pipelines>
+        <pipeline name="test" />
+      </pipelines>
     </environment>
   </environments>
   <agents>
