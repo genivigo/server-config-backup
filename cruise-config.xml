@@ -676,7 +676,7 @@
     </pipeline>
     <pipeline name="software-loading-manager" isLocked="false">
       <materials>
-        <git url="https://github.com/magnusfeuer/genivi_software_management.git" />
+        <git url="git://git.projects.genivi.org/genivi_swm.git" materialName="SW_Management_PoC_sources" />
       </materials>
       <stage name="commonApiGenerationStage">
         <jobs>
