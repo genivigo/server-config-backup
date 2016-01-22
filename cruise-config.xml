@@ -756,6 +756,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>gm_test</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
