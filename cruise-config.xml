@@ -541,6 +541,23 @@
         <role>Developer</role>
       </admins>
     </authorization>
+    <pipeline name="Yocto-test-copy" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false">
+      <materials>
+        <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="porter" materialName="genivi-demo-platform.git" />
+      </materials>
+      <stage name="Build">
+        <jobs>
+          <job name="Build">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>ls -al /var/go/sgx_bin</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
     <pipeline name="SDK">
       <materials>
         <git url="http://git.projects.genivi.org/meta-genivi-demo.git" />
