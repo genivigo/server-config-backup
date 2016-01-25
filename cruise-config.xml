@@ -892,9 +892,8 @@
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
-              <exec command="cp">
-                <arg>/home/user/renesas-graphics-drivers/r8a7791_linux_sgx_binaries_gles2.tar.bz2</arg>
-                <arg>meta-renesas/meta-rcar-gen2/recipes-graphics/gles-module/gles-user-module/</arg>
+              <exec command="bash" workingdir="meta-renesas/meta-rcar-gen2">
+                <arg>./copy_gfx_software_${BOARD}.sh /var/go/sgx_bin/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="cp">
