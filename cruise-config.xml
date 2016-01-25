@@ -913,6 +913,11 @@
                 <arg>. ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>./copy_mm_software_lcb.sh /var/go/sgx_bin/</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>renesas_binaries</resource>
