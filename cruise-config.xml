@@ -554,6 +554,9 @@
                 <arg>ls -al /var/go/sgx_bin</arg>
               </exec>
             </tasks>
+            <resources>
+              <resource>renesas_binaries</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
