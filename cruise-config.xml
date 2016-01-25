@@ -1157,6 +1157,7 @@
         <resource>ga_test</resource>
         <resource>libtool</resource>
         <resource>lbs</resource>
+        <resource>renesas_binaries</resource>
       </resources>
     </agent>
     <agent hostname="dc7600-gm-genivigo-testagent1" ipaddress="2.225.241.33" uuid="8c586826-69e7-487c-bba2-0629c280c011">
