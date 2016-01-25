@@ -903,6 +903,7 @@
           <job name="init_and_bitbake">
             <tasks>
               <exec command="bash" workingdir="meta-renesas/meta-rcar-gen2">
+                <arg>-c</arg>
                 <arg>./copy_gfx_software_${BOARD}.sh /var/go/sgx_bin/</arg>
                 <runif status="passed" />
               </exec>
