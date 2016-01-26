@@ -1160,11 +1160,6 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="dc7600-gm-genivigo-testagent1" ipaddress="2.225.241.33" uuid="8c586826-69e7-487c-bba2-0629c280c011" isDisabled="true">
-      <resources>
-        <resource>gm_test</resource>
-      </resources>
-    </agent>
     <agent hostname="gmacario-genivigo-agent1" ipaddress="172.17.0.2" uuid="b922c762-53d3-4c67-9ed4-9001c0d9c273">
       <resources>
         <resource>gm_test</resource>
