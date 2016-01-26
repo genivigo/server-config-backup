@@ -968,6 +968,11 @@
       </stage>
     </pipeline>
     <pipeline name="meta-ivi-build">
+      <authorization>
+        <admins>
+          <user>GDP_Developer</user>
+        </admins>
+      </authorization>
       <stage name="Build">
         <jobs>
           <job name="init_and_bitbake">
