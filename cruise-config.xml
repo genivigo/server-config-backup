@@ -891,6 +891,7 @@
       <authorization>
         <admins>
           <user>GDP_Developer</user>
+          <user>tpollard</user>
         </admins>
       </authorization>
       <stage name="build">
