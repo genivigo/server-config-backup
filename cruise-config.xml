@@ -830,6 +830,15 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_Build_4_thread_limit">
+      <authorization>
+        <admins>
+          <user>tpollard</user>
+          <user>PedroA</user>
+          <user>gmacario</user>
+          <user>mhoyer</user>
+          <user>marcor</user>
+        </admins>
+      </authorization>
       <stage name="build">
         <jobs>
           <job name="init_and_bitbake">
