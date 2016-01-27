@@ -785,7 +785,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="gm-test-sysinfo">
+    <pipeline name="gm-test-sysinfo" isLocked="false">
       <materials>
         <git url="https://gist.github.com/gmacario/124193e33b7e0e6f7110" materialName="gm-sysinfo" />
       </materials>
