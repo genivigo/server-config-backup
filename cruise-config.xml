@@ -787,7 +787,7 @@
     </pipeline>
     <pipeline name="gm-test-sysinfo">
       <materials>
-        <git url="https://github.com/gunnarx/build-capi" />
+        <git url="https://gist.github.com/gmacario/124193e33b7e0e6f7110" materialName="gm-sysinfo" />
       </materials>
       <stage name="defaultStage">
         <jobs>
