@@ -726,7 +726,10 @@
         <jobs>
           <job name="runSWLMPocJob">
             <tasks>
-              <exec command="./start_swm.sh">
+              <exec command="sudo">
+                <arg>sh</arg>
+                <arg>start_swm.sh</arg>
+                <arg>-r</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
