@@ -798,6 +798,10 @@
                 <arg>gm-sysinfo.sh</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="ls">
+                <arg>-la</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>gm_test</resource>
