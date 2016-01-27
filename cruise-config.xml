@@ -793,10 +793,6 @@
         <jobs>
           <job name="defaultJob">
             <tasks>
-              <exec command="ls">
-                <arg>-la</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="/bin/sh">
                 <arg>gm-sysinfo.sh</arg>
                 <runif status="passed" />
