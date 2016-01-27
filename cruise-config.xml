@@ -785,6 +785,26 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="gm-test-sysinfo">
+      <materials>
+        <git url="https://github.com/gunnarx/build-capi" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="uname">
+                <arg>-a</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>gm_test</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="Retired_Pipelines">
     <authorization>
