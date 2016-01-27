@@ -793,8 +793,9 @@
         <jobs>
           <job name="defaultJob">
             <tasks>
-              <exec command="uname">
-                <arg>-a</arg>
+              <exec command="sh">
+                <arg>-c</arg>
+                <arg>gm-sysinfo.sh</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
