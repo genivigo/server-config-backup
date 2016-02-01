@@ -942,14 +942,14 @@
                 <arg>./copy_gfx_software_${BOARD}.sh /var/go/sgx_bin/</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="meta-renesas/meta-rcar-gen2">
-                <arg>-c</arg>
-                <arg>./copy_mm_software_lcb.sh /var/go/sgx_bin/</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="/bin/bash">
                 <arg>-c</arg>
                 <arg>. ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="meta-renesas/meta-rcar-gen2">
+                <arg>-c</arg>
+                <arg>./copy_mm_software_lcb.sh /var/go/sgx_bin/</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
