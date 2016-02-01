@@ -47,10 +47,8 @@
         </role>
       </roles>
       <admins>
-        <user>gunnar</user>
         <user>PedroA</user>
         <user>GunnarA</user>
-        <user>stevel</user>
       </admins>
     </security>
   </server>
