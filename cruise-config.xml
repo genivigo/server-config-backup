@@ -752,14 +752,14 @@
                 <arg>local_conf_modified</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
-              </exec>
               <exec command="/bin/bash">
                 <arg>-c</arg>
                 <arg>echo "INHERIT += "archiver"\nARCHIVER_MODE[src] = "original"\n | tee -a gdp-src-build/conf/local.conf</arg>
                 <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
