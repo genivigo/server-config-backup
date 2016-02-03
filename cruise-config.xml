@@ -767,6 +767,9 @@
             <artifacts>
               <artifact src="gdp-src-build/tmp/deploy/sdk" />
               <artifact src="gdp-src-build/tmp/deploy/licenses" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-demo-platform-*/license.manifest" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-demo-platform-*/package.manifest" />
+              <artifact src="gdp-src-build/downloads/*" dest="downloads (source_code)" />
             </artifacts>
           </job>
         </jobs>
