@@ -752,7 +752,7 @@
                 <arg>local_conf_modified</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>echo "INHERIT += "archiver"\nARCHIVER_MODE[src] = "original"\n | tee -a gdp-src-build/conf/local.conf</arg>
                 <runif status="passed" />
