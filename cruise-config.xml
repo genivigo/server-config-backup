@@ -766,6 +766,7 @@
             </resources>
             <artifacts>
               <artifact src="gdp-src-build/tmp/deploy/sdk" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses" />
             </artifacts>
           </job>
         </jobs>
