@@ -630,6 +630,7 @@
             </tasks>
             <resources>
               <resource>big_disk</resource>
+              <resource>ga_test</resource>
             </resources>
           </job>
         </jobs>
