@@ -146,7 +146,14 @@
     <authorization>
       <view>
         <role>Guest</role>
+        <role>GDP_Developer</role>
       </view>
+      <operate>
+        <role>GDP_Developer</role>
+      </operate>
+      <admins>
+        <role>GDP_Developer</role>
+      </admins>
     </authorization>
     <pipeline name="GDP-Yocto-QEMU_x86-64-qemu-ci" template="Yocto_GDP_qemu_image">
       <materials>
