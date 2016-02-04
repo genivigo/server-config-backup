@@ -820,41 +820,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="GDP-TOM-TEST" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false">
-      <materials>
-        <git url="http://git.projects.genivi.org/genivi-demo-platform.git" branch="qemu-ci" materialName="genivi-demo-platform.git" />
-      </materials>
-      <stage name="build">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="/usr/bin/touch" workingdir="gdp-src-build/conf">
-                <arg>local_conf_modified</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'INHERIT += "archiver"\nARCHIVER_MODE[src] = "original"\n' | tee -a gdp-src-build/conf/local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
-              </exec>
-            </tasks>
-            <resources>
-              <resource>ct_test</resource>
-            </resources>
-            <artifacts>
-              <artifact src="gdp-src-build/tmp/deploy/licenses" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-demo-platform-*/license.manifest" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-demo-platform-*/package.manifest" />
-              <artifact src="gdp-src-build/downloads/*" dest="downloads (source_code)" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
   </pipelines>
   <pipelines group="Retired_Pipelines">
     <authorization>
