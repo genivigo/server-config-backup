@@ -873,11 +873,12 @@
     <pipeline name="Yocto_GDP_Build_4_thread_limit">
       <authorization>
         <admins>
-          <user>tpollard</user>
           <user>PedroA</user>
           <user>gmacario</user>
-          <user>mhoyer</user>
           <user>marcor</user>
+          <user>mhoyer</user>
+          <user>tpollard</user>
+          <user>guest</user>
         </admins>
       </authorization>
       <stage name="build">
