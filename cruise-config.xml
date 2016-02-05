@@ -1014,6 +1014,11 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_qemu_image">
+      <authorization>
+        <admins>
+          <user>GDP_Developer</user>
+        </admins>
+      </authorization>
       <stage name="build">
         <jobs>
           <job name="init_and_bitbake">
