@@ -878,7 +878,6 @@
           <user>marcor</user>
           <user>mhoyer</user>
           <user>tpollard</user>
-          <user>guest</user>
         </admins>
       </authorization>
       <stage name="build">
