@@ -960,53 +960,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="meta-ivi-build-kronos">
-      <stage name="Build">
-        <jobs>
-          <job name="init_and_bitbake">
-            <environmentvariables>
-              <variable name="TEMPLATECONF">
-                <value>/var/lib/go-agent/$GO_PIPELINE_NAME/meta-ivi/meta-ivi/conf</value>
-              </variable>
-            </environmentvariables>
-            <tasks>
-              <exec command="git" workingdir="meta-ivi">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.name</arg>
-                <arg>Go Server</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git" workingdir="meta-ivi">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="/bin/sh" workingdir="baseline_ci_helper">
-                <arg>-c</arg>
-                <arg>./checkout_layer_hash.sh poky</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="/bin/sh" workingdir="baseline_ci_helper">
-                <arg>-c</arg>
-                <arg>./checkout_layer_hash.sh meta-openembedded</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="/bin/bash">
-                <arg>-c</arg>
-                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake kronos-image</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>big_disk</resource>
-            </resources>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="meta-ivi-build">
       <authorization>
         <admins>
