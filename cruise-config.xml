@@ -892,6 +892,11 @@
       </stage>
     </pipeline>
     <pipeline name="CMAKE_build">
+      <authorization>
+        <admins>
+          <user>Developer</user>
+        </admins>
+      </authorization>
       <stage name="build">
         <jobs>
           <job name="cmake_and_make">
