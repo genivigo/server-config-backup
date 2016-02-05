@@ -755,6 +755,11 @@
       <stage name="build">
         <jobs>
           <job name="init_and_bitbake">
+            <environmentvariables>
+              <variable name="GunnarA" secure="true">
+                <encryptedValue>CdSdb3tLQMZ61qZoViHoEQ==</encryptedValue>
+              </variable>
+            </environmentvariables>
             <tasks>
               <exec command="/usr/bin/touch" workingdir="gdp-src-build/conf">
                 <arg>local_conf_modified</arg>
