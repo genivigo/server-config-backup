@@ -1172,7 +1172,7 @@
         <resource>ct_test</resource>
       </resources>
     </agent>
-    <agent hostname="2131ce1bd33e" ipaddress="172.17.0.6" uuid="ce4f9ef6-91a4-44c3-881e-3486ff87a2aa">
+    <agent hostname="2131ce1bd33e" ipaddress="172.17.0.7" uuid="ce4f9ef6-91a4-44c3-881e-3486ff87a2aa">
       <resources>
         <resource>big_disk</resource>
         <resource>cmake</resource>
