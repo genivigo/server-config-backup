@@ -886,6 +886,20 @@
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
+              <exec command="git">
+                <arg>config</arg>
+                <arg>--global</arg>
+                <arg>user.name</arg>
+                <arg>go.genivi.org</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git">
+                <arg>config</arg>
+                <arg>--global</arg>
+                <arg>user.email</arg>
+                <arg>no-email</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
