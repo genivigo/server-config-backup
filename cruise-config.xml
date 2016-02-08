@@ -1004,7 +1004,7 @@
           <user>Developer</user>
         </admins>
       </authorization>
-      <stage name="Build">
+      <stage name="Build" cleanWorkingDir="true">
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
