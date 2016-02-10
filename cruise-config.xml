@@ -1211,6 +1211,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
+    <agent hostname="gmacario-genivigo-agent1" ipaddress="2.225.241.33" uuid="4676e45c-ffe4-4a67-914b-6969e12d4254" />
   </agents>
 </cruise>
 
