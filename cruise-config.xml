@@ -446,14 +446,6 @@
               </exec>
             </tasks>
           </job>
-          <job name="install">
-            <tasks>
-              <exec command="sudo">
-                <arg>make</arg>
-                <arg>install</arg>
-              </exec>
-            </tasks>
-          </job>
         </jobs>
       </stage>
     </pipeline>
