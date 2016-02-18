@@ -444,7 +444,13 @@
       </stage>
       <stage name="build">
         <jobs>
-          <job name="defaultJob" />
+          <job name="defaultJob">
+            <tasks>
+              <exec command="make">
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
         </jobs>
       </stage>
     </pipeline>
