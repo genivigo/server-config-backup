@@ -442,6 +442,15 @@
           </job>
         </jobs>
       </stage>
+      <stage name="configure">
+        <jobs>
+          <job name="configure">
+            <tasks>
+              <exec command="autoreconf" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
     <pipeline name="software-loading-manager" isLocked="false">
       <materials>
