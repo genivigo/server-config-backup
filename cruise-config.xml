@@ -447,6 +447,11 @@
               </exec>
             </tasks>
           </job>
+          <job name="make">
+            <tasks>
+              <exec command="make" />
+            </tasks>
+          </job>
         </jobs>
       </stage>
     </pipeline>
