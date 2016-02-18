@@ -435,7 +435,7 @@
       </materials>
       <stage name="build">
         <jobs>
-          <job name="configure">
+          <job name="buildJob">
             <tasks>
               <exec command="autoreconf">
                 <arg>-i</arg>
