@@ -444,11 +444,7 @@
       </stage>
       <stage name="build">
         <jobs>
-          <job name="defaultJob">
-            <tasks>
-              <ant />
-            </tasks>
-          </job>
+          <job name="defaultJob" />
         </jobs>
       </stage>
     </pipeline>
