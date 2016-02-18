@@ -429,6 +429,20 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="common-api-c">
+      <materials>
+        <git url="git://git.projects.genivi.org/common-api/c-poc.git" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <ant />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="Tools">
     <authorization>
