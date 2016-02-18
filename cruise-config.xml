@@ -446,11 +446,6 @@
               </exec>
             </tasks>
           </job>
-          <job name="make">
-            <tasks>
-              <exec command="make" />
-            </tasks>
-          </job>
           <job name="install">
             <tasks>
               <exec command="sudo">
