@@ -441,8 +441,7 @@
                 <arg>-i</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="make">
-                <arg>-n</arg>
+              <exec command="./configure">
                 <runif status="passed" />
               </exec>
             </tasks>
