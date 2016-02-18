@@ -451,6 +451,11 @@
               </exec>
             </tasks>
           </job>
+          <job name="autoreconf">
+            <tasks>
+              <ant />
+            </tasks>
+          </job>
         </jobs>
       </stage>
     </pipeline>
