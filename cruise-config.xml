@@ -447,6 +447,11 @@
               <exec command="make">
                 <runif status="passed" />
               </exec>
+              <exec command="sudo">
+                <arg>make</arg>
+                <arg>install</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
