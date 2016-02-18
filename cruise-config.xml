@@ -433,20 +433,20 @@
       <materials>
         <git url="git://git.projects.genivi.org/common-api/c-poc.git" />
       </materials>
-      <stage name="build">
-        <jobs>
-          <job name="defaultJob">
-            <tasks>
-              <ant />
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
       <stage name="configure">
         <jobs>
           <job name="configure">
             <tasks>
               <exec command="autoreconf" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="build">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <ant />
             </tasks>
           </job>
         </jobs>
