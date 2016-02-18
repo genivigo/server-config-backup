@@ -441,6 +441,10 @@
                 <arg>-i</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="make">
+                <arg>-n</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
