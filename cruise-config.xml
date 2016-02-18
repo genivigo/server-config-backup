@@ -429,7 +429,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="common-api-c">
+    <pipeline name="common-api-c" isLocked="false">
       <materials>
         <git url="git://git.projects.genivi.org/common-api/c-poc.git" />
       </materials>
