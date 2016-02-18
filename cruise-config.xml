@@ -444,7 +444,14 @@
       </stage>
       <stage name="build">
         <jobs>
-          <job name="autoreconf" />
+          <job name="autoreconf">
+            <tasks>
+              <exec command="autoreconf">
+                <arg>-i</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
         </jobs>
       </stage>
     </pipeline>
