@@ -444,11 +444,7 @@
       </stage>
       <stage name="build">
         <jobs>
-          <job name="autoreconf">
-            <tasks>
-              <ant />
-            </tasks>
-          </job>
+          <job name="autoreconf" />
         </jobs>
       </stage>
     </pipeline>
