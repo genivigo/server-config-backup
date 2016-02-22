@@ -1031,14 +1031,12 @@
     <pipeline name="meta-ivi-build">
       <authorization>
         <admins>
-          <user>Developer</user>
-          <user>GDP_Developer</user>
-          <user>gmacario</user>
-          <user>tolkien</user>
-          <user>jonathanmaw</user>
-          <user>tpollard</user>
-          <user>mhoyer</user>
           <user>PedroA</user>
+          <user>gmacario</user>
+          <user>jonathanmaw</user>
+          <user>mhoyer</user>
+          <user>tolkien</user>
+          <user>tpollard</user>
         </admins>
       </authorization>
       <stage name="Build" cleanWorkingDir="true">
