@@ -957,7 +957,7 @@
     <pipeline name="CMAKE_build">
       <authorization>
         <admins>
-          <user>gmacario</user>
+          <role>Developer</role>
         </admins>
       </authorization>
       <stage name="build">
