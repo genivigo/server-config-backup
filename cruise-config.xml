@@ -888,6 +888,11 @@
   <pipelines group="franca_install_automation" />
   <templates>
     <pipeline name="franca_install_automation">
+      <authorization>
+        <admins>
+          <user>gmacario</user>
+        </admins>
+      </authorization>
       <stage name="install_stage">
         <jobs>
           <job name="install_job">
@@ -919,7 +924,8 @@
     <pipeline name="Yocto_GDP_Build">
       <authorization>
         <admins>
-          <user>GDP_Developer</user>
+          <role>GDP_Developer</role>
+          <role>Developer</role>
           <user>tolkien</user>
           <user>mhoyer</user>
         </admins>
@@ -952,7 +958,7 @@
     <pipeline name="CMAKE_build">
       <authorization>
         <admins>
-          <user>Developer</user>
+          <user>gmacario</user>
         </admins>
       </authorization>
       <stage name="build">
