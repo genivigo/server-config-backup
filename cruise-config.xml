@@ -924,8 +924,6 @@
     <pipeline name="Yocto_GDP_Build">
       <authorization>
         <admins>
-          <role>GDP_Developer</role>
-          <role>Developer</role>
           <user>tolkien</user>
           <user>mhoyer</user>
         </admins>
