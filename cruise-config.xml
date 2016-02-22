@@ -1026,9 +1026,9 @@
     <pipeline name="meta-ivi-build">
       <authorization>
         <admins>
-          <user>gmacario</user>
-          <user>GDP_Developer</user>
           <user>Developer</user>
+          <user>GDP_Developer</user>
+          <user>gmacario</user>
         </admins>
       </authorization>
       <stage name="Build" cleanWorkingDir="true">
