@@ -870,6 +870,16 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="stevel_GDP-Yocto-Porter-ivi9" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
+      <environmentvariables>
+        <variable name="BOARD">
+          <value>porter</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="porter" materialName="genivi-demo-platform.git" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Retired_Pipelines">
     <authorization>
