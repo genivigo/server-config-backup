@@ -1049,7 +1049,7 @@
           <user>tpollard</user>
         </admins>
       </authorization>
-      <stage name="Build" cleanWorkingDir="true">
+      <stage name="Build">
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
