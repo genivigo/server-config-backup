@@ -1155,7 +1155,9 @@
     <pipeline name="Yocto_GDP_qemu_latest_meta_genivi_demo">
       <authorization>
         <admins>
-          <user>GDP_Developer</user>
+          <user>tpollard</user>
+          <user>jonathanmaw</user>
+          <user>PedroA</user>
         </admins>
       </authorization>
       <stage name="build">
