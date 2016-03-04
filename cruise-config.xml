@@ -1095,8 +1095,9 @@
     <pipeline name="Yocto_GDP_qemu_image">
       <authorization>
         <admins>
-          <user>tpollard</user>
           <user>jonathanmaw</user>
+          <user>tpollard</user>
+          <user>PedroA</user>
         </admins>
       </authorization>
       <stage name="build">
