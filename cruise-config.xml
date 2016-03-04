@@ -1007,8 +1007,10 @@
     <pipeline name="Yocto_GDP_Build_Renesas">
       <authorization>
         <admins>
-          <user>GDP_Developer</user>
+          <user>tpollard</user>
           <user>StephenL</user>
+          <user>jonathanmaw</user>
+          <user>PedroA</user>
         </admins>
       </authorization>
       <stage name="build">
