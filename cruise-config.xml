@@ -934,7 +934,7 @@
     <pipeline name="Yocto_GDP_Build">
       <authorization>
         <admins>
-          <user>Developer</user>
+          <user>tpollard</user>
           <user>mhoyer</user>
           <user>tolkien</user>
         </admins>
