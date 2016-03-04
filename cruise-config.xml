@@ -1096,6 +1096,7 @@
       <authorization>
         <admins>
           <user>tpollard</user>
+          <user>jonathanmaw</user>
         </admins>
       </authorization>
       <stage name="build">
