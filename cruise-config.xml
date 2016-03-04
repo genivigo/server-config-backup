@@ -968,8 +968,8 @@
       <authorization>
         <admins>
           <user>gmacario</user>
-          <user>tpollard</user>
           <user>marcor</user>
+          <user>tpollard</user>
         </admins>
       </authorization>
       <stage name="build">
