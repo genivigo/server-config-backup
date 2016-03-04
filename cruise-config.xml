@@ -968,10 +968,11 @@
     <pipeline name="CMAKE_build">
       <authorization>
         <admins>
+          <user>PedroA</user>
           <user>gmacario</user>
           <user>marcor</user>
           <user>tpollard</user>
-          <user>PedroA</user>
+          <user>jonathanmaw</user>
         </admins>
       </authorization>
       <stage name="build">
