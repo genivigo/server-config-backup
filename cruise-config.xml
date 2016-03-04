@@ -934,9 +934,10 @@
     <pipeline name="Yocto_GDP_Build">
       <authorization>
         <admins>
-          <user>tpollard</user>
           <user>mhoyer</user>
           <user>tolkien</user>
+          <user>tpollard</user>
+          <user>PedroA</user>
         </admins>
       </authorization>
       <stage name="build" cleanWorkingDir="true">
