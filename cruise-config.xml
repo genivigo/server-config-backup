@@ -1264,7 +1264,7 @@
         <resource>gm_test</resource>
       </resources>
     </agent>
-    <agent hostname="gmacario-genivigo-agent1" ipaddress="172.17.0.3" uuid="02af7b3d-5881-4bdc-a06c-c27023588e30" />
+    <agent hostname="gmacario-genivigo-agent1" ipaddress="172.17.0.2" uuid="02af7b3d-5881-4bdc-a06c-c27023588e30" />
   </agents>
 </cruise>
 
