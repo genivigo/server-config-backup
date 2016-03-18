@@ -1013,10 +1013,11 @@
     <pipeline name="Yocto_GDP_Build_Renesas">
       <authorization>
         <admins>
-          <user>tpollard</user>
+          <user>PedroA</user>
           <user>StephenL</user>
           <user>jonathanmaw</user>
-          <user>PedroA</user>
+          <user>tpollard</user>
+          <user>gmacario</user>
         </admins>
       </authorization>
       <stage name="build">
