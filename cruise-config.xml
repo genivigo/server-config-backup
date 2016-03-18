@@ -1117,7 +1117,7 @@
               </exec>
               <exec command="/bin/sh" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>/bin/echo -e 'BB_NUMBER_THREADS = "2"\nPARALLEL_MAKE = "-j2"' &gt;&gt;local.conf</arg>
+                <arg>/bin/echo -e 'BB_NUMBER_THREADS = "4"\nPARALLEL_MAKE = "-j4"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="/bin/sh" workingdir="gdp-src-build/conf">
