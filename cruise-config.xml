@@ -891,6 +891,10 @@
               <exec command="docker">
                 <arg>--version</arg>
               </exec>
+              <exec command="docker">
+                <arg>info</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
