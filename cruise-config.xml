@@ -880,6 +880,22 @@
         <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="porter" materialName="genivi-demo-platform.git" />
       </materials>
     </pipeline>
+    <pipeline name="test_docker">
+      <materials>
+        <git url="https://github.com/gmacario/easy-genivigo" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="docker">
+                <arg>--version</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="Retired_Pipelines">
     <authorization>
