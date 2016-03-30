@@ -917,6 +917,11 @@
                 <arg>-c</arg>
                 <arg>id; printenv | sort; pwd; ls -la</arg>
               </exec>
+              <exec command="docker">
+                <arg>pull</arg>
+                <arg>gmacario/build-capi-native</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
