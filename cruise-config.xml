@@ -904,6 +904,24 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="build_capi_native">
+      <materials>
+        <git url="git://git.projects.genivi.org/common-api/c-poc.git" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="/bin/sh">
+                <arg>-xe</arg>
+                <arg>-c</arg>
+                <arg>id; printenv | sort; pwd; ls -la</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="Retired_Pipelines">
     <authorization>
