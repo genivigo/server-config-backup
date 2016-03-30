@@ -922,6 +922,20 @@
                 <arg>gmacario/build-capi-native</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="docker">
+                <arg>run</arg>
+                <arg>--rm</arg>
+                <arg>--user</arg>
+                <arg>build</arg>
+                <arg>--workdir</arg>
+                <arg>/home/build</arg>
+                <arg>gmacario/build-capi-native</arg>
+                <arg>/bin/bash</arg>
+                <arg>-xe</arg>
+                <arg>-c</arg>
+                <arg>git clone git://git.projects.genivi.org/common-api/c-poc.git &amp;&amp; cd c-poc &amp;&amp; autoreconf -i &amp;&amp; ./configure &amp;&amp; make &amp;&amp; sudo make install</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
