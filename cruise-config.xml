@@ -1330,6 +1330,7 @@
       </resources>
     </agent>
     <agent hostname="gmacario-genivigo-agent1" ipaddress="172.17.0.2" uuid="02af7b3d-5881-4bdc-a06c-c27023588e30" />
+    <agent hostname="gmacario-genivigo-agent1" ipaddress="93.39.139.201" uuid="89069c2d-0711-4c7c-ab9f-63a20001234b" />
   </agents>
 </cruise>
 
