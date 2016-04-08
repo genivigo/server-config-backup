@@ -334,34 +334,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="common-api-c" isLocked="false">
-      <materials>
-        <git url="git://git.projects.genivi.org/common-api/c-poc.git" />
-      </materials>
-      <stage name="buildStage">
-        <jobs>
-          <job name="buildJob">
-            <tasks>
-              <exec command="autoreconf">
-                <arg>-i</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="./configure">
-                <runif status="passed" />
-              </exec>
-              <exec command="make">
-                <runif status="passed" />
-              </exec>
-              <exec command="sudo">
-                <arg>make</arg>
-                <arg>install</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="software-loading-manager" isLocked="false">
       <materials>
         <git url="git://git.projects.genivi.org/genivi_swm.git" materialName="SW_Management_PoC_sources" />
@@ -898,6 +870,34 @@
               <resource>cmake</resource>
               <resource>lbs</resource>
             </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="common-api-c" isLocked="false">
+      <materials>
+        <git url="git://git.projects.genivi.org/common-api/c-poc.git" />
+      </materials>
+      <stage name="buildStage">
+        <jobs>
+          <job name="buildJob">
+            <tasks>
+              <exec command="autoreconf">
+                <arg>-i</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="./configure">
+                <runif status="passed" />
+              </exec>
+              <exec command="make">
+                <runif status="passed" />
+              </exec>
+              <exec command="sudo">
+                <arg>make</arg>
+                <arg>install</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
           </job>
         </jobs>
       </stage>
