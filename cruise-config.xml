@@ -334,47 +334,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="software-loading-manager" isLocked="false">
-      <materials>
-        <git url="git://git.projects.genivi.org/genivi_swm.git" materialName="SW_Management_PoC_sources" />
-      </materials>
-      <stage name="commonApiGenerationStage">
-        <jobs>
-          <job name="commonApiGenerationJob">
-            <tasks>
-              <exec command="/bin/bash">
-                <arg>-c</arg>
-                <arg>printenv &amp;&amp; true</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-      <stage name="compileCppStage">
-        <jobs>
-          <job name="compileCppJob">
-            <tasks>
-              <exec command="true" />
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-      <stage name="runSWLMPocStage">
-        <jobs>
-          <job name="runSWLMPocJob">
-            <tasks>
-              <exec command="sudo">
-                <arg>sh</arg>
-                <arg>start_swm.sh</arg>
-                <arg>-r</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
   </pipelines>
   <pipelines group="Tools">
     <authorization>
@@ -895,6 +854,47 @@
               <exec command="sudo">
                 <arg>make</arg>
                 <arg>install</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="software-loading-manager" isLocked="false">
+      <materials>
+        <git url="git://git.projects.genivi.org/genivi_swm.git" materialName="SW_Management_PoC_sources" />
+      </materials>
+      <stage name="commonApiGenerationStage">
+        <jobs>
+          <job name="commonApiGenerationJob">
+            <tasks>
+              <exec command="/bin/bash">
+                <arg>-c</arg>
+                <arg>printenv &amp;&amp; true</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="compileCppStage">
+        <jobs>
+          <job name="compileCppJob">
+            <tasks>
+              <exec command="true" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="runSWLMPocStage">
+        <jobs>
+          <job name="runSWLMPocJob">
+            <tasks>
+              <exec command="sudo">
+                <arg>sh</arg>
+                <arg>start_swm.sh</arg>
+                <arg>-r</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
