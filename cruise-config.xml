@@ -135,7 +135,7 @@
         <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="koelsch" materialName="genivi-demo-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Silk-with-GFX" template="Yocto_GDP_Build_Renesas">
+    <pipeline name="GDP-Yocto-Silk-with-GFX" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
       <environmentvariables>
         <variable name="BOARD">
           <value>silk</value>
