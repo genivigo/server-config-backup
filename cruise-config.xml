@@ -1110,6 +1110,9 @@
             <resources>
               <resource>renesas_binaries</resource>
             </resources>
+            <artifacts>
+              <artifact src="gdp-src-build/tmp/deploy/sdk" dest="sdk" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
