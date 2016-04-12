@@ -1072,6 +1072,48 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="Yocto_GDP_Build_Renesas_with_SDK">
+      <authorization>
+        <admins>
+          <user>PedroA</user>
+          <user>StephenL</user>
+          <user>jonathanmaw</user>
+          <user>tpollard</user>
+          <user>gmacario</user>
+        </admins>
+      </authorization>
+      <stage name="build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="bash" workingdir="meta-renesas/meta-rcar-gen2">
+                <arg>-c</arg>
+                <arg>./copy_gfx_software_${BOARD}.sh /var/go/sgx_bin/</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="meta-renesas/meta-rcar-gen2">
+                <arg>-c</arg>
+                <arg>./copy_mm_software_lcb.sh /var/go/sgx_bin/</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/bin/bash">
+                <arg>-c</arg>
+                <arg>. ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/bin/bash">
+                <arg>-c</arg>
+                <arg>. ./init.sh &amp;&amp; bitbake genivi-demo-platform -c populate_sdk</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>renesas_binaries</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
     <pipeline name="meta-ivi-build">
       <authorization>
         <admins>
