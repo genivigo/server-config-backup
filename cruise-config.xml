@@ -525,7 +525,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="DiskStatistics-build0" isLocked="false">
+    <pipeline name="DiskStatistics-test" isLocked="false">
       <materials>
         <git url="http://github.com/gunnarx/gocd-setup.git" />
       </materials>
@@ -542,10 +542,6 @@
                 <arg>-h</arg>
               </exec>
             </tasks>
-            <resources>
-              <resource>big_disk</resource>
-              <resource>ga_test</resource>
-            </resources>
           </job>
         </jobs>
       </stage>
