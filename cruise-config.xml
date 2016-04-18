@@ -1336,7 +1336,6 @@
         <resource>big_disk</resource>
         <resource>cmake</resource>
         <resource>maven</resource>
-        <resource>ga_test</resource>
         <resource>libtool</resource>
         <resource>lbs</resource>
         <resource>renesas_binaries</resource>
