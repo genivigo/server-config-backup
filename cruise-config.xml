@@ -1348,7 +1348,7 @@
     </agent>
     <agent hostname="gmacario-genivigo-agent1" ipaddress="172.17.0.2" uuid="02af7b3d-5881-4bdc-a06c-c27023588e30" isDisabled="true" />
     <agent hostname="gmacario-genivigo-agent1" ipaddress="172.17.0.2" uuid="89069c2d-0711-4c7c-ab9f-63a20001234b" />
-    <agent hostname="6085cfc0b971" ipaddress="172.17.0.2" uuid="5ad5370f-5aa0-492c-af7d-2b97851285ed">
+    <agent hostname="6085cfc0b971" ipaddress="172.17.0.2" uuid="5ad5370f-5aa0-492c-af7d-2b97851285ed" isDisabled="true">
       <resources>
         <resource>ga_test</resource>
       </resources>
