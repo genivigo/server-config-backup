@@ -942,9 +942,6 @@
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
               </exec>
             </tasks>
-            <resources>
-              <resource>ga_test</resource>
-            </resources>
           </job>
         </jobs>
       </stage>
