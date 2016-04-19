@@ -1321,11 +1321,6 @@
     </pipeline>
   </templates>
   <agents>
-    <agent hostname="codethink-genivigo-agent0" ipaddress="192.168.1.45" uuid="3d6fa53c-5619-46c9-8260-034a1fb414e3" isDisabled="true">
-      <resources>
-        <resource>arm</resource>
-      </resources>
-    </agent>
     <agent hostname="codethink-genivigo-agent1-x86" ipaddress="192.168.144.36" uuid="98b572c4-d559-4ed2-8b00-f4c25851e443">
       <resources>
         <resource>ct_test</resource>
@@ -1341,12 +1336,6 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="gmacario-genivigo-agent1" ipaddress="172.17.0.3" uuid="4676e45c-ffe4-4a67-914b-6969e12d4254" isDisabled="true">
-      <resources>
-        <resource>gm_test</resource>
-      </resources>
-    </agent>
-    <agent hostname="gmacario-genivigo-agent1" ipaddress="172.17.0.2" uuid="02af7b3d-5881-4bdc-a06c-c27023588e30" isDisabled="true" />
     <agent hostname="gmacario-genivigo-agent1" ipaddress="172.17.0.2" uuid="89069c2d-0711-4c7c-ab9f-63a20001234b" />
     <agent hostname="6085cfc0b971" ipaddress="172.17.0.2" uuid="5ad5370f-5aa0-492c-af7d-2b97851285ed" isDisabled="true">
       <resources>
