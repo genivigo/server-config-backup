@@ -1337,11 +1337,6 @@
       </resources>
     </agent>
     <agent hostname="gmacario-genivigo-agent1" ipaddress="172.17.0.2" uuid="89069c2d-0711-4c7c-ab9f-63a20001234b" />
-    <agent hostname="6085cfc0b971" ipaddress="172.17.0.2" uuid="5ad5370f-5aa0-492c-af7d-2b97851285ed" isDisabled="true">
-      <resources>
-        <resource>ga_test</resource>
-      </resources>
-    </agent>
     <agent hostname="e9dff4e25975" ipaddress="172.17.0.3" uuid="ab7209a3-de1d-4b77-b109-ce7cbdd6a802" />
   </agents>
 </cruise>
