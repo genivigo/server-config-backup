@@ -1054,6 +1054,11 @@
                 <arg>logs</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="/bin/sh">
+                <arg>-c</arg>
+                <arg>cp gdp-src-build/tmp/work/*/*/*/*/log.* logs/</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>renesas_binaries</resource>
