@@ -869,6 +869,11 @@
           <job name="defaultJob">
             <tasks>
               <ant />
+              <exec command="rm">
+                <arg>-r</arg>
+                <arg>/var/lib/go-server/pipelines/*/gdp-src-build/tmp/work</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
