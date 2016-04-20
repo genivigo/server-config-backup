@@ -1050,6 +1050,10 @@
                 <arg>. ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="mkdir">
+                <arg>logs</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>renesas_binaries</resource>
