@@ -870,7 +870,7 @@
             <tasks>
               <exec command="du">
                 <arg>-hs</arg>
-                <arg>/var/lib/go-server/pipelines/*/gdp-src-build/tmp/work</arg>
+                <arg>/var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</arg>
                 <runif status="passed" />
               </exec>
               <exec command="rm">
