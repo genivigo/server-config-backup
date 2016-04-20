@@ -873,9 +873,9 @@
                 <arg>du -hs /var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="rm">
-                <arg>-r</arg>
-                <arg>/var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</arg>
+              <exec command="/bin/sh">
+                <arg>-c</arg>
+                <arg>rm -r /var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</arg>
                 <runif status="passed" />
               </exec>
               <exec command="du">
