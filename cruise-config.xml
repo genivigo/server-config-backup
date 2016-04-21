@@ -972,6 +972,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <artifacts>
+              <artifact src="logs.tar.gz" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
