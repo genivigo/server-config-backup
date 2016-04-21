@@ -894,6 +894,7 @@
     <pipeline name="Wipe_gdp_work_dir" template="Wipe_work_dirs_in_all_GDP_Builds">
       <params>
         <param name="agent">2131ce1bd33e</param>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</param>
       </params>
       <materials>
         <git url="http://github.com/gunnarx/gocd-setup.git" />
