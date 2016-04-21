@@ -876,7 +876,21 @@
     </authorization>
   </pipelines>
   <pipelines group="franca_install_automation" />
-  <pipelines group="Agent_administration_2131ce1bd33e">
+  <pipelines group="Administration_for_2131ce1bd33e">
+    <authorization>
+      <view>
+        <user>GunnarA</user>
+        <role>GDP_Developer</role>
+      </view>
+      <operate>
+        <user>GunnarA</user>
+        <role>GDP_Developer</role>
+      </operate>
+      <admins>
+        <user>GunnarA</user>
+        <role>GDP_Developer</role>
+      </admins>
+    </authorization>
     <pipeline name="Wipe_gdp_work_dir">
       <materials>
         <git url="http://github.com/gunnarx/gocd-setup.git" />
