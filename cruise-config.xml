@@ -1350,7 +1350,7 @@
       </stage>
     </pipeline>
     <pipeline name="Wipe_work_dirs_in_all_GDP_Builds">
-      <stage name="defaultStage">
+      <stage name="wipe_dirs">
         <jobs>
           <job name="defaultJob">
             <tasks>
