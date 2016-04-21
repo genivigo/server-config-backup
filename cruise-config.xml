@@ -1410,8 +1410,8 @@
               </exec>
               <exec command="/bin/sh">
                 <arg>-c</arg>
-                <arg>echo "Pipelines disk usage:" &amp;&amp; du -hs /var/lib/go-agent/pipelines/*</arg>
-                <runif status="passed" />
+                <arg>echo "Pipelines disk usage:" &amp;&amp; du -hs /var/lib/go-agent/pipelines/* || true</arg>
+                <runif status="any" />
               </exec>
             </tasks>
             <resources>
