@@ -966,6 +966,11 @@
                 <arg>-c</arg>
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
               </exec>
+              <exec command="/bin/sh">
+                <arg>-c</arg>
+                <arg>/bin/ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvfz logs.tar &amp;&amp; gzip logs.tar</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
