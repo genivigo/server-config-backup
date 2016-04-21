@@ -1365,7 +1365,7 @@
               </exec>
               <exec command="/bin/sh">
                 <arg>-c</arg>
-                <arg>du -hs /var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</arg>
+                <arg>echo "Disk usage:" &amp;&amp; du -hs #{dir_pattern}</arg>
                 <runif status="passed" />
               </exec>
               <exec command="/bin/sh">
