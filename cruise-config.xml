@@ -1401,7 +1401,7 @@
               <exec command="/bin/sh">
                 <arg>-c</arg>
                 <arg>echo "Disk usage:" &amp;&amp; du -hs #{dir_pattern}</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="/bin/sh">
                 <arg>-c</arg>
