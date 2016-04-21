@@ -1353,6 +1353,7 @@
               <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-demo-platform-*/license.manifest" />
               <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-demo-platform-*/package.manifest" />
               <artifact src="gdp-src-build/downloads/*" dest="downloads (source_code)" />
+              <artifact src="logs.tar.gz" />
             </artifacts>
           </job>
         </jobs>
