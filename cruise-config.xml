@@ -1370,7 +1370,7 @@
               </exec>
               <exec command="/bin/sh">
                 <arg>-c</arg>
-                <arg>rm -r /var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</arg>
+                <arg>rm -r #{dir_pattern}</arg>
                 <runif status="passed" />
               </exec>
               <exec command="/bin/sh">
