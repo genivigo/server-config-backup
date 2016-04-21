@@ -1168,6 +1168,9 @@
             <resources>
               <resource>yocto_build</resource>
             </resources>
+            <artifacts>
+              <artifact src="logs.tar.gz" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
