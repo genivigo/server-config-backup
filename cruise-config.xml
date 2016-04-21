@@ -860,6 +860,23 @@
         </jobs>
       </stage>
     </pipeline>
+  </pipelines>
+  <pipelines group="Retired_Pipelines">
+    <authorization>
+      <view>
+        <role>Guest</role>
+        <role>Developer</role>
+      </view>
+      <operate>
+        <role>Developer</role>
+      </operate>
+      <admins>
+        <role>Developer</role>
+      </admins>
+    </authorization>
+  </pipelines>
+  <pipelines group="franca_install_automation" />
+  <pipelines group="Agent_administration_2131ce1bd33e">
     <pipeline name="Wipe_gdp_work_dir">
       <materials>
         <git url="http://github.com/gunnarx/gocd-setup.git" />
@@ -892,22 +909,6 @@
       </stage>
     </pipeline>
   </pipelines>
-  <pipelines group="Retired_Pipelines">
-    <authorization>
-      <view>
-        <role>Guest</role>
-        <role>Developer</role>
-      </view>
-      <operate>
-        <role>Developer</role>
-      </operate>
-      <admins>
-        <role>Developer</role>
-      </admins>
-    </authorization>
-  </pipelines>
-  <pipelines group="franca_install_automation" />
-  <pipelines group="Agent_administration_2131ce1bd33e" />
   <templates>
     <pipeline name="franca_install_automation">
       <authorization>
