@@ -1240,6 +1240,9 @@
             <resources>
               <resource>ct_test</resource>
             </resources>
+            <artifacts>
+              <artifact src="logs.tar.gz" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
