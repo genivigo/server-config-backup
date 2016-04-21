@@ -891,36 +891,10 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="Wipe_gdp_work_dir">
+    <pipeline name="Wipe_gdp_work_dir" template="Wipe_work_dirs_in_all_GDP_Builds">
       <materials>
         <git url="http://github.com/gunnarx/gocd-setup.git" />
       </materials>
-      <stage name="defaultStage">
-        <jobs>
-          <job name="defaultJob">
-            <tasks>
-              <exec command="/bin/sh">
-                <arg>-c</arg>
-                <arg>du -hs /var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="/bin/sh">
-                <arg>-c</arg>
-                <arg>rm -r /var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="/bin/sh">
-                <arg>-c</arg>
-                <arg>du -hs /var/lib/go-agent/pipelines/</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>ga_test</resource>
-            </resources>
-          </job>
-        </jobs>
-      </stage>
     </pipeline>
   </pipelines>
   <templates>
@@ -1371,6 +1345,34 @@
               <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-demo-platform-*/package.manifest" />
               <artifact src="gdp-src-build/downloads/*" dest="downloads (source_code)" />
             </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="Wipe_work_dirs_in_all_GDP_Builds">
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="/bin/sh">
+                <arg>-c</arg>
+                <arg>du -hs /var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/bin/sh">
+                <arg>-c</arg>
+                <arg>rm -r /var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/bin/sh">
+                <arg>-c</arg>
+                <arg>du -hs /var/lib/go-agent/pipelines/</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>ga_test</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
