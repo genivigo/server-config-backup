@@ -1396,7 +1396,7 @@
               <exec command="/bin/sh">
                 <arg>-c</arg>
                 <arg>echo "dir-pattern glob matches: " &amp;&amp; ls #{dir_pattern}</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="/bin/sh">
                 <arg>-c</arg>
