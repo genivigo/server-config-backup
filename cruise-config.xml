@@ -1356,7 +1356,7 @@
     <pipeline name="Wipe_work_dirs_in_all_GDP_Builds">
       <stage name="wipe_dirs">
         <jobs>
-          <job name="defaultJob">
+          <job name="job">
             <tasks>
               <exec command="/bin/sh">
                 <arg>-c</arg>
