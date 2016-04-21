@@ -1380,7 +1380,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>ga_test</resource>
+              <resource>#{agent}</resource>
             </resources>
           </job>
         </jobs>
