@@ -1373,6 +1373,11 @@
                 <arg>du -hs /var/lib/go-agent/pipelines/</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="/bin/sh">
+                <arg>-c</arg>
+                <arg>echo Dir list is &amp;&amp; ls #{dir_pattern}</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
