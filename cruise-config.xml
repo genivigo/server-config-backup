@@ -968,7 +968,7 @@
               </exec>
               <exec command="/bin/sh">
                 <arg>-c</arg>
-                <arg>rm logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvfz logs.tar &amp;&amp; gzip logs.tar</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvfz logs.tar &amp;&amp; gzip logs.tar</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -1058,7 +1058,7 @@
               </exec>
               <exec command="/bin/sh">
                 <arg>-c</arg>
-                <arg>rm logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvfz logs.tar &amp;&amp; gzip logs.tar</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvfz logs.tar &amp;&amp; gzip logs.tar</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
