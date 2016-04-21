@@ -1406,7 +1406,7 @@
               <exec command="/bin/sh">
                 <arg>-c</arg>
                 <arg>rm -r #{dir_pattern}</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="/bin/sh">
                 <arg>-c</arg>
