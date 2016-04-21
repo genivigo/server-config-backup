@@ -1226,6 +1226,11 @@
                 <arg>-c</arg>
                 <arg>source ./init.sh &amp;&amp; mkdir output &amp;&amp; ../poky/scripts/wic create directdisk -e genivi-demo-platform --outdir=output</arg>
               </exec>
+              <exec command="/bin/sh">
+                <arg>-c</arg>
+                <arg>rm logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvfz logs.tar &amp;&amp; gzip logs.tar</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ct_test</resource>
