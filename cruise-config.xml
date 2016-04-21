@@ -891,7 +891,7 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="Wipe_gdp_work_dir" template="Wipe_work_dirs_in_all_GDP_Builds">
+    <pipeline name="Wipe_gdp_work_dir" template="Wipe_dir_pattern">
       <params>
         <param name="agent">2131ce1bd33e</param>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</param>
@@ -1372,8 +1372,8 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="Wipe_work_dirs_in_all_GDP_Builds">
-      <stage name="wipe_dirs">
+    <pipeline name="Wipe_dir_pattern">
+      <stage name="stage">
         <jobs>
           <job name="job">
             <tasks>
