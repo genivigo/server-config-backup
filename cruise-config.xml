@@ -892,6 +892,9 @@
       </admins>
     </authorization>
     <pipeline name="Wipe_gdp_work_dir" template="Wipe_work_dirs_in_all_GDP_Builds">
+      <params>
+        <param name="agent">2131ce1bd33e</param>
+      </params>
       <materials>
         <git url="http://github.com/gunnarx/gocd-setup.git" />
       </materials>
