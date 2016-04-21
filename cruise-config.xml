@@ -907,6 +907,7 @@
     </authorization>
   </pipelines>
   <pipelines group="franca_install_automation" />
+  <pipelines group="Agent_administration_2131ce1bd33e" />
   <templates>
     <pipeline name="franca_install_automation">
       <authorization>
