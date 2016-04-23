@@ -888,6 +888,7 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="Administration_for_agent007" />
   <templates>
     <pipeline name="franca_install_automation">
       <authorization>
