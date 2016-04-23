@@ -1393,7 +1393,7 @@
             <tasks>
               <exec command="/bin/sh">
                 <arg>-c</arg>
-                <arg>echo "dir-pattern glob matches: " &amp;&amp; ls #{dir_pattern}</arg>
+                <arg>echo "dir-pattern glob matches: " &amp;&amp; ls #{dir_pattern} || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="/bin/sh">
