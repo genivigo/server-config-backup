@@ -1398,7 +1398,7 @@
               </exec>
               <exec command="/bin/sh">
                 <arg>-c</arg>
-                <arg>echo "Disk usage:" &amp;&amp; du -hs #{dir_pattern}</arg>
+                <arg>echo "Disk usage:" &amp;&amp; du -hs #{dir_pattern} || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="/bin/sh">
