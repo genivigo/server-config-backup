@@ -394,7 +394,7 @@
       <materials>
         <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" materialName="common-api-tools.git" />
       </materials>
-      <stage name="build">
+      <stage name="build" artifactCleanupProhibited="true">
         <jobs>
           <job name="build">
             <tasks>
