@@ -990,7 +990,7 @@
           <user>jonathanmaw</user>
         </admins>
       </authorization>
-      <stage name="build">
+      <stage name="build" artifactCleanupProhibited="true">
         <jobs>
           <job name="cmake_and_make">
             <tasks>
