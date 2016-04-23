@@ -900,6 +900,17 @@
     </pipeline>
   </pipelines>
   <pipelines group="Administration_for_codethink-genivigo-agent1-x86">
+    <authorization>
+      <view>
+        <role>GDP_Developer</role>
+      </view>
+      <operate>
+        <role>GDP_Developer</role>
+      </operate>
+      <admins>
+        <role>GDP_Developer</role>
+      </admins>
+    </authorization>
     <pipeline name="Wipe_gdp_work_dir3" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</param>
