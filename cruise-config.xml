@@ -428,7 +428,7 @@
         <git url="http://git.projects.genivi.org/common-api/cpp-someip-tools.git" dest="cpp-someip-tools" materialName="cpp-someip-tools.git" />
         <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
       </materials>
-      <stage name="build">
+      <stage name="build" artifactCleanupProhibited="true">
         <jobs>
           <job name="build">
             <tasks>
