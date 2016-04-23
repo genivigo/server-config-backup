@@ -899,6 +899,7 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="Administration_for_codethink-genivigo-agent1-x86" />
   <templates>
     <pipeline name="franca_install_automation">
       <authorization>
