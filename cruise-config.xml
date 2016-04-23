@@ -1403,7 +1403,7 @@
               </exec>
               <exec command="/bin/sh">
                 <arg>-c</arg>
-                <arg>rm -r #{dir_pattern}</arg>
+                <arg>rm -rf #{dir_pattern}</arg>
                 <runif status="any" />
               </exec>
               <exec command="/bin/sh">
