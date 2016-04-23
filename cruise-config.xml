@@ -888,7 +888,17 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Administration_for_agent007" />
+  <pipelines group="Administration_for_agent007">
+    <pipeline name="Wipe_gdp_work_dir2" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</param>
+        <param name="agent">agent007</param>
+      </params>
+      <materials>
+        <pipeline pipelineName="Wipe_gdp_work_dir" stageName="stage" />
+      </materials>
+    </pipeline>
+  </pipelines>
   <templates>
     <pipeline name="franca_install_automation">
       <authorization>
