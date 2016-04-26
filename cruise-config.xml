@@ -91,7 +91,7 @@
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="test_getting_linux-yocto">
+    <pipeline name="test_getting_linux-yocto" labeltemplate="10.0:${meta-ivi[:8]}-test" isLocked="false">
       <environmentvariables>
         <variable name="IMAGE_NAME">
           <value>leviathan-image</value>
