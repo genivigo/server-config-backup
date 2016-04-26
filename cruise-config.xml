@@ -128,7 +128,8 @@
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="baseline_ci_helper">
-                <arg>-c ./checkout_layer_hash.sh meta-openembedded</arg>
+                <arg>-c</arg>
+                <arg>./checkout_layer_hash.sh meta-openembedded</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
