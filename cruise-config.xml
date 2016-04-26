@@ -240,7 +240,7 @@
       <materials>
         <git url="http://git.yoctoproject.org/git/meta-ivi" branch="10.0" dest="meta-ivi" materialName="meta-ivi" />
         <git url="http://git.yoctoproject.org/git/poky.git" dest="poky" materialName="poky_master" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="jethro" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe_jethro" />
+        <git url="git://git.openembedded.org/meta-openembedded" dest="meta-openembedded" materialName="meta-oe_master" />
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
       <stage name="setup">
