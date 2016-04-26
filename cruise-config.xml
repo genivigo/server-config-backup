@@ -91,6 +91,22 @@
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
+    <pipeline name="test_getting_linux-yocto">
+      <materials>
+        <git url="http://git.yoctoproject.org/git/meta-ivi" branch="10.0" />
+      </materials>
+      <stage name="git.config.1">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config user.name Go Agent</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP">
     <authorization>
