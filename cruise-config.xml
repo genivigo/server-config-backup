@@ -117,7 +117,9 @@
                 <runif status="passed" />
               </exec>
               <exec command="git" workingdir="meta-ivi">
-                <arg>config user.email no_email@genivigo.com</arg>
+                <arg>config</arg>
+                <arg>user.email</arg>
+                <arg>no_email@genivigo.com</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
