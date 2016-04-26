@@ -133,24 +133,6 @@
           </job>
         </jobs>
       </stage>
-      <stage name="checkout">
-        <jobs>
-          <job name="checkout_poky">
-            <tasks>
-              <exec command="bash" workingdir="baseline_ci_helper">
-                <arg>-c ./checkout_layer_hash.sh poky</arg>
-              </exec>
-            </tasks>
-          </job>
-          <job name="checkout_oe">
-            <tasks>
-              <exec command="bash" workingdir="baseline_ci_helper">
-                <arg>-c ./checkout_layer_hash.sh meta-openembedded</arg>
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
       <stage name="getting_kernel_src">
         <jobs>
           <job name="fetch_linux-yocto">
