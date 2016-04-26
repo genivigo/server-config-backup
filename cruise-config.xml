@@ -228,7 +228,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="yocto-baseline-experimental" labeltemplate="10.0:${meta-ivi[:8]}-test" isLocked="false">
+    <pipeline name="yocto-baseline-experimental" labeltemplate="experimental:${meta-ivi[:8]}" isLocked="false">
       <environmentvariables>
         <variable name="IMAGE_NAME">
           <value>leviathan-image</value>
