@@ -123,7 +123,8 @@
           <job name="checkout">
             <tasks>
               <exec command="bash" workingdir="baseline_ci_helper">
-                <arg>-c ./checkout_layer_hash.sh poky</arg>
+                <arg>-c</arg>
+                <arg>./checkout_layer_hash.sh poky</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="baseline_ci_helper">
