@@ -140,6 +140,18 @@
           </job>
         </jobs>
       </stage>
+      <stage name="getting_kernel_src">
+        <jobs>
+          <job name="fetch_linux-yocto">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake $IMAGE_NAME</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="GDP">
