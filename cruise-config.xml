@@ -93,7 +93,7 @@
     </pipeline>
     <pipeline name="test_getting_linux-yocto">
       <materials>
-        <git url="http://git.yoctoproject.org/git/meta-ivi" branch="10.0" />
+        <git url="http://git.yoctoproject.org/git/meta-ivi" branch="10.0" dest="meta-ivi" materialName="meta-ivi" />
       </materials>
       <stage name="git.config.1">
         <jobs>
