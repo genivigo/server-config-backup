@@ -233,6 +233,9 @@
         <variable name="IMAGE_NAME">
           <value>leviathan-image</value>
         </variable>
+        <variable name="tolkien" secure="true">
+          <encryptedValue>ogTmfK0PoCAEAtLkSn+CUw==</encryptedValue>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="http://git.yoctoproject.org/git/meta-ivi" branch="10.0" dest="meta-ivi" materialName="meta-ivi" />
