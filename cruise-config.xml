@@ -133,7 +133,7 @@
           </job>
         </jobs>
       </stage>
-      <stage name="getting_kernel_src">
+      <stage name="build">
         <jobs>
           <job name="fetch_linux-yocto">
             <tasks>
