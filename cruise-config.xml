@@ -113,6 +113,10 @@
               <exec command="git" workingdir="meta-ivi">
                 <arg>config user.name Go Agent</arg>
               </exec>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config user.email no_email@genivigo.com</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
