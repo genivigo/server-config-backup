@@ -122,17 +122,6 @@
           </job>
         </jobs>
       </stage>
-      <stage name="git.config.2">
-        <jobs>
-          <job name="git.config.2">
-            <tasks>
-              <exec command="git" workingdir="meta-ivi">
-                <arg>config user.email no_email@genivigo.com</arg>
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="GDP">
