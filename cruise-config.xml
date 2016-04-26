@@ -152,7 +152,7 @@
           </job>
         </jobs>
       </stage>
-      <stage name="build">
+      <stage name="build-image">
         <jobs>
           <job name="build">
             <tasks>
