@@ -140,6 +140,18 @@
           </job>
         </jobs>
       </stage>
+      <stage name="workaround.1">
+        <jobs>
+          <job name="getting-kernel_src">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake -c fetch linux-yocto</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
       <stage name="build">
         <jobs>
           <job name="build">
@@ -153,18 +165,6 @@
                 <arg>-c</arg>
                 <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake $IMAGE_NAME</arg>
                 <runif status="passed" />
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-      <stage name="workaround.1">
-        <jobs>
-          <job name="getting-kernel_src">
-            <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake -c fetch linux-yocto</arg>
               </exec>
             </tasks>
           </job>
