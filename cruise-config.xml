@@ -108,7 +108,7 @@
       </materials>
       <stage name="git.config">
         <jobs>
-          <job name="defaultJob">
+          <job name="git.config">
             <tasks>
               <exec command="git" workingdir="meta-ivi">
                 <arg>config user.name Go Agent</arg>
