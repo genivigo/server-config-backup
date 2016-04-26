@@ -112,6 +112,7 @@
             <tasks>
               <exec command="git" workingdir="meta-ivi">
                 <arg>config user.name Go Agent</arg>
+                <runif status="passed" />
               </exec>
               <exec command="git" workingdir="meta-ivi">
                 <arg>config user.email no_email@genivigo.com</arg>
