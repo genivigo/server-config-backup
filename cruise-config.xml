@@ -154,7 +154,7 @@
       </stage>
       <stage name="build-image">
         <jobs>
-          <job name="build">
+          <job name="build-image">
             <tasks>
               <exec command="bash">
                 <arg>-c</arg>
