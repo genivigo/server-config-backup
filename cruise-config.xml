@@ -120,6 +120,13 @@
               </exec>
             </tasks>
           </job>
+          <job name="checkout">
+            <tasks>
+              <exec command="bash" workingdir="baseline_ci_helper">
+                <arg>-c ./checkout_layer_hash.sh poky</arg>
+              </exec>
+            </tasks>
+          </job>
         </jobs>
       </stage>
       <stage name="checkout">
