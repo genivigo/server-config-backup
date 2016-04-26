@@ -78,19 +78,6 @@
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-10" labeltemplate="10.0:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build">
-      <environmentvariables>
-        <variable name="IMAGE_NAME">
-          <value>leviathan-image</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="http://git.yoctoproject.org/git/meta-ivi" branch="10.0" dest="meta-ivi" materialName="meta-ivi" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="jethro" dest="poky" autoUpdate="false" materialName="poky_jethro" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="jethro" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded_jethro" />
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
-      </materials>
-    </pipeline>
     <pipeline name="test_getting_linux-yocto" labeltemplate="10.0:${meta-ivi[:8]}-test" isLocked="false">
       <environmentvariables>
         <variable name="IMAGE_NAME">
