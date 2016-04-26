@@ -94,6 +94,7 @@
     <pipeline name="test_getting_linux-yocto">
       <materials>
         <git url="http://git.yoctoproject.org/git/meta-ivi" branch="10.0" dest="meta-ivi" materialName="meta-ivi" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="jethro" dest="poky" autoUpdate="false" materialName="poky_jethro" />
       </materials>
       <stage name="git.config.1">
         <jobs>
