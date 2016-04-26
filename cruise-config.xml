@@ -122,6 +122,17 @@
           </job>
         </jobs>
       </stage>
+      <stage name="checkout">
+        <jobs>
+          <job name="checkout_poky">
+            <tasks>
+              <exec command="bash" workingdir="baseline_ci_helper">
+                <arg>-c ./checkout_layer_hash.sh poky</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="GDP">
