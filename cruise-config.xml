@@ -224,7 +224,7 @@
       </environmentvariables>
       <materials>
         <git url="http://git.yoctoproject.org/git/meta-ivi" branch="10.0" dest="meta-ivi" materialName="meta-ivi" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="fc45deac89ef63ca1c44e763c38ced7dfd72cbe1" dest="poky" autoUpdate="false" materialName="poky_jethro" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="jethro" dest="poky" autoUpdate="false" materialName="poky_jethro" />
         <git url="git://git.openembedded.org/meta-openembedded" branch="ad6133a2e95f4b83b6b3ea413598e2cd5fb3fd90" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe_jethro" />
       </materials>
       <stage name="workaround.1">
