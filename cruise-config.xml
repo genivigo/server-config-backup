@@ -924,7 +924,7 @@
     </pipeline>
     <pipeline name="yocto-baseline-experimental" labeltemplate="experimental:${meta-ivi[:8]}" isLocked="false">
       <materials>
-        <git url="http://git.yoctoproject.org/git/meta-ivi" branch="10.0" dest="meta-ivi" materialName="meta-ivi" />
+        <git url="https://github.com/GENIVI/meta-ivi.git" branch="experimental" dest="meta-ivi" materialName="meta-ivi" />
         <git url="http://git.yoctoproject.org/git/poky.git" branch="master-next" dest="poky" materialName="poky_master-next" />
         <git url="git://git.openembedded.org/meta-openembedded" branch="master-next" dest="meta-openembedded" materialName="meta-oe_master-next" />
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
