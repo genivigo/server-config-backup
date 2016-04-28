@@ -230,7 +230,7 @@
       </materials>
       <stage name="init_and_build">
         <jobs>
-          <job name="build-image">
+          <job name="build">
             <tasks>
               <exec command="git" workingdir="meta-ivi">
                 <arg>config</arg>
