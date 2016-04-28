@@ -237,15 +237,15 @@
                 <arg>Go Agent</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake $IMAGE_NAME</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="git" workingdir="meta-ivi">
                 <arg>config</arg>
                 <arg>user.email</arg>
                 <arg>no_email@genivigo.com</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake $IMAGE_NAME</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
