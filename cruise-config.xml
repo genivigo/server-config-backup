@@ -1039,6 +1039,7 @@
       <timer>0 0 4 ? * SUN *</timer>
       <materials>
         <pipeline pipelineName="Wipe_gdp_work_dir" stageName="stage" />
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
   </pipelines>
