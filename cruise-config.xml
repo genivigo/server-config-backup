@@ -227,19 +227,6 @@
         <git url="http://git.yoctoproject.org/git/poky.git" branch="jethro" dest="poky" autoUpdate="false" materialName="poky_jethro" />
         <git url="git://git.openembedded.org/meta-openembedded" branch="jethro" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe_jethro" />
       </materials>
-      <stage name="workaround.1">
-        <jobs>
-          <job name="getting-kernel_src">
-            <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake -c fetch linux-yocto</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
       <stage name="build">
         <jobs>
           <job name="build-image">
