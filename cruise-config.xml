@@ -227,7 +227,7 @@
         <git url="http://git.yoctoproject.org/git/poky.git" branch="jethro" dest="poky" autoUpdate="false" materialName="poky_jethro" />
         <git url="git://git.openembedded.org/meta-openembedded" branch="jethro" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe_jethro" />
       </materials>
-      <stage name="build">
+      <stage name="init_and_build">
         <jobs>
           <job name="build-image">
             <tasks>
