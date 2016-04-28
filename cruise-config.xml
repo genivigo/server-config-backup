@@ -1015,7 +1015,7 @@
       </params>
       <timer>0 0 4 ? * SUN *</timer>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="v" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
   </pipelines>
