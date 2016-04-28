@@ -1060,7 +1060,7 @@
         <param name="agent">codethink-genivigo-agent1-x86</param>
       </params>
       <materials>
-        <git url="http://git.projects.genivi.org/popupmanager.git" autoUpdate="false" />
+        <git url="http://git.projects.genivi.org/popupmanager.git" dest="a" autoUpdate="false" />
       </materials>
     </pipeline>
   </pipelines>
