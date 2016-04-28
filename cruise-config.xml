@@ -656,27 +656,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="DiskStatistics-test" isLocked="false">
-      <materials>
-        <git url="http://github.com/gunnarx/gocd-setup.git" />
-      </materials>
-      <stage name="stage">
-        <approval type="manual" />
-        <jobs>
-          <job name="disk_usage">
-            <tasks>
-              <exec command="uname">
-                <arg>-a</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="df">
-                <arg>-h</arg>
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="ADITtest">
       <materials>
         <git url="http://git.projects.genivi.org/genivi-demo-platform.git" branch="qemux86-64" dest="genivi-demo-platform" />
@@ -1017,6 +996,27 @@
       <materials>
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
       </materials>
+    </pipeline>
+    <pipeline name="DiskStatistics-test" isLocked="false">
+      <materials>
+        <git url="http://github.com/gunnarx/gocd-setup.git" />
+      </materials>
+      <stage name="stage">
+        <approval type="manual" />
+        <jobs>
+          <job name="disk_usage">
+            <tasks>
+              <exec command="uname">
+                <arg>-a</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="df">
+                <arg>-h</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="Administration_for_agent007">
