@@ -1014,6 +1014,9 @@
                 <arg>-h</arg>
               </exec>
             </tasks>
+            <resources>
+              <resource>2131ce1bd33e</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
