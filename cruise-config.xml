@@ -83,8 +83,8 @@
         <variable name="IMAGE_NAME">
           <value>leviathan-image</value>
         </variable>
-        <variable name="tolkien" secure="true">
-          <encryptedValue>ogTmfK0PoCAEAtLkSn+CUw==</encryptedValue>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
         </variable>
       </environmentvariables>
       <materials>
