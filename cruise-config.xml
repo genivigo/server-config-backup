@@ -1061,6 +1061,7 @@
       </params>
       <materials>
         <git url="http://git.projects.genivi.org/popupmanager.git" dest="a" autoUpdate="false" />
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="b" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
   </pipelines>
