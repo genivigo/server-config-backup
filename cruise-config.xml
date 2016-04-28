@@ -1560,6 +1560,11 @@
       </stage>
     </pipeline>
     <pipeline name="meta-ivi-build.2">
+      <authorization>
+        <admins>
+          <user>tolkien</user>
+        </admins>
+      </authorization>
       <stage name="setup">
         <jobs>
           <job name="git.config">
