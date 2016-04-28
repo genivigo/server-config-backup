@@ -1060,7 +1060,7 @@
         <param name="agent">codethink-genivigo-agent1-x86</param>
       </params>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="b" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
   </pipelines>
