@@ -78,7 +78,7 @@
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-10" labeltemplate="10.0:${meta-ivi[:8]}-test" isLocked="false">
+    <pipeline name="yocto-baseline-10" labeltemplate="10.0:${meta-ivi[:8]}-test" isLocked="false" template="meta-ivi-build.2">
       <environmentvariables>
         <variable name="IMAGE_NAME">
           <value>leviathan-image</value>
@@ -93,66 +93,6 @@
         <git url="git://git.openembedded.org/meta-openembedded" branch="jethro" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe_jethro" />
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
-      <stage name="setup">
-        <jobs>
-          <job name="git.config">
-            <tasks>
-              <exec command="git" workingdir="meta-ivi">
-                <arg>config</arg>
-                <arg>user.name</arg>
-                <arg>Go Agent</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git" workingdir="meta-ivi">
-                <arg>config</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-          </job>
-          <job name="checkout">
-            <tasks>
-              <exec command="bash" workingdir="baseline_ci_helper">
-                <arg>-c</arg>
-                <arg>./checkout_layer_hash.sh poky</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="baseline_ci_helper">
-                <arg>-c</arg>
-                <arg>./checkout_layer_hash.sh meta-openembedded</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-      <stage name="workaround.1">
-        <jobs>
-          <job name="getting-kernel_src">
-            <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake -c fetch linux-yocto</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-      <stage name="build">
-        <jobs>
-          <job name="build-image">
-            <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake $IMAGE_NAME</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
     </pipeline>
     <pipeline name="yocto-baseline-experimental" labeltemplate="experimental:${meta-ivi[:8]}" isLocked="false">
       <environmentvariables>
@@ -1615,6 +1555,68 @@
             <resources>
               <resource>#{agent}</resource>
             </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="meta-ivi-build.2">
+      <stage name="setup">
+        <jobs>
+          <job name="git.config">
+            <tasks>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config</arg>
+                <arg>user.name</arg>
+                <arg>Go Agent</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config</arg>
+                <arg>user.email</arg>
+                <arg>no_email@genivigo.com</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
+          <job name="checkout">
+            <tasks>
+              <exec command="bash" workingdir="baseline_ci_helper">
+                <arg>-c</arg>
+                <arg>./checkout_layer_hash.sh poky</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="baseline_ci_helper">
+                <arg>-c</arg>
+                <arg>./checkout_layer_hash.sh meta-openembedded</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="workaround.1">
+        <jobs>
+          <job name="getting-kernel_src">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake -c fetch linux-yocto</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="build">
+        <jobs>
+          <job name="build-image">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake $IMAGE_NAME</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
           </job>
         </jobs>
       </stage>
