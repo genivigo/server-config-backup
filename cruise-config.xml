@@ -228,7 +228,7 @@
         <git url="git://git.openembedded.org/meta-openembedded" branch="jethro" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe_jethro" />
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
-      <stage name="init_and_build">
+      <stage name="build_qemux86-64">
         <jobs>
           <job name="init_and_build">
             <tasks>
