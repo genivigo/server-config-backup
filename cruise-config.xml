@@ -106,7 +106,7 @@
         <git url="git://git.openembedded.org/meta-openembedded" branch="master-next" dest="meta-openembedded" materialName="meta-oe_master-next" />
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
-      <stage name="setup" cleanWorkingDir="true">
+      <stage name="setup">
         <jobs>
           <job name="git.config">
             <tasks>
