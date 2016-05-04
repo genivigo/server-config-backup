@@ -1580,7 +1580,7 @@
           <user>tolkien</user>
         </admins>
       </authorization>
-      <stage name="setup">
+      <stage name="init_build">
         <jobs>
           <job name="git.config">
             <tasks>
