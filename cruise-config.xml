@@ -1582,7 +1582,7 @@
       </authorization>
       <stage name="build_with_specific_commit">
         <jobs>
-          <job name="git.config">
+          <job name="build">
             <tasks>
               <exec command="git" workingdir="meta-ivi">
                 <arg>config</arg>
