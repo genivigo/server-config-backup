@@ -194,6 +194,11 @@
                 <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake $IMAGE_NAME</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash" workingdir="baseline_ci_helper">
+                <arg>-c</arg>
+                <arg>./checkout_layer_hash.sh meta-openembedded</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
