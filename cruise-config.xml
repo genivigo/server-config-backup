@@ -1526,7 +1526,7 @@
           <user>tolkien</user>
         </admins>
       </authorization>
-      <stage name="build_with_specific_commit">
+      <stage name="build_with_specific_commit" cleanWorkingDir="true">
         <jobs>
           <job name="build">
             <tasks>
