@@ -398,6 +398,11 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="vSomeIP" template="CMAKE_build">
+      <materials>
+        <git url="http://git.projects.genivi.org/vSomeIP.git" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Tools">
     <authorization>
