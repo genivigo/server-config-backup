@@ -910,7 +910,7 @@
     </pipeline>
     <pipeline name="PRtest">
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" />
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci" autoUpdate="false" />
       </materials>
       <stage name="defaultStage">
         <jobs>
