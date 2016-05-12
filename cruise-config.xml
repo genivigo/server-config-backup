@@ -982,7 +982,6 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>echo "qemux86-64" | (source ./init.sh &amp;&amp; bitbake genivi-dev-platform)</arg>
-                <runif status="failed" />
                 <runif status="passed" />
               </exec>
               <exec command="bash">
