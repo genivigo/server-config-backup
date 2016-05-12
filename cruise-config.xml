@@ -959,6 +959,20 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="GDP-PR-Builder">
+      <materials>
+        <git url="https://github.com/gunnarx/genivi-dev-platform.git" />
+      </materials>
+      <stage name="build">
+        <jobs>
+          <job name="build">
+            <tasks>
+              <exec command="true" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="franca_install_automation" />
   <pipelines group="Administration_for_2131ce1bd33e">
