@@ -1477,13 +1477,13 @@
                 <arg>echo 'SOURCE_MIRROR_URL ?= "file:///var/cache/yocto/downloads"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="/bin/sh" workingdir="gdp-src-build">
+                <arg>echo 'INHERIT += "own-mirrors"' &gt;&gt;local.conf</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="/bin/sh">
                 <arg>-c</arg>
                 <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvf logs.tar &amp;&amp; gzip logs.tar</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="/bin/sh" workingdir="gdp-src-build">
-                <arg>echo 'INHERIT += "own-mirrors"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
