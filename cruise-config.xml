@@ -993,6 +993,9 @@
             <resources>
               <resource>2131ce1bd33e</resource>
             </resources>
+            <artifacts>
+              <artifact src="logs.tar.gz" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
