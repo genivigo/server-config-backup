@@ -58,6 +58,17 @@
       </admins>
     </security>
   </server>
+  <scms>
+    <scm id="d8529582-f08b-40c1-968f-df1c39de41ef" name="prtest">
+      <pluginConfiguration id="github.pr" version="1" />
+      <configuration>
+        <property>
+          <key>url</key>
+          <value>https://github.com/gunnarx/baseline_ci_helper.git</value>
+        </property>
+      </configuration>
+    </scm>
+  </scms>
   <pipelines group="GENIVI_Baselines">
     <authorization>
       <view>
@@ -911,6 +922,7 @@
     <pipeline name="PRtest">
       <materials>
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci" autoUpdate="false" />
+        <scm ref="d8529582-f08b-40c1-968f-df1c39de41ef" dest="prtest" />
       </materials>
       <stage name="defaultStage">
         <jobs>
