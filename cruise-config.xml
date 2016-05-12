@@ -961,7 +961,7 @@
     </pipeline>
     <pipeline name="GDP-PR-Builder" template="Yocto_GDP_Build">
       <materials>
-        <scm ref="d5a2a23e-8282-4958-9304-a15c98270ec5" />
+        <scm ref="d5a2a23e-8282-4958-9304-a15c98270ec5" dest="aaa" />
       </materials>
     </pipeline>
   </pipelines>
