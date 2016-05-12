@@ -964,6 +964,11 @@
         <scm ref="d5a2a23e-8282-4958-9304-a15c98270ec5" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-PR-Builder2" template="Yocto_GDP_Build">
+      <materials>
+        <scm ref="d5a2a23e-8282-4958-9304-a15c98270ec5" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="franca_install_automation" />
   <pipelines group="Administration_for_2131ce1bd33e">
