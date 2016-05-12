@@ -1640,7 +1640,7 @@
     </pipeline>
   </templates>
   <agents>
-    <agent hostname="codethink-genivigo-agent1-x86" ipaddress="192.168.144.36" uuid="98b572c4-d559-4ed2-8b00-f4c25851e443">
+    <agent hostname="codethink-genivigo-agent1-x86" ipaddress="192.168.122.1" uuid="98b572c4-d559-4ed2-8b00-f4c25851e443">
       <resources>
         <resource>ct_test</resource>
         <resource>codethink-genivigo-agent1-x86</resource>
