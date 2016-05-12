@@ -1068,7 +1068,8 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
+                <arg>source ./init.sh &amp;&amp; bitbake genivi-dev-platform</arg>
+                <runif status="passed" />
               </exec>
               <exec command="/bin/sh">
                 <arg>-c</arg>
