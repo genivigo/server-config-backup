@@ -951,7 +951,7 @@
         <jobs>
           <job name="defaultJob">
             <tasks>
-              <exec command="false">
+              <exec command="true">
                 <runif status="passed" />
               </exec>
             </tasks>
