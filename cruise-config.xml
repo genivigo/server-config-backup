@@ -68,15 +68,6 @@
         </property>
       </configuration>
     </scm>
-    <scm id="d5a2a23e-8282-4958-9304-a15c98270ec5" name="genivi-demo-platform">
-      <pluginConfiguration id="github.pr" version="1" />
-      <configuration>
-        <property>
-          <key>url</key>
-          <value>git://github.com/gunnarx/genivi-dev-platform.git</value>
-        </property>
-      </configuration>
-    </scm>
     <scm id="30b07577-5ed3-4441-9558-3cf1595a678c" name="meta-genivi-dev">
       <pluginConfiguration id="github.pr" version="1" />
       <configuration>
