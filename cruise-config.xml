@@ -908,6 +908,20 @@
         <git url="http://git.projects.genivi.org/vSomeIP.git" />
       </materials>
     </pipeline>
+    <pipeline name="PRtest">
+      <materials>
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" branch="foo" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="true" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="franca_install_automation" />
   <pipelines group="Administration_for_2131ce1bd33e">
