@@ -68,6 +68,15 @@
         </property>
       </configuration>
     </scm>
+    <scm id="d5a2a23e-8282-4958-9304-a15c98270ec5" name="genivi-demo-platform">
+      <pluginConfiguration id="github.pr" version="1" />
+      <configuration>
+        <property>
+          <key>url</key>
+          <value>git://github.com/genivi/genivi-dev-platform.git</value>
+        </property>
+      </configuration>
+    </scm>
   </scms>
   <pipelines group="GENIVI_Baselines">
     <authorization>
@@ -942,6 +951,7 @@
     <pipeline name="GDP-PR-Builder" template="Yocto_GDP_Build">
       <materials>
         <git url="http://git.projects.genivi.org/genivi-demo-platform.git" dest="dummy" />
+        <scm ref="d5a2a23e-8282-4958-9304-a15c98270ec5" dest="dummy2" />
       </materials>
     </pipeline>
   </pipelines>
