@@ -1464,7 +1464,7 @@
                 <arg>/bin/echo -e 'INHERIT += "archiver"\nARCHIVER_MODE[src] = "original"\n' | tee -a gdp-src-build/conf/local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="gdp-src-build">
+              <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
                 <arg>echo 'SOURCE_MIRROR_URL ?= "file:///var/cache/yocto/downloads"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
