@@ -258,7 +258,6 @@
     <pipeline name="github-PR-test" template="Yocto_GDP_qemu_latest_meta_genivi_demo">
       <materials>
         <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="qemux86-64" dest="gdp" materialName="genivi-demo-platform.git" />
-        <git url="git://git.projects.genivi.org/meta-genivi-demo.git" branch="qemu-ci" dest="meta-genivi-demo" materialName="meta-genivi-demo.git" />
       </materials>
     </pipeline>
   </pipelines>
