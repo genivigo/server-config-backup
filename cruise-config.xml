@@ -961,7 +961,7 @@
     </pipeline>
     <pipeline name="GDP-PR-Builder">
       <materials>
-        <scm ref="4dd064ce-d8c9-4935-adee-74b2a5fc4d00" dest="aa" />
+        <scm ref="4dd064ce-d8c9-4935-adee-74b2a5fc4d00" />
       </materials>
       <stage name="build">
         <jobs>
