@@ -962,6 +962,7 @@
     <pipeline name="GDP-PR-Builder" template="Yocto_GDP_Build">
       <materials>
         <scm ref="d5a2a23e-8282-4958-9304-a15c98270ec5" dest="aaa" />
+        <git url="git://github.com/gunnarx/genivi-dev-platform.git" dest="asdf" materialName="gdp2" />
       </materials>
     </pipeline>
   </pipelines>
