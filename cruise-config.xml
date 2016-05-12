@@ -941,7 +941,7 @@
     </pipeline>
     <pipeline name="GDP-PR-Builder" template="Yocto_GDP_Build">
       <materials>
-        <git url="http://git.projects.genivi.org/genivi-demo-platform.git" />
+        <git url="http://git.projects.genivi.org/genivi-demo-platform.git" dest="dummy" />
       </materials>
     </pipeline>
   </pipelines>
