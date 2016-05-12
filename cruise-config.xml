@@ -1469,7 +1469,7 @@
                 <arg>echo 'SOURCE_MIRROR_URL ?= "file:///var/cache/yocto/downloads"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="gdp-src-build">
+              <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>echo 'INHERIT += "own-mirrors"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
