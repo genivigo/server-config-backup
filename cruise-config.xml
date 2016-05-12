@@ -73,7 +73,7 @@
       <configuration>
         <property>
           <key>url</key>
-          <value>git://github.com/genivi/genivi-dev-platform.git</value>
+          <value>git://github.com/gunnarx/genivi-dev-platform.git</value>
         </property>
       </configuration>
     </scm>
