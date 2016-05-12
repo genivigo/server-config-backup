@@ -82,7 +82,7 @@
       <configuration>
         <property>
           <key>url</key>
-          <value>https://github.com/GENIVI/meta-genivi-dev</value>
+          <value>https://github.com/GENIVI/meta-genivi-dev.git</value>
         </property>
       </configuration>
     </scm>
