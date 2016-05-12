@@ -1472,7 +1472,7 @@
                 <arg>-c</arg>
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform -c populate_sdk</arg>
               </exec>
-              <exec command="/bin/sh">
+              <exec command="/bin/sh" workingdir="gdp-src-build">
                 <arg>-c</arg>
                 <arg>echo 'SOURCE_MIRROR_URL ?= "file:///var/cache/yocto/downloads"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
