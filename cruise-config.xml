@@ -998,6 +998,45 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="GDP-Build-PR">
+      <materials>
+        <scm ref="4dd064ce-d8c9-4935-adee-74b2a5fc4d00" />
+      </materials>
+      <stage name="build">
+        <jobs>
+          <job name="build">
+            <tasks>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config</arg>
+                <arg>user.name</arg>
+                <arg>go.genivi.org agent</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config</arg>
+                <arg>user.email</arg>
+                <arg>no-email</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>echo "qemux86-64" | source ./init.sh &amp;&amp; bitbake genivi-dev-platform</arg>
+                <runif status="failed" />
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvf logs.tar &amp;&amp; gzip logs.tar</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>2131ce1bd33e</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="franca_install_automation" />
   <pipelines group="Administration_for_2131ce1bd33e">
