@@ -1473,13 +1473,13 @@
                 <arg>echo 'SOURCE_MIRROR_URL ?= "file:///var/cache/yocto/downloads"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform -c populate_sdk</arg>
-              </exec>
               <exec command="/bin/sh" workingdir="gdp-src-build">
                 <arg>echo 'INHERIT += "own-mirrors"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform -c populate_sdk</arg>
               </exec>
               <exec command="/bin/sh">
                 <arg>-c</arg>
