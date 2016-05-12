@@ -961,7 +961,7 @@
     </pipeline>
     <pipeline name="GDP-PR-Builder">
       <materials>
-        <git url="git://github.com/gunnarx/genivi-dev-platform.git" />
+        <git url="git://github.com/gunnarx/genivi-dev-platform.git" dest="a" />
       </materials>
       <stage name="build">
         <jobs>
