@@ -358,7 +358,7 @@
                 <arg>dbus-1.9.0</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh" workingdir="dbus">
+              <exec command="bash" workingdir="dbus">
                 <arg>-c</arg>
                 <arg>for f in ../common-api-dbus-runtime/src/dbus-patches/*.patch ; do patch -p1 &lt;"$f" || exit 1 ; done</arg>
                 <runif status="passed" />
@@ -368,11 +368,11 @@
                 <arg>results</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh" workingdir="dbus">
+              <exec command="bash" workingdir="dbus">
                 <arg>autogen.sh</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh" workingdir="dbus">
+              <exec command="bash" workingdir="dbus">
                 <arg>-c</arg>
                 <arg>./configure --prefix $PWD/../results</arg>
                 <runif status="passed" />
@@ -651,7 +651,7 @@
         <jobs>
           <job name="defaultJob">
             <tasks>
-              <exec command="/bin/sh">
+              <exec command="bash">
                 <arg>gm-sysinfo.sh</arg>
                 <runif status="passed" />
               </exec>
@@ -705,7 +705,7 @@
         <jobs>
           <job name="defaultJob">
             <tasks>
-              <exec command="/bin/sh">
+              <exec command="bash">
                 <arg>-xe</arg>
                 <arg>-c</arg>
                 <arg>id; printenv | sort; pwd; ls -la</arg>
@@ -723,7 +723,7 @@
                 <arg>--workdir</arg>
                 <arg>/home/build</arg>
                 <arg>gmacario/build-capi-native</arg>
-                <arg>/bin/bash</arg>
+                <arg>bash</arg>
                 <arg>-xe</arg>
                 <arg>-c</arg>
                 <arg>git clone git://git.projects.genivi.org/common-api/c-poc.git &amp;&amp; cd c-poc &amp;&amp; autoreconf -i &amp;&amp; ./configure &amp;&amp; make &amp;&amp; sudo make install</arg>
@@ -743,12 +743,12 @@
         <jobs>
           <job name="defaultJob">
             <tasks>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_DBUS_INTERFACE=ON -DWITH_FRANCA_DBUS_INTERFACE=OFF -DWITH_FRANCA_SOMEIP_INTERFACE=OFF -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=OFF -DCMAKE_BUILD_TYPE=Debug ../</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>cd build &amp;&amp; make</arg>
                 <runif status="passed" />
@@ -761,12 +761,12 @@
           </job>
           <job name="common-api-dbus_dlt_logreplayer">
             <tasks>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_DBUS_INTERFACE=OFF -DWITH_FRANCA_DBUS_INTERFACE=ON -DWITH_FRANCA_SOMEIP_INTERFACE=OFF -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=ON -DCMAKE_BUILD_TYPE=Debug -DCOMMONAPI_TOOL_GENERATOR=/usr/local/bin/commonapi-generator-linux-x86_64 -DCOMMONAPI_DBUS_TOOL_GENERATOR=/usr/local/bin/commonapi-dbus-generator-linux-x86_64 ../</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>cd build &amp;&amp; make</arg>
                 <runif status="passed" />
@@ -779,12 +779,12 @@
           </job>
           <job name="common-api-dbus_stdout_logreplayer">
             <tasks>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_DBUS_INTERFACE=OFF -DWITH_FRANCA_DBUS_INTERFACE=ON -DWITH_FRANCA_SOMEIP_INTERFACE=OFF -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=OFF -DCMAKE_BUILD_TYPE=Debug -DCOMMONAPI_TOOL_GENERATOR=/usr/local/bin/commonapi-generator-linux-x86_64 -DCOMMONAPI_DBUS_TOOL_GENERATOR=/usr/local/bin/commonapi-dbus-generator-linux-x86_64 ../</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>cd build &amp;&amp; make</arg>
                 <runif status="passed" />
@@ -797,12 +797,12 @@
           </job>
           <job name="gnssservice_stdout_gpsd">
             <tasks>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake WITH_ENHANCED_POSITION_SERVICE=OFF WITH_SENSORS_SERVICE=OFF  -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=OFF -DCMAKE_BUILD_TYPE=Debug -DWITH_REPLAYER=OFF -DWITH_GPSD=ON ../</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>cd build &amp;&amp; make</arg>
                 <runif status="passed" />
@@ -815,12 +815,12 @@
           </job>
           <job name="sensorsservice_gnssservice_nmea_logger_stdout">
             <tasks>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_ENHANCED_POSITION_SERVICE=OFF -DWITH_NMEA=ON -DWITH_SENSORS=ON -DIMU_TYPE=LSM9DS1 -DWITH_LOGGER=ON -DWITH_TESTS=ON -DWITH_DEBUG=ON -DGNSS_DEVICE=\"/dev/ttyACM0\" -DGNSS_BAUDRATE=B38400 -DGNSS_CHIPSET=UBLOX -DGNSS_DELAY=50 ../</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>cd build &amp;&amp; make</arg>
                 <runif status="passed" />
@@ -870,7 +870,7 @@
         <jobs>
           <job name="commonApiGenerationJob">
             <tasks>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>printenv &amp;&amp; true</arg>
                 <runif status="passed" />
@@ -1071,7 +1071,7 @@
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-dev-platform</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvf logs.tar &amp;&amp; gzip logs.tar</arg>
                 <runif status="passed" />
@@ -1152,7 +1152,7 @@
                 <arg>./copy_mm_software_lcb.sh /var/go/sgx_bin/</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>. ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
                 <runif status="passed" />
@@ -1161,7 +1161,7 @@
                 <arg>logs</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvf logs.tar &amp;&amp; gzip logs.tar</arg>
                 <runif status="passed" />
@@ -1201,12 +1201,12 @@
                 <arg>./copy_mm_software_lcb.sh /var/go/sgx_bin/</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>. ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>. ./init.sh &amp;&amp; bitbake genivi-demo-platform -c populate_sdk</arg>
                 <runif status="passed" />
@@ -1249,17 +1249,17 @@
                 <arg>no_email@genivigo.com</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh" workingdir="baseline_ci_helper">
+              <exec command="bash" workingdir="baseline_ci_helper">
                 <arg>-c</arg>
                 <arg>./checkout_layer_hash.sh poky</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh" workingdir="baseline_ci_helper">
+              <exec command="bash" workingdir="baseline_ci_helper">
                 <arg>-c</arg>
                 <arg>./checkout_layer_hash.sh meta-openembedded</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/bash">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake $IMAGE_NAME</arg>
                 <runif status="passed" />
@@ -1298,17 +1298,17 @@
                 <arg>tmp</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh" workingdir="gdp-src-build/conf">
+              <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
                 <arg>/bin/echo -e 'BB_NUMBER_THREADS = "4"\nPARALLEL_MAKE = "-j4"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh" workingdir="gdp-src-build/conf">
+              <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
                 <arg>/bin/echo -e 'DL_DIR = "/srv/go/dl"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh" workingdir="gdp-src-build/conf">
+              <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
                 <arg>/bin/echo -e 'IMAGE_FSTYPES = "hddimg"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
@@ -1383,17 +1383,17 @@
                 <arg>.</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh" workingdir="gdp/gdp-src-build/conf">
+              <exec command="bash" workingdir="gdp/gdp-src-build/conf">
                 <arg>-c</arg>
                 <arg>/bin/echo -e 'BB_NUMBER_THREADS = "2"\nPARALLEL_MAKE = "-j2"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh" workingdir="gdp/gdp-src-build/conf">
+              <exec command="bash" workingdir="gdp/gdp-src-build/conf">
                 <arg>-c</arg>
                 <arg>/bin/echo -e 'DL_DIR = "/srv/go/dl"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh" workingdir="gdp/gdp-src-build/conf">
+              <exec command="bash" workingdir="gdp/gdp-src-build/conf">
                 <arg>-c</arg>
                 <arg>/bin/echo -e 'IMAGE_FSTYPES = "hddimg"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
@@ -1468,12 +1468,12 @@
                 <arg>-c</arg>
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
               </exec>
-              <exec command="/bin/sh" workingdir="gdp-src-build">
+              <exec command="bash" workingdir="gdp-src-build">
                 <arg>-c</arg>
                 <arg>echo 'SOURCE_MIRROR_URL ?= "file:///var/cache/yocto/downloads"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh" workingdir="gdp-src-build">
+              <exec command="bash" workingdir="gdp-src-build">
                 <arg>echo 'INHERIT += "own-mirrors"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
@@ -1481,7 +1481,7 @@
                 <arg>-c</arg>
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform -c populate_sdk</arg>
               </exec>
-              <exec command="/bin/sh">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvf logs.tar &amp;&amp; gzip logs.tar</arg>
                 <runif status="passed" />
@@ -1507,22 +1507,22 @@
         <jobs>
           <job name="job">
             <tasks>
-              <exec command="/bin/sh">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>echo "dir-pattern glob matches: " &amp;&amp; ls #{dir_pattern} || true</arg>
                 <runif status="any" />
               </exec>
-              <exec command="/bin/sh">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>echo "Disk usage:" &amp;&amp; du -hs #{dir_pattern} || true</arg>
                 <runif status="any" />
               </exec>
-              <exec command="/bin/sh">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>rm -rf #{dir_pattern}</arg>
                 <runif status="any" />
               </exec>
-              <exec command="/bin/sh">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>echo "Pipelines disk usage:" &amp;&amp; du -hs /var/lib/go-agent/pipelines/* || true</arg>
                 <runif status="any" />
