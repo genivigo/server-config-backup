@@ -169,14 +169,14 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-Minnowboard" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build">
+    <pipeline name="GDP-Yocto-Minnowboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build">
       <materials>
-        <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="minnowboard" materialName="genivi-demo-platform.git" />
+        <git url="https://github.com/GENIVI/genivi-dev-platform.git" branch="minnowboard" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-QEMU_x86-64" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build">
+    <pipeline name="GDP-Yocto-QEMU_x86-64" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build">
       <materials>
-        <git url="http://git.projects.genivi.org/genivi-demo-platform.git" branch="qemux86-64" materialName="genivi-demo-platform.git" />
+        <git url="https://github.com/GENIVI/genivi-dev-platform.git" branch="qemux86-64" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-Porter-with-GFX" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
@@ -209,9 +209,9 @@
         <git url="http://git.projects.genivi.org/genivi-demo-platform.git" branch="silk" materialName="genivi-demo-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build">
+    <pipeline name="GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build">
       <materials>
-        <git url="http://git.projects.genivi.org/genivi-demo-platform.git" branch="raspberrypi2" materialName="genivi-demo-platform.git" />
+        <git url="https://github.com/GENIVI/genivi-dev-platform.git" branch="raspberrypi2" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
   </pipelines>
