@@ -986,7 +986,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvf logs.tar &amp;&amp; gzip logs.tar</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rf logs.tar &amp;&amp; gzip logs.tar</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
