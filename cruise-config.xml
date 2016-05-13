@@ -1717,7 +1717,6 @@
     <agent hostname="gmacario-genivigo-agent1" ipaddress="172.17.0.2" uuid="89069c2d-0711-4c7c-ab9f-63a20001234b">
       <resources>
         <resource>gmacario-genivigo-agent1</resource>
-        <resource>yocto_build</resource>
       </resources>
     </agent>
     <agent hostname="agent007" ipaddress="172.17.0.2" uuid="a0482753-ca6c-4d87-9e38-1be4543667c0">
