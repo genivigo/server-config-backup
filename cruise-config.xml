@@ -345,10 +345,10 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <fetchartifact pipeline="common-api-cpp-runtime" stage="build" job="cmake_and_make" srcdir="build" dest="common-api-cpp-runtime-build">
+              <fetchartifact pipeline="libdbus-with-commonapi-patch" stage="patch_and_build" job="patch_and_build" srcdir="results" dest="libdbus_patched">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="libdbus-with-commonapi-patch" stage="patch_and_build" job="patch_and_build" srcdir="results" dest="libdbus_patched">
+              <fetchartifact pipeline="common-api-cpp-runtime" stage="build" job="cmake_and_make" srcdir="build" dest="common-api-cpp-runtime-build">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="rm">
