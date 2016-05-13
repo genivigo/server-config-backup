@@ -993,7 +993,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rf logs.tar &amp;&amp; gzip logs.tar</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -1172,7 +1172,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvf logs.tar &amp;&amp; gzip logs.tar</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -1262,7 +1262,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvf logs.tar &amp;&amp; gzip logs.tar</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -1365,7 +1365,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvf logs.tar &amp;&amp; gzip logs.tar</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -1440,12 +1440,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvf logs.tar &amp;&amp; gzip logs.tar</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvf logs.tar &amp;&amp; gzip logs.tar</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -1582,7 +1577,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; ls gdp-src-build/tmp/work/*/*/*/*/log.* | xargs tar rvf logs.tar &amp;&amp; gzip logs.tar</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
