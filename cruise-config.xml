@@ -1190,6 +1190,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
             </artifacts>
