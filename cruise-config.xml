@@ -1193,13 +1193,13 @@
         <jobs>
           <job name="cmake_and_make">
             <tasks>
-              <exec command="rm">
-                <arg>-rf</arg>
+              <exec command="mkdir">
+                <arg>-p</arg>
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mkdir">
-                <arg>-p</arg>
+              <exec command="rm">
+                <arg>-rf</arg>
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
