@@ -1474,8 +1474,8 @@
                 <runif status="passed" />
               </exec>
               <exec command="mv" workingdir="gdp">
-                <arg>../meta-genivi-dev</arg>
-                <arg>.</arg>
+                <arg>../meta-genivi-demo</arg>
+                <arg>meta-genivi-dev</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="gdp/gdp-src-build/conf">
