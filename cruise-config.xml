@@ -1041,7 +1041,7 @@
     <pipeline name="Wipe_gdp_work_dir" isLocked="false" template="Wipe_dir_pattern">
       <params>
         <param name="agent">2131ce1bd33e</param>
-        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work</param>
+        <param name="dir_pattern">/tmp/wipetest*</param>
       </params>
       <timer>0 0 4 ? * SUN *</timer>
       <materials>
