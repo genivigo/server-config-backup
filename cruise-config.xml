@@ -963,7 +963,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="GDP-Build-PR">
+    <pipeline name="GDP-Pull-Request">
       <params>
         <param name="target">qemux86-64</param>
       </params>
