@@ -947,22 +947,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="PRtest">
-      <materials>
-        <scm ref="d8529582-f08b-40c1-968f-df1c39de41ef" dest="prtest" />
-      </materials>
-      <stage name="defaultStage">
-        <jobs>
-          <job name="defaultJob">
-            <tasks>
-              <exec command="true">
-                <runif status="passed" />
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="GDP-Pull-Request">
       <params>
         <param name="target">qemux86-64</param>
