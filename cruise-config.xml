@@ -1151,8 +1151,9 @@
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
-              <exec command="git" workingdir="meta-ivi">
+              <exec command="git">
                 <arg>config</arg>
+                <arg>--global</arg>
                 <arg>user.name</arg>
                 <arg>go.genivi.org agent</arg>
                 <runif status="passed" />
