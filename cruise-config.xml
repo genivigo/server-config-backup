@@ -1520,7 +1520,8 @@
               </exec>
               <exec command="bash" workingdir="gdp">
                 <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; mkdir output &amp;&amp; ../poky/scripts/wic create directdisk -e genivi-demo-platform --outdir=output</arg>
+                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; mkdir output &amp;&amp; ../poky/scripts/wic create directdisk -e genivi-demo-platform --outdir=output</arg>
+                <runif status="passed" />
               </exec>
               <exec command="rm">
                 <arg>-r</arg>
