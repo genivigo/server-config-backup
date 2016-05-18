@@ -1577,6 +1577,7 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform -c populate_sdk</arg>
+                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
