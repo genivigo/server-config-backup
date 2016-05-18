@@ -647,35 +647,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="ADITtest">
-      <materials>
-        <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="qemux86-64" dest="genivi-demo-platform" />
-      </materials>
-      <stage name="defaultStage" cleanWorkingDir="true">
-        <jobs>
-          <job name="defaultJob">
-            <tasks>
-              <exec command="bash" workingdir="genivi-demo-platform">
-                <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-demo-platform</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <tabs>
-              <tab name="kernel" path="recording/bzImage-qemux86-64.bin" />
-              <tab name="rfs" path="recoding/genivi-dev-platform.ext3" />
-            </tabs>
-            <resources>
-              <resource>yocto_build</resource>
-            </resources>
-            <artifacts>
-              <artifact src="genivi-dev-platform.bin" dest="recording" />
-              <artifact src="genivi-dev-platform.ext3" dest="recording" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="GDP-Yocto-QEMU_x86-64-populate-SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_build_with_SDK">
       <materials>
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="qemux86-64" materialName="genivi-dev-platform.git" />
