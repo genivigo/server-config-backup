@@ -274,6 +274,11 @@
         <scm ref="30b07577-5ed3-4441-9558-3cf1595a678c" dest="meta-genivi-demo" />
       </materials>
     </pipeline>
+    <pipeline name="github-PR-GDP-qemu-ci" template="Yocto_GDP_qemu_image">
+      <materials>
+        <git url="http://git.projects.genivi.org/genivi-demo-platform.git" branch="qemu-ci" materialName="genivi-demo-platform.git" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Components">
     <authorization>
