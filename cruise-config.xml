@@ -1158,8 +1158,9 @@
                 <arg>go.genivi.org agent</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="git" workingdir="meta-ivi">
+              <exec command="git">
                 <arg>config</arg>
+                <arg>--global</arg>
                 <arg>user.email</arg>
                 <arg>no-email</arg>
                 <runif status="passed" />
