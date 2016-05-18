@@ -285,7 +285,6 @@
     </pipeline>
     <pipeline name="github-PR-GDP-qemu-ci" template="Yocto_GDP_qemu_image">
       <materials>
-        <git url="http://git.projects.genivi.org/genivi-demo-platform.git" branch="qemu-ci" dest="d" materialName="genivi-demo-platform.git" />
         <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" dest="e" />
       </materials>
     </pipeline>
