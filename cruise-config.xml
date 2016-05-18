@@ -1581,7 +1581,7 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
             </tasks>
             <resources>
