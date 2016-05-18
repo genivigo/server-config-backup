@@ -304,7 +304,7 @@
     </authorization>
     <pipeline name="DLT-daemon-native" isLocked="false">
       <materials>
-        <git url="http://github.com/GENIVI/dlt-daemon.git" materialName="dlt-daemon.git" />
+        <git url="http://git.projects.genivi.org/dlt-daemon.git" materialName="dlt-daemon.git" />
       </materials>
       <stage name="build">
         <jobs>
@@ -342,12 +342,12 @@
     </pipeline>
     <pipeline name="common-api-cpp-runtime" labeltemplate="${COUNT}:master:${common-api-runtime.git[:8]}" isLocked="false" template="CMAKE_build">
       <materials>
-        <git url="http://github.com/GENIVI/ipc/common-api-runtime.git" materialName="common-api-runtime.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-runtime.git" materialName="common-api-runtime.git" />
       </materials>
     </pipeline>
     <pipeline name="common-api-cpp-dbus-runtime" labeltemplate="${COUNT}:master:${common-api-dbus-runtime.git[:8]}" isLocked="false">
       <materials>
-        <git url="http://github.com/GENIVI/ipc/common-api-dbus-runtime.git" materialName="common-api-dbus-runtime.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" materialName="common-api-dbus-runtime.git" />
         <pipeline pipelineName="common-api-cpp-runtime" stageName="build" materialName="build" />
         <pipeline pipelineName="libdbus-with-commonapi-patch" stageName="patch_and_build" materialName="libdbus-with-commonapi-patch" />
       </materials>
@@ -400,7 +400,7 @@
     <pipeline name="libdbus-with-commonapi-patch" labeltemplate="${COUNT}:master:${dbus.git[:8]}" isLocked="false">
       <materials>
         <git url="http://anongit.freedesktop.org/git/dbus/dbus.git" dest="dbus" materialName="dbus.git" />
-        <git url="http://github.com/GENIVI/ipc/common-api-dbus-runtime.git" dest="common-api-dbus-runtime" materialName="common-api-dbus-runtime.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" dest="common-api-dbus-runtime" materialName="common-api-dbus-runtime.git" />
       </materials>
       <stage name="patch_and_build">
         <jobs>
@@ -453,7 +453,7 @@
     </pipeline>
     <pipeline name="vSomeIP" template="CMAKE_build">
       <materials>
-        <git url="http://github.com/GENIVI/vSomeIP.git" />
+        <git url="http://git.projects.genivi.org/vSomeIP.git" />
       </materials>
     </pipeline>
   </pipelines>
@@ -472,8 +472,8 @@
     </authorization>
     <pipeline name="common-api-cpp-dbus-tools" labeltemplate="${COUNT}:master:${common-api-dbus-tools.git[:8]}" isLocked="false">
       <materials>
-        <git url="http://github.com/GENIVI/ipc/common-api-dbus-tools.git" dest="common-api-dbus-tools" materialName="common-api-dbus-tools.git" />
-        <git url="http://github.com/GENIVI/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-tools.git" dest="common-api-dbus-tools" materialName="common-api-dbus-tools.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
       </materials>
       <stage name="build" artifactCleanupProhibited="true">
         <jobs>
@@ -514,7 +514,7 @@
     </pipeline>
     <pipeline name="common-api-cpp-tools" labeltemplate="${COUNT}:master:${common-api-tools.git[:8]}" isLocked="false">
       <materials>
-        <git url="http://github.com/GENIVI/ipc/common-api-tools.git" materialName="common-api-tools.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" materialName="common-api-tools.git" />
       </materials>
       <stage name="build" artifactCleanupProhibited="true">
         <jobs>
@@ -547,8 +547,8 @@
     </pipeline>
     <pipeline name="common-api-cpp-someip-tools" labeltemplate="${COUNT}:master:${cpp-someip-tools.git[:8]}" isLocked="false">
       <materials>
-        <git url="http://github.com/GENIVI/common-api/cpp-someip-tools.git" dest="cpp-someip-tools" materialName="cpp-someip-tools.git" />
-        <git url="http://github.com/GENIVI/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
+        <git url="http://git.projects.genivi.org/common-api/cpp-someip-tools.git" dest="cpp-someip-tools" materialName="cpp-someip-tools.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
       </materials>
       <stage name="build" artifactCleanupProhibited="true">
         <jobs>
@@ -728,7 +728,7 @@
     </pipeline>
     <pipeline name="build_capi_native">
       <materials>
-        <git url="git://github.com/GENIVI/common-api/c-poc.git" />
+        <git url="git://git.projects.genivi.org/common-api/c-poc.git" />
       </materials>
       <stage name="defaultStage">
         <jobs>
@@ -755,7 +755,7 @@
                 <arg>bash</arg>
                 <arg>-xe</arg>
                 <arg>-c</arg>
-                <arg>git clone git://github.com/GENIVI/common-api/c-poc.git &amp;&amp; cd c-poc &amp;&amp; autoreconf -i &amp;&amp; ./configure &amp;&amp; make &amp;&amp; sudo make install</arg>
+                <arg>git clone git://git.projects.genivi.org/common-api/c-poc.git &amp;&amp; cd c-poc &amp;&amp; autoreconf -i &amp;&amp; ./configure &amp;&amp; make &amp;&amp; sudo make install</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -766,7 +766,7 @@
     <pipeline name="GENIVI_Positioning" isLocked="false">
       <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
       <materials>
-        <git url="http://github.com/GENIVI/lbs/positioning.git" materialName="PositioningGitRepository" />
+        <git url="http://git.projects.genivi.org/lbs/positioning.git" materialName="PositioningGitRepository" />
       </materials>
       <stage name="defaultStage">
         <jobs>
@@ -865,7 +865,7 @@
     </pipeline>
     <pipeline name="common-api-c" isLocked="false">
       <materials>
-        <git url="git://github.com/GENIVI/common-api/c-poc.git" />
+        <git url="git://git.projects.genivi.org/common-api/c-poc.git" />
       </materials>
       <stage name="buildStage">
         <jobs>
