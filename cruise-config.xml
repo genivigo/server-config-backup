@@ -221,34 +221,34 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" branch="qemux86-64" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Porter-with-GFX" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
+    <pipeline name="GDP-Yocto-Porter-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
       <environmentvariables>
         <variable name="BOARD">
           <value>porter</value>
         </variable>
       </environmentvariables>
       <materials>
-        <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="porter" materialName="genivi-demo-platform.git" />
+        <git url="git://github.com/GENIVI/genivi-dev-platform.git" branch="porter" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Koelsch-with-GFX" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
+    <pipeline name="GDP-Yocto-Koelsch-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
       <environmentvariables>
         <variable name="BOARD">
           <value>porter</value>
         </variable>
       </environmentvariables>
       <materials>
-        <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="koelsch" materialName="genivi-demo-platform.git" />
+        <git url="git://github.com/GENIVI/genivi-dev-platform.git" branch="koelsch" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Silk-with-GFX" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
+    <pipeline name="GDP-Yocto-Silk-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
       <environmentvariables>
         <variable name="BOARD">
           <value>silk</value>
         </variable>
       </environmentvariables>
       <materials>
-        <git url="http://git.projects.genivi.org/genivi-demo-platform.git" branch="silk" materialName="genivi-demo-platform.git" />
+        <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="silk" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build">
@@ -268,18 +268,18 @@
     </authorization>
     <pipeline name="GDP-Yocto-QEMU_x86-64-qemu-ci" template="Yocto_GDP_qemu_image">
       <materials>
-        <git url="http://git.projects.genivi.org/genivi-demo-platform.git" branch="qemu-ci" materialName="genivi-demo-platform.git" />
+        <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="qemu-ci" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-QEMU_x86-64-meta-genivi-demo-qemu-ci" template="Yocto_GDP_qemu_latest_meta_genivi_demo">
       <materials>
-        <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="qemux86-64" dest="gdp" materialName="genivi-demo-platform.git" />
-        <git url="git://git.projects.genivi.org/meta-genivi-demo.git" branch="qemu-ci" dest="meta-genivi-demo" materialName="meta-genivi-demo.git" />
+        <git url="git://github.com/GENIVI/genivi-dev-platform.git" branch="qemux86-64" dest="gdp" materialName="genivi-dev-platform.git" />
+        <git url="git://github.com/GENIVI/meta-genivi-demo.git" branch="qemu-ci" dest="meta-genivi-demo" materialName="meta-genivi-demo.git" />
       </materials>
     </pipeline>
     <pipeline name="github-PR-test" template="Yocto_GDP_qemu_latest_meta_genivi_demo">
       <materials>
-        <git url="git://github.com/genivi/genivi-dev-platform.git" branch="qemux86-64" dest="gdp" materialName="genivi-demo-platform.git" />
+        <git url="git://github.com/genivi/genivi-dev-platform.git" branch="qemux86-64" dest="gdp" materialName="genivi-dev-platform.git" />
         <scm ref="30b07577-5ed3-4441-9558-3cf1595a678c" dest="meta-genivi-demo" />
       </materials>
     </pipeline>
@@ -304,7 +304,7 @@
     </authorization>
     <pipeline name="DLT-daemon-native" isLocked="false">
       <materials>
-        <git url="http://git.projects.genivi.org/dlt-daemon.git" materialName="dlt-daemon.git" />
+        <git url="http://github.com/GENIVI/dlt-daemon.git" materialName="dlt-daemon.git" />
       </materials>
       <stage name="build">
         <jobs>
@@ -342,12 +342,12 @@
     </pipeline>
     <pipeline name="common-api-cpp-runtime" labeltemplate="${COUNT}:master:${common-api-runtime.git[:8]}" isLocked="false" template="CMAKE_build">
       <materials>
-        <git url="http://git.projects.genivi.org/ipc/common-api-runtime.git" materialName="common-api-runtime.git" />
+        <git url="http://github.com/GENIVI/ipc/common-api-runtime.git" materialName="common-api-runtime.git" />
       </materials>
     </pipeline>
     <pipeline name="common-api-cpp-dbus-runtime" labeltemplate="${COUNT}:master:${common-api-dbus-runtime.git[:8]}" isLocked="false">
       <materials>
-        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" materialName="common-api-dbus-runtime.git" />
+        <git url="http://github.com/GENIVI/ipc/common-api-dbus-runtime.git" materialName="common-api-dbus-runtime.git" />
         <pipeline pipelineName="common-api-cpp-runtime" stageName="build" materialName="build" />
         <pipeline pipelineName="libdbus-with-commonapi-patch" stageName="patch_and_build" materialName="libdbus-with-commonapi-patch" />
       </materials>
@@ -400,7 +400,7 @@
     <pipeline name="libdbus-with-commonapi-patch" labeltemplate="${COUNT}:master:${dbus.git[:8]}" isLocked="false">
       <materials>
         <git url="http://anongit.freedesktop.org/git/dbus/dbus.git" dest="dbus" materialName="dbus.git" />
-        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" dest="common-api-dbus-runtime" materialName="common-api-dbus-runtime.git" />
+        <git url="http://github.com/GENIVI/ipc/common-api-dbus-runtime.git" dest="common-api-dbus-runtime" materialName="common-api-dbus-runtime.git" />
       </materials>
       <stage name="patch_and_build">
         <jobs>
@@ -453,7 +453,7 @@
     </pipeline>
     <pipeline name="vSomeIP" template="CMAKE_build">
       <materials>
-        <git url="http://git.projects.genivi.org/vSomeIP.git" />
+        <git url="http://github.com/GENIVI/vSomeIP.git" />
       </materials>
     </pipeline>
   </pipelines>
@@ -472,8 +472,8 @@
     </authorization>
     <pipeline name="common-api-cpp-dbus-tools" labeltemplate="${COUNT}:master:${common-api-dbus-tools.git[:8]}" isLocked="false">
       <materials>
-        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-tools.git" dest="common-api-dbus-tools" materialName="common-api-dbus-tools.git" />
-        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
+        <git url="http://github.com/GENIVI/ipc/common-api-dbus-tools.git" dest="common-api-dbus-tools" materialName="common-api-dbus-tools.git" />
+        <git url="http://github.com/GENIVI/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
       </materials>
       <stage name="build" artifactCleanupProhibited="true">
         <jobs>
@@ -514,7 +514,7 @@
     </pipeline>
     <pipeline name="common-api-cpp-tools" labeltemplate="${COUNT}:master:${common-api-tools.git[:8]}" isLocked="false">
       <materials>
-        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" materialName="common-api-tools.git" />
+        <git url="http://github.com/GENIVI/ipc/common-api-tools.git" materialName="common-api-tools.git" />
       </materials>
       <stage name="build" artifactCleanupProhibited="true">
         <jobs>
@@ -547,8 +547,8 @@
     </pipeline>
     <pipeline name="common-api-cpp-someip-tools" labeltemplate="${COUNT}:master:${cpp-someip-tools.git[:8]}" isLocked="false">
       <materials>
-        <git url="http://git.projects.genivi.org/common-api/cpp-someip-tools.git" dest="cpp-someip-tools" materialName="cpp-someip-tools.git" />
-        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
+        <git url="http://github.com/GENIVI/common-api/cpp-someip-tools.git" dest="cpp-someip-tools" materialName="cpp-someip-tools.git" />
+        <git url="http://github.com/GENIVI/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
       </materials>
       <stage name="build" artifactCleanupProhibited="true">
         <jobs>
@@ -602,12 +602,12 @@
     </authorization>
     <pipeline name="GDP-Yocto-RaspberryPi2_with_SDK" template="Yocto_GDP_build_with_SDK">
       <materials>
-        <git url="http://git.projects.genivi.org/genivi-demo-platform.git" branch="chbae/raspberrypi2" materialName="genivi-demo-platform.git" />
+        <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="chbae/raspberrypi2" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="SDK">
       <materials>
-        <git url="http://git.projects.genivi.org/meta-genivi-demo.git" />
+        <git url="http://github.com/GENIVI/meta-genivi-demo.git" />
       </materials>
       <stage name="Build">
         <jobs>
@@ -649,7 +649,7 @@
     </pipeline>
     <pipeline name="ADITtest">
       <materials>
-        <git url="http://git.projects.genivi.org/genivi-demo-platform.git" branch="qemux86-64" dest="genivi-demo-platform" />
+        <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="qemux86-64" dest="genivi-demo-platform" />
       </materials>
       <stage name="defaultStage" cleanWorkingDir="true">
         <jobs>
@@ -663,22 +663,22 @@
             </tasks>
             <tabs>
               <tab name="kernel" path="recording/bzImage-qemux86-64.bin" />
-              <tab name="rfs" path="recoding/genivi-demo-platform-qemux86-64.ext3" />
+              <tab name="rfs" path="recoding/genivi-dev-platform.ext3" />
             </tabs>
             <resources>
               <resource>yocto_build</resource>
             </resources>
             <artifacts>
-              <artifact src="genivi-demo-platform/gdp-src-build/tmp/deploy/images/qemux86-64/bzImage-qemux86-64.bin" dest="recording" />
-              <artifact src="genivi-demo-platform/gdp-src-build/tmp/deploy/images/qemux86-64/genivi-demo-platform-qemux86-64.ext3" dest="recording" />
+              <artifact src="genivi-dev-platform.bin" dest="recording" />
+              <artifact src="genivi-dev-platform.ext3" dest="recording" />
             </artifacts>
           </job>
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="GDP-Yocto-QEMU_x86-64-populate-SDK" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_build_with_SDK">
+    <pipeline name="GDP-Yocto-QEMU_x86-64-populate-SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_build_with_SDK">
       <materials>
-        <git url="http://git.projects.genivi.org/genivi-demo-platform.git" branch="qemux86-64" materialName="genivi-demo-platform.git" />
+        <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="qemux86-64" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="test">
@@ -721,14 +721,14 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="stevel_GDP-Yocto-Porter-ivi9" labeltemplate="gdp-git:${genivi-demo-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
+    <pipeline name="stevel_GDP-Yocto-Porter-ivi9" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
       <environmentvariables>
         <variable name="BOARD">
           <value>porter</value>
         </variable>
       </environmentvariables>
       <materials>
-        <git url="git://git.projects.genivi.org/genivi-demo-platform.git" branch="experimental/porter-ivi9" materialName="genivi-demo-platform.git" />
+        <git url="git://github.com/GENIVI/genivi-dev-platform.git" branch="experimental/porter-ivi9" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="test_docker">
@@ -757,7 +757,7 @@
     </pipeline>
     <pipeline name="build_capi_native">
       <materials>
-        <git url="git://git.projects.genivi.org/common-api/c-poc.git" />
+        <git url="git://github.com/GENIVI/common-api/c-poc.git" />
       </materials>
       <stage name="defaultStage">
         <jobs>
@@ -784,7 +784,7 @@
                 <arg>bash</arg>
                 <arg>-xe</arg>
                 <arg>-c</arg>
-                <arg>git clone git://git.projects.genivi.org/common-api/c-poc.git &amp;&amp; cd c-poc &amp;&amp; autoreconf -i &amp;&amp; ./configure &amp;&amp; make &amp;&amp; sudo make install</arg>
+                <arg>git clone git://github.com/GENIVI/common-api/c-poc.git &amp;&amp; cd c-poc &amp;&amp; autoreconf -i &amp;&amp; ./configure &amp;&amp; make &amp;&amp; sudo make install</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -795,7 +795,7 @@
     <pipeline name="GENIVI_Positioning" isLocked="false">
       <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
       <materials>
-        <git url="http://git.projects.genivi.org/lbs/positioning.git" materialName="PositioningGitRepository" />
+        <git url="http://github.com/GENIVI/lbs/positioning.git" materialName="PositioningGitRepository" />
       </materials>
       <stage name="defaultStage">
         <jobs>
@@ -894,7 +894,7 @@
     </pipeline>
     <pipeline name="common-api-c" isLocked="false">
       <materials>
-        <git url="git://git.projects.genivi.org/common-api/c-poc.git" />
+        <git url="git://github.com/GENIVI/common-api/c-poc.git" />
       </materials>
       <stage name="buildStage">
         <jobs>
@@ -1607,8 +1607,8 @@
             <artifacts>
               <artifact src="gdp-src-build/tmp/deploy/sdk" />
               <artifact src="gdp-src-build/tmp/deploy/licenses" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-demo-platform-*/license.manifest" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-demo-platform-*/package.manifest" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform-*/license.manifest" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform-*/package.manifest" />
               <artifact src="gdp-src-build/downloads/*" dest="downloads (source_code)" />
               <artifact src="logs.tar.gz" />
             </artifacts>
