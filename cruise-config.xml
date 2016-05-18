@@ -274,7 +274,7 @@
     <pipeline name="GDP-Yocto-QEMU_x86-64-meta-genivi-demo-qemu-ci" template="Yocto_GDP_qemu_latest_meta_genivi_demo">
       <materials>
         <git url="git://github.com/GENIVI/genivi-dev-platform.git" branch="qemux86-64" dest="gdp" materialName="genivi-dev-platform.git" />
-        <git url="git://github.com/GENIVI/meta-genivi-demo.git" branch="qemu-ci" dest="meta-genivi-demo" materialName="meta-genivi-demo.git" />
+        <git url="git://github.com/GENIVI/meta-genivi-dev.git" branch="qemu-ci" dest="meta-genivi-demo" materialName="meta-genivi-dev.git" />
       </materials>
     </pipeline>
     <pipeline name="github-PR-test" template="Yocto_GDP_qemu_latest_meta_genivi_demo">
@@ -607,7 +607,7 @@
     </pipeline>
     <pipeline name="SDK">
       <materials>
-        <git url="http://github.com/GENIVI/meta-genivi-demo.git" />
+        <git url="http://github.com/GENIVI/meta-genivi-dev.git" />
       </materials>
       <stage name="Build">
         <jobs>
