@@ -95,7 +95,7 @@
       <configuration>
         <property>
           <key>url</key>
-          <value>https://github.com/gunnarx/genivi-dev-platform</value>
+          <value>https://github.com/GENIVI/genivi-dev-platform</value>
         </property>
       </configuration>
     </scm>
