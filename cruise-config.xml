@@ -1246,7 +1246,7 @@
               </exec>
               <exec command="mkdir">
                 <arg>logs</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
