@@ -978,7 +978,6 @@
     </pipeline>
     <pipeline name="FRANCA_IF_Validation">
       <materials>
-        <pipeline pipelineName="common-api-cpp-tools" stageName="build" />
         <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" materialName="common-api-tools.git" />
       </materials>
       <stage name="BuildCommonAPI">
