@@ -982,11 +982,7 @@
       </materials>
       <stage name="BuildCommonAPI">
         <jobs>
-          <job name="doValidation">
-            <tasks>
-              <exec command="bash" />
-            </tasks>
-          </job>
+          <job name="doValidation" />
         </jobs>
       </stage>
     </pipeline>
