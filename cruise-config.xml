@@ -183,6 +183,10 @@
                 <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake -c fetch linux-yocto</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
