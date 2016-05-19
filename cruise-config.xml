@@ -184,6 +184,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="perl">
+                <arg>-pi -e</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
