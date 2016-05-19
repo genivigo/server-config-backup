@@ -184,7 +184,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="perl">
-                <arg>-pi -e 's/1/2/'</arg>
+                <arg>-pi -e "s|CONF_VERSION = \"1\"|CONF_VERSION = \"1\"\nRDEPENDS_packagegroup-abstract-component-p1_remove = \"wayland-ivi-extension \"|"</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
