@@ -175,11 +175,11 @@
           <job name="getting-kernel_src">
             <tasks>
               <exec command="bash">
-                <arg>-c export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env</arg>
+                <arg>-c pwd</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
-                <arg>-c pwd</arg>
+                <arg>-c export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env</arg>
                 <runif status="passed" />
               </exec>
               <exec command="perl">
