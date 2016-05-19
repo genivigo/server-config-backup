@@ -992,6 +992,9 @@
             <resources>
               <resource>maven</resource>
             </resources>
+            <artifacts>
+              <artifact src="bin" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
