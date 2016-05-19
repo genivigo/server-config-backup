@@ -980,7 +980,7 @@
       <materials>
         <pipeline pipelineName="common-api-cpp-tools" stageName="build" />
       </materials>
-      <stage name="defaultStage">
+      <stage name="BuildCommonAPI">
         <jobs>
           <job name="doValidation">
             <tasks>
