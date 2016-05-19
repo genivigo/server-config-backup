@@ -988,6 +988,10 @@
                 <arg>-Dtarget.id=org.genivi.commonapi.core.target clean verify</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="mkdir">
+                <arg>bin</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>maven</resource>
