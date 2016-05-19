@@ -982,7 +982,14 @@
       </materials>
       <stage name="BuildCommonAPI">
         <jobs>
-          <job name="doValidation" />
+          <job name="doValidation">
+            <tasks>
+              <exec command="mvn" workingdir="org.genivi.commonapi.core.releng">
+                <arg>-Dtarget.id=org.genivi.commonapi.core.target clean verify</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
         </jobs>
       </stage>
     </pipeline>
