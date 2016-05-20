@@ -995,7 +995,7 @@
       <materials>
         <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" materialName="common-api-tools.git" />
       </materials>
-      <stage name="BuildCommonAPI">
+      <stage name="BuildCommonAPI" artifactCleanupProhibited="true">
         <jobs>
           <job name="doValidation">
             <tasks>
