@@ -172,7 +172,14 @@
               </exec>
             </tasks>
           </job>
-          <job name="make_build_directory" />
+          <job name="make_build_directory">
+            <tasks>
+              <exec command="bash">
+                <arg>-c export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
         </jobs>
       </stage>
       <stage name="workaround.1">
