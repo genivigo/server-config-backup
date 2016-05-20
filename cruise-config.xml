@@ -189,11 +189,7 @@
               </exec>
             </tasks>
           </job>
-          <job name="getting-kernel-src">
-            <tasks>
-              <ant />
-            </tasks>
-          </job>
+          <job name="getting-kernel-src" />
         </jobs>
       </stage>
       <stage name="build">
