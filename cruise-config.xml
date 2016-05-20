@@ -172,6 +172,11 @@
               </exec>
             </tasks>
           </job>
+          <job name="make_build_directory">
+            <tasks>
+              <ant />
+            </tasks>
+          </job>
         </jobs>
       </stage>
       <stage name="workaround.1">
