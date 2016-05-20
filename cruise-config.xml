@@ -1016,6 +1016,7 @@
             </tasks>
             <resources>
               <resource>maven</resource>
+              <resource>bash</resource>
             </resources>
             <artifacts>
               <artifact src="bin" />
