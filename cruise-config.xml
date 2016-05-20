@@ -186,6 +186,10 @@
                 <arg>-pi -e "s|CONF_VERSION = \"1\"|CONF_VERSION = \"1\"\nRDEPENDS_packagegroup-abstract-component-p1_remove = \"wayland-ivi-extension \"|" conf/local.conf</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
