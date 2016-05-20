@@ -197,11 +197,7 @@
               </exec>
             </tasks>
           </job>
-          <job name="remove_wayland-ivi-extension">
-            <tasks>
-              <ant />
-            </tasks>
-          </job>
+          <job name="remove_wayland-ivi-extension" />
         </jobs>
       </stage>
       <stage name="build">
