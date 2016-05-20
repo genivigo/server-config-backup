@@ -189,7 +189,14 @@
               </exec>
             </tasks>
           </job>
-          <job name="getting-kernel-src" />
+          <job name="getting-kernel-src">
+            <tasks>
+              <exec command="bash">
+                <arg>-c export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake -c fetch linux-yocto</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
         </jobs>
       </stage>
       <stage name="build">
