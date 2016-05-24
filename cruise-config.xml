@@ -939,6 +939,12 @@
                 <arg>common/settings.py</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-xe</arg>
+                <arg>-c</arg>
+                <arg>ls -la &amp;&amp; ls -la common &amp;&amp; cat common/settings.py</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
