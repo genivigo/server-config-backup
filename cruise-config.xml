@@ -945,6 +945,10 @@
                 <arg>ls -la &amp;&amp; ls -la common &amp;&amp; cat common/settings.py</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="which">
+                <arg>python</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
