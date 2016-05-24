@@ -932,10 +932,11 @@
         <jobs>
           <job name="runSWLMPocJob">
             <tasks>
-              <exec command="sudo">
-                <arg>sh</arg>
-                <arg>start_swm.sh</arg>
-                <arg>-r</arg>
+              <exec command="sed">
+                <arg>-i</arg>
+                <arg>-e</arg>
+                <arg>s/^SWM_SIMULATION\ \=.*$/SWM_SIMULATION = True/</arg>
+                <arg>common/settings.py</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
