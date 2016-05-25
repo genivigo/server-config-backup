@@ -949,13 +949,13 @@
                 <arg>python</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="printenv">
+                <runif status="passed" />
+              </exec>
               <exec command="bash">
                 <arg>-xe</arg>
                 <arg>start_swm.sh</arg>
                 <arg>-r</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="printenv">
                 <runif status="passed" />
               </exec>
             </tasks>
