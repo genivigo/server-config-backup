@@ -956,7 +956,7 @@
                 <arg>-xe</arg>
                 <arg>start_swm.sh</arg>
                 <arg>-r</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
             </tasks>
           </job>
