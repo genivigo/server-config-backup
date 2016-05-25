@@ -955,6 +955,9 @@
                 <arg>-r</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="printenv">
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
