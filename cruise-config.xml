@@ -968,7 +968,6 @@
         <param name="target">qemux86-64</param>
       </params>
       <materials>
-        <git url="git://github.com/gunnarx/genivi-dev-platform.git" dest="gdp2" materialName="genivi-dev-platform" />
         <scm ref="f432c0f7-c37b-48c7-a601-f78e6551c4b1" dest="gdp" />
       </materials>
       <stage name="build">
