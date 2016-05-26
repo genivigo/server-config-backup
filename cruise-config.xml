@@ -739,7 +739,7 @@
     </pipeline>
     <pipeline name="build_capi_native">
       <materials>
-        <git url="git://git.projects.genivi.org/common-api/c-poc.git" />
+        <git url="git://github.com/GENIVI/capic-poc.git" materialName="capic-poc.git" />
       </materials>
       <stage name="defaultStage">
         <jobs>
