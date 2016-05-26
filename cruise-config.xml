@@ -968,7 +968,7 @@
         <param name="target">qemux86-64</param>
       </params>
       <materials>
-        <scm ref="4dd064ce-d8c9-4935-adee-74b2a5fc4d00" />
+        <scm ref="4dd064ce-d8c9-4935-adee-74b2a5fc4d00" dest="gdp" />
       </materials>
       <stage name="build">
         <jobs>
