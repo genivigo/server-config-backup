@@ -839,7 +839,7 @@
     </pipeline>
     <pipeline name="common-api-c" isLocked="false">
       <materials>
-        <git url="git://git.projects.genivi.org/common-api/c-poc.git" />
+        <git url="git://github.com/GENIVI/capic-poc.git" materialName="capic-poc.git" />
       </materials>
       <stage name="buildStage">
         <jobs>
