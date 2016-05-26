@@ -77,15 +77,6 @@
         </property>
       </configuration>
     </scm>
-    <scm id="4dd064ce-d8c9-4935-adee-74b2a5fc4d00" name="gunnarx-fork">
-      <pluginConfiguration id="github.pr" version="1" />
-      <configuration>
-        <property>
-          <key>url</key>
-          <value>git://github.com/gunnarx/genivi-dev-platform.git</value>
-        </property>
-      </configuration>
-    </scm>
     <scm id="a1a82896-a41b-4684-a7e8-4d43bf691438" name="genivi-dev-platform">
       <pluginConfiguration id="github.pr" version="1" />
       <configuration>
