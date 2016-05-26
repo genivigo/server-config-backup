@@ -988,7 +988,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>echo "#{target}" | (source ./init.sh &amp;&amp; bitbake genivi-dev-platform)</arg>
+                <arg>source ./init.sh #{target} &amp;&amp; bitbake genivi-dev-platform</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
