@@ -663,26 +663,6 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="qemux86-64" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="test">
-      <materials>
-        <git url="https://github.com/gunnarx/build-capi" />
-      </materials>
-      <stage name="defaultStage">
-        <jobs>
-          <job name="defaultJob">
-            <tasks>
-              <exec command="uname">
-                <arg>-a</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>gm_test</resource>
-            </resources>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="gm-test-sysinfo" isLocked="false">
       <materials>
         <git url="https://gist.github.com/gmacario/124193e33b7e0e6f7110" materialName="gm-sysinfo" />
