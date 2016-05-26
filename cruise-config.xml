@@ -86,6 +86,15 @@
         </property>
       </configuration>
     </scm>
+    <scm id="f432c0f7-c37b-48c7-a601-f78e6551c4b1" name="gunnarx-gdp">
+      <pluginConfiguration id="github.pr" version="1" />
+      <configuration>
+        <property>
+          <key>url</key>
+          <value>git://github.com/gunnarx/genivi-dev-platform.git</value>
+        </property>
+      </configuration>
+    </scm>
   </scms>
   <pipelines group="GENIVI_Baselines">
     <authorization>
@@ -960,6 +969,7 @@
       </params>
       <materials>
         <git url="git://github.com/gunnarx/genivi-dev-platform.git" dest="gdp2" materialName="genivi-dev-platform" />
+        <scm ref="f432c0f7-c37b-48c7-a601-f78e6551c4b1" dest="gdp" />
       </materials>
       <stage name="build">
         <jobs>
