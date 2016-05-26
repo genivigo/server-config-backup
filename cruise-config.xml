@@ -613,7 +613,7 @@
     </authorization>
     <pipeline name="GDP-Yocto-RaspberryPi2_with_SDK" template="Yocto_GDP_build_with_SDK">
       <materials>
-        <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="chbae/raspberrypi2" materialName="genivi-dev-platform.git" />
+        <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="raspberrypi2" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="SDK">
