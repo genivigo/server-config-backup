@@ -969,6 +969,7 @@
       </params>
       <materials>
         <scm ref="4dd064ce-d8c9-4935-adee-74b2a5fc4d00" dest="gdp" />
+        <git url="git://github.com/gunnarx/genivi-dev-platform.git" dest="gdp2" materialName="genivi-dev-platform" />
       </materials>
       <stage name="build">
         <jobs>
