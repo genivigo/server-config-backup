@@ -693,30 +693,6 @@
         <git url="git://github.com/GENIVI/genivi-dev-platform.git" branch="experimental/porter-ivi9" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="test_docker">
-      <materials>
-        <git url="https://github.com/gmacario/easy-genivigo" />
-      </materials>
-      <stage name="defaultStage">
-        <jobs>
-          <job name="defaultJob">
-            <tasks>
-              <exec command="docker">
-                <arg>--version</arg>
-              </exec>
-              <exec command="docker">
-                <arg>info</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="docker-compose">
-                <arg>--version</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="GENIVI_Positioning" isLocked="false">
       <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
       <materials>
