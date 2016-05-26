@@ -969,6 +969,7 @@
       </params>
       <materials>
         <git url="git://github.com/gunnarx/genivi-dev-platform.git" dest="gdp2" materialName="genivi-dev-platform" />
+        <git url="git://github.com/gunnarx/genivi-dev-platform.git" dest="gdp" materialName="gunnarx-gdp" />
       </materials>
       <stage name="build">
         <jobs>
