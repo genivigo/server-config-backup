@@ -953,6 +953,15 @@
           </job>
         </jobs>
       </stage>
+      <stage name="FetchInterfacesFiles">
+        <jobs>
+          <job name="Fetch_fidl_files">
+            <tasks>
+              <exec command="ls *" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="franca_install_automation" />
