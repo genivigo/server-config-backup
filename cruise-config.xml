@@ -1406,11 +1406,11 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-dev-platform</arg>
+                <arg>source ./init.sh qemux86-64 &amp;&amp; bitbake genivi-dev-platform</arg>
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; mkdir output &amp;&amp; ../poky/scripts/wic create directdisk -e genivi-dev-platform --outdir=output</arg>
+                <arg>source ./init.sh qemux86-64 &amp;&amp; mkdir output &amp;&amp; ../poky/scripts/wic create directdisk -e genivi-dev-platform --outdir=output</arg>
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
