@@ -932,7 +932,7 @@
     </pipeline>
     <pipeline name="FRANCA_IF_Validation" labeltemplate="${COUNT}:master:${common-api-tools.git[:8]}" isLocked="false">
       <materials>
-        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="git-common-api-tools" materialName="common-api-tools.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="dest-common-api-tools" materialName="common-api-tools.git" />
         <scm ref="077cfe93-bc9e-461a-9a5c-e82796ccb710" dest="dest-fidl-files" />
       </materials>
       <stage name="BuildCommonAPI" cleanWorkingDir="true">
