@@ -953,7 +953,7 @@
           </job>
         </jobs>
       </stage>
-      <stage name="FetchInterfacesFiles">
+      <stage name="FetchInterfacesFiles" artifactCleanupProhibited="true">
         <jobs>
           <job name="Fetch_fidl_files">
             <tasks>
