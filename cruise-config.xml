@@ -943,9 +943,6 @@
                 <arg>../org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="ls ." workingdir="bin">
-                <runif status="passed" />
-              </exec>
             </tasks>
             <resources>
               <resource>maven</resource>
