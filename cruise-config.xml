@@ -950,7 +950,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="unzip" workingdir="dest-common-api-tools/">
-                <arg>org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip -d ../bin</arg>
+                <arg>org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip -d ../../bin</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
