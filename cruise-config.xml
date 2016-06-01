@@ -940,6 +940,7 @@
           <job name="buildGenerators">
             <tasks>
               <exec command="mkdir">
+                <arg>-p</arg>
                 <arg>bin</arg>
                 <runif status="passed" />
               </exec>
