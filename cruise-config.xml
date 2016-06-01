@@ -939,7 +939,7 @@
         <jobs>
           <job name="buildGenerators">
             <tasks>
-              <exec command="mvn" workingdir="git-common-api-tools/org.genivi.commonapi.core.releng">
+              <exec command="mvn" workingdir="dest-common-api-tools/org.genivi.commonapi.core.releng">
                 <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
                 <arg>clean</arg>
                 <arg>verify</arg>
