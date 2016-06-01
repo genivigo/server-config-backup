@@ -945,7 +945,7 @@
                 <arg>verify</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mkdir">
+              <exec command="mkdir" workingdir="dest-common-api-tools/">
                 <arg>bin</arg>
                 <runif status="passed" />
               </exec>
