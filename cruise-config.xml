@@ -968,7 +968,8 @@
         <jobs>
           <job name="Fetch_fidl_files">
             <tasks>
-              <exec command="ls ." workingdir="dest-fidl-files">
+              <exec command="ls" workingdir="dest-fidl-files">
+                <arg>.</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
