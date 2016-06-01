@@ -100,7 +100,7 @@
       <configuration>
         <property>
           <key>url</key>
-          <value>https://github.com/rstreif/genivi_software_management/tree/master/franca_idl</value>
+          <value>https://github.com/rstreif/genivi_software_management/tree/master/franca_idl.git</value>
         </property>
       </configuration>
     </scm>
