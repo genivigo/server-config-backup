@@ -972,10 +972,6 @@
                 <arg>./franca_idl</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="find" workingdir="dest-common-api-tools/">
-                <arg>.</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="commonapi-generator-linux-x86_64">
                 <arg>-v</arg>
                 <runif status="passed" />
