@@ -972,14 +972,6 @@
                 <arg>./franca_idl</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="commonapi-generator-linux-x86_64" workingdir="bin">
-                <arg>-nc</arg>
-                <arg>-ng</arg>
-                <arg>-np</arg>
-                <arg>-ns</arg>
-                <arg>-sp ../dest-fidl-files/franca_idl</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="ls">
                 <arg>.</arg>
                 <runif status="passed" />
