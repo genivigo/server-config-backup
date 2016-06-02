@@ -976,6 +976,9 @@
                 <arg>.</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="commonapi-generator-linux-x86_64">
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
