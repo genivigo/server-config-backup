@@ -973,7 +973,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="ls">
-                <arg>./cuise-output</arg>
+                <arg>./cruise-output</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
