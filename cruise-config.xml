@@ -950,7 +950,7 @@
                 <arg>verify</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="ls" workingdir="bin">
+              <exec command="unzip" workingdir="bin">
                 <arg>../dest-common-api-tools/org.genivi.commonapi.core.cli.product/</arg>
                 <runif status="passed" />
               </exec>
