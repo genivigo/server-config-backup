@@ -977,7 +977,7 @@
                 <arg>bin</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="unzip" workingdir="bin">
+              <exec command="ls" workingdir="bin">
                 <arg>../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip</arg>
                 <runif status="passed" />
               </exec>
