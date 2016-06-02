@@ -978,6 +978,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="ls" workingdir="bin">
+                <arg>- al</arg>
                 <arg>../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products</arg>
                 <runif status="passed" />
               </exec>
