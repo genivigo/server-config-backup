@@ -972,9 +972,8 @@
                 <arg>./franca_idl</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="chmod">
-                <arg>777</arg>
-                <arg>/bin/commonapi-generator-linux-x86_64</arg>
+              <exec command="ls">
+                <arg>.</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
