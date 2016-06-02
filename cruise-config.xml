@@ -972,7 +972,7 @@
                 <arg>./franca_idl</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="ls" workingdir="dest-common-api-tools/org.genivi.commonapi.releng">
+              <exec command="find" workingdir="dest-common-api-tools/">
                 <arg>.</arg>
                 <runif status="passed" />
               </exec>
