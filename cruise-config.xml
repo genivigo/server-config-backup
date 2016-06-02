@@ -977,7 +977,7 @@
                 <arg>-ng</arg>
                 <arg>-np</arg>
                 <arg>-ns</arg>
-                <arg>-sp ../dest-fidl-files</arg>
+                <arg>-sp ../dest-fidl-files/franca_idl</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
