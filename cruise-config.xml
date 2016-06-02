@@ -993,6 +993,11 @@
                 <arg>-v</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="chmod" workingdir="bin">
+                <arg>777</arg>
+                <arg>commonapi-generator-linux-x86_64</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
