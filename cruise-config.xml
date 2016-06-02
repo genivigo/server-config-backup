@@ -974,7 +974,7 @@
               </exec>
               <exec command="chmod">
                 <arg>777</arg>
-                <arg>commonapi-generator-linux-x86_64</arg>
+                <arg>/bin/commonapi-generator-linux-x86_64</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
