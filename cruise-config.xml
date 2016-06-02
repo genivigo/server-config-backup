@@ -969,7 +969,7 @@
           <job name="Fetch_fidl_files">
             <tasks>
               <exec command="ls" workingdir="dest-fidl-files">
-                <arg>.</arg>
+                <arg>./franca_idl</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
