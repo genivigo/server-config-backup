@@ -980,6 +980,10 @@
                 <arg>-sp ../dest-fidl-files/franca_idl</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="ls">
+                <arg>.</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
