@@ -982,6 +982,10 @@
                 <arg>../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="unzip" workingdir="bin">
+                <arg>../d</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
