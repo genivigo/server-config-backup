@@ -972,8 +972,9 @@
                 <arg>./franca_idl</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="ls">
-                <arg>./cruise-output</arg>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>bin</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
