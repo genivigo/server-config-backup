@@ -697,16 +697,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="stevel_GDP-Yocto-Porter-ivi9" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
-      <environmentvariables>
-        <variable name="BOARD">
-          <value>porter</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="git://github.com/GENIVI/genivi-dev-platform.git" branch="experimental/porter-ivi9" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
     <pipeline name="GENIVI_Positioning" isLocked="false">
       <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
       <materials>
