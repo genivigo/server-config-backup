@@ -324,6 +324,28 @@
         <scm ref="30b07577-5ed3-4441-9558-3cf1595a678c" dest="meta-genivi-dev" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-Yocto-RPI2-meta-genivi-dev-GITHUB-PR" template="Yocto_GDP_generic_latest_meta_genivi_demo">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>raspberrypi2</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="git://github.com/genivi/genivi-dev-platform.git" dest="gdp" materialName="genivi-dev-platform.git" />
+        <scm ref="30b07577-5ed3-4441-9558-3cf1595a678c" dest="meta-genivi-dev" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-MINNOWBOARD-meta-genivi-dev-GITHUB-PR" template="Yocto_GDP_generic_latest_meta_genivi_demo">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>minnowboard</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="git://github.com/genivi/genivi-dev-platform.git" dest="gdp" materialName="genivi-dev-platform.git" />
+        <scm ref="30b07577-5ed3-4441-9558-3cf1595a678c" dest="meta-genivi-dev" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Components">
     <authorization>
