@@ -286,16 +286,6 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-QEMU_x86-64-qemu-ci" template="Yocto_GDP_qemu_image">
-      <materials>
-        <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="qemu-ci" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="github-PR-GDP-qemu-ci" template="Yocto_GDP_qemu_image">
-      <materials>
-        <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
-      </materials>
-    </pipeline>
     <pipeline name="GDP-Yocto-QEMU_x86-64-meta-genivi-dev-GITHUB-PR" template="Yocto_GDP_generic_latest_meta_genivi_demo">
       <environmentvariables>
         <variable name="MACHINE">
@@ -1559,81 +1549,6 @@
             </tasks>
             <resources>
               <resource>yocto_build</resource>
-            </resources>
-            <artifacts>
-              <artifact src="logs.tar.gz" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
-    <pipeline name="Yocto_GDP_qemu_image">
-      <authorization>
-        <admins>
-          <user>PedroA</user>
-          <user>jonathanmaw</user>
-          <user>tpollard</user>
-          <user>gmacario</user>
-        </admins>
-      </authorization>
-      <stage name="build">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="rm" workingdir="gdp-src-build">
-                <arg>-rf</arg>
-                <arg>tmp</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'BB_NUMBER_THREADS = "4"\nPARALLEL_MAKE = "-j4"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/srv/go/dl"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'IMAGE_FSTYPES = "hddimg"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="/usr/bin/touch" workingdir="gdp-src-build/conf">
-                <arg>local_conf_modified</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.name</arg>
-                <arg>Go Server</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source ./init.sh qemux86-64 &amp;&amp; bitbake genivi-dev-platform</arg>
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source ./init.sh qemux86-64 &amp;&amp; mkdir output &amp;&amp; ../poky/scripts/wic create directdisk -e genivi-dev-platform --outdir=output</arg>
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
-                <runif status="any" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>ct_test</resource>
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
