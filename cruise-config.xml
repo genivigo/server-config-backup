@@ -291,12 +291,6 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="qemu-ci" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-QEMU_x86-64-meta-genivi-demo-qemu-ci" template="Yocto_GDP_qemu_latest_meta_genivi_demo">
-      <materials>
-        <git url="git://github.com/GENIVI/genivi-dev-platform.git" branch="qemux86-64" dest="gdp" materialName="genivi-dev-platform.git" />
-        <git url="git://github.com/GENIVI/meta-genivi-dev.git" branch="qemu-ci" dest="meta-genivi-demo" materialName="meta-genivi-dev.git" />
-      </materials>
-    </pipeline>
     <pipeline name="github-PR-GDP-qemu-ci" template="Yocto_GDP_qemu_image">
       <materials>
         <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
@@ -1562,84 +1556,6 @@
             <artifacts>
               <artifact src="logs.tar.gz" />
             </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
-    <pipeline name="Yocto_GDP_qemu_latest_meta_genivi_demo">
-      <authorization>
-        <admins>
-          <user>PedroA</user>
-          <user>jonathanmaw</user>
-          <user>tpollard</user>
-          <user>gmacario</user>
-        </admins>
-      </authorization>
-      <stage name="build">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="rm" workingdir="gdp">
-                <arg>-rf</arg>
-                <arg>meta-genivi-dev</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="mv" workingdir="gdp">
-                <arg>../meta-genivi-demo</arg>
-                <arg>meta-genivi-dev</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp/gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'BB_NUMBER_THREADS = "2"\nPARALLEL_MAKE = "-j2"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp/gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/srv/go/dl"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp/gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'IMAGE_FSTYPES = "hddimg"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="/usr/bin/touch" workingdir="gdp/gdp-src-build/conf">
-                <arg>local_conf_modified</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.name</arg>
-                <arg>Go Server</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; mkdir output &amp;&amp; ../poky/scripts/wic create directdisk -e genivi-dev-platform --outdir=output</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="rm">
-                <arg>-r</arg>
-                <arg>gdp</arg>
-              </exec>
-            </tasks>
-            <resources>
-              <resource>ct_test</resource>
-            </resources>
           </job>
         </jobs>
       </stage>
