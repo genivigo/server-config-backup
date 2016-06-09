@@ -340,6 +340,36 @@
         <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-Yocto-PORTER-GITHUB-PR" template="Yocto_GDP_generic">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>porter</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-RPI2-GITHUB-PR" template="Yocto_GDP_generic">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>raspberrypi2</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-MINNOWBOARD-GITHUB-PR" template="Yocto_GDP_generic">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>minnowboard</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Components">
     <authorization>
