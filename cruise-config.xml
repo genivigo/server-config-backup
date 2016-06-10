@@ -1292,7 +1292,7 @@
                 <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
+              <exec command="bash" workingdir="gdp">
                 <arg>-c</arg>
                 <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
                 <runif status="any" />
