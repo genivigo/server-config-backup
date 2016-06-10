@@ -277,7 +277,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="GDP_Maintenance">
+  <pipelines group="GDP_Pull_Request_Checking">
     <authorization>
       <view>
         <role>Guest</role>
