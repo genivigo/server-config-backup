@@ -104,6 +104,15 @@
         </property>
       </configuration>
     </scm>
+    <scm id="55fece0c-628e-4ceb-abe8-64c792a6b1ea" name="meta-ivi">
+      <pluginConfiguration id="github.pr" version="1" />
+      <configuration>
+        <property>
+          <key>url</key>
+          <value>https://github.com/GENIVI/meta-ivi.git</value>
+        </property>
+      </configuration>
+    </scm>
   </scms>
   <pipelines group="GENIVI_Baselines">
     <authorization>
@@ -1014,6 +1023,7 @@
     <pipeline name="meta-ivi-Yocto-QEMU_x86-64-GITHUB-PR" template="meta-ivi-build.2">
       <materials>
         <git url="http://github.com/gunnarx/gocd-setup.git" dest="x" />
+        <scm ref="55fece0c-628e-4ceb-abe8-64c792a6b1ea" dest="y" />
       </materials>
     </pipeline>
   </pipelines>
