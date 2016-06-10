@@ -86,15 +86,6 @@
         </property>
       </configuration>
     </scm>
-    <scm id="f432c0f7-c37b-48c7-a601-f78e6551c4b1" name="gunnarx-gdp">
-      <pluginConfiguration id="github.pr" version="1" />
-      <configuration>
-        <property>
-          <key>url</key>
-          <value>git://github.com/gunnarx/genivi-dev-platform.git</value>
-        </property>
-      </configuration>
-    </scm>
     <scm id="077cfe93-bc9e-461a-9a5c-e82796ccb710" name="FIDL_Files">
       <pluginConfiguration id="github.pr" version="1" />
       <configuration>
