@@ -59,15 +59,6 @@
     </security>
   </server>
   <scms>
-    <scm id="d8529582-f08b-40c1-968f-df1c39de41ef" name="prtest">
-      <pluginConfiguration id="github.pr" version="1" />
-      <configuration>
-        <property>
-          <key>url</key>
-          <value>https://github.com/gunnarx/baseline_ci_helper.git</value>
-        </property>
-      </configuration>
-    </scm>
     <scm id="30b07577-5ed3-4441-9558-3cf1595a678c" name="meta-genivi-dev">
       <pluginConfiguration id="github.pr" version="1" />
       <configuration>
