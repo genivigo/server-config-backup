@@ -1011,6 +1011,11 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="meta-ivi-Yocto-QEMU_x86-64-GITHUB-PR" template="meta-ivi-build.2">
+      <materials>
+        <git url="http://github.com/gunnarx/gocd-setup.git" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="franca_install_automation" />
   <pipelines group="Administration_for_2131ce1bd33e">
