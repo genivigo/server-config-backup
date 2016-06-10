@@ -1516,7 +1516,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>. ./init.sh &amp;&amp; bitbake genivi-dev-platform</arg>
+                <arg>. ./init.sh #{MACHINE} &amp;&amp; bitbake genivi-dev-platform</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
