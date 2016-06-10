@@ -878,6 +878,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>systemd</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
