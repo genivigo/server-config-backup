@@ -221,6 +221,11 @@
                 <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake ivi-image</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
+                <runif status="any" />
+              </exec>
             </tasks>
           </job>
         </jobs>
@@ -1287,6 +1292,11 @@
                 <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
+                <runif status="any" />
+              </exec>
               <exec command="rm">
                 <arg>-r</arg>
                 <arg>gdp</arg>
@@ -1505,6 +1515,11 @@
                 <arg>. ./init.sh &amp;&amp; bitbake genivi-dev-platform -c populate_sdk</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
+                <runif status="any" />
+              </exec>
             </tasks>
             <resources>
               <resource>renesas_binaries</resource>
@@ -1718,7 +1733,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
                 <runif status="any" />
               </exec>
             </tasks>
