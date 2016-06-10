@@ -1777,7 +1777,6 @@
         <resource>cmake</resource>
         <resource>fuse</resource>
         <resource>libtool</resource>
-        <resource>maven</resource>
         <resource>systemd</resource>
       </resources>
     </agent>
