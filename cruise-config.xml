@@ -1455,10 +1455,6 @@
                 <arg>. ./init.sh &amp;&amp; bitbake genivi-dev-platform</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mkdir">
-                <arg>logs</arg>
-                <runif status="any" />
-              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
