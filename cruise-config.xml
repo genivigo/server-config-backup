@@ -688,6 +688,9 @@
       </admins>
     </authorization>
     <pipeline name="GDP-Yocto-RaspberryPi2_with_SDK" template="Yocto_GDP_build_with_SDK">
+      <params>
+        <param name="MACHINE">raspberrypi2</param>
+      </params>
       <materials>
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="raspberrypi2" materialName="genivi-dev-platform.git" />
       </materials>
@@ -735,6 +738,9 @@
       </stage>
     </pipeline>
     <pipeline name="GDP-Yocto-QEMU_x86-64-populate-SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_build_with_SDK">
+      <params>
+        <param name="MACHINE">qemux86-64</param>
+      </params>
       <materials>
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="qemux86-64" materialName="genivi-dev-platform.git" />
       </materials>
@@ -1595,27 +1601,27 @@
                 <arg>local_conf_modified</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
+              <exec command="bash" workingdir="gdp-src-build/conf/templates">
                 <arg>-c</arg>
-                <arg>/bin/echo -e 'INHERIT += "archiver"\nARCHIVER_MODE[src] = "original"\n' | tee -a local.conf</arg>
+                <arg>/bin/echo -e 'INHERIT += "archiver"\nARCHIVER_MODE[src] = "original"\n' | tee -a #{MACHINE}.local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>echo 'SOURCE_MIRROR_URL ?= "file:///var/cache/yocto/downloads"' &gt;&gt;local.conf</arg>
+              <exec command="bash" workingdir="gdp-src-build/conf/templates">
+                <arg>echo 'INHERIT += "own-mirrors"'  | tee -a #{MACHINE}.local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
+              <exec command="bash" workingdir="gdp-src-build/conf/templates">
                 <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-dev-platform</arg>
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>echo 'INHERIT += "own-mirrors"' &gt;&gt;local.conf</arg>
+                <arg>echo 'SOURCE_MIRROR_URL ?= "file:///var/cache/yocto/downloads"' | tee -a #{MACHINE}.local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-dev-platform -c populate_sdk</arg>
+                <arg>source ./init.sh #{MACHINE} &amp;&amp; bitbake genivi-dev-platform</arg>
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>source ./init.sh #{MACHINE} &amp;&amp; bitbake genivi-dev-platform -c populate_sdk</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
