@@ -1013,7 +1013,7 @@
     </pipeline>
     <pipeline name="meta-ivi-Yocto-QEMU_x86-64-GITHUB-PR" template="meta-ivi-build.2">
       <materials>
-        <git url="http://github.com/gunnarx/gocd-setup.git" />
+        <git url="http://github.com/gunnarx/gocd-setup.git" dest="x" />
       </materials>
     </pipeline>
   </pipelines>
