@@ -93,6 +93,10 @@
           <key>url</key>
           <value>https://github.com/GENIVI/meta-ivi.git</value>
         </property>
+        <property>
+          <key>username</key>
+          <value>dummy</value>
+        </property>
       </configuration>
     </scm>
   </scms>
