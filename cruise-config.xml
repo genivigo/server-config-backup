@@ -1757,6 +1757,7 @@
         <resource>agent007</resource>
       </resources>
     </agent>
+    <agent hostname="f0f2c1559ea9" ipaddress="172.17.42.1" uuid="6d01b222-37a9-4f30-91fa-98be58cfaff8" />
   </agents>
 </cruise>
 
