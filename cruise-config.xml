@@ -218,7 +218,7 @@
       </stage>
     </pipeline>
   </pipelines>
-  <pipelines group="Genivi_Development_Platform">
+  <pipelines group="GENIVI_Development_Platform">
     <authorization>
       <view>
         <role>Guest</role>
