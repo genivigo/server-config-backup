@@ -934,50 +934,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="GDP-Pull-Request">
-      <params>
-        <param name="target">qemux86-64</param>
-      </params>
-      <materials>
-        <scm ref="f432c0f7-c37b-48c7-a601-f78e6551c4b1" />
-      </materials>
-      <stage name="build">
-        <jobs>
-          <job name="build">
-            <tasks>
-              <exec command="git" workingdir="meta-ivi">
-                <arg>config</arg>
-                <arg>user.name</arg>
-                <arg>go.genivi.org agent</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git" workingdir="meta-ivi">
-                <arg>config</arg>
-                <arg>user.email</arg>
-                <arg>no-email</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source ./init.sh #{target} &amp;&amp; bitbake genivi-dev-platform</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "log.*" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
-                <runif status="any" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>2131ce1bd33e</resource>
-            </resources>
-            <artifacts>
-              <artifact src="logs.tar.gz" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="FRANCA_IF_Validation" labeltemplate="${COUNT}:master:${common-api-tools.git[:8]}" isLocked="false">
       <materials>
         <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="dest-common-api-tools" materialName="common-api-tools.git" />
