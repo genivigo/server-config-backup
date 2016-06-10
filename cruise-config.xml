@@ -1022,7 +1022,7 @@
     </pipeline>
     <pipeline name="meta-ivi-Yocto-QEMU_x86-64-GITHUB-PR" template="meta-ivi-build.2">
       <materials>
-        <scm ref="55fece0c-628e-4ceb-abe8-64c792a6b1ea" dest="y" />
+        <scm ref="55fece0c-628e-4ceb-abe8-64c792a6b1ea" />
       </materials>
     </pipeline>
   </pipelines>
