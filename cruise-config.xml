@@ -1630,8 +1630,8 @@
             <artifacts>
               <artifact src="gdp-src-build/tmp/deploy/sdk" />
               <artifact src="gdp-src-build/tmp/deploy/licenses" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform-*/license.manifest" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform-*/package.manifest" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/license.manifest" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/package.manifest" />
               <artifact src="gdp-src-build/downloads/*" dest="downloads (source_code)" />
               <artifact src="logs.tar.gz" />
             </artifacts>
