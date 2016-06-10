@@ -218,15 +218,11 @@
       </stage>
     </pipeline>
   </pipelines>
-  <pipelines group="GDP">
+  <pipelines group="Genivi_Development_Platform">
     <authorization>
       <view>
         <role>Guest</role>
-        <role>GDP_Developer</role>
       </view>
-      <operate>
-        <role>GDP_Developer</role>
-      </operate>
       <admins>
         <role>GDP_Developer</role>
       </admins>
