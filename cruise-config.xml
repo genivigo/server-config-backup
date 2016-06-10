@@ -252,6 +252,9 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-Porter-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
+      <params>
+        <param name="MACHINE">porter</param>
+      </params>
       <environmentvariables>
         <variable name="BOARD">
           <value>porter</value>
@@ -262,6 +265,9 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-Koelsch-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
+      <params>
+        <param name="MACHINE">porter</param>
+      </params>
       <environmentvariables>
         <variable name="BOARD">
           <value>porter</value>
@@ -272,6 +278,9 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-Silk-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
+      <params>
+        <param name="MACHINE">porter</param>
+      </params>
       <environmentvariables>
         <variable name="BOARD">
           <value>silk</value>
@@ -1462,7 +1471,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>. ./init.sh &amp;&amp; bitbake genivi-dev-platform</arg>
+                <arg>. ./init.sh #{MACHINE} &amp;&amp; bitbake genivi-dev-platform</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
