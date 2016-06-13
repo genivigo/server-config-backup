@@ -1183,7 +1183,7 @@
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/srv/go/dl"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
+                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="git">
@@ -1265,7 +1265,7 @@
               </exec>
               <exec command="bash" workingdir="gdp/gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/srv/go/dl"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
+                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="git">
@@ -1423,7 +1423,7 @@
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/srv/go/dl"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
+                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="git">
@@ -1502,7 +1502,7 @@
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/srv/go/dl"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
+                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="git">
@@ -1640,7 +1640,7 @@
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/srv/go/dl"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
+                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/srv/go/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="git">
