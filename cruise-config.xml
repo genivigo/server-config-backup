@@ -227,12 +227,12 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-Minnowboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build">
+    <pipeline name="GDP-Yocto-Minnowboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_generic_latest_meta_genivi_demo">
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" branch="minnowboard" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-QEMU_x86-64" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build">
+    <pipeline name="GDP-Yocto-QEMU_x86-64" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_generic_latest_meta_genivi_demo">
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" branch="qemux86-64" materialName="genivi-dev-platform.git" />
       </materials>
@@ -276,7 +276,7 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="silk" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build">
+    <pipeline name="GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_generic_latest_meta_genivi_demo">
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" branch="raspberrypi2" materialName="genivi-dev-platform.git" />
       </materials>
@@ -1333,55 +1333,6 @@
             </tasks>
             <artifacts>
               <artifact src="franca_install*.tar.gz" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
-    <pipeline name="Yocto_GDP_Build">
-      <authorization>
-        <admins>
-          <user>PedroA</user>
-          <user>mhoyer</user>
-          <user>tolkien</user>
-          <user>tpollard</user>
-          <user>gmacario</user>
-        </admins>
-      </authorization>
-      <stage name="build" cleanWorkingDir="true">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.name</arg>
-                <arg>go.genivi.org agent</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.email</arg>
-                <arg>no-email</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source ./init.sh &amp;&amp; bitbake genivi-dev-platform</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
-                <runif status="any" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>yocto_build</resource>
-            </resources>
-            <artifacts>
-              <artifact src="logs.tar.gz" />
             </artifacts>
           </job>
         </jobs>
