@@ -230,7 +230,7 @@
     <pipeline name="GDP-Yocto-Minnowboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_generic">
       <environmentvariables>
         <variable name="MACHINE">
-          <value>Minnowboard</value>
+          <value>minnowboard</value>
         </variable>
       </environmentvariables>
       <materials>
