@@ -1211,7 +1211,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>ct_test</resource>
+              <resource>yocto_build</resource>
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
