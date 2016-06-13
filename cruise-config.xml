@@ -278,7 +278,7 @@
         <param name="MACHINE">porter</param>
       </params>
       <environmentvariables>
-        <variable name="BOARD">
+        <variable name="MACHINE">
           <value>silk</value>
         </variable>
       </environmentvariables>
