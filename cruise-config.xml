@@ -247,7 +247,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="git://github.com/GENIVI/genivi-dev-platform.git" branch="porter" materialName="genivi-dev-platform.git" />
+        <git url="git://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-Koelsch-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
