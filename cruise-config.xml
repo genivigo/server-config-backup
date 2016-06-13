@@ -242,7 +242,7 @@
       <timer>0 0 2 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
-          <value>porter</value>
+          <value>qemux86-64</value>
         </variable>
       </environmentvariables>
       <materials>
