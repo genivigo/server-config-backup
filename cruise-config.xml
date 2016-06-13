@@ -278,7 +278,7 @@
     </pipeline>
     <pipeline name="GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_generic">
       <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform.git" branch="raspberrypi2" materialName="genivi-dev-platform.git" />
+        <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
   </pipelines>
