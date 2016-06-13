@@ -1802,7 +1802,8 @@
       </stage>
     </pipeline>
     <pipeline name="Wipe_dir_pattern">
-      <stage name="stage">
+      <stage name="stage" fetchMaterials="false">
+        <approval type="manual" />
         <jobs>
           <job name="job">
             <tasks>
