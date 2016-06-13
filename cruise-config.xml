@@ -1115,6 +1115,15 @@
         <pipeline pipelineName="Wipe_gdp_work_dir" stageName="stage" />
       </materials>
     </pipeline>
+    <pipeline name="Wipe_downloads" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/__downloads_cache</param>
+        <param name="agent">2131ce1bd33e</param>
+      </params>
+      <materials>
+        <pipeline pipelineName="Wipe_gdp_work_dir" stageName="stage" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Administration_for_agent007">
     <authorization>
