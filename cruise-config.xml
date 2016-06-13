@@ -266,7 +266,7 @@
       </params>
       <environmentvariables>
         <variable name="MACHINE">
-          <value>porter</value>
+          <value>koelsch</value>
         </variable>
       </environmentvariables>
       <materials>
