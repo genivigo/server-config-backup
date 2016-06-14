@@ -1183,7 +1183,7 @@
     <pipeline name="GDP-Yocto-QEMU_x86-64-Latest-meta-genivi-dev" template="Yocto_GDP_generic_latest_meta_genivi_demo">
       <materials>
         <git url="https://github.com/genivi/genivi-dev-platform" dest="gdp" materialName="genivi-dev-platform.git" />
-        <git url="https://github.com/GENIVI/meta-genivi-dev.git" dest="meta-genivi-dev" materialName="meta-genivi-dev" />
+        <git url="https://github.com/GENIVI/meta-genivi-dev" dest="meta-genivi-dev" materialName="meta-genivi-dev" />
       </materials>
     </pipeline>
   </pipelines>
