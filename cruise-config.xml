@@ -699,7 +699,8 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-RaspberryPi2_with_SDK" template="Yocto_GDP_build_with_SDK">
+    <pipeline name="GDP-Yocto-RaspberryPi2_with_SDK" isLocked="false" template="Yocto_GDP_build_with_SDK">
+      <timer>0 0 5 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>raspberrypi2</value>
