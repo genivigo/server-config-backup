@@ -753,6 +753,7 @@
       </stage>
     </pipeline>
     <pipeline name="GDP-Yocto-QEMU_x86-64-populate-SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_build_with_SDK">
+      <timer>0 0 1 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
