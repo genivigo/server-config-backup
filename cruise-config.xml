@@ -250,7 +250,7 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-Porter-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
-      <timer onlyOnChanges="true">0 0 22 * * ?</timer>
+      <timer>0 0 22 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>porter</value>
