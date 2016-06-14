@@ -1645,6 +1645,7 @@
     </pipeline>
     <pipeline name="Yocto_GDP_build_with_SDK">
       <stage name="build">
+        <approval type="manual" />
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
