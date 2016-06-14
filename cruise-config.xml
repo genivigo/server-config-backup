@@ -1179,6 +1179,7 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="GDP_CI_Other" />
   <templates>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
