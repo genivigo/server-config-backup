@@ -283,7 +283,7 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_generic">
-      <timer onlyOnChanges="true">0 0 21 * * ?</timer>
+      <timer>0 0 20 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>raspberrypi2</value>
