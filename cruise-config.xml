@@ -1910,7 +1910,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="2131ce1bd33e" ipaddress="172.17.0.7" uuid="ce4f9ef6-91a4-44c3-881e-3486ff87a2aa">
+    <agent hostname="2131ce1bd33e" ipaddress="172.17.0.23" uuid="ce4f9ef6-91a4-44c3-881e-3486ff87a2aa">
       <resources>
         <resource>cmake</resource>
         <resource>maven</resource>
