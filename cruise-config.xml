@@ -1179,7 +1179,13 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="GDP_CI_Other" />
+  <pipelines group="GDP_CI_Other">
+    <pipeline name="GDP-Yocto-QEMU_x86-64-Latest-meta-genivi-dev" template="Yocto_GDP_generic_latest_meta_genivi_demo">
+      <materials>
+        <git url="https://github.com/genivi/genivi-dev-platform" />
+      </materials>
+    </pipeline>
+  </pipelines>
   <templates>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
