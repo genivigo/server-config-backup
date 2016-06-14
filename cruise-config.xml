@@ -1047,7 +1047,8 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="meta-ivi-Yocto-QEMU_x86-64-GITHUB-PR" template="meta-ivi-build.2">
+    <pipeline name="meta-ivi-Yocto-QEMU_x86-64-GITHUB-PR" isLocked="false" template="meta-ivi-build.2">
+      <timer onlyOnChanges="true">0 0 3 * * ?</timer>
       <environmentvariables>
         <variable name="IMAGE_NAME">
           <value>leviathan-image</value>
