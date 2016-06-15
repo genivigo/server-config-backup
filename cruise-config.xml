@@ -294,6 +294,17 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="Baseline_Pull_Request_Checking">
+    <authorization>
+      <view>
+        <role>Guest</role>
+        <role>Developer</role>
+      </view>
+      <admins>
+        <role>GDP_Developer</role>
+      </admins>
+    </authorization>
+  </pipelines>
   <pipelines group="GDP_CI_Other">
     <pipeline name="GDP-Yocto-QEMU_x86-64-Latest-meta-genivi-dev" template="Yocto_GDP_generic_latest_meta_genivi_demo">
       <environmentvariables>
