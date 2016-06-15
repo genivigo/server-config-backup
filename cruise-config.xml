@@ -1348,7 +1348,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>ct_test</resource>
+              <resource>yocto_build</resource>
             </resources>
           </job>
         </jobs>
