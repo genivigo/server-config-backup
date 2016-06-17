@@ -1276,6 +1276,9 @@
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/license.manifest" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/package.manifest" />
             </artifacts>
           </job>
         </jobs>
