@@ -1202,6 +1202,24 @@
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
+    <pipeline name="Wipe_gdp_downloads_dir3" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/cache/yocto/downloads/*</param>
+        <param name="agent">codethink-genivigo-agent1-x86</param>
+      </params>
+      <materials>
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
+    <pipeline name="Wipe_gdp_sstate_dir3" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/cache/yocto/sstate/*</param>
+        <param name="agent">codethink-genivigo-agent1-x86</param>
+      </params>
+      <materials>
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
   </pipelines>
   <templates>
     <pipeline name="Yocto_GDP_generic">
