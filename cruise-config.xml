@@ -927,6 +927,7 @@
     <pipeline name="common-api-c" isLocked="false">
       <materials>
         <git url="git://github.com/GENIVI/capic-poc.git" materialName="capic-poc.git" />
+        <pipeline pipelineName="systemd" stageName="stage" materialName="systemd" />
       </materials>
       <stage name="buildStage">
         <jobs>
