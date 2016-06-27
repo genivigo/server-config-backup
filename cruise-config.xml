@@ -2006,6 +2006,7 @@
         <resource>cmake</resource>
         <resource>fuse</resource>
         <resource>libtool</resource>
+        <resource>f0f2c1559ea9</resource>
       </resources>
     </agent>
   </agents>
