@@ -1108,7 +1108,7 @@
                 <arg>./configure CFLAGS='-g -O0 -ftrapv' --sysconfdir=/etc --localstatedir=/var --libdir=/usr/lib --with-rootprefix=/ --with-rootlibdir=/lib</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
+              <exec command="/bin/make">
                 <arg>-c</arg>
                 <arg>make -j6</arg>
                 <runif status="passed" />
