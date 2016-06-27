@@ -948,9 +948,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>export LIBSYSTEMD_CFLAGS="-I$PWD/systemd/headers" LIBSYSTEMD_LIBS="-L$PWD/systemd/libs" &amp;&amp; make</arg>
-                <arg />
-                <arg />
+                <arg>make</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
