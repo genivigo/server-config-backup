@@ -1104,6 +1104,10 @@
                 <arg>./autogen.sh</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>./configure</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
