@@ -1109,7 +1109,8 @@
                 <runif status="passed" />
               </exec>
               <exec command="bash">
-                <arg>ls</arg>
+                <arg>-c</arg>
+                <arg>make -j6</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
