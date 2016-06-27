@@ -945,7 +945,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>export LIBSYSTEMD_CFLAGS="-I$PWD/systemd/headers" LIBSYSTEMD_LIBS="-L$PWD/systemd/libs" &amp;&amp; ./configure</arg>
+                <arg>export LIBSYSTEMD_CFLAGS="-I$PWD/systemd/headers" LIBSYSTEMD_LIBS="-L$PWD/systemd/libs" &amp;&amp; ./configure LDFLAGS="-L$PWD/systemd/libs"</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
