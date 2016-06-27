@@ -1121,7 +1121,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>f0f2c1559ea9</resource>
+              <resource>systemd-build-deps</resource>
             </resources>
             <artifacts>
               <artifact src="configure" />
