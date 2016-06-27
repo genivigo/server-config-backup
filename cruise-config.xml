@@ -936,6 +936,9 @@
               <fetchartifact pipeline="systemd" stage="stage" job="configure_and_make" srcdir="libs" dest="systemd">
                 <runif status="passed" />
               </fetchartifact>
+              <fetchartifact pipeline="systemd" stage="stage" job="configure_and_make" srcdir="headers" dest="systemd">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="autoreconf">
                 <arg>-i</arg>
                 <runif status="passed" />
