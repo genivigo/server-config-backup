@@ -1117,6 +1117,10 @@
             <resources>
               <resource>f0f2c1559ea9</resource>
             </resources>
+            <artifacts>
+              <artifact src="configure" />
+              <artifact src="config.log" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
