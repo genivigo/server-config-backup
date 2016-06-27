@@ -943,6 +943,9 @@
               <exec command="make">
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="systemd" stage="stage" job="configure_and_make" srcdir="libs" dest="systemd">
+                <runif status="passed" />
+              </fetchartifact>
             </tasks>
             <resources>
               <resource>systemd</resource>
