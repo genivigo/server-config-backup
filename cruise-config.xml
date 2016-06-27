@@ -1100,8 +1100,7 @@
                 <arg>checkout</arg>
                 <arg>v226</arg>
               </exec>
-              <exec command="bash">
-                <arg>./autogen.sh</arg>
+              <exec command="./autogen.sh">
                 <runif status="passed" />
               </exec>
               <exec command="bash">
