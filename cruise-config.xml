@@ -1116,7 +1116,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>./configure CFLAGS='-g -O0 -ftrapv' --sysconfdir=/etc --localstatedir=/var --libdir=/usr/lib --with-rootprefix=/ --with-rootlibdir=/lib</arg>
+                <arg>./configure CFLAGS='-g -O0 -ftrapv' --sysconfdir=/etc --enable-kdbus --localstatedir=/var --libdir=/usr/lib --with-rootprefix=/ --with-rootlibdir=/lib</arg>
                 <runif status="passed" />
               </exec>
               <exec command="/usr/bin/make">
