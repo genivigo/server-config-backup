@@ -946,7 +946,11 @@
               <exec command="./configure">
                 <runif status="passed" />
               </exec>
-              <exec command="make">
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>export LIBSYSTEMD_CFLAGS="-I$PWD/systemd/headers" LIBSYSTEMD_LIBS="-L$PWD/systemd/libs" &amp;&amp; make</arg>
+                <arg />
+                <arg />
                 <runif status="passed" />
               </exec>
             </tasks>
