@@ -1103,14 +1103,9 @@
               <exec command="./autogen.sh">
                 <runif status="passed" />
               </exec>
-              <exec command="./configure">
-                <arg>CFLAGS='-g -O0 -ftrapv'</arg>
-                <arg>--sysconfdir=/etc</arg>
-                <arg>--localstatedir=/var</arg>
-                <arg>--libdir=/usr/lib</arg>
-                <arg>--with-rootprefix=/</arg>
-                <arg>--with-rootlibdir=/lib</arg>
-                <arg />
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>./configure CFLAGS='-g -O0 -ftrapv' --sysconfdir=/etc --localstatedir=/var --libdir=/usr/lib --with-rootprefix=/ --with-rootlibdir=/lib</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
