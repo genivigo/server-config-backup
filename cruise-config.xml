@@ -1141,7 +1141,7 @@
     </pipeline>
     <pipeline name="Wipe_sstate_cache" template="Wipe_dir_pattern">
       <params>
-        <param name="dir_pattern">/var/lib/go-agent/pipelines/__sstate_cache</param>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/__sstate_cache/*</param>
         <param name="agent">2131ce1bd33e</param>
       </params>
       <materials>
