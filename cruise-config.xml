@@ -1084,7 +1084,7 @@
               <exec command="chmod" workingdir="bin">
                 <arg>777</arg>
                 <arg>commonapi-generator-linux-x86</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="commonapi-generator-linux-x86" workingdir="bin">
                 <arg>-v</arg>
