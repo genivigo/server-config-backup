@@ -1088,6 +1088,23 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="systemd">
+      <materials>
+        <git url="http://github.com/systemd/systemd" />
+      </materials>
+      <stage name="stage">
+        <jobs>
+          <job name="configure_and_make">
+            <tasks>
+              <exec command="git">
+                <arg>checkout</arg>
+                <arg>v226</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="franca_install_automation" />
   <pipelines group="Administration_for_2131ce1bd33e">
