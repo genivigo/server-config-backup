@@ -1064,6 +1064,9 @@
                 <arg>./franca_idl</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="" stage="BuildCommonAPI" job="buildGenerators" srcdir="bin">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="mkdir">
                 <arg>-p</arg>
                 <arg>bin</arg>
@@ -1090,9 +1093,6 @@
                 <arg>-v</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="" stage="BuildCommonAPI" job="buildGenerators" srcdir="bin">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="commonapi-generator-linux-x86_64" workingdir="bin">
                 <arg>-v</arg>
                 <runif status="passed" />
