@@ -1119,6 +1119,7 @@
             <artifacts>
               <artifact src="configure" />
               <artifact src="config.log" />
+              <artifact src=".libs" dest="libs" />
             </artifacts>
           </job>
         </jobs>
