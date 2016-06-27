@@ -1108,6 +1108,10 @@
                 <arg>./configure CFLAGS='-g -O0 -ftrapv' --sysconfdir=/etc --localstatedir=/var --libdir=/usr/lib --with-rootprefix=/ --with-rootlibdir=/lib</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>ls</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>f0f2c1559ea9</resource>
