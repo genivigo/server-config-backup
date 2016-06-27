@@ -1079,7 +1079,7 @@
                 <runif status="any" />
               </exec>
               <exec command="ls" workingdir="bin">
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="chmod" workingdir="bin">
                 <arg>777</arg>
