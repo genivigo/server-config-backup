@@ -1126,7 +1126,7 @@
             <artifacts>
               <artifact src="configure" />
               <artifact src="config.log" />
-              <artifact src=".libs" dest="libs" />
+              <artifact src=".libs/*" dest="libs" />
               <artifact src="src/systemd/*.h" dest="headers" />
             </artifacts>
           </job>
