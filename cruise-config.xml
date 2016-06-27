@@ -1102,11 +1102,13 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="systemd">
+    <pipeline name="systemd" isLocked="false">
+      <timer>0 0 12 ? * SAT</timer>
       <materials>
         <git url="http://github.com/systemd/systemd" materialName="systemd" />
       </materials>
       <stage name="stage">
+        <approval type="manual" />
         <jobs>
           <job name="configure_and_make">
             <tasks>
