@@ -950,6 +950,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>f0f2c1559ea9</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
