@@ -1103,7 +1103,7 @@
       </stage>
     </pipeline>
     <pipeline name="systemd" isLocked="false">
-      <timer>0 0 12 ? * SAT</timer>
+      <timer onlyOnChanges="true">0 0 12 ? * SAT</timer>
       <materials>
         <git url="http://github.com/systemd/systemd" materialName="systemd" />
       </materials>
