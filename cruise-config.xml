@@ -1090,7 +1090,7 @@
     </pipeline>
     <pipeline name="systemd">
       <materials>
-        <git url="http://github.com/systemd/systemd" />
+        <git url="http://github.com/systemd/systemd" materialName="systemd" />
       </materials>
       <stage name="stage">
         <jobs>
