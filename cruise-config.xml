@@ -933,6 +933,9 @@
         <jobs>
           <job name="buildJob">
             <tasks>
+              <fetchartifact pipeline="systemd" stage="stage" job="configure_and_make" srcdir="libs" dest="systemd">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="autoreconf">
                 <arg>-i</arg>
                 <runif status="passed" />
@@ -940,9 +943,6 @@
               <exec command="./configure">
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="systemd" stage="stage" job="configure_and_make" srcdir="libs" dest="systemd">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="make">
                 <runif status="passed" />
               </exec>
