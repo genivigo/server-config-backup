@@ -1094,6 +1094,9 @@
                 <arg>-v</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="" stage="BuildCommonAPI" job="buildGenerators" srcdir="bin">
+                <runif status="passed" />
+              </fetchartifact>
             </tasks>
           </job>
         </jobs>
