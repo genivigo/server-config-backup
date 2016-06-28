@@ -1036,14 +1036,14 @@
                 <arg>bin</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="ls" workingdir="bin">
+                <arg>-al ../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products/</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="mvn" workingdir="dest-common-api-tools/org.genivi.commonapi.core.releng">
                 <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
                 <arg>clean</arg>
                 <arg>verify</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="ls" workingdir="bin">
-                <arg>-al ../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="unzip" workingdir="bin">
