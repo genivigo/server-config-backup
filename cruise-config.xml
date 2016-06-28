@@ -1072,7 +1072,7 @@
                 <arg>./org.genivi.commonapi.core.cli.product/target/products/</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="ls">
+              <exec command="ls" workingdir="bin">
                 <arg>-al</arg>
                 <runif status="passed" />
               </exec>
