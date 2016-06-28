@@ -1046,8 +1046,8 @@
                 <arg>../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="ls" workingdir="dest-common-api-tools/org.genivi.commonapi.core.releng">
-                <arg>-al</arg>
+              <exec command="ls" workingdir="bin">
+                <arg>-al ../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products/</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
