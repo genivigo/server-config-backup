@@ -1037,7 +1037,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="ls">
-                <arg>-al dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products/</arg>
+                <arg>al dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="mvn" workingdir="dest-common-api-tools/org.genivi.commonapi.core.releng">
