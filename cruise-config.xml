@@ -1067,7 +1067,7 @@
               <fetchartifact pipeline="" stage="BuildCommonAPI" job="buildGenerators" srcdir="bin">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="ls" workingdir="bin">
+              <exec command="ls">
                 <arg>-al</arg>
                 <runif status="passed" />
               </exec>
