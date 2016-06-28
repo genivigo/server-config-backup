@@ -1076,12 +1076,12 @@
                 <arg>../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip</arg>
                 <runif status="any" />
               </exec>
-              <exec command="ls" workingdir="bin">
-                <runif status="any" />
-              </exec>
               <exec command="ls">
                 <arg>-al</arg>
                 <runif status="passed" />
+              </exec>
+              <exec command="ls" workingdir="bin">
+                <runif status="any" />
               </exec>
               <exec command="commonapi-generator-linux-x86" workingdir="bin">
                 <arg>-v</arg>
