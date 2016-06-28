@@ -1069,7 +1069,6 @@
               </fetchartifact>
               <exec command="ls">
                 <arg>-al</arg>
-                <arg>../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products</arg>
                 <runif status="any" />
               </exec>
               <exec command="unzip" workingdir="bin">
