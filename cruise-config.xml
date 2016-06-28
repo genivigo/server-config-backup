@@ -1027,7 +1027,7 @@
         <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="dest-common-api-tools" materialName="common-api-tools.git" />
         <scm ref="077cfe93-bc9e-461a-9a5c-e82796ccb710" dest="dest-fidl-files" />
       </materials>
-      <stage name="BuildCommonAPI" artifactCleanupProhibited="true">
+      <stage name="BuildCommonAPI" cleanWorkingDir="true">
         <jobs>
           <job name="buildGenerators">
             <tasks>
