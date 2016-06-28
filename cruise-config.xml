@@ -1067,11 +1067,6 @@
               <fetchartifact pipeline="" stage="BuildCommonAPI" job="buildGenerators" srcdir="bin">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="mkdir">
-                <arg>-p</arg>
-                <arg>bin</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="ls" workingdir="bin">
                 <arg>-al</arg>
                 <arg>../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products</arg>
