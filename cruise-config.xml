@@ -1111,7 +1111,7 @@
             <tasks>
               <exec command="git">
                 <arg>checkout</arg>
-                <arg>v220</arg>
+                <arg>v221</arg>
                 <runif status="passed" />
               </exec>
               <exec command="./autogen.sh">
