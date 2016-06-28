@@ -1056,7 +1056,7 @@
           </job>
         </jobs>
       </stage>
-      <stage name="DoValidation" cleanWorkingDir="true">
+      <stage name="DoValidation" artifactCleanupProhibited="true">
         <jobs>
           <job name="Fetch_fidl_files">
             <tasks>
