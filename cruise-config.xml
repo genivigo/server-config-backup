@@ -1070,7 +1070,7 @@
               <exec command="ls" workingdir="dest-common-api-tools/">
                 <arg>-al</arg>
                 <arg>./org.genivi.commonapi.core.cli.product/target/products/</arg>
-                <runif status="any" />
+                <runif status="passed" />
               </exec>
               <exec command="ls">
                 <arg>-al</arg>
