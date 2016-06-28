@@ -1081,7 +1081,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="ls" workingdir="bin">
-                <runif status="any" />
+                <runif status="passed" />
               </exec>
               <exec command="commonapi-generator-linux-x86" workingdir="bin">
                 <arg>-v</arg>
