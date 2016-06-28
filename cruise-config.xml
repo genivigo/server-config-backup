@@ -1077,6 +1077,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="ls" workingdir="bin">
+                <arg>-al</arg>
                 <runif status="passed" />
               </exec>
               <exec command="unzip" workingdir="bin">
