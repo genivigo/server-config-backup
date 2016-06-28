@@ -1080,12 +1080,12 @@
                 <arg>-al</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="unzip" workingdir="bin">
-                <arg>../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="commonapi-generator-linux-x86" workingdir="bin">
                 <arg>-v</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="unzip" workingdir="bin">
+                <arg>../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip</arg>
                 <runif status="passed" />
               </exec>
               <exec command="commonapi-generator-linux-x86_64" workingdir="bin">
