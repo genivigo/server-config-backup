@@ -2090,7 +2090,7 @@
         <resource>agent007</resource>
       </resources>
     </agent>
-    <agent hostname="f0f2c1559ea9" ipaddress="172.17.0.25" uuid="6d01b222-37a9-4f30-91fa-98be58cfaff8">
+    <agent hostname="f0f2c1559ea9" ipaddress="172.17.0.27" uuid="6d01b222-37a9-4f30-91fa-98be58cfaff8">
       <resources>
         <resource>cmake</resource>
         <resource>fuse</resource>
