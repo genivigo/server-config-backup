@@ -1163,6 +1163,11 @@
                 <arg>https://storage.googleapis.com/git-repo-downloads/repo</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="chmod">
+                <arg>a+x</arg>
+                <arg>repo</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
