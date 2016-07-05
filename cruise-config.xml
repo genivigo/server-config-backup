@@ -1119,7 +1119,7 @@
           <job name="configure_and_make">
             <environmentvariables>
               <variable name="VERSION ">
-                <value>v226</value>
+                <value>v219</value>
               </variable>
             </environmentvariables>
             <tasks>
