@@ -1178,11 +1178,6 @@
                 <arg>sync</arg>
                 <runif status="passed" />
               </exec>
-              <exec command=".">
-                <arg>meta-agl/scripts/envsetup.sh</arg>
-                <arg>porter</arg>
-                <runif status="passed" />
-              </exec>
             </tasks>
           </job>
         </jobs>
