@@ -1163,8 +1163,8 @@
               <exec command="curl">
                 <arg>-o</arg>
                 <arg>repo</arg>
-                <arg>-u</arg>
                 <arg>https://storage.googleapis.com/git-repo-downloads/repo</arg>
+                <runif status="passed" />
               </exec>
             </tasks>
           </job>
