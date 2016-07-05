@@ -1180,7 +1180,11 @@
               </exec>
               <exec command="/bin/sh">
                 <arg>-c</arg>
-                <arg>.  meta-agl/scripts/envsetup.sh porter</arg>
+                <arg>.  meta-agl/scripts/envsetup.sh</arg>
+                <arg>porter</arg>
+                <arg>&amp;&amp;</arg>
+                <arg>bitbake</arg>
+                <arg>agl-demo-platform</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
