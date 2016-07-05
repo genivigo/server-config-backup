@@ -1153,7 +1153,7 @@
       <materials>
         <git url="https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo" />
       </materials>
-      <stage name="StageInstallRepoTool">
+      <stage name="StageBuildQEMU">
         <jobs>
           <job name="JobBuild">
             <tasks>
