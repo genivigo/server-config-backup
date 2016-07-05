@@ -1059,7 +1059,8 @@
                 <runif status="passed" />
               </exec>
               <exec command="find">
-                <arg>-iname *.zip</arg>
+                <arg>-iname</arg>
+                <arg>*.zip</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
