@@ -1155,7 +1155,7 @@
       </materials>
       <stage name="StageInstallRepoTool">
         <jobs>
-          <job name="JobGetRepoTool">
+          <job name="JobBuild">
             <tasks>
               <exec command="curl">
                 <arg>-o</arg>
