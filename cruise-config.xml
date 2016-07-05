@@ -1096,8 +1096,9 @@
                 <arg>-al</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="commonapi-generator-linux-x86" workingdir="bin">
-                <arg>-v</arg>
+              <exec command="bash" workingdir="bin">
+                <arg>-c</arg>
+                <arg>commonapi-generator-linux-x86 -v</arg>
                 <runif status="passed" />
               </exec>
               <exec command="commonapi-generator-linux-x86_64" workingdir="bin">
