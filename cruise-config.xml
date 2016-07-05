@@ -1178,7 +1178,7 @@
                 <arg>sync</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="source">
+              <exec command=".">
                 <arg>meta-agl/scripts/envsetup.sh</arg>
                 <arg>porter</arg>
                 <runif status="passed" />
