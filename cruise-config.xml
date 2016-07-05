@@ -1152,6 +1152,25 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="AGL_meta_agl_demo_plus_homescreen">
+      <materials>
+        <git url="https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo" />
+      </materials>
+      <stage name="StageRepoTool">
+        <jobs>
+          <job name="JobGetRepoTool">
+            <tasks>
+              <exec command="curl">
+                <arg>-o</arg>
+                <arg>repo</arg>
+                <arg>-u</arg>
+                <arg>https://storage.googleapis.com/git-repo-downloads/repo</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="franca_install_automation" />
   <pipelines group="Administration_for_2131ce1bd33e">
