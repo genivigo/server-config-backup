@@ -297,8 +297,9 @@
   <pipelines group="Baseline_Pull_Request_Checking">
     <authorization>
       <view>
-        <role>Guest</role>
+        <user>guest</user>
         <role>Developer</role>
+        <role>Guest</role>
       </view>
       <admins>
         <role>GDP_Developer</role>
