@@ -1123,9 +1123,9 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <exec command="git">
-                <arg>checkout</arg>
-                <arg>$VERSION</arg>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>git checkout $VERSION</arg>
                 <runif status="passed" />
               </exec>
               <exec command="./autogen.sh">
