@@ -1106,6 +1106,11 @@
                 <arg>bin/commonapi-generator-linux-x86_64 -v</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="chmod">
+                <arg>755</arg>
+                <arg>bin/commonapi-generator*</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>mount_exec</resource>
