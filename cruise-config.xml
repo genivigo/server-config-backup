@@ -2100,6 +2100,7 @@
         <resource>libtool</resource>
         <resource>f0f2c1559ea9</resource>
         <resource>systemd-build-deps</resource>
+        <resource>fixme_noexec</resource>
       </resources>
     </agent>
     <agent hostname="0619656d5714" ipaddress="172.17.0.29" uuid="e18ec08a-0aea-45bb-b0ee-4c211ba6aab7">
@@ -2109,6 +2110,7 @@
         <resource>systemd-build-deps</resource>
         <resource>fuse</resource>
         <resource>libtool</resource>
+        <resource>fixme_noexec</resource>
       </resources>
     </agent>
   </agents>
