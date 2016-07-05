@@ -1704,6 +1704,7 @@
           <user>mhoyer</user>
           <user>tolkien</user>
           <user>tpollard</user>
+          <user>guest</user>
         </admins>
       </authorization>
       <stage name="Build">
