@@ -1168,6 +1168,12 @@
                 <arg>repo</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="./repo">
+                <arg>init</arg>
+                <arg>-u</arg>
+                <arg>https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
