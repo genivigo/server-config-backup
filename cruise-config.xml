@@ -1178,11 +1178,6 @@
                 <arg>sync</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="/bin/sh">
-                <arg>-c</arg>
-                <arg>export source meta-agl/scripts/envsetup.sh porter &amp;&amp; bitbake ivi-image</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>export source meta-agl/scripts/envsetup.sh porter &amp;&amp; bitbake ivi-image</arg>
