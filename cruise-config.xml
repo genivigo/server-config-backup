@@ -1213,12 +1213,13 @@
   <pipelines group="Administration_for_agent007">
     <authorization>
       <view>
-        <role>GDP_Developer</role>
+        <user>GunnarA</user>
       </view>
       <operate>
-        <role>GDP_Developer</role>
+        <user>GunnarA</user>
       </operate>
       <admins>
+        <user>GunnarA</user>
         <role>GDP_Developer</role>
       </admins>
     </authorization>
