@@ -1793,6 +1793,11 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_build_with_SDK">
+      <authorization>
+        <admins>
+          <user>JBocklage</user>
+        </admins>
+      </authorization>
       <stage name="build">
         <approval type="manual" />
         <jobs>
