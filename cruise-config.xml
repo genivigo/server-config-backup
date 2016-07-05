@@ -1096,15 +1096,15 @@
                 <arg>-al</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>bin/commonapi-generator-linux-x86 -v</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="chmod">
                 <arg>755</arg>
                 <arg>bin/commonapi-generator-linux-x86</arg>
                 <arg>bin/commonapi-generator-linux-x86_64</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>bin/commonapi-generator-linux-x86 -v</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
