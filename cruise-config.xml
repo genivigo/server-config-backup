@@ -2102,6 +2102,8 @@
     <agent hostname="0619656d5714" ipaddress="172.17.0.29" uuid="e18ec08a-0aea-45bb-b0ee-4c211ba6aab7">
       <resources>
         <resource>0619656d5714</resource>
+        <resource>cmake</resource>
+        <resource>systemd-build-deps</resource>
       </resources>
     </agent>
   </agents>
