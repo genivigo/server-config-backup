@@ -1180,7 +1180,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>. meta-agl/scripts/envsetup.sh porter &amp;&amp; bitbake ivi-image</arg>
+                <arg>. meta-agl/scripts/envsetup.sh qemux86-64 &amp;&amp; bitbake ivi-image</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
