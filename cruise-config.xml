@@ -2104,6 +2104,8 @@
         <resource>0619656d5714</resource>
         <resource>cmake</resource>
         <resource>systemd-build-deps</resource>
+        <resource>fuse</resource>
+        <resource>libtool</resource>
       </resources>
     </agent>
   </agents>
