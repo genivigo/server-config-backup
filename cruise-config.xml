@@ -1107,6 +1107,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>mount_exec</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
