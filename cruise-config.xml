@@ -1108,7 +1108,8 @@
               </exec>
               <exec command="chmod">
                 <arg>755</arg>
-                <arg>bin/commonapi-generator*</arg>
+                <arg>bin/commonapi-generator-linux-x86</arg>
+                <arg>bin/commonapi-generator-linux-x86_64</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
