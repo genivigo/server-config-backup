@@ -323,6 +323,11 @@
     </pipeline>
   </pipelines>
   <pipelines group="GDP_CI_Other">
+    <authorization>
+      <view>
+        <role>Guest</role>
+      </view>
+    </authorization>
     <pipeline name="GDP-Yocto-QEMU_x86-64-Latest-meta-genivi-dev" template="Yocto_GDP_generic_latest_meta_genivi_demo">
       <environmentvariables>
         <variable name="MACHINE">
