@@ -1125,7 +1125,7 @@
             <tasks>
               <exec command="git">
                 <arg>checkout</arg>
-                <arg>v221</arg>
+                <arg>$VERSION</arg>
                 <runif status="passed" />
               </exec>
               <exec command="./autogen.sh">
