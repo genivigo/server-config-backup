@@ -1101,9 +1101,9 @@
                 <arg>bin/commonapi-generator-linux-x86 -v</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="bin">
+              <exec command="bash">
                 <arg>-c</arg>
-                <arg>commonapi-generator-linux-x86_64 -v</arg>
+                <arg>bin/commonapi-generator-linux-x86_64 -v</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
