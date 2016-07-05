@@ -1542,7 +1542,7 @@
               </exec>
               <exec command="bash" workingdir="meta-renesas/meta-rcar-gen2">
                 <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter"  -o "$MACHINE" == "silk" ]]; then ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
+                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == "silk" ]]; then ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
