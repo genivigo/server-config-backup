@@ -745,9 +745,6 @@
       <view>
         <role>Guest</role>
       </view>
-      <operate>
-        <role>Guest</role>
-      </operate>
       <admins>
         <role>Developer</role>
       </admins>
