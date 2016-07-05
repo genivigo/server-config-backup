@@ -1117,6 +1117,11 @@
         <approval type="manual" />
         <jobs>
           <job name="configure_and_make">
+            <environmentvariables>
+              <variable name="VERSION ">
+                <value>v226</value>
+              </variable>
+            </environmentvariables>
             <tasks>
               <exec command="git">
                 <arg>checkout</arg>
