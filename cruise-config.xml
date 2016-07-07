@@ -1975,6 +1975,14 @@
       </stage>
     </pipeline>
     <pipeline name="Wipe_dir_pattern">
+      <authorization>
+        <admins>
+          <user>tpollard</user>
+          <user>PedroA</user>
+          <user>jonathanmaw</user>
+          <user>StephenL</user>
+        </admins>
+      </authorization>
       <stage name="stage" fetchMaterials="false">
         <approval type="manual" />
         <jobs>
