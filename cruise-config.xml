@@ -889,7 +889,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>2131ce1bd33e</resource>
+              <resource>ga_test</resource>
             </resources>
           </job>
         </jobs>
