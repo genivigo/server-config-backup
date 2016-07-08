@@ -115,7 +115,7 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="yocto-baseline-9" labeltemplate="9.0:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-9" labeltemplate="9.0:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
       <environmentvariables>
         <variable name="IMAGE_NAME">
           <value>kronos-image</value>
@@ -128,7 +128,7 @@
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-10" labeltemplate="10.0:${meta-ivi[:8]}-test" isLocked="false" template="meta-ivi-build.2">
+    <pipeline name="yocto-baseline-10" labeltemplate="10.0:${meta-ivi[:8]}-test-build:${COUNT}" isLocked="false" template="meta-ivi-build.2">
       <environmentvariables>
         <variable name="IMAGE_NAME">
           <value>leviathan-image</value>
@@ -154,7 +154,7 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-Minnowboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_generic">
+    <pipeline name="GDP-Yocto-Minnowboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
       <timer>0 0 0 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
@@ -165,7 +165,7 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-QEMU_x86-64" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_generic">
+    <pipeline name="GDP-Yocto-QEMU_x86-64" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
       <timer>0 0 2 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
@@ -176,7 +176,7 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Porter-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
+    <pipeline name="GDP-Yocto-Porter-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Build_Renesas">
       <timer onlyOnChanges="true">0 0 22 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
@@ -187,7 +187,7 @@
         <git url="git://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Koelsch-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
+    <pipeline name="GDP-Yocto-Koelsch-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Build_Renesas">
       <timer>0 0 6 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
@@ -198,7 +198,7 @@
         <git url="git://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Silk-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_Build_Renesas">
+    <pipeline name="GDP-Yocto-Silk-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Build_Renesas">
       <timer onlyOnChanges="true">0 0 6 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
@@ -209,7 +209,7 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_generic">
+    <pipeline name="GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
       <timer>0 0 20 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
@@ -416,12 +416,12 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="common-api-cpp-runtime" labeltemplate="${COUNT}:master:${common-api-runtime.git[:8]}" isLocked="false" template="CMAKE_build">
+    <pipeline name="common-api-cpp-runtime" labeltemplate="master:${common-api-runtime.git[:8]}-build:${COUNT}" isLocked="false" template="CMAKE_build">
       <materials>
         <git url="http://git.projects.genivi.org/ipc/common-api-runtime.git" materialName="common-api-runtime.git" />
       </materials>
     </pipeline>
-    <pipeline name="common-api-cpp-dbus-runtime" labeltemplate="${COUNT}:master:${common-api-dbus-runtime.git[:8]}" isLocked="false">
+    <pipeline name="common-api-cpp-dbus-runtime" labeltemplate="master:${common-api-dbus-runtime.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="http://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" materialName="common-api-dbus-runtime.git" />
         <pipeline pipelineName="common-api-cpp-runtime" stageName="build" materialName="build" />
@@ -473,7 +473,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="libdbus-with-commonapi-patch" labeltemplate="${COUNT}:master:${dbus.git[:8]}" isLocked="false">
+    <pipeline name="libdbus-with-commonapi-patch" labeltemplate="master:${dbus.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="http://anongit.freedesktop.org/git/dbus/dbus.git" dest="dbus" materialName="dbus.git" />
         <git url="http://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" dest="common-api-dbus-runtime" materialName="common-api-dbus-runtime.git" />
@@ -546,7 +546,7 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="common-api-cpp-dbus-tools" labeltemplate="${COUNT}:master:${common-api-dbus-tools.git[:8]}" isLocked="false">
+    <pipeline name="common-api-cpp-dbus-tools" labeltemplate="master:${common-api-dbus-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="http://git.projects.genivi.org/ipc/common-api-dbus-tools.git" dest="common-api-dbus-tools" materialName="common-api-dbus-tools.git" />
         <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
@@ -588,7 +588,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="common-api-cpp-tools" labeltemplate="${COUNT}:master:${common-api-tools.git[:8]}" isLocked="false">
+    <pipeline name="common-api-cpp-tools" labeltemplate="master:${common-api-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" materialName="common-api-tools.git" />
       </materials>
@@ -621,7 +621,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="common-api-cpp-someip-tools" labeltemplate="${COUNT}:master:${cpp-someip-tools.git[:8]}" isLocked="false">
+    <pipeline name="common-api-cpp-someip-tools" labeltemplate="master:${cpp-someip-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="http://git.projects.genivi.org/common-api/cpp-someip-tools.git" dest="cpp-someip-tools" materialName="cpp-someip-tools.git" />
         <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
@@ -730,7 +730,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="GDP-Yocto-QEMU_x86-64-populate-SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}" isLocked="false" template="Yocto_GDP_build_with_SDK">
+    <pipeline name="GDP-Yocto-QEMU_x86-64-populate-SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
       <timer>0 0 1 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
@@ -959,7 +959,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="FRANCA_IF_Validation" labeltemplate="${COUNT}:master:${common-api-tools.git[:8]}" isLocked="false">
+    <pipeline name="FRANCA_IF_Validation" labeltemplate="master:${common-api-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="dest-common-api-tools" materialName="common-api-tools.git" />
         <scm ref="077cfe93-bc9e-461a-9a5c-e82796ccb710" dest="dest-fidl-files" />
@@ -1136,7 +1136,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="yocto-baseline-experimental" labeltemplate="experimental:${meta-ivi[:8]}" isLocked="false">
+    <pipeline name="yocto-baseline-experimental" labeltemplate="experimental:${meta-ivi[:8]}-build:${COUNT}" isLocked="false">
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
