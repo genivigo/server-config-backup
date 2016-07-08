@@ -232,7 +232,7 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="meta-ivi-Yocto-QEMU_x86-64-GITHUB-PR" isLocked="false" template="meta-ivi-build.2">
+    <pipeline name="meta-ivi-Yocto-QEMU_x86-64-GITHUB-PR" labeltemplate="meta-ivi:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build.2">
       <timer onlyOnChanges="true">0 0 3 * * ?</timer>
       <environmentvariables>
         <variable name="IMAGE_NAME">
