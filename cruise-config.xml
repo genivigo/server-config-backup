@@ -1050,7 +1050,7 @@
     </pipeline>
     <pipeline name="systemd" labeltemplate="#{VERSION}_build_${COUNT}" isLocked="false">
       <params>
-        <param name="VERSION">v226</param>
+        <param name="VERSION">v219</param>
       </params>
       <timer onlyOnChanges="true">0 0 12 ? * SAT</timer>
       <environmentvariables>
