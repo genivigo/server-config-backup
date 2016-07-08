@@ -861,7 +861,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="common-api-c" isLocked="false">
+    <pipeline name="common-api-c" labeltemplate="capic-poc:${capic-poc.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="git://github.com/GENIVI/capic-poc.git" materialName="capic-poc.git" />
         <pipeline pipelineName="systemd" stageName="stage" materialName="systemd" />
