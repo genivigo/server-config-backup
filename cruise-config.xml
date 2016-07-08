@@ -717,6 +717,7 @@
         </jobs>
       </stage>
       <stage name="Copy_to_web_server">
+        <approval type="manual" />
         <jobs>
           <job name="copy">
             <tasks>
