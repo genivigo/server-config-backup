@@ -332,6 +332,9 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-PORTER-GITHUB-PR" template="Yocto_GDP_generic">
+      <params>
+        <param name="agent">2131ce1bd33e</param>
+      </params>
       <environmentvariables>
         <variable name="MACHINE">
           <value>porter</value>
