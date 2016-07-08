@@ -1043,6 +1043,11 @@
     </pipeline>
     <pipeline name="systemd_v226" isLocked="false">
       <timer onlyOnChanges="true">0 0 12 ? * SAT</timer>
+      <environmentvariables>
+        <variable name="VERSION">
+          <value>VERSION</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="http://github.com/systemd/systemd" materialName="systemd" />
       </materials>
