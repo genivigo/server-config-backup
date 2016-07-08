@@ -1046,6 +1046,9 @@
       </stage>
     </pipeline>
     <pipeline name="systemd_v226" isLocked="false">
+      <params>
+        <param name="VERSION">v226</param>
+      </params>
       <timer onlyOnChanges="true">0 0 12 ? * SAT</timer>
       <environmentvariables>
         <variable name="VERSION">
