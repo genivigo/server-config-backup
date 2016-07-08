@@ -1045,7 +1045,7 @@
       <timer onlyOnChanges="true">0 0 12 ? * SAT</timer>
       <environmentvariables>
         <variable name="VERSION">
-          <value>v219</value>
+          <value>v226</value>
         </variable>
       </environmentvariables>
       <materials>
