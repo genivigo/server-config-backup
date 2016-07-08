@@ -1065,7 +1065,7 @@
             <tasks>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>git checkout $VERSION</arg>
+                <arg>git checkout #{VERSION}</arg>
                 <runif status="passed" />
               </exec>
               <exec command="./autogen.sh">
