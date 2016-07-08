@@ -891,9 +891,6 @@
                 <runif status="passed" />
               </exec>
             </tasks>
-            <resources>
-              <resource>ga_test</resource>
-            </resources>
           </job>
         </jobs>
       </stage>
