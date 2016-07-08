@@ -891,6 +891,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>codethink-genivigo-agent1-x86</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
