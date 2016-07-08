@@ -2127,6 +2127,7 @@
         <resource>fuse</resource>
         <resource>libtool</resource>
         <resource>fixme_noexec</resource>
+        <resource>ga_test</resource>
       </resources>
     </agent>
   </agents>
