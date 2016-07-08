@@ -892,7 +892,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>codethink-genivigo-agent1-x86</resource>
+              <resource>ga_test</resource>
             </resources>
           </job>
         </jobs>
