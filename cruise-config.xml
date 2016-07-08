@@ -1055,11 +1055,6 @@
         <approval type="manual" />
         <jobs>
           <job name="configure_and_make">
-            <environmentvariables>
-              <variable name="VERSION ">
-                <value>v219</value>
-              </variable>
-            </environmentvariables>
             <tasks>
               <exec command="bash">
                 <arg>-c</arg>
