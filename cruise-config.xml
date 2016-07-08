@@ -697,6 +697,7 @@
         </jobs>
       </stage>
       <stage name="Test">
+        <approval type="manual" />
         <jobs>
           <job name="Test">
             <tasks>
