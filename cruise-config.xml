@@ -690,6 +690,9 @@
           <job name="Build">
             <tasks>
               <ant />
+              <exec command="true">
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
