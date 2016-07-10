@@ -1871,6 +1871,7 @@
             </tasks>
             <resources>
               <resource>ga_test</resource>
+              <resource>yocto_build</resource>
             </resources>
             <artifacts>
               <artifact src="gdp-src-build/tmp/deploy/sdk" />
