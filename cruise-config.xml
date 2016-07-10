@@ -2094,7 +2094,6 @@
         <resource>ga_test</resource>
         <resource>2131ce1bd33e</resource>
         <resource>yocto_build</resource>
-        <resource>fuse</resource>
         <resource>mount_exec</resource>
       </resources>
     </agent>
@@ -2113,7 +2112,6 @@
         <resource>0619656d5714</resource>
         <resource>cmake</resource>
         <resource>systemd-build-deps</resource>
-        <resource>fuse</resource>
         <resource>libtool</resource>
         <resource>fixme_noexec</resource>
         <resource>ga_test</resource>
@@ -2123,6 +2121,8 @@
       <resources>
         <resource>be6319ccb875</resource>
         <resource>systemd-build-deps</resource>
+        <resource>cmake</resource>
+        <resource>libtool</resource>
       </resources>
     </agent>
   </agents>
