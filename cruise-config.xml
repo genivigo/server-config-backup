@@ -2119,7 +2119,11 @@
         <resource>ga_test</resource>
       </resources>
     </agent>
-    <agent hostname="be6319ccb875" ipaddress="172.17.0.39" uuid="85ac2911-09ba-4560-b7bd-2fa784852e98" />
+    <agent hostname="be6319ccb875" ipaddress="172.17.0.39" uuid="85ac2911-09ba-4560-b7bd-2fa784852e98">
+      <resources>
+        <resource>be6319ccb875</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
