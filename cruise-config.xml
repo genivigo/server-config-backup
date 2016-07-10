@@ -129,7 +129,7 @@
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-10" labeltemplate="10.0:${meta-ivi[:8]}-test-build:${COUNT}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-10" labeltemplate="10.0:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
       <environmentvariables>
         <variable name="IMAGE_NAME">
           <value>leviathan-image</value>
