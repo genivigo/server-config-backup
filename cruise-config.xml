@@ -1833,11 +1833,6 @@
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>/bin/echo -e 'BB_NUMBER_THREADS = "4"\nPARALLEL_MAKE = "-j4"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
                 <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
