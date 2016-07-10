@@ -762,7 +762,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="GENIVI_Positioning" isLocked="false">
+    <pipeline name="WIP--GENIVI_Positioning" isLocked="false">
       <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
       <materials>
         <git url="http://git.projects.genivi.org/lbs/positioning.git" materialName="PositioningGitRepository" />
@@ -862,7 +862,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="common-api-c" labeltemplate="capic-poc:${capic-poc.git[:8]}-build:${COUNT}" isLocked="false">
+    <pipeline name="WIP--common-api-c" labeltemplate="capic-poc:${capic-poc.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="git://github.com/GENIVI/capic-poc.git" materialName="capic-poc.git" />
         <pipeline pipelineName="systemd" stageName="stage" materialName="systemd" />
