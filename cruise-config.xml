@@ -2103,7 +2103,7 @@
         <resource>gmacario-genivigo-agent1</resource>
       </resources>
     </agent>
-    <agent hostname="agent007" ipaddress="172.17.0.2" uuid="a0482753-ca6c-4d87-9e38-1be4543667c0">
+    <agent hostname="agent007" ipaddress="172.17.0.2" uuid="a0482753-ca6c-4d87-9e38-1be4543667c0" isDisabled="true">
       <resources>
         <resource>agent007</resource>
       </resources>
