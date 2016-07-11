@@ -1442,11 +1442,6 @@
               </exec>
               <exec command="bash" workingdir="gdp/gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>/bin/echo -e 'BB_NUMBER_THREADS = "2"\nPARALLEL_MAKE = "-j2"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp/gdp-src-build/conf">
-                <arg>-c</arg>
                 <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
