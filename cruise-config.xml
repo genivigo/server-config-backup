@@ -1349,11 +1349,6 @@
                 <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]];  then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="meta-renesas/meta-rcar-gen2">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" ]]; then ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>source ./init.sh $MACHINE</arg>
