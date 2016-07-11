@@ -2008,66 +2008,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="meta-ivi-build.2">
-      <authorization>
-        <admins>
-          <user>tolkien</user>
-        </admins>
-      </authorization>
-      <stage name="build_with_specific_commit" cleanWorkingDir="true">
-        <jobs>
-          <job name="build">
-            <tasks>
-              <exec command="git" workingdir="meta-ivi">
-                <arg>config</arg>
-                <arg>user.name</arg>
-                <arg>Go Agent</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git" workingdir="meta-ivi">
-                <arg>config</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="baseline_ci_helper">
-                <arg>-c</arg>
-                <arg>./checkout_layer_hash.sh poky</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="baseline_ci_helper">
-                <arg>-c</arg>
-                <arg>./checkout_layer_hash.sh meta-openembedded</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake -c fetch linux-yocto</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake $IMAGE_NAME</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find build/tmp/work -name "*.log" -print0 | xargs -0 tar cfz logs.tar.gz</arg>
-                <runif status="any" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>yocto_build</resource>
-            </resources>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
   </templates>
   <agents>
     <agent hostname="codethink-genivigo-agent1-x86" ipaddress="192.168.122.1" uuid="98b572c4-d559-4ed2-8b00-f4c25851e443">
