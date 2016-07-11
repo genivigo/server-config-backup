@@ -199,7 +199,7 @@
         <git url="git://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Silk-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Build_Renesas">
+    <pipeline name="GDP-Yocto-Silk-with-GFX" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
       <timer onlyOnChanges="true">0 0 6 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
