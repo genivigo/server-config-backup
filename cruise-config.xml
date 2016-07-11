@@ -680,6 +680,9 @@
         <variable name="MACHINE">
           <value>raspberrypi2</value>
         </variable>
+        <variable name="BUILD_SDK">
+          <value>true</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
