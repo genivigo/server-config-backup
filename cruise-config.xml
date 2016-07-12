@@ -101,6 +101,15 @@
         </property>
       </configuration>
     </scm>
+    <scm id="6970e0d3-fe3f-41a3-9fc2-6830e89757de" name="gunnarx-gdp">
+      <pluginConfiguration id="github.pr" version="1" />
+      <configuration>
+        <property>
+          <key>url</key>
+          <value>git://github.com/gunnarx/genivi-dev-platform.git</value>
+        </property>
+      </configuration>
+    </scm>
   </scms>
   <pipelines group="GENIVI_Baselines">
     <authorization>
@@ -1219,6 +1228,7 @@
     <pipeline name="MultiJobTest">
       <materials>
         <git url="git://github.com/genivi/genivi-dev-platform" dest="ggg" materialName="genivi-dev-platform.git" />
+        <scm ref="6970e0d3-fe3f-41a3-9fc2-6830e89757de" dest="abc" />
       </materials>
       <stage name="stage">
         <jobs>
