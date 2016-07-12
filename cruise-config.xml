@@ -1227,7 +1227,6 @@
     </pipeline>
     <pipeline name="MultiJobTest">
       <materials>
-        <git url="git://github.com/genivi/genivi-dev-platform" dest="ggg" materialName="genivi-dev-platform.git" />
         <scm ref="6970e0d3-fe3f-41a3-9fc2-6830e89757de" dest="abc" />
       </materials>
       <stage name="stage">
