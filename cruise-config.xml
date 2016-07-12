@@ -1287,6 +1287,9 @@
                 <runif status="any" />
               </exec>
             </tasks>
+            <resources>
+              <resource>2131ce1bd33e</resource>
+            </resources>
           </job>
           <job name="job2">
             <environmentvariables>
