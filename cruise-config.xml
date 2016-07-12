@@ -1227,7 +1227,7 @@
     </pipeline>
     <pipeline name="MultiJobTest">
       <materials>
-        <scm ref="6970e0d3-fe3f-41a3-9fc2-6830e89757de" dest="abc" />
+        <scm ref="6970e0d3-fe3f-41a3-9fc2-6830e89757de" />
       </materials>
       <stage name="stage">
         <jobs>
