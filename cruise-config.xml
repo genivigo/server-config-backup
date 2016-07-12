@@ -1289,6 +1289,11 @@
             </tasks>
           </job>
           <job name="job2">
+            <environmentvariables>
+              <variable name="MACHINE">
+                <value>porter</value>
+              </variable>
+            </environmentvariables>
             <tasks>
               <exec command="rm" workingdir="gdp-src-build">
                 <arg>-rf</arg>
