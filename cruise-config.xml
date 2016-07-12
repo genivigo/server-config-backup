@@ -1216,6 +1216,20 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="MultiJobTest">
+      <materials>
+        <git url="git://github.com/genivi/genivi-dev-platform" />
+      </materials>
+      <stage name="stage">
+        <jobs>
+          <job name="job">
+            <tasks>
+              <exec command="true" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="franca_install_automation" />
   <pipelines group="Administration_for_2131ce1bd33e">
