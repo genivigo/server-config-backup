@@ -1229,7 +1229,6 @@
           </job>
           <job name="job2">
             <tasks>
-              <ant />
               <exec command="true">
                 <runif status="passed" />
               </exec>
