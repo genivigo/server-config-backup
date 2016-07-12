@@ -1218,7 +1218,7 @@
     </pipeline>
     <pipeline name="MultiJobTest">
       <materials>
-        <git url="git://github.com/genivi/genivi-dev-platform" />
+        <git url="git://github.com/genivi/genivi-dev-platform" dest="ggg" materialName="genivi-dev-platform.git" />
       </materials>
       <stage name="stage">
         <jobs>
