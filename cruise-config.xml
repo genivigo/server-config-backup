@@ -1230,6 +1230,9 @@
           <job name="job2">
             <tasks>
               <ant />
+              <exec command="true">
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>2131ce1bd33e</resource>
