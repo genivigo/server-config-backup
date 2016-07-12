@@ -1232,6 +1232,11 @@
       <stage name="stage">
         <jobs>
           <job name="job">
+            <environmentvariables>
+              <variable name="MACHINE">
+                <value>qemux86-64</value>
+              </variable>
+            </environmentvariables>
             <tasks>
               <exec command="rm" workingdir="gdp-src-build">
                 <arg>-rf</arg>
