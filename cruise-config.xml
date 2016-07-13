@@ -1197,6 +1197,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
           </job>
           <job name="make_build_directory">
             <tasks>
