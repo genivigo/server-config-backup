@@ -154,6 +154,11 @@
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
+    <pipeline name="yocto-baseline-next" template="meta-ivi-build">
+      <materials>
+        <git url="git://github.com/genivi/meta-ivi.git" branch="experimental" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GENIVI_Development_Platform">
     <authorization>
