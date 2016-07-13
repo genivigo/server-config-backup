@@ -1240,6 +1240,9 @@
                 <runif status="any" />
               </exec>
             </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
