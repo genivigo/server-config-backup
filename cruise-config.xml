@@ -159,6 +159,9 @@
         <variable name="MACHINE">
           <value>qemux86-64</value>
         </variable>
+        <variable name="IMAGE_NAME">
+          <value>miranda-image</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="git://github.com/genivi/meta-ivi.git" branch="experimental" dest="meta-ivi" materialName="meta-ivi" />
