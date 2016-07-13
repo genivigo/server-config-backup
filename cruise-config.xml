@@ -155,6 +155,11 @@
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-next" template="meta-ivi-build">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="git://github.com/genivi/meta-ivi.git" branch="experimental" />
       </materials>
