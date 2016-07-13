@@ -1180,6 +1180,22 @@
         <git url="git://git.openembedded.org/meta-openembedded" branch="krogoth" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe_krogoth" />
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
+      <stage name="workaround.1">
+        <jobs>
+          <job name="getting-kernel-src">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake -c fetch linux-yocto</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
       <stage name="setup">
         <jobs>
           <job name="git.config">
@@ -1206,22 +1222,6 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>yocto_build</resource>
-            </resources>
-          </job>
-        </jobs>
-      </stage>
-      <stage name="workaround.1">
-        <jobs>
-          <job name="getting-kernel-src">
-            <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake -c fetch linux-yocto</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
