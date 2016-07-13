@@ -167,6 +167,7 @@
         <git url="git://github.com/genivi/meta-ivi.git" branch="experimental" dest="meta-ivi" materialName="meta-ivi" />
         <git url="git://git.openembedded.org/meta-openembedded" branch="fido" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded_fido" />
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="krogoth" dest="poky" autoUpdate="false" materialName="poky_krogoth" />
       </materials>
     </pipeline>
   </pipelines>
