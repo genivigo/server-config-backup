@@ -1241,11 +1241,11 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="MultiJobTest">
+    <pipeline name="MultiStageTest">
       <materials>
         <scm ref="6970e0d3-fe3f-41a3-9fc2-6830e89757de" />
       </materials>
-      <stage name="stage">
+      <stage name="stage1">
         <jobs>
           <job name="job">
             <environmentvariables>
@@ -1307,6 +1307,10 @@
               <resource>2131ce1bd33e</resource>
             </resources>
           </job>
+        </jobs>
+      </stage>
+      <stage name="stage2">
+        <jobs>
           <job name="job2">
             <environmentvariables>
               <variable name="MACHINE">
