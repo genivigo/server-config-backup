@@ -154,7 +154,7 @@
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-next" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-next" labeltemplate="meta-ivi:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
