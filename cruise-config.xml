@@ -114,11 +114,9 @@
   <pipelines group="GENIVI_Baselines">
     <authorization>
       <view>
+        <user>guest</user>
         <role>Guest</role>
       </view>
-      <operate>
-        <user>guest</user>
-      </operate>
       <admins>
         <role>Developer</role>
       </admins>
