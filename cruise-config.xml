@@ -699,7 +699,7 @@
     </authorization>
     <pipeline name="GDP-Yocto-RaspberryPi2_with_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
       <params>
-        <param name="branch-genivi-dev-platform">master</param>
+        <param name="branch">master</param>
       </params>
       <timer>0 0 5 * * ?</timer>
       <environmentvariables>
