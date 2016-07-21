@@ -1255,6 +1255,11 @@
       </stage>
     </pipeline>
     <pipeline name="reuse_tmp" template="Yocto_GDP_generic_reuse_tmp">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="git://github.com/genivi/genivi-dev-platform" />
       </materials>
