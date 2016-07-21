@@ -1829,16 +1829,6 @@
         <resource>agent007</resource>
       </resources>
     </agent>
-    <agent hostname="0619656d5714" ipaddress="172.17.0.30" uuid="e18ec08a-0aea-45bb-b0ee-4c211ba6aab7" isDisabled="true">
-      <resources>
-        <resource>0619656d5714</resource>
-        <resource>cmake</resource>
-        <resource>systemd-build-deps</resource>
-        <resource>libtool</resource>
-        <resource>fixme_noexec</resource>
-        <resource>ga_test</resource>
-      </resources>
-    </agent>
     <agent hostname="be6319ccb875" ipaddress="172.17.0.42" uuid="85ac2911-09ba-4560-b7bd-2fa784852e98" isDisabled="true">
       <resources>
         <resource>be6319ccb875</resource>
