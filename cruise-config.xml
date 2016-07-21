@@ -1254,6 +1254,11 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="reuse_tmp" template="Yocto_GDP_generic_reuse_tmp">
+      <materials>
+        <git url="git://github.com/genivi/genivi-dev-platform" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="franca_install_automation" />
   <pipelines group="Administration_for_2131ce1bd33e">
