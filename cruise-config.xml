@@ -701,7 +701,7 @@
       <params>
         <param name="branch">master</param>
       </params>
-      <timer>0 0 5 * * ?</timer>
+      <timer>0 0 1 22 7 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>raspberrypi2</value>
