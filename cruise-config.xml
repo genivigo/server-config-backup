@@ -1805,14 +1805,14 @@
                 <arg>no_email@genivigo.com</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
-              </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
                 <arg>echo 'BB_NUMBER_THREADS = "2"' &gt;&gt; local.conf</arg>
                 <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
