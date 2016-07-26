@@ -1820,7 +1820,7 @@
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>echo "BB_NUMBER_THREADS = \"2\"" &gt;&gt; local.conf</arg>
+                <arg>echo 'BB_NUMBER_THREADS = "2"' &gt;&gt; local.conf</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
