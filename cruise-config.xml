@@ -761,7 +761,7 @@
       </stage>
     </pipeline>
     <pipeline name="GDP-Yocto-QEMU_x86-64_with_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
-      <timer>0 0 3 22 7 ?</timer>
+      <timer>0 0 1 27 7 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
