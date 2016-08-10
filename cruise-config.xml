@@ -1534,6 +1534,11 @@
                 <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
                 <runif status="any" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cp gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-*.rootfs.manifest gdp-src-build/staging</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
