@@ -1504,12 +1504,12 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
+                <arg>tar -xcf "gdp-src-build/staging/oe-source-tar.gz" --exclude=gdp-src-build/{bitbake.lock,buildhistory,cache,downloads,sstate-cache,tmp} --exclude=meta-{renesas,raspberrypi,intel,qcom}</arg>
+                <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>tar -xcf "gdp-src-build/staging/oe-source-tar.gz" --exclude=gdp-src-build/{bitbake.lock,buildhistory,cache,downloads,sstate-cache,tmp} --exclude=meta-{renesas,raspberrypi,intel,qcom}</arg>
-                <runif status="passed" />
+                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
