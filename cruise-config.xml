@@ -1498,7 +1498,7 @@
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>/bin/echo -e 'INHERIT += "archiver"\nARCHIVER_MODE[src]\nCOPY_LIC_MANIFEST = "1"\nCOPY_LIC_DIRS = "1"'&gt;&gt;local.conf</arg>
+                <arg>/bin/echo -e 'INHERIT += "archiver"\nARCHIVER_MODE[src] = "original"\nCOPY_LIC_MANIFEST = "1"\nCOPY_LIC_DIRS = "1"'&gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="git">
