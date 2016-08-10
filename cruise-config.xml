@@ -1485,7 +1485,7 @@
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
+                <arg>/bin/echo -e 'INHERIT += "archiver"\nARCHIVER_MODE[src]\nCOPY_LIC_MANIFEST = "1"\nCOPY_LIC_DIRS = "1"'&gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="git">
