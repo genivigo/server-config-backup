@@ -1485,7 +1485,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>tar -zcf "gdp-src-build/staging/oe-source.tar.gz" \ --exclude=gdp-src-build/{bitbake.lock,buildhistory,cache,downloads,sstate-cache,tmp,staging}  \ --exclude=meta-{renesas,raspberrypi,intel,qcom} \ *</arg>
+                <arg>tar -zcf "gdp-src-build/staging/oe-source.tar.gz"     --exclude=gdp-src-build/{bitbake.lock,buildhistory,cache,downloads,sstate-cache,tmp}     --exclude=meta-{renesas,raspberrypi,intel,qcom}     *</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
