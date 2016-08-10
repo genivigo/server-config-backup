@@ -1269,6 +1269,9 @@
         <variable name="MACHINE">
           <value>qemux86-64</value>
         </variable>
+        <variable name="BRANCH">
+          <value>gdp-11-beta</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
