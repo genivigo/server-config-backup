@@ -1503,16 +1503,16 @@
                 <arg>Go Server</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mkdir gdp-src-build/staging/</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="git">
                 <arg>config</arg>
                 <arg>--global</arg>
                 <arg>user.email</arg>
                 <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>mkdir gdp-src-build/staging/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
