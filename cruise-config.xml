@@ -1264,7 +1264,7 @@
         <git url="git://github.com/genivi/genivi-dev-platform" />
       </materials>
     </pipeline>
-    <pipeline name="Release_Test" isLocked="true" template="Yocto_GDP_generic">
+    <pipeline name="Release_Test" isLocked="true" template="Yocto_GDP_generic_release">
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
