@@ -1264,6 +1264,11 @@
         <git url="git://github.com/genivi/genivi-dev-platform" />
       </materials>
     </pipeline>
+    <pipeline name="Release_Test" template="Yocto_GDP_generic">
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="franca_install_automation" />
   <pipelines group="Administration_for_2131ce1bd33e">
