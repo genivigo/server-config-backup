@@ -1531,12 +1531,12 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>tar -zcf gdp-src-build/staging/sources.tar.gz -C gdp-src-build/tmp/deploy/sources .</arg>
+                <arg>mkdir gdp-src-build/staging/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mkdir gdp-src-build/staging/</arg>
+                <arg>tar -zcf gdp-src-build/staging/sources.tar.gz -C gdp-src-build/tmp/deploy/sources .</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
