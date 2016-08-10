@@ -1526,12 +1526,12 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>tar -zcf gdp-src-build/staging/licenses.tar.gz -C gdp-src-build/deploy/licenses .</arg>
+                <arg>mkdir gdp-src-build/staging/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mkdir gdp-src-build/staging/</arg>
+                <arg>tar -zcf gdp-src-build/staging/licenses.tar.gz -C gdp-src-build/deploy/licenses .</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
