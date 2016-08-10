@@ -1526,12 +1526,12 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>tar -zcf gdp-src-build/staging/sources.tar.gz -C gdp-src-build/tmp/deploy/sources .</arg>
+                <arg>cp gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-*.rootfs.manifest gdp-src-build/staging</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-*.rootfs.manifest gdp-src-build/staging</arg>
+                <arg>tar -zcf gdp-src-build/staging/sources.tar.gz -C gdp-src-build/tmp/deploy/sources .</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
