@@ -1536,12 +1536,12 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>gzip -c tmp/deploy/images/*/genivi-dev-platform-qemux86-64.ext4 &gt; gdp-src-build/staging/genivi-dev-platform-qemux86-64.ext4.gz</arg>
+                <arg>mkdir gdp-src-build/staging/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mkdir gdp-src-build/staging/</arg>
+                <arg>gzip -c tmp/deploy/images/*/genivi-dev-platform-qemux86-64.ext4 &gt; gdp-src-build/staging/genivi-dev-platform-qemux86-64.ext4.gz</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
