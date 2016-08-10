@@ -1545,13 +1545,7 @@
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
-              <artifact src="sources.tar.gz" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/license.manifest" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/package.manifest" />
-              <artifact src="oe-source.tar.gz" />
-              <artifact src="licenses.tar.gz" />
-              <artifact src="gdp-src-build/tmp/deploy/images/*/genivi-dev-platform.rootfs.ext4" />
-              <artifact src="gdp-src-build/tmp/deploy/images/*/bzImage" />
+              <artifact src="gdp-src-build/staging/" />
             </artifacts>
           </job>
         </jobs>
