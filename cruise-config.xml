@@ -1554,7 +1554,6 @@
               <resource>yocto_build</resource>
             </resources>
             <artifacts>
-              <artifact src="logs.tar.gz" />
               <artifact src="gdp-src-build/staging/" />
             </artifacts>
           </job>
