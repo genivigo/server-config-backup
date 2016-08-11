@@ -1265,6 +1265,9 @@
       </materials>
     </pipeline>
     <pipeline name="Release_Test" isLocked="true" template="Yocto_GDP_generic_release">
+      <params>
+        <param name="BRANCH">gdp-11-beta</param>
+      </params>
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
