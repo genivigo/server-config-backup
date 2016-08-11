@@ -1264,7 +1264,7 @@
         <git url="git://github.com/genivi/genivi-dev-platform" />
       </materials>
     </pipeline>
-    <pipeline name="Release_Test" isLocked="true" template="Yocto_GDP_generic_release">
+    <pipeline name="Release_Test" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="BRANCH">gdp-11-beta</param>
       </params>
