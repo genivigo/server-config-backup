@@ -1266,7 +1266,7 @@
     </pipeline>
     <pipeline name="Release_Test" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
-        <param name="BRANCH">master</param>
+        <param name="BRANCH">origin/gdp-11-beta</param>
       </params>
       <environmentvariables>
         <variable name="MACHINE">
