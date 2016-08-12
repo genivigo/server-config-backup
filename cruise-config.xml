@@ -1280,7 +1280,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="&quot;#{BRANCH}&quot;" autoUpdate="false" />
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
       </materials>
     </pipeline>
   </pipelines>
