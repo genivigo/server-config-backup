@@ -373,7 +373,7 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-RPI2-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic">
-      <timer>0 0 4 17 8 ?</timer>
+      <timer>0 0 8 17 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>raspberrypi2</value>
