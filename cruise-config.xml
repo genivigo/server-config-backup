@@ -1971,13 +1971,13 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [[ "$BUILD_SDK" == "true" ]] ; then source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake meta-ide-support ; fi</arg>
-                <runif status="passed" />
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
+                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
-                <runif status="any" />
+                <arg>if [[ "$BUILD_SDK" == "true" ]] ; then source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake meta-ide-support ; fi</arg>
+                <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
