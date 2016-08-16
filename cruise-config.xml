@@ -1940,7 +1940,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>ct_test</resource>
+              <resource>new_test</resource>
             </resources>
             <artifacts>
               <artifact src="gdp-src-build/tmp/deploy/licenses" />
