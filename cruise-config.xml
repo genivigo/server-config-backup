@@ -1311,6 +1311,11 @@
                 <arg>-f</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="vagrant">
+                <arg>up</arg>
+                <arg>--provision</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
