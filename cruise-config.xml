@@ -154,6 +154,7 @@
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-11" labeltemplate="meta-ivi:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
+      <timer>0 0 3 17 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
