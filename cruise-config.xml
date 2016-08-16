@@ -1608,6 +1608,11 @@
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
+              <exec command="bash" workingdir="gdp/gdp-src-build/">
+                <arg>-c</arg>
+                <arg>rm -rf tmp</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="bash" workingdir="gdp">
                 <arg>-c</arg>
                 <arg>source ./init.sh $MACHINE</arg>
