@@ -2070,19 +2070,6 @@
         <resource>gmacario-genivigo-agent1</resource>
       </resources>
     </agent>
-    <agent hostname="agent007" ipaddress="172.17.0.2" uuid="a0482753-ca6c-4d87-9e38-1be4543667c0" isDisabled="true">
-      <resources>
-        <resource>agent007</resource>
-      </resources>
-    </agent>
-    <agent hostname="be6319ccb875" ipaddress="172.17.0.42" uuid="85ac2911-09ba-4560-b7bd-2fa784852e98" isDisabled="true">
-      <resources>
-        <resource>be6319ccb875</resource>
-        <resource>systemd-build-deps</resource>
-        <resource>cmake</resource>
-        <resource>libtool</resource>
-      </resources>
-    </agent>
     <agent hostname="go-agent1" ipaddress="10.100.10.120" uuid="eb6be62e-2380-4537-b74b-18ff7265ac4c">
       <resources>
         <resource>new_test</resource>
