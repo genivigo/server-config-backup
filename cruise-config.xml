@@ -314,7 +314,7 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-PORTER-meta-genivi-dev-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic_latest_meta_genivi_demo">
-      <timer>0 0 2 17 8 ?</timer>
+      <timer>0 0 23 16 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>porter</value>
