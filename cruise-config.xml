@@ -325,7 +325,8 @@
         <scm ref="30b07577-5ed3-4441-9558-3cf1595a678c" dest="meta-genivi-dev" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-RPI2-meta-genivi-dev-GITHUB-PR" template="Yocto_GDP_generic_latest_meta_genivi_demo">
+    <pipeline name="GDP-Yocto-RPI2-meta-genivi-dev-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic_latest_meta_genivi_demo">
+      <timer>0 0 1 17 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>raspberrypi2</value>
