@@ -1306,9 +1306,9 @@
                 <arg>echo $VAGRANT_HOME</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="vagrant">
-                <arg>destroy</arg>
-                <arg>-f</arg>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>VAGRANT_HOME="$PWD/.vagrant.d" vagrant destroy -f</arg>
                 <runif status="passed" />
               </exec>
               <exec command="vagrant">
