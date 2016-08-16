@@ -368,7 +368,8 @@
         <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-RPI2-GITHUB-PR" template="Yocto_GDP_generic">
+    <pipeline name="GDP-Yocto-RPI2-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic">
+      <timer>0 0 0 17 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>raspberrypi2</value>
