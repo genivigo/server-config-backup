@@ -2065,11 +2065,6 @@
         <resource>vagrant</resource>
       </resources>
     </agent>
-    <agent hostname="gmacario-genivigo-agent1" ipaddress="172.17.0.2" uuid="89069c2d-0711-4c7c-ab9f-63a20001234b" isDisabled="true">
-      <resources>
-        <resource>gmacario-genivigo-agent1</resource>
-      </resources>
-    </agent>
     <agent hostname="go-agent1" ipaddress="10.100.10.120" uuid="eb6be62e-2380-4537-b74b-18ff7265ac4c">
       <resources>
         <resource>new_test</resource>
