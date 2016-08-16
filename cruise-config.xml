@@ -1296,6 +1296,10 @@
               <exec command="vagrant">
                 <arg>-v</arg>
               </exec>
+              <exec command="bash -c">
+                <arg>export VAGRANT_HOME="$PWD/.vagrant.d"</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
