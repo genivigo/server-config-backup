@@ -326,7 +326,7 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-RPI2-meta-genivi-dev-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic_latest_meta_genivi_demo">
-      <timer>0 0 1 17 8 ?</timer>
+      <timer>0 0 4 17 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>raspberrypi2</value>
