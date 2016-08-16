@@ -338,7 +338,7 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-MINNOWBOARD-meta-genivi-dev-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic_latest_meta_genivi_demo">
-      <timer>0 0 1 17 8 ?</timer>
+      <timer>0 2 1 17 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>minnowboard</value>
