@@ -2065,7 +2065,7 @@
         <resource>vagrant</resource>
       </resources>
     </agent>
-    <agent hostname="gmacario-genivigo-agent1" ipaddress="172.17.0.2" uuid="89069c2d-0711-4c7c-ab9f-63a20001234b">
+    <agent hostname="gmacario-genivigo-agent1" ipaddress="172.17.0.2" uuid="89069c2d-0711-4c7c-ab9f-63a20001234b" isDisabled="true">
       <resources>
         <resource>gmacario-genivigo-agent1</resource>
       </resources>
