@@ -1285,6 +1285,22 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
       </materials>
     </pipeline>
+    <pipeline name="vagrant_test_ignore">
+      <materials>
+        <git url="http://github.com/gunnarx/gocd-setup.git" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="vagrant">
+                <arg>-v</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="franca_install_automation" />
   <pipelines group="Administration_for_2131ce1bd33e">
