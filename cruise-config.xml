@@ -1300,6 +1300,11 @@
                 <arg>export VAGRANT_HOME="$PWD/.vagrant.d"</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>echo $VAGRANT_HOME</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
