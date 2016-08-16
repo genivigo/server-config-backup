@@ -721,6 +721,11 @@
       <stage name="Build">
         <jobs>
           <job name="Build">
+            <environmentvariables>
+              <variable name="SDK_INSTALLER">
+                <value>oecore-x86_64-core2-64-toolchain-nodistro.0.sh</value>
+              </variable>
+            </environmentvariables>
             <tasks>
               <exec command="true">
                 <runif status="passed" />
