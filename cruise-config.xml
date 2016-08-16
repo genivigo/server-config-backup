@@ -1301,9 +1301,9 @@
                 <arg>VAGRANT_HOME="$PWD/.vagrant.d" vagrant destroy -f</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="vagrant">
-                <arg>up</arg>
-                <arg>--provision</arg>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>VAGRANT_HOME="$PWD/.vagrant.d" vagrant up --provision</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
