@@ -1363,6 +1363,12 @@
                 <arg>"./$ECLIPSE_INSTALL_DIR/eclipse"</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="tar">
+                <arg>cfz</arg>
+                <arg>staging/eclipse-workspace.tar.gz</arg>
+                <arg>"./$ECLIPSE_WORKSPACE_DIR"</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>maven</resource>
