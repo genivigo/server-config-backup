@@ -1352,14 +1352,14 @@
                 <arg>"./$ECLIPSE_INSTALL_DIR"</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-ce</arg>
-                <arg>./script.sh</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="mkdir">
                 <arg>-p</arg>
                 <arg>artifacts</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-ce</arg>
+                <arg>./script.sh</arg>
                 <runif status="passed" />
               </exec>
               <exec command="tar">
