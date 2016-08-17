@@ -1348,6 +1348,11 @@
             </environmentvariables>
             <tasks>
               <exec command="true" />
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>./script</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
