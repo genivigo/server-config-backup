@@ -1352,6 +1352,11 @@
                 <arg>./script.sh</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="rm">
+                <arg>-rf</arg>
+                <arg>"./$ECLIPSE_INSTALL_DIR"</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>maven</resource>
