@@ -1358,7 +1358,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="bash">
-                <arg>-e</arg>
+                <arg>-c</arg>
                 <arg>./script.sh</arg>
                 <runif status="passed" />
               </exec>
