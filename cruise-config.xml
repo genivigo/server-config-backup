@@ -1301,6 +1301,7 @@
             <tasks>
               <exec command="vagrant">
                 <arg>-v</arg>
+                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
