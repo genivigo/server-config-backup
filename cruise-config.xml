@@ -1367,10 +1367,9 @@
                 <arg>tar cfz artifacts/eclipse.tar.gz "./$ECLIPSE_INSTALL_DIR/eclipse"</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="tar">
-                <arg>cfz</arg>
-                <arg>artifacts/eclipse-workspace.tar.gz</arg>
-                <arg>"./$ECLIPSE_WORKSPACE_DIR"</arg>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>tar cfz artifacts/eclipse-workspace.tar.gz "./$ECLIPSE_WORKSPACE_DIR"</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
