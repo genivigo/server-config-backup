@@ -1359,7 +1359,7 @@
               </exec>
               <exec command="tar">
                 <arg>cfz</arg>
-                <arg>staging/eclipse.tar.gz</arg>
+                <arg>artifacts/eclipse.tar.gz</arg>
                 <arg>"./$ECLIPSE_INSTALL_DIR/eclipse"</arg>
                 <runif status="passed" />
               </exec>
