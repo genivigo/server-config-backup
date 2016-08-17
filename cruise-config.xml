@@ -748,6 +748,57 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
+    <pipeline name="SDK">
+      <materials>
+        <git url="http://github.com/GENIVI/meta-genivi-dev.git" />
+      </materials>
+      <stage name="Build">
+        <jobs>
+          <job name="Build">
+            <environmentvariables>
+              <variable name="SDK_INSTALLER_NAME">
+                <value>oecore-x86_64-core2-64-toolchain-nodistro.0.sh</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <exec command="true">
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="Test">
+        <approval type="manual" />
+        <jobs>
+          <job name="Test">
+            <tasks>
+              <ant />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="ManualTest">
+        <approval type="manual" />
+        <jobs>
+          <job name="Trigger">
+            <tasks>
+              <exec command="test" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="Copy_to_web_server">
+        <approval type="manual" />
+        <jobs>
+          <job name="copy">
+            <tasks>
+              <ant />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
     <pipeline name="gm-test-sysinfo" isLocked="false">
       <materials>
         <git url="https://gist.github.com/gmacario/124193e33b7e0e6f7110" materialName="gm-sysinfo" />
