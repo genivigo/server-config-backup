@@ -1347,7 +1347,6 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <exec command="true" />
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>./script</arg>
