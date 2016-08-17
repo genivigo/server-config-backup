@@ -303,7 +303,6 @@
       </admins>
     </authorization>
     <pipeline name="GDP-Yocto-QEMU_x86-64-meta-genivi-dev-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic_latest_meta_genivi_demo">
-      <timer onlyOnChanges="true">0 0 3 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
