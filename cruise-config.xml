@@ -1369,6 +1369,11 @@
                 <arg>"./$ECLIPSE_WORKSPACE_DIR"</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>artifacts</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>maven</resource>
