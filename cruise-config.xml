@@ -1311,7 +1311,7 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>VAGRANT_HOME="$PWD/.vagrant.d" vagrant up --provision</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
             </tasks>
           </job>
