@@ -1331,6 +1331,20 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="eclipse_with_franca">
+      <materials>
+        <git url="https://github.com/genivi/eclipse_install_automation" />
+      </materials>
+      <stage name="stage">
+        <jobs>
+          <job name="job">
+            <tasks>
+              <exec command="true" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="franca_install_automation" />
   <pipelines group="Administration_for_2131ce1bd33e">
