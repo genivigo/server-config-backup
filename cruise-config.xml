@@ -1347,14 +1347,14 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <exec command="bash">
-                <arg>-ce</arg>
-                <arg>./script.sh</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="rm">
                 <arg>-rf</arg>
                 <arg>"./$ECLIPSE_INSTALL_DIR"</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-ce</arg>
+                <arg>./script.sh</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
