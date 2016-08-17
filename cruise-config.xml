@@ -1338,6 +1338,14 @@
       <stage name="stage">
         <jobs>
           <job name="job">
+            <environmentvariables>
+              <variable name="ECLIPSE_INSTALL_DIR">
+                <value>autoeclipse</value>
+              </variable>
+              <variable name="ECLIPSE_WORKSPACE_DIR">
+                <value>workspace</value>
+              </variable>
+            </environmentvariables>
             <tasks>
               <exec command="true" />
             </tasks>
