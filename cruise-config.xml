@@ -1374,8 +1374,7 @@
               <resource>maven</resource>
             </resources>
             <artifacts>
-              <artifact src="autoeclipse/*" dest="eclipse" />
-              <artifact src="workspace" />
+              <artifact src="staging" />
             </artifacts>
           </job>
         </jobs>
