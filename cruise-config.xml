@@ -720,7 +720,7 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-Minnowboard_with_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
-      <timer>0 0 21 26 7 ?</timer>
+      <timer onlyOnChanges="true">0 30 3 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>minnowboard</value>
