@@ -1365,7 +1365,7 @@
               </exec>
               <exec command="tar">
                 <arg>cfz</arg>
-                <arg>staging/eclipse-workspace.tar.gz</arg>
+                <arg>artifacts/eclipse-workspace.tar.gz</arg>
                 <arg>"./$ECLIPSE_WORKSPACE_DIR"</arg>
                 <runif status="passed" />
               </exec>
