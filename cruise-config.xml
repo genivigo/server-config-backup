@@ -1362,10 +1362,9 @@
                 <arg>./script.sh</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="tar">
-                <arg>cfz</arg>
-                <arg>artifacts/eclipse.tar.gz</arg>
-                <arg>"./$ECLIPSE_INSTALL_DIR/eclipse"</arg>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>tar cfz artifacts/eclipse.tar.gz "./$ECLIPSE_INSTALL_DIR/eclipse"</arg>
                 <runif status="passed" />
               </exec>
               <exec command="tar">
