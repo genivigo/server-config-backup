@@ -756,7 +756,7 @@
       </materials>
       <stage name="Assemble">
         <jobs>
-          <job name="Build">
+          <job name="gdp-sdk">
             <environmentvariables>
               <variable name="SDK_INSTALLER_NAME">
                 <value>oecore-x86_64-core2-64-toolchain-nodistro.0.sh</value>
