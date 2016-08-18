@@ -2066,11 +2066,11 @@
               <resource>yocto_build</resource>
             </resources>
             <artifacts>
-              <artifact src="gdp-src-build/tmp/deploy/licenses" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/license.manifest" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/package.manifest" />
-              <artifact src="gdp-src-build/tmp/deploy/sdk*" />
-              <artifact src="logs.tar.gz" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses" dest="results" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/license.manifest" dest="results" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/package.manifest" dest="results" />
+              <artifact src="gdp-src-build/tmp/deploy/sdk*" dest="results" />
+              <artifact src="logs.tar.gz" dest="results" />
             </artifacts>
           </job>
         </jobs>
