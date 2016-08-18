@@ -782,6 +782,11 @@
                 <arg>ls -al *</arg>
                 <runif status="any" />
               </exec>
+              <exec command="mv">
+                <arg>eclipse/results/eclipse</arg>
+                <arg>gdp-sdk</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
