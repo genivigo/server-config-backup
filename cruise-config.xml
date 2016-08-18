@@ -774,14 +774,14 @@
                 <arg>eclipse</arg>
                 <runif status="any" />
               </exec>
+              <fetchartifact pipeline="eclipse_with_franca" stage="stage" job="job" srcdir="eclipse">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>ls -al *</arg>
                 <runif status="any" />
               </exec>
-              <fetchartifact pipeline="eclipse_with_franca" stage="stage" job="job" srcdir="eclipse">
-                <runif status="passed" />
-              </fetchartifact>
             </tasks>
             <resources>
               <resource>ga_test</resource>
