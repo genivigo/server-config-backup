@@ -124,7 +124,7 @@
       </admins>
     </authorization>
     <pipeline name="yocto-baseline-9" labeltemplate="9.0:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
-      <timer>0 0 2 11 7 ?</timer>
+      <timer>0 4 18 18 8 ?</timer>
       <environmentvariables>
         <variable name="IMAGE_NAME">
           <value>kronos-image</value>
