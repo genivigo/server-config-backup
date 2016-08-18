@@ -804,7 +804,8 @@
                 <runif status="passed" />
               </exec>
               <exec command="tar">
-                <arg>cfz gdp-sdk.tar.gz gdp-sdk</arg>
+                <arg>cfz</arg>
+                <arg>gdp-sdk.tar.gz gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
