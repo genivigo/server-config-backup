@@ -805,7 +805,7 @@
               </exec>
               <exec command="chmod">
                 <arg>-R</arg>
-                <arg>ugo+r</arg>
+                <arg>u+r</arg>
                 <arg>gdp-sdk/yocto-sdk</arg>
                 <runif status="passed" />
               </exec>
