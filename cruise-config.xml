@@ -865,26 +865,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="gm-test-sysinfo" isLocked="false">
-      <materials>
-        <git url="https://gist.github.com/gmacario/124193e33b7e0e6f7110" materialName="gm-sysinfo" />
-      </materials>
-      <stage name="defaultStage">
-        <jobs>
-          <job name="defaultJob">
-            <tasks>
-              <exec command="bash">
-                <arg>gm-sysinfo.sh</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>gm_test</resource>
-            </resources>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="WIP--GENIVI_Positioning" isLocked="false">
       <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
       <materials>
