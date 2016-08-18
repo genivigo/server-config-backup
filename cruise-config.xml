@@ -394,6 +394,1199 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="Components">
+    <authorization>
+      <view>
+        <role>Developer</role>
+        <role>Guest</role>
+      </view>
+      <operate>
+        <role>Developer</role>
+      </operate>
+      <admins>
+        <role>Developer</role>
+      </admins>
+    </authorization>
+    <pipeline name="DLT-daemon-native" isLocked="false">
+      <materials>
+        <git url="https://git.projects.genivi.org/dlt-daemon.git" shallowClone="true" materialName="dlt-daemon.git" />
+      </materials>
+      <stage name="build">
+        <jobs>
+          <job name="cmake_and_make">
+            <tasks>
+              <exec command="rm">
+                <arg>-rf</arg>
+                <arg>build</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>build</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="cmake" workingdir="build">
+                <arg>..</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="make" workingdir="build">
+                <arg>V=1</arg>
+                <arg>-j3</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+            </resources>
+            <artifacts>
+              <artifact src="build/src/lib" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="common-api-cpp-runtime" labeltemplate="master:${common-api-runtime.git[:8]}-build:${COUNT}" isLocked="false" template="CMAKE_build">
+      <materials>
+        <git url="http://git.projects.genivi.org/ipc/common-api-runtime.git" materialName="common-api-runtime.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="common-api-cpp-dbus-runtime" labeltemplate="master:${common-api-dbus-runtime.git[:8]}-build:${COUNT}" isLocked="false">
+      <materials>
+        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" materialName="common-api-dbus-runtime.git" />
+        <pipeline pipelineName="common-api-cpp-runtime" stageName="build" materialName="build" />
+        <pipeline pipelineName="libdbus-with-commonapi-patch" stageName="patch_and_build" materialName="libdbus-with-commonapi-patch" />
+      </materials>
+      <stage name="build">
+        <jobs>
+          <job name="build">
+            <environmentvariables>
+              <variable name="CommonAPI_DIR">
+                <value>../common-api-cpp-runtime-build/build</value>
+              </variable>
+              <variable name="PKG_CONFIG_PATH">
+                <value>/var/lib/go-agent/pipelines/common-api-cpp-dbus-runtime/libdbus_patched/results/lib/pkgconfig</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <fetchartifact pipeline="libdbus-with-commonapi-patch" stage="patch_and_build" job="patch_and_build" srcdir="results" dest="libdbus_patched">
+                <runif status="passed" />
+              </fetchartifact>
+              <fetchartifact pipeline="common-api-cpp-runtime" stage="build" job="cmake_and_make" srcdir="build" dest="common-api-cpp-runtime-build">
+                <runif status="passed" />
+              </fetchartifact>
+              <exec command="rm">
+                <arg>-rf</arg>
+                <arg>build</arg>
+              </exec>
+              <exec command="mkdir">
+                <arg>build</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="cmake" workingdir="build">
+                <arg>-D</arg>
+                <arg>USE_INSTALLED_COMMONAPI=ON</arg>
+                <arg>..</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="make" workingdir="build">
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+            </resources>
+            <artifacts>
+              <artifact src="build/*.so*" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="libdbus-with-commonapi-patch" labeltemplate="master:${dbus.git[:8]}-build:${COUNT}" isLocked="false">
+      <materials>
+        <git url="http://anongit.freedesktop.org/git/dbus/dbus.git" dest="dbus" materialName="dbus.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" dest="common-api-dbus-runtime" materialName="common-api-dbus-runtime.git" />
+      </materials>
+      <stage name="patch_and_build">
+        <jobs>
+          <job name="patch_and_build">
+            <tasks>
+              <exec command="git" workingdir="dbus">
+                <arg>checkout</arg>
+                <arg>dbus-1.9.0</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="dbus">
+                <arg>-c</arg>
+                <arg>for f in ../common-api-dbus-runtime/src/dbus-patches/*.patch ; do patch -p1 &lt;"$f" || exit 1 ; done</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>results</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="dbus">
+                <arg>autogen.sh</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="dbus">
+                <arg>-c</arg>
+                <arg>./configure --prefix $PWD/../results</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="make" workingdir="dbus">
+                <arg>-j4</arg>
+                <arg>-C</arg>
+                <arg>dbus</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="make" workingdir="dbus">
+                <arg>install</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>libtool</resource>
+            </resources>
+            <artifacts>
+              <artifact src="results" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="vSomeIP" template="CMAKE_build">
+      <materials>
+        <git url="http://git.projects.genivi.org/vSomeIP.git" />
+      </materials>
+    </pipeline>
+  </pipelines>
+  <pipelines group="Tools">
+    <authorization>
+      <view>
+        <role>Guest</role>
+        <role>Developer</role>
+      </view>
+      <operate>
+        <role>Developer</role>
+      </operate>
+      <admins>
+        <role>Developer</role>
+      </admins>
+    </authorization>
+    <pipeline name="common-api-cpp-dbus-tools" labeltemplate="master:${common-api-dbus-tools.git[:8]}-build:${COUNT}" isLocked="false">
+      <materials>
+        <git url="http://git.projects.genivi.org/ipc/common-api-dbus-tools.git" dest="common-api-dbus-tools" materialName="common-api-dbus-tools.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
+      </materials>
+      <stage name="build" artifactCleanupProhibited="true">
+        <jobs>
+          <job name="build">
+            <tasks>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>bin</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mvn" workingdir="common-api-tools/org.genivi.commonapi.core.releng">
+                <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
+                <arg>clean</arg>
+                <arg>verify</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mvn" workingdir="common-api-dbus-tools/org.genivi.commonapi.dbus.releng">
+                <arg>-DCOREPATH=../../common-api-tools</arg>
+                <arg>-Dtarget.id=org.genivi.commonapi.dbus.target</arg>
+                <arg>clean</arg>
+                <arg>verify</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="unzip" workingdir="bin">
+                <arg>../common-api-dbus-tools/org.genivi.commonapi.dbus.cli.product/target/products/commonapi_dbus_generator.zip</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>maven</resource>
+            </resources>
+            <artifacts>
+              <artifact src="bin" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="common-api-cpp-tools" labeltemplate="master:${common-api-tools.git[:8]}-build:${COUNT}" isLocked="false">
+      <materials>
+        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" materialName="common-api-tools.git" />
+      </materials>
+      <stage name="build" artifactCleanupProhibited="true">
+        <jobs>
+          <job name="build">
+            <tasks>
+              <exec command="mvn" workingdir="org.genivi.commonapi.core.releng">
+                <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
+                <arg>clean</arg>
+                <arg>verify</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mkdir">
+                <arg>bin</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="unzip" workingdir="bin">
+                <arg>../org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>maven</resource>
+            </resources>
+            <artifacts>
+              <artifact src="bin" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="common-api-cpp-someip-tools" labeltemplate="master:${cpp-someip-tools.git[:8]}-build:${COUNT}" isLocked="false">
+      <materials>
+        <git url="http://git.projects.genivi.org/common-api/cpp-someip-tools.git" dest="cpp-someip-tools" materialName="cpp-someip-tools.git" />
+        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
+      </materials>
+      <stage name="build" artifactCleanupProhibited="true">
+        <jobs>
+          <job name="build">
+            <tasks>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>bin</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mvn" workingdir="common-api-tools/org.genivi.commonapi.core.releng">
+                <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
+                <arg>clean</arg>
+                <arg>verify</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mvn" workingdir="cpp-someip-tools/org.genivi.commonapi.someip.releng">
+                <arg>-DCOREPATH=../../common-api-tools</arg>
+                <arg>-Dtarget.id=org.genivi.commonapi.someip.target</arg>
+                <arg>clean</arg>
+                <arg>verify</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="unzip" workingdir="bin">
+                <arg>../cpp-someip-tools/org.genivi.commonapi.someip.cli.product/target/products/commonapi_someip_generator.zip</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>maven</resource>
+            </resources>
+            <artifacts>
+              <artifact src="bin" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+  </pipelines>
+  <pipelines group="Experiments_and_Testing">
+    <authorization>
+      <view>
+        <role>Guest</role>
+      </view>
+      <admins>
+        <role>Developer</role>
+      </admins>
+    </authorization>
+    <pipeline name="GDP-Yocto-RaspberryPi2_with_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
+      <params>
+        <param name="branch">master</param>
+      </params>
+      <timer onlyOnChanges="true">0 0 3 * * ?</timer>
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>raspberrypi2</value>
+        </variable>
+        <variable name="BUILD_SDK">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="#{branch}" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-Minnowboard_with_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
+      <timer onlyOnChanges="true">0 30 3 * * ?</timer>
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="BUILD_SDK">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-QEMU_x86-64_with_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
+      <timer onlyOnChanges="true">0 0 4 * * ?</timer>
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+        <variable name="BUILD_SDK">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="SDK">
+      <materials>
+        <pipeline pipelineName="GDP-Yocto-RaspberryPi2_with_SDK" stageName="build" materialName="rpi-sdk" />
+        <pipeline pipelineName="eclipse_with_franca" stageName="stage" materialName="eclipse" />
+      </materials>
+      <stage name="Build">
+        <jobs>
+          <job name="Build">
+            <environmentvariables>
+              <variable name="SDK_INSTALLER_NAME">
+                <value>oecore-x86_64-core2-64-toolchain-nodistro.0.sh</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <fetchartifact pipeline="GDP-Yocto-RaspberryPi2_with_SDK" stage="build" job="init_and_bitbake" srcdir="results" dest="sdk">
+                <runif status="passed" />
+              </fetchartifact>
+              <fetchartifact pipeline="eclipse_with_franca" stage="stage" job="job" srcdir="results" dest="eclipse">
+                <runif status="passed" />
+              </fetchartifact>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -rf gdp-sdk ; mkdir gdp-sdk</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>echo -n "**\n** LISTING ALL DIRECTORIES FOR DEBUG PURPOSE\n**" ; ls -alRF</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="mv">
+                <arg>eclipse/results/eclipse</arg>
+                <arg>gdp-sdk/</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mv sdk/results/genivi-dev-platform-*/license.manifest gdp-sdk/</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>gdp-sdk/yocto-sdk</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>chmod 755 sdk/results/sdk/oecore-*toolchain*.sh</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>./sdk/results/sdk/oecore-*toolchain*.sh -d ./gdp-sdk/yocto-sdk/ -y</arg>
+                <arg />
+                <runif status="passed" />
+              </exec>
+              <exec command="tar">
+                <arg>cfz gdp-sdk.tar.gz gdp-sdk</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>ga_test</resource>
+            </resources>
+            <artifacts>
+              <artifact src="gdp-sdk.tar.gz" dest="unpacked" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="Test">
+        <approval type="manual" />
+        <jobs>
+          <job name="Test">
+            <tasks>
+              <ant />
+            </tasks>
+            <resources>
+              <resource>ga_test</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="ManualTest">
+        <approval type="manual" />
+        <jobs>
+          <job name="Trigger">
+            <tasks>
+              <exec command="test" />
+            </tasks>
+            <resources>
+              <resource>ga_test</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="Copy_to_web_server">
+        <approval type="manual" />
+        <jobs>
+          <job name="copy">
+            <tasks>
+              <ant />
+            </tasks>
+            <resources>
+              <resource>ga_test</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="gm-test-sysinfo" isLocked="false">
+      <materials>
+        <git url="https://gist.github.com/gmacario/124193e33b7e0e6f7110" materialName="gm-sysinfo" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="bash">
+                <arg>gm-sysinfo.sh</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>gm_test</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="WIP--GENIVI_Positioning" isLocked="false">
+      <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
+      <materials>
+        <git url="http://git.projects.genivi.org/lbs/positioning.git" materialName="PositioningGitRepository" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_DBUS_INTERFACE=ON -DWITH_FRANCA_DBUS_INTERFACE=OFF -DWITH_FRANCA_SOMEIP_INTERFACE=OFF -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=OFF -DCMAKE_BUILD_TYPE=Debug ../</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cd build &amp;&amp; make</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+              <resource>lbs</resource>
+            </resources>
+          </job>
+          <job name="common-api-dbus_dlt_logreplayer">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_DBUS_INTERFACE=OFF -DWITH_FRANCA_DBUS_INTERFACE=ON -DWITH_FRANCA_SOMEIP_INTERFACE=OFF -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=ON -DCMAKE_BUILD_TYPE=Debug -DCOMMONAPI_TOOL_GENERATOR=/usr/local/bin/commonapi-generator-linux-x86_64 -DCOMMONAPI_DBUS_TOOL_GENERATOR=/usr/local/bin/commonapi-dbus-generator-linux-x86_64 ../</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cd build &amp;&amp; make</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+              <resource>lbs</resource>
+            </resources>
+          </job>
+          <job name="common-api-dbus_stdout_logreplayer">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_DBUS_INTERFACE=OFF -DWITH_FRANCA_DBUS_INTERFACE=ON -DWITH_FRANCA_SOMEIP_INTERFACE=OFF -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=OFF -DCMAKE_BUILD_TYPE=Debug -DCOMMONAPI_TOOL_GENERATOR=/usr/local/bin/commonapi-generator-linux-x86_64 -DCOMMONAPI_DBUS_TOOL_GENERATOR=/usr/local/bin/commonapi-dbus-generator-linux-x86_64 ../</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cd build &amp;&amp; make</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+              <resource>lbs</resource>
+            </resources>
+          </job>
+          <job name="gnssservice_stdout_gpsd">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake WITH_ENHANCED_POSITION_SERVICE=OFF WITH_SENSORS_SERVICE=OFF  -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=OFF -DCMAKE_BUILD_TYPE=Debug -DWITH_REPLAYER=OFF -DWITH_GPSD=ON ../</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cd build &amp;&amp; make</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+              <resource>lbs</resource>
+            </resources>
+          </job>
+          <job name="sensorsservice_gnssservice_nmea_logger_stdout">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_ENHANCED_POSITION_SERVICE=OFF -DWITH_NMEA=ON -DWITH_SENSORS=ON -DIMU_TYPE=LSM9DS1 -DWITH_LOGGER=ON -DWITH_TESTS=ON -DWITH_DEBUG=ON -DGNSS_DEVICE=\"/dev/ttyACM0\" -DGNSS_BAUDRATE=B38400 -DGNSS_CHIPSET=UBLOX -DGNSS_DELAY=50 ../</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cd build &amp;&amp; make</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+              <resource>lbs</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="WIP--common-api-c" labeltemplate="capic-poc:${capic-poc.git[:8]}-build:${COUNT}" isLocked="false">
+      <materials>
+        <git url="git://github.com/GENIVI/capic-poc.git" materialName="capic-poc.git" />
+        <pipeline pipelineName="systemd" stageName="stage" materialName="systemd" />
+      </materials>
+      <stage name="buildStage">
+        <jobs>
+          <job name="buildJob">
+            <tasks>
+              <fetchartifact pipeline="systemd" stage="stage" job="configure_and_make" srcdir="libs" dest="systemd">
+                <runif status="passed" />
+              </fetchartifact>
+              <fetchartifact pipeline="systemd" stage="stage" job="configure_and_make" srcdir="headers" dest="systemd">
+                <runif status="passed" />
+              </fetchartifact>
+              <exec command="autoreconf">
+                <arg>-i</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>export LIBSYSTEMD_CFLAGS="-I$PWD/systemd/headers" LIBSYSTEMD_LIBS="-L$PWD/systemd/libs" &amp;&amp; ./configure LDFLAGS="-L$PWD/systemd/libs"</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>make</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>2131ce1bd33e</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="software-loading-manager" isLocked="false">
+      <materials>
+        <git url="https://github.com/GENIVI/genivi_swm" materialName="SW_Management_PoC_sources" />
+      </materials>
+      <stage name="commonApiGenerationStage">
+        <jobs>
+          <job name="commonApiGenerationJob">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>printenv &amp;&amp; true</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="compileCppStage">
+        <jobs>
+          <job name="compileCppJob">
+            <tasks>
+              <exec command="true" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="runSWLMPocStage">
+        <jobs>
+          <job name="runSWLMPocJob">
+            <tasks>
+              <exec command="sed">
+                <arg>-i</arg>
+                <arg>-e</arg>
+                <arg>s/^SWM_SIMULATION\ \=.*$/SWM_SIMULATION = True/</arg>
+                <arg>common/settings.py</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-xe</arg>
+                <arg>-c</arg>
+                <arg>ls -la &amp;&amp; ls -la common &amp;&amp; cat common/settings.py</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="which">
+                <arg>python</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="printenv">
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-x</arg>
+                <arg>start_swm.sh</arg>
+                <arg>-r</arg>
+                <runif status="any" />
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="FRANCA_IF_Validation" labeltemplate="master:${common-api-tools.git[:8]}-build:${COUNT}" isLocked="false">
+      <materials>
+        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="dest-common-api-tools" materialName="common-api-tools.git" />
+        <scm ref="077cfe93-bc9e-461a-9a5c-e82796ccb710" dest="dest-fidl-files" />
+      </materials>
+      <stage name="BuildCommonAPI" cleanWorkingDir="true">
+        <jobs>
+          <job name="buildGenerators">
+            <tasks>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>bin</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="ls">
+                <runif status="passed" />
+              </exec>
+              <exec command="mvn" workingdir="dest-common-api-tools/org.genivi.commonapi.core.releng">
+                <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
+                <arg>clean</arg>
+                <arg>verify</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="unzip" workingdir="bin">
+                <arg>../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="find">
+                <arg>-iname</arg>
+                <arg>*.zip</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>maven</resource>
+            </resources>
+            <artifacts>
+              <artifact src="bin" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="DoValidation" artifactCleanupProhibited="true">
+        <jobs>
+          <job name="Fetch_fidl_files">
+            <tasks>
+              <exec command="ls" workingdir="dest-fidl-files">
+                <arg>./franca_idl</arg>
+                <runif status="passed" />
+              </exec>
+              <fetchartifact pipeline="" stage="BuildCommonAPI" job="buildGenerators" srcdir="bin">
+                <runif status="passed" />
+              </fetchartifact>
+              <exec command="ls">
+                <arg>-al</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="ls" workingdir="dest-common-api-tools/">
+                <arg>-al</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="ls" workingdir="bin">
+                <arg>-al</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="chmod">
+                <arg>755</arg>
+                <arg>bin/commonapi-generator-linux-x86</arg>
+                <arg>bin/commonapi-generator-linux-x86_64</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>bin/commonapi-generator-linux-x86 -v</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>bin/commonapi-generator-linux-x86_64 -v</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>mount_exec</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="systemd" labeltemplate="#{VERSION}_build_${COUNT}" isLocked="false">
+      <params>
+        <param name="VERSION">v219</param>
+      </params>
+      <timer onlyOnChanges="true">0 0 12 ? * SAT</timer>
+      <environmentvariables>
+        <variable name="VERSION">
+          <value>v226</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="http://github.com/systemd/systemd" materialName="systemd" />
+      </materials>
+      <stage name="stage">
+        <approval type="manual" />
+        <jobs>
+          <job name="configure_and_make">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>git checkout #{VERSION}</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="./autogen.sh">
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>./configure CFLAGS='-g -O0 -ftrapv' --sysconfdir=/etc --localstatedir=/var --libdir=/usr/lib --with-rootprefix=/ --with-rootlibdir=/lib</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="/usr/bin/make">
+                <arg>-j6</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>systemd-build-deps</resource>
+            </resources>
+            <artifacts>
+              <artifact src="configure" />
+              <artifact src="config.log" />
+              <artifact src=".libs/*" dest="libs" />
+              <artifact src="src/systemd/*.h" dest="headers/systemd" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="AGL_meta_agl_demo_plus_homescreen">
+      <materials>
+        <git url="https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo" />
+      </materials>
+      <stage name="StageBuildQEMU">
+        <jobs>
+          <job name="JobBuild">
+            <tasks>
+              <exec command="curl">
+                <arg>-o</arg>
+                <arg>repo</arg>
+                <arg>https://storage.googleapis.com/git-repo-downloads/repo</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="chmod">
+                <arg>a+x</arg>
+                <arg>repo</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="./repo">
+                <arg>init</arg>
+                <arg>-u</arg>
+                <arg>https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="./repo">
+                <arg>sync</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>. meta-agl/scripts/envsetup.sh qemux86-64 &amp;&amp; bitbake agl-demo-platform</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="yocto-baseline-experimental" labeltemplate="experimental:${meta-ivi[:8]}-build:${COUNT}" isLocked="false">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="http://git.yoctoproject.org/git/meta-ivi" branch="experimental" dest="meta-ivi" materialName="meta-ivi" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="krogoth" dest="poky" autoUpdate="false" materialName="poky_krogoth" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="krogoth" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe_krogoth" />
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
+      </materials>
+      <stage name="setup">
+        <jobs>
+          <job name="git.config">
+            <tasks>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config</arg>
+                <arg>user.name</arg>
+                <arg>Go Agent</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config</arg>
+                <arg>user.email</arg>
+                <arg>no_email@genivigo.com</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
+          </job>
+          <job name="make_build_directory">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="workaround.1">
+        <jobs>
+          <job name="getting-kernel-src">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake -c fetch linux-yocto</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="build">
+        <jobs>
+          <job name="build-image">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env &amp;&amp; MACHINE=$MACHINE bitbake ivi-image</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
+                <runif status="any" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="reuse_tmp" template="Yocto_GDP_generic_reuse_tmp">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="git://github.com/genivi/genivi-dev-platform" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release_Test" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+        <variable name="BRANCH">
+          <value>gdp-11-beta</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>gdp-11-beta</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
+      </materials>
+    </pipeline>
+    <pipeline name="vagrant_test_ignore">
+      <materials>
+        <git url="http://github.com/gunnarx/gocd-setup.git" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="vagrant">
+                <arg>-v</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>VAGRANT_HOME="$PWD/.vagrant.d" vagrant destroy -f</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>VAGRANT_HOME="$PWD/.vagrant.d" vagrant up --provision</arg>
+                <runif status="any" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>vagrant</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="eclipse_with_franca">
+      <params>
+        <param name="BRANCH">cpp_common_api_with_yocto_tools</param>
+      </params>
+      <materials>
+        <git url="https://github.com/genivi/eclipse_install_automation" branch="#{BRANCH}" materialName="eclipse_install_automation" />
+      </materials>
+      <stage name="stage">
+        <jobs>
+          <job name="job">
+            <environmentvariables>
+              <variable name="ECLIPSE_INSTALL_DIR">
+                <value>autoeclipse</value>
+              </variable>
+              <variable name="ECLIPSE_WORKSPACE_DIR">
+                <value>workspace</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <exec command="rm">
+                <arg>-rf</arg>
+                <arg>"./$ECLIPSE_INSTALL_DIR"</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>artifacts</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>./script.sh</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>tar cfz artifacts/eclipse.tar.gz "./$ECLIPSE_INSTALL_DIR/eclipse"</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>tar cfz artifacts/eclipse-workspace.tar.gz "./$ECLIPSE_WORKSPACE_DIR"</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>maven</resource>
+            </resources>
+            <artifacts>
+              <artifact src="artifacts" dest="tarballs" />
+              <artifact src="autoeclipse/eclipse" dest="results/" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+  </pipelines>
+  <pipelines group="franca_install_automation" />
+  <pipelines group="Administration_for_2131ce1bd33e">
+    <authorization>
+      <view>
+        <user>GunnarA</user>
+        <role>GDP_Developer</role>
+      </view>
+      <operate>
+        <user>GunnarA</user>
+        <role>GDP_Developer</role>
+      </operate>
+      <admins>
+        <user>GunnarA</user>
+        <role>GDP_Developer</role>
+      </admins>
+    </authorization>
+    <pipeline name="Wipe_gdp_work_dir" isLocked="false" template="Wipe_dir_pattern">
+      <params>
+        <param name="agent">2131ce1bd33e</param>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work/*</param>
+      </params>
+      <timer>0 0 4 ? * SUN *</timer>
+      <materials>
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
+    <pipeline name="DiskStatistics-test" isLocked="false">
+      <materials>
+        <git url="http://github.com/gunnarx/gocd-setup.git" />
+      </materials>
+      <stage name="stage">
+        <approval type="manual" />
+        <jobs>
+          <job name="disk_usage">
+            <tasks>
+              <exec command="uname">
+                <arg>-a</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="df">
+                <arg>-h</arg>
+              </exec>
+            </tasks>
+            <resources>
+              <resource>2131ce1bd33e</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="Wipe_sstate_cache" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/__sstate_cache/*</param>
+        <param name="agent">2131ce1bd33e</param>
+      </params>
+      <materials>
+        <pipeline pipelineName="Wipe_gdp_work_dir" stageName="stage" />
+      </materials>
+    </pipeline>
+    <pipeline name="Wipe_downloads" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/__downloads_cache/*</param>
+        <param name="agent">2131ce1bd33e</param>
+      </params>
+      <materials>
+        <pipeline pipelineName="Wipe_gdp_work_dir" stageName="stage" />
+      </materials>
+    </pipeline>
+  </pipelines>
+  <pipelines group="Administration_for_codethink-genivigo-agent1-x86">
+    <authorization>
+      <view>
+        <role>GDP_Developer</role>
+      </view>
+      <operate>
+        <role>GDP_Developer</role>
+      </operate>
+      <admins>
+        <role>GDP_Developer</role>
+      </admins>
+    </authorization>
+    <pipeline name="Wipe_gdp_work_dir3" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work</param>
+        <param name="agent">codethink-genivigo-agent1-x86</param>
+      </params>
+      <materials>
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
+    <pipeline name="Wipe_gdp_downloads_dir3" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/cache/yocto/downloads/*</param>
+        <param name="agent">codethink-genivigo-agent1-x86</param>
+      </params>
+      <materials>
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
+    <pipeline name="Wipe_gdp_sstate_dir3" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/cache/yocto/sstate/*</param>
+        <param name="agent">codethink-genivigo-agent1-x86</param>
+      </params>
+      <materials>
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
+  </pipelines>
+  <pipelines group="Administration_for_go-agent-1">
+    <authorization>
+      <admins>
+        <user>GunnarA</user>
+        <user>PedroA</user>
+        <user>tpollard</user>
+        <role>GDP_Developer</role>
+      </admins>
+    </authorization>
+    <pipeline name="Wipe_gdp_work_dir4" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work/*</param>
+        <param name="agent">go-agent1</param>
+      </params>
+      <materials>
+        <git url="https://github.com/gunnarx/baseline_ci_helper" />
+      </materials>
+    </pipeline>
+    <pipeline name="Wipe_tmp_dirs" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp</param>
+        <param name="agent">go-agent1</param>
+      </params>
+      <materials>
+        <git url="https://github.com/gunnarx/baseline_ci_helper" />
+      </materials>
+    </pipeline>
+  </pipelines>
   <templates>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
