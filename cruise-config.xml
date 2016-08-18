@@ -792,6 +792,10 @@
                 <arg>gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="mv">
+                <arg>sdk/results/licenses</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
