@@ -360,10 +360,11 @@
         <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-PORTER-GITHUB-PR" template="Yocto_GDP_generic">
+    <pipeline name="GDP-Yocto-PORTER-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic">
       <params>
         <param name="agent">2131ce1bd33e</param>
       </params>
+      <timer>0 0 4 19 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>porter</value>
