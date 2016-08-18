@@ -804,6 +804,9 @@
             <tasks>
               <exec command="test" />
             </tasks>
+            <resources>
+              <resource>ga_test</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
