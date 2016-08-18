@@ -808,8 +808,7 @@
               <resource>ga_test</resource>
             </resources>
             <artifacts>
-              <artifact src="gdp-sdk.zip" dest="zipped" />
-              <artifact src="gdp-sdk" dest="unpacked" />
+              <artifact src="gdp-sdk.tar.gz" dest="unpacked" />
             </artifacts>
           </job>
         </jobs>
