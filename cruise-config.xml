@@ -803,6 +803,10 @@
                 <arg />
                 <runif status="passed" />
               </exec>
+              <exec command="tar">
+                <arg>cfz gdp-sdk.tar.gz gdp-sdk</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
