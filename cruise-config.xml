@@ -771,14 +771,14 @@
                 <arg>eclipse</arg>
                 <runif status="any" />
               </exec>
+              <fetchartifact pipeline="GDP-Yocto-RaspberryPi2_with_SDK" stage="build" job="init_and_bitbake" srcdir="results">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>ls -al *</arg>
                 <runif status="any" />
               </exec>
-              <fetchartifact pipeline="GDP-Yocto-RaspberryPi2_with_SDK" stage="build" job="init_and_bitbake" srcdir="results">
-                <runif status="passed" />
-              </fetchartifact>
             </tasks>
             <resources>
               <resource>ga_test</resource>
