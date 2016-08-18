@@ -818,7 +818,7 @@
               <ant />
             </tasks>
             <resources>
-              <resource>ga</resource>
+              <resource>ga_test</resource>
             </resources>
           </job>
         </jobs>
