@@ -1528,7 +1528,7 @@
     </authorization>
     <pipeline name="Wipe_gdp_work_dir4" template="Wipe_dir_pattern">
       <params>
-        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work/*</param>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work/*</param>
         <param name="agent">go-agent1</param>
       </params>
       <materials>
