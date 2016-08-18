@@ -1517,21 +1517,12 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Administaration_for_go-agent-1">
+  <pipelines group="Administration_for_go-agent-1">
     <authorization>
-      <view>
-        <user>tpollard</user>
-        <user>PedroA</user>
-        <user>GunnarA</user>
-        <role>GDP_Developer</role>
-      </view>
-      <operate>
-        <user>tpollard</user>
-      </operate>
       <admins>
-        <user>tpollard</user>
-        <user>PedroA</user>
         <user>GunnarA</user>
+        <user>PedroA</user>
+        <user>tpollard</user>
         <role>GDP_Developer</role>
       </admins>
     </authorization>
