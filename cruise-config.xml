@@ -803,16 +803,16 @@
                 <arg />
                 <runif status="passed" />
               </exec>
-              <exec command="tar">
-                <arg>cfz</arg>
-                <arg>gdp-sdk.tar.gz</arg>
-                <arg>gdp-sdk</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="chmod">
                 <arg>-R</arg>
                 <arg>ugo+r</arg>
                 <arg>gdp-sdk/yocto-sdk</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="tar">
+                <arg>cfz</arg>
+                <arg>gdp-sdk.tar.gz</arg>
+                <arg>gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
