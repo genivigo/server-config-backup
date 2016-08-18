@@ -751,6 +751,7 @@
       <materials>
         <git url="http://github.com/GENIVI/meta-genivi-dev.git" />
         <pipeline pipelineName="GDP-Yocto-RaspberryPi2_with_SDK" stageName="build" materialName="sdk" />
+        <pipeline pipelineName="eclipse_with_franca" stageName="stage" materialName="artifacts" />
       </materials>
       <stage name="Build">
         <jobs>
