@@ -830,7 +830,7 @@
       <stage name="CreateVM">
         <approval type="manual" />
         <jobs>
-          <job name="Test">
+          <job name="vagrantjob">
             <tasks>
               <ant />
             </tasks>
