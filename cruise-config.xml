@@ -775,7 +775,7 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>ls -al *</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
             </tasks>
           </job>
