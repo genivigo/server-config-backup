@@ -776,7 +776,7 @@
                 <arg>ls -al *</arg>
                 <runif status="any" />
               </exec>
-              <fetchartifact pipeline="GDP-Yocto-RaspberryPi2_with_SDK" stage="build" job="init_and_bitbake" srcdir="aaa">
+              <fetchartifact pipeline="GDP-Yocto-RaspberryPi2_with_SDK" stage="build" job="init_and_bitbake" srcdir="results">
                 <runif status="passed" />
               </fetchartifact>
             </tasks>
