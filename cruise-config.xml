@@ -775,6 +775,11 @@
                 <arg>ls -al *</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="ls">
+                <arg>-al</arg>
+                <arg>eclipse</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
