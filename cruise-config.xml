@@ -761,7 +761,7 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <fetchartifact pipeline="GDP-Yocto-RaspberryPi2_with_SDK" stage="build" job="init_and_bitbake" srcdir="results">
+              <fetchartifact pipeline="GDP-Yocto-RaspberryPi2_with_SDK" stage="build" job="init_and_bitbake" srcdir="results/*">
                 <runif status="passed" />
               </fetchartifact>
               <fetchartifact pipeline="eclipse_with_franca" stage="stage" job="job" srcdir="results">
