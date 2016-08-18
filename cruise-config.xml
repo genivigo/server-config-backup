@@ -802,6 +802,10 @@
                 <arg>mv sdk/results/genivi-dev-platform-*/license.manifest gdp-sdk/</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="mkdir">
+                <arg>gdp-sdk/yocto-sdk</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
