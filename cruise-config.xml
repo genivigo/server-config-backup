@@ -1517,7 +1517,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Administaration_for_go_agent_1" />
+  <pipelines group="Administaration_for_go-agent-1" />
   <templates>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
