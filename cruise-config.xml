@@ -827,7 +827,7 @@
           </job>
         </jobs>
       </stage>
-      <stage name="Test">
+      <stage name="CreateVM">
         <approval type="manual" />
         <jobs>
           <job name="Test">
