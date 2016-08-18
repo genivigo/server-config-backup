@@ -769,11 +769,6 @@
               </fetchartifact>
               <exec command="ls">
                 <arg>-al</arg>
-                <arg>sdk/results</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="ls">
-                <arg>-al</arg>
                 <arg>eclipse/results</arg>
                 <runif status="any" />
               </exec>
