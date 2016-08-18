@@ -1386,7 +1386,7 @@
             </resources>
             <artifacts>
               <artifact src="artifacts" dest="results" />
-              <artifact src="autoeclipse/*" dest="results/debug_ignore_this_use_artifacts_dir" />
+              <artifact src="autoeclipse/*" dest="debug_ignore_this_use_artifacts_dir" />
             </artifacts>
           </job>
         </jobs>
