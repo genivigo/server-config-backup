@@ -789,7 +789,7 @@
               </exec>
               <exec command="mv">
                 <arg>eclipse/results/eclipse</arg>
-                <arg>gdp-sdk</arg>
+                <arg>gdp-sdk/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="mv">
