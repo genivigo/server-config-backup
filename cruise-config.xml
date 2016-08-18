@@ -808,7 +808,7 @@
               <resource>ga_test</resource>
             </resources>
             <artifacts>
-              <artifact src="gdp-sdk" />
+              <artifact src="gdp-sdk" dest="gdp-sdk.zip" />
             </artifacts>
           </job>
         </jobs>
