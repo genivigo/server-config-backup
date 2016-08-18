@@ -774,7 +774,7 @@
               </exec>
               <exec command="ls">
                 <arg>-al</arg>
-                <arg>eclipse</arg>
+                <arg>eclipse/results</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
