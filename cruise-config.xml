@@ -799,6 +799,12 @@
                 <arg />
                 <runif status="passed" />
               </exec>
+              <exec command="chmod">
+                <arg>755</arg>
+                <arg>sdk/results/sdk/oecore-*toolchain*.sh</arg>
+                <arg />
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
