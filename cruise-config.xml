@@ -1336,7 +1336,7 @@
         <param name="BRANCH">cpp_common_api_with_yocto_tools</param>
       </params>
       <materials>
-        <git url="https://github.com/genivi/eclipse_install_automation" branch="cpp_common_api_with_yocto_tools" materialName="eclipse_install_automation" />
+        <git url="https://github.com/genivi/eclipse_install_automation" branch="#{BRANCH}" materialName="eclipse_install_automation" />
       </materials>
       <stage name="stage">
         <jobs>
