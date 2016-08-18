@@ -786,7 +786,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv sdk/results/genivi-dev-platform-*/license.manifest gdp-sdk/</arg>
+                <arg>mv raspberrypi2/results/genivi-dev-platform-*/license.manifest gdp-sdk/license.manifest.raspberrypi2</arg>
                 <runif status="passed" />
               </exec>
               <exec command="mkdir">
