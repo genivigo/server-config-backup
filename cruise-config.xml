@@ -116,9 +116,6 @@
       <view>
         <role>Guest</role>
       </view>
-      <operate>
-        <role>Developer</role>
-      </operate>
       <admins>
         <role>Developer</role>
       </admins>
