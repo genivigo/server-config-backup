@@ -806,6 +806,15 @@
                 <arg>gdp-sdk/yocto-sdk</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>sdk/results/sdk/oecore-*toolchain*.sh</arg>
+                <arg>-d ./gdp-sdk/yocto-sdk/</arg>
+                <arg>-y</arg>
+                <arg />
+                <arg />
+                <arg />
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
