@@ -1221,7 +1221,8 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="AGL_meta_agl_demo_plus_homescreen">
+    <pipeline name="AGL_meta_agl_demo_plus_homescreen" isLocked="false">
+      <timer>0 0 0 19 8 ?</timer>
       <materials>
         <git url="https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo" />
       </materials>
