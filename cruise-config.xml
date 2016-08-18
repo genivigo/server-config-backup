@@ -821,7 +821,6 @@
             </resources>
             <artifacts>
               <artifact src="gdp-sdk.tar.gz" />
-              <artifact src="gdp-sdk" />
             </artifacts>
           </job>
         </jobs>
