@@ -750,6 +750,7 @@
     <pipeline name="SDK">
       <materials>
         <git url="http://github.com/GENIVI/meta-genivi-dev.git" />
+        <pipeline pipelineName="GDP-Yocto-RaspberryPi2_with_SDK" stageName="build" materialName="sdk" />
       </materials>
       <stage name="Build">
         <jobs>
