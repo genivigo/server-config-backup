@@ -793,8 +793,8 @@
                 <runif status="passed" />
               </exec>
               <exec command="mv">
-                <arg>sdk/results/licenses</arg>
-                <arg>gdp-sdk/</arg>
+                <arg>sdk/results/sdk</arg>
+                <arg>gdp-src/yocto-sdk</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
