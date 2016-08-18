@@ -792,11 +792,6 @@
                 <arg>gdp-sdk/</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mv">
-                <arg>sdk/results/sdk</arg>
-                <arg>gdp-sdk/yocto-sdk</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>mv sdk/results/genivi-dev-platform-*/license.manifest gdp-sdk/</arg>
