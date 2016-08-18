@@ -767,11 +767,6 @@
               <fetchartifact pipeline="eclipse_with_franca" stage="stage" job="job" srcdir="results" dest="eclipse">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="ls">
-                <arg>-al</arg>
-                <arg>eclipse/results</arg>
-                <runif status="any" />
-              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>ls -al *</arg>
