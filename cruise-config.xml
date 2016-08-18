@@ -1328,7 +1328,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>ga_test</resource>
+              <resource>vagrant</resource>
             </resources>
           </job>
         </jobs>
