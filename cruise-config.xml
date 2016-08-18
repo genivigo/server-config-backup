@@ -769,7 +769,7 @@
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>ls -al *</arg>
+                <arg>echo -n "**\n** LISTING ALL DIRECTORIES FOR DEBUG PURPOSE\n**" ; ls -alRF</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
