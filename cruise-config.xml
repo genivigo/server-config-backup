@@ -431,7 +431,7 @@
               </exec>
               <exec command="make" workingdir="build">
                 <arg>V=1</arg>
-                <arg>-j2</arg>
+                <arg>-j3</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
