@@ -762,9 +762,6 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <exec command="true">
-                <runif status="passed" />
-              </exec>
               <exec command="ls">
                 <arg>-al</arg>
                 <arg>sdk</arg>
