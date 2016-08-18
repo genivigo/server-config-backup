@@ -794,6 +794,7 @@
               </exec>
               <exec command="mv">
                 <arg>sdk/results/licenses</arg>
+                <arg>gdp-sdk/</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
