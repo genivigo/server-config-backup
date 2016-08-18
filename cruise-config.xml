@@ -749,7 +749,7 @@
     </pipeline>
     <pipeline name="SDK">
       <materials>
-        <pipeline pipelineName="GDP-Yocto-RaspberryPi2_with_SDK" stageName="build" materialName="sdk" />
+        <pipeline pipelineName="GDP-Yocto-RaspberryPi2_with_SDK" stageName="build" materialName="rpi-sdk" />
         <pipeline pipelineName="eclipse_with_franca" stageName="stage" materialName="eclipse" />
       </materials>
       <stage name="Build">
