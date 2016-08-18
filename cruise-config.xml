@@ -409,7 +409,7 @@
     </authorization>
     <pipeline name="DLT-daemon-native" isLocked="false">
       <materials>
-        <git url="https://git.projects.genivi.org/dlt-daemon.git" shallowClone="true" materialName="dlt-daemon.git" />
+        <git url="https://git.projects.genivi.org/dlt-daemon.git" materialName="dlt-daemon.git" />
       </materials>
       <stage name="build">
         <jobs>
