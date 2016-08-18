@@ -791,6 +791,9 @@
             <tasks>
               <ant />
             </tasks>
+            <resources>
+              <resource>ga_test</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
