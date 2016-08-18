@@ -1526,6 +1526,15 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
+    <pipeline name="Wipe_gdp_work_dir4" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/gdp-src-build/tmp/work/*</param>
+        <param name="agent">go-agent-1</param>
+      </params>
+      <materials>
+        <git url="https://github.com/gunnarx/baseline_ci_helper" />
+      </materials>
+    </pipeline>
   </pipelines>
   <templates>
     <pipeline name="Yocto_GDP_generic">
