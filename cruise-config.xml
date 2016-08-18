@@ -1327,6 +1327,9 @@
                 <runif status="any" />
               </exec>
             </tasks>
+            <resources>
+              <resource>ga_test</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
