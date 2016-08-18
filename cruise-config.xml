@@ -787,6 +787,11 @@
                 <arg>gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -rf gdp-sdk ; mkdir gdp-sdk</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
