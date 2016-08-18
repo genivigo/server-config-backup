@@ -801,8 +801,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>./sdk/results/sdk/oecore-*toolchain*.sh -d ./gdp-sdk/yocto-sdk/ -y</arg>
-                <arg />
+                <arg>./raspberrypi2/results/sdk/oecore-*toolchain*.sh -d ./gdp-sdk/yocto-sdk/ -y</arg>
                 <runif status="passed" />
               </exec>
               <exec command="chmod">
