@@ -770,7 +770,7 @@
               <exec command="ls">
                 <arg>-al</arg>
                 <arg>eclipse</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
