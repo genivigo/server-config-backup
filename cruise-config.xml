@@ -1386,7 +1386,7 @@
             </resources>
             <artifacts>
               <artifact src="artifacts" dest="tarballs" />
-              <artifact src="autoeclipse/eclipse" dest="results/eclipse" />
+              <artifact src="autoeclipse/eclipse" dest="results/" />
             </artifacts>
           </job>
         </jobs>
