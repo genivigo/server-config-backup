@@ -792,10 +792,9 @@
                 <arg>gdp-sdk/yocto-sdk</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="chmod">
-                <arg>755</arg>
-                <arg>sdk/results/sdk/oecore-*toolchain*.sh</arg>
-                <arg />
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>chmod 755 sdk/results/sdk/oecore-*toolchain*.sh</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
