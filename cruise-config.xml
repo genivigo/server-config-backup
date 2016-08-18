@@ -1537,7 +1537,7 @@
     </pipeline>
     <pipeline name="Wipe_tmp_dirs" template="Wipe_dir_pattern">
       <params>
-        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp</param>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/AGL*</param>
         <param name="agent">go-agent1</param>
       </params>
       <materials>
