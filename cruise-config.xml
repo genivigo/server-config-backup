@@ -202,6 +202,17 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
+      <timer>0 0 20 * * ?</timer>
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>raspberrypi2</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
     <pipeline name="GDP-Yocto-Porter" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
       <timer onlyOnChanges="true">0 0 22 * * ?</timer>
       <environmentvariables>
@@ -233,17 +244,6 @@
       </environmentvariables>
       <materials>
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
-      <timer>0 0 20 * * ?</timer>
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>raspberrypi2</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
   </pipelines>
