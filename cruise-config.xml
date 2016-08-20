@@ -955,143 +955,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="WIP--GENIVI_Positioning" isLocked="false">
-      <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
-      <materials>
-        <git url="http://git.projects.genivi.org/lbs/positioning.git" materialName="PositioningGitRepository" />
-      </materials>
-      <stage name="defaultStage">
-        <jobs>
-          <job name="defaultJob">
-            <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_DBUS_INTERFACE=ON -DWITH_FRANCA_DBUS_INTERFACE=OFF -DWITH_FRANCA_SOMEIP_INTERFACE=OFF -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=OFF -DCMAKE_BUILD_TYPE=Debug ../</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>cd build &amp;&amp; make</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>cmake</resource>
-              <resource>lbs</resource>
-            </resources>
-          </job>
-          <job name="common-api-dbus_dlt_logreplayer">
-            <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_DBUS_INTERFACE=OFF -DWITH_FRANCA_DBUS_INTERFACE=ON -DWITH_FRANCA_SOMEIP_INTERFACE=OFF -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=ON -DCMAKE_BUILD_TYPE=Debug -DCOMMONAPI_TOOL_GENERATOR=/usr/local/bin/commonapi-generator-linux-x86_64 -DCOMMONAPI_DBUS_TOOL_GENERATOR=/usr/local/bin/commonapi-dbus-generator-linux-x86_64 ../</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>cd build &amp;&amp; make</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>cmake</resource>
-              <resource>lbs</resource>
-            </resources>
-          </job>
-          <job name="common-api-dbus_stdout_logreplayer">
-            <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_DBUS_INTERFACE=OFF -DWITH_FRANCA_DBUS_INTERFACE=ON -DWITH_FRANCA_SOMEIP_INTERFACE=OFF -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=OFF -DCMAKE_BUILD_TYPE=Debug -DCOMMONAPI_TOOL_GENERATOR=/usr/local/bin/commonapi-generator-linux-x86_64 -DCOMMONAPI_DBUS_TOOL_GENERATOR=/usr/local/bin/commonapi-dbus-generator-linux-x86_64 ../</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>cd build &amp;&amp; make</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>cmake</resource>
-              <resource>lbs</resource>
-            </resources>
-          </job>
-          <job name="gnssservice_stdout_gpsd">
-            <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake WITH_ENHANCED_POSITION_SERVICE=OFF WITH_SENSORS_SERVICE=OFF  -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=OFF -DCMAKE_BUILD_TYPE=Debug -DWITH_REPLAYER=OFF -DWITH_GPSD=ON ../</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>cd build &amp;&amp; make</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>cmake</resource>
-              <resource>lbs</resource>
-            </resources>
-          </job>
-          <job name="sensorsservice_gnssservice_nmea_logger_stdout">
-            <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_ENHANCED_POSITION_SERVICE=OFF -DWITH_NMEA=ON -DWITH_SENSORS=ON -DIMU_TYPE=LSM9DS1 -DWITH_LOGGER=ON -DWITH_TESTS=ON -DWITH_DEBUG=ON -DGNSS_DEVICE=\"/dev/ttyACM0\" -DGNSS_BAUDRATE=B38400 -DGNSS_CHIPSET=UBLOX -DGNSS_DELAY=50 ../</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>cd build &amp;&amp; make</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>cmake</resource>
-              <resource>lbs</resource>
-            </resources>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
-    <pipeline name="WIP--common-api-c" labeltemplate="capic-poc:${capic-poc.git[:8]}-build:${COUNT}" isLocked="false">
-      <materials>
-        <git url="git://github.com/GENIVI/capic-poc.git" materialName="capic-poc.git" />
-        <pipeline pipelineName="systemd" stageName="stage" materialName="systemd" />
-      </materials>
-      <stage name="buildStage">
-        <jobs>
-          <job name="buildJob">
-            <tasks>
-              <fetchartifact pipeline="systemd" stage="stage" job="configure_and_make" srcdir="libs" dest="systemd">
-                <runif status="passed" />
-              </fetchartifact>
-              <fetchartifact pipeline="systemd" stage="stage" job="configure_and_make" srcdir="headers" dest="systemd">
-                <runif status="passed" />
-              </fetchartifact>
-              <exec command="autoreconf">
-                <arg>-i</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>export LIBSYSTEMD_CFLAGS="-I$PWD/systemd/headers" LIBSYSTEMD_LIBS="-L$PWD/systemd/libs" &amp;&amp; ./configure LDFLAGS="-L$PWD/systemd/libs"</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>make</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>2131ce1bd33e</resource>
-            </resources>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="software-loading-manager" isLocked="false">
       <materials>
         <git url="https://github.com/GENIVI/genivi_swm" materialName="SW_Management_PoC_sources" />
@@ -1436,6 +1299,143 @@
               <artifact src="artifacts" dest="tarballs" />
               <artifact src="autoeclipse/eclipse" dest="results/" />
             </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="WIP--GENIVI_Positioning" isLocked="false">
+      <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
+      <materials>
+        <git url="http://git.projects.genivi.org/lbs/positioning.git" materialName="PositioningGitRepository" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_DBUS_INTERFACE=ON -DWITH_FRANCA_DBUS_INTERFACE=OFF -DWITH_FRANCA_SOMEIP_INTERFACE=OFF -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=OFF -DCMAKE_BUILD_TYPE=Debug ../</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cd build &amp;&amp; make</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+              <resource>lbs</resource>
+            </resources>
+          </job>
+          <job name="common-api-dbus_dlt_logreplayer">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_DBUS_INTERFACE=OFF -DWITH_FRANCA_DBUS_INTERFACE=ON -DWITH_FRANCA_SOMEIP_INTERFACE=OFF -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=ON -DCMAKE_BUILD_TYPE=Debug -DCOMMONAPI_TOOL_GENERATOR=/usr/local/bin/commonapi-generator-linux-x86_64 -DCOMMONAPI_DBUS_TOOL_GENERATOR=/usr/local/bin/commonapi-dbus-generator-linux-x86_64 ../</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cd build &amp;&amp; make</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+              <resource>lbs</resource>
+            </resources>
+          </job>
+          <job name="common-api-dbus_stdout_logreplayer">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_DBUS_INTERFACE=OFF -DWITH_FRANCA_DBUS_INTERFACE=ON -DWITH_FRANCA_SOMEIP_INTERFACE=OFF -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=OFF -DCMAKE_BUILD_TYPE=Debug -DCOMMONAPI_TOOL_GENERATOR=/usr/local/bin/commonapi-generator-linux-x86_64 -DCOMMONAPI_DBUS_TOOL_GENERATOR=/usr/local/bin/commonapi-dbus-generator-linux-x86_64 ../</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cd build &amp;&amp; make</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+              <resource>lbs</resource>
+            </resources>
+          </job>
+          <job name="gnssservice_stdout_gpsd">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake WITH_ENHANCED_POSITION_SERVICE=OFF WITH_SENSORS_SERVICE=OFF  -DWITH_TESTS=ON -DWITH_DEBUG=ON -DWITH_DLT=OFF -DCMAKE_BUILD_TYPE=Debug -DWITH_REPLAYER=OFF -DWITH_GPSD=ON ../</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cd build &amp;&amp; make</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+              <resource>lbs</resource>
+            </resources>
+          </job>
+          <job name="sensorsservice_gnssservice_nmea_logger_stdout">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -rf build &amp;&amp; mkdir -p build &amp;&amp; cd build &amp;&amp; cmake -DWITH_ENHANCED_POSITION_SERVICE=OFF -DWITH_NMEA=ON -DWITH_SENSORS=ON -DIMU_TYPE=LSM9DS1 -DWITH_LOGGER=ON -DWITH_TESTS=ON -DWITH_DEBUG=ON -DGNSS_DEVICE=\"/dev/ttyACM0\" -DGNSS_BAUDRATE=B38400 -DGNSS_CHIPSET=UBLOX -DGNSS_DELAY=50 ../</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cd build &amp;&amp; make</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+              <resource>lbs</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="WIP--common-api-c" labeltemplate="capic-poc:${capic-poc.git[:8]}-build:${COUNT}" isLocked="false">
+      <materials>
+        <git url="git://github.com/GENIVI/capic-poc.git" materialName="capic-poc.git" />
+        <pipeline pipelineName="systemd" stageName="stage" materialName="systemd" />
+      </materials>
+      <stage name="buildStage">
+        <jobs>
+          <job name="buildJob">
+            <tasks>
+              <fetchartifact pipeline="systemd" stage="stage" job="configure_and_make" srcdir="libs" dest="systemd">
+                <runif status="passed" />
+              </fetchartifact>
+              <fetchartifact pipeline="systemd" stage="stage" job="configure_and_make" srcdir="headers" dest="systemd">
+                <runif status="passed" />
+              </fetchartifact>
+              <exec command="autoreconf">
+                <arg>-i</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>export LIBSYSTEMD_CFLAGS="-I$PWD/systemd/headers" LIBSYSTEMD_LIBS="-L$PWD/systemd/libs" &amp;&amp; ./configure LDFLAGS="-L$PWD/systemd/libs"</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>make</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>2131ce1bd33e</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
