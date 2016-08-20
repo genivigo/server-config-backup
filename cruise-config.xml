@@ -866,6 +866,95 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="FRANCA_IF_Validation" labeltemplate="master:${common-api-tools.git[:8]}-build:${COUNT}" isLocked="false">
+      <materials>
+        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="dest-common-api-tools" materialName="common-api-tools.git" />
+        <scm ref="077cfe93-bc9e-461a-9a5c-e82796ccb710" dest="dest-fidl-files" />
+      </materials>
+      <stage name="BuildCommonAPI" cleanWorkingDir="true">
+        <jobs>
+          <job name="buildGenerators">
+            <tasks>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>bin</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="ls">
+                <runif status="passed" />
+              </exec>
+              <exec command="mvn" workingdir="dest-common-api-tools/org.genivi.commonapi.core.releng">
+                <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
+                <arg>clean</arg>
+                <arg>verify</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="unzip" workingdir="bin">
+                <arg>../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="find">
+                <arg>-iname</arg>
+                <arg>*.zip</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>maven</resource>
+            </resources>
+            <artifacts>
+              <artifact src="bin" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="DoValidation" artifactCleanupProhibited="true">
+        <jobs>
+          <job name="Fetch_fidl_files">
+            <tasks>
+              <exec command="ls" workingdir="dest-fidl-files">
+                <arg>./franca_idl</arg>
+                <runif status="passed" />
+              </exec>
+              <fetchartifact pipeline="" stage="BuildCommonAPI" job="buildGenerators" srcdir="bin">
+                <runif status="passed" />
+              </fetchartifact>
+              <exec command="ls">
+                <arg>-al</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="ls" workingdir="dest-common-api-tools/">
+                <arg>-al</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="ls" workingdir="bin">
+                <arg>-al</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="chmod">
+                <arg>755</arg>
+                <arg>bin/commonapi-generator-linux-x86</arg>
+                <arg>bin/commonapi-generator-linux-x86_64</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>bin/commonapi-generator-linux-x86 -v</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>bin/commonapi-generator-linux-x86_64 -v</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>mount_exec</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
     <pipeline name="WIP--GENIVI_Positioning" isLocked="false">
       <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
       <materials>
@@ -1060,95 +1149,6 @@
                 <runif status="any" />
               </exec>
             </tasks>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
-    <pipeline name="FRANCA_IF_Validation" labeltemplate="master:${common-api-tools.git[:8]}-build:${COUNT}" isLocked="false">
-      <materials>
-        <git url="http://git.projects.genivi.org/ipc/common-api-tools.git" dest="dest-common-api-tools" materialName="common-api-tools.git" />
-        <scm ref="077cfe93-bc9e-461a-9a5c-e82796ccb710" dest="dest-fidl-files" />
-      </materials>
-      <stage name="BuildCommonAPI" cleanWorkingDir="true">
-        <jobs>
-          <job name="buildGenerators">
-            <tasks>
-              <exec command="mkdir">
-                <arg>-p</arg>
-                <arg>bin</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="ls">
-                <runif status="passed" />
-              </exec>
-              <exec command="mvn" workingdir="dest-common-api-tools/org.genivi.commonapi.core.releng">
-                <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
-                <arg>clean</arg>
-                <arg>verify</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="unzip" workingdir="bin">
-                <arg>../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="find">
-                <arg>-iname</arg>
-                <arg>*.zip</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>maven</resource>
-            </resources>
-            <artifacts>
-              <artifact src="bin" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-      <stage name="DoValidation" artifactCleanupProhibited="true">
-        <jobs>
-          <job name="Fetch_fidl_files">
-            <tasks>
-              <exec command="ls" workingdir="dest-fidl-files">
-                <arg>./franca_idl</arg>
-                <runif status="passed" />
-              </exec>
-              <fetchartifact pipeline="" stage="BuildCommonAPI" job="buildGenerators" srcdir="bin">
-                <runif status="passed" />
-              </fetchartifact>
-              <exec command="ls">
-                <arg>-al</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="ls" workingdir="dest-common-api-tools/">
-                <arg>-al</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="ls" workingdir="bin">
-                <arg>-al</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="chmod">
-                <arg>755</arg>
-                <arg>bin/commonapi-generator-linux-x86</arg>
-                <arg>bin/commonapi-generator-linux-x86_64</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>bin/commonapi-generator-linux-x86 -v</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>bin/commonapi-generator-linux-x86_64 -v</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>mount_exec</resource>
-            </resources>
           </job>
         </jobs>
       </stage>
