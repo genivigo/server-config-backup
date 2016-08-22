@@ -411,7 +411,7 @@
     </authorization>
     <pipeline name="DLT-daemon-native" isLocked="false">
       <materials>
-        <git url="git://git.projects.genivi.org/dlt-daemon.git;protocol=https" materialName="dlt-daemon.git" />
+        <git url="git://git.projects.genivi.org/dlt-daemon.git" materialName="dlt-daemon.git" />
       </materials>
       <stage name="build">
         <jobs>
