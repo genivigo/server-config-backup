@@ -1268,7 +1268,7 @@
             <tasks>
               <exec command="vagrant">
                 <arg>-v</arg>
-                <runif status="any" />
+                <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
