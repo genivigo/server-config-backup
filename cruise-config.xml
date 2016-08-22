@@ -1287,7 +1287,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>tar cvfz francalab-vm.tar.gz "/var/go/VirtualBox VMs/$VMNAME"</arg>
+                <arg>tar cvfz francalab-vm.tar.gz -C "/var/go/VirtualBox VMs" "$VMNAME"</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
