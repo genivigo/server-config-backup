@@ -1294,9 +1294,9 @@
                 <arg>tar cvfz francalab-vm.tar.gz -C "/var/go/VirtualBox VMs" "$VMNAME"</arg>
                 <runif status="any" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>export VAGRANT_HOME="$PWD/vagrant.d" &amp;&amp; vagrant box list</arg>
+              <exec command="vagrant">
+                <arg>box</arg>
+                <arg>list</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
