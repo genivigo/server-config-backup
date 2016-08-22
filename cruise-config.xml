@@ -840,6 +840,11 @@
                 <arg>../gdp-sdk.tar.gz</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="vagrant">
+                <arg>destroy</arg>
+                <arg>-f</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
