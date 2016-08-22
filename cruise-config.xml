@@ -823,7 +823,6 @@
         </jobs>
       </stage>
       <stage name="CreateVM">
-        <approval type="manual" />
         <environmentvariables>
           <variable name="HOSTNAME">
             <value>gdp-sdk</value>
