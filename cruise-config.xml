@@ -1220,7 +1220,7 @@
     </pipeline>
     <pipeline name="vagrant_test_ignore">
       <materials>
-        <git url="http://github.com/gunnarx/gocd-setup.git" />
+        <git url="git://github.com/genivi/eclipse_install_automation" branch="cpp_common_api_with_yocto_tools" materialName="eclipse_install_automation.git" />
       </materials>
       <stage name="defaultStage">
         <jobs>
