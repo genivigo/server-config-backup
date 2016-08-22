@@ -1291,7 +1291,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>tar cvfz francalab-vm.tar.gz -C "/var/go/VirtualBox VMs" "$VMNAME"</arg>
+                <arg>tar cvfz francalab-vm.tar.gz -C "/var/go/VirtualBox VMs" "$(cat VMNAME)"</arg>
                 <runif status="any" />
               </exec>
               <exec command="vagrant">
