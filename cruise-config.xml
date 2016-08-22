@@ -1230,10 +1230,6 @@
                 <arg>-v</arg>
                 <runif status="any" />
               </exec>
-              <exec command="vagrant">
-                <arg>init</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>VAGRANT_HOME="$PWD/.vagrant.d" vagrant destroy -f</arg>
