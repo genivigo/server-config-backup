@@ -752,7 +752,7 @@
     <pipeline name="SDK" isLocked="false">
       <materials>
         <pipeline pipelineName="GDP-Yocto-RaspberryPi2_with_SDK" stageName="build" materialName="rpi-sdk" />
-        <pipeline pipelineName="eclipse_with_franca" stageName="stage" materialName="eclipse" />
+        <pipeline pipelineName="Eclipse-for-SDK" stageName="stage" materialName="eclipse" />
         <git url="git://github.com/gunnarx/basic-vagrant" autoUpdate="false" materialName="basic-vagrant" />
       </materials>
       <stage name="Assemble">
@@ -767,7 +767,7 @@
               <fetchartifact pipeline="GDP-Yocto-RaspberryPi2_with_SDK" stage="build" job="init_and_bitbake" srcdir="results" dest="raspberrypi2">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="eclipse_with_franca" stage="stage" job="job" srcdir="results" dest="eclipse">
+              <fetchartifact pipeline="Eclipse-for-SDK" stage="stage" job="job" srcdir="results" dest="eclipse">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="bash">
@@ -1306,7 +1306,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="eclipse_with_franca">
+    <pipeline name="Eclipse-for-SDK">
       <params>
         <param name="BRANCH">cpp_common_api_with_yocto_tools</param>
       </params>
