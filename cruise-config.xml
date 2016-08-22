@@ -775,11 +775,6 @@
                 <arg>rm -rf gdp-sdk ; mkdir gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>echo -n "**\n** LISTING ALL DIRECTORIES FOR DEBUG PURPOSE\n**" ; ls -alRF</arg>
-                <runif status="any" />
-              </exec>
               <exec command="mv">
                 <arg>eclipse/results/eclipse</arg>
                 <arg>gdp-sdk/</arg>
