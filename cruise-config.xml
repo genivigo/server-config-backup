@@ -840,9 +840,8 @@
                 <arg>../gdp-sdk.tar.gz</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="vagrant">
-                <arg>destroy</arg>
-                <arg>-f</arg>
+              <exec command="bash">
+                <arg>-c VAGRANT_HOME="$PWD/.vagrant.d" vagrant destroy -f</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
