@@ -1256,7 +1256,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="git://github.com/genivi/eclipse_install_automation" branch="cpp_common_api_with_yocto_tools" materialName="eclipse_install_automation.git" />
+        <git url="git://github.com/genivi/eclipse_install_automation" materialName="eclipse_install_automation.git" />
       </materials>
       <stage name="defaultStage">
         <jobs>
