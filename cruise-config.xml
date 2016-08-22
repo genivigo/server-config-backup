@@ -1310,6 +1310,11 @@
       <params>
         <param name="BRANCH">cpp_common_api_with_yocto_tools</param>
       </params>
+      <environmentvariables>
+        <variable name="CACHE_DIR">
+          <value>/var/cache/eia</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="https://github.com/genivi/eclipse_install_automation" branch="#{BRANCH}" materialName="eclipse_install_automation" />
       </materials>
