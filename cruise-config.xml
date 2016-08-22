@@ -1270,10 +1270,10 @@
                 <arg>-v</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>vagrant destroy -f</arg>
-                <runif status="any" />
+              <exec command="vagrant">
+                <arg>destroy</arg>
+                <arg>-f</arg>
+                <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
