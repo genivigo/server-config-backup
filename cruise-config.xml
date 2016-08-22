@@ -1274,8 +1274,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>VAGRANT_HOME="$PWD/.vagrant.d" vagrant up --provision</arg>
-                <arg />
+                <arg>export VAGRANT_HOME="$PWD/.vagrant.d" &amp;&amp; vagrant up --provision</arg>
                 <runif status="passed" />
               </exec>
               <exec command="vagrant">
