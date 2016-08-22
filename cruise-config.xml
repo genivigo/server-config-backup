@@ -1280,9 +1280,9 @@
                 <arg>list</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>export VAGRANT_HOME="$PWD/vagrant.d" &amp;&amp; vagrant up --provision</arg>
+              <exec command="vagrant">
+                <arg>up</arg>
+                <arg>--provision</arg>
                 <runif status="passed" />
               </exec>
               <exec command="vagrant">
