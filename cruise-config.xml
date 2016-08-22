@@ -1262,6 +1262,9 @@
             <resources>
               <resource>vagrant</resource>
             </resources>
+            <artifacts>
+              <artifact src="vm.tar.gz" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
