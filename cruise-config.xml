@@ -1226,6 +1226,9 @@
         <variable name="ECLIPSE_WORKSPACE_DIR">
           <value>workspace</value>
         </variable>
+        <variable name="CACHE_DIR">
+          <value>/var/cache/eia</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="git://github.com/genivi/eclipse_install_automation" branch="cpp_common_api_with_yocto_tools" materialName="eclipse_install_automation.git" />
