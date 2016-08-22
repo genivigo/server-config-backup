@@ -1286,6 +1286,11 @@
                 <arg>tar cvfz vm.tar.gz "/var/go/VirtualBox VMs/$VMNAME"</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>export VAGRANT_HOME="$PWD/.vagrant.d" &amp;&amp; vagrant box list</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>vagrant</resource>
