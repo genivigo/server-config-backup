@@ -833,6 +833,9 @@
           <job name="vagrantjob">
             <tasks>
               <ant />
+              <fetchartifact pipeline="SDK" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk.tar.gz">
+                <runif status="passed" />
+              </fetchartifact>
             </tasks>
             <resources>
               <resource>ga_test</resource>
