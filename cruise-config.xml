@@ -1254,6 +1254,10 @@
                 <arg>tar cvfz vm.tar.gz "/var/go/Virtualbox VMs"</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="vagrant">
+                <arg>halt</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>vagrant</resource>
