@@ -1261,7 +1261,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>tar cvfz vm.tar.gz "/var/go/VirtualBox VMs"</arg>
+                <arg>tar cvfz vm.tar.gz "/var/go/VirtualBox VMs/$VMNAME"</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
