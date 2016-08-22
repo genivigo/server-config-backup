@@ -1219,6 +1219,14 @@
       </materials>
     </pipeline>
     <pipeline name="vagrant_test_ignore">
+      <environmentvariables>
+        <variable name="ECLIPSE_INSTALL_DIR">
+          <value>eclipse</value>
+        </variable>
+        <variable name="ECLIPSE_WORKSPACE_DIR">
+          <value>workspace</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="git://github.com/genivi/eclipse_install_automation" branch="cpp_common_api_with_yocto_tools" materialName="eclipse_install_automation.git" />
       </materials>
