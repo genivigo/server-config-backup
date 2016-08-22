@@ -849,6 +849,11 @@
                 <arg>VAGRANT_HOME="$PWD/.vagrant.d" vagrant up --provision</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>tar cvfz virtualbox-image.tar.gz "/var/go/VirtualBox VMs/${HOSTNAME}*"</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
