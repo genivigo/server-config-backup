@@ -1275,9 +1275,9 @@
                 <arg>-f</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>export VAGRANT_HOME="$PWD/vagrant.d" &amp;&amp; vagrant box list</arg>
+              <exec command="vagrant">
+                <arg>box</arg>
+                <arg>list</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
