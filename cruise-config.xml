@@ -1252,7 +1252,7 @@
           <value>/var/cache/eia</value>
         </variable>
         <variable name="HOSTNAME">
-          <value>genivi-sdk</value>
+          <value>francalab</value>
         </variable>
       </environmentvariables>
       <materials>
