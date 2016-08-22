@@ -830,7 +830,7 @@
           </variable>
         </environmentvariables>
         <jobs>
-          <job name="vagrantjob">
+          <job name="run_vagrant">
             <tasks>
               <fetchartifact pipeline="SDK" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk.tar.gz">
                 <runif status="passed" />
@@ -857,7 +857,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>ga_test</resource>
+              <resource>vagrant</resource>
             </resources>
           </job>
         </jobs>
