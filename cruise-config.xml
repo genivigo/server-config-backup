@@ -835,6 +835,11 @@
               <fetchartifact pipeline="SDK" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk.tar.gz">
                 <runif status="passed" />
               </fetchartifact>
+              <exec command="tar" workingdir="install">
+                <arg>xf</arg>
+                <arg>../gdp-sdk.tar.gz</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
