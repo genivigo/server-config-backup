@@ -849,13 +849,13 @@
                 <arg>VAGRANT_HOME="$PWD/.vagrant.d" vagrant up --provision</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="vagrant">
+                <arg>halt</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>DATE=$(date +%Y%m%d_%H%M%S) &amp;&amp; tar cvfz gdp-sdk-virtualbox-image_$DATE.tar.gz -C "/var/go/VirtualBox VMs" .</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="vagrant">
-                <arg>halt</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
