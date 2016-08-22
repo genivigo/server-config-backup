@@ -2230,7 +2230,7 @@
         <resource>go-agent1</resource>
       </resources>
     </agent>
-    <agent hostname="14dd4c9f3385" ipaddress="172.17.0.76" uuid="6bb7281c-682f-4659-8370-ffa4048d03df" isDisabled="true">
+    <agent hostname="14dd4c9f3385" ipaddress="172.17.0.76" uuid="6bb7281c-682f-4659-8370-ffa4048d03df">
       <resources>
         <resource>vagrant</resource>
       </resources>
