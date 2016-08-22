@@ -829,6 +829,11 @@
       </stage>
       <stage name="CreateVM">
         <approval type="manual" />
+        <environmentvariables>
+          <variable name="HOSTNAME">
+            <value>gdp-sdk</value>
+          </variable>
+        </environmentvariables>
         <jobs>
           <job name="vagrantjob">
             <tasks>
