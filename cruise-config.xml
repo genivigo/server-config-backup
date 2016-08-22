@@ -1292,7 +1292,7 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>tar cvfz francalab-vm.tar.gz -C "/var/go/VirtualBox VMs" "$VMNAME"</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
