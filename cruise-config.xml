@@ -1258,7 +1258,7 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
       </materials>
     </pipeline>
-    <pipeline name="Francalab-Eclipse_VM">
+    <pipeline name="Francalab-Eclipse-VM">
       <environmentvariables>
         <variable name="ECLIPSE_INSTALL_DIR">
           <value>eclipse</value>
