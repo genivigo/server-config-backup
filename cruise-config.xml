@@ -1161,7 +1161,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>./raspberrypi2/results/sdk/oecore-*toolchain*.sh -d /ssdcache/gdp-sdk/yocto-sdk/raspberrypi2/ -y</arg>
+                <arg>./#{MACHINE}/results/sdk/oecore-*toolchain*.sh -d /ssdcache/gdp-sdk/yocto-sdk/#{MACHINE}/ -y</arg>
                 <runif status="passed" />
               </exec>
               <exec command="chmod">
