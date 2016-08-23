@@ -1323,7 +1323,7 @@
       </materials>
     </pipeline>
     <pipeline name="Release_Test" isLocked="false" template="Yocto_GDP_generic_release">
-      <timer>0 0 2 19 8 ?</timer>
+      <timer>0 59 23 23 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
