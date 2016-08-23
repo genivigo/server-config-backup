@@ -750,6 +750,7 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-SDK" isLocked="false">
+      <timer>0 30 9 23 8 ?</timer>
       <materials>
         <pipeline pipelineName="GDP-Yocto-RaspberryPi2_with_SDK" stageName="build" materialName="rpi-sdk" />
         <pipeline pipelineName="Eclipse-for-SDK" stageName="stage" materialName="eclipse" />
