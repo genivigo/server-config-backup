@@ -1755,12 +1755,12 @@
                 <runif status="passed" />
               </exec>
               <exec command="bash">
-                <arg>-c</arg>
-                <arg>source ./init.sh $MACHINE</arg>
+                <arg>-c git checkout $BRANCH</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
-                <arg>-c git checkout $BRANCH</arg>
+                <arg>-c</arg>
+                <arg>source ./init.sh $MACHINE</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
