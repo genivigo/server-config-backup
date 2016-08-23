@@ -749,7 +749,7 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-SDK" isLocked="false">
+    <pipeline name="GDP_SDK" isLocked="false">
       <timer>0 10 9 23 8 ?</timer>
       <materials>
         <pipeline pipelineName="GDP-Yocto-RaspberryPi2_with_SDK" stageName="build" materialName="rpi-sdk" />
@@ -832,7 +832,7 @@
         <jobs>
           <job name="run_vagrant">
             <tasks>
-              <fetchartifact pipeline="GDP-SDK" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk.tar.gz">
+              <fetchartifact pipeline="GDP_SDK" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk.tar.gz">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="tar" workingdir="install">
