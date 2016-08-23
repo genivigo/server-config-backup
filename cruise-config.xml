@@ -867,6 +867,9 @@
             <resources>
               <resource>vagrant</resource>
             </resources>
+            <artifacts>
+              <artifact src="gdp-sdk-virtualbox-image*.tar.gz" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
