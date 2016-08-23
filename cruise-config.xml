@@ -1793,12 +1793,12 @@
                 <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
               </exec>
               <exec command="bash">
-                <arg>-c</arg>
-                <arg>cp gdp-src-build/tmp/deploy/licenses/genivi-dev-platform-*/license.manifest gdp-src-build/staging</arg>
+                <arg>-c git checkout $BRANCH</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
-                <arg>-c git checkout $BRANCH</arg>
+                <arg>-c</arg>
+                <arg>cp gdp-src-build/tmp/deploy/licenses/genivi-dev-platform-*/license.manifest gdp-src-build/staging</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
