@@ -1151,7 +1151,7 @@
               </exec>
               <exec command="mkdir">
                 <arg>-p</arg>
-                <arg>/ssdcache/gdp-sdk/yocto-sdk/{raspberrypi2,minnowboard,qemux86-64}</arg>
+                <arg>/ssdcache/gdp-sdk/yocto-sdk/{#{MACHINE}}</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
