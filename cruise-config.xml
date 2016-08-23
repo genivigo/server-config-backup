@@ -1813,12 +1813,12 @@
                 <runif status="passed" />
               </exec>
               <exec command="bash">
-                <arg>-c</arg>
-                <arg>gzip -c gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-qemux86-64.ext4 &gt; gdp-src-build/staging/genivi-dev-platform-qemux86-64.ext4.gz</arg>
+                <arg>-c git checkout $BRANCH</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
-                <arg>-c git checkout $BRANCH</arg>
+                <arg>-c</arg>
+                <arg>gzip -c gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-qemux86-64.ext4 &gt; gdp-src-build/staging/genivi-dev-platform-qemux86-64.ext4.gz</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
