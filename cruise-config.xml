@@ -1822,6 +1822,10 @@
                 <arg>cp gdp-src-build/tmp/deploy/images/*/bzImage gdp-src-build/staging</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c git checkout $BRANCH</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
