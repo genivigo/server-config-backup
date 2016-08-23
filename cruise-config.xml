@@ -864,6 +864,11 @@
                 <arg>echo SIZE: $(du -hs gdp-sdk-virtualbox-image*.tar.gz) || true</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="vagrant">
+                <arg>destroy</arg>
+                <arg>-f</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>vagrant</resource>
