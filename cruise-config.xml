@@ -704,23 +704,6 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-RaspberryPi2_with_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
-      <params>
-        <param name="branch">master</param>
-      </params>
-      <timer onlyOnChanges="true">0 0 3 * * ?</timer>
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>raspberrypi2</value>
-        </variable>
-        <variable name="BUILD_SDK">
-          <value>true</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="#{branch}" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
     <pipeline name="GDP-Yocto-Minnowboard_with_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
       <timer onlyOnChanges="true">0 30 3  19 8 ?</timer>
       <environmentvariables>
@@ -1764,6 +1747,23 @@
           </job>
         </jobs>
       </stage>
+    </pipeline>
+    <pipeline name="GDP-Yocto-RaspberryPi2_with_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
+      <params>
+        <param name="branch">master</param>
+      </params>
+      <timer onlyOnChanges="true">0 0 3 * * ?</timer>
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>raspberrypi2</value>
+        </variable>
+        <variable name="BUILD_SDK">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="#{branch}" materialName="genivi-dev-platform.git" />
+      </materials>
     </pipeline>
   </pipelines>
   <templates>
