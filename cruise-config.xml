@@ -1909,7 +1909,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-*.rootfs.manifest gdp-src-build/staging</arg>
+                <arg>cp gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-*.rootfs.manifest gdp-src-build/staging/{$BRANCH}.rootfs.manifest</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
