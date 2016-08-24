@@ -1753,6 +1753,7 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="GDP_Developer_Environment" />
   <templates>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
