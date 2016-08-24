@@ -753,7 +753,7 @@
       <timer>0 10 9 23 8 ?</timer>
       <materials>
         <pipeline pipelineName="GDP-Yocto-RaspberryPi2_with_SDK" stageName="build" materialName="rpi-sdk" />
-        <pipeline pipelineName="Eclipse-for-SDK" stageName="stage" materialName="eclipse" />
+        <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <git url="git://github.com/gunnarx/basic-vagrant" materialName="basic-vagrant" />
       </materials>
       <stage name="Assemble">
@@ -768,7 +768,7 @@
               <fetchartifact pipeline="GDP-Yocto-RaspberryPi2_with_SDK" stage="build" job="init_and_bitbake" srcdir="results" dest="raspberrypi2">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="Eclipse-for-SDK" stage="stage" job="job" srcdir="results" dest="eclipse">
+              <fetchartifact pipeline="Eclipse-for-SDK-2" stage="stage" job="job" srcdir="results" dest="eclipse">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="bash">
@@ -1111,7 +1111,7 @@
       </params>
       <materials>
         <pipeline pipelineName="GDP-Yocto-RaspberryPi2_with_SDK" stageName="build" materialName="rpi-sdk" />
-        <pipeline pipelineName="Eclipse-for-SDK" stageName="stage" materialName="eclipse" />
+        <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <git url="git://github.com/gunnarx/basic-vagrant" materialName="basic-vagrant" />
       </materials>
       <stage name="Assemble">
@@ -1126,7 +1126,7 @@
               <fetchartifact pipeline="GDP-Yocto-RaspberryPi2_with_SDK" stage="build" job="init_and_bitbake" srcdir="results" dest="#{MACHINE}">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="Eclipse-for-SDK" stage="stage" job="job" srcdir="results" dest="eclipse">
+              <fetchartifact pipeline="Eclipse-for-SDK-2" stage="stage" job="job" srcdir="results" dest="eclipse">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="bash">
@@ -1417,7 +1417,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="Eclipse-for-SDK">
+    <pipeline name="Eclipse-for-SDK-2">
       <params>
         <param name="BRANCH">cpp_common_api_with_yocto_tools</param>
       </params>
