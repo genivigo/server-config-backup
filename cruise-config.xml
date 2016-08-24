@@ -1536,6 +1536,17 @@
     </pipeline>
   </pipelines>
   <pipelines group="GDP_Developer_Environment">
+    <authorization>
+      <view>
+        <role>GDP_Developer</role>
+      </view>
+      <operate>
+        <role>GDP_Developer</role>
+      </operate>
+      <admins>
+        <role>GDP_Developer</role>
+      </admins>
+    </authorization>
     <pipeline name="GDP-SDK-4" isLocked="false">
       <timer>0 10 9 23 8 ?</timer>
       <materials>
