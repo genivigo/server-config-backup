@@ -1929,7 +1929,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp gdp-src-build/tmp/deploy/images/*/{$BRANCH}.bzImage gdp-src-build/staging</arg>
+                <arg>cp gdp-src-build/tmp/deploy/images/*/bzImage gdp-src-build/staging/{$BRANCH}.bzImage</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="gdp-src-build/staging">
