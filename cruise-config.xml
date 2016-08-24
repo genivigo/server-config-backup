@@ -704,20 +704,6 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-QEMU_x86-64_with_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
-      <timer onlyOnChanges="true">0 0 1 19 8 ?</timer>
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>qemux86-64</value>
-        </variable>
-        <variable name="BUILD_SDK">
-          <value>true</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
     <pipeline name="FRANCA_IF_Validation" labeltemplate="master:${common-api-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="git://git.projects.genivi.org/ipc/common-api-tools.git" dest="dest-common-api-tools" materialName="common-api-tools.git" />
@@ -1756,6 +1742,20 @@
       <environmentvariables>
         <variable name="MACHINE">
           <value>minnowboard</value>
+        </variable>
+        <variable name="BUILD_SDK">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-QEMU_x86-64_with_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
+      <timer onlyOnChanges="true">0 0 1 19 8 ?</timer>
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
         </variable>
         <variable name="BUILD_SDK">
           <value>true</value>
