@@ -1946,14 +1946,14 @@
                 <arg>if [[ "$MACHINE" == "qemux86-64" ]]; then cp gdp-src-build/tmp/deploy/images/*/bzImage gdp-src-build/staging/{$BRANCH}-qemu.bzImage; fi</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="gdp-src-build/staging">
-                <arg>-c</arg>
-                <arg>md5sum * &gt; checksums.txt</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>if [[ "$MACHINE" == "raspberrypi2" ]]; then gzip -c gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-*.rootfs.rpi-sdimg &gt; gdp-src-build/staging/{$BRANCH}-rpi.sdimg.gz; fi</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="gdp-src-build/staging">
+                <arg>-c</arg>
+                <arg>md5sum * &gt; checksums.txt</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
