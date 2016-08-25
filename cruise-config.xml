@@ -493,7 +493,7 @@
       <stage name="CreateVM">
         <environmentvariables>
           <variable name="HOSTNAME">
-            <value>gdp-sdk</value>
+            <value>gdp-sdk-#{MACHINE}</value>
           </variable>
         </environmentvariables>
         <jobs>
