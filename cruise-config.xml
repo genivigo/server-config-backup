@@ -528,7 +528,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>echo SIZE: $(du -hs gdp-sdk-virtualbox-image*.tar.gz) || true</arg>
+                <arg>echo SIZE: $(du -hs gdp-sdk*virtualbox-image*.tar.gz) || true</arg>
                 <runif status="passed" />
               </exec>
               <exec command="vagrant">
