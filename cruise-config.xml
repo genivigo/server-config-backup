@@ -1930,7 +1930,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>tar -zcf gdp-src-build/staging/{$BRANCH}-licenses.tar.gz -C gdp-src-build/tmp/deploy/licenses .</arg>
+                <arg>tar -zcf gdp-src-build/staging/$MACHINE/{$BRANCH}-licenses.tar.gz -C gdp-src-build/tmp/deploy/licenses .</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
