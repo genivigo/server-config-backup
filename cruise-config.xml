@@ -25,6 +25,7 @@
             <user>ChrisSchulenberg</user>
             <user>JBocklage</user>
             <user>GunnarA</user>
+            <user>RobertM</user>
           </users>
         </role>
         <role name="Developer">
@@ -45,6 +46,7 @@
             <user>ChrisSchulenberg</user>
             <user>JBocklage</user>
             <user>GunnarA</user>
+            <user>RobertM</user>
           </users>
         </role>
         <role name="GDP_Developer">
@@ -54,6 +56,7 @@
             <user>tpollard</user>
             <user>jonathanmaw</user>
             <user>GunnarA</user>
+            <user>RobertM</user>
           </users>
         </role>
       </roles>
