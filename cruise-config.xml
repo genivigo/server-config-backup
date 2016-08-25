@@ -1946,6 +1946,11 @@
                 <arg>md5sum * &gt; checksums.txt</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [[ "$MACHINE" == "raspberrypi2" ]]; then</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
