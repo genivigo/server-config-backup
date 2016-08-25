@@ -504,7 +504,7 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <fetchartifact pipeline="GDP-SDK-4" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk.tar.gz">
+              <fetchartifact pipeline="GDP-SDK-4" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk-#{MACHINE}.tar.gz">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="tar" workingdir="install">
