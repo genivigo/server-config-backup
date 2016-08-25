@@ -1940,7 +1940,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "qemux86-64" ]]; then gzip -c gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-qemux86-64.ext4 &gt; gdp-src-build/staging/$MACHINE/{$BRANCH}-qemu.ext4.gz; fi</arg>
+                <arg>if [[ "$MACHINE" == "qemux86-64" ]]; then gzip -c gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-qemux86-64.ext4 &gt; gdp-src-build/staging/$MACHINE/$BRANCH-qemu.ext4.gz; fi</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
