@@ -414,11 +414,11 @@
       </params>
       <timer>0 10 9 23 8 ?</timer>
       <materials>
-        <pipeline pipelineName="GDP-Yocto-raspberrypi2_with_SDK" stageName="build" materialName="yocto-sdk-raspberrypi2" />
+        <pipeline pipelineName="GDP-Yocto-raspberrypi2_SDK" stageName="build" materialName="yocto-sdk-raspberrypi2" />
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <git url="git://github.com/gunnarx/basic-vagrant" materialName="basic-vagrant" />
-        <pipeline pipelineName="GDP-Yocto-QEMU_x86-64_with_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
-        <pipeline pipelineName="GDP-Yocto-Minnowboard_with_SDK" stageName="build" materialName="yocto-sdk-minnowboard" />
+        <pipeline pipelineName="GDP-Yocto-QEMU_x86-64_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
+        <pipeline pipelineName="GDP-Yocto-Minnowboard_SDK" stageName="build" materialName="yocto-sdk-minnowboard" />
       </materials>
       <stage name="Assemble">
         <jobs>
@@ -429,7 +429,7 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <fetchartifact pipeline="GDP-Yocto-#{MACHINE}_with_SDK" stage="build" job="init_and_bitbake" srcdir="results" dest="#{MACHINE}">
+              <fetchartifact pipeline="GDP-Yocto-#{MACHINE}_SDK" stage="build" job="init_and_bitbake" srcdir="results" dest="#{MACHINE}">
                 <runif status="passed" />
               </fetchartifact>
               <fetchartifact pipeline="Eclipse-for-SDK-2" stage="stage" job="job" srcdir="results" dest="eclipse">
@@ -642,7 +642,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="GDP-Yocto-raspberrypi2_with_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
+    <pipeline name="GDP-Yocto-raspberrypi2_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_SDK">
       <params>
         <param name="branch">master</param>
       </params>
@@ -659,7 +659,7 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="#{branch}" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Minnowboard_with_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
+    <pipeline name="GDP-Yocto-Minnowboard_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_SDK">
       <timer onlyOnChanges="true">0 30 3  19 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
@@ -673,7 +673,7 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-QEMU_x86-64_with_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_with_SDK">
+    <pipeline name="GDP-Yocto-QEMU_x86-64_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_SDK">
       <timer onlyOnChanges="true">0 0 1 19 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
@@ -1200,7 +1200,7 @@
         <param name="MACHINE">raspberrypi2</param>
       </params>
       <materials>
-        <pipeline pipelineName="GDP-Yocto-raspberrypi2_with_SDK" stageName="build" materialName="rpi-sdk" />
+        <pipeline pipelineName="GDP-Yocto-raspberrypi2_SDK" stageName="build" materialName="rpi-sdk" />
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <git url="git://github.com/gunnarx/basic-vagrant" materialName="basic-vagrant" />
       </materials>
@@ -1213,7 +1213,7 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <fetchartifact pipeline="GDP-Yocto-raspberrypi2_with_SDK" stage="build" job="init_and_bitbake" srcdir="results" dest="#{MACHINE}">
+              <fetchartifact pipeline="GDP-Yocto-raspberrypi2_SDK" stage="build" job="init_and_bitbake" srcdir="results" dest="#{MACHINE}">
                 <runif status="passed" />
               </fetchartifact>
               <fetchartifact pipeline="Eclipse-for-SDK-2" stage="stage" job="job" srcdir="results" dest="eclipse">
@@ -2277,7 +2277,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="Yocto_GDP_build_with_SDK">
+    <pipeline name="Yocto_GDP_build_SDK">
       <authorization>
         <admins>
           <user>PedroA</user>
