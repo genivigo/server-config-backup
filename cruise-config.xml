@@ -1935,7 +1935,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>tar -zcf gdp-src-build/staging/{$BRANCH}-sources.tar.gz -C gdp-src-build/tmp/deploy/sources .</arg>
+                <arg>tar -zcf gdp-src-build/staging/$MACHINE/{$BRANCH}-sources.tar.gz -C gdp-src-build/tmp/deploy/sources .</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
