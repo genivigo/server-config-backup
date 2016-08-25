@@ -1421,10 +1421,10 @@
           <value>raspberrypi2</value>
         </variable>
         <variable name="BRANCH">
-          <value>gdp-11-beta</value>
+          <value>master</value>
         </variable>
         <variable name="RELEASE">
-          <value>gdp-11-beta</value>
+          <value>master</value>
         </variable>
       </environmentvariables>
       <materials>
