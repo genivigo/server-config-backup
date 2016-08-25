@@ -474,7 +474,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv workspace gdp-sdk/ || true</arg>
+                <arg>mv eclipse/results/workspace gdp-sdk/ || true</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
