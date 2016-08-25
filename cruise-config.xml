@@ -498,6 +498,11 @@
         </environmentvariables>
         <jobs>
           <job name="run_vagrant">
+            <environmentvariables>
+              <variable name="MACHINE">
+                <value>#{MACHINE}</value>
+              </variable>
+            </environmentvariables>
             <tasks>
               <fetchartifact pipeline="GDP-SDK-4" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk.tar.gz">
                 <runif status="passed" />
