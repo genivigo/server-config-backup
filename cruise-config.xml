@@ -409,6 +409,9 @@
       </admins>
     </authorization>
     <pipeline name="GDP-SDK-4" isLocked="false">
+      <params>
+        <param name="MACHINE">raspberrypi2</param>
+      </params>
       <timer>0 10 9 23 8 ?</timer>
       <materials>
         <pipeline pipelineName="GDP-Yocto-RaspberryPi2_with_SDK" stageName="build" materialName="rpi-sdk" />
