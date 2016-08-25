@@ -1886,7 +1886,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mkdir gdp-src-build/staging/</arg>
+                <arg>mkdir gdp-src-build/staging/$MACHINE</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
