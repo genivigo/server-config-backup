@@ -2062,7 +2062,7 @@
               </exec>
               <exec command="bash" workingdir="gdp-src-build">
                 <arg>-c</arg>
-                <arg>mkdir staging/$MACHINE</arg>
+                <arg>mkdir -p staging/$MACHINE</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
