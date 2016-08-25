@@ -476,7 +476,7 @@
               </exec>
               <exec command="tar">
                 <arg>cfz</arg>
-                <arg>gdp-sdk.tar.gz</arg>
+                <arg>gdp-sdk-#{MACHINE}.tar.gz</arg>
                 <arg>gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
