@@ -445,14 +445,14 @@
                 <arg>mv raspberrypi2/results/genivi-dev-platform-*/license.manifest gdp-sdk/license.manifest.raspberrypi2</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mkdir">
-                <arg>-p</arg>
-                <arg>gdp-sdk/yocto-sdk/{raspberrypi2,minnowboard,qemux86-64}</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>mv eclipse/results/workspace gdp-sdk/ || true</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>gdp-sdk/yocto-sdk/{raspberrypi2,minnowboard,qemux86-64}</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
