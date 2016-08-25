@@ -587,7 +587,7 @@
       <params>
         <param name="MACHINE">raspberrypi2</param>
       </params>
-      <timer>0 10 9 23 8 ?</timer>
+      <timer>0 0 1 26 8 ?</timer>
       <materials>
         <pipeline pipelineName="GDP-Yocto-raspberrypi2_SDK" stageName="build" materialName="yocto-sdk-raspberrypi2" />
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
