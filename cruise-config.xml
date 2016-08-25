@@ -418,6 +418,7 @@
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <git url="git://github.com/gunnarx/basic-vagrant" materialName="basic-vagrant" />
         <pipeline pipelineName="GDP-Yocto-QEMU_x86-64_with_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
+        <pipeline pipelineName="GDP-Yocto-Minnowboard_with_SDK" stageName="build" materialName="yocto-sdk-minnowboard" />
       </materials>
       <stage name="Assemble">
         <jobs>
