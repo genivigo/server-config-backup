@@ -580,6 +580,178 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="GDP-SDK-5" isLocked="false">
+      <params>
+        <param name="MACHINE">raspberrypi2</param>
+      </params>
+      <timer>0 10 9 23 8 ?</timer>
+      <materials>
+        <pipeline pipelineName="GDP-Yocto-raspberrypi2_SDK" stageName="build" materialName="yocto-sdk-raspberrypi2" />
+        <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
+        <git url="git://github.com/gunnarx/basic-vagrant" materialName="basic-vagrant" />
+        <pipeline pipelineName="GDP-Yocto-QEMU_x86-64_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
+        <pipeline pipelineName="GDP-Yocto-Minnowboard_SDK" stageName="build" materialName="yocto-sdk-minnowboard" />
+      </materials>
+      <stage name="Assemble">
+        <jobs>
+          <job name="gdp-sdk">
+            <environmentvariables>
+              <variable name="SDK_INSTALLER_NAME">
+                <value>oecore-x86_64-core2-64-toolchain-nodistro.0.sh</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <fetchartifact pipeline="GDP-Yocto-#{MACHINE}_SDK" stage="build" job="init_and_bitbake" srcdir="results" dest="#{MACHINE}">
+                <runif status="passed" />
+              </fetchartifact>
+              <fetchartifact pipeline="Eclipse-for-SDK-2" stage="stage" job="job" srcdir="results" dest="eclipse">
+                <runif status="passed" />
+              </fetchartifact>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -rf gdp-sdk ; mkdir gdp-sdk</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mv">
+                <arg>eclipse/results/eclipse</arg>
+                <arg>gdp-sdk/</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mv eclipse/results/workspace gdp-sdk/ || true</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mv #{MACHINE}/results/genivi-dev-platform-*/license.manifest gdp-sdk/license.manifest.#{MACHINE}</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>gdp-sdk/yocto-sdk/{raspberrypi2,minnowboard,qemux86-64}</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>chmod 755 */results/sdk/oecore-*toolchain*.sh</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>./#{MACHINE}/results/sdk/oecore-*toolchain*.sh -d ./gdp-sdk/yocto-sdk/#{MACHINE}/ -y</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="chmod">
+                <arg>-R</arg>
+                <arg>u+r</arg>
+                <arg>gdp-sdk/yocto-sdk</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="tar">
+                <arg>cfz</arg>
+                <arg>gdp-sdk-#{MACHINE}.tar.gz</arg>
+                <arg>gdp-sdk</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>ga_test</resource>
+            </resources>
+            <artifacts>
+              <artifact src="gdp-sdk.tar.gz" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="CreateVM">
+        <environmentvariables>
+          <variable name="HOSTNAME">
+            <value>gdp-sdk-#{MACHINE}</value>
+          </variable>
+        </environmentvariables>
+        <jobs>
+          <job name="run_vagrant">
+            <environmentvariables>
+              <variable name="MACHINE">
+                <value>#{MACHINE}</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <fetchartifact pipeline="GDP-SDK-5" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk-#{MACHINE}.tar.gz">
+                <runif status="passed" />
+              </fetchartifact>
+              <exec command="tar" workingdir="install">
+                <arg>xfz</arg>
+                <arg>../gdp-sdk-#{MACHINE}.tar.gz</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="vagrant">
+                <arg>destroy</arg>
+                <arg>-f</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="vagrant">
+                <arg>up</arg>
+                <arg>--provision</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="vagrant">
+                <arg>halt</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>DATE=$(date +%Y%m%d_%H%M%S) &amp;&amp; tar cvfz gdp-sdk-#{MACHINE}-virtualbox-image_$DATE.tar.gz -C "/var/go/VirtualBox VMs" "$(cat VMNAME)"</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>echo SIZE: $(du -hs gdp-sdk*virtualbox-image*.tar.gz) || true</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="vagrant">
+                <arg>destroy</arg>
+                <arg>-f</arg>
+                <runif status="any" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>vagrant</resource>
+            </resources>
+            <artifacts>
+              <artifact src="gdp-sdk-virtualbox-image*.tar.gz" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="ManualTest">
+        <approval type="manual" />
+        <jobs>
+          <job name="Trigger">
+            <tasks>
+              <exec command="test" />
+            </tasks>
+            <resources>
+              <resource>ga_test</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="Copy_to_web_server">
+        <approval type="manual" />
+        <jobs>
+          <job name="copy">
+            <tasks>
+              <ant />
+            </tasks>
+            <resources>
+              <resource>ga_test</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
     <pipeline name="Eclipse-for-SDK-2">
       <params>
         <param name="BRANCH">cpp_common_api_with_yocto_tools</param>
