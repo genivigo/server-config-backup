@@ -460,15 +460,15 @@
                 <arg>./raspberrypi2/results/sdk/oecore-*toolchain*.sh -d ./gdp-sdk/yocto-sdk/raspberrypi2/ -y</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mv eclipse/results/workspace gdp-sdk/ || true</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="chmod">
                 <arg>-R</arg>
                 <arg>u+r</arg>
                 <arg>gdp-sdk/yocto-sdk</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>mv eclipse/results/workspace gdp-sdk/ || true</arg>
                 <runif status="passed" />
               </exec>
               <exec command="tar">
