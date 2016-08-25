@@ -621,6 +621,7 @@
             <artifacts>
               <artifact src="artifacts" dest="tarballs" />
               <artifact src="autoeclipse/eclipse" dest="results/" />
+              <artifact src="workspace" dest="results/" />
             </artifacts>
           </job>
         </jobs>
