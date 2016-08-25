@@ -414,7 +414,7 @@
       </params>
       <timer>0 10 9 23 8 ?</timer>
       <materials>
-        <pipeline pipelineName="GDP-Yocto-#{MACHINE}_with_SDK" stageName="build" materialName="yocto-sdk-build" />
+        <pipeline pipelineName="GDP-Yocto-raspberrypi2_with_SDK" stageName="build" materialName="yocto-sdk-build" />
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <git url="git://github.com/gunnarx/basic-vagrant" materialName="basic-vagrant" />
       </materials>
