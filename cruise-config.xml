@@ -1953,7 +1953,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "raspberrypi2" ]]; then -c gzip -c gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-*.rootfs.rpi-sdimg &gt; gdp-src-build/staging/{$BRANCH}-rpi.sdimg.gz; fi</arg>
+                <arg>if [[ "$MACHINE" == "raspberrypi2" ]]; then gzip -c gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-*.rootfs.rpi-sdimg &gt; gdp-src-build/staging/{$BRANCH}-rpi.sdimg.gz; fi</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
