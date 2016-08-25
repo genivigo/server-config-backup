@@ -523,7 +523,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>DATE=$(date +%Y%m%d_%H%M%S) &amp;&amp; tar cvfz gdp-sdk-virtualbox-image_$DATE.tar.gz -C "/var/go/VirtualBox VMs" $(cat VMNAME)</arg>
+                <arg>DATE=$(date +%Y%m%d_%H%M%S) &amp;&amp; tar cvfz gdp-sdk-#{MACHINE}-virtualbox-image_$DATE.tar.gz -C "/var/go/VirtualBox VMs" $(cat VMNAME)</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
