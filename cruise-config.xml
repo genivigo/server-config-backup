@@ -2133,6 +2133,11 @@
                 <arg>cd $MACHINE &amp;&amp; md5sum * &gt; checksums.txt</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [[ "$MACHINE" == "minnowboard" ]]; then gzip -c gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-intel-corei7-64.hddimg &gt; gdp-src-build/staging/$MACHINE/$BRANCH-minnowboard.hddimg.gz; fi</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
