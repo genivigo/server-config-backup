@@ -1593,7 +1593,7 @@
     <pipeline name="Release_Test" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
         <variable name="MACHINE">
-          <value>raspberrypi2</value>
+          <value>minnowboard</value>
         </variable>
         <variable name="BRANCH">
           <value>master</value>
