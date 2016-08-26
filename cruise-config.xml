@@ -2130,7 +2130,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "minnowboard" ]]; then tar -zcf gdp-src-build/staging/$MACHINE/$BRANCH-minnowboard.hddimg.tar.gz -C gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-intel-corei7-64.hddimg poky/scripts/contrib/mkefidisk.sh</arg>
+                <arg>if [[ "$MACHINE" == "minnowboard" ]]; then tar -zcf gdp-src-build/staging/$MACHINE/$BRANCH-minnowboard.hddimg.tar.gz gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-intel-corei7-64.hddimg poky/scripts/contrib/mkefidisk.sh</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="gdp-src-build/staging/">
