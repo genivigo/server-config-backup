@@ -2586,6 +2586,9 @@
           <job name="copy">
             <tasks>
               <ant />
+              <exec command="true">
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
