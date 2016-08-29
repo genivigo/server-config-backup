@@ -2501,7 +2501,7 @@
               <resource>ga_test</resource>
             </resources>
             <artifacts>
-              <artifact src="gdp-sdk.tar.gz" />
+              <artifact src="gdp-sdk-#{MACHINE}.tar.gz" />
             </artifacts>
           </job>
         </jobs>
