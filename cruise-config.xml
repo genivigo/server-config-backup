@@ -1959,7 +1959,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>source ./init.sh $MACHINE</arg>
+                <arg>if [[ "$MACHINE" == "dragonboard-410c" ]]; then source ./init.sh $MACHINE accept-eula; elsesource ./init.sh $MACHINE; fi</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="gdp-src-build">
