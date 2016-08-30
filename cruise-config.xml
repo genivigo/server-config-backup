@@ -2040,14 +2040,14 @@
                 <arg>if [[ "$MACHINE" == "dragonboard-410c" ]]; then gzip -c gdp-src-build/tmp/deploy/images/*/boot-dragonboard-410c.img &gt; gdp-src-build/staging/$MACHINE/$BRANCH-dragonboard.img.gz; fi</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="gdp-src-build/staging/">
-                <arg>-c</arg>
-                <arg>cd $MACHINE &amp;&amp; md5sum * &gt; checksums.txt</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>if [[ "$MACHINE" == "dragonboard-410c" ]]; then cp gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-dragonboard-410c.ext4.gz &gt; gdp-src-build/staging/$MACHINE/$BRANCH-dragonboard.ext4.gz; fi</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="gdp-src-build/staging/">
+                <arg>-c</arg>
+                <arg>cd $MACHINE &amp;&amp; md5sum * &gt; checksums.txt</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
