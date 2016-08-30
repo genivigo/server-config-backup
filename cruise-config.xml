@@ -1676,13 +1676,13 @@
     <pipeline name="Release-QEMU_x86-64" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
         <variable name="MACHINE">
-          <value>minnowboard</value>
+          <value>qemux86-64</value>
         </variable>
         <variable name="BRANCH">
-          <value>master</value>
+          <value>gdp-11-rc1</value>
         </variable>
         <variable name="RELEASE">
-          <value>master</value>
+          <value>gdp-11-rc1</value>
         </variable>
       </environmentvariables>
       <materials>
