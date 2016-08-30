@@ -2727,7 +2727,6 @@
       <resources>
         <resource>new_test</resource>
         <resource>go-agent1</resource>
-        <resource>vagrant</resource>
         <resource>java</resource>
         <resource>yocto_build</resource>
       </resources>
