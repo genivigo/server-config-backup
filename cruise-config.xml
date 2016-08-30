@@ -1724,13 +1724,13 @@
     <pipeline name="Release-RaspberryPi3" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
         <variable name="MACHINE">
-          <value>minnowboard</value>
+          <value>raspberrypi3</value>
         </variable>
         <variable name="BRANCH">
-          <value>master</value>
+          <value>gdp-11-rc1</value>
         </variable>
         <variable name="RELEASE">
-          <value>master</value>
+          <value>gdp-11-rc1</value>
         </variable>
       </environmentvariables>
       <materials>
