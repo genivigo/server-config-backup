@@ -2720,6 +2720,7 @@
         <resource>2131ce1bd33e</resource>
         <resource>yocto_build</resource>
         <resource>mount_exec</resource>
+        <resource>java</resource>
       </resources>
     </agent>
     <agent hostname="go-agent1" ipaddress="10.100.10.120" uuid="eb6be62e-2380-4537-b74b-18ff7265ac4c">
