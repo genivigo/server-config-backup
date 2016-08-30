@@ -1740,13 +1740,13 @@
     <pipeline name="Release-Dragonboard" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
         <variable name="MACHINE">
-          <value>minnowboard</value>
+          <value>dragonboard-410c</value>
         </variable>
         <variable name="BRANCH">
-          <value>master</value>
+          <value>gdp-11-rc1</value>
         </variable>
         <variable name="RELEASE">
-          <value>master</value>
+          <value>gdp-11-rc1</value>
         </variable>
       </environmentvariables>
       <materials>
