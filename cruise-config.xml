@@ -1737,6 +1737,22 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
       </materials>
     </pipeline>
+    <pipeline name="Release-Dragonboard" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="BRANCH">
+          <value>master</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>master</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Administration_for_2131ce1bd33e">
     <authorization>
