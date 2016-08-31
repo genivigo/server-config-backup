@@ -1903,7 +1903,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "minnowboard" ]]; then cp poky/scripts/contrib/mkefidisk.sh gdp-src-build/tmp/deploy/images/intel-corei7-64/ &amp;&amp; tar -zcfh gdp-src-build/staging/$MACHINE/$BRANCH-minnowboard.hddimg.tar.gz -C gdp-src-build/tmp/deploy/imagesintel-corei7-64 genivi-dev-platform-intel-corei7-64.hddimg mkefidisk.sh ; fi</arg>
+                <arg>if [[ "$MACHINE" == "minnowboard" ]]; then cp poky/scripts/contrib/mkefidisk.sh gdp-src-build/tmp/deploy/images/intel-corei7-64/ &amp;&amp; tar -zchf gdp-src-build/staging/$MACHINE/$BRANCH-minnowboard.hddimg.tar.gz -C gdp-src-build/tmp/deploy/imagesintel-corei7-64 genivi-dev-platform-intel-corei7-64.hddimg mkefidisk.sh ; fi</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
