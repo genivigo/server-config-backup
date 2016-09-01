@@ -562,7 +562,7 @@
         <param name="SUBVERSION">5.6.1-1</param>
       </params>
       <materials>
-        <git url="git://github.com/genivi/basline_ci_helper" autoUpdate="false" materialName="dummy-not-used" />
+        <git url="git://github.com/genivi/baseline_ci_helper" autoUpdate="false" materialName="dummy-not-used" />
       </materials>
       <stage name="stage">
         <jobs>
