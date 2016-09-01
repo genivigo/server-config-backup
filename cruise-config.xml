@@ -557,7 +557,7 @@
       <materials>
         <git url="git://github.com/genivi/baseline_ci_helper" autoUpdate="false" />
       </materials>
-      <stage name="defaultStage">
+      <stage name="stage">
         <jobs>
           <job name="defaultJob">
             <tasks>
