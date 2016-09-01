@@ -585,7 +585,7 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>[ "$(md5sum /var/cache/qt/qt-everywhere-opensource-src-#{VERSION}.#{ARCHIVE})" = "#{MD5}" ] &amp;&amp; echo "QTSRC MD5 OK"</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
