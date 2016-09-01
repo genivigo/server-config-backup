@@ -571,6 +571,7 @@
               <exec command="wget">
                 <arg>-c</arg>
                 <arg>#{MIRROR}/qt-everywhere-opensource-src-#{SUBVERSION}.#{ARCHIVE}</arg>
+                <arg>-o /var/cache/qt/qt-everywhere-opensource-src-#{SUBVERSION}.#{ARCHIVE}</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
