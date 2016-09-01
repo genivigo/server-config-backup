@@ -559,7 +559,7 @@
       </materials>
       <stage name="stage">
         <jobs>
-          <job name="defaultJob">
+          <job name="job">
             <tasks>
               <ant />
             </tasks>
