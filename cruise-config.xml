@@ -558,6 +558,7 @@
         <param name="VERSION">5.6.1-1</param>
         <param name="ARCHIVE">.tar.xz</param>
         <param name="MD5">f44fd4fcae71087f90d9c68e9d8be449</param>
+        <param name="MIRROR">http://qtmirror.ics.com/pub/qtproject/archive/qt/5.6/#{VERSION}/single/</param>
       </params>
       <materials>
         <git url="git://github.com/genivi/basline_ci_helper" autoUpdate="false" materialName="dummy-not-used" />
