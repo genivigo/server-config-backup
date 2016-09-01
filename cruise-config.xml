@@ -570,7 +570,8 @@
             <tasks>
               <ant />
               <exec command="wget">
-                <arg>aa</arg>
+                <arg>-c</arg>
+                <arg>#{MIRROR}/qt-everywhere-opensource-src-#{SUBVERSION}.#{ARCHIVE}</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
