@@ -574,6 +574,11 @@
                 <arg>-o /var/cache/qt/qt-everywhere-opensource-src-#{SUBVERSION}.#{ARCHIVE}</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ "$(md5sum /var/cache/qt-everywhere-opensource-src-#{SUBVERSION}.#{ARCHIVE} = "#{MD5}" ] &amp;&amp; echo "CHECKSUM IS GOOD"</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
