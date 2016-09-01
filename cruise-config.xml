@@ -555,7 +555,7 @@
     </pipeline>
     <pipeline name="Qt-Creator">
       <materials>
-        <git url="git://github.com/genivi/baseline_ci_helper" autoUpdate="false" />
+        <git url="git://github.com/gunnarx/basic-vagrant" materialName="dummy-not-used" />
       </materials>
       <stage name="stage">
         <jobs>
