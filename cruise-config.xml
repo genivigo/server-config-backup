@@ -553,72 +553,6 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Qt-Creator">
-      <params>
-        <param name="MAINVERSION">5.6</param>
-        <param name="ARCHIVE">tar.xz</param>
-        <param name="MD5">f44fd4fcae71087f90d9c68e9d8be449</param>
-        <param name="MIRROR">http://qtmirror.ics.com/pub/qtproject/archive/qt/5.6/5.6.1-1/single/</param>
-        <param name="VERSION">5.6.1-1</param>
-        <param name="QTCREATOR_VERSION">4.1.0</param>
-        <param name="QTCREATOR_MD5">a26a00b660e4bb5724515b426ce57942</param>
-      </params>
-      <environmentvariables>
-        <variable name="MIRROR">
-          <value>http://qtmirror.ics.com/pub/qtproject/archive/qt/#{MAINVERSION}/#{VERSION}/single/</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="git://github.com/genivi/baseline_ci_helper" autoUpdate="false" materialName="dummy-not-used" />
-      </materials>
-      <stage name="stage">
-        <jobs>
-          <job name="job">
-            <tasks>
-              <exec command="wget">
-                <arg>-c</arg>
-                <arg>#{MIRROR}/qt-everywhere-opensource-src-#{VERSION}.#{ARCHIVE}</arg>
-                <arg>-O</arg>
-                <arg>/var/cache/qt/qt-everywhere-opensource-src-#{VERSION}.#{ARCHIVE}</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>[ "$(md5sum /var/cache/qt/qt-everywhere-opensource-src-#{VERSION}.#{ARCHIVE} | cut -c 1-32)" = "#{MD5}" ] &amp;&amp; echo "QTSRC MD5 OK"</arg>
-                <runif status="any" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>[ -f /var/cache/qt/qtcreator-bin-#{QTCREATOR_VERSION}.tar.bz2 ] &amp;&amp; echo "CREATOR EXISTS"</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>[ "$(md5sum /var/cache/qt/qtcreator-bin-#{QTCREATOR_VERSION}.tar.bz2 | cut -c 1-32)" = "#{QTCREATOR_MD5}" ] &amp;&amp; echo "CREATOR MD5 OK"</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="cp">
-                <arg>/var/cache/qt/qtcreator-bin-#{QTCREATOR_VERSION}.tar.bz2</arg>
-                <arg>.</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="cp">
-                <arg>/var/cache/qt/qt-everywhere-opensource-src-#{VERSION}.#{ARCHIVE}</arg>
-                <arg>.</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>ga_test</resource>
-            </resources>
-            <artifacts>
-              <artifact src="qt-everywhere-opensource-src-*" />
-              <artifact src="qtcreator-bin-*" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
   </pipelines>
   <pipelines group="Components">
     <authorization>
@@ -1655,6 +1589,72 @@
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
       </materials>
+    </pipeline>
+    <pipeline name="Qt-Creator">
+      <params>
+        <param name="MAINVERSION">5.6</param>
+        <param name="ARCHIVE">tar.xz</param>
+        <param name="MD5">f44fd4fcae71087f90d9c68e9d8be449</param>
+        <param name="MIRROR">http://qtmirror.ics.com/pub/qtproject/archive/qt/5.6/5.6.1-1/single/</param>
+        <param name="VERSION">5.6.1-1</param>
+        <param name="QTCREATOR_VERSION">4.1.0</param>
+        <param name="QTCREATOR_MD5">a26a00b660e4bb5724515b426ce57942</param>
+      </params>
+      <environmentvariables>
+        <variable name="MIRROR">
+          <value>http://qtmirror.ics.com/pub/qtproject/archive/qt/#{MAINVERSION}/#{VERSION}/single/</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="git://github.com/genivi/baseline_ci_helper" autoUpdate="false" materialName="dummy-not-used" />
+      </materials>
+      <stage name="stage">
+        <jobs>
+          <job name="job">
+            <tasks>
+              <exec command="wget">
+                <arg>-c</arg>
+                <arg>#{MIRROR}/qt-everywhere-opensource-src-#{VERSION}.#{ARCHIVE}</arg>
+                <arg>-O</arg>
+                <arg>/var/cache/qt/qt-everywhere-opensource-src-#{VERSION}.#{ARCHIVE}</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ "$(md5sum /var/cache/qt/qt-everywhere-opensource-src-#{VERSION}.#{ARCHIVE} | cut -c 1-32)" = "#{MD5}" ] &amp;&amp; echo "QTSRC MD5 OK"</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ -f /var/cache/qt/qtcreator-bin-#{QTCREATOR_VERSION}.tar.bz2 ] &amp;&amp; echo "CREATOR EXISTS"</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ "$(md5sum /var/cache/qt/qtcreator-bin-#{QTCREATOR_VERSION}.tar.bz2 | cut -c 1-32)" = "#{QTCREATOR_MD5}" ] &amp;&amp; echo "CREATOR MD5 OK"</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="cp">
+                <arg>/var/cache/qt/qtcreator-bin-#{QTCREATOR_VERSION}.tar.bz2</arg>
+                <arg>.</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="cp">
+                <arg>/var/cache/qt/qt-everywhere-opensource-src-#{VERSION}.#{ARCHIVE}</arg>
+                <arg>.</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>ga_test</resource>
+            </resources>
+            <artifacts>
+              <artifact src="qt-everywhere-opensource-src-*" />
+              <artifact src="qtcreator-bin-*" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="Administration_for_2131ce1bd33e">
