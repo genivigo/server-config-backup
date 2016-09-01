@@ -601,6 +601,10 @@
             <resources>
               <resource>ga_test</resource>
             </resources>
+            <artifacts>
+              <artifact src="qt-everywhere-opensource-src-*" />
+              <artifact src="qtcreator-bin-*" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
