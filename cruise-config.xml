@@ -594,7 +594,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>[ "$(md5sum /var/cache/qt/qtcreator-bin-#{QTCREATOR_VERSION}.tar.bz2)" = "#{QTCREATOR_MD5}" ] &amp;&amp; echo "CREATOR MD5 OK"</arg>
+                <arg>[ "$(md5sum /var/cache/qt/qtcreator-bin-#{QTCREATOR_VERSION}.tar.bz2 | cut -c 1-32)" = "#{QTCREATOR_MD5}" ] &amp;&amp; echo "CREATOR MD5 OK"</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
