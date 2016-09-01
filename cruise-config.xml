@@ -561,6 +561,11 @@
         <param name="MIRROR">http://qtmirror.ics.com/pub/qtproject/archive/qt/#{MAINVERSION}/#{SUBVERSION}/single/</param>
         <param name="SUBVERSION">5.6.1-1</param>
       </params>
+      <environmentvariables>
+        <variable name="MIRROR">
+          <value>http://qtmirror.ics.com/pub/qtproject/archive/qt/#{MAINVERSION}/#{SUBVERSION}/single/</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="git://github.com/genivi/baseline_ci_helper" autoUpdate="false" materialName="dummy-not-used" />
       </materials>
