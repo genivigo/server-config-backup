@@ -554,6 +554,9 @@
       </materials>
     </pipeline>
     <pipeline name="Qt-Creator">
+      <params>
+        <param name="VERSION">5.6.1-1</param>
+      </params>
       <materials>
         <git url="git://github.com/genivi/basline_ci_helper" autoUpdate="false" materialName="dummy-not-used" />
       </materials>
