@@ -411,7 +411,7 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="GDP-SDK-4" isLocked="false" template="GDP_SDK_generic">
+    <pipeline name="GDP-SDK-raspberrypi2" isLocked="false" template="GDP_SDK_generic">
       <params>
         <param name="MACHINE">raspberrypi2</param>
       </params>
