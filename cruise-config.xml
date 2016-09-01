@@ -560,6 +560,7 @@
         <param name="MD5">f44fd4fcae71087f90d9c68e9d8be449</param>
         <param name="MIRROR">http://qtmirror.ics.com/pub/qtproject/archive/qt/5.6/5.6.1-1/single/</param>
         <param name="SUBVERSION">5.6.1-1</param>
+        <param name="VERSION">5.6.1-1</param>
       </params>
       <environmentvariables>
         <variable name="MIRROR">
