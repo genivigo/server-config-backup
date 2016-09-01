@@ -561,6 +561,7 @@
         <param name="MIRROR">http://qtmirror.ics.com/pub/qtproject/archive/qt/5.6/5.6.1-1/single/</param>
         <param name="VERSION">5.6.1-1</param>
         <param name="QTCREATOR_VERSION">4.1.0</param>
+        <param name="QTCREATOR_MD5">foo</param>
       </params>
       <environmentvariables>
         <variable name="MIRROR">
