@@ -592,6 +592,11 @@
                 <arg>[ -f /var/cache/qt/qtcreator-bin-#{QTCREATOR_VERSION}.tar.bz2 ] &amp;&amp; echo "CREATOR EXISTS"</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ "$(md5sum qtcreator-bin-#{QTCREATOR_VERSION}.tar.bz2)" = "#{QTCREATOR_MD5}" ] &amp;&amp; echo "CREATOR MD5 OK"</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
