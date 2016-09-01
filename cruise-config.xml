@@ -562,6 +562,10 @@
           <job name="job">
             <tasks>
               <ant />
+              <exec command="wget">
+                <arg>aa</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
