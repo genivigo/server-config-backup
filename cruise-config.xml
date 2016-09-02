@@ -2563,6 +2563,11 @@
                 <arg>-f</arg>
                 <runif status="any" />
               </exec>
+              <exec command="bashy">
+                <arg>-c</arg>
+                <arg>mv gdp-sdk*virtualbox-image*.tar.gz) gdp-sdk-#{MACHINE}SIZE: $SIZE || true</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>vagrant</resource>
