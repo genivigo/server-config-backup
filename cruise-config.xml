@@ -2558,15 +2558,15 @@
                 <arg>export SIZE=$(du -hs gdp-sdk*virtualbox-image*.tar.gz) &amp;&amp; echo SIZE: $SIZE || true</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="vagrant">
-                <arg>destroy</arg>
-                <arg>-f</arg>
-                <runif status="any" />
-              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>mv gdp-sdk-#{MACHINE}-virtualbox-image_$DATE.tar.gz gdp-sdk-#{MACHINE}-virtualbox-image_$DATE_($SIZE).tar.gz gdp-sdk-#{MACHINE}SIZE: $SIZE || true</arg>
                 <runif status="passed" />
+              </exec>
+              <exec command="vagrant">
+                <arg>destroy</arg>
+                <arg>-f</arg>
+                <runif status="any" />
               </exec>
             </tasks>
             <resources>
