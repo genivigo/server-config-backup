@@ -2555,7 +2555,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>SIZE=$(du -hs gdp-sdk*virtualbox-image*.tar.gz) &amp;&amp; mv gdp-sdk-#{MACHINE}-virtualbox-image_$DATE.tar.gz gdp-sdk-#{MACHINE}-virtualbox-image_$DATE_($SIZE).tar.gz</arg>
+                <arg>env &amp;&amp; SIZE=$(du -hs gdp-sdk*virtualbox-image*.tar.gz) &amp;&amp; mv gdp-sdk-#{MACHINE}-virtualbox-image_$DATE.tar.gz gdp-sdk-#{MACHINE}-virtualbox-image_$DATE_($SIZE).tar.gz</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
