@@ -2669,14 +2669,14 @@
                 <arg>env &amp;&amp; SIZE=$(du -hs gdp-sdk*virtualbox-image*.tar.gz | awk '{print $1}') &amp;&amp; mv gdp-sdk-#{MACHINE}-virtualbox-image_$DATE.tar.gz gdp-sdk-#{MACHINE}-virtualbox-image_$DATE_($SIZE).tar.gz</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="install">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="vagrant">
                 <arg>destroy</arg>
                 <arg>-f</arg>
                 <runif status="any" />
               </exec>
-              <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="install">
-                <runif status="passed" />
-              </fetchartifact>
             </tasks>
             <resources>
               <resource>vagrant</resource>
