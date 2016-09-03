@@ -1743,6 +1743,11 @@
                 <arg>-j8</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="mv" workingdir="build">
+                <arg>release</arg>
+                <arg>dlt-viewer</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
