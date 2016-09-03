@@ -1707,6 +1707,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>ga_test</resource>
+            </resources>
             <artifacts>
               <artifact src="build/*" dest="dlt-viewer" />
             </artifacts>
