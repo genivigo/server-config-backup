@@ -1664,6 +1664,20 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="dlt-viewtest">
+      <materials>
+        <git url="https://git.projects.genivi.org/dlt-viewer.git" />
+      </materials>
+      <stage name="stage">
+        <jobs>
+          <job name="job">
+            <tasks>
+              <exec command="ls" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="Administration_for_2131ce1bd33e">
     <authorization>
