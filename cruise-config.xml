@@ -417,11 +417,9 @@
       </params>
       <timer>0 10 9 23 8 ?</timer>
       <materials>
-        <pipeline pipelineName="GDP-Yocto-raspberrypi2_SDK" stageName="build" materialName="yocto-sdk-raspberrypi2" />
-        <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <git url="git://github.com/gunnarx/basic-vagrant" materialName="basic-vagrant" />
-        <pipeline pipelineName="GDP-Yocto-qemux86-64_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
-        <pipeline pipelineName="GDP-Yocto-Minnowboard_SDK" stageName="build" materialName="yocto-sdk-minnowboard" />
+        <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
+        <pipeline pipelineName="GDP-Yocto-raspberrypi2_SDK" stageName="build" materialName="yocto-sdk-raspberrypi2" />
         <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
       </materials>
     </pipeline>
@@ -434,6 +432,7 @@
         <git url="git://github.com/gunnarx/basic-vagrant" materialName="basic-vagrant" />
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <pipeline pipelineName="GDP-Yocto-Minnowboard_SDK" stageName="build" materialName="yocto-sdk-minnowboard" />
+        <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
       </materials>
     </pipeline>
     <pipeline name="GDP-SDK-qemux86-64" isLocked="false" template="GDP_SDK_generic">
@@ -445,6 +444,7 @@
         <git url="git://github.com/gunnarx/basic-vagrant" materialName="basic-vagrant" />
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <pipeline pipelineName="GDP-Yocto-qemux86-64_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
+        <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
       </materials>
     </pipeline>
     <pipeline name="Eclipse-for-SDK-2">
