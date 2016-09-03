@@ -1697,6 +1697,11 @@
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>../../Qt/bin/qmake ../BuildDltViewer.pro</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
