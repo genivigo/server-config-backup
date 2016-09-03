@@ -1697,9 +1697,9 @@
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="dlt-viewer/build">
+              <exec command="bash" workingdir="build">
                 <arg>-c</arg>
-                <arg>../../Qt/bin/qmake ../BuildDltViewer.pro</arg>
+                <arg>../Qt/bin/qmake ../BuildDltViewer.pro</arg>
                 <runif status="passed" />
               </exec>
               <exec command="make" workingdir="dlt-viewer/build">
