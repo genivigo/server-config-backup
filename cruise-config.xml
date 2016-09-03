@@ -1749,7 +1749,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="tar" workingdir="build">
-                <arg>-cfj</arg>
+                <arg>cjf</arg>
                 <arg>dlt-viewer.tar.bz2</arg>
                 <arg>dlt-viewer</arg>
                 <runif status="passed" />
