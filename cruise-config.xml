@@ -1712,7 +1712,7 @@
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>tar xf qt-tarball/*.tar.bz2</arg>
+                <arg>tar xf Qt*.tar.bz2</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
