@@ -1664,7 +1664,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="dlt-viewtest">
+    <pipeline name="dlt-viewtest" labeltemplate="master:${dlt-viewer.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="https://git.projects.genivi.org/dlt-viewer.git" materialName="dlt-viewer.git" />
       </materials>
