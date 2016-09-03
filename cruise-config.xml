@@ -1711,11 +1711,6 @@
         <jobs>
           <job name="job">
             <tasks>
-              <exec command="cp">
-                <arg>#{CACHE_DIR}/#{SOURCE_FILE}</arg>
-                <arg>.</arg>
-                <runif status="passed" />
-              </exec>
               <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="#{SOURCE_FILE}">
                 <runif status="failed" />
               </fetchartifact>
