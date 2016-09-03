@@ -1743,6 +1743,11 @@
                 <arg>-j8</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="cp">
+                <arg>#{CACHE_DIR}/#{SOURCE_FILE}</arg>
+                <arg>.</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
