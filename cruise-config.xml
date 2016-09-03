@@ -1717,7 +1717,7 @@
                 <runif status="passed" />
               </exec>
               <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="#{SOURCE_FILE}">
-                <runif status="passed" />
+                <runif status="failed" />
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
