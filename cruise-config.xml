@@ -1711,14 +1711,14 @@
         <jobs>
           <job name="job">
             <tasks>
-              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="#{SOURCE_FILE}">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="cp">
                 <arg>#{CACHE_DIR}/#{SOURCE_FILE}</arg>
                 <arg>.</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="#{SOURCE_FILE}">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>tar xf #{SOURCE_FILE}</arg>
