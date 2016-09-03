@@ -1712,7 +1712,7 @@
           <job name="job">
             <tasks>
               <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="#{SOURCE_FILE}">
-                <runif status="failed" />
+                <runif status="passed" />
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
