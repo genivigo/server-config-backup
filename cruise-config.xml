@@ -1677,6 +1677,11 @@
               <fetchartifact pipeline="Qt-Creator" stage="stage" job="job" srcfile="Qt*gcc*desktop*.tar.bz2" dest="qt-tarball">
                 <runif status="passed" />
               </fetchartifact>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>tar xf qt-tarball/*</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
