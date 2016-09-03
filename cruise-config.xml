@@ -1707,6 +1707,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <artifacts>
+              <artifact src="build/*" dest="dlt-viewer" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
