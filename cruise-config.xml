@@ -1734,14 +1734,14 @@
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="build">
-                <arg>-c</arg>
-                <arg>../Qt/5.6/gcc_64/bin/qmake ../BuildDltViewer.pro</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="cp">
                 <arg>#{CACHE_DIR}/#{SOURCE_FILE}</arg>
                 <arg>.</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="build">
+                <arg>-c</arg>
+                <arg>../Qt/5.6/gcc_64/bin/qmake ../BuildDltViewer.pro</arg>
                 <runif status="passed" />
               </exec>
               <exec command="make" workingdir="build">
