@@ -1698,9 +1698,9 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="dlt-viewtest" labeltemplate="master:${dlt-viewer.git[:8]}-build:${COUNT}" isLocked="false">
+    <pipeline name="DLT-Viewer" labeltemplate="master:${dlt-viewer.git[:8]}-build:${COUNT}" isLocked="false">
       <params>
-        <param name="SOURCE_FILE">Qt-5.6-gcc64-desktop-qtcreator-installed.tar.bz2</param>
+        <param name="QT_LIBS_ARCHIVE">Qt-5.6-gcc64-desktop-qtcreator-installed.tar.bz2</param>
         <param name="CACHE_DIR">/var/cache/goartifacts</param>
       </params>
       <materials>
@@ -1711,12 +1711,12 @@
         <jobs>
           <job name="job">
             <tasks>
-              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="#{SOURCE_FILE}">
+              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="#{QT_LIBS_ARCHIVE}">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>tar xf #{SOURCE_FILE}</arg>
+                <arg>tar xf #{QT_LIBS_ARCHIVE}</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
