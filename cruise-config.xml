@@ -1674,6 +1674,9 @@
           <job name="job">
             <tasks>
               <exec command="ls" />
+              <fetchartifact pipeline="Qt-Creator" stage="stage" job="job" srcfile="Qt*gcc*desktop*.tar.bz2" dest="qt-tarball">
+                <runif status="passed" />
+              </fetchartifact>
             </tasks>
           </job>
         </jobs>
