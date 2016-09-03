@@ -1701,7 +1701,6 @@
     <pipeline name="dlt-viewtest" labeltemplate="master:${dlt-viewer.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="git://git.projects.genivi.org/dlt-viewer.git" materialName="dlt-viewer.git" />
-        <pipeline pipelineName="Qt-Creator" stageName="stage" materialName="qtlibs" />
         <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="qtlib2" />
       </materials>
       <stage name="stage">
