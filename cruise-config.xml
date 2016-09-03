@@ -2674,6 +2674,9 @@
                 <arg>-f</arg>
                 <runif status="any" />
               </exec>
+              <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="install">
+                <runif status="passed" />
+              </fetchartifact>
             </tasks>
             <resources>
               <resource>vagrant</resource>
