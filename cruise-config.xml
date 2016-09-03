@@ -1645,6 +1645,12 @@
                 <arg>.</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="cp">
+                <arg>/var/go/#{QT_LIBS_AND_CREATOR_FILE}</arg>
+                <arg>.</arg>
+                <arg />
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
