@@ -1687,6 +1687,11 @@
                 <arg>ln -s Qt-5.6 Qt</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="rm" workingdir="dlt-viewer">
+                <arg>-rf</arg>
+                <arg>build</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
