@@ -1702,6 +1702,10 @@
                 <arg>../../Qt/bin/qmake ../BuildDltViewer.pro</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="make">
+                <arg>-j8</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
