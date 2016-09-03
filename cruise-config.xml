@@ -1710,7 +1710,7 @@
               <resource>ga_test</resource>
             </resources>
             <artifacts>
-              <artifact src="build/*" dest="dlt-viewer" />
+              <artifact src="build/release/*" dest="dlt-viewer" />
             </artifacts>
           </job>
         </jobs>
