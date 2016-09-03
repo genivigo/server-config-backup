@@ -1666,7 +1666,7 @@
     </pipeline>
     <pipeline name="dlt-viewtest">
       <materials>
-        <git url="https://git.projects.genivi.org/dlt-viewer.git" />
+        <git url="https://git.projects.genivi.org/dlt-viewer.git" materialName="dlt-viewer.git" />
       </materials>
       <stage name="stage">
         <jobs>
