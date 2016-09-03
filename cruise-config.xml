@@ -1729,14 +1729,14 @@
                 <arg>build</arg>
                 <runif status="any" />
               </exec>
-              <exec command="mkdir">
-                <arg>-p</arg>
-                <arg>build</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="cp">
                 <arg>#{CACHE_DIR}/#{SOURCE_FILE}</arg>
                 <arg>.</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>build</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="build">
