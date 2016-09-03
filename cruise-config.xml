@@ -422,6 +422,7 @@
         <git url="git://github.com/gunnarx/basic-vagrant" materialName="basic-vagrant" />
         <pipeline pipelineName="GDP-Yocto-qemux86-64_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
         <pipeline pipelineName="GDP-Yocto-Minnowboard_SDK" stageName="build" materialName="yocto-sdk-minnowboard" />
+        <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
       </materials>
     </pipeline>
     <pipeline name="GDP-SDK-minnowboard" isLocked="false" template="GDP_SDK_generic">
