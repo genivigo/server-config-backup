@@ -1599,6 +1599,7 @@
         <param name="VERSION">5.6.1-1</param>
         <param name="QTCREATOR_VERSION">4.1.0</param>
         <param name="QTCREATOR_MD5">a26a00b660e4bb5724515b426ce57942</param>
+        <param name="QT_LIBS_AND_CREATOR_FILE">Qt-5.6-gcc64-desktop-qtcreator-installed.tar.bz2</param>
       </params>
       <environmentvariables>
         <variable name="MIRROR">
