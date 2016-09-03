@@ -2650,14 +2650,14 @@
                 <arg>-f</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="install">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="vagrant">
                 <arg>up</arg>
                 <arg>--provision</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="install">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="vagrant">
                 <arg>halt</arg>
                 <runif status="passed" />
