@@ -2655,13 +2655,13 @@
                 <arg>--provision</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="install">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="vagrant">
                 <arg>halt</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="install">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>export DATE=$(date +%Y%m%d_%H%M%S) &amp;&amp; tar cvfz gdp-sdk-#{MACHINE}-virtualbox-image_$DATE.tar.gz -C "/var/go/VirtualBox VMs" "$(cat VMNAME)"</arg>
