@@ -1692,6 +1692,11 @@
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>build</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
