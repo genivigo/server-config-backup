@@ -1748,6 +1748,12 @@
                 <arg>dlt-viewer</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="tar">
+                <arg>-cfj</arg>
+                <arg>dlt-viewer.tar.bz2</arg>
+                <arg>dlt-viewer</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
