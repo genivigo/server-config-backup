@@ -1702,7 +1702,7 @@
                 <arg>../../Qt/bin/qmake ../BuildDltViewer.pro</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="make">
+              <exec command="make" workingdir="dlt-viewer/build">
                 <arg>-j8</arg>
                 <runif status="passed" />
               </exec>
