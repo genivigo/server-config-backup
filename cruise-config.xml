@@ -1708,7 +1708,7 @@
         <jobs>
           <job name="job">
             <tasks>
-              <fetchartifact pipeline="Qt-Creator" stage="stage" job="job" srcfile="Qt-5.6-gcc64-desktop-qtcreator-installed.tar.bz2" dest="qt-tarball">
+              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt-5.6-gcc64-desktop-qtcreator-installed.tar.bz2" dest="qt-tarball">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="bash">
