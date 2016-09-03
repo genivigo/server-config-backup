@@ -1658,6 +1658,7 @@
             <artifacts>
               <artifact src="qt-everywhere-opensource-src-*" />
               <artifact src="qtcreator-bin-*" />
+              <artifact src="#{QT_LIBS_AND_CREATOR_FILE}" />
             </artifacts>
           </job>
         </jobs>
