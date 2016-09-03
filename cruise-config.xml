@@ -1699,7 +1699,7 @@
               </exec>
               <exec command="bash" workingdir="build">
                 <arg>-c</arg>
-                <arg>../Qt/bin/qmake ../BuildDltViewer.pro</arg>
+                <arg>../Qt/5.6/bin/qmake ../BuildDltViewer.pro</arg>
                 <runif status="passed" />
               </exec>
               <exec command="make" workingdir="build">
