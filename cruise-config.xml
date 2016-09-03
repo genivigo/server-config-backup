@@ -1739,13 +1739,13 @@
                 <arg>../Qt/5.6/gcc_64/bin/qmake ../BuildDltViewer.pro</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="make" workingdir="build">
-                <arg>-j8</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="cp">
                 <arg>#{CACHE_DIR}/#{SOURCE_FILE}</arg>
                 <arg>.</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="make" workingdir="build">
+                <arg>-j8</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
