@@ -1692,7 +1692,7 @@
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mkdir" workingdir="dlt-viewer">
+              <exec command="mkdir">
                 <arg>-p</arg>
                 <arg>build</arg>
                 <runif status="passed" />
