@@ -1726,7 +1726,7 @@
               <exec command="rm">
                 <arg>-rf</arg>
                 <arg>build</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="mkdir">
                 <arg>-p</arg>
