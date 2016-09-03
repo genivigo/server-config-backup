@@ -1699,6 +1699,9 @@
       </stage>
     </pipeline>
     <pipeline name="dlt-viewtest" labeltemplate="master:${dlt-viewer.git[:8]}-build:${COUNT}" isLocked="false">
+      <params>
+        <param name="SOURCE_FILE">Qt-5.6-gcc64-desktop-qtcreator-installed.tar.bz2</param>
+      </params>
       <materials>
         <git url="git://git.projects.genivi.org/dlt-viewer.git" materialName="dlt-viewer.git" />
         <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="qtlibs" />
