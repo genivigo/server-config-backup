@@ -1653,7 +1653,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>ga_test</resource>
+              <resource>2131ce1bd33e</resource>
             </resources>
             <artifacts>
               <artifact src="qt-everywhere-opensource-src-*" />
