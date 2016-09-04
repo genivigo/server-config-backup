@@ -2643,14 +2643,14 @@
               <fetchartifact pipeline="" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk-#{MACHINE}.tar.gz">
                 <runif status="passed" />
               </fetchartifact>
+              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt*gcc*desktop*.tar.bz2">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="tar" workingdir="install">
                 <arg>xfz</arg>
                 <arg>../gdp-sdk-#{MACHINE}.tar.gz</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt*gcc*desktop*.tar.bz2">
-                <runif status="passed" />
-              </fetchartifact>
               <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="install">
                 <runif status="passed" />
               </fetchartifact>
