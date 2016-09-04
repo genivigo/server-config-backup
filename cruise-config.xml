@@ -2643,15 +2643,15 @@
               <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt*gcc*desktop*.tar.bz2">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk-#{MACHINE}.tar.gz">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="bash" workingdir="install">
                 <arg>-c</arg>
                 <arg>tar xf ../Qt*gcc*desktop*.tar.bz2</arg>
                 <arg />
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk-#{MACHINE}.tar.gz">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="tar" workingdir="install">
                 <arg>xfz</arg>
                 <arg>../gdp-sdk-#{MACHINE}.tar.gz</arg>
