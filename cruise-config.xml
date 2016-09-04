@@ -2648,10 +2648,10 @@
                 <arg>../gdp-sdk-#{MACHINE}.tar.gz</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="install">
+              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt*gcc*desktop*.tar.bz2">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt*gcc*desktop*.tar.bz2">
+              <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="install">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="bash" workingdir="install">
