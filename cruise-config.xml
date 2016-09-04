@@ -2685,6 +2685,9 @@
                 <arg>-f</arg>
                 <runif status="any" />
               </exec>
+              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt*gcc*desktop*.tar.bz2">
+                <runif status="passed" />
+              </fetchartifact>
             </tasks>
             <resources>
               <resource>vagrant</resource>
