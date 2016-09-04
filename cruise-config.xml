@@ -433,6 +433,7 @@
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <pipeline pipelineName="GDP-Yocto-Minnowboard_SDK" stageName="build" materialName="yocto-sdk-minnowboard" />
         <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
+        <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
       </materials>
     </pipeline>
     <pipeline name="GDP-SDK-qemux86-64" isLocked="false" template="GDP_SDK_generic">
