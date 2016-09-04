@@ -2656,14 +2656,14 @@
                 <arg>-f</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt*gcc*desktop*.tar.bz2">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="vagrant">
                 <arg>up</arg>
                 <arg>--provision</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt*gcc*desktop*.tar.bz2">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="vagrant">
                 <arg>halt</arg>
                 <runif status="passed" />
