@@ -2654,15 +2654,15 @@
               <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt*gcc*desktop*.tar.bz2">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="vagrant">
-                <arg>destroy</arg>
-                <arg>-f</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash" workingdir="install">
                 <arg>-c</arg>
                 <arg>tar xf ../Qt*gcc*desktop*.tar.bz2</arg>
                 <arg />
+                <runif status="passed" />
+              </exec>
+              <exec command="vagrant">
+                <arg>destroy</arg>
+                <arg>-f</arg>
                 <runif status="passed" />
               </exec>
               <exec command="vagrant">
