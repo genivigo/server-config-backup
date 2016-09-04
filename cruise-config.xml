@@ -446,6 +446,7 @@
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <pipeline pipelineName="GDP-Yocto-qemux86-64_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
         <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
+        <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
       </materials>
     </pipeline>
     <pipeline name="Eclipse-for-SDK-2">
