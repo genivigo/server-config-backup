@@ -2688,6 +2688,12 @@
                 <arg>-f</arg>
                 <runif status="any" />
               </exec>
+              <exec command="bash" workingdir="install">
+                <arg>-c</arg>
+                <arg>tar xf ../Qt*gcc*desktop*.tar.bz2</arg>
+                <arg />
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>vagrant</resource>
