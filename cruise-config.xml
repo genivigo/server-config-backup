@@ -2651,15 +2651,15 @@
                 <arg>../gdp-sdk-#{MACHINE}.tar.gz</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="install">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="bash" workingdir="install">
                 <arg>-c</arg>
                 <arg>tar xf ../Qt*gcc*desktop*.tar.bz2</arg>
                 <arg />
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="install">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="vagrant">
                 <arg>destroy</arg>
                 <arg>-f</arg>
