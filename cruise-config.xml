@@ -2672,16 +2672,16 @@
                 <arg>DATE=$(date +%Y%m%d_%H%M%S) &amp;&amp; SIZE=$(du -hs gdp-sdk*virtualbox-image*.tar.gz | awk '{print $1}') &amp;&amp; mv gdp-sdk-#{MACHINE}-virtualbox-image gdp-sdk-#{MACHINE}-virtualbox-image_$DATE_\($SIZE\).tar.gz</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="vagrant">
-                <arg>destroy</arg>
-                <arg>-f</arg>
-                <runif status="any" />
-              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>f="/var/go/VirtualBox VMs/buildinfo.txt" &amp;&amp; echo -n "VM build completed: " &gt; "$f" &amp;&amp; date &gt;&gt; "$f" &amp;&amp; env &gt;&gt;"$f"</arg>
                 <arg />
                 <runif status="passed" />
+              </exec>
+              <exec command="vagrant">
+                <arg>destroy</arg>
+                <arg>-f</arg>
+                <runif status="any" />
               </exec>
             </tasks>
             <resources>
