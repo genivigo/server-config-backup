@@ -2664,13 +2664,13 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>tar cvfz gdp-sdk-#{MACHINE}-virtualbox-image -C "/var/go/VirtualBox VMs" "$(cat VMNAME)"</arg>
+                <arg>f="/var/go/VirtualBox VMs/buildinfo.txt" &amp;&amp; echo -n "VM build completed: " &gt; "$f" &amp;&amp; date &gt;&gt; "$f" &amp;&amp; env &gt;&gt;"$f"</arg>
+                <arg />
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>f="/var/go/VirtualBox VMs/buildinfo.txt" &amp;&amp; echo -n "VM build completed: " &gt; "$f" &amp;&amp; date &gt;&gt; "$f" &amp;&amp; env &gt;&gt;"$f"</arg>
-                <arg />
+                <arg>tar cvfz gdp-sdk-#{MACHINE}-virtualbox-image -C "/var/go/VirtualBox VMs" "$(cat VMNAME)"</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
