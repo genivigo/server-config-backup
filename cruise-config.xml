@@ -2664,7 +2664,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>f="/var/go/VirtualBox VMs/buildinfo.txt/$(cat VMNAME)" &amp;&amp; echo -n "VM build completed: " &gt; "$f" &amp;&amp; date &gt;&gt; "$f" &amp;&amp; env &gt;&gt;"$f"</arg>
+                <arg>cd "/var/go/VirtualBox VMs/$(cat VMNAME)" &amp;&amp; f=buildinfo.txt &amp;&amp; echo -n "VM build completed: " &gt; "$f" &amp;&amp; date &gt;&gt; "$f" &amp;&amp; env &gt;&gt;"$f"</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
