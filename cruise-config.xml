@@ -2680,14 +2680,14 @@
                 <arg>DATE=$(date +%Y%m%d_%H%M%S) &amp;&amp; SIZE=$(du -hs vimage_temp | awk '{print $1}') &amp;&amp; mv vimage_temp gdp-sdk-#{MACHINE}-virtualbox-image_$DATE_\($SIZE\).tar.gz</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt*gcc*desktop*.tar.bz2">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="vagrant">
                 <arg>destroy</arg>
                 <arg>-f</arg>
                 <runif status="any" />
               </exec>
-              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt*gcc*desktop*.tar.bz2">
-                <runif status="passed" />
-              </fetchartifact>
             </tasks>
             <resources>
               <resource>vagrant</resource>
