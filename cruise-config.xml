@@ -915,7 +915,8 @@
               </exec>
               <exec command="cp">
                 <arg>MPL.txt</arg>
-                <arg>build/dlt-viewer/LICENSE</arg>
+                <arg>LICENSE.txt</arg>
+                <arg>build/dlt-viewer/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="tar" workingdir="build">
