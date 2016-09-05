@@ -919,6 +919,11 @@
                 <arg>dlt-viewer</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="cp">
+                <arg>MPL.txt</arg>
+                <arg>build/dlt-viewer/</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <artifacts>
               <artifact src="build/dlt-viewer/*" dest="dlt-viewer" />
