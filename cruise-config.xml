@@ -922,9 +922,6 @@
                 <runif status="passed" />
               </exec>
             </tasks>
-            <resources>
-              <resource>ga_test</resource>
-            </resources>
             <artifacts>
               <artifact src="build/dlt-viewer/*" dest="dlt-viewer" />
               <artifact src="build/dlt-viewer.tar.bz2" />
