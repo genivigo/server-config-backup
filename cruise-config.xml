@@ -908,7 +908,7 @@
                 <arg>dlt-viewer</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="build/release">
+              <exec command="bash" workingdir="build/dlt-viewer">
                 <arg>-c</arg>
                 <arg>cat &lt;&lt;EOT &gt;SOURCE</arg>
                 <arg>This software is licensed under Mozilla Public License, Version 2.0</arg>
