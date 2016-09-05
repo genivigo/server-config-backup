@@ -923,8 +923,8 @@
                 <arg>Per clause 3.2 (a) in MPLv2 you are hereby informed that the source code for this program is available</arg>
                 <arg>for download at:</arg>
                 <arg>`</arg>
-                <arg>http://git.projects.genivi.org/?p=dlt-viewer.git;a=summary</arg>
-                <arg>(Git clone URL: git://git.projects.genivi.org/dlt-viewer.git)</arg>
+                <arg>#{SOURCE_WEB_URL}</arg>
+                <arg>(Git clone URL: #{SOURCE_CLONE_URL})</arg>
                 <arg>EOT</arg>
                 <runif status="passed" />
               </exec>
