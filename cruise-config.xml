@@ -860,6 +860,8 @@
       <params>
         <param name="QT_LIBS_ARCHIVE">Qt-5.6-gcc64-desktop-qtcreator-installed.tar.bz2</param>
         <param name="CACHE_DIR">/var/cache/goartifacts</param>
+        <param name="SOURCE_WEB_URL">http://git.projects.genivi.org/?p=dlt-viewer.git;a=summary</param>
+        <param name="SOURCE_CLONE_URL">git://git.projects.genivi.org/dlt-viewer.git</param>
       </params>
       <materials>
         <git url="git://git.projects.genivi.org/dlt-viewer.git" materialName="dlt-viewer.git" />
