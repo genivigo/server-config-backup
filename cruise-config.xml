@@ -910,7 +910,7 @@
               </exec>
               <exec command="bash" workingdir="build/dlt-viewer">
                 <arg>-c</arg>
-                <arg>echo -e "The source code for this program is available for download at:\n\n#{SOURCE_WEB_URL}\n(Git clone URL: #{SOURCE_CLONE_URL})\n\n(MPLv2 clause 3.2 (a))" &gt;SOURCE</arg>
+                <arg>echo -e "The source code for this program is available for download at:\n\n#{SOURCE_WEB_URL}\n(Git clone URL: #{SOURCE_CLONE_URL})\n\n(MPLv2 clause 3.2 (a))" &gt;SOURCE.txt</arg>
                 <runif status="passed" />
               </exec>
               <exec command="cp">
