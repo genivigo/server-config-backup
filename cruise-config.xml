@@ -908,12 +908,6 @@
                 <arg>dlt-viewer</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="tar" workingdir="build">
-                <arg>cjf</arg>
-                <arg>dlt-viewer.tar.bz2</arg>
-                <arg>dlt-viewer</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash" workingdir="build/release">
                 <arg>-c</arg>
                 <arg>cat &lt;&lt;EOT &gt;SOURCE</arg>
@@ -926,6 +920,12 @@
                 <arg>#{SOURCE_WEB_URL}</arg>
                 <arg>(Git clone URL: #{SOURCE_CLONE_URL})</arg>
                 <arg>EOT</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="tar" workingdir="build">
+                <arg>cjf</arg>
+                <arg>dlt-viewer.tar.bz2</arg>
+                <arg>dlt-viewer</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
