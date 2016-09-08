@@ -405,7 +405,7 @@
   <pipelines group="GDP_Developer_Environment">
     <authorization>
       <view>
-        <user>buildmonitor</user>
+        <user>EBoto</user>
       </view>
       <admins>
         <role>GDP_Developer</role>
