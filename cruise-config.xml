@@ -405,11 +405,8 @@
   <pipelines group="GDP_Developer_Environment">
     <authorization>
       <view>
-        <role>GDP_Developer</role>
+        <user>buildmonitor</user>
       </view>
-      <operate>
-        <role>GDP_Developer</role>
-      </operate>
       <admins>
         <role>GDP_Developer</role>
       </admins>
