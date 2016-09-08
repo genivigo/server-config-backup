@@ -2006,6 +2006,7 @@
         </admins>
       </authorization>
       <stage name="build">
+        <approval type="manual" />
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
