@@ -1366,22 +1366,6 @@
         <git url="git://github.com/genivi/genivi-dev-platform" />
       </materials>
     </pipeline>
-    <pipeline name="Release_Test" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>minnowboard</value>
-        </variable>
-        <variable name="BRANCH">
-          <value>master</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>master</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
-      </materials>
-    </pipeline>
     <pipeline name="Francalab-Eclipse-VM-2">
       <environmentvariables>
         <variable name="ECLIPSE_INSTALL_DIR">
