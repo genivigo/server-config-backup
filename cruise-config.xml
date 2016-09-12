@@ -1904,6 +1904,7 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="GDP_Spins" />
   <templates>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
