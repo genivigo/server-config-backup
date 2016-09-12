@@ -27,6 +27,7 @@
             <user>GunnarA</user>
             <user>RobertM</user>
             <user>EBoto</user>
+            <user>AndreasR</user>
           </users>
         </role>
         <role name="Developer">
@@ -50,6 +51,7 @@
             <user>RobertM</user>
             <user>EBoto</user>
             <user>buildmonitor</user>
+            <user>AndreasR</user>
           </users>
         </role>
         <role name="GDP_Developer">
