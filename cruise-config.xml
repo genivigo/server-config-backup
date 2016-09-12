@@ -407,8 +407,8 @@
   <pipelines group="GDP_Developer_Environment">
     <authorization>
       <view>
-        <user>EBoto</user>
         <user>AndreasR</user>
+        <user>EBoto</user>
       </view>
       <admins>
         <role>GDP_Developer</role>
