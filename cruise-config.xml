@@ -2694,7 +2694,7 @@
               <fetchartifact pipeline="" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk-#{MACHINE}.tar.gz">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="tar" workingdir="install">
+              <exec command="tar" workingdir="homedir">
                 <arg>xfz</arg>
                 <arg>../gdp-sdk-#{MACHINE}.tar.gz</arg>
                 <runif status="passed" />
