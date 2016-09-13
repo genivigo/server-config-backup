@@ -564,7 +564,7 @@
       <timer onlyOnChanges="true">0 0 1 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
-          <value>qemux86-64</value>
+          <value>porter</value>
         </variable>
         <variable name="BUILD_SDK">
           <value>true</value>
