@@ -2686,10 +2686,9 @@
               <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt-5.6-gcc64-desktop-qtcreator-installed.tar.bz2">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="bash" workingdir="install">
+              <exec command="bash" workingdir="homedir">
                 <arg>-c</arg>
                 <arg>tar xf ../Qt*gcc*desktop*.tar.bz2</arg>
-                <arg />
                 <runif status="passed" />
               </exec>
               <fetchartifact pipeline="" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk-#{MACHINE}.tar.gz">
