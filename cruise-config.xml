@@ -576,7 +576,7 @@
     </pipeline>
     <pipeline name="GDP-SDK-porter" isLocked="false" template="GDP_SDK_generic">
       <params>
-        <param name="MACHINE">qemux86-64</param>
+        <param name="MACHINE">porter</param>
       </params>
       <timer>0 10 9 23 8 ?</timer>
       <materials>
