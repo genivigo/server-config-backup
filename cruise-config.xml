@@ -574,6 +574,19 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-SDK-porter" isLocked="false" template="GDP_SDK_generic">
+      <params>
+        <param name="MACHINE">qemux86-64</param>
+      </params>
+      <timer>0 10 9 23 8 ?</timer>
+      <materials>
+        <git url="git://github.com/gunnarx/gdp_sde" materialName="gdp_sde" />
+        <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
+        <pipeline pipelineName="GDP-Yocto-qemux86-64_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
+        <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
+        <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Components">
     <authorization>
