@@ -2716,14 +2716,14 @@
                 <arg>halt</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>cd "/var/go/VirtualBox VMs/$(cat VMNAME)" &amp;&amp; f=buildinfo.txt &amp;&amp; echo -n "VM build completed: " &gt;"$f" &amp;&amp; hostname &gt;&gt; "$f" &amp;&amp; date &gt;&gt; "$f" &amp;&amp; env &gt;&gt;"$f"</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash" workingdir="homedir/dlt-viewer">
                 <arg>-c</arg>
                 <arg>./install-dlt-viewer.sh</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cd "/var/go/VirtualBox VMs/$(cat VMNAME)" &amp;&amp; f=buildinfo.txt &amp;&amp; echo -n "VM build completed: " &gt;"$f" &amp;&amp; hostname &gt;&gt; "$f" &amp;&amp; date &gt;&gt; "$f" &amp;&amp; env &gt;&gt;"$f"</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
