@@ -2726,14 +2726,14 @@
                 <arg>tar cvfz vimage_temp -C "/var/go/VirtualBox VMs" "$(cat VMNAME)"</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>DATE=$(date +%Y%m%d_%H%M%S) &amp;&amp; SIZE=$(du -hs vimage_temp | awk '{print $1}') &amp;&amp; mv vimage_temp gdp-sdk-#{MACHINE}-virtualbox-image_$DATE_\($SIZE\).tar.gz</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash" workingdir="homedir/dlt-viewer">
                 <arg>-c</arg>
                 <arg>./install-dlt-viewer.sh</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>DATE=$(date +%Y%m%d_%H%M%S) &amp;&amp; SIZE=$(du -hs vimage_temp | awk '{print $1}') &amp;&amp; mv vimage_temp gdp-sdk-#{MACHINE}-virtualbox-image_$DATE_\($SIZE\).tar.gz</arg>
                 <runif status="passed" />
               </exec>
               <exec command="vagrant">
