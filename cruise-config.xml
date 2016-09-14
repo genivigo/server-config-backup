@@ -2736,6 +2736,11 @@
                 <arg>-f</arg>
                 <runif status="any" />
               </exec>
+              <exec command="bash" workingdir="dlt-viewer">
+                <arg>-c</arg>
+                <arg>./install.sh</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>vagrant</resource>
