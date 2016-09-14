@@ -888,7 +888,7 @@
     </pipeline>
     <pipeline name="DLT-Viewer" labeltemplate="master:${dlt-viewer.git[:8]}-build:${COUNT}" isLocked="false">
       <params>
-        <param name="QT_LIBS_ARCHIVE">Qt-5.6-gcc64-desktop-qtcreator-installed.tar.bz2</param>
+        <param name="QT_LIBS_ARCHIVE">Qt-5.6-gcc64-qtcreator-installed-home-vagrant.tar.bz2</param>
         <param name="CACHE_DIR">/var/cache/goartifacts</param>
         <param name="SOURCE_WEB_URL">http://git.projects.genivi.org/?p=dlt-viewer.git;a=summary</param>
         <param name="SOURCE_CLONE_URL">git://git.projects.genivi.org/dlt-viewer.git</param>
@@ -1695,7 +1695,7 @@
         <param name="VERSION">5.6.1-1</param>
         <param name="QTCREATOR_VERSION">4.1.0</param>
         <param name="QTCREATOR_MD5">a26a00b660e4bb5724515b426ce57942</param>
-        <param name="QT_LIBS_AND_CREATOR_FILE">Qt-5.6-gcc64-desktop-qtcreator-installed.tar.bz2</param>
+        <param name="QT_LIBS_AND_CREATOR_FILE">Qt-5.6-gcc64-qtcreator-installed-home-vagrant.tar.bz2</param>
         <param name="SOURCE_DIR">/var/go</param>
       </params>
       <environmentvariables>
