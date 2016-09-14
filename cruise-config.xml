@@ -2736,9 +2736,9 @@
                 <arg>-f</arg>
                 <runif status="any" />
               </exec>
-              <exec command="bash" workingdir="dlt-viewer">
+              <exec command="bash" workingdir="homedir/dlt-viewer">
                 <arg>-c</arg>
-                <arg>./install.sh</arg>
+                <arg>./install-dlt-viewer.sh</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
