@@ -2702,14 +2702,14 @@
               <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="homedir">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="vagrant">
-                <arg>destroy</arg>
-                <arg>-f</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash" workingdir="homedir/dlt-viewer">
                 <arg>-c</arg>
                 <arg>../install-dlt-viewer.sh</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="vagrant">
+                <arg>destroy</arg>
+                <arg>-f</arg>
                 <runif status="passed" />
               </exec>
               <exec command="vagrant">
