@@ -2688,7 +2688,7 @@
               </fetchartifact>
               <exec command="bash" workingdir="homedir">
                 <arg>-c</arg>
-                <arg>tar xf ../Qt*gcc*desktop*.tar.bz2</arg>
+                <arg>tar xf ../Qt*.tar.bz2</arg>
                 <runif status="passed" />
               </exec>
               <fetchartifact pipeline="" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk-#{MACHINE}.tar.gz">
