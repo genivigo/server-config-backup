@@ -2709,7 +2709,7 @@
               </exec>
               <exec command="bash" workingdir="homedir/dlt-viewer">
                 <arg>-c</arg>
-                <arg>./install-dlt-viewer.sh</arg>
+                <arg>../install-dlt-viewer.sh</arg>
                 <runif status="passed" />
               </exec>
               <exec command="vagrant">
