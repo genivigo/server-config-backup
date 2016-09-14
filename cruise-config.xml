@@ -1763,7 +1763,7 @@
     <pipeline name="Seed-QtLibs-and-creator">
       <params>
         <param name="MD5">be972d7591b071f7b94b4baaa4a9ab82</param>
-        <param name="QT_LIBS_AND_CREATOR_FILE">Qt-5.6-gcc64-desktop-qtcreator-installed.tar.bz2</param>
+        <param name="QT_LIBS_AND_CREATOR_FILE">Qt-5.6-gcc64-qtcreator-installed-home-vagrant.tar.bz2</param>
         <param name="SOURCE_DIR">/var/go</param>
       </params>
       <materials>
