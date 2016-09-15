@@ -2655,14 +2655,14 @@
                 <arg>chmod 755 */results/sdk/oecore-*toolchain*.sh</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcfile="bin/*_64" dest="gdp_sdk/bin">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>./#{MACHINE}/results/sdk/oecore-*toolchain*.sh -d ./gdp-sdk/yocto-sdk/#{MACHINE}/ -y</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcfile="bin/*_64" dest="gdp_sdk/bin">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="chmod">
                 <arg>-R</arg>
                 <arg>u+r</arg>
