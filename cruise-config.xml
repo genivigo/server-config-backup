@@ -2638,7 +2638,7 @@
               <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcdir="bin" dest="capicxx">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="common-api-cpp-dbus-tools" stage="build" job="build" srcfile="bin" dest="capicxx-dbus">
+              <fetchartifact pipeline="common-api-cpp-dbus-tools" stage="build" job="build" srcdir="bin" dest="capicxx-dbus">
                 <runif status="passed" />
               </fetchartifact>
               <fetchartifact pipeline="common-api-cpp-someip-tools" stage="build" job="build" srcfile="bin" dest="capicxx-someip">
