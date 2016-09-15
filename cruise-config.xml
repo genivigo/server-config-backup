@@ -2660,15 +2660,15 @@
                 <arg>./#{MACHINE}/results/sdk/oecore-*toolchain*.sh -d ./gdp-sdk/yocto-sdk/#{MACHINE}/ -y</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcfile="bin/*_64" dest="gdp_sdk/bin">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="chmod">
                 <arg>-R</arg>
                 <arg>u+r</arg>
                 <arg>gdp-sdk/yocto-sdk</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcfile="bin/*_64" dest="gdp_sdk/bin">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="tar">
                 <arg>cfz</arg>
                 <arg>gdp-sdk-#{MACHINE}.tar.gz</arg>
