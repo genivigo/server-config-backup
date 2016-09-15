@@ -2630,14 +2630,14 @@
                 <arg>rm -rf gdp-sdk ; mkdir gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcfile="bin/*_64" dest="gdp_sdk/bin">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="mv">
                 <arg>eclipse/results/eclipse</arg>
                 <arg>gdp-sdk/</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcfile="bin/*_64" dest="gdp_sdk/bin">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>mv eclipse/results/workspace gdp-sdk/ || true</arg>
