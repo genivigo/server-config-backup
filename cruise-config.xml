@@ -2633,6 +2633,11 @@
                 <arg>rm -rf gdp-sdk ; mkdir gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>gdp_sdk/bin</arg>
+                <runif status="passed" />
+              </exec>
               <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcfile="bin/*_64" dest="gdp_sdk/bin">
                 <runif status="passed" />
               </fetchartifact>
