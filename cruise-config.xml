@@ -446,6 +446,22 @@
         <pipeline pipelineName="GDP-Yocto-Minnowboard_SDK" stageName="build" materialName="yocto-sdk-minnowboard" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-SDK-porter" isLocked="false" template="GDP_SDK_generic">
+      <params>
+        <param name="MACHINE">porter</param>
+      </params>
+      <timer>0 0 4 16 9 ?</timer>
+      <materials>
+        <git url="git://github.com/gunnarx/gdp_sde" materialName="gdp_sde" />
+        <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
+        <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
+        <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
+        <pipeline pipelineName="common-api-cpp-tools" stageName="build" materialName="capicxx-tools" />
+        <pipeline pipelineName="common-api-cpp-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
+        <pipeline pipelineName="common-api-cpp-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
+        <pipeline pipelineName="GDP-Yocto-porter_SDK" stageName="build" materialName="yocto-sdk-porter" />
+      </materials>
+    </pipeline>
     <pipeline name="GDP-SDK-qemux86-64" isLocked="false" template="GDP_SDK_generic">
       <params>
         <param name="MACHINE">qemux86-64</param>
@@ -461,68 +477,6 @@
         <pipeline pipelineName="common-api-cpp-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
         <pipeline pipelineName="GDP-Yocto-qemux86-64_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
       </materials>
-    </pipeline>
-    <pipeline name="Eclipse-for-SDK-2">
-      <params>
-        <param name="BRANCH">cpp_common_api_with_yocto_tools</param>
-      </params>
-      <environmentvariables>
-        <variable name="CACHE_DIR">
-          <value>/var/cache/eia</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/genivi/eclipse_install_automation" branch="#{BRANCH}" materialName="eclipse_install_automation" />
-      </materials>
-      <stage name="stage">
-        <jobs>
-          <job name="job">
-            <environmentvariables>
-              <variable name="ECLIPSE_INSTALL_DIR">
-                <value>autoeclipse</value>
-              </variable>
-              <variable name="ECLIPSE_WORKSPACE_DIR">
-                <value>workspace</value>
-              </variable>
-            </environmentvariables>
-            <tasks>
-              <exec command="rm">
-                <arg>-rf</arg>
-                <arg>"./$ECLIPSE_INSTALL_DIR"</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="mkdir">
-                <arg>-p</arg>
-                <arg>artifacts</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>./script.sh</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>tar cfz artifacts/eclipse.tar.gz "./$ECLIPSE_INSTALL_DIR/eclipse"</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>tar cfz artifacts/eclipse-workspace.tar.gz "./$ECLIPSE_WORKSPACE_DIR"</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>maven</resource>
-            </resources>
-            <artifacts>
-              <artifact src="artifacts" dest="tarballs" />
-              <artifact src="autoeclipse/eclipse" dest="results/" />
-              <artifact src="workspace" dest="results/" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
     </pipeline>
     <pipeline name="GDP-Yocto-raspberrypi2_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_SDK">
       <params>
@@ -583,21 +537,67 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-SDK-porter" isLocked="false" template="GDP_SDK_generic">
+    <pipeline name="Eclipse-for-SDK-2">
       <params>
-        <param name="MACHINE">porter</param>
+        <param name="BRANCH">cpp_common_api_with_yocto_tools</param>
       </params>
-      <timer>0 0 4 16 9 ?</timer>
+      <environmentvariables>
+        <variable name="CACHE_DIR">
+          <value>/var/cache/eia</value>
+        </variable>
+      </environmentvariables>
       <materials>
-        <git url="git://github.com/gunnarx/gdp_sde" materialName="gdp_sde" />
-        <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
-        <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
-        <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
-        <pipeline pipelineName="common-api-cpp-tools" stageName="build" materialName="capicxx-tools" />
-        <pipeline pipelineName="common-api-cpp-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
-        <pipeline pipelineName="common-api-cpp-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
-        <pipeline pipelineName="GDP-Yocto-porter_SDK" stageName="build" materialName="yocto-sdk-porter" />
+        <git url="https://github.com/genivi/eclipse_install_automation" branch="#{BRANCH}" materialName="eclipse_install_automation" />
       </materials>
+      <stage name="stage">
+        <jobs>
+          <job name="job">
+            <environmentvariables>
+              <variable name="ECLIPSE_INSTALL_DIR">
+                <value>autoeclipse</value>
+              </variable>
+              <variable name="ECLIPSE_WORKSPACE_DIR">
+                <value>workspace</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <exec command="rm">
+                <arg>-rf</arg>
+                <arg>"./$ECLIPSE_INSTALL_DIR"</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>artifacts</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>./script.sh</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>tar cfz artifacts/eclipse.tar.gz "./$ECLIPSE_INSTALL_DIR/eclipse"</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>tar cfz artifacts/eclipse-workspace.tar.gz "./$ECLIPSE_WORKSPACE_DIR"</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>maven</resource>
+            </resources>
+            <artifacts>
+              <artifact src="artifacts/" dest="tarballs/" />
+              <artifact src="autoeclipse/eclipse" dest="results/" />
+              <artifact src="workspace" dest="results/" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="Components">
