@@ -2683,15 +2683,15 @@
                 <arg>gdp-sdk/yocto-sdk</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mv capicxx*/{*64,*64.ini} gdp_sdk/bin</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="tar">
                 <arg>cfz</arg>
                 <arg>gdp-sdk-#{MACHINE}.tar.gz</arg>
                 <arg>gdp-sdk</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>mv capicxx*/{*64,*64.ini} gdp_sdk/bin</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
