@@ -2645,14 +2645,14 @@
                 <arg>mv #{MACHINE}/results/genivi-dev-platform-*/license.manifest gdp-sdk/license.manifest.#{MACHINE}</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcfile="bin/*_64" dest="gdp_sdk/bin">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="mkdir">
                 <arg>-p</arg>
                 <arg>gdp-sdk/yocto-sdk/#{MACHINE}</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcfile="bin/*_64" dest="gdp_sdk/bin">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>chmod 755 */results/sdk/oecore-*toolchain*.sh</arg>
