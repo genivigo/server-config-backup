@@ -482,7 +482,6 @@
       <params>
         <param name="branch">master</param>
       </params>
-      <timer onlyOnChanges="true">0 59 23 15 9 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>raspberrypi2</value>
