@@ -2672,7 +2672,7 @@
                 <arg>gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcfile="bin/*_64" dest="homedir/bin">
+              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcfile="bin/*_64" dest="gdp_sdk/bin">
                 <runif status="passed" />
               </fetchartifact>
             </tasks>
