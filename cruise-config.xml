@@ -2659,12 +2659,12 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv #{MACHINE}/results/genivi-dev-platform-*/license.manifest gdp-sdk/license.manifest.#{MACHINE}</arg>
+                <arg>mv capicxx*/{*64,*64.ini} gdp_sdk/bin</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv capicxx*/{*64,*64.ini} gdp_sdk/bin</arg>
+                <arg>mv #{MACHINE}/results/genivi-dev-platform-*/license.manifest gdp-sdk/license.manifest.#{MACHINE}</arg>
                 <runif status="passed" />
               </exec>
               <exec command="mkdir">
