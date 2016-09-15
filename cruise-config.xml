@@ -2705,6 +2705,7 @@
               </fetchartifact>
               <exec command="bash" workingdir="homedir/dlt-viewer">
                 <arg>-c</arg>
+                <arg>GO_QT_LOCATION=$PWD/homedir/Qt-5.6/5.6/gcc_64</arg>
                 <arg>../install-dlt-viewer.sh /home/vagrant/Qt-5.6/5.6/gcc_64</arg>
                 <runif status="passed" />
               </exec>
