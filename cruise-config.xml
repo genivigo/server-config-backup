@@ -2674,12 +2674,12 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>./#{MACHINE}/results/sdk/oecore-*toolchain*.sh -d ./gdp-sdk/yocto-sdk/#{MACHINE}/ -y</arg>
+                <arg>mv capicxx*/{*64,*64.ini} gdp_sdk/bin</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv capicxx*/{*64,*64.ini} gdp_sdk/bin</arg>
+                <arg>./#{MACHINE}/results/sdk/oecore-*toolchain*.sh -d ./gdp-sdk/yocto-sdk/#{MACHINE}/ -y</arg>
                 <runif status="passed" />
               </exec>
               <exec command="chmod">
