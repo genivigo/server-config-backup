@@ -2666,15 +2666,15 @@
                 <arg>gdp-sdk/yocto-sdk</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcfile="bin/*_64" dest="gdp_sdk/bin">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="tar">
                 <arg>cfz</arg>
                 <arg>gdp-sdk-#{MACHINE}.tar.gz</arg>
                 <arg>gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcfile="bin/*_64" dest="gdp_sdk/bin">
-                <runif status="passed" />
-              </fetchartifact>
             </tasks>
             <resources>
               <resource>ga_test</resource>
