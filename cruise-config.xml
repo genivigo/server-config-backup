@@ -426,6 +426,7 @@
         <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
         <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
         <pipeline pipelineName="common-api-cpp-tools" stageName="build" materialName="capicxx-tools" />
+        <pipeline pipelineName="common-api-cpp-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
       </materials>
     </pipeline>
     <pipeline name="GDP-SDK-minnowboard" isLocked="false" template="GDP_SDK_generic">
