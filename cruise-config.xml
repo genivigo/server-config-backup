@@ -2629,14 +2629,14 @@
               <fetchartifact pipeline="common-api-cpp-dbus-tools" stage="build" job="build" srcdir="bin" dest="capicxx-dbus">
                 <runif status="passed" />
               </fetchartifact>
+              <fetchartifact pipeline="common-api-cpp-someip-tools" stage="build" job="build" srcdir="bin" dest="capicxx-someip">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>rm -rf gdp-sdk ; mkdir -p gdp-sdk/bin</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="common-api-cpp-someip-tools" stage="build" job="build" srcdir="bin" dest="capicxx-someip">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>mv capicxx*/bin/{*64,*64.ini} gdp_sdk/bin</arg>
