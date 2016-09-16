@@ -2625,7 +2625,7 @@
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>rm -rf gdp-sdk ; mkdir gdp-sdk</arg>
+                <arg>rm -rf gdp-sdk ; mkdir -p gdp-sdk/bin</arg>
                 <runif status="passed" />
               </exec>
               <exec command="mkdir">
