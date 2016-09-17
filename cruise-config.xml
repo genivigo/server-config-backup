@@ -2751,6 +2751,9 @@
               <variable name="MACHINE">
                 <value>#{MACHINE}</value>
               </variable>
+              <variable name="VMNAME">
+                <value>gdp-sdk-#{MACHINE}</value>
+              </variable>
             </environmentvariables>
             <tasks>
               <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt-5.6-gcc64-qtcreator-installed-home-vagrant.tar.bz2">
