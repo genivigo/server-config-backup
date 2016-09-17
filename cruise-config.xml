@@ -1959,6 +1959,7 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="Upload" />
   <templates>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
