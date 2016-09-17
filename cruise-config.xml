@@ -2812,7 +2812,7 @@
               <resource>vagrant</resource>
             </resources>
             <artifacts>
-              <artifact src="gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz" dest="result" />
+              <artifact src="gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz" dest="results" />
             </artifacts>
           </job>
         </jobs>
