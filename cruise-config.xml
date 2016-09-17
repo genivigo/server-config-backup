@@ -1983,7 +1983,7 @@
         <jobs>
           <job name="job">
             <tasks>
-              <fetchartifact pipeline="GDP-SDK-porter" stage="CreateVM" job="run_vagrant" srcfile="gdp-sdk-*.tar.gz">
+              <fetchartifact pipeline="GDP-SDK-porter" stage="CreateVM" job="run_vagrant" srcfile="result" dest="porter">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="bash">
