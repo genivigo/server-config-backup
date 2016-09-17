@@ -1987,6 +1987,11 @@
               <fetchartifact pipeline="GDP-SDK-porter" stage="CreateVM" job="run_vagrant" srcfile="gdp-sdk-*.tar.gz">
                 <runif status="passed" />
               </fetchartifact>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>~/upload gdp-sdk*.tar.gz</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
