@@ -420,7 +420,7 @@
       </params>
       <timer>0 0 4 16 9 ?</timer>
       <environmentvariables>
-        <variable name="HOSTNAME">
+        <variable name="VMNAME">
           <value>gdp-sdk-#{MACHINE}</value>
         </variable>
       </environmentvariables>
