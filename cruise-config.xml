@@ -1975,6 +1975,7 @@
       <materials>
         <git url="git://github.com/genivi/baseline_ci_helper" autoUpdate="false" />
         <pipeline pipelineName="GDP-SDK-raspberrypi2" stageName="CreateVM" materialName="sdk-rpi" />
+        <pipeline pipelineName="GDP-SDK-minnowboard" stageName="CreateVM" materialName="sdk-minnowboard" />
       </materials>
       <stage name="stage">
         <jobs>
