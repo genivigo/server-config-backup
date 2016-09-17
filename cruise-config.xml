@@ -2840,6 +2840,7 @@
     <agent hostname="14dd4c9f3385" ipaddress="172.17.0.81" uuid="6bb7281c-682f-4659-8370-ffa4048d03df">
       <resources>
         <resource>vagrant</resource>
+        <resource>uploader</resource>
       </resources>
     </agent>
   </agents>
