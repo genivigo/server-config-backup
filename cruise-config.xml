@@ -2741,7 +2741,7 @@
       </stage>
       <stage name="CreateVM">
         <environmentvariables>
-          <variable name="HOSTNAME">
+          <variable name="VMNAME">
             <value>gdp-sdk-#{MACHINE}</value>
           </variable>
         </environmentvariables>
