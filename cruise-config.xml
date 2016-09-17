@@ -1977,6 +1977,7 @@
         <pipeline pipelineName="GDP-SDK-raspberrypi2" stageName="CreateVM" materialName="sdk-rpi" />
         <pipeline pipelineName="GDP-SDK-minnowboard" stageName="CreateVM" materialName="sdk-minnowboard" />
         <pipeline pipelineName="GDP-SDK-porter" stageName="CreateVM" materialName="sdk-porter" />
+        <pipeline pipelineName="GDP-SDK-qemux86-64" stageName="CreateVM" materialName="sdk-qemu" />
       </materials>
       <stage name="stage">
         <jobs>
