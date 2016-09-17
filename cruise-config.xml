@@ -1976,7 +1976,8 @@
         <user>GunnarA</user>
       </admins>
     </authorization>
-    <pipeline name="upload1">
+    <pipeline name="upload1" isLocked="false">
+      <timer>0 0 7 18 9 ?</timer>
       <materials>
         <pipeline pipelineName="GDP-SDK-raspberrypi2" stageName="CreateVM" materialName="sdk-rpi" />
         <pipeline pipelineName="GDP-SDK-minnowboard" stageName="CreateVM" materialName="sdk-minnowboard" />
