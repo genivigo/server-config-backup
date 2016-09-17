@@ -1971,6 +1971,20 @@
         <user>GunnarA</user>
       </admins>
     </authorization>
+    <pipeline name="upload1">
+      <materials>
+        <git url="git://github.com/genivi/baseline_ci_helper" autoUpdate="false" />
+      </materials>
+      <stage name="stage">
+        <jobs>
+          <job name="job">
+            <tasks>
+              <exec command="true" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <templates>
     <pipeline name="Yocto_GDP_generic">
