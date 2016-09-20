@@ -2027,7 +2027,19 @@
       </stage>
     </pipeline>
   </pipelines>
-  <pipelines group="Administration_for_ea2aed3f9694" />
+  <pipelines group="Administration_for_ea2aed3f9694">
+    <authorization>
+      <view>
+        <user>tmohammad</user>
+      </view>
+      <operate>
+        <user>tmohammad</user>
+      </operate>
+      <admins>
+        <user>tmohammad</user>
+      </admins>
+    </authorization>
+  </pipelines>
   <templates>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
