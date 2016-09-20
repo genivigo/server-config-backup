@@ -2005,7 +2005,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>(cd results-qemux86_64 &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
+                <arg>(cd qemux86_64/results &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
