@@ -2030,13 +2030,14 @@
   <pipelines group="Administration_for_ea2aed3f9694">
     <authorization>
       <view>
-        <user>tmohammad</user>
+        <role>GDP_Developer</role>
       </view>
       <operate>
-        <user>tmohammad</user>
+        <role>GDP_Developer</role>
       </operate>
       <admins>
         <user>tmohammad</user>
+        <role>GDP_Developer</role>
       </admins>
     </authorization>
   </pipelines>
