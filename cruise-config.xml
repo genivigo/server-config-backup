@@ -2050,6 +2050,9 @@
             <tasks>
               <exec command="ls" />
             </tasks>
+            <resources>
+              <resource>ea2aed3f9694</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
