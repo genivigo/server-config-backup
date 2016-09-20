@@ -1995,7 +1995,7 @@
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>md5sum porter/results/gdp-sdk*.tar.gz</arg>
+                <arg>md5sum */results/gdp-sdk*.tar.gz</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
