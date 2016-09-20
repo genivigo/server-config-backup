@@ -2913,6 +2913,7 @@
         <resource>uploader</resource>
       </resources>
     </agent>
+    <agent hostname="ea2aed3f9694" ipaddress="83.218.80.242" uuid="bbe66118-a980-4bed-9736-4b07f5185e50" />
   </agents>
 </cruise>
 
