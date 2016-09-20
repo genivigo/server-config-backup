@@ -2000,7 +2000,7 @@
               </exec>
               <exec command="bash" workingdir="results">
                 <arg>-c</arg>
-                <arg>~/upload gdp-sdk*.tar.gz</arg>
+                <arg>~/upload gdp-sdk-porter*.tar.gz || true</arg>
                 <runif status="any" />
               </exec>
             </tasks>
