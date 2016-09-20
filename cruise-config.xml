@@ -2913,7 +2913,11 @@
         <resource>uploader</resource>
       </resources>
     </agent>
-    <agent hostname="ea2aed3f9694" ipaddress="172.17.0.2" uuid="bbe66118-a980-4bed-9736-4b07f5185e50" />
+    <agent hostname="ea2aed3f9694" ipaddress="172.17.0.2" uuid="bbe66118-a980-4bed-9736-4b07f5185e50">
+      <resources>
+        <resource>yocto_build</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
