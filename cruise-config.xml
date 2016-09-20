@@ -2018,11 +2018,6 @@
                 <arg>(cd raspberrypi2/results &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
                 <runif status="any" />
               </exec>
-              <exec command="mv">
-                <arg>results</arg>
-                <arg>results-porter</arg>
-                <runif status="passed" />
-              </exec>
             </tasks>
             <resources>
               <resource>uploader</resource>
