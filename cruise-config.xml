@@ -2001,7 +2001,7 @@
               <exec command="bash" workingdir="results">
                 <arg>-c</arg>
                 <arg>~/upload gdp-sdk*.tar.gz</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
             </tasks>
             <resources>
