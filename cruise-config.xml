@@ -2562,6 +2562,7 @@
             </tasks>
             <resources>
               <resource>yocto_build</resource>
+              <resource>new_test</resource>
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
