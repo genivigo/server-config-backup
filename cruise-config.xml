@@ -2000,7 +2000,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>(cd results-porter &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
+                <arg>(cd porter/results &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
