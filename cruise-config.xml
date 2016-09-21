@@ -2876,7 +2876,7 @@
         <jobs>
           <job name="job">
             <tasks>
-              <fetchartifact pipeline="GDP-SDK-porter" stage="CreateVM" job="run_vagrant" srcdir="results" dest="porter">
+              <fetchartifact pipeline="GDP-SDK-#{MACHINE}" stage="CreateVM" job="run_vagrant" srcdir="results" dest="#{MACHINE}">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="bash">
