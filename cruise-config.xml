@@ -1978,7 +1978,7 @@
         <user>GunnarA</user>
       </admins>
     </authorization>
-    <pipeline name="upload1" isLocked="false">
+    <pipeline name="upload1" isLocked="false" template="upload-sde">
       <timer>0 0 7 18 9 ?</timer>
       <materials>
         <pipeline pipelineName="GDP-SDK-raspberrypi2" stageName="CreateVM" materialName="sdk-rpi" />
@@ -1986,45 +1986,6 @@
         <pipeline pipelineName="GDP-SDK-porter" stageName="CreateVM" materialName="sdk-porter" />
         <pipeline pipelineName="GDP-SDK-qemux86-64" stageName="CreateVM" materialName="sdk-qemu" />
       </materials>
-      <stage name="stage">
-        <jobs>
-          <job name="job">
-            <tasks>
-              <fetchartifact pipeline="GDP-SDK-porter" stage="CreateVM" job="run_vagrant" srcdir="results" dest="porter">
-                <runif status="passed" />
-              </fetchartifact>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>md5sum */results/gdp-sdk*.tar.gz</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>(cd porter/results &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
-                <runif status="any" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>(cd qemux86_64/results &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
-                <runif status="any" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>(cd minnowboard/results &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
-                <runif status="any" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>(cd raspberrypi2/results &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
-                <runif status="any" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>uploader</resource>
-            </resources>
-          </job>
-        </jobs>
-      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="Administration_for_ea2aed3f9694">
@@ -2902,6 +2863,47 @@
             </tasks>
             <resources>
               <resource>ga_test</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="upload-sde">
+      <stage name="stage">
+        <jobs>
+          <job name="job">
+            <tasks>
+              <fetchartifact pipeline="GDP-SDK-porter" stage="CreateVM" job="run_vagrant" srcdir="results" dest="porter">
+                <runif status="passed" />
+              </fetchartifact>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>md5sum */results/gdp-sdk*.tar.gz</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>(cd porter/results &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>(cd qemux86_64/results &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>(cd minnowboard/results &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>(cd raspberrypi2/results &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
+                <runif status="any" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>uploader</resource>
             </resources>
           </job>
         </jobs>
