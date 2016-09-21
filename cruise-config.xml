@@ -1969,11 +1969,8 @@
   <pipelines group="Upload">
     <authorization>
       <view>
-        <user>GunnarA</user>
+        <role>GDP_Developer</role>
       </view>
-      <operate>
-        <user>GunnarA</user>
-      </operate>
       <admins>
         <user>GunnarA</user>
       </admins>
