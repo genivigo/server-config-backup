@@ -1984,10 +1984,43 @@
       </params>
       <timer>0 0 7 18 9 ?</timer>
       <materials>
-        <pipeline pipelineName="GDP-SDK-raspberrypi2" stageName="CreateVM" materialName="sdk-rpi" />
-        <pipeline pipelineName="GDP-SDK-minnowboard" stageName="CreateVM" materialName="sdk-minnowboard" />
-        <pipeline pipelineName="GDP-SDK-porter" stageName="CreateVM" materialName="sdk-porter" />
-        <pipeline pipelineName="GDP-SDK-qemux86-64" stageName="CreateVM" materialName="sdk-qemu" />
+        <pipeline pipelineName="GDP-SDK-#{MACHINE}" stageName="CreateVM" materialName="sdk-porter" />
+      </materials>
+    </pipeline>
+    <pipeline name="upload-porter" isLocked="false" template="upload-sde">
+      <params>
+        <param name="MACHINE">porter</param>
+      </params>
+      <timer>0 0 7 18 9 ?</timer>
+      <materials>
+        <pipeline pipelineName="GDP-SDK-#{MACHINE}" stageName="CreateVM" materialName="sdk-porter" />
+      </materials>
+    </pipeline>
+    <pipeline name="upload-qemux86-64" isLocked="false" template="upload-sde">
+      <params>
+        <param name="MACHINE">qemux86-64</param>
+      </params>
+      <timer>0 0 7 18 9 ?</timer>
+      <materials>
+        <pipeline pipelineName="GDP-SDK-#{MACHINE}" stageName="CreateVM" materialName="sdk-qemux86-64" />
+      </materials>
+    </pipeline>
+    <pipeline name="upload-minnowboard" isLocked="false" template="upload-sde">
+      <params>
+        <param name="MACHINE">minnowboard</param>
+      </params>
+      <timer>0 0 7 18 9 ?</timer>
+      <materials>
+        <pipeline pipelineName="GDP-SDK-#{MACHINE}" stageName="CreateVM" materialName="sdk-minnowboard" />
+      </materials>
+    </pipeline>
+    <pipeline name="upload-raspberrypi2" isLocked="false" template="upload-sde">
+      <params>
+        <param name="MACHINE">raspberrypi2</param>
+      </params>
+      <timer>0 0 7 18 9 ?</timer>
+      <materials>
+        <pipeline pipelineName="GDP-SDK-#{MACHINE}" stageName="CreateVM" materialName="sdk-raspberrypi2" />
       </materials>
     </pipeline>
   </pipelines>
