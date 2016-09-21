@@ -2889,11 +2889,6 @@
                 <arg>(cd #{MACHINE}/results &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
                 <runif status="any" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>(cd raspberrypi2/results &amp;&amp; ~/upload gdp-sdk*.tar.gz) || true</arg>
-                <runif status="any" />
-              </exec>
             </tasks>
             <resources>
               <resource>uploader</resource>
