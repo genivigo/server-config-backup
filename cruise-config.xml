@@ -2952,7 +2952,12 @@
         <resource>14dd4c9f3385</resource>
       </resources>
     </agent>
-    <agent hostname="863cb7518c66" ipaddress="172.17.0.3" uuid="70cc0434-bbdf-4e68-991a-36e75e656376" />
+    <agent hostname="863cb7518c66" ipaddress="172.17.0.3" uuid="70cc0434-bbdf-4e68-991a-36e75e656376">
+      <resources>
+        <resource>ga_test</resource>
+        <resource>new_test</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
