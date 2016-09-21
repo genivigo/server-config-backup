@@ -2957,7 +2957,7 @@
         <resource>ea2aed3f9694</resource>
       </resources>
     </agent>
-    <agent hostname="863cb7518c66" ipaddress="83.218.80.242" uuid="70cc0434-bbdf-4e68-991a-36e75e656376" />
+    <agent hostname="863cb7518c66" ipaddress="172.17.0.3" uuid="70cc0434-bbdf-4e68-991a-36e75e656376" />
   </agents>
 </cruise>
 
