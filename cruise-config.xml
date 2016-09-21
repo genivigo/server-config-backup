@@ -1679,10 +1679,10 @@
           <value>minnowboard</value>
         </variable>
         <variable name="BRANCH">
-          <value>gdp-11-rc1</value>
+          <value>gdp-11</value>
         </variable>
         <variable name="RELEASE">
-          <value>gdp-11-rc1</value>
+          <value>gdp-11</value>
         </variable>
       </environmentvariables>
       <materials>
