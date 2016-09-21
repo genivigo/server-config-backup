@@ -1978,15 +1978,6 @@
         <user>GunnarA</user>
       </admins>
     </authorization>
-    <pipeline name="upload1" isLocked="false" template="upload-sde">
-      <params>
-        <param name="MACHINE">porter</param>
-      </params>
-      <timer>0 0 7 18 9 ?</timer>
-      <materials>
-        <pipeline pipelineName="GDP-SDK-#{MACHINE}" stageName="CreateVM" materialName="sdk-porter" />
-      </materials>
-    </pipeline>
     <pipeline name="upload-porter" isLocked="false" template="upload-sde">
       <params>
         <param name="MACHINE">porter</param>
