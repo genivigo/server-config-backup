@@ -1979,6 +1979,9 @@
       </admins>
     </authorization>
     <pipeline name="upload1" isLocked="false" template="upload-sde">
+      <params>
+        <param name="MACHINE">porter</param>
+      </params>
       <timer>0 0 7 18 9 ?</timer>
       <materials>
         <pipeline pipelineName="GDP-SDK-raspberrypi2" stageName="CreateVM" materialName="sdk-rpi" />
