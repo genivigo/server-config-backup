@@ -2021,23 +2021,6 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="FirstTest">
-      <materials>
-        <git url="git://github.com/genivi/baseline_ci_helper" autoUpdate="false" />
-      </materials>
-      <stage name="stage">
-        <jobs>
-          <job name="job">
-            <tasks>
-              <exec command="ls" />
-            </tasks>
-            <resources>
-              <resource>ea2aed3f9694</resource>
-            </resources>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
   </pipelines>
   <templates>
     <pipeline name="Yocto_GDP_generic">
