@@ -3170,6 +3170,7 @@
         <resource>new_test</resource>
       </resources>
     </agent>
+    <agent hostname="4e9148b1df8f" ipaddress="83.218.80.242" uuid="2f89504d-75ab-42c6-b4d4-ccd7b6902ea0" />
   </agents>
 </cruise>
 
