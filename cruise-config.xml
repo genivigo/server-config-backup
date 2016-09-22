@@ -416,7 +416,7 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="GDP-SDK-raspberrypi2" isLocked="false" template="GDP_SDE_generic">
+    <pipeline name="GDP-SDE-raspberrypi2" isLocked="false" template="GDP_SDE_generic">
       <params>
         <param name="MACHINE">raspberrypi2</param>
       </params>
@@ -437,7 +437,7 @@
         <pipeline pipelineName="GDP-Yocto-raspberrypi2_SDK" stageName="build" materialName="yocto-sdk-raspberrypi2" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-SDK-minnowboard" isLocked="false" template="GDP_SDE_generic">
+    <pipeline name="GDP-SDE-minnowboard" isLocked="false" template="GDP_SDE_generic">
       <params>
         <param name="MACHINE">minnowboard</param>
       </params>
@@ -453,7 +453,7 @@
         <pipeline pipelineName="GDP-Yocto-Minnowboard_SDK" stageName="build" materialName="yocto-sdk-minnowboard" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-SDK-porter" isLocked="false" template="GDP_SDE_generic">
+    <pipeline name="GDP-SDE-porter" isLocked="false" template="GDP_SDE_generic">
       <params>
         <param name="MACHINE">porter</param>
       </params>
@@ -469,7 +469,7 @@
         <pipeline pipelineName="GDP-Yocto-porter_SDK" stageName="build" materialName="yocto-sdk-porter" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-SDK-qemux86-64" isLocked="false" template="GDP_SDE_generic">
+    <pipeline name="GDP-SDE-qemux86-64" isLocked="false" template="GDP_SDE_generic">
       <params>
         <param name="MACHINE">qemux86-64</param>
       </params>
@@ -1995,7 +1995,7 @@
         <param name="MACHINE">porter</param>
       </params>
       <materials>
-        <pipeline pipelineName="GDP-SDK-#{MACHINE}" stageName="CreateVM" materialName="sdk-porter" />
+        <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-porter" />
       </materials>
     </pipeline>
     <pipeline name="upload-qemux86-64" isLocked="false" template="upload-sde">
@@ -2003,7 +2003,7 @@
         <param name="MACHINE">qemux86-64</param>
       </params>
       <materials>
-        <pipeline pipelineName="GDP-SDK-#{MACHINE}" stageName="CreateVM" materialName="sdk-qemux86-64" />
+        <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-qemux86-64" />
       </materials>
     </pipeline>
     <pipeline name="upload-minnowboard" isLocked="false" template="upload-sde">
@@ -2011,7 +2011,7 @@
         <param name="MACHINE">minnowboard</param>
       </params>
       <materials>
-        <pipeline pipelineName="GDP-SDK-#{MACHINE}" stageName="CreateVM" materialName="sdk-minnowboard" />
+        <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-minnowboard" />
       </materials>
     </pipeline>
     <pipeline name="upload-raspberrypi2" isLocked="false" template="upload-sde">
@@ -2019,7 +2019,7 @@
         <param name="MACHINE">raspberrypi2</param>
       </params>
       <materials>
-        <pipeline pipelineName="GDP-SDK-#{MACHINE}" stageName="CreateVM" materialName="sdk-raspberrypi2" />
+        <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-raspberrypi2" />
       </materials>
     </pipeline>
   </pipelines>
@@ -2706,7 +2706,7 @@
         <jobs>
           <job name="job">
             <tasks>
-              <fetchartifact pipeline="GDP-SDK-#{MACHINE}" stage="CreateVM" job="run_vagrant" srcdir="results" dest="#{MACHINE}">
+              <fetchartifact pipeline="GDP-SDE-#{MACHINE}" stage="CreateVM" job="run_vagrant" srcdir="results" dest="#{MACHINE}">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="bash">
