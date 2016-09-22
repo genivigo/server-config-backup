@@ -1430,7 +1430,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>./#{MACHINE}/results/sdk/oecore-*toolchain*.sh -d ./gdp-sdk/yocto-sdk/#{MACHINE}/ -y</arg>
+                <arg>mv ./#{MACHINE}/results/sdk/oecore-*toolchain*.sh ./gdp-sdk/yocto-sdk/ &amp;&amp; mkdir #{MACHINE} &amp;&amp; touch unpack_toolchain_into_#{MACHINE}</arg>
                 <runif status="passed" />
               </exec>
               <exec command="tar">
