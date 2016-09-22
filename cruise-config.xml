@@ -1348,21 +1348,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="GDP_SDK_new" template="GDP_SDE_generic">
-      <params>
-        <param name="MACHINE">raspberrypi2</param>
-      </params>
-      <materials>
-        <git url="git://github.com/gunnarx/gdp_sde" materialName="gdp_sde" />
-        <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
-        <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
-        <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
-        <pipeline pipelineName="common-api-cpp-tools" stageName="build" materialName="capicxx-tools" />
-        <pipeline pipelineName="common-api-cpp-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
-        <pipeline pipelineName="common-api-cpp-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
-        <pipeline pipelineName="GDP-Yocto-raspberrypi2_SDK" stageName="build" materialName="yocto-sdk-raspberrypi2" />
-      </materials>
-    </pipeline>
     <pipeline name="yocto-baseline-experimental" labeltemplate="experimental:${meta-ivi[:8]}-build:${COUNT}" isLocked="false">
       <environmentvariables>
         <variable name="MACHINE">
