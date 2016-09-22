@@ -1460,7 +1460,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="git://github.com/genivi/eclipse_install_automation" materialName="eclipse_install_automation.git" />
+        <git url="git://github.com/genivi/eclipse_install_automation" branch="trusty64-unity" materialName="eclipse_install_automation.git" />
       </materials>
       <stage name="create_eclipse_vm">
         <jobs>
