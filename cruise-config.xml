@@ -2008,20 +2008,6 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Administration_for_ea2aed3f9694">
-    <authorization>
-      <view>
-        <role>GDP_Developer</role>
-      </view>
-      <operate>
-        <role>GDP_Developer</role>
-      </operate>
-      <admins>
-        <user>tmohammad</user>
-        <role>GDP_Developer</role>
-      </admins>
-    </authorization>
-  </pipelines>
   <templates>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
