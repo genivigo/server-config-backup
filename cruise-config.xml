@@ -2747,15 +2747,15 @@
                 <arg>chmod 755 */results/sdk/oecore-*toolchain*.sh</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>./#{MACHINE}/results/sdk/oecore-*toolchain*.sh -d ./gdp-sdk/yocto-sdk/#{MACHINE}/ -y</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="chmod">
                 <arg>-R</arg>
                 <arg>u+r</arg>
                 <arg>gdp-sdk/yocto-sdk</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>./#{MACHINE}/results/sdk/oecore-*toolchain*.sh -d ./gdp-sdk/yocto-sdk/#{MACHINE}/ -y</arg>
                 <runif status="passed" />
               </exec>
               <exec command="tar">
