@@ -3164,12 +3164,6 @@
         <resource>14dd4c9f3385</resource>
       </resources>
     </agent>
-    <agent hostname="863cb7518c66" ipaddress="172.17.0.3" uuid="70cc0434-bbdf-4e68-991a-36e75e656376" isDisabled="true">
-      <resources>
-        <resource>ga_test</resource>
-        <resource>new_test</resource>
-      </resources>
-    </agent>
     <agent hostname="4e9148b1df8f" ipaddress="172.17.0.2" uuid="2f89504d-75ab-42c6-b4d4-ccd7b6902ea0" />
   </agents>
 </cruise>
