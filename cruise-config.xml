@@ -2181,7 +2181,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Upload">
+  <pipelines group="Upload-SDK">
     <authorization>
       <view>
         <role>GDP_Developer</role>
