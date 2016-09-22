@@ -2008,6 +2008,7 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="Administration_for_4e9148b1df8f" />
   <templates>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
