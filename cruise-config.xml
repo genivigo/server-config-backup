@@ -2666,7 +2666,7 @@
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>md5sum */results/gdp-sdk*.tar.gz</arg>
+                <arg>md5sum #{MACHINE}/results/gdp-sdk*.tar.gz</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="#{MACHINE}/results">
