@@ -2926,6 +2926,7 @@
       <resources>
         <resource>4e9148b1df8f</resource>
         <resource>yocto_build</resource>
+        <resource>new_test</resource>
       </resources>
     </agent>
   </agents>
