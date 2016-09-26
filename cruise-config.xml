@@ -2610,7 +2610,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>new_test</resource>
+              <resource>yocto_build</resource>
             </resources>
             <artifacts>
               <artifact src="gdp-src-build/tmp/deploy/licenses" dest="results" />
