@@ -291,7 +291,9 @@
   <pipelines group="GDP_CI_Other">
     <authorization>
       <view>
+        <user>guest</user>
         <role>Guest</role>
+        <role>Developer</role>
       </view>
     </authorization>
     <pipeline name="GDP-Yocto-QEMU_x86-64-Latest-meta-genivi-dev" template="Yocto_GDP_generic_latest_meta_genivi_demo">
