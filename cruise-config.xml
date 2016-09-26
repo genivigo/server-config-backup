@@ -537,7 +537,7 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-porter_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_SDK">
+    <pipeline name="GDP-Yocto-porter_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false">
       <timer onlyOnChanges="true">0 59 23 15 9 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
@@ -550,6 +550,90 @@
       <materials>
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
+      <stage name="build">
+        <approval type="manual" />
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="rm" workingdir="gdp-src-build">
+                <arg>-rf</arg>
+                <arg>tmp</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>source ./init.sh $MACHINE</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]]; then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_gfx_software_$MACHINE.sh /var/go/sgx_bin; fi</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]];  then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git">
+                <arg>config</arg>
+                <arg>--global</arg>
+                <arg>user.name</arg>
+                <arg>Go Server</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git">
+                <arg>config</arg>
+                <arg>--global</arg>
+                <arg>user.email</arg>
+                <arg>no_email@genivigo.com</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="gdp-src-build/conf">
+                <arg>-c</arg>
+                <arg>echo -e 'BB_NUMBER_THREADS = "2"\nPARALLEL_MAKE = "-j2"\nINHERIT += "rm_work"' &gt;&gt; local.conf</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="gdp-src-build/conf">
+                <arg>-c</arg>
+                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [[ "$BUILD_SDK" != "true" ]] ; then source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform ; fi</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [[ "$BUILD_SDK" == "true" ]] ; then source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform-sdk ; fi</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [[ "$BUILD_SDK" == "true" ]] ; then source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake meta-ide-support ; fi</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
+                <runif status="any" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+              <resource>renesas_binaries</resource>
+            </resources>
+            <artifacts>
+              <artifact src="gdp-src-build/tmp/deploy/licenses" dest="results" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/license.manifest" dest="results" />
+              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/package.manifest" dest="results" />
+              <artifact src="gdp-src-build/tmp/deploy/sdk*" dest="results" />
+              <artifact src="logs.tar.gz" dest="results" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
     <pipeline name="Eclipse-for-SDK-2">
       <params>
