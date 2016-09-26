@@ -262,6 +262,7 @@
   <pipelines group="Baseline_Pull_Request_Checking">
     <authorization>
       <view>
+        <user>guest</user>
         <role>Developer</role>
         <role>Guest</role>
       </view>
