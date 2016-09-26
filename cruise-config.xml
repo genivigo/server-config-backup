@@ -185,6 +185,7 @@
   <pipelines group="GENIVI_Development_Platform">
     <authorization>
       <view>
+        <user>guest</user>
         <role>Guest</role>
       </view>
       <admins>
