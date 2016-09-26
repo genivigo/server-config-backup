@@ -292,9 +292,13 @@
     <authorization>
       <view>
         <user>guest</user>
-        <role>Guest</role>
         <role>Developer</role>
+        <role>Guest</role>
+        <role>GDP_Developer</role>
       </view>
+      <operate>
+        <role>GDP_Developer</role>
+      </operate>
     </authorization>
     <pipeline name="GDP-Yocto-QEMU_x86-64-Latest-meta-genivi-dev" template="Yocto_GDP_generic_latest_meta_genivi_demo">
       <environmentvariables>
