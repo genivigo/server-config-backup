@@ -2083,7 +2083,6 @@
         <jobs>
           <job name="recordSelftest">
             <tasks>
-              <exec command="true" />
               <fetchartifact pipeline="GDP-SDE-minnowboard" stage="CreateVM" job="run_vagrant" srcdir="results">
                 <runif status="passed" />
               </fetchartifact>
