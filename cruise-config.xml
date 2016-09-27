@@ -1842,6 +1842,11 @@
                 <arg>-c</arg>
                 <arg>./autogen.sh</arg>
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>./configure</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
