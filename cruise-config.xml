@@ -2100,6 +2100,10 @@
                 <arg>recordtest/run.sh gdp-sdk*/*.vbox</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="ls">
+                <arg>-R</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>vagrant</resource>
