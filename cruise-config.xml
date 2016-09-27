@@ -1853,6 +1853,8 @@
             </tasks>
             <artifacts>
               <artifact src="squashfuse" />
+              <artifact src="squashfuse_ll" />
+              <artifact src="squashfuse_ls" />
             </artifacts>
           </job>
         </jobs>
