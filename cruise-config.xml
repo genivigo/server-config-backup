@@ -2074,6 +2074,20 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="SDE_Selftest">
+      <materials>
+        <git url="git://github.com/gunnarx/gdp_sde.git" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="true" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Spins">
     <authorization>
