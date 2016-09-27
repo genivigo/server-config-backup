@@ -2077,6 +2077,7 @@
     <pipeline name="SDE_Selftest">
       <materials>
         <git url="git://github.com/gunnarx/gdp_sde.git" />
+        <pipeline pipelineName="GDP-SDE-minnowboard" stageName="CreateVM" materialName="vm" />
       </materials>
       <stage name="defaultStage">
         <jobs>
