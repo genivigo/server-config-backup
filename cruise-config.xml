@@ -2089,6 +2089,9 @@
                 <arg>recordtest/run.sh vm/*.vbox</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="GDP-SDE-minnowboard" stage="CreateVM" job="run_vagrant" srcdir="results">
+                <runif status="passed" />
+              </fetchartifact>
             </tasks>
             <resources>
               <resource>vagrant</resource>
