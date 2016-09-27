@@ -590,8 +590,8 @@
               </exec>
             </tasks>
             <resources>
+              <resource>renesas_binaries</resource>
               <resource>yocto_build</resource>
-              <resource>re</resource>
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
