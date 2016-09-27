@@ -1852,7 +1852,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>ga_test</resource>
+              <resource>fuse</resource>
             </resources>
             <artifacts>
               <artifact src="squashfuse" />
