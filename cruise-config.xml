@@ -591,6 +591,7 @@
             </tasks>
             <resources>
               <resource>yocto_build</resource>
+              <resource>re</resource>
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
