@@ -1830,6 +1830,23 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
       </materials>
     </pipeline>
+    <pipeline name="squashfuse">
+      <materials>
+        <git url="https://github.com/vasi/squashfuse" shallowClone="true" />
+      </materials>
+      <stage name="build">
+        <jobs>
+          <job name="compile">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>./autogen.sh</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Spins">
     <authorization>
