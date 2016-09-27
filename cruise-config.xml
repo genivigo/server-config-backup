@@ -2089,12 +2089,12 @@
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>recordtest/run.sh vm/*.vbox</arg>
+                <arg>tar xf results/*.tar.gz</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>tar xf results/*.tar.gz</arg>
+                <arg>recordtest/run.sh vm/*.vbox</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
