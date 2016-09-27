@@ -2075,6 +2075,11 @@
       </stage>
     </pipeline>
     <pipeline name="SDE_Selftest">
+      <environmentvariables>
+        <variable name="OLD_VIRTUALBOX">
+          <value>1</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="git://github.com/gunnarx/gdp_sde.git" />
         <pipeline pipelineName="GDP-SDE-minnowboard" stageName="CreateVM" materialName="vm" />
