@@ -2094,7 +2094,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>recordtest/run.sh vm/*.vbox</arg>
+                <arg>recordtest/run.sh gdp-sdk*/*.vbox</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
