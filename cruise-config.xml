@@ -2081,10 +2081,13 @@
       </materials>
       <stage name="defaultStage">
         <jobs>
-          <job name="defaultJob">
+          <job name="recordSelftest">
             <tasks>
               <exec command="true" />
             </tasks>
+            <resources>
+              <resource>vagrant</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
