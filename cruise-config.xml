@@ -1851,6 +1851,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>ga_test</resource>
+            </resources>
             <artifacts>
               <artifact src="squashfuse" />
               <artifact src="squashfuse_ll" />
