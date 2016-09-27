@@ -367,6 +367,20 @@
         <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-Yocto-PORTER-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic">
+      <params>
+        <param name="agent">2131ce1bd33e</param>
+      </params>
+      <timer>0 0 4 19 8 ?</timer>
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>porter</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
+      </materials>
+    </pipeline>
     <pipeline name="GDP-Yocto-RPI2-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic">
       <timer>0 0 8 17 8 ?</timer>
       <environmentvariables>
@@ -398,20 +412,6 @@
       <materials>
         <git url="git://github.com/genivi/genivi-dev-platform.git" dest="gdp" materialName="genivi-dev-platform.git" />
         <scm ref="30b07577-5ed3-4441-9558-3cf1595a678c" dest="meta-genivi-dev" />
-      </materials>
-    </pipeline>
-    <pipeline name="GDP-Yocto-PORTER-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic">
-      <params>
-        <param name="agent">2131ce1bd33e</param>
-      </params>
-      <timer>0 0 4 19 8 ?</timer>
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>porter</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
       </materials>
     </pipeline>
   </pipelines>
