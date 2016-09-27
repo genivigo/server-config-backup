@@ -1855,6 +1855,7 @@
               <artifact src="squashfuse" />
               <artifact src="squashfuse_ll" />
               <artifact src="squashfuse_ls" />
+              <artifact src="LICENSE" />
             </artifacts>
           </job>
         </jobs>
