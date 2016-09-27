@@ -1847,6 +1847,9 @@
                 <arg>./configure</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="make">
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
