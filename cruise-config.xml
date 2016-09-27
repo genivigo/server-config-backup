@@ -2106,12 +2106,12 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>recordtest/run.sh gdp-sdk*/*.vbox</arg>
+                <arg>mv gdp-sdk-*201* gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv gdp-sdk-*201* gdp-sdk</arg>
+                <arg>recordtest/run.sh gdp-sdk*/*.vbox</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
