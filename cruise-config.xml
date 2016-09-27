@@ -2084,6 +2084,11 @@
           <job name="recordSelftest">
             <tasks>
               <exec command="true" />
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>recordtest/run.sh vm/*.vbox</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>vagrant</resource>
