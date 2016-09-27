@@ -2086,13 +2086,13 @@
               <fetchartifact pipeline="GDP-SDE-minnowboard" stage="CreateVM" job="run_vagrant" srcdir="results">
                 <runif status="passed" />
               </fetchartifact>
+              <exec command="ls">
+                <arg>-R</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>tar xf results/*.tar.gz</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="ls">
-                <arg>-R</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
