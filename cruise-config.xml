@@ -2115,8 +2115,9 @@
                 <runif status="passed" />
               </exec>
               <exec command="bash">
-                <arg>-xc</arg>
-                <arg>recordtest/clean.sh gdp-sdk</arg>
+                <arg>-x</arg>
+                <arg>recordtest/clean.sh</arg>
+                <arg>gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
