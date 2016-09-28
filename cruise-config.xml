@@ -2074,7 +2074,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="SDE_Selftest">
+    <pipeline name="test2">
       <environmentvariables>
         <variable name="OLD_VIRTUALBOX">
           <value>1</value>
