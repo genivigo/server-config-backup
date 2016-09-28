@@ -2123,7 +2123,7 @@
               <exec command="bash">
                 <arg>-x</arg>
                 <arg>recordtest/run.sh</arg>
-                <arg>$PWD/gdp-sdk/*.vbox</arg>
+                <arg>$(ls $PWD/gdp-sdk/*.vbox)</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
