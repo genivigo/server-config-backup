@@ -2121,8 +2121,9 @@
                 <runif status="passed" />
               </exec>
               <exec command="bash">
-                <arg>-cx</arg>
-                <arg>recordtest/run.sh $PWD/gdp-sdk/*.vbox</arg>
+                <arg>-x</arg>
+                <arg>recordtest/run.sh</arg>
+                <arg>$PWD/gdp-sdk/*.vbox</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
