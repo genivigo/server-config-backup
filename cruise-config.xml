@@ -2119,6 +2119,11 @@
                 <arg>recordtest/run.sh $PWD/gdp-sdk/*.vbox</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-xc</arg>
+                <arg>recordtest/clean.sh gdp-sdk</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>vagrant</resource>
