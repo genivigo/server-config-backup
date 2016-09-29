@@ -2135,7 +2135,7 @@
               <resource>vagrant</resource>
             </resources>
             <artifacts>
-              <test src="gdp-sdk-*201*/*.webm" dest="recording" />
+              <test src="gdp-sdk/*.webm" dest="recording" />
               <artifact src="gdp-sdk*/*.webm" dest="build" />
             </artifacts>
           </job>
