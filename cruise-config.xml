@@ -2116,7 +2116,7 @@
               </exec>
               <exec command="bash">
                 <arg>-x</arg>
-                <arg>recordtest/clean.sh</arg>
+                <arg>runselftest/clean.sh</arg>
                 <arg>gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
