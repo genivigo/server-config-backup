@@ -2136,7 +2136,7 @@
             </resources>
             <artifacts>
               <test src="gdp-sdk-*201*/*.webm" dest="recording" />
-              <artifact src="gdp-sdk/*.webm" dest="build" />
+              <artifact src="gdp-sdk*/*.webm" dest="build" />
             </artifacts>
           </job>
         </jobs>
