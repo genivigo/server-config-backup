@@ -2122,7 +2122,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>runselftest/record.sh $PWD/gdp-sdk/*.vbox</arg>
+                <arg>runselftest/record.sh $PWD/gdp-sdk-*201*/*.vbox</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
