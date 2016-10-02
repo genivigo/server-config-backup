@@ -3182,6 +3182,11 @@
                 <arg>scripts/timestamp.sh</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash" workingdir="homedir/.config">
+                <arg>-c</arg>
+                <arg>../../scripts/annotate_wallpaper "GDP Software Development Environment \n$MACHINE $(cat ../../TIMESTAMP) "</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>vagrant</resource>
