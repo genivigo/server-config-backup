@@ -2085,6 +2085,7 @@
         <pipeline pipelineName="GDP-SDE-minnowboard" stageName="CreateVM" materialName="vm" />
       </materials>
       <stage name="defaultStage">
+        <approval type="manual" />
         <jobs>
           <job name="recordSelftest">
             <tasks>
