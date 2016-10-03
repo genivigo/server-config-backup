@@ -572,7 +572,7 @@
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>echo -e 'BB_NUMBER_THREADS = "4"\nPARALLEL_MAKE = "-j1"' &gt;&gt; local.conf</arg>
+                <arg>echo -e 'BB_NUMBER_THREADS = "1"\nPARALLEL_MAKE = "-j8"' &gt;&gt; local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="git">
