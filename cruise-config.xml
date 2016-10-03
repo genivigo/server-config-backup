@@ -264,6 +264,11 @@
                 <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash" workingdir="gdp-src-build/conf">
+                <arg>-c</arg>
+                <arg>echo -e 'BB_NUMBER_THREADS = "4"\nPARALLEL_MAKE = "-j1"\nINHERIT += "rm_work"' &gt;&gt; local.conf</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="git">
                 <arg>config</arg>
                 <arg>--global</arg>
