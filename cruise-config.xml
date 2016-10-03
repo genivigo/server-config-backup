@@ -649,7 +649,6 @@
       <params>
         <param name="MACHINE">raspberrypi2</param>
       </params>
-      <timer>0 0 0 4 10 ?</timer>
       <environmentvariables>
         <variable name="VMNAME">
           <value>gdp-sdk-#{MACHINE}</value>
