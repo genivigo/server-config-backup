@@ -2596,7 +2596,7 @@
               </exec>
               <exec command="bash" workingdir="gdp/gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>echo -e 'BB_NUMBER_THREADS = "2"\nPARALLEL_MAKE = "-j2"\nINHERIT += "rm_work"' &gt;&gt; local.conf</arg>
+                <arg>echo -e 'BB_NUMBER_THREADS = "4"\nPARALLEL_MAKE = "-j1"\nINHERIT += "rm_work"' &gt;&gt; local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="git">
