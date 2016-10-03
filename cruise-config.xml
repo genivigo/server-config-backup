@@ -2143,7 +2143,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>vagrant</resource>
+              <resource>virtualbox</resource>
             </resources>
             <artifacts>
               <test src="gdp-sdk/*.webm" dest="recording" />
