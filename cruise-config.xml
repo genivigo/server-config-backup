@@ -2168,6 +2168,14 @@
         <pipeline pipelineName="GDP-Yocto-porter_SDK" stageName="build" materialName="yocto-sdk-porter" />
       </materials>
     </pipeline>
+    <pipeline name="upload-rkrause" isLocked="false" template="upload-sde">
+      <params>
+        <param name="MACHINE">rkrause</param>
+      </params>
+      <materials>
+        <pipeline pipelineName="GDP-SDE-rkrause" stageName="CreateVM" materialName="sdk-rkrause" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Spins">
     <authorization>
