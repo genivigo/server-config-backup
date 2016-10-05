@@ -388,7 +388,6 @@
   <pipelines group="GDP_Pull_Request_Checking">
     <authorization>
       <view>
-        <role>Guest</role>
         <role>Developer</role>
       </view>
       <admins>
