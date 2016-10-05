@@ -731,7 +731,7 @@
         <pipeline pipelineName="GDP-Yocto-dragonboard_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-raspberrypi2_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_SDK">
+    <pipeline name="GDP-Yocto-raspberrypi2_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
       <params>
         <param name="branch">master</param>
       </params>
@@ -747,7 +747,7 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="#{branch}" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Minnowboard_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_SDK">
+    <pipeline name="GDP-Yocto-Minnowboard_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
       <environmentvariables>
         <variable name="MACHINE">
           <value>minnowboard</value>
@@ -760,7 +760,7 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-qemux86-64_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_SDK">
+    <pipeline name="GDP-Yocto-qemux86-64_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
       <timer onlyOnChanges="true">0 59 23 15 9 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
@@ -774,7 +774,7 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-dragonboard_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_build_SDK">
+    <pipeline name="GDP-Yocto-dragonboard_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
       <timer onlyOnChanges="true">0 59 23 15 9 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
@@ -2967,7 +2967,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="Yocto_GDP_build_SDK">
+    <pipeline name="Yocto_GDP_SDK_generic">
       <authorization>
         <admins>
           <user>PedroA</user>
@@ -2988,7 +2988,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>source ./init.sh $MACHINE -f</arg>
+                <arg>if [[ "$MACHINE" == "dragonboard-410c" ]]; then source ./init.sh $MACHINE accept-eula -f ; else source ./init.sh $MACHINE -f; fi</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
