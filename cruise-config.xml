@@ -778,7 +778,7 @@
       <timer onlyOnChanges="true">0 59 23 15 9 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
-          <value>dragonboard</value>
+          <value>dragonboard-410c</value>
         </variable>
         <variable name="BUILD_SDK">
           <value>true</value>
