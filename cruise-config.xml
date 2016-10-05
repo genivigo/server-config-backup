@@ -2714,6 +2714,7 @@
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
+              <artifact src="gdp-src-build/tmp/deploy/images/raspberrypi2/genivi-dev-platform-raspberrypi2-2016*.rootfs.rpi-sdimg" dest="images" />
             </artifacts>
           </job>
         </jobs>
