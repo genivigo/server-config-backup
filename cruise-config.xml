@@ -2710,7 +2710,7 @@
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
-              <artifact src="gdp/gdp-src-build/tmp/deploy/images/raspberrypi2/*rpi-sdimg" dest="images" />
+              <artifact src="gdp/gdp-src-build/tmp/deploy/images/raspberrypi2/*2016*rpi-sdimg" dest="images" />
             </artifacts>
           </job>
         </jobs>
