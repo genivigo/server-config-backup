@@ -389,6 +389,7 @@
     <authorization>
       <view>
         <role>Guest</role>
+        <role>Developer</role>
       </view>
       <admins>
         <role>GDP_Developer</role>
