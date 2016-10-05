@@ -2710,6 +2710,7 @@
             </tasks>
             <resources>
               <resource>yocto_build</resource>
+              <resource>4e9148b1df8f</resource>
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
