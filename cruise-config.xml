@@ -680,7 +680,7 @@
       <params>
         <param name="MACHINE">minnowboard</param>
       </params>
-      <timer>0 0 22 5 10 ?</timer>
+      <timer>0 0 0 7 10 ?</timer>
       <materials>
         <git url="git://github.com/gunnarx/gdp_sde" materialName="gdp_sde" />
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
