@@ -643,7 +643,13 @@
         <user>AndreasR</user>
         <user>EBoto</user>
       </view>
+      <operate>
+        <user>AndreasR</user>
+        <user>EBoto</user>
+      </operate>
       <admins>
+        <user>AndreasR</user>
+        <user>EBoto</user>
         <role>GDP_Developer</role>
       </admins>
     </authorization>
