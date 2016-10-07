@@ -3488,6 +3488,7 @@
         <resource>new_test</resource>
       </resources>
     </agent>
+    <agent hostname="10096874c2ab" ipaddress="172.17.42.1" uuid="c25991cc-5f06-422e-8e98-31eda2ba4363" />
   </agents>
 </cruise>
 
