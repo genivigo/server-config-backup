@@ -3135,6 +3135,7 @@
       <authorization>
         <admins>
           <user>EBoto</user>
+          <user>tpollard</user>
         </admins>
       </authorization>
       <stage name="Assemble">
