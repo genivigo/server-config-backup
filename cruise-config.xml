@@ -2230,7 +2230,7 @@
         <param name="SOURCE_CLONE_URL">https://github.com/GENIVI/dlt-viewer.git</param>
       </params>
       <materials>
-        <git url="git://git.projects.genivi.org/dlt-viewer.git" materialName="dlt-viewer.git" />
+        <git url="https://github.com/KDAB/GammaRay.git" branch="2.6" materialName="GammaRay.git" />
         <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="qtlibs" />
       </materials>
       <stage name="stage">
