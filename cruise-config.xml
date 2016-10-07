@@ -2183,7 +2183,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>virtualbox</resource>
+              <resource>virtualbox_test</resource>
             </resources>
             <artifacts>
               <test src="gdp-sdk/*.webm" dest="recording" />
