@@ -2973,9 +2973,10 @@
       <authorization>
         <admins>
           <user>PedroA</user>
+          <user>gmacario</user>
           <user>jonathanmaw</user>
           <user>tpollard</user>
-          <user>gmacario</user>
+          <user>EBoto</user>
         </admins>
       </authorization>
       <stage name="build">
