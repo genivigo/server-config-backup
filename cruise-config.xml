@@ -2605,6 +2605,11 @@
                 <arg>images</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mv gdp-src-build/tmp/deploy/images/*/* images/</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
