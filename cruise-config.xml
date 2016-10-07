@@ -2209,6 +2209,19 @@
         <pipeline pipelineName="GDP-Yocto-porter_SDK" stageName="build" materialName="yocto-sdk-porter" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-Yocto-Minnowboard-QtAS_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="BUILD_SDK">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Spins">
     <authorization>
