@@ -2602,7 +2602,8 @@
                 <runif status="any" />
               </exec>
               <exec command="mkdir">
-                <arg>images</arg>
+                <arg>-p</arg>
+                <arg>staging/images</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
