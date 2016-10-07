@@ -2222,6 +2222,84 @@
         <git url="http://github.com/Pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
+    <pipeline name="GammaRay" labeltemplate="master:${dlt-viewer.git[:8]}-build:${COUNT}" isLocked="false">
+      <params>
+        <param name="QT_LIBS_ARCHIVE">Qt-5.6-gcc64-qtcreator-installed-home-vagrant.tar.bz2</param>
+        <param name="CACHE_DIR">/var/cache/goartifacts</param>
+        <param name="SOURCE_WEB_URL">https://github.com/GENIVI/dlt-viewer</param>
+        <param name="SOURCE_CLONE_URL">https://github.com/GENIVI/dlt-viewer.git</param>
+      </params>
+      <materials>
+        <git url="git://git.projects.genivi.org/dlt-viewer.git" materialName="dlt-viewer.git" />
+        <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="qtlibs" />
+      </materials>
+      <stage name="stage">
+        <jobs>
+          <job name="job">
+            <tasks>
+              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="#{QT_LIBS_ARCHIVE}">
+                <runif status="passed" />
+              </fetchartifact>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>tar xf #{QT_LIBS_ARCHIVE}</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>ln -s Qt-5.6 Qt</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="rm">
+                <arg>-rf</arg>
+                <arg>build</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>build</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="build">
+                <arg>-c</arg>
+                <arg>../Qt/5.6/gcc_64/bin/qmake ../BuildDltViewer.pro</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="make" workingdir="build">
+                <arg>-j8</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="mv" workingdir="build">
+                <arg>release</arg>
+                <arg>dlt-viewer</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="build/dlt-viewer">
+                <arg>-c</arg>
+                <arg>echo -e "The source code for this program is available for download at:\n\n#{SOURCE_WEB_URL}\n(Git clone URL: #{SOURCE_CLONE_URL})\n\n(MPLv2 clause 3.2 (a))" &gt;SOURCE.txt</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="cp">
+                <arg>MPL.txt</arg>
+                <arg>LICENSE.txt</arg>
+                <arg>build/dlt-viewer/</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="tar" workingdir="build">
+                <arg>cjf</arg>
+                <arg>dlt-viewer.tar.bz2</arg>
+                <arg>dlt-viewer</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <artifacts>
+              <artifact src="build/dlt-viewer/*" dest="dlt-viewer" />
+              <artifact src="build/dlt-viewer.tar.bz2" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Spins">
     <authorization>
