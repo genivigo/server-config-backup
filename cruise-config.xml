@@ -2295,6 +2295,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>cmake</resource>
+            </resources>
             <artifacts>
               <artifact src="build/gammaray/*" dest="gammaray" />
               <artifact src="build/gammaray.tar.bz2" />
