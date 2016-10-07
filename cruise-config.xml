@@ -2219,7 +2219,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+        <git url="http://github.com/Pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
   </pipelines>
