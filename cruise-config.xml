@@ -2279,9 +2279,8 @@
                 <runif status="passed" />
               </exec>
               <exec command="cp">
-                <arg>MPL.txt</arg>
-                <arg>LICENSE.txt</arg>
-                <arg>build/dlt-viewer/</arg>
+                <arg>LICENSE*.txt</arg>
+                <arg>build/install/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="tar" workingdir="build">
