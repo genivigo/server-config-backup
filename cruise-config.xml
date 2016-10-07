@@ -2280,7 +2280,10 @@
                 <runif status="passed" />
               </exec>
               <exec command="cp">
-                <arg>LICENSE*.txt</arg>
+                <arg>LICENSE.BSD3.txt</arg>
+                <arg>LICENSE.GPL.txt</arg>
+                <arg>LICENSE.txt</arg>
+                <arg>LICENSE.US.txt</arg>
                 <arg>build/gammaray/</arg>
                 <runif status="passed" />
               </exec>
