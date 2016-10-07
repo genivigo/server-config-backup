@@ -2286,8 +2286,8 @@
               </exec>
               <exec command="tar" workingdir="build">
                 <arg>cjf</arg>
-                <arg>dlt-viewer.tar.bz2</arg>
-                <arg>dlt-viewer</arg>
+                <arg>gammaray.tar.bz2</arg>
+                <arg>gammaray</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
