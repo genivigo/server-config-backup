@@ -2269,9 +2269,8 @@
                 <arg>-j8</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mv" workingdir="build">
-                <arg>release</arg>
-                <arg>dlt-viewer</arg>
+              <exec command="make" workingdir="build">
+                <arg>DESTDIR=./install/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="build/dlt-viewer">
