@@ -2292,8 +2292,8 @@
               </exec>
             </tasks>
             <artifacts>
-              <artifact src="build/dlt-viewer/*" dest="dlt-viewer" />
-              <artifact src="build/dlt-viewer.tar.bz2" />
+              <artifact src="build/gammaray/*" dest="gammaray" />
+              <artifact src="build/gammaray.tar.bz2" />
             </artifacts>
           </job>
         </jobs>
