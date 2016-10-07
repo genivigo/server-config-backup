@@ -3492,6 +3492,7 @@
       <resources>
         <resource>10096874c2ab</resource>
         <resource>vagrant</resource>
+        <resource>virtualbox_test</resource>
       </resources>
     </agent>
   </agents>
