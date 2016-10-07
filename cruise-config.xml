@@ -2992,7 +2992,7 @@
           <user>EBoto</user>
         </admins>
       </authorization>
-      <stage name="build" cleanWorkingDir="true">
+      <stage name="build">
         <approval type="manual" />
         <jobs>
           <job name="init_and_bitbake">
