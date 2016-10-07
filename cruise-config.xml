@@ -2273,7 +2273,7 @@
                 <arg>DESTDIR=./install/ install</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="build/dlt-viewer">
+              <exec command="bash" workingdir="build/install">
                 <arg>-c</arg>
                 <arg>echo -e "The source code for this program is available for download at:\n\n#{SOURCE_WEB_URL}\n(Git clone URL: #{SOURCE_CLONE_URL})\n" &gt;SOURCE.txt</arg>
                 <runif status="passed" />
