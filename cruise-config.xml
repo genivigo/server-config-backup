@@ -2270,7 +2270,8 @@
                 <runif status="passed" />
               </exec>
               <exec command="make" workingdir="build">
-                <arg>DESTDIR=./install/ install</arg>
+                <arg>DESTDIR=./install/</arg>
+                <arg>install</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="build/install">
