@@ -2270,7 +2270,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="make" workingdir="build">
-                <arg>DESTDIR=./install/</arg>
+                <arg>DESTDIR=./gammaray/</arg>
                 <arg>install</arg>
                 <runif status="passed" />
               </exec>
