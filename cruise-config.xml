@@ -2611,6 +2611,11 @@
                 <arg>mv gdp-src-build/tmp/deploy/images/*/* staging/</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mv staging/{*201*ext*,*201*rootfs*,*sdimg*,bzImage*201*} staging/images/ || true</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
