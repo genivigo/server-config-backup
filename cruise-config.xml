@@ -492,7 +492,6 @@
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
-              <artifact src="gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-*2016*rootfs*" />
               <artifact src="staging/images/*" dest="images" />
             </artifacts>
           </job>
