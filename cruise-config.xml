@@ -481,6 +481,21 @@
                 <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp/gdp-src-build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
                 <runif status="any" />
               </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>staging/images</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mv gdp/gdp-src-build/tmp/deploy/images/*/* staging/</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mv staging/{*201*ext*,*201*rootfs*,*sdimg*,bzImage*201*} staging/images/ || true</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="rm">
                 <arg>-r</arg>
                 <arg>gdp</arg>
