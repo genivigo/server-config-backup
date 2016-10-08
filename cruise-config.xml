@@ -3422,6 +3422,12 @@
                 <arg>-f</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [ -d sources ] ; then tar cf sources.tar sources ; else touch sources.tar.gz ; fi</arg>
+                <arg />
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>vagrant</resource>
