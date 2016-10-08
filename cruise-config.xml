@@ -2855,7 +2855,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv gdp-src-build/tmp/deploy/images/*/* staging/</arg>
+                <arg>mv gdp/gdp-src-build/tmp/deploy/images/*/* staging/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
