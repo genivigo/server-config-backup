@@ -3425,7 +3425,7 @@
               <exec command="vagrant">
                 <arg>destroy</arg>
                 <arg>-f</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
             </tasks>
             <resources>
