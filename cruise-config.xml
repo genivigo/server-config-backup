@@ -2855,6 +2855,7 @@
               <artifact src="logs.tar.gz" />
               <artifact src="gdp/gdp-src-build/tmp/deploy/images/*/*2016*{ext4,rpi-sdimg}" dest="images" />
               <artifact src="gdp/gdp-src-build/tmp/deploy/images/*/bzImage*2016*.bin" />
+              <artifact src="staging/images/*" />
             </artifacts>
           </job>
         </jobs>
