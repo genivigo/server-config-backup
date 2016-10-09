@@ -3462,7 +3462,7 @@
             </resources>
             <artifacts>
               <artifact src="gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz" dest="results" />
-              <artifact src="sources.tar.gz" />
+              <artifact src="sources.tar.gz" dest="results" />
             </artifacts>
           </job>
         </jobs>
