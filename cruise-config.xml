@@ -3448,7 +3448,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [ -d sources ] ; then tar cf - sources | gzip -c -1 &gt;sources.tar.gz  ; else touch sources.tar.gz ; fi</arg>
+                <arg>if [ -d source ] ; then tar cf - source | gzip -c -1 &gt;sources.tar.gz  ; else touch sources.tar.gz ; fi</arg>
                 <runif status="passed" />
               </exec>
               <exec command="vagrant">
