@@ -1003,6 +1003,17 @@
         <git url="http://github.com/Pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-Yocto-Minnowboard-QtAS" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
+      <timer>0 0 20 18 8 ?</timer>
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>minnowboard</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/Pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Components">
     <authorization>
@@ -2273,17 +2284,6 @@
         <user>EBoto</user>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-Minnowboard-QtAS" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
-      <timer>0 0 20 18 8 ?</timer>
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>minnowboard</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/Pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
     <pipeline name="GammaRay" labeltemplate="2.6:${GammaRay.git[:8]}-build:${COUNT}" isLocked="false">
       <params>
         <param name="QT_LIBS_ARCHIVE">Qt-5.6-gcc64-qtcreator-installed-home-vagrant.tar.bz2</param>
