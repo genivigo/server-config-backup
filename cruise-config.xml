@@ -1014,6 +1014,89 @@
         <git url="https://github.com/Pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
+    <pipeline name="GammaRay" labeltemplate="2.6:${GammaRay.git[:8]}-build:${COUNT}" isLocked="false">
+      <params>
+        <param name="QT_LIBS_ARCHIVE">Qt-5.6-gcc64-qtcreator-installed-home-vagrant.tar.bz2</param>
+        <param name="CACHE_DIR">/var/cache/goartifacts</param>
+        <param name="SOURCE_WEB_URL">https://github.com/KDAB/GammaRay.git</param>
+        <param name="SOURCE_CLONE_URL">https://github.com/KDAB/GammaRay.git</param>
+      </params>
+      <materials>
+        <git url="https://github.com/KDAB/GammaRay.git" branch="2.6" materialName="GammaRay.git" />
+        <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="qtlibs" />
+      </materials>
+      <stage name="stage">
+        <jobs>
+          <job name="job">
+            <tasks>
+              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="#{QT_LIBS_ARCHIVE}">
+                <runif status="passed" />
+              </fetchartifact>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>tar xf #{QT_LIBS_ARCHIVE}</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>ln -s Qt-5.6 Qt</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="rm">
+                <arg>-rf</arg>
+                <arg>build</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>build</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="build">
+                <arg>-c</arg>
+                <arg>CMAKE_PREFIX_PATH=../Qt/5.6/gcc_64/lib/cmake cmake -DGAMMARAY_BUILD_DOCS=off ../</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="make" workingdir="build">
+                <arg>-j8</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="make" workingdir="build">
+                <arg>DESTDIR=./gammaray/</arg>
+                <arg>install</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="build/gammaray">
+                <arg>-c</arg>
+                <arg>echo -e "The source code for this program is available for download at:\n\n#{SOURCE_WEB_URL}\n(Git clone URL: #{SOURCE_CLONE_URL})\n" &gt;SOURCE.txt</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="cp">
+                <arg>LICENSE.BSD3.txt</arg>
+                <arg>LICENSE.GPL.txt</arg>
+                <arg>LICENSE.txt</arg>
+                <arg>LICENSE.US.txt</arg>
+                <arg>build/gammaray/</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="tar" workingdir="build">
+                <arg>cjf</arg>
+                <arg>gammaray.tar.bz2</arg>
+                <arg>gammaray</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>cmake</resource>
+            </resources>
+            <artifacts>
+              <artifact src="build/gammaray/*" dest="gammaray" />
+              <artifact src="build/gammaray.tar.bz2" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="Components">
     <authorization>
@@ -2284,89 +2367,6 @@
         <user>EBoto</user>
       </admins>
     </authorization>
-    <pipeline name="GammaRay" labeltemplate="2.6:${GammaRay.git[:8]}-build:${COUNT}" isLocked="false">
-      <params>
-        <param name="QT_LIBS_ARCHIVE">Qt-5.6-gcc64-qtcreator-installed-home-vagrant.tar.bz2</param>
-        <param name="CACHE_DIR">/var/cache/goartifacts</param>
-        <param name="SOURCE_WEB_URL">https://github.com/KDAB/GammaRay.git</param>
-        <param name="SOURCE_CLONE_URL">https://github.com/KDAB/GammaRay.git</param>
-      </params>
-      <materials>
-        <git url="https://github.com/KDAB/GammaRay.git" branch="2.6" materialName="GammaRay.git" />
-        <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="qtlibs" />
-      </materials>
-      <stage name="stage">
-        <jobs>
-          <job name="job">
-            <tasks>
-              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="#{QT_LIBS_ARCHIVE}">
-                <runif status="passed" />
-              </fetchartifact>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>tar xf #{QT_LIBS_ARCHIVE}</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>ln -s Qt-5.6 Qt</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="rm">
-                <arg>-rf</arg>
-                <arg>build</arg>
-                <runif status="any" />
-              </exec>
-              <exec command="mkdir">
-                <arg>-p</arg>
-                <arg>build</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="build">
-                <arg>-c</arg>
-                <arg>CMAKE_PREFIX_PATH=../Qt/5.6/gcc_64/lib/cmake cmake -DGAMMARAY_BUILD_DOCS=off ../</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="make" workingdir="build">
-                <arg>-j8</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="make" workingdir="build">
-                <arg>DESTDIR=./gammaray/</arg>
-                <arg>install</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="build/gammaray">
-                <arg>-c</arg>
-                <arg>echo -e "The source code for this program is available for download at:\n\n#{SOURCE_WEB_URL}\n(Git clone URL: #{SOURCE_CLONE_URL})\n" &gt;SOURCE.txt</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="cp">
-                <arg>LICENSE.BSD3.txt</arg>
-                <arg>LICENSE.GPL.txt</arg>
-                <arg>LICENSE.txt</arg>
-                <arg>LICENSE.US.txt</arg>
-                <arg>build/gammaray/</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="tar" workingdir="build">
-                <arg>cjf</arg>
-                <arg>gammaray.tar.bz2</arg>
-                <arg>gammaray</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>cmake</resource>
-            </resources>
-            <artifacts>
-              <artifact src="build/gammaray/*" dest="gammaray" />
-              <artifact src="build/gammaray.tar.bz2" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
   </pipelines>
   <pipelines group="Administration_for_2131ce1bd33e">
     <authorization>
