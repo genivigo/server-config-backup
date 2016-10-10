@@ -974,7 +974,15 @@
       </stage>
     </pipeline>
   </pipelines>
-  <pipelines group="GDP_QtAS_Spin" />
+  <pipelines group="GDP_QtAS_Spin">
+    <authorization>
+      <view>
+        <user>EBoto</user>
+        <user>AndreasR</user>
+        <role>GDP_Developer</role>
+      </view>
+    </authorization>
+  </pipelines>
   <pipelines group="Components">
     <authorization>
       <view>
