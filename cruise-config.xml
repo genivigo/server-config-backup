@@ -2210,6 +2210,64 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="sde-reltest" isLocked="false" template="GDP_SDE_generic">
+      <params>
+        <param name="MACHINE">porter</param>
+      </params>
+      <timer>0 0 22 6 10 ?</timer>
+      <materials>
+        <git url="git://github.com/gunnarx/gdp_sde" branch="release" materialName="gdp_sde" />
+        <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
+        <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
+        <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
+        <pipeline pipelineName="common-api-cpp-tools" stageName="build" materialName="capicxx-tools" />
+        <pipeline pipelineName="common-api-cpp-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
+        <pipeline pipelineName="common-api-cpp-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
+        <pipeline pipelineName="GDP-Yocto-porter_SDK" stageName="build" materialName="yocto-sdk-porter" />
+      </materials>
+    </pipeline>
+  </pipelines>
+  <pipelines group="GDP_Spins">
+    <authorization>
+      <view>
+        <user>AndreasR</user>
+        <user>EBoto</user>
+        <role>GDP_Developer</role>
+      </view>
+      <operate>
+        <user>AndreasR</user>
+        <user>EBoto</user>
+        <role>GDP_Developer</role>
+      </operate>
+      <admins>
+        <user>AndreasR</user>
+        <user>EBoto</user>
+      </admins>
+    </authorization>
+    <pipeline name="GDP-Yocto-Minnowboard-QtAS_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="BUILD_SDK">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="http://github.com/Pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-Minnowboard-QtAS" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
+      <timer>0 0 20 18 8 ?</timer>
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>minnowboard</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/Pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
     <pipeline name="GammaRay" labeltemplate="2.6:${GammaRay.git[:8]}-build:${COUNT}" isLocked="false">
       <params>
         <param name="QT_LIBS_ARCHIVE">Qt-5.6-gcc64-qtcreator-installed-home-vagrant.tar.bz2</param>
@@ -2292,64 +2350,6 @@
           </job>
         </jobs>
       </stage>
-    </pipeline>
-    <pipeline name="sde-reltest" isLocked="false" template="GDP_SDE_generic">
-      <params>
-        <param name="MACHINE">porter</param>
-      </params>
-      <timer>0 0 22 6 10 ?</timer>
-      <materials>
-        <git url="git://github.com/gunnarx/gdp_sde" branch="release" materialName="gdp_sde" />
-        <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
-        <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
-        <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
-        <pipeline pipelineName="common-api-cpp-tools" stageName="build" materialName="capicxx-tools" />
-        <pipeline pipelineName="common-api-cpp-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
-        <pipeline pipelineName="common-api-cpp-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
-        <pipeline pipelineName="GDP-Yocto-porter_SDK" stageName="build" materialName="yocto-sdk-porter" />
-      </materials>
-    </pipeline>
-  </pipelines>
-  <pipelines group="GDP_Spins">
-    <authorization>
-      <view>
-        <user>AndreasR</user>
-        <user>EBoto</user>
-        <role>GDP_Developer</role>
-      </view>
-      <operate>
-        <user>AndreasR</user>
-        <user>EBoto</user>
-        <role>GDP_Developer</role>
-      </operate>
-      <admins>
-        <user>AndreasR</user>
-        <user>EBoto</user>
-      </admins>
-    </authorization>
-    <pipeline name="GDP-Yocto-Minnowboard-QtAS_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>minnowboard</value>
-        </variable>
-        <variable name="BUILD_SDK">
-          <value>true</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="http://github.com/Pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="GDP-Yocto-Minnowboard-QtAS" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
-      <timer>0 0 20 18 8 ?</timer>
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>minnowboard</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/Pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
-      </materials>
     </pipeline>
   </pipelines>
   <pipelines group="Administration_for_2131ce1bd33e">
