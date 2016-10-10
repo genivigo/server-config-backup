@@ -977,10 +977,18 @@
   <pipelines group="GDP_QtAS_Spin">
     <authorization>
       <view>
-        <user>EBoto</user>
         <user>AndreasR</user>
+        <user>EBoto</user>
         <role>GDP_Developer</role>
       </view>
+      <operate>
+        <user>AndreasR</user>
+        <role>GDP_Developer</role>
+      </operate>
+      <admins>
+        <user>AndreasR</user>
+        <user>EBoto</user>
+      </admins>
     </authorization>
   </pipelines>
   <pipelines group="Components">
