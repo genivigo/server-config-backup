@@ -990,6 +990,19 @@
         <user>EBoto</user>
       </admins>
     </authorization>
+    <pipeline name="GDP-Yocto-Minnowboard-QtAS_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="BUILD_SDK">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="http://github.com/Pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Components">
     <authorization>
@@ -2260,19 +2273,6 @@
         <user>EBoto</user>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-Minnowboard-QtAS_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>minnowboard</value>
-        </variable>
-        <variable name="BUILD_SDK">
-          <value>true</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="http://github.com/Pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
     <pipeline name="GDP-Yocto-Minnowboard-QtAS" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
       <timer>0 0 20 18 8 ?</timer>
       <environmentvariables>
