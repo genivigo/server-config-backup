@@ -2576,6 +2576,7 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="GDP_QtAS_Spin" />
   <templates>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
