@@ -1812,6 +1812,7 @@
         <git url="https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo" />
       </materials>
       <stage name="StageBuildQEMU">
+        <approval type="manual" />
         <jobs>
           <job name="JobBuild">
             <tasks>
