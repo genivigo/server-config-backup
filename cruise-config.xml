@@ -729,6 +729,11 @@
         <param name="MACHINE">qemux86-64</param>
       </params>
       <timer>0 0 0 6 10 ?</timer>
+      <environmentvariables>
+        <variable name="DOWNLOAD_SOURCE">
+          <value>yesofcourse</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="git://github.com/gunnarx/gdp_sde" branch="release" materialName="gdp_sde" />
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
