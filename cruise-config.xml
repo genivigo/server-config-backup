@@ -3339,7 +3339,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv capicxx*/bin/{*64,*64.ini} gdp-sdk/bin</arg>
+                <arg>for d in capicxx* ; do mkdir -p gdp-sdk/bin/$d ; mv $d/bin/{*64,*64.ini,features,plugins,configuration} gdp-sdk/bin/$d/ ; done</arg>
                 <runif status="passed" />
               </exec>
               <exec command="mv">
