@@ -728,7 +728,7 @@
       <params>
         <param name="MACHINE">qemux86-64</param>
       </params>
-      <timer>0 0 0 12 10 ?</timer>
+      <timer>0 0 3 12 10 ?</timer>
       <environmentvariables>
         <variable name="DOWNLOAD_SOURCE">
           <value>yesofcourse</value>
