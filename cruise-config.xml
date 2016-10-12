@@ -2531,7 +2531,7 @@
     </pipeline>
     <pipeline name="upload-sde-system" isLocked="false" template="upload-sde">
       <params>
-        <param name="MACHINE">raspberrypi2</param>
+        <param name="MACHINE">minnowboard</param>
       </params>
       <materials>
         <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-MACHINE" />
