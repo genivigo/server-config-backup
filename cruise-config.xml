@@ -3752,14 +3752,14 @@
               <fetchartifact pipeline="common-api-cpp-dbus-tools" stage="build" job="build" srcdir="bin" dest="capicxx-dbus">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="common-api-cpp-someip-tools" stage="build" job="build" srcdir="bin" dest="capicxx-someip">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>rm -rf gdp-sdk ; mkdir -p gdp-sdk/bin</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="common-api-cpp-someip-tools" stage="build" job="build" srcdir="bin" dest="capicxx-someip">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="bash" workingdir="gdp-sdk/bin">
                 <arg>-c</arg>
                 <arg>for d in ~/gdp-sdk/capicxx* ; do ln -s $(ls $f/*x86_64) ; done</arg>
