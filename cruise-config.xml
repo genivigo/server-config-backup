@@ -3760,7 +3760,7 @@
                 <arg>rm -rf gdp-sdk ; mkdir -p gdp-sdk/bin</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="homedir/bin">
+              <exec command="bash" workingdir="gdp-sdk/bin">
                 <arg>-c</arg>
                 <arg>for d in ~/gdp-sdk/capicxx* ; do ln -s $(ls $f/*x86_64) ; done</arg>
                 <runif status="passed" />
