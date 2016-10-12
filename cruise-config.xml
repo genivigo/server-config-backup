@@ -3760,9 +3760,9 @@
                 <arg>rm -rf gdp-sdk ; mkdir -p gdp-sdk/bin</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
+              <exec command="bash" workingdir="homedir/bin">
                 <arg>-c</arg>
-                <arg>for d in capicxx* ; do mkdir -p gdp-sdk/bin/$d ; mv $d/bin/{*64,*64.ini,features,plugins,configuration} gdp-sdk/bin/$d/ ; done</arg>
+                <arg>for d in ~/gdp-sdk/capicxx* ; do ln -s $(ls $f/*x86_64) ; done</arg>
                 <runif status="passed" />
               </exec>
               <exec command="mv">
