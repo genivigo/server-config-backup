@@ -3746,14 +3746,14 @@
               <fetchartifact pipeline="Eclipse-for-SDK-2" stage="stage" job="job" srcdir="results" dest="eclipse">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcdir="bin" dest="capicxx">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>rm -rf gdp-sdk ; mkdir -p gdp-sdk/bin</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcdir="bin" dest="capicxx">
+                <runif status="passed" />
+              </fetchartifact>
               <fetchartifact pipeline="common-api-cpp-dbus-tools" stage="build" job="build" srcdir="bin" dest="capicxx-dbus">
                 <runif status="passed" />
               </fetchartifact>
