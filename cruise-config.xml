@@ -2475,7 +2475,7 @@
               </exec>
               <exec command="bash" workingdir="homedir/.config">
                 <arg>-c</arg>
-                <arg>../../scripts/annotate_wallpaper.sh "GDP Software Development Environment \n$MACHINE $(cat ../../TIMESTAMP) "</arg>
+                <arg>../../scripts/annotate_wallpaper.sh "GDP Yocto-build Hands-on (no SDK!)\n$MACHINE $(cat ../../TIMESTAMP) "</arg>
                 <runif status="passed" />
               </exec>
               <exec command="vagrant">
