@@ -493,7 +493,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv staging/{*201*ext*,*201*rootfs*,*sdimg*,bzImage*201*} staging/images/ || true</arg>
+                <arg>mv staging/{*201*ext*,*201*rootfs*,*sdimg*,*hddimg*,bzImage*201*} staging/images/ || true</arg>
                 <runif status="passed" />
               </exec>
               <exec command="rm">
@@ -2892,7 +2892,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv staging/{*201*ext*,*201*rootfs*,*sdimg*,bzImage*201*} staging/images/ || true</arg>
+                <arg>mv staging/{*201*ext*,*201*rootfs*,*sdimg*,*hddimg*,bzImage*201*} staging/images/ || true</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
