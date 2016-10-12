@@ -1102,7 +1102,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="Release-Minnowboard-QtAS" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-Minnowboard-QtAS">
       <environmentvariables>
         <variable name="MACHINE">
           <value>minnowboard</value>
@@ -1117,6 +1117,124 @@
       <materials>
         <git url="https://github.com/Pelagicore/genivi-dev-platform" autoUpdate="false" />
       </materials>
+      <stage name="build">
+        <approval type="manual" />
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="rm" workingdir="gdp-src-build">
+                <arg>-rf</arg>
+                <arg>tmp</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>git checkout $BRANCH</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [[ "$MACHINE" == "dragonboard-410c" ]]; then source ./init.sh $MACHINE accept-eula; else source ./init.sh $MACHINE; fi</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="gdp-src-build">
+                <arg>-c</arg>
+                <arg>mkdir -p staging/$MACHINE</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>tar -zcf "gdp-src-build/staging/$MACHINE/oe-source.tar.gz" --exclude=gdp-src-build/{bitbake.lock,buildhistory,cache,downloads,sstate-cache,tmp,staging} --exclude=meta-{renesas,raspberrypi,intel,qcom} *</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="gdp-src-build/conf">
+                <arg>-c</arg>
+                <arg>/bin/echo -e 'INHERIT += "archiver"\nARCHIVER_MODE[src] = "original"\nCOPY_LIC_MANIFEST = "1"\nCOPY_LIC_DIRS = "1"'&gt;&gt;local.conf</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git">
+                <arg>config</arg>
+                <arg>--global</arg>
+                <arg>user.name</arg>
+                <arg>Go Server</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git">
+                <arg>config</arg>
+                <arg>--global</arg>
+                <arg>user.email</arg>
+                <arg>no_email@genivigo.com</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cp gdp-src-build/tmp/deploy/licenses/genivi-dev-platform-*/license.manifest gdp-src-build/staging/$MACHINE/$BRANCH-license.manifest</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cp gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-*.rootfs.manifest gdp-src-build/staging/$MACHINE/$BRANCH.rootfs.manifest</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>tar -zcf gdp-src-build/staging/$MACHINE/$BRANCH-licenses.tar.gz -C gdp-src-build/tmp/deploy/licenses .</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>tar -zcf gdp-src-build/staging/$MACHINE/$BRANCH-sources.tar.gz -C gdp-src-build/tmp/deploy/sources .</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [[ "$MACHINE" == "qemux86-64" ]]; then gzip -c gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-qemux86-64.ext4 &gt; gdp-src-build/staging/$MACHINE/$BRANCH-qemu.ext4.gz; fi</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [[ "$MACHINE" == "qemux86-64" ]]; then cp gdp-src-build/tmp/deploy/images/*/bzImage gdp-src-build/staging/$MACHINE/$BRANCH-qemu.bzImage; fi</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [[ "$MACHINE" == "raspberrypi2" || "$MACHINE" == "raspberrypi3" ]]; then gzip -c gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-*.rootfs.rpi-sdimg &gt; gdp-src-build/staging/$MACHINE/$BRANCH-rpi.sdimg.gz; fi</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [[ "$MACHINE" == "minnowboard" ]]; then cp poky/scripts/contrib/mkefidisk.sh gdp-src-build/tmp/deploy/images/intel-corei7-64/ &amp;&amp; tar -zchf gdp-src-build/staging/$MACHINE/$BRANCH-minnowboard.hddimg.tar.gz -C gdp-src-build/tmp/deploy/images/intel-corei7-64 genivi-dev-platform-intel-corei7-64.hddimg mkefidisk.sh; fi</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [[ "$MACHINE" == "dragonboard-410c" ]]; then gzip -c gdp-src-build/tmp/deploy/images/*/boot-dragonboard-410c.img &gt; gdp-src-build/staging/$MACHINE/$BRANCH-dragonboard.img.gz; fi</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [[ "$MACHINE" == "dragonboard-410c" ]]; then cp gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-dragonboard-410c.ext4.gz gdp-src-build/staging/$MACHINE/$BRANCH-dragonboard.ext4.gz; fi</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="gdp-src-build/staging/">
+                <arg>-c</arg>
+                <arg>cd $MACHINE &amp;&amp; md5sum * &gt; checksums.txt</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
+            <artifacts>
+              <artifact src="gdp-src-build/staging/" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="Components">
