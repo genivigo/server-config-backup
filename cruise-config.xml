@@ -2814,9 +2814,10 @@
       <authorization>
         <admins>
           <user>PedroA</user>
-          <user>jonathanmaw</user>
           <user>tpollard</user>
-          <user>gmacario</user>
+          <user>RobertM</user>
+          <user>AndreasR</user>
+          <user>EBoto</user>
         </admins>
       </authorization>
       <stage name="build">
@@ -2913,9 +2914,10 @@
       <authorization>
         <admins>
           <user>PedroA</user>
-          <user>jonathanmaw</user>
           <user>tpollard</user>
-          <user>gmacario</user>
+          <user>RobertM</user>
+          <user>AndreasR</user>
+          <user>EBoto</user>
         </admins>
       </authorization>
       <stage name="build">
@@ -3060,12 +3062,12 @@
     <pipeline name="meta-ivi-build">
       <authorization>
         <admins>
-          <user>PedroA</user>
-          <user>gmacario</user>
-          <user>jonathanmaw</user>
-          <user>mhoyer</user>
           <user>tolkien</user>
+          <user>PedroA</user>
           <user>tpollard</user>
+          <user>RobertM</user>
+          <user>AndreasR</user>
+          <user>EBoto</user>
         </admins>
       </authorization>
       <stage name="Build">
@@ -3134,9 +3136,9 @@
       <authorization>
         <admins>
           <user>PedroA</user>
-          <user>gmacario</user>
-          <user>jonathanmaw</user>
           <user>tpollard</user>
+          <user>RobertM</user>
+          <user>AndreasR</user>
           <user>EBoto</user>
         </admins>
       </authorization>
@@ -3227,10 +3229,9 @@
     <pipeline name="Wipe_dir_pattern">
       <authorization>
         <admins>
-          <user>tpollard</user>
           <user>PedroA</user>
-          <user>jonathanmaw</user>
-          <user>StephenL</user>
+          <user>tpollard</user>
+          <user>RobertM</user>
         </admins>
       </authorization>
       <stage name="stage" fetchMaterials="false">
@@ -3295,8 +3296,11 @@
     <pipeline name="GDP_SDE_generic">
       <authorization>
         <admins>
-          <user>EBoto</user>
+          <user>PedroA</user>
           <user>tpollard</user>
+          <user>RobertM</user>
+          <user>AndreasR</user>
+          <user>EBoto</user>
         </admins>
       </authorization>
       <stage name="Assemble">
