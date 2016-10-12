@@ -1102,6 +1102,22 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="Release-Minnowboard-QtAS" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="BRANCH">
+          <value>gdp-11</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>gdp-11</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Components">
     <authorization>
