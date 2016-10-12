@@ -2419,7 +2419,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>ga_test</resource>
+              <resource>go-agent1</resource>
             </resources>
             <artifacts>
               <artifact src="gdp-sdk-#{MACHINE}.tar.gz" />
