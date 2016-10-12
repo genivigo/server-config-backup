@@ -2684,6 +2684,23 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="test3" labeltemplate="meta-ivi:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
+      <timer>0 5 19 18 8 ?</timer>
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+        <variable name="IMAGE_NAME">
+          <value>miranda-image</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="git://github.com/genivi/meta-ivi.git" branch="11.0" dest="meta-ivi" materialName="meta-ivi" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="krogoth" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded_krogoth" />
+        <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="krogoth" dest="poky" autoUpdate="false" materialName="poky_krogoth" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Spins">
     <authorization>
