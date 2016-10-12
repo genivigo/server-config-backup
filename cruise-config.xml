@@ -2529,13 +2529,42 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="upload-sde-system" isLocked="false" template="upload-sde">
+    <pipeline name="upload-sde-system">
       <params>
         <param name="MACHINE">minnowboard</param>
       </params>
       <materials>
-        <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-MACHINE" />
+        <pipeline pipelineName="SDE-for-system-build" stageName="CreateVM" materialName="sdk-MACHINE" />
       </materials>
+      <stage name="stage">
+        <jobs>
+          <job name="job">
+            <tasks>
+              <fetchartifact pipeline="SDE-for-system-build" stage="CreateVM" job="run_vagrant" srcdir="results" dest="#{MACHINE}-no-sdk">
+                <runif status="passed" />
+              </fetchartifact>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>md5sum #{MACHINE}-no-sdk/results/gdp-sdk*.tar.gz</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="#{MACHINE}-no-sdk/results">
+                <arg>-c</arg>
+                <arg>mv gdp-sdk*.tar.gz no-sdk-image.tar.gz</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash" workingdir="#{MACHINE}-no-sdk/results">
+                <arg>-c</arg>
+                <arg>~/upload no-sdk-image.tar.gz</arg>
+                <runif status="any" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>uploader</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="GDP_Spins">
