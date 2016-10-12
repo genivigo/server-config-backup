@@ -2355,6 +2355,22 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="SDE-for-system-build" isLocked="false" template="GDP_SDE_generic">
+      <params>
+        <param name="MACHINE">minnowboard</param>
+      </params>
+      <timer>0 0 0 7 10 ?</timer>
+      <materials>
+        <git url="git://github.com/gunnarx/gdp_sde" branch="release" materialName="gdp_sde" />
+        <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
+        <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
+        <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
+        <pipeline pipelineName="common-api-cpp-tools" stageName="build" materialName="capicxx-tools" />
+        <pipeline pipelineName="common-api-cpp-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
+        <pipeline pipelineName="common-api-cpp-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
+        <pipeline pipelineName="GDP-Yocto-Minnowboard_SDK" stageName="build" materialName="yocto-sdk-minnowboard" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Spins">
     <authorization>
