@@ -2588,9 +2588,10 @@
       <authorization>
         <admins>
           <user>PedroA</user>
-          <user>jonathanmaw</user>
+          <user>RobertM</user>
           <user>tpollard</user>
-          <user>gmacario</user>
+          <user>AndreasR</user>
+          <user>EBoto</user>
         </admins>
       </authorization>
       <stage name="build">
