@@ -2529,6 +2529,14 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="upload-sde-system" isLocked="false" template="upload-sde">
+      <params>
+        <param name="MACHINE">raspberrypi2</param>
+      </params>
+      <materials>
+        <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-raspberrypi2" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Spins">
     <authorization>
