@@ -2534,7 +2534,7 @@
         <param name="MACHINE">raspberrypi2</param>
       </params>
       <materials>
-        <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-raspberrypi2" />
+        <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-MACHINE" />
       </materials>
     </pipeline>
   </pipelines>
