@@ -2359,6 +2359,11 @@
       <params>
         <param name="MACHINE">minnowboard</param>
       </params>
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>minnowboard</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="git://github.com/gunnarx/gdp_sde" branch="no_sdk" materialName="gdp_sde" />
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
