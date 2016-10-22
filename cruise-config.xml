@@ -3736,7 +3736,6 @@
         </admins>
       </authorization>
       <stage name="Assemble">
-        <approval type="manual" />
         <jobs>
           <job name="gdp-sdk">
             <environmentvariables>
