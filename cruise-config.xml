@@ -1318,9 +1318,10 @@
               <fetchartifact pipeline="common-api-cpp-runtime" stage="build" job="cmake_and_make" srcdir="build" dest="common-api-cpp-runtime">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="rm">
+              <exec command="rm" workingdir="common-api-dbus-runtime">
                 <arg>-rf</arg>
                 <arg>build</arg>
+                <runif status="passed" />
               </exec>
               <exec command="mkdir">
                 <arg>build</arg>
