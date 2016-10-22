@@ -3620,6 +3620,11 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
+                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake -c cleanall curl-native ca-certificates</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
                 <arg>if [[ "$BUILD_SDK" != "true" ]] ; then source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform ; fi</arg>
                 <runif status="passed" />
               </exec>
