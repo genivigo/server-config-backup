@@ -1305,7 +1305,7 @@
           <job name="build">
             <environmentvariables>
               <variable name="CommonAPI_DIR">
-                <value>common-api-cpp-runtime/build</value>
+                <value>../../common-api-cpp-runtime/build</value>
               </variable>
               <variable name="PKG_CONFIG_PATH">
                 <value>/var/lib/go-agent/pipelines/common-api-cpp-dbus-runtime/libdbus_patched/results/lib/pkgconfig</value>
