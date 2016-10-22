@@ -1323,7 +1323,7 @@
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mkdir">
+              <exec command="mkdir" workingdir="common-api-dbus-runtime">
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
