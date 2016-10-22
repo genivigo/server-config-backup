@@ -1298,7 +1298,7 @@
         <git url="git://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" dest="common-api-dbus-runtime" materialName="common-api-dbus-runtime.git" />
         <pipeline pipelineName="common-api-cpp-runtime" stageName="build" materialName="build" />
         <pipeline pipelineName="libdbus-with-commonapi-patch" stageName="patch_and_build" materialName="libdbus-with-commonapi-patch" />
-        <git url="git://git.projects.genivi.org/ipc/common-api-runtime.git" dest="common-api-runtime" materialName="common-api-runtime" />
+        <git url="git://git.projects.genivi.org/ipc/common-api-runtime.git" dest="common-api-cpp-runtime" materialName="common-api-cpp-runtime" />
       </materials>
       <stage name="build">
         <jobs>
