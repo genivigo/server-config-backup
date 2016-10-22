@@ -1333,7 +1333,7 @@
                 <arg>..</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="make" workingdir="build">
+              <exec command="make" workingdir="common-api-dbus-runtime/build">
                 <runif status="passed" />
               </exec>
             </tasks>
