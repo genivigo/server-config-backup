@@ -1356,7 +1356,7 @@
               <resource>cmake</resource>
             </resources>
             <artifacts>
-              <artifact src="build/*.so*" />
+              <artifact src="common-api-dbus-runtime/build/*.so*" />
             </artifacts>
           </job>
         </jobs>
