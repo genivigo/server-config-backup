@@ -1327,7 +1327,7 @@
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="cmake" workingdir="build">
+              <exec command="cmake" workingdir="common-api-dbus-runtime/build">
                 <arg>-D</arg>
                 <arg>USE_INSTALLED_COMMONAPI=ON</arg>
                 <arg>..</arg>
