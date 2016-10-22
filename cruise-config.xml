@@ -1295,7 +1295,7 @@
     </pipeline>
     <pipeline name="common-api-cpp-dbus-runtime" labeltemplate="master:${common-api-dbus-runtime.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
-        <git url="git://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" materialName="common-api-dbus-runtime.git" />
+        <git url="git://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" dest="common-api-dbus-runtime" materialName="common-api-dbus-runtime.git" />
         <pipeline pipelineName="common-api-cpp-runtime" stageName="build" materialName="build" />
         <pipeline pipelineName="libdbus-with-commonapi-patch" stageName="patch_and_build" materialName="libdbus-with-commonapi-patch" />
       </materials>
