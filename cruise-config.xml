@@ -1315,9 +1315,24 @@
               <fetchartifact pipeline="libdbus-with-commonapi-patch" stage="patch_and_build" job="patch_and_build" srcdir="results" dest="libdbus_patched">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="common-api-cpp-runtime" stage="build" job="cmake_and_make" srcdir="build" dest="common-api-cpp-runtime">
+              <exec command="rm" workingdir="common-api-cpp-runtime">
+                <arg>-rf</arg>
+                <arg>build</arg>
                 <runif status="passed" />
-              </fetchartifact>
+              </exec>
+              <exec command="mkdir" workingdir="common-api-cpp-runtime">
+                <arg>build</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="cmake" workingdir="common-api-cpp-runtime/build">
+                <arg>-D</arg>
+                <arg>USE_INSTALLED_COMMONAPI=ON</arg>
+                <arg>..</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="make" workingdir="common-api-cpp-runtime/build">
+                <runif status="passed" />
+              </exec>
               <exec command="rm" workingdir="common-api-dbus-runtime">
                 <arg>-rf</arg>
                 <arg>build</arg>
