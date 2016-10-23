@@ -1290,7 +1290,7 @@
     </pipeline>
     <pipeline name="common-api-cpp-runtime" labeltemplate="master:${common-api-runtime.git[:8]}-build:${COUNT}" isLocked="false" template="CMAKE_build">
       <materials>
-        <git url="git://git.projects.genivi.org/ipc/common-api-runtime.git" materialName="common-api-runtime.git" />
+        <git url="https://github.com/GENIVI/capicxx-core-runtime" materialName="common-api-runtime.git" />
       </materials>
     </pipeline>
     <pipeline name="common-api-cpp-dbus-runtime" labeltemplate="master:${common-api-dbus-runtime.git[:8]}-build:${COUNT}" isLocked="false">
