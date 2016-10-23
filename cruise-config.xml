@@ -1364,7 +1364,7 @@
     <pipeline name="libdbus-with-commonapi-patch" labeltemplate="master:${dbus.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="http://anongit.freedesktop.org/git/dbus/dbus.git" dest="dbus" materialName="dbus.git" />
-        <git url="git://git.projects.genivi.org/ipc/common-api-dbus-runtime.git" dest="common-api-dbus-runtime" materialName="common-api-dbus-runtime.git" />
+        <git url="https://github.com/GENIVI/capicxx-dbus-runtime" dest="common-api-dbus-runtime" materialName="common-api-dbus-runtime.git" />
       </materials>
       <stage name="patch_and_build">
         <jobs>
