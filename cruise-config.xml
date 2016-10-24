@@ -2769,8 +2769,8 @@
               </exec>
             </tasks>
             <resources>
-              <resource>yocto_build</resource>
               <resource>renesas_binaries</resource>
+              <resource>yocto_build</resource>
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
