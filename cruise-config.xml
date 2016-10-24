@@ -2708,7 +2708,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="git://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+        <git url="git://github.com/Pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
       <stage name="build">
         <jobs>
