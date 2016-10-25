@@ -1335,6 +1335,12 @@
                 <arg>--provision</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="vagrant">
+                <arg>package</arg>
+                <arg>--output</arg>
+                <arg>gdp-sde-minnowboard-qtas.tar.gz</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
