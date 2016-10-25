@@ -1347,6 +1347,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <artifacts>
+              <artifact src="gdp-sde-minnowboard-qtas.tar.gz" dest="results" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
