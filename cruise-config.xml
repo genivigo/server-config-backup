@@ -1341,6 +1341,11 @@
                 <arg>gdp-sde-minnowboard-qtas.tar.gz</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="vagrant">
+                <arg>destroy</arg>
+                <arg>-f</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
