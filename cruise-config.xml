@@ -1318,6 +1318,23 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="GDP-SDE-minnowboard-QtAS">
+      <materials>
+        <git url="https://github.com/erikboto/gdp-qtas-sde.git" autoUpdate="false" />
+      </materials>
+      <stage name="CreateVM">
+        <jobs>
+          <job name="run_vagrant">
+            <tasks>
+              <exec command="vagrant">
+                <arg>destroy</arg>
+                <arg>-f</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="Components">
     <authorization>
