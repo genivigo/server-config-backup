@@ -1325,6 +1325,14 @@
       <stage name="CreateVM">
         <jobs>
           <job name="run_vagrant">
+            <environmentvariables>
+              <variable name="VAGRANT_NUM_CPUS">
+                <value>7</value>
+              </variable>
+              <variable name="VAGRANT_RAM">
+                <value>8192</value>
+              </variable>
+            </environmentvariables>
             <tasks>
               <exec command="vagrant">
                 <arg>destroy</arg>
