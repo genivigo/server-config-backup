@@ -402,6 +402,7 @@
       <view>
         <user>guest</user>
         <role>Developer</role>
+        <role>Guest</role>
       </view>
       <admins>
         <role>GDP_Developer</role>
