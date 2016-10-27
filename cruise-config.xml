@@ -229,6 +229,16 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-Yocto-Dragonboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>dragonboard-410c</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
     <pipeline name="GDP-Yocto-Porter" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false">
       <timer onlyOnChanges="true">0 0 22 * * ?</timer>
       <environmentvariables>
