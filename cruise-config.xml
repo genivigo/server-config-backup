@@ -990,6 +990,11 @@
     </pipeline>
   </pipelines>
   <pipelines group="GDP_Release_Builds">
+    <authorization>
+      <view>
+        <role>Guest</role>
+      </view>
+    </authorization>
     <pipeline name="Release-QEMU_x86-64" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
         <variable name="MACHINE">
