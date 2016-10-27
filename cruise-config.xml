@@ -673,13 +673,9 @@
   <pipelines group="GDP_Developer_Environment">
     <authorization>
       <view>
-        <user>AndreasR</user>
-        <user>EBoto</user>
+        <user>guest</user>
+        <role>Guest</role>
       </view>
-      <operate>
-        <user>AndreasR</user>
-        <user>EBoto</user>
-      </operate>
       <admins>
         <user>AndreasR</user>
         <user>EBoto</user>
