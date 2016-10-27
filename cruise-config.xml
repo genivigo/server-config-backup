@@ -989,6 +989,88 @@
       </stage>
     </pipeline>
   </pipelines>
+  <pipelines group="GDP_Release_Builds">
+    <pipeline name="Release-QEMU_x86-64" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+        <variable name="BRANCH">
+          <value>gdp-11</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>gdp-11</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-Minnowboard" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="BRANCH">
+          <value>gdp-11</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>gdp-11</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-RaspberryPi2" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>raspberrypi2</value>
+        </variable>
+        <variable name="BRANCH">
+          <value>gdp-11</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>gdp-11</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-RaspberryPi3" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>raspberrypi3</value>
+        </variable>
+        <variable name="BRANCH">
+          <value>master</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>RC3</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-Dragonboard" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>dragonboard-410c</value>
+        </variable>
+        <variable name="BRANCH">
+          <value>gdp-11</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>gdp-11</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
+      </materials>
+    </pipeline>
+  </pipelines>
   <pipelines group="GDP_QtAS_Spin">
     <authorization>
       <view>
@@ -2444,86 +2526,6 @@
           </job>
         </jobs>
       </stage>
-    </pipeline>
-    <pipeline name="Release-QEMU_x86-64" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>qemux86-64</value>
-        </variable>
-        <variable name="BRANCH">
-          <value>gdp-11</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>gdp-11</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
-      </materials>
-    </pipeline>
-    <pipeline name="Release-Minnowboard" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>minnowboard</value>
-        </variable>
-        <variable name="BRANCH">
-          <value>gdp-11</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>gdp-11</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
-      </materials>
-    </pipeline>
-    <pipeline name="Release-RaspberryPi2" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>raspberrypi2</value>
-        </variable>
-        <variable name="BRANCH">
-          <value>gdp-11</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>gdp-11</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
-      </materials>
-    </pipeline>
-    <pipeline name="Release-RaspberryPi3" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>raspberrypi3</value>
-        </variable>
-        <variable name="BRANCH">
-          <value>master</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>RC3</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
-      </materials>
-    </pipeline>
-    <pipeline name="Release-Dragonboard" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>dragonboard-410c</value>
-        </variable>
-        <variable name="BRANCH">
-          <value>gdp-11</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>gdp-11</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
-      </materials>
     </pipeline>
     <pipeline name="squashfuse">
       <materials>
