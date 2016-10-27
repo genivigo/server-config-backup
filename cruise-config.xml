@@ -1356,7 +1356,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>4e9148b1df8f</resource>
+              <resource>vagrant</resource>
             </resources>
             <artifacts>
               <artifact src="gdp-sde-minnowboard-qtas.tar.gz" dest="results" />
