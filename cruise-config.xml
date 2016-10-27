@@ -400,6 +400,7 @@
   <pipelines group="GDP_Pull_Request_Checking">
     <authorization>
       <view>
+        <user>guest</user>
         <role>Developer</role>
       </view>
       <admins>
