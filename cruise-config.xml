@@ -3827,11 +3827,6 @@
               <fetchartifact pipeline="common-api-cpp-someip-tools" stage="build" job="build" srcdir="bin" dest="gdp-sdk/capicxx-someip">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="bash" workingdir="gdp-sdk/bin">
-                <arg>-c</arg>
-                <arg>for d in ../capicxx*/bin ; do ln -s $(ls $d/*x86_64) ; done</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="mv">
                 <arg>eclipse/results/eclipse</arg>
                 <arg>gdp-sdk/</arg>
