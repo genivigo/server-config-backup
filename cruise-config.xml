@@ -992,14 +992,9 @@
   <pipelines group="GDP_Release_Builds">
     <authorization>
       <view>
-        <user>EBoto</user>
+        <user>guest</user>
         <role>Guest</role>
-        <role>GDP_Developer</role>
       </view>
-      <operate>
-        <user>EBoto</user>
-        <role>GDP_Developer</role>
-      </operate>
       <admins>
         <user>EBoto</user>
         <role>GDP_Developer</role>
