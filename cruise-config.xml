@@ -4031,6 +4031,7 @@
         <resource>go-agent1</resource>
         <resource>java</resource>
         <resource>cmake</resource>
+        <resource>ga_test</resource>
       </resources>
     </agent>
     <agent hostname="14dd4c9f3385" ipaddress="172.17.0.2" uuid="6bb7281c-682f-4659-8370-ffa4048d03df">
