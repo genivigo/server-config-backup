@@ -740,7 +740,7 @@
         <pipeline pipelineName="GDP-Yocto-qemux86-64_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-SDE-dragonboard" isLocked="false" template="GDP_SDE_generic">
+    <pipeline name="GDP-SDE-dragonboard-410c" isLocked="false" template="GDP_SDE_generic">
       <params>
         <param name="MACHINE">dragonboard-410c</param>
       </params>
@@ -3023,6 +3023,14 @@
       </params>
       <materials>
         <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-raspberrypi2" />
+      </materials>
+    </pipeline>
+    <pipeline name="upload-dragonboard-410c" isLocked="false" template="upload-sde">
+      <params>
+        <param name="MACHINE">dragonboard-410c</param>
+      </params>
+      <materials>
+        <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-dragonboard-410c" />
       </materials>
     </pipeline>
   </pipelines>
