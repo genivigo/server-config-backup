@@ -4051,6 +4051,7 @@
     <agent hostname="build2-goagent" ipaddress="10.8.36.145" uuid="bdec648f-0e0c-4273-b5a1-7ccd042df435">
       <resources>
         <resource>build2-goagent</resource>
+        <resource>yocto_build</resource>
       </resources>
     </agent>
   </agents>
