@@ -1445,9 +1445,6 @@
             <resources>
               <resource>4e9148b1df8f</resource>
             </resources>
-            <artifacts>
-              <artifact src="gdp-sde-minnowboard-qtas.tar.gz" dest="results" />
-            </artifacts>
           </job>
         </jobs>
       </stage>
