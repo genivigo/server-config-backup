@@ -1417,7 +1417,7 @@
                 <value>2</value>
               </variable>
               <variable name="VAGRANT_RAM">
-                <value>8192</value>
+                <value>4096</value>
               </variable>
             </environmentvariables>
             <tasks>
