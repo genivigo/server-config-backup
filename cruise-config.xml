@@ -2170,7 +2170,7 @@
       </stage>
     </pipeline>
     <pipeline name="AGL_meta_agl_demo_plus_homescreen" isLocked="false">
-      <timer>0 0 3 29 10 ?</timer>
+      <timer onlyOnChanges="true">0 0 3 ? * 7</timer>
       <materials>
         <git url="https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo" />
       </materials>
