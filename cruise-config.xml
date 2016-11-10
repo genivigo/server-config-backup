@@ -4021,7 +4021,7 @@
         <resource>build2-goagent</resource>
       </resources>
     </agent>
-    <agent hostname="ced80101c387" ipaddress="172.17.0.12" uuid="31d68603-71a4-474d-82d1-6578b4375341" />
+    <agent hostname="ced80101c387" ipaddress="172.17.0.12" uuid="31d68603-71a4-474d-82d1-6578b4375341" isDisabled="true" />
   </agents>
 </cruise>
 
