@@ -30,6 +30,7 @@
             <user>AndreasR</user>
             <user>tmohammad</user>
             <user>alejalonso</user>
+            <user>zeenix</user>
           </users>
         </role>
         <role name="Developer">
@@ -56,6 +57,7 @@
             <user>AndreasR</user>
             <user>tmohammad</user>
             <user>alejalonso</user>
+            <user>zeenix</user>
           </users>
         </role>
         <role name="GDP_Developer">
@@ -68,6 +70,7 @@
             <user>RobertM</user>
             <user>EBoto</user>
             <user>AndreasR</user>
+            <user>zeenix</user>
           </users>
         </role>
       </roles>
