@@ -1723,7 +1723,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="common-api-cpp-tools" isLocked="false">
+    <pipeline name="common-api-cpp-tools" labeltemplate="master:${capicxx-core-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="https://github.com/GENIVI/capicxx-core-tools" materialName="capicxx-core-tools.git" />
       </materials>
