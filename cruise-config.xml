@@ -1723,7 +1723,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="common-api-cpp-tools" labeltemplate="master:${common-api-tools.git[:8]}-build:${COUNT}" isLocked="false">
+    <pipeline name="common-api-cpp-tools" isLocked="false">
       <materials>
         <git url="git://git.projects.genivi.org/ipc/common-api-tools.git" materialName="common-api-tools.git" />
       </materials>
