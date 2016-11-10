@@ -1725,7 +1725,7 @@
     </pipeline>
     <pipeline name="common-api-cpp-tools" isLocked="false">
       <materials>
-        <git url="git://git.projects.genivi.org/ipc/common-api-tools.git" materialName="common-api-tools.git" />
+        <git url="https://github.com/GENIVI/capicxx-core-tools" materialName="capicxx-core-tools.git" />
       </materials>
       <stage name="build" artifactCleanupProhibited="true">
         <jobs>
