@@ -4029,7 +4029,6 @@
         <resource>ics-agent1</resource>
       </resources>
     </agent>
-    <agent hostname="my-go-agent-name" ipaddress="94.234.170.204" uuid="aab9f2c9-cfdb-4e35-b9b2-ec244a83740d" isDisabled="true" />
   </agents>
 </cruise>
 
