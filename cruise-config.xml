@@ -1747,7 +1747,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>maven</resource>
+              <resource>ics-agent1</resource>
             </resources>
             <artifacts>
               <artifact src="bin" />
