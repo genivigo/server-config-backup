@@ -4021,6 +4021,7 @@
         <resource>build2-goagent</resource>
       </resources>
     </agent>
+    <agent hostname="ONTAINER_HOSTNAME" ipaddress="94.234.170.204" uuid="bc24bdec-1295-4055-9b09-00acda8b1d56" isDisabled="true" />
   </agents>
 </cruise>
 
