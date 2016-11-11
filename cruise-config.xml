@@ -2751,6 +2751,7 @@
               </exec>
             </tasks>
             <resources>
+              <resource>imagemagick</resource>
               <resource>vagrant</resource>
             </resources>
             <artifacts>
@@ -3892,6 +3893,7 @@
               </exec>
             </tasks>
             <resources>
+              <resource>imagemagick</resource>
               <resource>vagrant</resource>
             </resources>
             <artifacts>
