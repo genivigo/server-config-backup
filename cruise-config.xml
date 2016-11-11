@@ -964,9 +964,6 @@
                 <runif status="passed" />
               </exec>
             </tasks>
-            <resources>
-              <resource>maven</resource>
-            </resources>
             <artifacts>
               <artifact src="artifacts/" dest="tarballs/" />
               <artifact src="autoeclipse/eclipse" dest="results/" />
@@ -1181,9 +1178,6 @@
                 <runif status="passed" />
               </exec>
             </tasks>
-            <resources>
-              <resource>cmake</resource>
-            </resources>
             <artifacts>
               <artifact src="build/gammaray/*" dest="gammaray" />
               <artifact src="build/gammaray.tar.bz2" />
@@ -1494,9 +1488,6 @@
                 <runif status="passed" />
               </exec>
             </tasks>
-            <resources>
-              <resource>cmake</resource>
-            </resources>
             <artifacts>
               <artifact src="build/src/lib" />
             </artifacts>
@@ -1567,9 +1558,6 @@
                 <runif status="passed" />
               </exec>
             </tasks>
-            <resources>
-              <resource>cmake</resource>
-            </resources>
             <artifacts>
               <artifact src="common-api-dbus-runtime/build/*.so*" />
             </artifacts>
@@ -1716,9 +1704,6 @@
                 <runif status="passed" />
               </exec>
             </tasks>
-            <resources>
-              <resource>maven</resource>
-            </resources>
             <artifacts>
               <artifact src="bin" />
             </artifacts>
@@ -1749,9 +1734,6 @@
                 <runif status="passed" />
               </exec>
             </tasks>
-            <resources>
-              <resource>maven</resource>
-            </resources>
             <artifacts>
               <artifact src="bin" />
             </artifacts>
@@ -1791,9 +1773,6 @@
                 <runif status="passed" />
               </exec>
             </tasks>
-            <resources>
-              <resource>maven</resource>
-            </resources>
             <artifacts>
               <artifact src="bin" />
             </artifacts>
@@ -1922,9 +1901,6 @@
                 <runif status="passed" />
               </exec>
             </tasks>
-            <resources>
-              <resource>maven</resource>
-            </resources>
             <artifacts>
               <artifact src="bin" />
             </artifacts>
@@ -2406,7 +2382,6 @@
               </exec>
             </tasks>
             <resources>
-              <resource>cmake</resource>
               <resource>lbs</resource>
             </resources>
           </job>
@@ -2424,7 +2399,6 @@
               </exec>
             </tasks>
             <resources>
-              <resource>cmake</resource>
               <resource>lbs</resource>
             </resources>
           </job>
@@ -2442,7 +2416,6 @@
               </exec>
             </tasks>
             <resources>
-              <resource>cmake</resource>
               <resource>lbs</resource>
             </resources>
           </job>
@@ -2460,7 +2433,6 @@
               </exec>
             </tasks>
             <resources>
-              <resource>cmake</resource>
               <resource>lbs</resource>
             </resources>
           </job>
@@ -2478,7 +2450,6 @@
               </exec>
             </tasks>
             <resources>
-              <resource>cmake</resource>
               <resource>lbs</resource>
             </resources>
           </job>
@@ -3509,9 +3480,6 @@
                 <runif status="passed" />
               </exec>
             </tasks>
-            <resources>
-              <resource>cmake</resource>
-            </resources>
             <artifacts>
               <artifact src="build" />
             </artifacts>
@@ -3983,8 +3951,6 @@
     </agent>
     <agent hostname="2131ce1bd33e" ipaddress="172.17.0.7" uuid="ce4f9ef6-91a4-44c3-881e-3486ff87a2aa">
       <resources>
-        <resource>cmake</resource>
-        <resource>maven</resource>
         <resource>libtool</resource>
         <resource>lbs</resource>
         <resource>renesas_binaries</resource>
@@ -4001,7 +3967,6 @@
         <resource>new_test</resource>
         <resource>go-agent1</resource>
         <resource>java</resource>
-        <resource>cmake</resource>
         <resource>ga_test</resource>
       </resources>
     </agent>
