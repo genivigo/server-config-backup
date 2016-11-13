@@ -3965,7 +3965,7 @@
         <resource>imagemagick</resource>
       </resources>
     </agent>
-    <agent hostname="10096874c2ab" ipaddress="172.17.0.3" uuid="c25991cc-5f06-422e-8e98-31eda2ba4363">
+    <agent hostname="10096874c2ab" ipaddress="172.17.0.8" uuid="c25991cc-5f06-422e-8e98-31eda2ba4363">
       <resources>
         <resource>10096874c2ab</resource>
         <resource>virtualbox_test</resource>
