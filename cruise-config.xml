@@ -1404,7 +1404,7 @@
     </pipeline>
     <pipeline name="GDP-SDE-minnowboard-QtAS">
       <materials>
-        <git url="https://github.com/andreasrosenlind/gdp-qtas-sde.git" autoUpdate="false" />
+        <git url="https://github.com/Pelagicore/gdp-qtas-sde.git" autoUpdate="false" />
       </materials>
       <stage name="CreateVM">
         <jobs>
