@@ -673,7 +673,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="GDP_Developer_Environment">
+  <pipelines group="GDP_Software_Developer_Environment">
     <authorization>
       <view>
         <user>guest</user>
