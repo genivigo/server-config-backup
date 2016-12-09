@@ -75,7 +75,6 @@
         </role>
       </roles>
       <admins>
-        <user>PedroA</user>
         <user>GunnarA</user>
       </admins>
     </security>
@@ -2851,7 +2850,6 @@
     <authorization>
       <admins>
         <user>GunnarA</user>
-        <user>PedroA</user>
         <user>tpollard</user>
         <role>GDP_Developer</role>
       </admins>
@@ -2922,7 +2920,6 @@
     <authorization>
       <admins>
         <user>GunnarA</user>
-        <user>PedroA</user>
         <user>tpollard</user>
         <role>GDP_Developer</role>
       </admins>
@@ -2968,7 +2965,6 @@
     <pipeline name="Yocto_GDP_generic">
       <authorization>
         <admins>
-          <user>PedroA</user>
           <user>RobertM</user>
           <user>tpollard</user>
           <user>AndreasR</user>
@@ -3065,7 +3061,6 @@
     <pipeline name="Yocto_GDP_generic_release">
       <authorization>
         <admins>
-          <user>PedroA</user>
           <user>tpollard</user>
           <user>RobertM</user>
           <user>AndreasR</user>
@@ -3194,7 +3189,6 @@
     <pipeline name="Yocto_GDP_generic_latest_meta_genivi_demo">
       <authorization>
         <admins>
-          <user>PedroA</user>
           <user>tpollard</user>
           <user>RobertM</user>
           <user>AndreasR</user>
@@ -3294,7 +3288,6 @@
     <pipeline name="Yocto_GDP_generic_reuse_tmp">
       <authorization>
         <admins>
-          <user>PedroA</user>
           <user>tpollard</user>
           <user>RobertM</user>
           <user>AndreasR</user>
@@ -3399,7 +3392,6 @@
     <pipeline name="CMAKE_build">
       <authorization>
         <admins>
-          <user>PedroA</user>
           <user>gmacario</user>
           <user>marcor</user>
           <user>tpollard</user>
@@ -3441,7 +3433,6 @@
       <authorization>
         <admins>
           <user>tolkien</user>
-          <user>PedroA</user>
           <user>tpollard</user>
           <user>RobertM</user>
           <user>AndreasR</user>
@@ -3513,7 +3504,6 @@
     <pipeline name="Yocto_GDP_SDK_generic">
       <authorization>
         <admins>
-          <user>PedroA</user>
           <user>tpollard</user>
           <user>RobertM</user>
           <user>AndreasR</user>
@@ -3612,7 +3602,6 @@
     <pipeline name="Wipe_dir_pattern">
       <authorization>
         <admins>
-          <user>PedroA</user>
           <user>tpollard</user>
           <user>RobertM</user>
         </admins>
@@ -3679,7 +3668,6 @@
     <pipeline name="GDP_SDE_generic">
       <authorization>
         <admins>
-          <user>PedroA</user>
           <user>tpollard</user>
           <user>RobertM</user>
           <user>AndreasR</user>
