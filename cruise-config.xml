@@ -3932,14 +3932,6 @@
     </pipeline>
   </templates>
   <agents>
-    <agent hostname="codethink-genivigo-agent1-x86" ipaddress="192.168.122.1" uuid="98b572c4-d559-4ed2-8b00-f4c25851e443" isDisabled="true">
-      <resources>
-        <resource>ct_test</resource>
-        <resource>codethink-genivigo-agent1-x86</resource>
-        <resource>yocto_build</resource>
-        <resource>renesas_binaries</resource>
-      </resources>
-    </agent>
     <agent hostname="2131ce1bd33e" ipaddress="172.17.0.11" uuid="ce4f9ef6-91a4-44c3-881e-3486ff87a2aa">
       <resources>
         <resource>renesas_binaries</resource>
