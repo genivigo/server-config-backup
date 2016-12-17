@@ -3914,7 +3914,7 @@
         <resource>build2-goagent</resource>
       </resources>
     </agent>
-    <agent hostname="ics-agent1" ipaddress="172.17.0.68" uuid="0d027f89-6a5b-4d2f-803d-394f4c5690ae">
+    <agent hostname="ics-agent1" ipaddress="172.17.0.69" uuid="0d027f89-6a5b-4d2f-803d-394f4c5690ae">
       <resources>
         <resource>ics-agent1</resource>
         <resource>yocto_build</resource>
