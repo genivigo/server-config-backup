@@ -2955,7 +2955,7 @@
     <pipeline name="Wipe_gdp_sstate_dir5" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/cache/yocto/sstate/*</param>
-        <param name="agent">4e9148b1df8f</param>
+        <param name="agent">build2-goagent</param>
       </params>
       <materials>
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
