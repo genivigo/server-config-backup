@@ -3905,6 +3905,7 @@
       <resources>
         <resource>renesas_binaries</resource>
         <resource>yocto_build</resource>
+        <resource>build2-goagent</resource>
       </resources>
     </agent>
     <agent hostname="ics-agent1" ipaddress="172.17.0.83" uuid="0d027f89-6a5b-4d2f-803d-394f4c5690ae">
