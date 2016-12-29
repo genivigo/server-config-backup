@@ -3627,11 +3627,6 @@
                 <arg>rm -rf #{dir_pattern}</arg>
                 <runif status="any" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>echo "Pipelines disk usage:" &amp;&amp; du -hs /var/lib/go-agent/pipelines/* || true</arg>
-                <runif status="any" />
-              </exec>
             </tasks>
             <resources>
               <resource>#{agent}</resource>
