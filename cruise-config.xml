@@ -2966,10 +2966,11 @@
     <pipeline name="Yocto_GDP_generic">
       <authorization>
         <admins>
-          <user>RobertM</user>
-          <user>tpollard</user>
           <user>AndreasR</user>
           <user>EBoto</user>
+          <user>RobertM</user>
+          <user>tpollard</user>
+          <user>dunderroffe</user>
         </admins>
       </authorization>
       <stage name="build">
