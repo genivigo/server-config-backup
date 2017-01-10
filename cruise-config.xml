@@ -2969,8 +2969,10 @@
           <user>AndreasR</user>
           <user>EBoto</user>
           <user>RobertM</user>
-          <user>tpollard</user>
           <user>dunderroffe</user>
+          <user>tpollard</user>
+          <user>tmohammad</user>
+          <user>zeenix</user>
         </admins>
       </authorization>
       <stage name="build">
