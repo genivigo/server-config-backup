@@ -2974,7 +2974,7 @@
           <user>zeenix</user>
         </admins>
       </authorization>
-      <stage name="build">
+      <stage name="build" cleanWorkingDir="true">
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
