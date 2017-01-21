@@ -144,20 +144,6 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="yocto-baseline-9" labeltemplate="9.0:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
-      <timer>0 50 22 18 8 ?</timer>
-      <environmentvariables>
-        <variable name="IMAGE_NAME">
-          <value>kronos-image</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="git://git.yoctoproject.org/meta-ivi" branch="9.0" dest="meta-ivi" materialName="meta-ivi" />
-        <git url="git://git.yoctoproject.org/poky" branch="fido" dest="poky" autoUpdate="false" materialName="poky_fido" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="fido" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded_fido" />
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
-      </materials>
-    </pipeline>
     <pipeline name="yocto-baseline-10" labeltemplate="10.0:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
       <environmentvariables>
         <variable name="IMAGE_NAME">
