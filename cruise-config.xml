@@ -3513,6 +3513,90 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="meta-ivi-build-with-test">
+      <authorization>
+        <admins>
+          <user>tolkien</user>
+          <user>tpollard</user>
+          <user>RobertM</user>
+          <user>AndreasR</user>
+          <user>EBoto</user>
+        </admins>
+      </authorization>
+      <stage name="Build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config</arg>
+                <arg>user.name</arg>
+                <arg>Go Agent</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="git" workingdir="meta-ivi">
+                <arg>config</arg>
+                <arg>user.email</arg>
+                <arg>no_email@genivigo.com</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="baseline_ci_helper">
+                <arg>-c</arg>
+                <arg>./checkout_layer_hash.sh poky</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="baseline_ci_helper">
+                <arg>-c</arg>
+                <arg>./checkout_layer_hash.sh meta-openembedded</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="build/conf">
+                <arg>-c</arg>
+                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>source poky/oe-init-build-env &amp;&amp; bitbake -c fetch linux-yocto</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>source poky/oe-init-build-env &amp;&amp; bitbake $IMAGE_NAME</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar ; touch logs.tar.gz</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>source poky/oe-init-build-env &amp;&amp; bitbake test-image</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -f logs_test.tar logs_test.tar.gz &amp;&amp; find build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs_test.tar &amp;&amp; gzip logs_test.tar ; touch logs_test.tar.gz</arg>
+                <runif status="any" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+              <resource>python3</resource>
+            </resources>
+            <artifacts>
+              <artifact src="logs.tar.gz" />
+              <artifact src="logs_test.tar.gz" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
     <pipeline name="Yocto_GDP_SDK_generic">
       <authorization>
         <admins>
