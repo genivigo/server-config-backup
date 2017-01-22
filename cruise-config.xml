@@ -2181,6 +2181,10 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>python3</resource>
+              <resource>yocto_build</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
