@@ -3580,14 +3580,14 @@
                 <arg>source poky/oe-init-build-env &amp;&amp; bitbake -c fetch linux-yocto</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env &amp;&amp; bitbake $IMAGE_NAME</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash" workingdir="build/conf">
                 <arg>-c</arg>
                 <arg>echo 'BBLAYERS += "{$TOPDIR}/../meta-ivi-test/"' &gt;&gt;bblayers.conf</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>source poky/oe-init-build-env &amp;&amp; bitbake $IMAGE_NAME</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
