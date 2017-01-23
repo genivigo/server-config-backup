@@ -3595,15 +3595,15 @@
                 <arg>source poky/oe-init-build-env &amp;&amp; bitbake test-image</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs_test.tar logs_test.tar.gz &amp;&amp; find build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs_test.tar &amp;&amp; gzip logs_test.tar ; touch logs_test.tar.gz</arg>
-                <runif status="any" />
-              </exec>
               <exec command="bash" workingdir="build/conf">
                 <arg>-c</arg>
                 <arg>echo 'BBLAYERS += "{$TOPDIR}/../meta-ivi-test/"' &gt;&gt;bblayers.conf</arg>
                 <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rm -f logs_test.tar logs_test.tar.gz &amp;&amp; find build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs_test.tar &amp;&amp; gzip logs_test.tar ; touch logs_test.tar.gz</arg>
+                <runif status="any" />
               </exec>
             </tasks>
             <resources>
