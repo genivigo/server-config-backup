@@ -3305,7 +3305,6 @@
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
-              <artifact src="staging/images/*" />
             </artifacts>
           </job>
         </jobs>
