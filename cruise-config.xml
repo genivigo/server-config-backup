@@ -176,7 +176,7 @@
         <git url="http://git.yoctoproject.org/git/poky.git" branch="krogoth" dest="poky" autoUpdate="false" materialName="poky_krogoth" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-next" labeltemplate="meta-ivi.experimental:${meta-ivi.experimental[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-next" isLocked="false" template="meta-ivi-build">
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
