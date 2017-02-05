@@ -4022,7 +4022,7 @@
         <resource>yocto_build</resource>
       </resources>
     </agent>
-    <agent hostname="ics-agent1" ipaddress="172.17.0.11" uuid="0d027f89-6a5b-4d2f-803d-394f4c5690ae" isDisabled="true">
+    <agent hostname="ics-agent1" ipaddress="172.17.0.12" uuid="0d027f89-6a5b-4d2f-803d-394f4c5690ae" isDisabled="true">
       <resources>
         <resource>ics-agent1</resource>
         <resource>yocto_build</resource>
