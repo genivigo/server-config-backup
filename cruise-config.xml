@@ -2,7 +2,7 @@
 <cruise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cruise-config.xsd" schemaVersion="88">
   <server artifactsdir="artifacts" siteUrl="http://go.genivi.org" secureSiteUrl="https://go.genivi.org" purgeStart="10.0" purgeUpto="20.0" agentAutoRegisterKey="a54677b2-cdae-4577-bb1d-c1241468c24f" commandRepositoryLocation="genivi" serverId="0634fc43-adff-426b-b417-781a09b9c51a">
     <security>
-      <passwordFile path="/var/go/users" />
+      <passwordFile path="/gousers/users" />
       <roles>
         <role name="Guest">
           <users>
