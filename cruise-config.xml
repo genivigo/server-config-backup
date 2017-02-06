@@ -404,7 +404,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="GDP_Pull_Request_Checking">
+  <pipelines group="GDP_Pull_Requests">
     <authorization>
       <view>
         <user>guest</user>
