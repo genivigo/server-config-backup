@@ -351,7 +351,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Baseline_Pull_Request_Checking">
+  <pipelines group="Baseline_Pull_Requests">
     <authorization>
       <view>
         <user>guest</user>
