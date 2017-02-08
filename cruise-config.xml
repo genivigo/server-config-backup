@@ -1650,7 +1650,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>2131ce1bd33e</resource>
+              <resource>Qt-seeder</resource>
             </resources>
             <artifacts>
               <artifact src="#{QT_LIBS_AND_CREATOR_FILE}" />
@@ -2505,7 +2505,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>2131ce1bd33e</resource>
+              <resource>ga_test</resource>
             </resources>
           </job>
         </jobs>
