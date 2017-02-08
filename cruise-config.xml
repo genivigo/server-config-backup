@@ -4034,6 +4034,7 @@
         <resource>uploader</resource>
       </resources>
     </agent>
+    <agent hostname="c8776aa52222" ipaddress="104.227.2.122" uuid="cfad499e-6530-4e20-9013-ac7f484f5523" />
   </agents>
 </cruise>
 
