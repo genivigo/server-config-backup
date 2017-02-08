@@ -3449,6 +3449,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>asciidoc</resource>
+            </resources>
             <artifacts>
               <artifact src="build" />
             </artifacts>
