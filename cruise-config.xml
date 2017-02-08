@@ -4039,6 +4039,7 @@
         <resource>imagemagick</resource>
         <resource>vagrant</resource>
         <resource>14dd4c9f3385</resource>
+        <resource>uploader</resource>
       </resources>
     </agent>
   </agents>
