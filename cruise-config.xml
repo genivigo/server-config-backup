@@ -4028,6 +4028,7 @@
         <resource>yocto_build</resource>
       </resources>
     </agent>
+    <agent hostname="715a6857c455" ipaddress="104.227.2.122" uuid="917806d7-36c1-47a9-994d-d1ce4a3f34fd" />
   </agents>
 </cruise>
 
