@@ -4038,6 +4038,7 @@
         <resource>renesas_binaries</resource>
         <resource>c8776aa52222</resource>
         <resource>notmp</resource>
+        <resource>Qt-seeder</resource>
       </resources>
     </agent>
   </agents>
