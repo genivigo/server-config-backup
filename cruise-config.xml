@@ -4034,7 +4034,7 @@
         <resource>python3</resource>
       </resources>
     </agent>
-    <agent hostname="14dd4c9f3385" ipaddress="104.227.2.122" uuid="6c0751d6-39f2-4857-9f11-9891982323d3" />
+    <agent hostname="14dd4c9f3385" ipaddress="172.17.0.6" uuid="6c0751d6-39f2-4857-9f11-9891982323d3" />
   </agents>
 </cruise>
 
