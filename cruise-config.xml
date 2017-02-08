@@ -4028,7 +4028,7 @@
         <resource>yocto_build</resource>
       </resources>
     </agent>
-    <agent hostname="715a6857c455" ipaddress="172.17.0.23" uuid="917806d7-36c1-47a9-994d-d1ce4a3f34fd">
+    <agent hostname="715a6857c455" ipaddress="172.17.0.23" uuid="917806d7-36c1-47a9-994d-d1ce4a3f34fd" isDisabled="true">
       <resources>
         <resource>yocto_build</resource>
         <resource>python3</resource>
