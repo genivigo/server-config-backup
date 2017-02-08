@@ -4040,6 +4040,7 @@
         <resource>ga_test</resource>
         <resource>python3</resource>
         <resource>renesas_binaries</resource>
+        <resource>c8776aa52222</resource>
       </resources>
     </agent>
   </agents>
