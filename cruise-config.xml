@@ -4001,14 +4001,6 @@
         <resource>python3</resource>
       </resources>
     </agent>
-    <agent hostname="14dd4c9f3385" ipaddress="172.17.0.9" uuid="6bb7281c-682f-4659-8370-ffa4048d03df" isDisabled="true">
-      <resources>
-        <resource>vagrant</resource>
-        <resource>uploader</resource>
-        <resource>14dd4c9f3385</resource>
-        <resource>imagemagick</resource>
-      </resources>
-    </agent>
     <agent hostname="10096874c2ab" ipaddress="172.17.0.8" uuid="c25991cc-5f06-422e-8e98-31eda2ba4363">
       <resources>
         <resource>10096874c2ab</resource>
