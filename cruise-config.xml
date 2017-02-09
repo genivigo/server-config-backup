@@ -1511,6 +1511,7 @@
         <git url="https://github.com/GENIVI/capicxx-dbus-runtime" dest="capicxx-dbus-runtime" materialName="capicxx-dbus-runtime.git" />
         <pipeline pipelineName="libdbus-with-commonapi-patch" stageName="patch_and_build" materialName="libdbus-with-commonapi-patch" />
         <git url="https://github.com/GENIVI/capicxx-core-runtime" dest="capicxx-core-runtime" materialName="capicxx-core-runtime" />
+        <git url="https://github.com/google/googletest/" dest="googletest" materialName="googletest" />
       </materials>
       <stage name="build">
         <jobs>
