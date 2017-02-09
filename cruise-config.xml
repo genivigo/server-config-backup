@@ -1758,7 +1758,7 @@
     </pipeline>
     <pipeline name="capicxx-someip-tools" labeltemplate="master:${cpp-someip-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
-        <git url="git://github.com/genivi/cpp-someip-tools.git" dest="cpp-someip-tools" materialName="cpp-someip-tools.git" />
+        <git url="git://github.com/genivi/capicxx-someip-tools.git" dest="cpp-someip-tools" materialName="cpp-someip-tools.git" />
         <git url="git://github.com/genivi/capicxx-core-tools.git" dest="capicxx-core-tools" materialName="capicxx-core-tools.git" />
       </materials>
       <stage name="build" artifactCleanupProhibited="true">
