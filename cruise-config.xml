@@ -1629,6 +1629,7 @@
       </params>
       <materials>
         <git url="git://github.com/genivi/vSomeIP.git" dest="vSomeIP" />
+        <git url="https://github.com/google/googletest/" dest="googletest" materialName="googletest" />
       </materials>
     </pipeline>
     <pipeline name="Seed-QtLibs-and-creator">
