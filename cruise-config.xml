@@ -1627,6 +1627,11 @@
       <params>
         <param name="WORKING_DIR">vSomeIP</param>
       </params>
+      <environmentvariables>
+        <variable name="GTEST_ROOT">
+          <value>googletest</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="git://github.com/genivi/vSomeIP.git" dest="vSomeIP" materialName="vSomeIP" />
         <git url="https://github.com/google/googletest/" dest="googletest" materialName="googletest" />
