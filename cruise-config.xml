@@ -1622,7 +1622,7 @@
     </pipeline>
     <pipeline name="vSomeIP" template="CMAKE_build">
       <materials>
-        <git url="git://github.com/genivi/vSomeIP.git" />
+        <git url="git://github.com/genivi/vSomeIP.git" dest="vSomeIP" />
       </materials>
     </pipeline>
     <pipeline name="Seed-QtLibs-and-creator">
