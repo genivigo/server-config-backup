@@ -1628,7 +1628,7 @@
         <param name="WORKING_DIR">vSomeIP</param>
       </params>
       <materials>
-        <git url="git://github.com/genivi/vSomeIP.git" dest="vSomeIP" />
+        <git url="git://github.com/genivi/vSomeIP.git" dest="vSomeIP" materialName="vSomeIP" />
         <git url="https://github.com/google/googletest/" dest="googletest" materialName="googletest" />
       </materials>
     </pipeline>
