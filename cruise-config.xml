@@ -3465,7 +3465,7 @@
               <resource>asciidoc</resource>
             </resources>
             <artifacts>
-              <artifact src="build" />
+              <artifact src="#{WORKING_DIR}/build" />
             </artifacts>
           </job>
         </jobs>
