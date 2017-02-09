@@ -703,9 +703,9 @@
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
         <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
-        <pipeline pipelineName="common-api-cpp-tools" stageName="build" materialName="capicxx-tools" />
-        <pipeline pipelineName="common-api-cpp-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
-        <pipeline pipelineName="common-api-cpp-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
+        <pipeline pipelineName="capicxx-core-tools" stageName="build" materialName="capicxx-core-tools" />
+        <pipeline pipelineName="capicxx-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
+        <pipeline pipelineName="capicxx-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
         <pipeline pipelineName="GDP-Yocto-raspberrypi2_SDK" stageName="build" materialName="yocto-sdk-raspberrypi2" />
       </materials>
     </pipeline>
@@ -719,9 +719,9 @@
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
         <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
-        <pipeline pipelineName="common-api-cpp-tools" stageName="build" materialName="capicxx-tools" />
-        <pipeline pipelineName="common-api-cpp-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
-        <pipeline pipelineName="common-api-cpp-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
+        <pipeline pipelineName="capicxx-core-tools" stageName="build" materialName="capicxx-core-tools" />
+        <pipeline pipelineName="capicxx-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
+        <pipeline pipelineName="capicxx-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
         <pipeline pipelineName="GDP-Yocto-Minnowboard_SDK" stageName="build" materialName="yocto-sdk-minnowboard" />
       </materials>
     </pipeline>
@@ -740,9 +740,9 @@
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
         <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
-        <pipeline pipelineName="common-api-cpp-tools" stageName="build" materialName="capicxx-tools" />
-        <pipeline pipelineName="common-api-cpp-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
-        <pipeline pipelineName="common-api-cpp-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
+        <pipeline pipelineName="capicxx-core-tools" stageName="build" materialName="capicxx-core-tools" />
+        <pipeline pipelineName="capicxx-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
+        <pipeline pipelineName="capicxx-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
         <pipeline pipelineName="GDP-Yocto-qemux86-64_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
       </materials>
     </pipeline>
@@ -756,9 +756,9 @@
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
         <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
-        <pipeline pipelineName="common-api-cpp-tools" stageName="build" materialName="capicxx-tools" />
-        <pipeline pipelineName="common-api-cpp-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
-        <pipeline pipelineName="common-api-cpp-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
+        <pipeline pipelineName="capicxx-core-tools" stageName="build" materialName="capicxx-core-tools" />
+        <pipeline pipelineName="capicxx-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
+        <pipeline pipelineName="capicxx-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
         <pipeline pipelineName="GDP-Yocto-dragonboard-410c_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
       </materials>
     </pipeline>
@@ -1465,7 +1465,7 @@
     </authorization>
     <pipeline name="DLT-daemon-native" isLocked="false">
       <materials>
-        <git url="git://git.projects.genivi.org/dlt-daemon.git" materialName="dlt-daemon.git" />
+        <git url="git://github.com/genivi/dlt-daemon.git" materialName="dlt-daemon.git" />
       </materials>
       <stage name="build">
         <jobs>
@@ -1498,69 +1498,69 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="common-api-cpp-runtime" labeltemplate="master:${common-api-runtime.git[:8]}-build:${COUNT}" isLocked="false" template="CMAKE_build">
+    <pipeline name="capicxx-core-runtime" labeltemplate="master:${capicxx-core-runtime.git[:8]}-build:${COUNT}" isLocked="false" template="CMAKE_build">
       <materials>
-        <git url="https://github.com/GENIVI/capicxx-core-runtime" materialName="common-api-runtime.git" />
+        <git url="https://github.com/GENIVI/capicxx-core-runtime" materialName="capicxx-core-runtime.git" />
       </materials>
     </pipeline>
-    <pipeline name="common-api-cpp-dbus-runtime" labeltemplate="master:${common-api-dbus-runtime.git[:8]}-build:${COUNT}" isLocked="false">
+    <pipeline name="capicxx-dbus-runtime" labeltemplate="master:${capicxx-dbus-runtime.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
-        <git url="https://github.com/GENIVI/capicxx-dbus-runtime" dest="common-api-dbus-runtime" materialName="common-api-dbus-runtime.git" />
+        <git url="https://github.com/GENIVI/capicxx-dbus-runtime" dest="capicxx-dbus-runtime" materialName="capicxx-dbus-runtime.git" />
         <pipeline pipelineName="libdbus-with-commonapi-patch" stageName="patch_and_build" materialName="libdbus-with-commonapi-patch" />
-        <git url="https://github.com/GENIVI/capicxx-core-runtime" dest="common-api-cpp-runtime" materialName="common-api-cpp-runtime" />
+        <git url="https://github.com/GENIVI/capicxx-core-runtime" dest="capicxx-core-runtime" materialName="capicxx-core-runtime" />
       </materials>
       <stage name="build">
         <jobs>
           <job name="build">
             <environmentvariables>
               <variable name="CommonAPI_DIR">
-                <value>../../common-api-cpp-runtime/build</value>
+                <value>../../capicxx-core-runtime/build</value>
               </variable>
               <variable name="PKG_CONFIG_PATH">
-                <value>/var/lib/go-agent/pipelines/common-api-cpp-dbus-runtime/libdbus_patched/results/lib/pkgconfig</value>
+                <value>/var/lib/go-agent/pipelines/capicxx-dbus-runtime/libdbus_patched/results/lib/pkgconfig</value>
               </variable>
             </environmentvariables>
             <tasks>
               <fetchartifact pipeline="libdbus-with-commonapi-patch" stage="patch_and_build" job="patch_and_build" srcdir="results" dest="libdbus_patched">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="rm" workingdir="common-api-cpp-runtime">
+              <exec command="rm" workingdir="capicxx-core-runtime">
                 <arg>-rf</arg>
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mkdir" workingdir="common-api-cpp-runtime">
+              <exec command="mkdir" workingdir="capicxx-core-runtime">
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="cmake" workingdir="common-api-cpp-runtime/build">
+              <exec command="cmake" workingdir="capicxx-core-runtime/build">
                 <arg>..</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="make" workingdir="common-api-cpp-runtime/build">
+              <exec command="make" workingdir="capicxx-core-runtime/build">
                 <runif status="passed" />
               </exec>
-              <exec command="rm" workingdir="common-api-dbus-runtime">
+              <exec command="rm" workingdir="capicxx-dbus-runtime">
                 <arg>-rf</arg>
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mkdir" workingdir="common-api-dbus-runtime">
+              <exec command="mkdir" workingdir="capicxx-dbus-runtime">
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="cmake" workingdir="common-api-dbus-runtime/build">
+              <exec command="cmake" workingdir="capicxx-dbus-runtime/build">
                 <arg>-D</arg>
                 <arg>USE_INSTALLED_COMMONAPI=ON</arg>
                 <arg>..</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="make" workingdir="common-api-dbus-runtime/build">
+              <exec command="make" workingdir="capicxx-dbus-runtime/build">
                 <runif status="passed" />
               </exec>
             </tasks>
             <artifacts>
-              <artifact src="common-api-dbus-runtime/build/*.so*" />
+              <artifact src="capicxx-dbus-runtime/build/*.so*" />
             </artifacts>
           </job>
         </jobs>
@@ -1569,7 +1569,7 @@
     <pipeline name="libdbus-with-commonapi-patch" labeltemplate="master:${dbus.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="http://anongit.freedesktop.org/git/dbus/dbus.git" dest="dbus" materialName="dbus.git" />
-        <git url="https://github.com/GENIVI/capicxx-dbus-runtime" dest="common-api-dbus-runtime" materialName="common-api-dbus-runtime.git" />
+        <git url="https://github.com/GENIVI/capicxx-dbus-runtime" dest="capicxx-dbus-runtime" materialName="capicxx-dbus-runtime.git" />
       </materials>
       <stage name="patch_and_build">
         <jobs>
@@ -1582,7 +1582,7 @@
               </exec>
               <exec command="bash" workingdir="dbus">
                 <arg>-c</arg>
-                <arg>for f in ../common-api-dbus-runtime/src/dbus-patches/*.patch ; do patch -p1 &lt;"$f" || exit 1 ; done</arg>
+                <arg>for f in ../capicxx-dbus-runtime/src/dbus-patches/*.patch ; do patch -p1 &lt;"$f" || exit 1 ; done</arg>
                 <runif status="passed" />
               </exec>
               <exec command="mkdir">
@@ -1622,7 +1622,7 @@
     </pipeline>
     <pipeline name="vSomeIP" template="CMAKE_build">
       <materials>
-        <git url="git://git.projects.genivi.org/vSomeIP.git" />
+        <git url="git://github.com/genivi/vSomeIP.git" />
       </materials>
     </pipeline>
     <pipeline name="Seed-QtLibs-and-creator">
@@ -1673,10 +1673,10 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="common-api-cpp-dbus-tools" labeltemplate="master:${common-api-dbus-tools.git[:8]}-build:${COUNT}" isLocked="false">
+    <pipeline name="capicxx-dbus-tools" labeltemplate="master:${capicxx-dbus-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
-        <git url="git://git.projects.genivi.org/ipc/common-api-dbus-tools.git" dest="common-api-dbus-tools" materialName="common-api-dbus-tools.git" />
-        <git url="git://git.projects.genivi.org/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
+        <git url="git://github.com/genivi/capicxx-dbus-tools.git" dest="capicxx-dbus-tools" materialName="capicxx-dbus-tools.git" />
+        <git url="git://github.com/genivi/capicxx-core-tools.git" dest="capicxx-core-tools" materialName="capicxx-core-tools.git" />
       </materials>
       <stage name="build" artifactCleanupProhibited="true">
         <jobs>
@@ -1687,21 +1687,21 @@
                 <arg>bin</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mvn" workingdir="common-api-tools/org.genivi.commonapi.core.releng">
+              <exec command="mvn" workingdir="capicxx-core-tools/org.genivi.commonapi.core.releng">
                 <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
                 <arg>clean</arg>
                 <arg>verify</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mvn" workingdir="common-api-dbus-tools/org.genivi.commonapi.dbus.releng">
-                <arg>-DCOREPATH=../../common-api-tools</arg>
+              <exec command="mvn" workingdir="capicxx-dbus-tools/org.genivi.commonapi.dbus.releng">
+                <arg>-DCOREPATH=../../capicxx-core-tools</arg>
                 <arg>-Dtarget.id=org.genivi.commonapi.dbus.target</arg>
                 <arg>clean</arg>
                 <arg>verify</arg>
                 <runif status="passed" />
               </exec>
               <exec command="unzip" workingdir="bin">
-                <arg>../common-api-dbus-tools/org.genivi.commonapi.dbus.cli.product/target/products/commonapi_dbus_generator.zip</arg>
+                <arg>../capicxx-dbus-tools/org.genivi.commonapi.dbus.cli.product/target/products/commonapi_dbus_generator.zip</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -1712,7 +1712,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="common-api-cpp-tools" labeltemplate="master:${capicxx-core-tools.git[:8]}-build:${COUNT}" isLocked="false">
+    <pipeline name="capicxx-core-tools" labeltemplate="master:${capicxx-core-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="https://github.com/GENIVI/capicxx-core-tools" materialName="capicxx-core-tools.git" />
       </materials>
@@ -1742,10 +1742,10 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="common-api-cpp-someip-tools" labeltemplate="master:${cpp-someip-tools.git[:8]}-build:${COUNT}" isLocked="false">
+    <pipeline name="capicxx-someip-tools" labeltemplate="master:${cpp-someip-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
-        <git url="git://git.projects.genivi.org/common-api/cpp-someip-tools.git" dest="cpp-someip-tools" materialName="cpp-someip-tools.git" />
-        <git url="git://git.projects.genivi.org/ipc/common-api-tools.git" dest="common-api-tools" materialName="common-api-tools.git" />
+        <git url="git://github.com/genivi/cpp-someip-tools.git" dest="cpp-someip-tools" materialName="cpp-someip-tools.git" />
+        <git url="git://github.com/genivi/capicxx-core-tools.git" dest="capicxx-core-tools" materialName="capicxx-core-tools.git" />
       </materials>
       <stage name="build" artifactCleanupProhibited="true">
         <jobs>
@@ -1756,14 +1756,14 @@
                 <arg>bin</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mvn" workingdir="common-api-tools/org.genivi.commonapi.core.releng">
+              <exec command="mvn" workingdir="capicxx-core-tools/org.genivi.commonapi.core.releng">
                 <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
                 <arg>clean</arg>
                 <arg>verify</arg>
                 <runif status="passed" />
               </exec>
               <exec command="mvn" workingdir="cpp-someip-tools/org.genivi.commonapi.someip.releng">
-                <arg>-DCOREPATH=../../common-api-tools</arg>
+                <arg>-DCOREPATH=../../capicxx-core-tools</arg>
                 <arg>-Dtarget.id=org.genivi.commonapi.someip.target</arg>
                 <arg>clean</arg>
                 <arg>verify</arg>
@@ -1885,9 +1885,9 @@
         <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="FRANCA_IF_Validation" labeltemplate="master:${common-api-tools.git[:8]}-build:${COUNT}" isLocked="false">
+    <pipeline name="FRANCA_IF_Validation" labeltemplate="master:${capicxx-core-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
-        <git url="git://git.projects.genivi.org/ipc/common-api-tools.git" dest="dest-common-api-tools" materialName="common-api-tools.git" />
+        <git url="git://github.com/genivi/ipc/capicxx-core-tools.git" dest="dest-capicxx-core-tools" materialName="capicxx-core-tools.git" />
         <scm ref="077cfe93-bc9e-461a-9a5c-e82796ccb710" dest="dest-fidl-files" />
       </materials>
       <stage name="BuildCommonAPI" cleanWorkingDir="true">
@@ -1902,14 +1902,14 @@
               <exec command="ls">
                 <runif status="passed" />
               </exec>
-              <exec command="mvn" workingdir="dest-common-api-tools/org.genivi.commonapi.core.releng">
+              <exec command="mvn" workingdir="dest-capicxx-core-tools/org.genivi.commonapi.core.releng">
                 <arg>-Dtarget.id=org.genivi.commonapi.core.target</arg>
                 <arg>clean</arg>
                 <arg>verify</arg>
                 <runif status="passed" />
               </exec>
               <exec command="unzip" workingdir="bin">
-                <arg>../dest-common-api-tools/org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip</arg>
+                <arg>../dest-capicxx-core-tools/org.genivi.commonapi.core.cli.product/target/products/commonapi-generator.zip</arg>
                 <runif status="passed" />
               </exec>
               <exec command="find">
@@ -1939,7 +1939,7 @@
                 <arg>-al</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="ls" workingdir="dest-common-api-tools/">
+              <exec command="ls" workingdir="dest-capicxx-core-tools/">
                 <arg>-al</arg>
                 <runif status="passed" />
               </exec>
@@ -2382,7 +2382,7 @@
     <pipeline name="WIP--GENIVI_Positioning" isLocked="false">
       <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
       <materials>
-        <git url="git://git.projects.genivi.org/lbs/positioning.git" materialName="PositioningGitRepository" />
+        <git url="git://github.com/genivi/lbs/positioning.git" materialName="PositioningGitRepository" />
       </materials>
       <stage name="defaultStage">
         <jobs>
@@ -2625,9 +2625,9 @@
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
         <pipeline pipelineName="Seed-QtLibs-and-creator" stageName="stage" materialName="Qt" />
         <pipeline pipelineName="DLT-Viewer" stageName="stage" materialName="dlt-viewer" />
-        <pipeline pipelineName="common-api-cpp-tools" stageName="build" materialName="capicxx-tools" />
-        <pipeline pipelineName="common-api-cpp-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
-        <pipeline pipelineName="common-api-cpp-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
+        <pipeline pipelineName="capicxx-core-tools" stageName="build" materialName="capicxx-core-tools" />
+        <pipeline pipelineName="capicxx-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
+        <pipeline pipelineName="capicxx-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
         <pipeline pipelineName="GDP-Yocto-Minnowboard_SDK" stageName="build" materialName="yocto-sdk-minnowboard" />
       </materials>
       <stage name="Assemble">
@@ -2638,13 +2638,13 @@
               <fetchartifact pipeline="Eclipse-for-SDK-2" stage="stage" job="job" srcdir="results" dest="eclipse">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcdir="bin" dest="capicxx">
+              <fetchartifact pipeline="capicxx-core-tools" stage="build" job="build" srcdir="bin" dest="capicxx-core">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="common-api-cpp-dbus-tools" stage="build" job="build" srcdir="bin" dest="capicxx-dbus">
+              <fetchartifact pipeline="capicxx-dbus-tools" stage="build" job="build" srcdir="bin" dest="capicxx-dbus">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="common-api-cpp-someip-tools" stage="build" job="build" srcdir="bin" dest="capicxx-someip">
+              <fetchartifact pipeline="capicxx-someip-tools" stage="build" job="build" srcdir="bin" dest="capicxx-someip">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="bash">
@@ -3804,13 +3804,13 @@
                 <arg>rm -rf gdp-sdk ; mkdir -p gdp-sdk/bin</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="common-api-cpp-tools" stage="build" job="build" srcdir="bin" dest="gdp-sdk/capicxx">
+              <fetchartifact pipeline="capicxx-core-tools" stage="build" job="build" srcdir="bin" dest="gdp-sdk/capicxx-core">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="common-api-cpp-dbus-tools" stage="build" job="build" srcdir="bin" dest="gdp-sdk/capicxx-dbus">
+              <fetchartifact pipeline="capicxx-dbus-tools" stage="build" job="build" srcdir="bin" dest="gdp-sdk/capicxx-dbus">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="common-api-cpp-someip-tools" stage="build" job="build" srcdir="bin" dest="gdp-sdk/capicxx-someip">
+              <fetchartifact pipeline="capicxx-someip-tools" stage="build" job="build" srcdir="bin" dest="gdp-sdk/capicxx-someip">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="mv">
