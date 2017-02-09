@@ -4033,7 +4033,6 @@
     </agent>
     <agent hostname="9237780769e7" ipaddress="172.17.0.47" uuid="a5a5e9f9-27ed-44ce-a9a3-b7dc690fd1b0" isDisabled="true">
       <resources>
-        <resource>yocto_build</resource>
         <resource>python3</resource>
         <resource>notmp</resource>
         <resource>asciidoc</resource>
