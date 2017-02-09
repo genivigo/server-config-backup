@@ -1756,9 +1756,9 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="capicxx-someip-tools" labeltemplate="master:${cpp-someip-tools.git[:8]}-build:${COUNT}" isLocked="false">
+    <pipeline name="capicxx-someip-tools" labeltemplate="master:${capicxx-someip-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
-        <git url="git://github.com/genivi/capicxx-someip-tools.git" dest="cpp-someip-tools" materialName="cpp-someip-tools.git" />
+        <git url="git://github.com/genivi/capicxx-someip-tools.git" dest="capicxx-someip-tools" materialName="capicxx-someip-tools.git" />
         <git url="git://github.com/genivi/capicxx-core-tools.git" dest="capicxx-core-tools" materialName="capicxx-core-tools.git" />
       </materials>
       <stage name="build" artifactCleanupProhibited="true">
@@ -1776,7 +1776,7 @@
                 <arg>verify</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mvn" workingdir="cpp-someip-tools/org.genivi.commonapi.someip.releng">
+              <exec command="mvn" workingdir="capicxx-someip-tools/org.genivi.commonapi.someip.releng">
                 <arg>-DCOREPATH=../../capicxx-core-tools</arg>
                 <arg>-Dtarget.id=org.genivi.commonapi.someip.target</arg>
                 <arg>clean</arg>
@@ -1784,7 +1784,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="unzip" workingdir="bin">
-                <arg>../cpp-someip-tools/org.genivi.commonapi.someip.cli.product/target/products/commonapi_someip_generator.zip</arg>
+                <arg>../capicxx-someip-tools/org.genivi.commonapi.someip.cli.product/target/products/commonapi_someip_generator.zip</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
