@@ -1499,6 +1499,9 @@
       </stage>
     </pipeline>
     <pipeline name="capicxx-core-runtime" labeltemplate="master:${capicxx-core-runtime.git[:8]}-build:${COUNT}" isLocked="false" template="CMAKE_build">
+      <params>
+        <param name="WORKING_DIR">.</param>
+      </params>
       <materials>
         <git url="https://github.com/GENIVI/capicxx-core-runtime" materialName="capicxx-core-runtime.git" />
       </materials>
@@ -1621,6 +1624,9 @@
       </stage>
     </pipeline>
     <pipeline name="vSomeIP" template="CMAKE_build">
+      <params>
+        <param name="WORKING_DIR">vSomeIP</param>
+      </params>
       <materials>
         <git url="git://github.com/genivi/vSomeIP.git" dest="vSomeIP" />
       </materials>
@@ -3429,21 +3435,21 @@
         <jobs>
           <job name="cmake_and_make">
             <tasks>
-              <exec command="rm">
+              <exec command="rm" workingdir="#{WORKING_DIR}">
                 <arg>-rf</arg>
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mkdir">
+              <exec command="mkdir" workingdir="#{WORKING_DIR}">
                 <arg>-p</arg>
                 <arg>build</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="cmake" workingdir="build">
+              <exec command="cmake" workingdir="#{WORKING_DIR}/build">
                 <arg>..</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="make" workingdir="build">
+              <exec command="make" workingdir="#{WORKING_DIR}/build">
                 <arg>V=1</arg>
                 <arg>-j2</arg>
                 <runif status="passed" />
