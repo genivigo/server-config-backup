@@ -1608,8 +1608,10 @@
                 <arg>dbus</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="make" workingdir="dbus">
-                <arg>install</arg>
+              <exec command="bash" workingdir="dbus">
+                <arg>-c</arg>
+                <arg>make install || true</arg>
+                <arg />
                 <runif status="passed" />
               </exec>
             </tasks>
