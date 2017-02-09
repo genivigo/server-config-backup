@@ -1528,6 +1528,9 @@
               <variable name="PKG_CONFIG_PATH">
                 <value>/var/lib/go-agent/pipelines/capicxx-dbus-runtime/libdbus_patched/results/lib/pkgconfig</value>
               </variable>
+              <variable name="GTEST_ROOT">
+                <value>../googletest</value>
+              </variable>
             </environmentvariables>
             <tasks>
               <fetchartifact pipeline="libdbus-with-commonapi-patch" stage="patch_and_build" job="patch_and_build" srcdir="results" dest="libdbus_patched">
