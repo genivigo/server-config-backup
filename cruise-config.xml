@@ -992,7 +992,7 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="Release-QEMU_x86-64" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-QEMU_x86-64" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
