@@ -4072,7 +4072,7 @@
         <resource>Qt-seeder</resource>
       </resources>
     </agent>
-    <agent hostname="go-agent" ipaddress="83.218.80.242" uuid="5486b7c8-54b0-46f4-a1c2-ea181437b038" />
+    <agent hostname="go-agent" ipaddress="10.8.36.202" uuid="5486b7c8-54b0-46f4-a1c2-ea181437b038" />
   </agents>
 </cruise>
 
