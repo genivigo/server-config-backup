@@ -1024,7 +1024,7 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" branch="release" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Release-RaspberryPi2" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-RaspberryPi2" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
         <variable name="MACHINE">
           <value>raspberrypi2</value>
