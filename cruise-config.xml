@@ -1037,7 +1037,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" />
+        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="release" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="Release-RaspberryPi3" isLocked="false" template="Yocto_GDP_generic_release">
