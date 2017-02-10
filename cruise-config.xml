@@ -332,7 +332,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="GDP-Yocto-Silk" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
+    <pipeline name="GDP-Yocto-Silk" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Renesas_generic">
       <timer onlyOnChanges="true">0 0 6 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
