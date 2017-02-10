@@ -4054,13 +4054,6 @@
         <resource>virtualbox_test</resource>
       </resources>
     </agent>
-    <agent hostname="build2-goagent" ipaddress="10.8.36.145" uuid="bdec648f-0e0c-4273-b5a1-7ccd042df435" isDisabled="true">
-      <resources>
-        <resource>build2-goagent</resource>
-        <resource>renesas_binaries</resource>
-        <resource>yocto_build</resource>
-      </resources>
-    </agent>
     <agent hostname="ics-agent1" ipaddress="172.17.0.13" uuid="0d027f89-6a5b-4d2f-803d-394f4c5690ae" isDisabled="true">
       <resources>
         <resource>ics-agent1</resource>
