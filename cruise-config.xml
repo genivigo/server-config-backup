@@ -503,9 +503,6 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-PORTER-GITHUB-PR" isLocked="false">
-      <params>
-        <param name="agent">2131ce1bd33e</param>
-      </params>
       <timer>0 0 4 19 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
@@ -2761,7 +2758,7 @@
       </admins>
     </authorization>
   </pipelines>
-  <pipelines group="Administration_for_2131ce1bd33e">
+  <pipelines group="Administration_for_c8776aa52222">
     <authorization>
       <view>
         <user>GunnarA</user>
@@ -2778,7 +2775,7 @@
     </authorization>
     <pipeline name="Wipe_gdp_work_dir" isLocked="false" template="Wipe_dir_pattern">
       <params>
-        <param name="agent">2131ce1bd33e</param>
+        <param name="agent">c8776aa52222</param>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work/*</param>
       </params>
       <timer>0 0 4 ? * SUN *</timer>
@@ -2804,7 +2801,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>2131ce1bd33e</resource>
+              <resource>c8776aa52222</resource>
             </resources>
           </job>
         </jobs>
@@ -2813,7 +2810,7 @@
     <pipeline name="Wipe_sstate_cache" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/__sstate_cache/*</param>
-        <param name="agent">2131ce1bd33e</param>
+        <param name="agent">c8776aa52222</param>
       </params>
       <materials>
         <pipeline pipelineName="Wipe_gdp_work_dir" stageName="stage" />
@@ -2822,7 +2819,7 @@
     <pipeline name="Wipe_downloads" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/__downloads_cache/*</param>
-        <param name="agent">2131ce1bd33e</param>
+        <param name="agent">c8776aa52222</param>
       </params>
       <materials>
         <pipeline pipelineName="Wipe_gdp_work_dir" stageName="stage" />
