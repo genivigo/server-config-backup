@@ -91,10 +91,6 @@
           <key>url</key>
           <value>https://github.com/GENIVI/meta-genivi-dev.git</value>
         </property>
-        <property>
-          <key>username</key>
-          <value>genivigo</value>
-        </property>
       </configuration>
     </scm>
     <scm id="a1a82896-a41b-4684-a7e8-4d43bf691438" name="genivi-dev-platform">
