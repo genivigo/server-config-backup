@@ -2892,7 +2892,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Administration_for_build2-goagent">
+  <pipelines group="Administration_for_goagent">
     <authorization>
       <admins>
         <user>GunnarA</user>
