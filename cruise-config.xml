@@ -2903,7 +2903,7 @@
     <pipeline name="Wipe_gdp_work_dir5" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work/*</param>
-        <param name="agent">build2-goagent</param>
+        <param name="agent">go-agent</param>
       </params>
       <materials>
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
