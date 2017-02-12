@@ -2078,6 +2078,9 @@
         <variable name="MACHINE">
           <value>qemux86-64</value>
         </variable>
+        <variable name="GunnarA" secure="true">
+          <encryptedValue>M04ig7bgUbdk4Zo0Qs/5pg==</encryptedValue>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="git://github.com/genivi/genivi-dev-platform" />
