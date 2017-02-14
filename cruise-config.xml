@@ -3691,15 +3691,6 @@
     </pipeline>
   </templates>
   <agents>
-    <agent hostname="go-agent1" ipaddress="10.100.10.120" uuid="eb6be62e-2380-4537-b74b-18ff7265ac4c" isDisabled="true">
-      <resources>
-        <resource>go-agent1</resource>
-        <resource>ga_test</resource>
-        <resource>yocto_build</resource>
-        <resource>python3</resource>
-        <resource>asciidoc</resource>
-      </resources>
-    </agent>
     <agent hostname="10096874c2ab" ipaddress="172.17.0.8" uuid="c25991cc-5f06-422e-8e98-31eda2ba4363" isDisabled="true">
       <resources>
         <resource>10096874c2ab</resource>
