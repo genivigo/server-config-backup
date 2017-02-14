@@ -3736,7 +3736,14 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="go-agent1" ipaddress="10.100.10.120" uuid="eb6be62e-2380-4537-b74b-18ff7265ac4c" />
+    <agent hostname="go-agent1" ipaddress="10.100.10.120" uuid="eb6be62e-2380-4537-b74b-18ff7265ac4c">
+      <resources>
+        <resource>asciidoc</resource>
+        <resource>yocto_build</resource>
+        <resource>python3</resource>
+        <resource>go-agent1</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
