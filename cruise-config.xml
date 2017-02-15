@@ -2612,9 +2612,9 @@
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
-              <exec command="rm" workingdir="gdp-src-build">
+              <exec command="rm">
                 <arg>-rf</arg>
-                <arg>tmp</arg>
+                <arg>gdp-src-build/tmp</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
