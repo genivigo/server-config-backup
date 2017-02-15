@@ -2620,7 +2620,7 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>if [[ "$MACHINE" == "dragonboard-410c" ]]; then source ./init.sh $MACHINE accept-eula -f ; else source ./init.sh $MACHINE -f; fi</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
