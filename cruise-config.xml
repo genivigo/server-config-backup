@@ -2294,37 +2294,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="squashfuse">
-      <materials>
-        <git url="https://github.com/vasi/squashfuse" shallowClone="true" />
-      </materials>
-      <stage name="build">
-        <jobs>
-          <job name="compile">
-            <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>./autogen.sh</arg>
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>./configure</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="make">
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <artifacts>
-              <artifact src="squashfuse" />
-              <artifact src="squashfuse_ll" />
-              <artifact src="squashfuse_ls" />
-              <artifact src="LICENSE" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
     <pipeline name="test2">
       <environmentvariables>
         <variable name="OLD_VIRTUALBOX">
