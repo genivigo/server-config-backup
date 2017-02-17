@@ -3714,7 +3714,6 @@
         <resource>go-agent1</resource>
       </resources>
     </agent>
-    <agent hostname="0b2e6335117a" ipaddress="172.17.0.2" uuid="b47a025d-1784-49cd-939b-9f482cfa1fd9" isDisabled="true" />
   </agents>
 </cruise>
 
