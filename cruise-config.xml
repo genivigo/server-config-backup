@@ -287,6 +287,9 @@
         <role>Developer</role>
         <role>Guest</role>
       </view>
+      <operate>
+        <role>Developer</role>
+      </operate>
       <admins>
         <role>GDP_Developer</role>
       </admins>
