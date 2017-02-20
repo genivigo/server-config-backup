@@ -192,6 +192,22 @@
         <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
+    <pipeline name="yocto-baseline-testlayer" labeltemplate="meta-ivi.12.0:${meta-ivi.12.0[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build-with-test">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+        <variable name="IMAGE_NAME">
+          <value>nostromo-image</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="git://github.com/genivi/meta-ivi.git" branch="12.0" dest="meta-ivi" materialName="meta-ivi.12.0" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="morty" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.morty" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="morty" dest="poky" autoUpdate="false" materialName="poky.morty" />
+        <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GENIVI_Development_Platform">
     <authorization>
@@ -1818,22 +1834,6 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="yocto-baseline-testlayer" labeltemplate="meta-ivi.12.0:${meta-ivi.12.0[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build-with-test">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>qemux86-64</value>
-        </variable>
-        <variable name="IMAGE_NAME">
-          <value>nostromo-image</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="git://github.com/genivi/meta-ivi.git" branch="12.0" dest="meta-ivi" materialName="meta-ivi.12.0" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="morty" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.morty" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="morty" dest="poky" autoUpdate="false" materialName="poky.morty" />
-        <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
-      </materials>
-    </pipeline>
     <pipeline name="FRANCA_IF_Validation" labeltemplate="master:${capicxx-core-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="git://github.com/genivi/ipc/capicxx-core-tools.git" dest="dest-capicxx-core-tools" materialName="capicxx-core-tools.git" />
