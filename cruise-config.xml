@@ -1818,7 +1818,7 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="yocto-baseline-next-test" labeltemplate="meta-ivi.12.0:${meta-ivi.12.0[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build-with-test">
+    <pipeline name="yocto-baseline-testlayer" labeltemplate="meta-ivi.12.0:${meta-ivi.12.0[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build-with-test">
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
@@ -3258,16 +3258,6 @@
                 <arg>-c</arg>
                 <arg>source poky/oe-init-build-env &amp;&amp; bitbake -c fetch linux-yocto</arg>
                 <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env &amp;&amp; bitbake $IMAGE_NAME</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar ; touch logs.tar.gz</arg>
-                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
