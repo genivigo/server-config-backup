@@ -3707,7 +3707,12 @@
         <resource>go-agent1</resource>
       </resources>
     </agent>
-    <agent hostname="c288f6a1d0cf" ipaddress="172.17.0.2" uuid="bad94df1-bdf1-4c62-867c-7de619dca82f" />
+    <agent hostname="c288f6a1d0cf" ipaddress="172.17.0.2" uuid="bad94df1-bdf1-4c62-867c-7de619dca82f">
+      <resources>
+        <resource>yocto_build</resource>
+        <resource>renesas_binaries</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
