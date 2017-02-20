@@ -311,7 +311,7 @@
       <timer onlyOnChanges="true">0 0 3 * * ?</timer>
       <environmentvariables>
         <variable name="IMAGE_NAME">
-          <value>miranda-image</value>
+          <value>nostromo-image</value>
         </variable>
         <variable name="MACHINE">
           <value>qemux86-64</value>
