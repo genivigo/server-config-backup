@@ -1818,7 +1818,7 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="yocto-baseline-next-test" labeltemplate="meta-ivi.experimental:${meta-ivi.experimental[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build-with-test">
+    <pipeline name="yocto-baseline-next-test" isLocked="false" template="meta-ivi-build-with-test">
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
