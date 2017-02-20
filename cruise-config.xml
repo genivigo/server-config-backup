@@ -3693,12 +3693,6 @@
         <resource>Qt-seeder</resource>
       </resources>
     </agent>
-    <agent hostname="go-agent (Pelagicore)" ipaddress="10.8.36.18" uuid="5486b7c8-54b0-46f4-a1c2-ea181437b038" isDisabled="true">
-      <resources>
-        <resource>yocto_build</resource>
-        <resource>renesas_binaries</resource>
-      </resources>
-    </agent>
     <agent hostname="go-agent1 (GENIVI)" ipaddress="10.100.10.120" uuid="eb6be62e-2380-4537-b74b-18ff7265ac4c">
       <resources>
         <resource>asciidoc</resource>
