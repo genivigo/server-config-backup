@@ -3695,6 +3695,7 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>renesas_binaries</resource>
+        <resource>c288f6a1d0cf</resource>
       </resources>
     </agent>
   </agents>
