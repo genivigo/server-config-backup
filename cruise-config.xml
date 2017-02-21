@@ -268,17 +268,6 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Koelsch" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
-      <timer>0 0 6 * * ?</timer>
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>porter</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="git://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
   </pipelines>
   <pipelines group="Baseline_Pull_Requests">
     <authorization>
