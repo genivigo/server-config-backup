@@ -3261,6 +3261,11 @@
                 <arg>rm -f logs_test.tar logs_test.tar.gz &amp;&amp; find build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs_test.tar &amp;&amp; gzip logs_test.tar ; touch logs_test.tar.gz</arg>
                 <runif status="any" />
               </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>staging</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
