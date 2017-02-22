@@ -3268,7 +3268,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv gdp-src-build/tmp/deploy/images/*/{*.bzImage,*.ext4,*.img}  staging/ || true</arg>
+                <arg>mv build/tmp/deploy/images/*/{*.bzImage,*.ext4,*.img}  staging/ || true</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
