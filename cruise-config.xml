@@ -3278,6 +3278,7 @@
             </resources>
             <artifacts>
               <artifact src="logs_test.tar.gz" />
+              <artifact src="staging" />
             </artifacts>
           </job>
         </jobs>
