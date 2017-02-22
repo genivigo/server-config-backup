@@ -2512,7 +2512,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Administration_for_Pelagic_Agent_Pelagicore">
+  <pipelines group="Administration_for_Pelagic_Agent">
     <authorization>
       <admins>
         <user>GunnarA</user>
