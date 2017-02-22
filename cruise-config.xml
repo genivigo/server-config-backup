@@ -3267,7 +3267,6 @@
               <resource>python3</resource>
             </resources>
             <artifacts>
-              <artifact src="logs.tar.gz" />
               <artifact src="logs_test.tar.gz" />
             </artifacts>
           </job>
