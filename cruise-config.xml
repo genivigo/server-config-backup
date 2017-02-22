@@ -2512,7 +2512,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Administration_for_c288f6a1d0cf">
+  <pipelines group="Administration_for_c288f6a1d0cf_Pelagicore">
     <authorization>
       <admins>
         <user>GunnarA</user>
