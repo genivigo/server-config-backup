@@ -3258,7 +3258,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>rm -f logs_test.tar logs_test.tar.gz &amp;&amp; find build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs_test.tar &amp;&amp; gzip logs_test.tar ; touch logs_test.tar.gz</arg>
+                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar ; touch logs.tar.gz</arg>
                 <runif status="any" />
               </exec>
               <exec command="mkdir">
