@@ -2512,7 +2512,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Administration_for_c288f6a1d0cf_Pelagicore">
+  <pipelines group="Administration_for_Pelagic_Agent_Pelagicore">
     <authorization>
       <admins>
         <user>GunnarA</user>
@@ -2523,7 +2523,7 @@
     <pipeline name="Wipe_gdp_work_dir5" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work/*</param>
-        <param name="agent">c288f6a1d0cf</param>
+        <param name="agent">Pelagic_Agent</param>
       </params>
       <materials>
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
@@ -2532,7 +2532,7 @@
     <pipeline name="Wipe_tmp_dirs5" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp</param>
-        <param name="agent">c288f6a1d0cf</param>
+        <param name="agent">Pelagic_Agent</param>
       </params>
       <materials>
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
@@ -2541,7 +2541,7 @@
     <pipeline name="Wipe_gdp_downloads_dir5" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/cache/yocto/downloads/*</param>
-        <param name="agent">c288f6a1d0cf</param>
+        <param name="agent">Pelagic_Agent</param>
       </params>
       <materials>
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
@@ -2550,7 +2550,7 @@
     <pipeline name="Wipe_gdp_sstate_dir5" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/cache/yocto/sstate/*</param>
-        <param name="agent">c288f6a1d0cf</param>
+        <param name="agent">Pelagic_Agent</param>
       </params>
       <materials>
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
@@ -3701,11 +3701,11 @@
         <resource>go-agent1</resource>
       </resources>
     </agent>
-    <agent hostname="c288f6a1d0cf" ipaddress="172.17.0.2" uuid="bad94df1-bdf1-4c62-867c-7de619dca82f">
+    <agent hostname="Pelagic_Agent" ipaddress="172.17.0.2" uuid="bad94df1-bdf1-4c62-867c-7de619dca82f">
       <resources>
         <resource>yocto_build</resource>
         <resource>renesas_binaries</resource>
-        <resource>c288f6a1d0cf</resource>
+        <resource>Pelagic_Agent</resource>
       </resources>
     </agent>
   </agents>
