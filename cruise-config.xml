@@ -2571,7 +2571,7 @@
     </pipeline>
     <pipeline name="GDP-SDE-porter" isLocked="false" template="GDP_SDE_generic">
       <params>
-        <param name="MACHINE">raspberrypi2</param>
+        <param name="MACHINE">porter</param>
       </params>
       <timer>0 0 5 13 10 ?</timer>
       <environmentvariables>
@@ -2587,7 +2587,7 @@
         <pipeline pipelineName="capicxx-core-tools" stageName="build" materialName="capicxx-core-tools" />
         <pipeline pipelineName="capicxx-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
         <pipeline pipelineName="capicxx-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
-        <pipeline pipelineName="GDP-Yocto-raspberrypi2_SDK" stageName="build" materialName="yocto-sdk-raspberrypi2" />
+        <pipeline pipelineName="GDP-Yocto-porter_SDK" stageName="build" materialName="yocto-sdk-porter" />
       </materials>
     </pipeline>
   </pipelines>
