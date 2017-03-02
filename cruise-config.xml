@@ -1856,7 +1856,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="systemd" labeltemplate="#{VERSION}_build_${COUNT}" isLocked="false">
+    <pipeline name="systemd_sdbus" labeltemplate="#{VERSION}_build_${COUNT}" isLocked="false">
       <params>
         <param name="VERSION">v219</param>
       </params>
@@ -2138,16 +2138,16 @@
     <pipeline name="WIP--common-api-c" labeltemplate="capic-poc:${capic-poc.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="git://github.com/GENIVI/capic-poc.git" materialName="capic-poc.git" />
-        <pipeline pipelineName="systemd" stageName="stage" materialName="systemd" />
+        <pipeline pipelineName="systemd_sdbus" stageName="stage" materialName="systemd" />
       </materials>
       <stage name="buildStage">
         <jobs>
           <job name="buildJob">
             <tasks>
-              <fetchartifact pipeline="systemd" stage="stage" job="configure_and_make" srcdir="libs" dest="systemd">
+              <fetchartifact pipeline="systemd_sdbus" stage="stage" job="configure_and_make" srcdir="libs" dest="systemd">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="systemd" stage="stage" job="configure_and_make" srcdir="headers" dest="systemd">
+              <fetchartifact pipeline="systemd_sdbus" stage="stage" job="configure_and_make" srcdir="headers" dest="systemd">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="autoreconf">
