@@ -2557,7 +2557,19 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Internal" />
+  <pipelines group="Internal">
+    <authorization>
+      <view>
+        <role>GDP_Developer</role>
+      </view>
+      <operate>
+        <role>GDP_Developer</role>
+      </operate>
+      <admins>
+        <role>GDP_Developer</role>
+      </admins>
+    </authorization>
+  </pipelines>
   <templates>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
