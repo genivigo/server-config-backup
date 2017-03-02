@@ -2459,14 +2459,8 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Internal">
+  <pipelines group="Internal_no_license_to_distribute_artifacts">
     <authorization>
-      <view>
-        <role>GDP_Developer</role>
-      </view>
-      <operate>
-        <role>GDP_Developer</role>
-      </operate>
       <admins>
         <role>GDP_Developer</role>
       </admins>
