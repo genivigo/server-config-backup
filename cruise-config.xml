@@ -3655,7 +3655,9 @@
         <jobs>
           <job name="Trigger">
             <tasks>
-              <exec command="test" />
+              <exec command="true">
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>ga_test</resource>
