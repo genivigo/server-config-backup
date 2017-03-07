@@ -3684,6 +3684,10 @@
                 <arg>cp sources.tar.gz "$RELEASE_DIR/gdp_sde_ubuntu_source.tar.gz"</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="touch">
+                <arg>UNSUPPORTED_SNAPSHOT_RELEASE</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>deploy_webserver</resource>
