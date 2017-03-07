@@ -3674,13 +3674,13 @@
               <fetchartifact pipeline="GDP-SDE-#{MACHINE}" stage="CreateVM" job="run_vagrant" srcdir="sources.tar.gz">
                 <runif status="passed" />
               </fetchartifact>
+              <exec command="touch">
+                <arg>UNSUPPORTED_SNAPSHOT_RELEASE</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>cp gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz "$RELEASE_DIR"</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="touch">
-                <arg>UNSUPPORTED_SNAPSHOT_RELEASE</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
