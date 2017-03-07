@@ -3679,13 +3679,13 @@
                 <arg>cp gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz "$RELEASE_DIR"</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="touch">
+                <arg>UNSUPPORTED_SNAPSHOT_RELEASE</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>cp sources.tar.gz "$RELEASE_DIR/gdp_sde_ubuntu_source.tar.gz"</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="touch">
-                <arg>UNSUPPORTED_SNAPSHOT_RELEASE</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
