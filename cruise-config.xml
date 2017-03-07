@@ -3668,9 +3668,6 @@
         <jobs>
           <job name="copy">
             <tasks>
-              <exec command="true">
-                <runif status="passed" />
-              </exec>
               <fetchartifact pipeline="GDP-SDE-#{MACHINE}" stage="CreateVM" job="run_vagrant" srcdir="gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz">
                 <runif status="passed" />
               </fetchartifact>
