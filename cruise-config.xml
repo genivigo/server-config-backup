@@ -3674,6 +3674,11 @@
               <fetchartifact pipeline="GDP-SDE-#{MACHINE}" stage="CreateVM" job="run_vagrant" srcdir="sources.tar.gz">
                 <runif status="passed" />
               </fetchartifact>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cp gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz "$RELEASE_DIR"</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>deploy_webserver</resource>
