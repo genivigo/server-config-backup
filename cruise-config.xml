@@ -3712,7 +3712,7 @@
         <resource>yocto_build</resource>
       </resources>
     </agent>
-    <agent hostname="9237780769e7" ipaddress="172.17.0.3" uuid="a5a5e9f9-27ed-44ce-a9a3-b7dc690fd1b0">
+    <agent hostname="9237780769e7" ipaddress="172.17.0.3" uuid="a5a5e9f9-27ed-44ce-a9a3-b7dc690fd1b0" isDisabled="true">
       <resources>
         <resource>python3</resource>
         <resource>notmp</resource>
@@ -3720,7 +3720,7 @@
         <resource>9237780769e7</resource>
       </resources>
     </agent>
-    <agent hostname="14dd4c9f3385" ipaddress="172.17.0.1" uuid="6c0751d6-39f2-4857-9f11-9891982323d3">
+    <agent hostname="14dd4c9f3385" ipaddress="172.17.0.1" uuid="6c0751d6-39f2-4857-9f11-9891982323d3" isDisabled="true">
       <resources>
         <resource>imagemagick</resource>
         <resource>vagrant</resource>
@@ -3740,7 +3740,7 @@
         <resource>Qt-seeder</resource>
       </resources>
     </agent>
-    <agent hostname="go-agent1 (GENIVI)" ipaddress="10.100.10.120" uuid="eb6be62e-2380-4537-b74b-18ff7265ac4c">
+    <agent hostname="go-agent1 (GENIVI)" ipaddress="10.100.10.120" uuid="eb6be62e-2380-4537-b74b-18ff7265ac4c" isDisabled="true">
       <resources>
         <resource>asciidoc</resource>
         <resource>yocto_build</resource>
