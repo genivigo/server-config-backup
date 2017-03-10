@@ -467,11 +467,11 @@
         <scm ref="30b07577-5ed3-4441-9558-3cf1595a678c" dest="meta-genivi-dev" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-MINNOWBOARD-meta-genivi-dev-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic_latest_meta_genivi_demo">
-      <timer>0 2 1 17 8 ?</timer>
+    <pipeline name="GDP-Yocto-Dragonboard-meta-genivi-dev-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic_latest_meta_genivi_demo">
+      <timer>0 0 4 17 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
-          <value>minnowboard</value>
+          <value>dragonboard-410c</value>
         </variable>
       </environmentvariables>
       <materials>
@@ -587,6 +587,16 @@
       <environmentvariables>
         <variable name="MACHINE">
           <value>minnowboard</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-Dragonboard-GITHUB-PR" template="Yocto_GDP_generic">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>dragonboard-410c</value>
         </variable>
       </environmentvariables>
       <materials>
