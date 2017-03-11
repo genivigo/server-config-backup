@@ -3723,7 +3723,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp results/sources.tar.gz "$RELEASE_DIR/$VERSION/gdp_sde_ubuntu_source.tar.gz"</arg>
+                <arg>cp results/sources.tar.gz "$RELEASE_DIR/$VERSION/ubuntu_vm_source.tar.gz"</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
