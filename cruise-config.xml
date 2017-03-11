@@ -3696,7 +3696,7 @@
           </job>
         </jobs>
       </stage>
-      <stage name="Copy_to_web_server" cleanWorkingDir="true">
+      <stage name="Copy_to_web_server" fetchMaterials="false" cleanWorkingDir="true">
         <approval type="manual" />
         <jobs>
           <job name="copy">
