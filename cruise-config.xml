@@ -3701,11 +3701,6 @@
         <jobs>
           <job name="copy">
             <tasks>
-              <exec command="rm">
-                <arg>-rf</arg>
-                <arg>staging/</arg>
-                <runif status="passed" />
-              </exec>
               <fetchartifact pipeline="GDP-SDE-#{MACHINE}" stage="CreateVM" job="run_vagrant" srcdir="results" dest="staging">
                 <runif status="passed" />
               </fetchartifact>
