@@ -677,9 +677,6 @@
         <variable name="DOWNLOAD_SOURCE">
           <value>yesofcourse</value>
         </variable>
-        <variable name="RELEASE_DIR">
-          <value>/mnt/nfs/</value>
-        </variable>
         <variable name="VERSION">
           <value>snapshot</value>
         </variable>
