@@ -3709,14 +3709,14 @@
                 <arg>mkdir -p "$RELEASE_DIR/$VERSION"</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>touch "$RELEASE_DIR/$VERSION/UNSUPPORTED_SNAPSHOT_RELEASE"</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="rm">
                 <arg>-r</arg>
                 <arg>staging/</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>touch "$RELEASE_DIR/$VERSION/UNSUPPORTED_SNAPSHOT_RELEASE"</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
