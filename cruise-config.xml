@@ -3702,7 +3702,7 @@
           <job name="copy">
             <tasks>
               <exec command="rm">
-                <arg>-r</arg>
+                <arg>-rf</arg>
                 <arg>staging/</arg>
                 <runif status="passed" />
               </exec>
