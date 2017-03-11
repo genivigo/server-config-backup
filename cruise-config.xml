@@ -677,6 +677,12 @@
         <variable name="DOWNLOAD_SOURCE">
           <value>yesofcourse</value>
         </variable>
+        <variable name="RELEASE_DIR">
+          <value>/mnt/nfs/releases/</value>
+        </variable>
+        <variable name="VERSION">
+          <value>snapshot</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="git://github.com/gunnarx/gdp_sde" materialName="gdp_sde" />
