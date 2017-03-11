@@ -3695,6 +3695,11 @@
       </stage>
       <stage name="Copy_to_web_server" fetchMaterials="false" cleanWorkingDir="true">
         <approval type="manual" />
+        <environmentvariables>
+          <variable name="RELEASE_DIR">
+            <value>/mnt/nfs/sde</value>
+          </variable>
+        </environmentvariables>
         <jobs>
           <job name="copy">
             <tasks>
