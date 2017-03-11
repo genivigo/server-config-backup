@@ -3771,6 +3771,7 @@
         <resource>yocto_build</resource>
         <resource>python3</resource>
         <resource>go-agent1</resource>
+        <resource>deploy_webserver</resource>
       </resources>
     </agent>
     <agent hostname="Pelagic_Agent" ipaddress="172.17.0.2" uuid="bad94df1-bdf1-4c62-867c-7de619dca82f" isDisabled="true">
