@@ -3695,7 +3695,7 @@
         <jobs>
           <job name="copy">
             <tasks>
-              <fetchartifact pipeline="GDP-SDE-#{MACHINE}" stage="CreateVM" job="run_vagrant" srcdir="gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz">
+              <fetchartifact pipeline="GDP-SDE-#{MACHINE}" stage="CreateVM" job="run_vagrant" srcfile="gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz">
                 <runif status="passed" />
               </fetchartifact>
               <fetchartifact pipeline="GDP-SDE-#{MACHINE}" stage="CreateVM" job="run_vagrant" srcdir="sources.tar.gz">
