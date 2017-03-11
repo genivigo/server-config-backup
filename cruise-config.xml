@@ -3704,14 +3704,14 @@
               <fetchartifact pipeline="GDP-SDE-#{MACHINE}" stage="CreateVM" job="run_vagrant" srcdir="results" dest="staging">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>mkdir -p "$RELEASE_DIR/$VERSION"</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="rm">
                 <arg>-r</arg>
                 <arg>staging/</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mkdir -p "$RELEASE_DIR/$VERSION"</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
