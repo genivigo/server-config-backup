@@ -3701,7 +3701,7 @@
               <fetchartifact pipeline="GDP-SDE-#{MACHINE}" stage="CreateVM" job="run_vagrant" srcfile="results/sources.tar.gz">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="touch">
+              <exec command="touch" workingdir="$RELEASE_DIR">
                 <arg>UNSUPPORTED_SNAPSHOT_RELEASE</arg>
                 <runif status="passed" />
               </exec>
