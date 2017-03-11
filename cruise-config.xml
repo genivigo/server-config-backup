@@ -3724,6 +3724,11 @@
                 <arg>cp staging/sources.tar.gz "$RELEASE_DIR/$VERSION/gdp_sde_ubuntu_source.tar.gz"</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="rm">
+                <arg>-r</arg>
+                <arg>staging/</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>deploy_webserver</resource>
