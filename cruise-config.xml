@@ -3711,7 +3711,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>touch "$RELEASE_DIR/UNSUPPORTED_SNAPSHOT_RELEASE"</arg>
+                <arg>touch "$RELEASE_DIR/$VERSION/UNSUPPORTED_SNAPSHOT_RELEASE"</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
