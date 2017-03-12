@@ -2951,7 +2951,7 @@
                 <arg>rm -rf tmp</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
+              <exec command="bash" workingdir="gdp">
                 <arg>-c</arg>
                 <arg>if [[ "$MACHINE" == "dragonboard-410c" ]]; then source ./init.sh $MACHINE accept-eula; else source ./init.sh $MACHINE; fi</arg>
                 <runif status="passed" />
