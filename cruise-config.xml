@@ -3678,7 +3678,7 @@
           </job>
         </jobs>
       </stage>
-      <stage name="ManualTest">
+      <stage name="ManualTest" fetchMaterials="false">
         <approval type="manual" />
         <jobs>
           <job name="Trigger">
