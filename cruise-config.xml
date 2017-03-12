@@ -640,6 +640,9 @@
         <variable name="VMNAME">
           <value>gdp-sdk-#{MACHINE}</value>
         </variable>
+        <variable name="VERSION">
+          <value>snapshot</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="git://github.com/gunnarx/gdp_sde" materialName="gdp_sde" />
