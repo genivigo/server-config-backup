@@ -705,6 +705,11 @@
         <param name="MACHINE">dragonboard-410c</param>
       </params>
       <timer>0 0 4 6 10 ?</timer>
+      <environmentvariables>
+        <variable name="VERSION">
+          <value>snapshot</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="git://github.com/gunnarx/gdp_sde" materialName="gdp_sde" />
         <pipeline pipelineName="Eclipse-for-SDK-2" stageName="stage" materialName="eclipse" />
