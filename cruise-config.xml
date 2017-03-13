@@ -3760,7 +3760,6 @@
     <agent hostname="9237780769e7" ipaddress="172.17.0.3" uuid="a5a5e9f9-27ed-44ce-a9a3-b7dc690fd1b0">
       <resources>
         <resource>python3</resource>
-        <resource>notmp</resource>
         <resource>asciidoc</resource>
         <resource>9237780769e7</resource>
       </resources>
@@ -3781,7 +3780,6 @@
         <resource>python3</resource>
         <resource>renesas_binaries</resource>
         <resource>c8776aa52222</resource>
-        <resource>notmp</resource>
         <resource>Qt-seeder</resource>
       </resources>
     </agent>
