@@ -2806,7 +2806,6 @@
             <resources>
               <resource>renesas_binaries</resource>
               <resource>yocto_build</resource>
-              <resource>c8776aa52222</resource>
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
