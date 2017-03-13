@@ -2804,8 +2804,9 @@
               </exec>
             </tasks>
             <resources>
-              <resource>renesas_binaries</resource>
+              <resource>Pelagic_Agent</resource>
               <resource>yocto_build</resource>
+              <resource>renesas_binaries</resource>
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
