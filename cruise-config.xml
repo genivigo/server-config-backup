@@ -2804,7 +2804,6 @@
               </exec>
             </tasks>
             <resources>
-              <resource>Pelagic_Agent</resource>
               <resource>renesas_binaries</resource>
               <resource>yocto_build</resource>
             </resources>
