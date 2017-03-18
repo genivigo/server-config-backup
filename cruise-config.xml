@@ -3735,14 +3735,14 @@
                 <arg>cp results/gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz "$RELEASE_DIR/$VERSION/"</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>cp results/sources.tar.gz "$RELEASE_DIR/$VERSION/ubuntu_vm_source.tar.gz"</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash" workingdir="results">
                 <arg>-c</arg>
                 <arg>for f in gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz ; do md5sum "$f" &gt;"$f.md5" ; done</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cp results/sources.tar.gz "$RELEASE_DIR/$VERSION/ubuntu_vm_source.tar.gz"</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
