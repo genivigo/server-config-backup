@@ -3727,7 +3727,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>ls results</arg>
+                <arg>ls results/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
