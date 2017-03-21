@@ -360,7 +360,7 @@
       <materials>
         <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
       </materials>
-      <stage name="build">
+      <stage name="build" cleanWorkingDir="true">
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
