@@ -1755,7 +1755,7 @@
     </authorization>
     <pipeline name="FRANCA_IF_Validation" labeltemplate="master:${capicxx-core-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
-        <git url="git://github.com/genivi/ipc/capicxx-core-tools.git" dest="dest-capicxx-core-tools" materialName="capicxx-core-tools.git" />
+        <git url="git://github.com/genivi/capicxx-core-tools.git" dest="dest-capicxx-core-tools" materialName="capicxx-core-tools.git" />
         <scm ref="077cfe93-bc9e-461a-9a5c-e82796ccb710" dest="dest-fidl-files" />
       </materials>
       <stage name="BuildCommonAPI" cleanWorkingDir="true">
@@ -2084,7 +2084,7 @@
     <pipeline name="WIP--GENIVI_Positioning" isLocked="false">
       <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
       <materials>
-        <git url="git://github.com/genivi/lbs/positioning.git" materialName="PositioningGitRepository" />
+        <git url="git://github.com/genivi/positioning.git" materialName="PositioningGitRepository" />
       </materials>
       <stage name="defaultStage">
         <jobs>
