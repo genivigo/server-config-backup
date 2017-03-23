@@ -252,6 +252,9 @@
         <variable name="MACHINE">
           <value>porter</value>
         </variable>
+        <variable name="GFX_MACHINE">
+          <value>porter</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
@@ -326,6 +329,9 @@
       <timer onlyOnChanges="true">0 0 6 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
+          <value>porter</value>
+        </variable>
+        <variable name="GFX_MACHINE">
           <value>porter</value>
         </variable>
       </environmentvariables>
@@ -430,6 +436,9 @@
       <timer>0 0 4 19 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
+          <value>porter</value>
+        </variable>
+        <variable name="GFX_MACHINE">
           <value>porter</value>
         </variable>
       </environmentvariables>
@@ -569,6 +578,9 @@
       <timer>0 0 23 16 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
+          <value>porter</value>
+        </variable>
+        <variable name="GFX_MACHINE">
           <value>porter</value>
         </variable>
       </environmentvariables>
@@ -1264,6 +1276,9 @@
       <timer onlyOnChanges="true">0 0 22 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
+          <value>porter</value>
+        </variable>
+        <variable name="GFX_MACHINE">
           <value>porter</value>
         </variable>
       </environmentvariables>
@@ -2593,6 +2608,9 @@
       <timer onlyOnChanges="true">0 59 23 15 9 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
+          <value>porter</value>
+        </variable>
+        <variable name="GFX_MACHINE">
           <value>porter</value>
         </variable>
         <variable name="BUILD_SDK">
