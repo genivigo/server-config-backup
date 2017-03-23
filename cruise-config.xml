@@ -1485,9 +1485,6 @@
                 <runif status="passed" />
               </exec>
             </tasks>
-            <resources>
-              <resource>notmp</resource>
-            </resources>
             <artifacts>
               <artifact src="results" />
             </artifacts>
