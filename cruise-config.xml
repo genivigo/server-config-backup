@@ -2397,6 +2397,14 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-Koelsh" template="Yocto_GDP_Renesas_generic">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>koelsch</value>
+        </variable>
+        <variable name="GFX_MACHINE">
+          <value>porter</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" />
       </materials>
