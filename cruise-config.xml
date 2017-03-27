@@ -361,6 +361,9 @@
         <variable name="MACHINE">
           <value>silk</value>
         </variable>
+        <variable name="GFX_MACHINE">
+          <value>silk</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="morty" materialName="genivi-dev-platform.git" />
