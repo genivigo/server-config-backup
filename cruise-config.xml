@@ -2949,7 +2949,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>source ./init.sh $MACHINE</arg>
+                <arg>source ./init.sh $MACHINE -f</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
