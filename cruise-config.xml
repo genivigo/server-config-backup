@@ -2479,9 +2479,9 @@
     <pipeline name="GDP-Yocto-r-car-m3-starter-kit" template="Yocto_GDP_Renesas_generic">
       <environmentvariables>
         <variable name="MACHINE">
-          <value>r-car-m3-starter-kit</value>
+          <value>m3ulcb</value>
         </variable>
-        <variable name="GFX_MACHINE">
+        <variable name="TARGET">
           <value>r-car-m3-starter-kit</value>
         </variable>
       </environmentvariables>
