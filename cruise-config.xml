@@ -2867,7 +2867,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "r-car-m3-starter-kit" ]];  then cd renesas-rcar-gen3/meta-rcar-gen3/docs/sample/copyscript/ &amp;&amp; ./copy_evaproprietary_softwares.sh /var/go/sgx_bin_gen3/; fi</arg>
+                <arg>if [[ "$MACHINE" == "r-car-m3-starter-kit" ]];  then cd renesas-rcar-gen3/  &amp;&amp; meta-rcar-gen3/docs/sample/copyscript/copy_evaproprietary_softwares.sh /var/go/sgx_bin_gen3/; fi</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
