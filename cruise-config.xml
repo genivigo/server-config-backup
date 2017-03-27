@@ -2476,7 +2476,7 @@
         <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-r-car-m3-starter-kit" template="Yocto_GDP_generic">
+    <pipeline name="GDP-Yocto-r-car-m3-starter-kit" template="Yocto_GDP_Renesas_generic">
       <environmentvariables>
         <variable name="MACHINE">
           <value>r-car-m3-starter-kit</value>
