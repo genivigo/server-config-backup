@@ -252,6 +252,9 @@
         <variable name="MACHINE">
           <value>porter</value>
         </variable>
+        <variable name="TARGET">
+          <value>porter</value>
+        </variable>
         <variable name="GFX_MACHINE">
           <value>porter</value>
         </variable>
@@ -266,6 +269,9 @@
         <variable name="MACHINE">
           <value>silk</value>
         </variable>
+        <variable name="TARGET">
+          <value>silk</value>
+        </variable>
         <variable name="GFX_MACHINE">
           <value>silk</value>
         </variable>
@@ -277,6 +283,9 @@
     <pipeline name="GDP-Yocto-Koelsch" template="Yocto_GDP_Renesas_generic">
       <environmentvariables>
         <variable name="MACHINE">
+          <value>koelsch</value>
+        </variable>
+        <variable name="TARGET">
           <value>koelsch</value>
         </variable>
         <variable name="GFX_MACHINE">
@@ -345,6 +354,9 @@
       <timer onlyOnChanges="true">0 0 6 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
+          <value>porter</value>
+        </variable>
+        <variable name="TARGET">
           <value>porter</value>
         </variable>
         <variable name="GFX_MACHINE">
@@ -2946,7 +2958,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>source ./init.sh $MACHINE -f</arg>
+                <arg>source ./init.sh $TARGET -f</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
@@ -2956,7 +2968,7 @@
               </exec>
               <exec command="bash" workingdir="renesas-rcar-gen3">
                 <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "r-car-m3-starter-kit" ]]; then meta-rcar-gen3/docs/sample/copyscript/copy_evaproprietary_softwares.sh /var/go/sgx_bin_gen3/; fi</arg>
+                <arg>if [[ "$TARGET" == "r-car-m3-starter-kit" ]]; then meta-rcar-gen3/docs/sample/copyscript/copy_evaproprietary_softwares.sh /var/go/sgx_bin_gen3/; fi</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
