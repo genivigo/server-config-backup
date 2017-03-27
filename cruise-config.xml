@@ -2951,6 +2951,11 @@
                 <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]]; then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_gfx_software_$GFX_MACHINE.sh /var/go/sgx_bin &amp;&amp; ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash" workingdir="renesas-rcar-gen3">
+                <arg>-c</arg>
+                <arg>if [[ "$MACHINE" == "r-car-m3-starter-kit" ]]; then meta-rcar-gen3/docs/sample/copyscript/copy_evaproprietary_softwares.sh /var/go/sgx_bin_gen3/; fi</arg>
+                <runif status="passed" />
+              </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
                 <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
