@@ -2481,6 +2481,9 @@
         <variable name="MACHINE">
           <value>r-car-m3-starter-kit</value>
         </variable>
+        <variable name="GFX_MACHINE">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" />
