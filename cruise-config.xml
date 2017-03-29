@@ -2962,7 +2962,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]]; then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_gfx_software_$GFX_MACHINE.sh /var/go/sgx_bin &amp;&amp; ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
+                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]]; then cd meta-renesas/meta-rcar-gen2 ; ./copy_gfx_software_$GFX_MACHINE.sh /var/go/sgx_bin ; ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="renesas-rcar-gen3">
