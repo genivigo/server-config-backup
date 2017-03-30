@@ -4014,7 +4014,7 @@
         <resource>Qt-seeder</resource>
       </resources>
     </agent>
-    <agent hostname="go-agent1 (GENIVI)" ipaddress="10.100.10.120" uuid="eb6be62e-2380-4537-b74b-18ff7265ac4c">
+    <agent hostname="go-agent1 (GENIVI)" ipaddress="10.100.10.120" uuid="eb6be62e-2380-4537-b74b-18ff7265ac4c" isDisabled="true">
       <resources>
         <resource>asciidoc</resource>
         <resource>python3</resource>
