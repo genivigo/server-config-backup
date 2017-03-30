@@ -3976,12 +3976,6 @@
     </pipeline>
   </templates>
   <agents>
-    <agent hostname="10096874c2ab" ipaddress="172.17.0.8" uuid="c25991cc-5f06-422e-8e98-31eda2ba4363" isDisabled="true">
-      <resources>
-        <resource>10096874c2ab</resource>
-        <resource>virtualbox_test</resource>
-      </resources>
-    </agent>
     <agent hostname="ics-agent1 (ICS)" ipaddress="172.17.0.13" uuid="0d027f89-6a5b-4d2f-803d-394f4c5690ae" isDisabled="true">
       <resources>
         <resource>ics-agent1</resource>
