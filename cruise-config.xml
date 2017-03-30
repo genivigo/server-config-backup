@@ -4027,6 +4027,7 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>Pelagic_Agent</resource>
+        <resource>renesas_binaries</resource>
       </resources>
     </agent>
   </agents>
