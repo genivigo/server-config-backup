@@ -4030,6 +4030,7 @@
         <resource>go-agent1</resource>
       </resources>
     </agent>
+    <agent hostname="go-agent2" ipaddress="10.100.10.1" uuid="198e29c2-fbfa-4e70-93c6-b9df35fa720b" />
   </agents>
 </cruise>
 
