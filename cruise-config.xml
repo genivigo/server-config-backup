@@ -4024,6 +4024,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
+    <agent hostname="go-agent1" ipaddress="10.100.10.1" uuid="1bb12ac4-c35f-4111-9eba-a2e709d5cf7b" />
   </agents>
 </cruise>
 
