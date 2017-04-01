@@ -4027,6 +4027,7 @@
         <resource>go-agent2</resource>
       </resources>
     </agent>
+    <agent hostname="beetle-genivi-agent" ipaddress="208.73.22.108" uuid="1be4eb0f-2348-4e3f-98d0-bc0303d7bef5" />
   </agents>
 </cruise>
 
