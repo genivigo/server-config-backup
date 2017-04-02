@@ -4027,7 +4027,7 @@
         <resource>go-agent2</resource>
       </resources>
     </agent>
-    <agent hostname="beetle-genivi-agent" ipaddress="172.17.0.7" uuid="1be4eb0f-2348-4e3f-98d0-bc0303d7bef5">
+    <agent hostname="beetle-genivi-agent" ipaddress="172.17.0.1" uuid="1be4eb0f-2348-4e3f-98d0-bc0303d7bef5">
       <resources>
         <resource>yocto_build</resource>
       </resources>
