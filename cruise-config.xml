@@ -3982,7 +3982,7 @@
         <resource>yocto_build</resource>
       </resources>
     </agent>
-    <agent hostname="9237780769e7" ipaddress="172.17.0.3" uuid="a5a5e9f9-27ed-44ce-a9a3-b7dc690fd1b0">
+    <agent hostname="9237780769e7" ipaddress="172.17.0.3" uuid="a5a5e9f9-27ed-44ce-a9a3-b7dc690fd1b0" isDisabled="true">
       <resources>
         <resource>python3</resource>
         <resource>asciidoc</resource>
