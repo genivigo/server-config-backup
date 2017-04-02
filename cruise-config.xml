@@ -4033,6 +4033,7 @@
     <agent hostname="beetle-genivi-agent" ipaddress="172.17.0.2" uuid="1be4eb0f-2348-4e3f-98d0-bc0303d7bef5">
       <resources>
         <resource>yocto_build</resource>
+        <resource>python3</resource>
       </resources>
     </agent>
   </agents>
