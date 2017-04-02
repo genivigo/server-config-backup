@@ -4034,6 +4034,7 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>python3</resource>
+        <resource>beetle-genivi-agent</resource>
       </resources>
     </agent>
   </agents>
