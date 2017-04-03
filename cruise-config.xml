@@ -4037,6 +4037,7 @@
         <resource>beetle-genivi-agent</resource>
       </resources>
     </agent>
+    <agent hostname="go-agent-vbox_docker" ipaddress="104.227.2.122" uuid="9eddcbd1-ae98-4dc6-939a-88984fab449d" isDisabled="true" />
   </agents>
 </cruise>
 
