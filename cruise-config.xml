@@ -1000,6 +1000,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>vagrant</resource>
+            </resources>
             <artifacts>
               <artifact src="artifacts/" dest="tarballs/" />
               <artifact src="autoeclipse/eclipse" dest="results/" />
