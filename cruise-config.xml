@@ -4009,6 +4009,7 @@
         <resource>renesas_binaries</resource>
         <resource>c8776aa52222</resource>
         <resource>Qt-seeder</resource>
+        <resource>yocto_build</resource>
       </resources>
     </agent>
     <agent hostname="Pelagic_Agent" ipaddress="172.17.0.2" uuid="bad94df1-bdf1-4c62-867c-7de619dca82f">
