@@ -3986,7 +3986,6 @@
     <agent hostname="9237780769e7" ipaddress="172.17.0.3" uuid="a5a5e9f9-27ed-44ce-a9a3-b7dc690fd1b0" isDisabled="true">
       <resources>
         <resource>python3</resource>
-        <resource>asciidoc</resource>
         <resource>9237780769e7</resource>
       </resources>
     </agent>
@@ -3996,7 +3995,6 @@
         <resource>vagrant</resource>
         <resource>14dd4c9f3385</resource>
         <resource>uploader</resource>
-        <resource>asciidoc</resource>
       </resources>
     </agent>
     <agent hostname="c8776aa52222 (gunnarx)" ipaddress="172.17.0.2" uuid="cfad499e-6530-4e20-9013-ac7f484f5523">
