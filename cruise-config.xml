@@ -4041,8 +4041,6 @@
         <resource>beetle-genivi-agent</resource>
       </resources>
     </agent>
-    <agent hostname="6a2a1a13de73" ipaddress="172.17.0.6" uuid="c1c977d2-10bf-4d30-8cb1-5915faa77ccb" isDisabled="true" />
-    <agent hostname="ea428f93d098" ipaddress="172.17.0.1" uuid="f3b44abb-5809-4cc9-879a-a78930bcd8cc" isDisabled="true" />
   </agents>
 </cruise>
 
