@@ -2564,9 +2564,6 @@
                 <arg>-h</arg>
               </exec>
             </tasks>
-            <resources>
-              <resource>c8776aa52222</resource>
-            </resources>
           </job>
         </jobs>
       </stage>
