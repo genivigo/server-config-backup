@@ -2924,6 +2924,7 @@
             </tasks>
             <resources>
               <resource>yocto_build</resource>
+              <resource>Pelagic_Agent</resource>
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
