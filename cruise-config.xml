@@ -3975,12 +3975,6 @@
         <resource>yocto_build</resource>
       </resources>
     </agent>
-    <agent hostname="9237780769e7" ipaddress="172.17.0.3" uuid="a5a5e9f9-27ed-44ce-a9a3-b7dc690fd1b0" isDisabled="true">
-      <resources>
-        <resource>python3</resource>
-        <resource>9237780769e7</resource>
-      </resources>
-    </agent>
     <agent hostname="14dd4c9f3385" ipaddress="172.17.0.1" uuid="6c0751d6-39f2-4857-9f11-9891982323d3">
       <resources>
         <resource>imagemagick</resource>
