@@ -1030,10 +1030,10 @@
           <value>qemux86-64</value>
         </variable>
         <variable name="BRANCH">
-          <value>gdp-11</value>
+          <value>master</value>
         </variable>
         <variable name="RELEASE">
-          <value>gdp-11</value>
+          <value>gdp-master</value>
         </variable>
       </environmentvariables>
       <materials>
