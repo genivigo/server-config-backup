@@ -1081,7 +1081,7 @@
           <value>master</value>
         </variable>
         <variable name="RELEASE">
-          <value>RC3</value>
+          <value>gdp-master-snapshot</value>
         </variable>
       </environmentvariables>
       <materials>
