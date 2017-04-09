@@ -1046,7 +1046,7 @@
           <value>minnowboard</value>
         </variable>
         <variable name="BRANCH">
-          <value>masster</value>
+          <value>master</value>
         </variable>
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
