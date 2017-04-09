@@ -1062,10 +1062,10 @@
           <value>raspberrypi2</value>
         </variable>
         <variable name="BRANCH">
-          <value>gdp-11</value>
+          <value>master</value>
         </variable>
         <variable name="RELEASE">
-          <value>gdp-11</value>
+          <value>gdp-master-snapshot</value>
         </variable>
       </environmentvariables>
       <materials>
