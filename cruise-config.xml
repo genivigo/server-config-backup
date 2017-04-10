@@ -2483,7 +2483,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform.git" branch="morty" />
+        <git url="https://github.com/GENIVI/genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="Morty-GDP-Yocto-Porter" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Renesas_generic">
