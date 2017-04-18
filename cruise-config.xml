@@ -4022,7 +4022,12 @@
         <resource>beetle-genivi-agent</resource>
       </resources>
     </agent>
-    <agent hostname="charlie-go-agent" ipaddress="172.17.0.3" uuid="59fc47e6-a412-4989-a683-0e6f6e5b3dd0" />
+    <agent hostname="charlie-go-agent" ipaddress="172.17.0.3" uuid="59fc47e6-a412-4989-a683-0e6f6e5b3dd0">
+      <resources>
+        <resource>yocto_build</resource>
+        <resource>charlie-go-agent</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
