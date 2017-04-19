@@ -4057,7 +4057,11 @@
         <resource>charlie-go-agent</resource>
       </resources>
     </agent>
-    <agent hostname="vbox-agent" ipaddress="10.1.2.56" uuid="b8dcc090-1141-431e-8318-4d03edb96858" />
+    <agent hostname="vbox-agent" ipaddress="10.1.2.56" uuid="b8dcc090-1141-431e-8318-4d03edb96858">
+      <resources>
+        <resource>vagrant</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
