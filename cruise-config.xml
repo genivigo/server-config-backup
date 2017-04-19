@@ -393,7 +393,7 @@
     <pipeline name="meta-ivi-Yocto-QEMU_x86-64-GITHUB-PR-MIRANDA-IMAGE" labeltemplate="meta-ivi:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
       <environmentvariables>
         <variable name="IMAGE_NAME">
-          <value>nostromo-image</value>
+          <value>miranda-image</value>
         </variable>
         <variable name="MACHINE">
           <value>qemux86-64</value>
