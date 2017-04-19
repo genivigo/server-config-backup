@@ -296,6 +296,19 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-Yocto-r-car-m3-starter-kit" template="Yocto_GDP_Renesas_generic">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>m3ulcb</value>
+        </variable>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Morty">
     <authorization>
@@ -2471,19 +2484,6 @@
         <git url="git://git.openembedded.org/meta-openembedded" branch="morty" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.morty" />
         <git url="http://git.yoctoproject.org/git/poky.git" branch="morty" dest="poky" autoUpdate="false" materialName="poky.morty" />
         <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
-      </materials>
-    </pipeline>
-    <pipeline name="GDP-Yocto-r-car-m3-starter-kit" template="Yocto_GDP_Renesas_generic">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>m3ulcb</value>
-        </variable>
-        <variable name="TARGET">
-          <value>r-car-m3-starter-kit</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="Morty-GDP-Yocto-Porter" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Renesas_generic">
