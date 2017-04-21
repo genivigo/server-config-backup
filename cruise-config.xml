@@ -3950,7 +3950,7 @@
         <approval type="manual" />
         <environmentvariables>
           <variable name="RELEASE_DIR">
-            <value>/mnt/nfs/sde</value>
+            <value>/var/lib/go-agent/pipelines/__deploy</value>
           </variable>
         </environmentvariables>
         <jobs>
