@@ -3949,7 +3949,7 @@
         <approval type="manual" />
         <environmentvariables>
           <variable name="RELEASE_DIR">
-            <value>/var/lib/go-agent/pipelines/__deploy</value>
+            <value>/srv/releases</value>
           </variable>
         </environmentvariables>
         <jobs>
