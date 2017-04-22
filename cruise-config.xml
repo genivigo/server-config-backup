@@ -3954,11 +3954,6 @@
         </environmentvariables>
         <jobs>
           <job name="copy">
-            <environmentvariables>
-              <variable name="RELEASE_DIR">
-                <value>/srv/releases</value>
-              </variable>
-            </environmentvariables>
             <tasks>
               <fetchartifact pipeline="GDP-SDE-#{MACHINE}" stage="CreateVM" job="run_vagrant" srcdir="results">
                 <runif status="passed" />
