@@ -3973,12 +3973,12 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>ls -l results/</arg>
+                <arg>echo "Deploy dir is: $RELEASE_DIR/$VERSION, SNAPSHOT"</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>echo "Deploy dir is: $RELEASE_DIR/$VERSION, SNAPSHOT"</arg>
+                <arg>ls -l results/</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="results">
