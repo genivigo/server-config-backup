@@ -3951,6 +3951,9 @@
           <variable name="RELEASE_DIR">
             <value>/srv/releases</value>
           </variable>
+          <variable name="VERSION">
+            <value>snapshot</value>
+          </variable>
         </environmentvariables>
         <jobs>
           <job name="copy">
