@@ -837,10 +837,13 @@
       <timer>0 0 23 16 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
-          <value>porter</value>
+          <value>m3ulcb</value>
         </variable>
         <variable name="GFX_MACHINE">
-          <value>porter</value>
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
         </variable>
       </environmentvariables>
       <materials>
