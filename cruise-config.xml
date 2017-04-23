@@ -3963,12 +3963,12 @@
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mkdir -p "$RELEASE_DIR/$VERSION"</arg>
+                <arg>echo "Deploy dir is: $RELEASE_DIR/$VERSION, SNAPSHOT"</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>echo "Deploy dir is: $RELEASE_DIR/$VERSION, SNAPSHOT"</arg>
+                <arg>mkdir -p "$RELEASE_DIR/$VERSION"</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
