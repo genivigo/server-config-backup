@@ -3994,7 +3994,7 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>cp results/gdp-sdk-#{MACHINE}-virtualbox-image* "$RELEASE_DIR/$VERSION/"</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
             </tasks>
             <resources>
