@@ -581,7 +581,7 @@
             <tasks>
               <exec command="rm" workingdir="gdp-src-build">
                 <arg>-rf</arg>
-                <arg>tmp</arg>
+                <arg>tmp cache sstate-cache</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
