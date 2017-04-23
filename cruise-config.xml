@@ -3991,6 +3991,11 @@
                 <arg>cp results/sources.tar.gz "$RELEASE_DIR/$VERSION/ubuntu_vm_source.tar.gz"</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>echo "Deploy dir is: $RELEASE_DIR/$VERSION, SNAPSHOT"</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>deploy_webserver</resource>
