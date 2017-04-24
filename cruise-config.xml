@@ -902,18 +902,14 @@
         <role>Guest</role>
       </view>
       <admins>
-        <user>EBoto</user>
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="Release-QEMU_x86-64" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-qemux86-64" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>qemux86-64</value>
         </variable>
-        <variable name="BRANCH">
-          <value>master</value>
-        </variable>
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
         </variable>
@@ -922,14 +918,11 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Release-Minnowboard" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-minnowboard" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>minnowboard</value>
         </variable>
-        <variable name="BRANCH">
-          <value>master</value>
-        </variable>
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
         </variable>
@@ -938,14 +931,11 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Release-RaspberryPi2" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-raspberrypi2" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>raspberrypi2</value>
         </variable>
-        <variable name="BRANCH">
-          <value>master</value>
-        </variable>
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
         </variable>
@@ -954,14 +944,11 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Release-RaspberryPi3" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-raspberrypi3" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>raspberrypi3</value>
         </variable>
-        <variable name="BRANCH">
-          <value>master</value>
-        </variable>
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
         </variable>
@@ -970,13 +957,10 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Release-Dragonboard" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-dragonboard" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>dragonboard-410c</value>
-        </variable>
-        <variable name="BRANCH">
-          <value>master</value>
         </variable>
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
@@ -3154,11 +3138,11 @@
     <pipeline name="Upload_Release">
       <materials>
         <git url="https://github.com/gunnarx/dummy" autoUpdate="false" />
-        <pipeline pipelineName="Release-QEMU_x86-64" stageName="build" materialName="qemux86-64" />
-        <pipeline pipelineName="Release-Minnowboard" stageName="build" materialName="minnowboard" />
-        <pipeline pipelineName="Release-RaspberryPi2" stageName="build" materialName="raspberrypi2" />
-        <pipeline pipelineName="Release-RaspberryPi3" stageName="build" materialName="raspberrypi3" />
-        <pipeline pipelineName="Release-Dragonboard" stageName="build" materialName="dragonboard-410c" />
+        <pipeline pipelineName="Release-qemux86-64" stageName="build" materialName="qemux86-64" />
+        <pipeline pipelineName="Release-minnowboard" stageName="build" materialName="minnowboard" />
+        <pipeline pipelineName="Release-raspberrypi2" stageName="build" materialName="raspberrypi2" />
+        <pipeline pipelineName="Release-raspberrypi3" stageName="build" materialName="raspberrypi3" />
+        <pipeline pipelineName="Release-dragonboard" stageName="build" materialName="dragonboard-410c" />
       </materials>
       <stage name="copy">
         <jobs>
@@ -3169,19 +3153,19 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <fetchartifact pipeline="Release-Dragonboard" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_dragonboard">
+              <fetchartifact pipeline="Release-dragonboard" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_dragonboard">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="Release-Minnowboard" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_minnowboard">
+              <fetchartifact pipeline="Release-minnowboard" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_minnowboard">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="Release-QEMU_x86-64" stage="build" job="init_and_bitbake" srcdir="staging_qemux86-64">
+              <fetchartifact pipeline="Release-qemux86-64" stage="build" job="init_and_bitbake" srcdir="staging_qemux86-64">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="Release-RaspberryPi2" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi2">
+              <fetchartifact pipeline="Release-raspberrypi2" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi2">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="Release-RaspberryPi3" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi3">
+              <fetchartifact pipeline="Release-raspberrypi3" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi3">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="bash">
@@ -3449,9 +3433,6 @@
     <pipeline name="Yocto_GDP_generic_release">
       <authorization>
         <admins>
-          <user>tpollard</user>
-          <user>RobertM</user>
-          <user>AndreasR</user>
           <user>EBoto</user>
         </admins>
       </authorization>
@@ -3460,107 +3441,9 @@
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
-              <exec command="rm" workingdir="gdp-src-build">
-                <arg>-rf</arg>
-                <arg>tmp</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>git checkout $BRANCH</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "dragonboard-410c" ]]; then source ./init.sh $MACHINE accept-eula; else source ./init.sh $MACHINE; fi</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash" workingdir="gdp-src-build">
                 <arg>-c</arg>
-                <arg>mkdir -p staging/$MACHINE</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>tar -zcf "gdp-src-build/staging/$MACHINE/oe-source.tar.gz" --exclude=gdp-src-build/{bitbake.lock,buildhistory,cache,downloads,sstate-cache,tmp,staging} --exclude=meta-{renesas,raspberrypi,intel,qcom} --exclude=renesas-rcar-gen3 *</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'INHERIT += "archiver"\nARCHIVER_MODE[src] = "original"\nCOPY_LIC_MANIFEST = "1"\nCOPY_LIC_DIRS = "1"'&gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.name</arg>
-                <arg>Go Server</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>cp gdp-src-build/tmp/deploy/licenses/genivi-dev-platform-*/license.manifest gdp-src-build/staging/$MACHINE/$BRANCH-license.manifest</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>cp gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-*.rootfs.manifest gdp-src-build/staging/$MACHINE/$BRANCH.rootfs.manifest</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>tar -zcf gdp-src-build/staging/$MACHINE/$BRANCH-licenses.tar.gz -C gdp-src-build/tmp/deploy/licenses .</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>tar -zcf gdp-src-build/staging/$MACHINE/$BRANCH-sources.tar.gz -C gdp-src-build/tmp/deploy/sources .</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "qemux86-64" ]]; then gzip -c gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-qemux86-64.ext4 &gt; gdp-src-build/staging/$MACHINE/$BRANCH-qemu.ext4.gz; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "qemux86-64" ]]; then cp gdp-src-build/tmp/deploy/images/*/bzImage gdp-src-build/staging/$MACHINE/$BRANCH-qemu.bzImage; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "raspberrypi2" || "$MACHINE" == "raspberrypi3" ]]; then gzip -c gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-*.rootfs.rpi-sdimg &gt; gdp-src-build/staging/$MACHINE/$BRANCH-rpi.sdimg.gz; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "minnowboard" ]]; then cp poky/scripts/contrib/mkefidisk.sh gdp-src-build/tmp/deploy/images/intel-corei7-64/ &amp;&amp; tar -zchf gdp-src-build/staging/$MACHINE/$BRANCH-minnowboard.hddimg.tar.gz -C gdp-src-build/tmp/deploy/images/intel-corei7-64 genivi-dev-platform-intel-corei7-64.hddimg mkefidisk.sh; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "dragonboard-410c" ]]; then gzip -c gdp-src-build/tmp/deploy/images/*/boot-dragonboard-410c.img &gt; gdp-src-build/staging/$MACHINE/$BRANCH-dragonboard.img.gz; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "dragonboard-410c" ]]; then cp gdp-src-build/tmp/deploy/images/*/genivi-dev-platform-dragonboard-410c.ext4.gz gdp-src-build/staging/$MACHINE/$BRANCH-dragonboard.ext4.gz; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/staging/">
-                <arg>-c</arg>
-                <arg>cd $MACHINE &amp;&amp; md5sum * &gt; checksums.txt</arg>
+                <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -3568,7 +3451,7 @@
               <resource>yocto_build</resource>
             </resources>
             <artifacts>
-              <artifact src="gdp-src-build/staging/" />
+              <artifact src="staging/" />
             </artifacts>
           </job>
         </jobs>
