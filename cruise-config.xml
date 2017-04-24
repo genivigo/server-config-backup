@@ -3150,7 +3150,7 @@
           <job name="copy_to_pcore">
             <environmentvariables>
               <variable name="DEPLOY_DIR">
-                <value>/var/cache/deploy</value>
+                <value>/var/lib/go-agent/pipelines/__deploy</value>
               </variable>
             </environmentvariables>
             <tasks>
