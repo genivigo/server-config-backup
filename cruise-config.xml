@@ -3158,6 +3158,7 @@
         <pipeline pipelineName="Release-Minnowboard" stageName="build" materialName="minnowboard" />
         <pipeline pipelineName="Release-RaspberryPi2" stageName="build" materialName="raspberrypi2" />
         <pipeline pipelineName="Release-RaspberryPi3" stageName="build" materialName="raspberrypi3" />
+        <pipeline pipelineName="Release-Dragonboard" stageName="build" materialName="dragonboard-410c" />
       </materials>
       <stage name="copy">
         <jobs>
