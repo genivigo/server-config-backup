@@ -3182,6 +3182,9 @@
               <fetchartifact pipeline="Release-QEMU_x86-64" stage="build" job="init_and_bitbake" srcdir="staging_qemux86-64">
                 <runif status="passed" />
               </fetchartifact>
+              <fetchartifact pipeline="Release-RaspberryPi2" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi2">
+                <runif status="passed" />
+              </fetchartifact>
             </tasks>
             <resources>
               <resource>deploy_pelagicore</resource>
