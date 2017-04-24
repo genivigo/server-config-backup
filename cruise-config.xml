@@ -3164,6 +3164,9 @@
                 <arg>true</arg>
               </exec>
             </tasks>
+            <resources>
+              <resource>deploy_pelagicore</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
