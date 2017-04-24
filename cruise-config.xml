@@ -3157,6 +3157,7 @@
         <pipeline pipelineName="Release-QEMU_x86-64" stageName="build" materialName="qemux86-64" />
         <pipeline pipelineName="Release-Minnowboard" stageName="build" materialName="minnowboard" />
         <pipeline pipelineName="Release-RaspberryPi2" stageName="build" materialName="raspberrypi2" />
+        <pipeline pipelineName="Release-RaspberryPi3" stageName="build" materialName="raspberrypi3" />
       </materials>
       <stage name="copy">
         <jobs>
