@@ -3186,7 +3186,7 @@
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_minnowboard $DEPLOY_DIR/</arg>
+                <arg>cp -a staging_minnowboard/* $DEPLOY_DIR/</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
