@@ -3158,6 +3158,11 @@
       <stage name="copy">
         <jobs>
           <job name="copy_to_pcore">
+            <environmentvariables>
+              <variable name="DEPLOY_DIR">
+                <value>/var/cache/deploy</value>
+              </variable>
+            </environmentvariables>
             <tasks>
               <exec command="bash">
                 <arg>-c</arg>
