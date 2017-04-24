@@ -3160,7 +3160,7 @@
               <fetchartifact pipeline="Release-minnowboard" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_minnowboard">
                 <runif status="any" />
               </fetchartifact>
-              <fetchartifact pipeline="Release-qemux86-64" stage="build" job="init_and_bitbake" srcdir="staging_qemux86-64">
+              <fetchartifact pipeline="Release-qemux86-64" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_qemux86-64">
                 <runif status="any" />
               </fetchartifact>
               <fetchartifact pipeline="Release-raspberrypi2" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi2">
