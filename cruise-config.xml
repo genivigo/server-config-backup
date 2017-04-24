@@ -3210,6 +3210,11 @@
                 <arg>cp -a staging_raspberrypi2/* $DEPLOY_DIR/raspberrypi2</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cp -a staging_raspberrypi3/* $DEPLOY_DIR/raspberrypi3</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>deploy_pelagicore</resource>
