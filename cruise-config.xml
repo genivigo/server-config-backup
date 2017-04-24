@@ -271,16 +271,6 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="Morty-GDP-Yocto-Dragonboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>dragonboard-410c</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform.git" branch="morty" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
     <pipeline name="Morty-GDP-Yocto-r-car-m3-starter-kit" template="Yocto_GDP_Renesas_generic">
       <environmentvariables>
         <variable name="MACHINE">
@@ -3067,6 +3057,16 @@
       <environmentvariables>
         <variable name="MACHINE">
           <value>raspberrypi2</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform.git" branch="morty" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Morty-GDP-Yocto-Dragonboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>dragonboard-410c</value>
         </variable>
       </environmentvariables>
       <materials>
