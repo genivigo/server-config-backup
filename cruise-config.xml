@@ -3156,6 +3156,7 @@
         <git url="https://github.com/gunnarx/dummy" autoUpdate="false" />
         <pipeline pipelineName="Release-QEMU_x86-64" stageName="build" materialName="qemux86-64" />
         <pipeline pipelineName="Release-Minnowboard" stageName="build" materialName="minnowboard" />
+        <pipeline pipelineName="Release-RaspberryPi2" stageName="build" materialName="raspberrypi2" />
       </materials>
       <stage name="copy">
         <jobs>
