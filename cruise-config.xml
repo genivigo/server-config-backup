@@ -247,23 +247,6 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Silk" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Renesas_generic">
-      <timer onlyOnChanges="true">0 0 6 * * ?</timer>
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>silk</value>
-        </variable>
-        <variable name="TARGET">
-          <value>silk</value>
-        </variable>
-        <variable name="GFX_MACHINE">
-          <value>silk</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
     <pipeline name="GDP-Yocto-Koelsch" template="Yocto_GDP_Renesas_generic">
       <environmentvariables>
         <variable name="MACHINE">
@@ -3065,6 +3048,23 @@
         </variable>
         <variable name="GFX_MACHINE">
           <value>porter</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-Silk" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Renesas_generic">
+      <timer onlyOnChanges="true">0 0 6 * * ?</timer>
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>silk</value>
+        </variable>
+        <variable name="TARGET">
+          <value>silk</value>
+        </variable>
+        <variable name="GFX_MACHINE">
+          <value>silk</value>
         </variable>
       </environmentvariables>
       <materials>
