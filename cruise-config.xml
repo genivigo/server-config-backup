@@ -3158,7 +3158,7 @@
                 <runif status="passed" />
               </fetchartifact>
               <fetchartifact pipeline="Release-minnowboard" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_minnowboard">
-                <runif status="passed" />
+                <runif status="any" />
               </fetchartifact>
               <fetchartifact pipeline="Release-qemux86-64" stage="build" job="init_and_bitbake" srcdir="staging_qemux86-64">
                 <runif status="passed" />
