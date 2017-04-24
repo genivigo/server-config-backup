@@ -3173,6 +3173,9 @@
                 <arg>-c</arg>
                 <arg>true</arg>
               </exec>
+              <fetchartifact pipeline="Release-Dragonboard" stage="build" job="init_and_bitbake" srcdir="staging">
+                <runif status="passed" />
+              </fetchartifact>
             </tasks>
             <resources>
               <resource>deploy_pelagicore</resource>
