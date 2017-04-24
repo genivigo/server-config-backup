@@ -3441,7 +3441,7 @@
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
-              <exec command="bash" workingdir="gdp-src-build">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
