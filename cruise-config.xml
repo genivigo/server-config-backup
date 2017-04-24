@@ -4301,6 +4301,7 @@
         <resource>vagrant</resource>
         <resource>imagemagick</resource>
         <resource>vbox-agent</resource>
+        <resource>deploy_gunnarx</resource>
       </resources>
     </agent>
   </agents>
