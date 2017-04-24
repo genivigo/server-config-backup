@@ -3154,6 +3154,7 @@
     <pipeline name="Upload_Release">
       <materials>
         <git url="https://github.com/gunnarx/dummy" autoUpdate="false" />
+        <pipeline pipelineName="Release-QEMU_x86-64" stageName="build" materialName="qemux86-64" />
       </materials>
       <stage name="copy">
         <jobs>
