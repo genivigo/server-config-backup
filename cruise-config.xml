@@ -987,6 +987,68 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="Chromium">
+    <pipeline name="Chromium-r-car-m3-starter-kit" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/gunnarx/genivi-dev-platform.git" branch="chromium" materialName="gdp-gunnarx-ci-branch.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Chromium-minnowboard" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/gunnarx/genivi-dev-platform.git" branch="chromium" materialName="gdp-gunnarx-ci-branch.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Chromium-qemu_x86-64" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>qemu_x86-64</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/gunnarx/genivi-dev-platform.git" branch="chromium" materialName="gdp-gunnarx-ci-branch.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Chromium-raspberrypi2" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>raspberrypi2</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/gunnarx/genivi-dev-platform.git" branch="chromium" materialName="gdp-gunnarx-ci-branch.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Chromium-raspberrypi3" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>raspberrypi3</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/gunnarx/genivi-dev-platform.git" branch="chromium" materialName="gdp-gunnarx-ci-branch.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Chromium-dragonboard-410c" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>dragonboard-410c</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/gunnarx/genivi-dev-platform.git" branch="chromium" materialName="gdp-gunnarx-ci-branch.git" />
+      </materials>
+    </pipeline>
+  </pipelines>
   <pipelines group="GDP_QtAS_Spin">
     <authorization>
       <view>
@@ -3089,6 +3151,27 @@
     </pipeline>
   </pipelines>
   <templates>
+    <pipeline name="Yocto_GDP_generic_script">
+      <stage name="build" cleanWorkingDir="true">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>scripts/ci-build.sh CI_FLAG</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
+            <artifacts>
+              <artifact src="staging" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
         <admins>
