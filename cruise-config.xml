@@ -2678,7 +2678,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="GDP-SDE-porter" isLocked="false" template="GDP_SDE_generic">
+    <pipeline name="GDP-SDE-porter" isLocked="false" template="GDP_SDE_gunnarx_deploy">
       <params>
         <param name="MACHINE">porter</param>
       </params>
