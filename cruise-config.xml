@@ -3186,12 +3186,12 @@
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_minnowboard/* $DEPLOY_DIR/minnowboard/</arg>
+                <arg>mkdir -p $DEPLOY_DIR/{minnowboard,dragonboard,raspberrypi2,raspberrypi3,qemux86_64}</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mkdir -p $DEPLOY_DIR/{minnowboard,dragonboard,raspberrypi2,raspberrypi3,qemux86_64}</arg>
+                <arg>cp -a staging_minnowboard/* $DEPLOY_DIR/minnowboard/</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
