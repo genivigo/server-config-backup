@@ -995,7 +995,7 @@
     <pipeline name="Chromium-qemu_x86-64" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
       <environmentvariables>
         <variable name="TARGET">
-          <value>qemu_x86-64</value>
+          <value>qemux86-64</value>
         </variable>
       </environmentvariables>
       <materials>
