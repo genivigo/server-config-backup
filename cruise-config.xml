@@ -3072,6 +3072,7 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="Kept_for_History" />
   <templates>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
