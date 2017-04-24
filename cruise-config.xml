@@ -970,6 +970,19 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
+    <pipeline name="Release-r-car-m3-starter-kit" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>gdp-master-snapshot</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Chromium">
     <pipeline name="Chromium-r-car-m3-starter-kit" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
