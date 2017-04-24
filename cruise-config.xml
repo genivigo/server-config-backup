@@ -3157,6 +3157,7 @@
         <pipeline pipelineName="Release-raspberrypi2" stageName="build" materialName="raspberrypi2" />
         <pipeline pipelineName="Release-raspberrypi3" stageName="build" materialName="raspberrypi3" />
         <pipeline pipelineName="Release-dragonboard" stageName="build" materialName="dragonboard-410c" />
+        <pipeline pipelineName="Release-r-car-m3-starter-kit" stageName="build" materialName="r-car-m3-starter-kit" />
       </materials>
       <stage name="copy">
         <jobs>
@@ -3180,6 +3181,9 @@
                 <runif status="any" />
               </fetchartifact>
               <fetchartifact pipeline="Release-raspberrypi3" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi3">
+                <runif status="any" />
+              </fetchartifact>
+              <fetchartifact pipeline="Release-r-car-m3-starter-kit" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_r-car-m3-starter-kit">
                 <runif status="any" />
               </fetchartifact>
               <exec command="bash">
@@ -3211,6 +3215,11 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>cp -a staging_raspberrypi3/* $DEPLOY_DIR/raspberrypi3</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cp -a staging_r-car-m3-starter-kit/* $DEPLOY_DIR/r-car-m3-starter-kit</arg>
                 <runif status="any" />
               </exec>
             </tasks>
