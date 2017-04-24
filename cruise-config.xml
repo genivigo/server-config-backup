@@ -4261,6 +4261,7 @@
         <resource>yocto_build</resource>
         <resource>Pelagic_Agent</resource>
         <resource>python3</resource>
+        <resource>deploy_pelagicore</resource>
       </resources>
     </agent>
     <agent hostname="go-agent1 (GENIVI)" ipaddress="172.17.0.3" uuid="1bb12ac4-c35f-4111-9eba-a2e709d5cf7b">
