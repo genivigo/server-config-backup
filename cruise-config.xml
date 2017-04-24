@@ -3169,10 +3169,6 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>true</arg>
-              </exec>
               <fetchartifact pipeline="Release-Dragonboard" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_dragonboard">
                 <runif status="passed" />
               </fetchartifact>
