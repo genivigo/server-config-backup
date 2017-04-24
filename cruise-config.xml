@@ -3187,33 +3187,33 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>mkdir -p $DEPLOY_DIR/{minnowboard,dragonboard,raspberrypi2,raspberrypi3,qemux86_64}</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>cp -a staging_minnowboard/* $DEPLOY_DIR/minnowboard/</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>cp -a staging_dragonboard/* $DEPLOY_DIR/dragonboard/</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>-c</arg>
                 <arg>cp -a staging_qemux86_64/* $DEPLOY_DIR/qemux86_64/</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>cp -a staging_raspberrypi2/* $DEPLOY_DIR/raspberrypi2</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>cp -a staging_raspberrypi3/* $DEPLOY_DIR/raspberrypi3</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
             </tasks>
             <resources>
