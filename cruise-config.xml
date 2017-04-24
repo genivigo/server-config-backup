@@ -3070,6 +3070,7 @@
     </pipeline>
   </pipelines>
   <pipelines group="GDP_Morty" />
+  <pipelines group="R-Car_Gen2" />
   <templates>
     <pipeline name="Yocto_GDP_generic">
       <authorization>
