@@ -3184,6 +3184,11 @@
               <fetchartifact pipeline="Release-RaspberryPi3" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi3">
                 <runif status="passed" />
               </fetchartifact>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cp -a staging_minnowboard $DEPLOY_DIR/</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>deploy_pelagicore</resource>
