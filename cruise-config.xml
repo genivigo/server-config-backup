@@ -145,22 +145,6 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="yocto-baseline-10" labeltemplate="10.0:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
-      <environmentvariables>
-        <variable name="IMAGE_NAME">
-          <value>leviathan-image</value>
-        </variable>
-        <variable name="MACHINE">
-          <value>qemux86-64</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="http://github.com/GENIVI/meta-ivi" branch="10.0" dest="meta-ivi" materialName="meta-ivi" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="jethro" dest="poky" autoUpdate="false" materialName="poky_jethro" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="jethro" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe_jethro" />
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
-      </materials>
-    </pipeline>
     <pipeline name="yocto-baseline-11" labeltemplate="meta-ivi:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
       <environmentvariables>
         <variable name="MACHINE">
@@ -3071,6 +3055,22 @@
       </environmentvariables>
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" branch="morty" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="yocto-baseline-10" labeltemplate="10.0:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
+      <environmentvariables>
+        <variable name="IMAGE_NAME">
+          <value>leviathan-image</value>
+        </variable>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="http://github.com/GENIVI/meta-ivi" branch="10.0" dest="meta-ivi" materialName="meta-ivi" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="jethro" dest="poky" autoUpdate="false" materialName="poky_jethro" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="jethro" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe_jethro" />
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
   </pipelines>
