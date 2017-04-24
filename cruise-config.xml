@@ -4161,7 +4161,7 @@
         <approval type="manual" />
         <environmentvariables>
           <variable name="RELEASE_DIR">
-            <value>/var/cache/deploy/se</value>
+            <value>/var/cache/deploy/sde</value>
           </variable>
           <variable name="VERSION">
             <value>snapshot</value>
