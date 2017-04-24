@@ -3185,6 +3185,9 @@
               <fetchartifact pipeline="Release-RaspberryPi2" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi2">
                 <runif status="passed" />
               </fetchartifact>
+              <fetchartifact pipeline="Release-RaspberryPi3" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi3">
+                <runif status="passed" />
+              </fetchartifact>
             </tasks>
             <resources>
               <resource>deploy_pelagicore</resource>
