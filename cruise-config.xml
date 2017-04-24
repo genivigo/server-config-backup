@@ -3176,6 +3176,9 @@
               <fetchartifact pipeline="Release-Dragonboard" stage="build" job="init_and_bitbake" srcdir="staging">
                 <runif status="passed" />
               </fetchartifact>
+              <fetchartifact pipeline="Release-Minnowboard" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_minnowboard">
+                <runif status="passed" />
+              </fetchartifact>
             </tasks>
             <resources>
               <resource>deploy_pelagicore</resource>
