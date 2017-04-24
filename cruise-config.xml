@@ -3179,6 +3179,9 @@
               <fetchartifact pipeline="Release-Minnowboard" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_minnowboard">
                 <runif status="passed" />
               </fetchartifact>
+              <fetchartifact pipeline="Release-QEMU_x86-64" stage="build" job="init_and_bitbake" srcdir="staging_qemux86-64">
+                <runif status="passed" />
+              </fetchartifact>
             </tasks>
             <resources>
               <resource>deploy_pelagicore</resource>
