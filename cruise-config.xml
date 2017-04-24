@@ -3135,7 +3135,8 @@
     </pipeline>
   </pipelines>
   <pipelines group="Upload">
-    <pipeline name="Upload_Release">
+    <pipeline name="Upload_Release" isLocked="false">
+      <timer>0 0 6 25 4 ?</timer>
       <materials>
         <git url="https://github.com/gunnarx/dummy" autoUpdate="false" />
         <pipeline pipelineName="Release-qemux86-64" stageName="build" materialName="qemux86-64" />
