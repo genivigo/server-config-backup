@@ -3167,7 +3167,7 @@
                 <runif status="any" />
               </fetchartifact>
               <fetchartifact pipeline="Release-raspberrypi3" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi3">
-                <runif status="passed" />
+                <runif status="any" />
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
