@@ -3150,7 +3150,25 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Upload" />
+  <pipelines group="Upload">
+    <pipeline name="Upload_Release">
+      <materials>
+        <git url="https://github.com/gunnarx/dummy" autoUpdate="false" />
+      </materials>
+      <stage name="copy">
+        <jobs>
+          <job name="copy_to_pcore">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>true</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+  </pipelines>
   <templates>
     <pipeline name="Yocto_GDP_generic_script">
       <stage name="build" cleanWorkingDir="true">
