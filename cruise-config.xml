@@ -3157,7 +3157,6 @@
         <pipeline pipelineName="Release-raspberrypi2" stageName="build" materialName="raspberrypi2" />
         <pipeline pipelineName="Release-raspberrypi3" stageName="build" materialName="raspberrypi3" />
         <pipeline pipelineName="Release-dragonboard" stageName="build" materialName="dragonboard-410c" />
-        <pipeline pipelineName="Release-r-car-m3-starter-kit" stageName="build" materialName="r-car-m3-starter-kit" />
       </materials>
       <stage name="copy">
         <jobs>
