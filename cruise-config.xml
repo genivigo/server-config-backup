@@ -944,7 +944,20 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Release-raspberrypi3" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-raspberrypi-2" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>raspberrypi2</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>gdp-master-snapshot</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-raspberrypi-3" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
         <variable name="TARGET">
           <value>raspberrypi3</value>
@@ -957,7 +970,7 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Release-dragonboard" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-dragonboard-410c" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
         <variable name="TARGET">
           <value>dragonboard-410c</value>
@@ -3154,9 +3167,9 @@
         <git url="https://github.com/gunnarx/dummy" autoUpdate="false" />
         <pipeline pipelineName="Release-qemux86-64" stageName="build" materialName="qemux86-64" />
         <pipeline pipelineName="Release-minnowboard" stageName="build" materialName="minnowboard" />
-        <pipeline pipelineName="Release-raspberrypi2" stageName="build" materialName="raspberrypi2" />
-        <pipeline pipelineName="Release-raspberrypi3" stageName="build" materialName="raspberrypi3" />
-        <pipeline pipelineName="Release-dragonboard" stageName="build" materialName="dragonboard-410c" />
+        <pipeline pipelineName="Release-raspberrypi-2" stageName="build" materialName="raspberrypi2" />
+        <pipeline pipelineName="Release-raspberrypi-3" stageName="build" materialName="raspberrypi3" />
+        <pipeline pipelineName="Release-dragonboard-410c" stageName="build" materialName="dragonboard-410c" />
       </materials>
       <stage name="copy">
         <jobs>
@@ -3167,7 +3180,7 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <fetchartifact pipeline="Release-dragonboard" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_dragonboard">
+              <fetchartifact pipeline="Release-dragonboard-410c" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_dragonboard">
                 <runif status="passed" />
               </fetchartifact>
               <fetchartifact pipeline="Release-minnowboard" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_minnowboard">
@@ -3176,10 +3189,10 @@
               <fetchartifact pipeline="Release-qemux86-64" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_qemux86-64">
                 <runif status="any" />
               </fetchartifact>
-              <fetchartifact pipeline="Release-raspberrypi2" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi2">
+              <fetchartifact pipeline="Release-raspberrypi-2" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi2">
                 <runif status="any" />
               </fetchartifact>
-              <fetchartifact pipeline="Release-raspberrypi3" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi3">
+              <fetchartifact pipeline="Release-raspberrypi-3" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi3">
                 <runif status="any" />
               </fetchartifact>
               <exec command="bash">
