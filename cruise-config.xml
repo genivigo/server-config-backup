@@ -931,19 +931,6 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Release-raspberrypi2" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>raspberrypi2</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>gdp-master-snapshot</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
     <pipeline name="Release-raspberrypi-2" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
         <variable name="TARGET">
