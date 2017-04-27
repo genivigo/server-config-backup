@@ -3194,7 +3194,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_dragonboard/* $DEPLOY_DIR/dragonboard/</arg>
+                <arg>cp -a staging_dragonboard $DEPLOY_DIR/dragonboard/  || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
