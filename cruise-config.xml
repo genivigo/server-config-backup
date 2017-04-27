@@ -3468,6 +3468,7 @@
             </tasks>
             <resources>
               <resource>yocto_build</resource>
+              <resource>go-agent1</resource>
             </resources>
             <artifacts>
               <artifact src="staging/" />
