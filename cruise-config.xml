@@ -3205,7 +3205,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_raspberrypi2/* $DEPLOY_DIR/raspberrypi2</arg>
+                <arg>cp -a staging_raspberrypi2 $DEPLOY_DIR/raspberrypi2  || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
