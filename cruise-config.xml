@@ -3200,7 +3200,7 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>-c</arg>
-                <arg>cp -a staging_qemux86_64/* $DEPLOY_DIR/qemux86_64/</arg>
+                <arg>cp -a staging_qemux86_64 $DEPLOY_DIR/qemux86_64/  || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
