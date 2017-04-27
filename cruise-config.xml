@@ -546,7 +546,7 @@
       <timer>0 0 23 16 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
-          <value>m3ulcb</value>
+          <value>r-car-m3-starter-kit</value>
         </variable>
         <variable name="GFX_MACHINE">
           <value>r-car-m3-starter-kit</value>
