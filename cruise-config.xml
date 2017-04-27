@@ -3467,7 +3467,6 @@
               </exec>
             </tasks>
             <resources>
-              <resource>go-agent1</resource>
               <resource>yocto_build</resource>
             </resources>
             <artifacts>
