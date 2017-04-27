@@ -3215,7 +3215,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_r-car-m3-starter-kit/* $DEPLOY_DIR/r-car-m3-starter-kit</arg>
+                <arg>cp -a staging_r-car-m3-starter-kit $DEPLOY_DIR/r-car-m3-starter-kit || true</arg>
                 <runif status="any" />
               </exec>
             </tasks>
