@@ -3189,7 +3189,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_minnowboard/* $DEPLOY_DIR/minnowboard/</arg>
+                <arg>cp -a staging_minnowboard $DEPLOY_DIR/minnowboard/  || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
