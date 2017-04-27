@@ -3184,38 +3184,43 @@
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mkdir -p $DEPLOY_DIR/{minnowboard,dragonboard,raspberrypi2,raspberrypi3,qemux86_64}</arg>
+                <arg>date +%Y%m%d_%H%M%S &gt;timestamp</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_minnowboard $DEPLOY_DIR/minnowboard/  || true</arg>
+                <arg>mkdir -p $DEPLOY_DIR/{minnowboard,dragonboard,raspberrypi2,raspberrypi3,qemux86_64}/$(cat timestamp)</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_dragonboard $DEPLOY_DIR/dragonboard/  || true</arg>
+                <arg>cp -a staging_minnowboard $DEPLOY_DIR/minnowboard/$(cat timestamp)/  || true</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cp -a staging_dragonboard $DEPLOY_DIR/dragonboard/$(cat timestamp)/  || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>-c</arg>
-                <arg>cp -a staging_qemux86_64 $DEPLOY_DIR/qemux86_64/  || true</arg>
+                <arg>cp -a staging_qemux86_64 $DEPLOY_DIR/qemux86_64/$(cat timestamp)/  || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_raspberrypi2 $DEPLOY_DIR/raspberrypi2  || true</arg>
+                <arg>cp -a staging_raspberrypi2 $DEPLOY_DIR/raspberrypi2/$(cat timestamp)/  || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_raspberrypi3 $DEPLOY_DIR/raspberrypi3  || true</arg>
+                <arg>cp -a staging_raspberrypi3 $DEPLOY_DIR/raspberrypi3/$(cat timestamp)/  || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_r-car-m3-starter-kit $DEPLOY_DIR/r-car-m3-starter-kit || true</arg>
+                <arg>cp -a staging_r-car-m3-starter-kit $DEPLOY_DIR/r-car-m3-starter-kit/$(cat timestamp)/ || true</arg>
                 <runif status="any" />
               </exec>
             </tasks>
