@@ -983,6 +983,19 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
+    <pipeline name="Release-minnowboard-chromium" labeltemplate="genivi-dev-platform:${gunnarx-genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>chromium-snapshot</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/gunnarx/genivi-dev-platform" branch="chromium" autoUpdate="false" materialName="gunnarx-genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Chromium">
     <pipeline name="Chromium-r-car-m3-starter-kit" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
