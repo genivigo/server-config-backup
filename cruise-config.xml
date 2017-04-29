@@ -247,7 +247,7 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-r-car-m3-starter-kit" template="Yocto_GDP_Renesas_generic">
+    <pipeline name="GDP-Yocto-r-car-m3-starter-kit" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Renesas_generic">
       <environmentvariables>
         <variable name="MACHINE">
           <value>r-car-m3-starter-kit</value>
