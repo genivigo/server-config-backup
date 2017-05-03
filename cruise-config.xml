@@ -3183,7 +3183,7 @@
     </pipeline>
     <pipeline name="Upload_GENIVI" isLocked="false" template="Upload_Release_generic">
       <params>
-        <param name="SERVER_RESOURCE">deploy_pelagicore</param>
+        <param name="SERVER_RESOURCE">deploy_genivi</param>
       </params>
       <timer>0 0 6 25 4 ?</timer>
       <environmentvariables>
