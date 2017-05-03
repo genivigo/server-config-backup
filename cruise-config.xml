@@ -3502,6 +3502,9 @@
           <job name="upload_to_genivi">
             <tasks>
               <exec command="true" />
+              <fetchartifact pipeline="" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging">
+                <runif status="passed" />
+              </fetchartifact>
             </tasks>
           </job>
         </jobs>
