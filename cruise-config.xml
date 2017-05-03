@@ -3163,7 +3163,7 @@
   <pipelines group="Upload-PCore">
     <pipeline name="Upload_PCore" isLocked="false" template="Upload_Release_generic">
       <params>
-        <param name="SERVER_RESOURCE">deploy_genivi</param>
+        <param name="SERVER_RESOURCE">deploy_pelagicore</param>
       </params>
       <timer>0 0 6 25 4 ?</timer>
       <environmentvariables>
