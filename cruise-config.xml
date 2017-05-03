@@ -3160,9 +3160,37 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Upload">
-    <pipeline name="Upload_Release" isLocked="false" template="Upload_Release_generic">
+  <pipelines group="Upload-PCore">
+    <pipeline name="Upload_PCore" isLocked="false" template="Upload_Release_generic">
+      <params>
+        <param name="SERVER_RESOURCE">deploy_genivi</param>
+      </params>
       <timer>0 0 6 25 4 ?</timer>
+      <environmentvariables>
+        <variable name="DEPLOY_DIR">
+          <value>/var/lib/go-agent/pipelines/__deploy</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/gunnarx/dummy" autoUpdate="false" />
+        <pipeline pipelineName="Release-qemux86-64" stageName="build" materialName="qemux86-64" />
+        <pipeline pipelineName="Release-minnowboard" stageName="build" materialName="minnowboard" />
+        <pipeline pipelineName="Release-raspberrypi-2" stageName="build" materialName="raspberrypi2" />
+        <pipeline pipelineName="Release-raspberrypi-3" stageName="build" materialName="raspberrypi3" />
+        <pipeline pipelineName="Release-dragonboard-410c" stageName="build" materialName="dragonboard-410c" />
+        <pipeline pipelineName="Release-r-car-m3-starter-kit" stageName="build" materialName="r-car-m3-starter-kit" />
+      </materials>
+    </pipeline>
+    <pipeline name="Upload_GENIVI" isLocked="false" template="Upload_Release_generic">
+      <params>
+        <param name="SERVER_RESOURCE">deploy_pelagicore</param>
+      </params>
+      <timer>0 0 6 25 4 ?</timer>
+      <environmentvariables>
+        <variable name="DEPLOY_DIR">
+          <value>/var/lib/go-agent/pipelines/__deploy</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="https://github.com/gunnarx/dummy" autoUpdate="false" />
         <pipeline pipelineName="Release-qemux86-64" stageName="build" materialName="qemux86-64" />
@@ -4487,11 +4515,6 @@
       <stage name="copy">
         <jobs>
           <job name="copy_to_pcore">
-            <environmentvariables>
-              <variable name="DEPLOY_DIR">
-                <value>/var/lib/go-agent/pipelines/__deploy</value>
-              </variable>
-            </environmentvariables>
             <tasks>
               <fetchartifact pipeline="Release-dragonboard-410c" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_dragonboard">
                 <runif status="passed" />
@@ -4554,7 +4577,7 @@
               </exec>
             </tasks>
             <resources>
-              <resource>deploy_pelagicore</resource>
+              <resource>#{SERVER_RESOURCE}</resource>
             </resources>
           </job>
         </jobs>
