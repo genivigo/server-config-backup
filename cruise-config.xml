@@ -3497,6 +3497,15 @@
           </job>
         </jobs>
       </stage>
+      <stage name="upload">
+        <jobs>
+          <job name="upload_to_genivi">
+            <tasks>
+              <exec command="true" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_generic_latest_meta_genivi_demo">
       <authorization>
