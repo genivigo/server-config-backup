@@ -3188,7 +3188,7 @@
       <timer>0 0 6 25 4 ?</timer>
       <environmentvariables>
         <variable name="DEPLOY_DIR">
-          <value>/var/lib/go-agent/pipelines/__deploy</value>
+          <value>/var/lib/go-agent/pipelines/__deploy/deploy</value>
         </variable>
       </environmentvariables>
       <materials>
