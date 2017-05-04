@@ -2628,6 +2628,14 @@
         <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-raspberrypi2" />
       </materials>
     </pipeline>
+    <pipeline name="upload-raspberrypi3" isLocked="false" template="upload-sde">
+      <params>
+        <param name="MACHINE">raspberrypi3</param>
+      </params>
+      <materials>
+        <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-raspberrypi3" />
+      </materials>
+    </pipeline>
     <pipeline name="upload-dragonboard-410c" isLocked="false" template="upload-sde">
       <params>
         <param name="MACHINE">dragonboard-410c</param>
