@@ -4541,7 +4541,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mkdir -p $DEPLOY_DIR/{minnowboard,dragonboard,raspberrypi2,raspberrypi3,qemux86_64,r-car-m3-starter-kit}/$(cat timestamp)</arg>
+                <arg>mkdir -p $DEPLOY_DIR/{minnowboard,dragonboard,raspberrypi2,raspberrypi3,qemux86-64,r-car-m3-starter-kit}/$(cat timestamp)</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
