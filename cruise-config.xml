@@ -4557,7 +4557,7 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>-c</arg>
-                <arg>cp -a staging_qemux86_64 $DEPLOY_DIR/qemux86_64/$(cat timestamp)/  || true</arg>
+                <arg>cp -a staging_qemux86-64 $DEPLOY_DIR/qemux86-64/$(cat timestamp)/  || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
