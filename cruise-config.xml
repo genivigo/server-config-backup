@@ -4561,7 +4561,7 @@
     <pipeline name="Upload_Release_generic">
       <stage name="copy">
         <jobs>
-          <job name="copy_to_pcore">
+          <job name="copy_files">
             <tasks>
               <fetchartifact pipeline="Release-dragonboard-410c" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_dragonboard">
                 <runif status="passed" />
