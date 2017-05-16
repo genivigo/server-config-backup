@@ -4612,7 +4612,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_minnowboard-chromium $DEPLOY_DIR/minnowboard-chromium/$(cat timestamp)/ || true</arg>
+                <arg>mv staging_minnowboard-chromium $DEPLOY_DIR/minnowboard-chromium/$(cat timestamp)/ || true</arg>
                 <runif status="any" />
               </exec>
             </tasks>
