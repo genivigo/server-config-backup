@@ -4607,7 +4607,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_r-car-m3-starter-kit $DEPLOY_DIR/r-car-m3-starter-kit/$(cat timestamp)/ || true</arg>
+                <arg>mv staging_r-car-m3-starter-kit $DEPLOY_DIR/r-car-m3-starter-kit/$(cat timestamp)/ || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
