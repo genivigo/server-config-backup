@@ -4597,7 +4597,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_raspberrypi2 $DEPLOY_DIR/raspberrypi2/$(cat timestamp)/  || true</arg>
+                <arg>mv staging_raspberrypi2 $DEPLOY_DIR/raspberrypi2/$(cat timestamp)/  || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
