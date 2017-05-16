@@ -4587,7 +4587,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a staging_dragonboard $DEPLOY_DIR/dragonboard/$(cat timestamp)/  || true</arg>
+                <arg>mv staging_dragonboard $DEPLOY_DIR/dragonboard/$(cat timestamp)/  || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
