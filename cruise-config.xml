@@ -645,7 +645,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="GDP-Yocto-minnowboard-meta-genivi-dev-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic_latest_meta_genivi_demo">
+    <pipeline name="GDP-Yocto-minnowboard-meta-genivi-dev-GITHUB-PR2" isLocked="false" template="Yocto_GDP_generic_latest_meta_genivi_demo">
       <environmentvariables>
         <variable name="MACHINE">
           <value>minnowboard</value>
