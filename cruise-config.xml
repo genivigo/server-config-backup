@@ -60,6 +60,7 @@
             <user>alejalonso</user>
             <user>zeenix</user>
             <user>dunderroffe</user>
+            <user>OscarA</user>
           </users>
         </role>
         <role name="GDP_Developer">
@@ -74,6 +75,7 @@
             <user>AndreasR</user>
             <user>zeenix</user>
             <user>dunderroffe</user>
+            <user>OscarA</user>
           </users>
         </role>
       </roles>
@@ -81,6 +83,7 @@
         <user>GunnarA</user>
         <user>tmohammad</user>
         <user>dunderroffe</user>
+        <user>OscarA</user>
       </admins>
     </security>
   </server>
