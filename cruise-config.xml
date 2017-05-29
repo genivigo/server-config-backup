@@ -1009,7 +1009,7 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Release-minnowboard-chromium" labeltemplate="genivi-dev-platform:${gunnarx-genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-minnowboard-chromium" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
         <variable name="TARGET">
           <value>minnowboard</value>
@@ -1019,69 +1019,69 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium" autoUpdate="false" materialName="gunnarx-genivi-dev-platform.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
   </pipelines>
   <pipelines group="Chromium">
-    <pipeline name="Chromium-r-car-m3-starter-kit" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
+    <pipeline name="Chromium-r-car-m3-starter-kit" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
       <environmentvariables>
         <variable name="TARGET">
           <value>r-car-m3-starter-kit</value>
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium" materialName="gdp-gunnarx-ci-branch.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Chromium-minnowboard" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
+    <pipeline name="Chromium-minnowboard" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
       <environmentvariables>
         <variable name="TARGET">
           <value>minnowboard</value>
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium" materialName="gdp-gunnarx-ci-branch.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Chromium-qemu_x86-64" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
+    <pipeline name="Chromium-qemu_x86-64" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
       <environmentvariables>
         <variable name="TARGET">
           <value>qemux86-64</value>
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium" materialName="gdp-gunnarx-ci-branch.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Chromium-raspberrypi2" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
+    <pipeline name="Chromium-raspberrypi2" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
       <environmentvariables>
         <variable name="TARGET">
           <value>raspberrypi2</value>
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium" materialName="gdp-gunnarx-ci-branch.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Chromium-raspberrypi3" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
+    <pipeline name="Chromium-raspberrypi3" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
       <environmentvariables>
         <variable name="TARGET">
           <value>raspberrypi3</value>
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium" materialName="gdp-gunnarx-ci-branch.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Chromium-dragonboard-410c" labeltemplate="gdp-gunnarx:${gdp-gunnarx-ci-branch.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
+    <pipeline name="Chromium-dragonboard-410c" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
       <environmentvariables>
         <variable name="TARGET">
           <value>dragonboard-410c</value>
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium" materialName="gdp-gunnarx-ci-branch.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
   </pipelines>
