@@ -1022,6 +1022,19 @@
         <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
+    <pipeline name="Release-r-car-m3-starter-kit-chromium" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>chromium-snapshot</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Chromium">
     <pipeline name="Chromium-r-car-m3-starter-kit" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script">
