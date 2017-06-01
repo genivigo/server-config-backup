@@ -3251,7 +3251,13 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Feature_SDL" />
+  <pipelines group="Feature_SDL">
+    <pipeline name="SDL_minnowboard" template="Yocto_GDP_generic">
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl" />
+      </materials>
+    </pipeline>
+  </pipelines>
   <templates>
     <pipeline name="Yocto_GDP_generic_script">
       <stage name="build" cleanWorkingDir="true">
