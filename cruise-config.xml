@@ -3264,7 +3264,7 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl" />
       </materials>
     </pipeline>
-    <pipeline name="SDL_r-car-m3-starter-kit" template="Yocto_GDP_generic">
+    <pipeline name="SDL_r-car-m3-starter-kit" template="Yocto_GDP_generic_script">
       <environmentvariables>
         <variable name="TARGET">
           <value>r-car-m3-starter-kit</value>
