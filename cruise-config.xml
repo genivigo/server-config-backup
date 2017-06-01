@@ -3253,6 +3253,11 @@
   </pipelines>
   <pipelines group="Feature_SDL">
     <pipeline name="SDL_minnowboard" template="Yocto_GDP_generic">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl" />
       </materials>
