@@ -2152,7 +2152,6 @@
               </exec>
             </tasks>
             <resources>
-              <resource>python3</resource>
               <resource>yocto_build</resource>
             </resources>
           </job>
@@ -3828,7 +3827,6 @@
             </tasks>
             <resources>
               <resource>yocto_build</resource>
-              <resource>python3</resource>
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
@@ -3916,7 +3914,6 @@
             </tasks>
             <resources>
               <resource>yocto_build</resource>
-              <resource>python3</resource>
             </resources>
             <artifacts>
               <artifact src="logs_test.tar.gz" />
@@ -4672,7 +4669,6 @@
     <agent hostname="c8776aa52222 (gunnarx)" ipaddress="172.17.0.1" uuid="cfad499e-6530-4e20-9013-ac7f484f5523">
       <resources>
         <resource>ga_test</resource>
-        <resource>python3</resource>
         <resource>renesas_binaries</resource>
         <resource>c8776aa52222</resource>
         <resource>Qt-seeder</resource>
@@ -4683,7 +4679,6 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>Pelagic_Agent</resource>
-        <resource>python3</resource>
         <resource>deploy_pelagicore</resource>
       </resources>
     </agent>
@@ -4691,7 +4686,6 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>go-agent1</resource>
-        <resource>python3</resource>
         <resource>renesas_binaries</resource>
         <resource>deploy_genivi</resource>
       </resources>
@@ -4700,14 +4694,12 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>go-agent2</resource>
-        <resource>python3</resource>
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
     <agent hostname="beetle-genivi-agent" ipaddress="172.17.0.2" uuid="1be4eb0f-2348-4e3f-98d0-bc0303d7bef5" isDisabled="true">
       <resources>
         <resource>yocto_build</resource>
-        <resource>python3</resource>
         <resource>beetle-genivi-agent</resource>
         <resource>renesas_binaries</resource>
       </resources>
