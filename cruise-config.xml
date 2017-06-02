@@ -3251,12 +3251,9 @@
     </pipeline>
   </pipelines>
   <pipelines group="Feature_SDL">
-    <pipeline name="SDL_minnowboard" template="Yocto_GDP_generic">
+    <pipeline name="SDL_minnowboard" template="Yocto_GDP_generic_script">
       <environmentvariables>
         <variable name="TARGET">
-          <value>minnowboard</value>
-        </variable>
-        <variable name="MACHINE">
           <value>minnowboard</value>
         </variable>
       </environmentvariables>
