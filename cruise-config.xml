@@ -3228,6 +3228,48 @@
         <pipeline pipelineName="Release-minnowboard-chromium" stageName="build" materialName="minnowboard-chromium" />
       </materials>
     </pipeline>
+    <pipeline name="Upload_PCore-SDL" isLocked="false">
+      <params>
+        <param name="SERVER_RESOURCE">deploy_pelagicore</param>
+      </params>
+      <environmentvariables>
+        <variable name="DEPLOY_DIR">
+          <value>/var/lib/go-agent/pipelines/__deploy</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <pipeline pipelineName="SDL_minnowboard" stageName="build" materialName="minnowboard-sdl" />
+      </materials>
+      <stage name="copy">
+        <jobs>
+          <job name="copy_files">
+            <tasks>
+              <fetchartifact pipeline="SDL_minnowboard" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_minnowboard">
+                <runif status="any" />
+              </fetchartifact>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>date +%Y%m%d_%H%M%S &gt;timestamp</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mkdir -p $DEPLOY_DIR/{minnowboard-sdl}/$(cat timestamp)</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mv staging_minnowboard $DEPLOY_DIR/minnowboard-sdl/$(cat timestamp)/  || true</arg>
+                <runif status="any" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>#{SERVER_RESOURCE}</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
     <pipeline name="Upload_GENIVI" isLocked="false" template="Upload_Release_generic">
       <params>
         <param name="SERVER_RESOURCE">deploy_genivi</param>
