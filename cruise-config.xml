@@ -3206,12 +3206,11 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Upload-PCore">
-    <pipeline name="Upload_PCore" isLocked="false" template="Upload_Release_generic">
+  <pipelines group="Deployments">
+    <pipeline name="Upload_GDP_Release_PCore" isLocked="false" template="Upload_Release_All_Targets_generic">
       <params>
         <param name="SERVER_RESOURCE">deploy_pelagicore</param>
       </params>
-      <timer>0 0 6 25 4 ?</timer>
       <environmentvariables>
         <variable name="DEPLOY_DIR">
           <value>/var/lib/go-agent/pipelines/__deploy</value>
@@ -3270,7 +3269,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="Upload_GENIVI" isLocked="false" template="Upload_Release_generic">
+    <pipeline name="Upload_GDP_Release_GENIVI" isLocked="false" template="Upload_Release_All_Targets_generic">
       <params>
         <param name="SERVER_RESOURCE">deploy_genivi</param>
       </params>
@@ -4621,7 +4620,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="Upload_Release_generic">
+    <pipeline name="Upload_Release_All_Targets_generic">
       <stage name="copy">
         <jobs>
           <job name="copy_files">
