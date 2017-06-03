@@ -194,7 +194,7 @@
     <pipeline name="GDP-Yocto-Minnowboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <timer>0 0 20 18 8 ?</timer>
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>minnowboard</value>
         </variable>
       </environmentvariables>
@@ -202,10 +202,10 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-QEMU_x86-64" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
+    <pipeline name="GDP-Yocto-QEMU_x86-64" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <timer>0 0 2 * * ?</timer>
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>qemux86-64</value>
         </variable>
       </environmentvariables>
@@ -216,7 +216,7 @@
     <pipeline name="GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <timer>0 30 03 * * ?</timer>
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>raspberrypi2</value>
         </variable>
       </environmentvariables>
@@ -226,7 +226,7 @@
     </pipeline>
     <pipeline name="GDP-Yocto-Dragonboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>dragonboard-410c</value>
         </variable>
       </environmentvariables>
@@ -348,7 +348,7 @@
     <pipeline name="GDP-Yocto-QEMU_x86-64-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <timer>0 0 3 19 8 ?</timer>
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>qemux86-64</value>
         </variable>
       </environmentvariables>
@@ -451,7 +451,7 @@
     <pipeline name="GDP-Yocto-RPI2-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <timer>0 0 8 17 8 ?</timer>
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>raspberrypi2</value>
         </variable>
       </environmentvariables>
@@ -461,7 +461,7 @@
     </pipeline>
     <pipeline name="GDP-Yocto-MINNOWBOARD-GITHUB-PR" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>minnowboard</value>
         </variable>
       </environmentvariables>
@@ -471,7 +471,7 @@
     </pipeline>
     <pipeline name="GDP-Yocto-Dragonboard-GITHUB-PR" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>dragonboard-410c</value>
         </variable>
       </environmentvariables>
@@ -4779,7 +4779,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="beetle-genivi-agent" ipaddress="172.17.0.2" uuid="1be4eb0f-2348-4e3f-98d0-bc0303d7bef5">
+    <agent hostname="beetle-genivi-agent" ipaddress="172.17.0.2" uuid="1be4eb0f-2348-4e3f-98d0-bc0303d7bef5" isDisabled="true">
       <resources>
         <resource>yocto_build</resource>
         <resource>beetle-genivi-agent</resource>
