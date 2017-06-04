@@ -3265,6 +3265,11 @@
                 <arg>mv staging_minnowboard $DEPLOY_DIR/minnowboard-sdl/$(cat timestamp)/  || true</arg>
                 <runif status="any" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mv staging_minnowboard $DEPLOY_DIR/r-car-m3-starter-kit-sdl/$(cat timestamp)/  || true</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>#{SERVER_RESOURCE}</resource>
