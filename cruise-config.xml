@@ -3252,14 +3252,14 @@
                 <arg>date +%Y%m%d_%H%M%S &gt;timestamp</arg>
                 <runif status="any" />
               </exec>
+              <fetchartifact pipeline="SDL_r-car-m3-starter-kit" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_r-car-m3-starter-kit">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>mkdir -p $DEPLOY_DIR/{minnowboard-sdl}/$(cat timestamp)</arg>
                 <runif status="any" />
               </exec>
-              <fetchartifact pipeline="SDL_r-car-m3-starter-kit" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_r-car-m3-starter-kit">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>mv staging_minnowboard $DEPLOY_DIR/minnowboard-sdl/$(cat timestamp)/  || true</arg>
