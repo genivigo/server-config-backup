@@ -3238,6 +3238,7 @@
       </environmentvariables>
       <materials>
         <pipeline pipelineName="SDL_minnowboard" stageName="build" materialName="minnowboard-sdl" />
+        <pipeline pipelineName="SDL_r-car-m3-starter-kit" stageName="build" materialName="sdl_r-car-m3-starter-kit" />
       </materials>
       <stage name="copy">
         <jobs>
