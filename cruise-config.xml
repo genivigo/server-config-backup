@@ -3257,7 +3257,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mkdir -p $DEPLOY_DIR/{minnowboard-sdl}/$(cat timestamp)</arg>
+                <arg>mkdir -p $DEPLOY_DIR/{minnowboard-sdl,r-car-m3-starter-kit-sdl}/$(cat timestamp)</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
