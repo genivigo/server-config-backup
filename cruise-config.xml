@@ -405,11 +405,6 @@
                 <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\n' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>echo -e 'BB_NUMBER_THREADS = "1"\nPARALLEL_MAKE = "-j8"' &gt;&gt; local.conf</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="git">
                 <arg>config</arg>
                 <arg>--global</arg>
@@ -1394,11 +1389,6 @@
                 <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>echo -e 'BB_NUMBER_THREADS = "4"\nPARALLEL_MAKE = "-j1"' &gt;&gt; local.conf</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="git">
                 <arg>config</arg>
                 <arg>--global</arg>
@@ -1519,7 +1509,7 @@
               </exec>
               <exec command="make" workingdir="build">
                 <arg>V=1</arg>
-                <arg>-j3</arg>
+                <arg>-j8</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -1644,7 +1634,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="make" workingdir="dbus">
-                <arg>-j4</arg>
+                <arg>-j8</arg>
                 <arg>-C</arg>
                 <arg>dbus</arg>
                 <runif status="passed" />
@@ -2097,7 +2087,7 @@
                 <runif status="passed" />
               </exec>
               <exec command="/usr/bin/make">
-                <arg>-j6</arg>
+                <arg>-j8</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -2752,11 +2742,6 @@
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
-                <arg>echo -e 'BB_NUMBER_THREADS = "2"\nPARALLEL_MAKE = "-j2"' &gt;&gt; local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
                 <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
@@ -2912,11 +2897,6 @@
                 <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>echo -e 'BB_NUMBER_THREADS = "1"\nPARALLEL_MAKE = "-j8"' &gt;&gt; local.conf</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="git">
                 <arg>config</arg>
                 <arg>--global</arg>
@@ -2995,11 +2975,6 @@
               <exec command="bash" workingdir="gdp-src-build/conf">
                 <arg>-c</arg>
                 <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>echo -e 'BB_NUMBER_THREADS = "1"\nPARALLEL_MAKE = "-j8"' &gt;&gt; local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="git">
@@ -3430,11 +3405,6 @@
                 <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'BB_NUMBER_THREADS = "4"\nPARALLEL_MAKE = "-j4"' &gt;&gt; local.conf</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="git">
                 <arg>config</arg>
                 <arg>--global</arg>
@@ -3843,7 +3813,7 @@
               </exec>
               <exec command="make" workingdir="#{WORKING_DIR}/build">
                 <arg>V=1</arg>
-                <arg>-j2</arg>
+                <arg>-j8</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
@@ -4060,11 +4030,6 @@
                 <arg>--global</arg>
                 <arg>user.email</arg>
                 <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>echo -e 'BB_NUMBER_THREADS = "2"\nPARALLEL_MAKE = "-j2"\nINHERIT += "rm_work"' &gt;&gt; local.conf</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="gdp-src-build/conf">
