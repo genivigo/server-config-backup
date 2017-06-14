@@ -2700,15 +2700,9 @@
   </pipelines>
   <pipelines group="GDP_Morty" />
   <pipelines group="R-Car_Gen2">
-    <pipeline name="GDP-Yocto-Porter" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Renesas_generic">
+    <pipeline name="GDP-Yocto-Porter" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
       <environmentvariables>
-        <variable name="MACHINE">
-          <value>porter</value>
-        </variable>
         <variable name="TARGET">
-          <value>porter</value>
-        </variable>
-        <variable name="GFX_MACHINE">
           <value>porter</value>
         </variable>
       </environmentvariables>
@@ -2716,15 +2710,9 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Silk" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Renesas_generic">
+    <pipeline name="GDP-Yocto-Silk" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
       <environmentvariables>
-        <variable name="MACHINE">
-          <value>silk</value>
-        </variable>
         <variable name="TARGET">
-          <value>silk</value>
-        </variable>
-        <variable name="GFX_MACHINE">
           <value>silk</value>
         </variable>
       </environmentvariables>
@@ -2732,286 +2720,35 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Koelsch" template="Yocto_GDP_Renesas_generic">
+    <pipeline name="GDP-Yocto-Koelsch" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
       <environmentvariables>
-        <variable name="MACHINE">
-          <value>koelsch</value>
-        </variable>
         <variable name="TARGET">
           <value>koelsch</value>
         </variable>
-        <variable name="GFX_MACHINE">
-          <value>porter</value>
-        </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform.git" />
+        <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-PORTER-GITHUB-PR" isLocked="false">
+    <pipeline name="GDP-Yocto-PORTER-GITHUB-PR" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
       <environmentvariables>
-        <variable name="MACHINE">
-          <value>porter</value>
-        </variable>
-        <variable name="GFX_MACHINE">
+        <variable name="TARGET">
           <value>porter</value>
         </variable>
       </environmentvariables>
       <materials>
         <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
       </materials>
-      <stage name="build" cleanWorkingDir="true">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="rm" workingdir="gdp-src-build">
-                <arg>-rf</arg>
-                <arg>tmp</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source ./init.sh $MACHINE</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]]; then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_gfx_software_$MACHINE.sh /var/go/sgx_bin; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]];  then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.name</arg>
-                <arg>Go Server</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
-                <runif status="any" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>renesas_binaries</resource>
-              <resource>yocto_build</resource>
-            </resources>
-            <artifacts>
-              <artifact src="logs.tar.gz" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/license.manifest" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/package.manifest" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
     </pipeline>
-    <pipeline name="GDP-Yocto-Koelsch-GITHUB-PR" isLocked="false">
+    <pipeline name="GDP-Yocto-Koelsch-GITHUB-PR" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>koelsch</value>
         </variable>
-        <variable name="GFX_MACHINE">
-          <value>porter</value>
-        </variable>
       </environmentvariables>
       <materials>
         <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
       </materials>
-      <stage name="build" cleanWorkingDir="true">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="rm" workingdir="gdp-src-build">
-                <arg>-rf</arg>
-                <arg>tmp</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source ./init.sh $MACHINE -f</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$GFX_MACHINE" == "porter" || "$GFX_MACHINE" == silk  ]]; then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_gfx_software_$GFX_MACHINE.sh /var/go/sgx_bin; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$GFX_MACHINE" == "porter" || "$GFX_MACHINE" == silk ]];  then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.name</arg>
-                <arg>Go Server</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
-                <runif status="any" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>renesas_binaries</resource>
-              <resource>yocto_build</resource>
-            </resources>
-            <artifacts>
-              <artifact src="logs.tar.gz" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/license.manifest" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/package.manifest" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
-    <pipeline name="GDP-Yocto-PORTER-meta-genivi-dev-GITHUB-PR" isLocked="false">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>porter</value>
-        </variable>
-        <variable name="GFX_MACHINE">
-          <value>porter</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="git://github.com/genivi/genivi-dev-platform.git" dest="gdp" materialName="genivi-dev-platform.git" />
-        <scm ref="30b07577-5ed3-4441-9558-3cf1595a678c" dest="meta-genivi-dev" />
-      </materials>
-      <stage name="build">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="bash" workingdir="gdp/gdp-src-build/">
-                <arg>-c</arg>
-                <arg>rm -rf tmp</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp">
-                <arg>-c</arg>
-                <arg>source ./init.sh $MACHINE</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]]; then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_gfx_software_$MACHINE.sh /var/go/sgx_bin; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]];  then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="rm" workingdir="gdp">
-                <arg>-rf</arg>
-                <arg>meta-genivi-dev</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="mv" workingdir="gdp">
-                <arg>../meta-genivi-dev</arg>
-                <arg>meta-genivi-dev</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp/gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.name</arg>
-                <arg>Go Server</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp/gdp-src-build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
-                <runif status="any" />
-              </exec>
-              <exec command="mkdir">
-                <arg>-p</arg>
-                <arg>staging/images</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>mv gdp/gdp-src-build/tmp/deploy/images/*/* staging/</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>mv staging/{*201*ext*,*201*rootfs*,*sdimg*,*hddimg*,bzImage*201*} staging/images/ || true</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="rm">
-                <arg>-r</arg>
-                <arg>gdp</arg>
-              </exec>
-            </tasks>
-            <resources>
-              <resource>yocto_build</resource>
-              <resource>renesas_binaries</resource>
-            </resources>
-            <artifacts>
-              <artifact src="logs.tar.gz" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="Kept_for_History">
