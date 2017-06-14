@@ -515,7 +515,7 @@
         <param name="branch">master</param>
       </params>
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>raspberrypi2</value>
         </variable>
         <variable name="BUILD_SDK">
@@ -531,7 +531,7 @@
         <param name="branch">master</param>
       </params>
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>raspberrypi3</value>
         </variable>
         <variable name="BUILD_SDK">
@@ -544,7 +544,7 @@
     </pipeline>
     <pipeline name="GDP-Yocto-Minnowboard_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>minnowboard</value>
         </variable>
         <variable name="BUILD_SDK">
@@ -557,7 +557,7 @@
     </pipeline>
     <pipeline name="GDP-Yocto-qemux86-64_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>qemux86-64</value>
         </variable>
         <variable name="BUILD_SDK">
@@ -570,7 +570,7 @@
     </pipeline>
     <pipeline name="GDP-Yocto-dragonboard-410c_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>dragonboard-410c</value>
         </variable>
         <variable name="BUILD_SDK">
@@ -852,6 +852,9 @@
     </pipeline>
     <pipeline name="GDP-Yocto-Minnowboard-QtAS" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
       <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
         <variable name="MACHINE">
           <value>minnowboard</value>
         </variable>
