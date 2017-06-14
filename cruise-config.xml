@@ -192,7 +192,6 @@
       </admins>
     </authorization>
     <pipeline name="GDP-Yocto-Minnowboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
-      <timer>0 0 20 18 8 ?</timer>
       <environmentvariables>
         <variable name="TARGET">
           <value>minnowboard</value>
@@ -203,7 +202,6 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-QEMU_x86-64" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
-      <timer>0 0 2 * * ?</timer>
       <environmentvariables>
         <variable name="TARGET">
           <value>qemux86-64</value>
@@ -214,7 +212,6 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
-      <timer>0 30 03 * * ?</timer>
       <environmentvariables>
         <variable name="TARGET">
           <value>raspberrypi2</value>
@@ -234,11 +231,8 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-r-car-m3-starter-kit" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Renesas_generic">
+    <pipeline name="GDP-Yocto-r-car-m3-starter-kit" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
       <environmentvariables>
-        <variable name="MACHINE">
-          <value>r-car-m3-starter-kit</value>
-        </variable>
         <variable name="TARGET">
           <value>r-car-m3-starter-kit</value>
         </variable>
@@ -290,7 +284,6 @@
       </materials>
     </pipeline>
     <pipeline name="meta-ivi-Yocto-QEMU_x86-64-GITHUB-PR-NOSTROMO-IMAGE" labeltemplate="meta-ivi:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
-      <timer onlyOnChanges="true">0 0 3 * * ?</timer>
       <environmentvariables>
         <variable name="IMAGE_NAME">
           <value>nostromo-image</value>
@@ -346,7 +339,6 @@
       </admins>
     </authorization>
     <pipeline name="GDP-Yocto-QEMU_x86-64-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
-      <timer>0 0 3 19 8 ?</timer>
       <environmentvariables>
         <variable name="TARGET">
           <value>qemux86-64</value>
@@ -356,95 +348,17 @@
         <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-r-car-m3-starter-kit-GITHUB-PR" isLocked="false">
-      <timer>0 0 4 19 8 ?</timer>
+    <pipeline name="GDP-Yocto-r-car-m3-starter-kit-GITHUB-PR" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
       <environmentvariables>
-        <variable name="MACHINE">
-          <value>m3ulcb</value>
-        </variable>
         <variable name="TARGET">
           <value>r-car-m3-starter-kit</value>
-        </variable>
-        <variable name="GFX_MACHINE">
-          <value>porter</value>
         </variable>
       </environmentvariables>
       <materials>
         <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
       </materials>
-      <stage name="build" cleanWorkingDir="true">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="rm" workingdir="gdp-src-build">
-                <arg>-rf</arg>
-                <arg>tmp cache sstate-cache</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source ./init.sh $TARGET</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]]; then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_gfx_software_$MACHINE.sh /var/go/sgx_bin; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]];  then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="renesas-rcar-gen3">
-                <arg>-c</arg>
-                <arg>if [[ "$TARGET" == "r-car-m3-starter-kit" ]];  then meta-rcar-gen3/docs/sample/copyscript/copy_evaproprietary_softwares.sh /var/go/sgx_bin_gen3/; fi</arg>
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\n' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.name</arg>
-                <arg>Go Server</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
-                <runif status="any" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>renesas_binaries</resource>
-              <resource>yocto_build</resource>
-            </resources>
-            <artifacts>
-              <artifact src="logs.tar.gz" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/license.manifest" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/package.manifest" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
     </pipeline>
     <pipeline name="GDP-Yocto-RPI2-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
-      <timer>0 0 8 17 8 ?</timer>
       <environmentvariables>
         <variable name="TARGET">
           <value>raspberrypi2</value>
@@ -501,7 +415,6 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-RPI2-meta-genivi-dev-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic_latest_meta_genivi_demo">
-      <timer>0 0 4 17 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>raspberrypi2</value>
@@ -513,7 +426,6 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-Dragonboard-meta-genivi-dev-GITHUB-PR" isLocked="false" template="Yocto_GDP_generic_latest_meta_genivi_demo">
-      <timer>0 0 4 17 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>dragonboard-410c</value>
@@ -525,7 +437,6 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-r-car-m3-starter-kit-meta-genivi-dev-GITHUB-PR" isLocked="false">
-      <timer>0 0 23 16 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>r-car-m3-starter-kit</value>
@@ -671,7 +582,6 @@
       <params>
         <param name="MACHINE">raspberrypi2</param>
       </params>
-      <timer>0 0 5 13 10 ?</timer>
       <environmentvariables>
         <variable name="VMNAME">
           <value>gdp-sdk-#{MACHINE}</value>
@@ -718,7 +628,6 @@
       <params>
         <param name="MACHINE">minnowboard</param>
       </params>
-      <timer>0 0 0 7 10 ?</timer>
       <environmentvariables>
         <variable name="VERSION">
           <value>snapshot</value>
@@ -739,7 +648,6 @@
       <params>
         <param name="MACHINE">qemux86-64</param>
       </params>
-      <timer>0 0 3 12 10 ?</timer>
       <environmentvariables>
         <variable name="DOWNLOAD_SOURCE">
           <value>yesofcourse</value>
@@ -763,7 +671,6 @@
       <params>
         <param name="MACHINE">dragonboard-410c</param>
       </params>
-      <timer>0 0 4 6 10 ?</timer>
       <environmentvariables>
         <variable name="VERSION">
           <value>snapshot</value>
@@ -826,7 +733,6 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-qemux86-64_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
-      <timer onlyOnChanges="true">0 59 23 15 9 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
@@ -840,7 +746,6 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-dragonboard-410c_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
-      <timer onlyOnChanges="true">0 59 23 15 9 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>dragonboard-410c</value>
@@ -1032,7 +937,7 @@
     </pipeline>
   </pipelines>
   <pipelines group="Chromium">
-    <pipeline name="Chromium-r-car-m3-starter-kit" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
+    <pipeline name="Chromium-r-car-m3-starter-kit" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
       <environmentvariables>
         <variable name="TARGET">
           <value>r-car-m3-starter-kit</value>
@@ -1123,7 +1028,6 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-Minnowboard-QtAS" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
-      <timer>0 0 20 18 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>minnowboard</value>
@@ -1348,7 +1252,6 @@
       </stage>
     </pipeline>
     <pipeline name="GDP-Yocto-Porter-QtAS" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false">
-      <timer onlyOnChanges="true">0 0 22 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>porter</value>
@@ -2059,7 +1962,6 @@
       <params>
         <param name="VERSION">v219</param>
       </params>
-      <timer onlyOnChanges="true">0 0 12 ? * SAT</timer>
       <environmentvariables>
         <variable name="VERSION">
           <value>v226</value>
@@ -2149,7 +2051,6 @@
       </stage>
     </pipeline>
     <pipeline name="reuse_tmp" isLocked="false" template="Yocto_GDP_generic_reuse_tmp">
-      <timer>0 0 4 19 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
@@ -2239,7 +2140,6 @@
       </stage>
     </pipeline>
     <pipeline name="WIP--GENIVI_Positioning" isLocked="false">
-      <timer onlyOnChanges="true">0 0 22 ? * MON-FRI</timer>
       <materials>
         <git url="git://github.com/genivi/positioning.git" materialName="PositioningGitRepository" />
       </materials>
@@ -2456,7 +2356,6 @@
       </materials>
     </pipeline>
     <pipeline name="Morty-GDP-Yocto-Porter" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Renesas_generic">
-      <timer onlyOnChanges="true">0 0 6 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>porter</value>
@@ -2511,7 +2410,6 @@
         <param name="agent">c8776aa52222</param>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work/*</param>
       </params>
-      <timer>0 0 4 ? * SUN *</timer>
       <materials>
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
       </materials>
@@ -2604,7 +2502,6 @@
       <params>
         <param name="MACHINE">minnowboard</param>
       </params>
-      <timer>0 0 0 28 9 ?</timer>
       <materials>
         <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-minnowboard" />
       </materials>
@@ -2686,7 +2583,6 @@
       </admins>
     </authorization>
     <pipeline name="GDP-Yocto-porter_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false">
-      <timer onlyOnChanges="true">0 59 23 15 9 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>porter</value>
@@ -2785,7 +2681,6 @@
       <params>
         <param name="MACHINE">porter</param>
       </params>
-      <timer>0 0 5 13 10 ?</timer>
       <environmentvariables>
         <variable name="VMNAME">
           <value>gdp-sdk-#{MACHINE}</value>
@@ -2806,7 +2701,6 @@
   <pipelines group="GDP_Morty" />
   <pipelines group="R-Car_Gen2">
     <pipeline name="GDP-Yocto-Porter" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Renesas_generic">
-      <timer onlyOnChanges="true">0 0 6 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>porter</value>
@@ -2823,7 +2717,6 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-Silk" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_Renesas_generic">
-      <timer onlyOnChanges="true">0 0 6 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>silk</value>
@@ -2856,7 +2749,6 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-PORTER-GITHUB-PR" isLocked="false">
-      <timer>0 0 4 19 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>porter</value>
@@ -2936,7 +2828,6 @@
       </stage>
     </pipeline>
     <pipeline name="GDP-Yocto-Koelsch-GITHUB-PR" isLocked="false">
-      <timer>0 0 4 19 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>koelsch</value>
@@ -3016,7 +2907,6 @@
       </stage>
     </pipeline>
     <pipeline name="GDP-Yocto-PORTER-meta-genivi-dev-GITHUB-PR" isLocked="false">
-      <timer>0 0 23 16 8 ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>porter</value>
@@ -3136,7 +3026,6 @@
       </materials>
     </pipeline>
     <pipeline name="Morty-GDP-Yocto-QEMU_x86-64" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
-      <timer>0 0 2 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
@@ -3147,7 +3036,6 @@
       </materials>
     </pipeline>
     <pipeline name="Morty-GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic">
-      <timer>0 30 03 * * ?</timer>
       <environmentvariables>
         <variable name="MACHINE">
           <value>raspberrypi2</value>
@@ -3257,7 +3145,6 @@
       <params>
         <param name="SERVER_RESOURCE">deploy_genivi</param>
       </params>
-      <timer>0 0 6 25 4 ?</timer>
       <environmentvariables>
         <variable name="DEPLOY_DIR">
           <value>/var/lib/go-agent/pipelines/__deploy/deploy</value>
@@ -3355,6 +3242,71 @@
             </tasks>
             <resources>
               <resource>yocto_build</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="Yocto_GDP_renesas_script_with_artifacts">
+      <stage name="build" cleanWorkingDir="true">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>scripts/ci-build.sh CI_FLAG</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+              <resource>renesas_binaries</resource>
+            </resources>
+            <artifacts>
+              <artifact src="staging" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="Yocto_GDP_renesas_script_NO_ARTIFACTS">
+      <stage name="build" cleanWorkingDir="true">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>scripts/ci-build.sh CI_FLAG</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+              <resource>renesas_binaries</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="Yocto_GDP_renesas_script_rm_work_NO_ARTIFACTS">
+      <stage name="build" cleanWorkingDir="true">
+        <jobs>
+          <job name="init_and_bitbake">
+            <environmentvariables>
+              <variable name="RM_WORK">
+                <value>true</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>scripts/ci-build.sh CI_FLAG</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+              <resource>renesas_binaries</resource>
             </resources>
           </job>
         </jobs>
