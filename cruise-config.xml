@@ -687,7 +687,7 @@
         <pipeline pipelineName="GDP-Yocto-dragonboard-410c_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-raspberrypi2_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
+    <pipeline name="GDP-Yocto-raspberrypi2_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
         <param name="branch">master</param>
       </params>
@@ -703,7 +703,7 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="#{branch}" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-raspberrypi3_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
+    <pipeline name="GDP-Yocto-raspberrypi3_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
         <param name="branch">master</param>
       </params>
@@ -719,7 +719,7 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="#{branch}" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Minnowboard_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
+    <pipeline name="GDP-Yocto-Minnowboard_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <environmentvariables>
         <variable name="MACHINE">
           <value>minnowboard</value>
@@ -732,7 +732,7 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-qemux86-64_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
+    <pipeline name="GDP-Yocto-qemux86-64_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
@@ -745,7 +745,7 @@
         <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-dragonboard-410c_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
+    <pipeline name="GDP-Yocto-dragonboard-410c_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <environmentvariables>
         <variable name="MACHINE">
           <value>dragonboard-410c</value>
@@ -1014,9 +1014,9 @@
         <user>EBoto</user>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-Minnowboard-QtAS_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic">
+    <pipeline name="GDP-Yocto-Minnowboard-QtAS_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>minnowboard</value>
         </variable>
         <variable name="BUILD_SDK">
@@ -3602,91 +3602,30 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="Yocto_GDP_SDK_generic">
-      <authorization>
-        <admins>
-          <user>tpollard</user>
-          <user>RobertM</user>
-          <user>AndreasR</user>
-          <user>EBoto</user>
-        </admins>
-      </authorization>
-      <stage name="build">
-        <approval type="manual" />
+    <pipeline name="Yocto_GDP_SDK_generic_script_with_artifacts">
+      <stage name="build" cleanWorkingDir="true">
         <jobs>
           <job name="init_and_bitbake">
+            <environmentvariables>
+              <variable name="BUILD_SDK">
+                <value>true</value>
+              </variable>
+            </environmentvariables>
             <tasks>
-              <exec command="rm" workingdir="gdp-src-build">
-                <arg>-rf</arg>
-                <arg>tmp</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "dragonboard-410c" ]]; then source ./init.sh $MACHINE accept-eula -f ; else source ./init.sh $MACHINE -f; fi</arg>
+                <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]]; then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_gfx_software_$MACHINE.sh /var/go/sgx_bin; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]];  then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.name</arg>
-                <arg>Go Server</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake -c cleanall curl-native ca-certificates</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$BUILD_SDK" != "true" ]] ; then source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform ; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$BUILD_SDK" == "true" ]] ; then source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform-sdk ; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$BUILD_SDK" == "true" ]] ; then source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake meta-ide-support ; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
-                <runif status="any" />
               </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
             </resources>
             <artifacts>
-              <artifact src="gdp-src-build/tmp/deploy/licenses" dest="results" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/license.manifest" dest="results" />
+              <artifact src="staging/sdk*" dest="results" />
+              <artifact src="staging" />
+              <artifact src="staging/licenses" dest="results" />
+              <artifact src="staging/license.manifest" dest="results" />
               <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/package.manifest" dest="results" />
               <artifact src="gdp-src-build/tmp/deploy/sdk*" dest="results" />
               <artifact src="logs.tar.gz" dest="results" />
