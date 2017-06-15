@@ -2431,7 +2431,7 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="Wipe_gdp_work_dir4" template="Wipe_dir_pattern">
+    <pipeline name="Wipe_gdp_work_dir7" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work/*</param>
         <param name="agent">go-agent1</param>
@@ -2440,7 +2440,7 @@
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
-    <pipeline name="Wipe_tmp_dirs" template="Wipe_dir_pattern">
+    <pipeline name="Wipe_tmp_dirs7" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp</param>
         <param name="agent">go-agent1</param>
@@ -2449,7 +2449,7 @@
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
-    <pipeline name="Wipe_gdp_sstate_dir6" template="Wipe_dir_pattern">
+    <pipeline name="Wipe_gdp_sstate_dir7" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/cache/yocto/sstate/*</param>
         <param name="agent">go-agent1</param>
@@ -2458,10 +2458,55 @@
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
-    <pipeline name="Wipe_gdp_downloads_dir6" template="Wipe_dir_pattern">
+    <pipeline name="Wipe_gdp_downloads_dir7" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/cache/yocto/downloads/*</param>
         <param name="agent">go-agent1</param>
+      </params>
+      <materials>
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
+  </pipelines>
+  <pipelines group="Administration_for_go-agent-2">
+    <authorization>
+      <admins>
+        <user>GunnarA</user>
+        <user>tpollard</user>
+        <role>GDP_Developer</role>
+      </admins>
+    </authorization>
+    <pipeline name="Wipe_gdp_work_dir4" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work/*</param>
+        <param name="agent">go-agent2</param>
+      </params>
+      <materials>
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
+    <pipeline name="Wipe_tmp_dirs" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp</param>
+        <param name="agent">go-agent2</param>
+      </params>
+      <materials>
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
+    <pipeline name="Wipe_gdp_sstate_dir6" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/cache/yocto/sstate/*</param>
+        <param name="agent">go-agent2</param>
+      </params>
+      <materials>
+        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
+    <pipeline name="Wipe_gdp_downloads_dir6" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/cache/yocto/downloads/*</param>
+        <param name="agent">go-agent2</param>
       </params>
       <materials>
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
