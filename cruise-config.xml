@@ -180,6 +180,23 @@
         <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
+    <pipeline name="yocto-baseline-next" labeltemplate="meta-ivi.13.0:${meta-ivi.13.0[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+        <variable name="IMAGE_NAME">
+          <value>orion-image</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="git://github.com/genivi/meta-ivi.git" branch="13.0" dest="meta-ivi" materialName="meta-ivi.13.0" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="pyro" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.pyro" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="pyro" dest="poky" autoUpdate="false" materialName="poky.pyro" />
+        <git url="git://git.openembedded.org/meta-gplv2" branch="pyro" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.pyro" />
+        <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GENIVI_Development_Platform">
     <authorization>
