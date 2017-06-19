@@ -3692,12 +3692,7 @@
               <resource>yocto_build</resource>
             </resources>
             <artifacts>
-              <artifact src="staging/sdk*" dest="results" />
               <artifact src="staging" />
-              <artifact src="staging/licenses" dest="results" />
-              <artifact src="staging/license.manifest" dest="results" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/package.manifest" dest="results" />
-              <artifact src="gdp-src-build/tmp/deploy/sdk*" dest="results" />
               <artifact src="logs.tar.gz" dest="results" />
             </artifacts>
           </job>
