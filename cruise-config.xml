@@ -3565,27 +3565,27 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [ $(find meta-ivi --name 'miranda-image' | wc -l) -ne 0 ] ; then echo 'miranda-image' &gt;IMG_NAME ; done</arg>
+                <arg>if [ $(find meta-ivi --name 'miranda-image.bb' | wc -l) -ne 0 ] ; then echo 'miranda-image' &gt;IMG_NAME ; done</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [ $(find meta-ivi --name 'nostromo-image' | wc -l) -ne 0 ] ; then echo 'nostromo-image' &gt;IMG_NAME ; done</arg>
+                <arg>if [ $(find meta-ivi --name 'nostromo-image.bb' | wc -l) -ne 0 ] ; then echo 'nostromo-image' &gt;IMG_NAME ; done</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [ $(find meta-ivi --name 'orion-image' | wc -l) -ne 0 ] ; then echo 'orion-image' &gt;IMG_NAME ; done</arg>
+                <arg>if [ $(find meta-ivi --name 'orion-image.bb' | wc -l) -ne 0 ] ; then echo 'orion-image' &gt;IMG_NAME ; done</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [ $(find meta-ivi --name 'pulsar-image' | wc -l) -ne 0 ] ; then echo 'pulsar-image' &gt;IMG_NAME ; done</arg>
+                <arg>if [ $(find meta-ivi --name 'pulsar-image.bb' | wc -l) -ne 0 ] ; then echo 'pulsar-image' &gt;IMG_NAME ; done</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [ $(find meta-ivi --name 'quasar-image' | wc -l) -ne 0 ] ; then echo 'quasar-image'</arg>
+                <arg>if [ $(find meta-ivi --name 'quasar-image.bb' | wc -l) -ne 0 ] ; then echo 'quasar-image'</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
