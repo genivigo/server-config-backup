@@ -3693,7 +3693,6 @@
             </resources>
             <artifacts>
               <artifact src="staging" />
-              <artifact src="staging/logs.tar.gz" />
             </artifacts>
           </job>
         </jobs>
