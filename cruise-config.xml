@@ -3573,6 +3573,11 @@
                 <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
                 <runif status="any" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>if [ $(find meta-ivi --name 'nostromo-image' | wc -l) -ne 0 ] ; then echo 'nostromo-image' &gt;IMG_NAME ; done</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
