@@ -169,9 +169,6 @@
         <variable name="MACHINE">
           <value>qemux86-64</value>
         </variable>
-        <variable name="IMAGE_NAME">
-          <value>nostromo-image</value>
-        </variable>
       </environmentvariables>
       <materials>
         <git url="git://github.com/genivi/meta-ivi.git" branch="12.0" dest="meta-ivi" materialName="meta-ivi.12.0" />
