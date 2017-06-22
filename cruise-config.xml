@@ -194,7 +194,7 @@
         <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="meta-ivi-Yocto-QEMU_x86-64-GITHUB-PR" labeltemplate="meta-ivi:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-GITHUB-PR-Check" labeltemplate="meta-ivi:${meta-ivi[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
