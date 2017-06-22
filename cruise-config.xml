@@ -280,21 +280,6 @@
       </admins>
     </authorization>
   </pipelines>
-  <pipelines group="Baseline_Pull_Requests">
-    <authorization>
-      <view>
-        <user>guest</user>
-        <role>Developer</role>
-        <role>Guest</role>
-      </view>
-      <operate>
-        <role>Developer</role>
-      </operate>
-      <admins>
-        <role>GDP_Developer</role>
-      </admins>
-    </authorization>
-  </pipelines>
   <pipelines group="GDP_CI_Other">
     <authorization>
       <view>
