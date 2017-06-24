@@ -868,7 +868,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>ln -s Qt-5.6.1 Qt</arg>
+                <arg>ln -s Qt5.6.1 Qt</arg>
                 <runif status="passed" />
               </exec>
               <exec command="rm">
@@ -1557,7 +1557,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>ln -s Qt-5.6.1 Qt</arg>
+                <arg>ln -s Qt5.6.1 Qt</arg>
                 <runif status="passed" />
               </exec>
               <exec command="rm">
