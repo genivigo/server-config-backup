@@ -1378,7 +1378,7 @@
     </pipeline>
     <pipeline name="Seed-QtLibs-and-creator">
       <params>
-        <param name="MD5">15794bab9cc9db0f669e0af762f5cd2d</param>
+        <param name="MD5">1f91cdc6fe2d7add2ffb3cf3157f2e64</param>
         <param name="QT_LIBS_AND_CREATOR_FILE">Qt5.6.1-vagrant-with-source.tar.bz2</param>
         <param name="SOURCE_DIR">/var/go</param>
       </params>
