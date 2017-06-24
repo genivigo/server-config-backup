@@ -845,7 +845,7 @@
     </pipeline>
     <pipeline name="GammaRay" labeltemplate="2.6:${GammaRay.git[:8]}-build:${COUNT}" isLocked="false">
       <params>
-        <param name="QT_LIBS_ARCHIVE">Qt-5.6-gcc64-qtcreator-installed-home-vagrant.tar.bz2</param>
+        <param name="QT_LIBS_ARCHIVE">Qt5.6.1-vagrant-with-source.tar.bz2</param>
         <param name="CACHE_DIR">/var/cache/goartifacts</param>
         <param name="SOURCE_WEB_URL">https://github.com/KDAB/GammaRay.git</param>
         <param name="SOURCE_CLONE_URL">https://github.com/KDAB/GammaRay.git</param>
@@ -868,7 +868,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>ln -s Qt-5.6 Qt</arg>
+                <arg>ln -s Qt-5.6.1 Qt</arg>
                 <runif status="passed" />
               </exec>
               <exec command="rm">
@@ -883,7 +883,7 @@
               </exec>
               <exec command="bash" workingdir="build">
                 <arg>-c</arg>
-                <arg>CMAKE_PREFIX_PATH=../Qt/5.6/gcc_64/lib/cmake cmake -DGAMMARAY_BUILD_DOCS=off ../</arg>
+                <arg>CMAKE_PREFIX_PATH=../Qt/5.6.1/gcc_64/lib/cmake cmake -DGAMMARAY_BUILD_DOCS=off ../</arg>
                 <runif status="passed" />
               </exec>
               <exec command="make" workingdir="build">
@@ -1534,7 +1534,7 @@
     </pipeline>
     <pipeline name="DLT-Viewer" labeltemplate="master:${dlt-viewer.git[:8]}-build:${COUNT}" isLocked="false">
       <params>
-        <param name="QT_LIBS_ARCHIVE">Qt-5.6-gcc64-qtcreator-installed-home-vagrant.tar.bz2</param>
+        <param name="QT_LIBS_ARCHIVE">Qt5.6.1-vagrant-with-source.tar.bz2</param>
         <param name="CACHE_DIR">/var/cache/goartifacts</param>
         <param name="SOURCE_WEB_URL">https://github.com/GENIVI/dlt-viewer</param>
         <param name="SOURCE_CLONE_URL">https://github.com/GENIVI/dlt-viewer.git</param>
@@ -1557,7 +1557,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>ln -s Qt-5.6 Qt</arg>
+                <arg>ln -s Qt-5.6.1 Qt</arg>
                 <runif status="passed" />
               </exec>
               <exec command="rm">
@@ -1572,7 +1572,7 @@
               </exec>
               <exec command="bash" workingdir="build">
                 <arg>-c</arg>
-                <arg>../Qt/5.6/gcc_64/bin/qmake ../BuildDltViewer.pro</arg>
+                <arg>../Qt/5.6.1/gcc_64/bin/qmake ../BuildDltViewer.pro</arg>
                 <runif status="passed" />
               </exec>
               <exec command="make" workingdir="build">
@@ -3846,7 +3846,7 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt-5.6-gcc64-qtcreator-installed-home-vagrant.tar.bz2">
+              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt5.6.1-vagrant-with-source.tar.bz2">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="bash" workingdir="homedir">
@@ -4093,7 +4093,7 @@
               </variable>
             </environmentvariables>
             <tasks>
-              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt-5.6-gcc64-qtcreator-installed-home-vagrant.tar.bz2">
+              <fetchartifact pipeline="Seed-QtLibs-and-creator" stage="stage" job="job" srcfile="Qt5.6.1-vagrant-with-source.tar.bz2">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="bash" workingdir="homedir">
