@@ -883,7 +883,7 @@
               </exec>
               <exec command="bash" workingdir="build">
                 <arg>-c</arg>
-                <arg>CMAKE_PREFIX_PATH=../Qt/5.6.1/gcc_64/lib/cmake cmake -DGAMMARAY_BUILD_DOCS=off ../</arg>
+                <arg>CMAKE_PREFIX_PATH=../Qt/5.6/gcc_64/lib/cmake cmake -DGAMMARAY_BUILD_DOCS=off ../</arg>
                 <runif status="passed" />
               </exec>
               <exec command="make" workingdir="build">
@@ -1572,7 +1572,7 @@
               </exec>
               <exec command="bash" workingdir="build">
                 <arg>-c</arg>
-                <arg>../Qt/5.6.1/gcc_64/bin/qmake ../BuildDltViewer.pro</arg>
+                <arg>../Qt/5.6/gcc_64/bin/qmake ../BuildDltViewer.pro</arg>
                 <runif status="passed" />
               </exec>
               <exec command="make" workingdir="build">
