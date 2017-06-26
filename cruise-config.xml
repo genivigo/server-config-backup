@@ -4362,7 +4362,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="beetle-genivi-agent" ipaddress="172.17.0.3" uuid="1be4eb0f-2348-4e3f-98d0-bc0303d7bef5">
+    <agent hostname="beetle-genivi-agent" ipaddress="172.17.0.3" uuid="1be4eb0f-2348-4e3f-98d0-bc0303d7bef5" isDisabled="true">
       <resources>
         <resource>yocto_build</resource>
         <resource>beetle-genivi-agent</resource>
