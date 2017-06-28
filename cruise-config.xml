@@ -3650,7 +3650,7 @@
               <resource>yocto_build</resource>
             </resources>
             <artifacts>
-              <artifact src="staging" />
+              <artifact src="staging" dest="results" />
             </artifacts>
           </job>
         </jobs>
