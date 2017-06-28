@@ -2502,14 +2502,6 @@
         <user>GunnarA</user>
       </admins>
     </authorization>
-    <pipeline name="upload-qemux86-64" isLocked="false" template="upload-sde">
-      <params>
-        <param name="MACHINE">qemux86-64</param>
-      </params>
-      <materials>
-        <pipeline pipelineName="GDP-SDE-#{MACHINE}" stageName="CreateVM" materialName="sdk-qemux86-64" />
-      </materials>
-    </pipeline>
     <pipeline name="upload-minnowboard" isLocked="false" template="upload-sde">
       <params>
         <param name="MACHINE">minnowboard</param>
