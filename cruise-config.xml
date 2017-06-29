@@ -218,7 +218,7 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-Minnowboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP-Yocto-minnowboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <environmentvariables>
         <variable name="TARGET">
           <value>minnowboard</value>
@@ -228,7 +228,7 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-QEMU_x86-64" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP-Yocto-qemux86-64" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <environmentvariables>
         <variable name="TARGET">
           <value>qemux86-64</value>
@@ -238,7 +238,7 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-RaspberryPi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP-Yocto-raspberrypi2" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <environmentvariables>
         <variable name="TARGET">
           <value>raspberrypi2</value>
@@ -248,7 +248,7 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Dragonboard" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP-Yocto-dragonboard-410c" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <environmentvariables>
         <variable name="TARGET">
           <value>dragonboard-410c</value>
@@ -258,7 +258,7 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-r-car-m3-starter-kit" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
+    <pipeline name="GDP-Yocto-R-car-m3-starter-kit" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
       <environmentvariables>
         <variable name="TARGET">
           <value>r-car-m3-starter-kit</value>
@@ -292,7 +292,7 @@
         <role>GDP_Developer</role>
       </operate>
     </authorization>
-    <pipeline name="GDP-Yocto-QEMU_x86-64-Latest-meta-genivi-dev" template="Yocto_GDP_generic_latest_meta_genivi_demo">
+    <pipeline name="GDP-Yocto-qemux86-64-Latest-meta-genivi-dev" template="Yocto_GDP_generic_latest_meta_genivi_demo">
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
