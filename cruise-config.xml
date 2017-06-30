@@ -269,17 +269,6 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Morty">
-    <authorization>
-      <view>
-        <user>guest</user>
-        <role>Guest</role>
-      </view>
-      <admins>
-        <role>GDP_Developer</role>
-      </admins>
-    </authorization>
-  </pipelines>
   <pipelines group="GDP_CI_Other">
     <authorization>
       <view>
