@@ -292,17 +292,6 @@
         <role>GDP_Developer</role>
       </operate>
     </authorization>
-    <pipeline name="GDP-Yocto-qemux86-64-Latest-meta-genivi-dev" template="Yocto_GDP_generic_latest_meta_genivi_demo">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>qemux86-64</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform" dest="gdp" materialName="genivi-dev-platform.git" />
-        <git url="https://github.com/GENIVI/meta-genivi-dev" dest="meta-genivi-dev" materialName="meta-genivi-dev" />
-      </materials>
-    </pipeline>
   </pipelines>
   <pipelines group="GDP_Pull_Requests">
     <authorization>
@@ -2313,6 +2302,17 @@
       <materials>
         <git url="git://github.com/genivi/genivi-dev-platform.git" dest="gdp" materialName="genivi-dev-platform.git" />
         <scm ref="30b07577-5ed3-4441-9558-3cf1595a678c" dest="meta-genivi-dev" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-qemux86-64-Latest-meta-genivi-dev" template="Yocto_GDP_generic_latest_meta_genivi_demo">
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/genivi/genivi-dev-platform" dest="gdp" materialName="genivi-dev-platform.git" />
+        <git url="https://github.com/GENIVI/meta-genivi-dev" dest="meta-genivi-dev" materialName="meta-genivi-dev" />
       </materials>
     </pipeline>
   </pipelines>
