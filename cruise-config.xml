@@ -4351,7 +4351,6 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>imagemagick</resource>
-        <resource>deploy_pelagicore</resource>
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
