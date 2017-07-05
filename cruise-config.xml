@@ -3230,6 +3230,11 @@
       </authorization>
       <stage name="build">
         <approval type="manual" />
+        <environmentvariables>
+          <variable name="RELEASE_BUILD">
+            <value>true</value>
+          </variable>
+        </environmentvariables>
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
