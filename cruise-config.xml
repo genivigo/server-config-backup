@@ -4402,7 +4402,6 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>imagemagick</resource>
-        <resource>renesas_binaries</resource>
       </resources>
     </agent>
   </agents>
