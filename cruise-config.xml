@@ -214,7 +214,7 @@
     <pipeline name="yocto-baseline-13-qemux86" labeltemplate="meta-ivi.13.0:${meta-ivi.13.0[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
       <environmentvariables>
         <variable name="MACHINE">
-          <value>qemuarm64</value>
+          <value>qemux86</value>
         </variable>
         <variable name="IMAGE_NAME">
           <value>orion-image</value>
@@ -231,7 +231,7 @@
     <pipeline name="yocto-baseline-13-vexpressa9" labeltemplate="meta-ivi.13.0:${meta-ivi.13.0[:8]}-build:${COUNT}" isLocked="false" template="meta-ivi-build">
       <environmentvariables>
         <variable name="MACHINE">
-          <value>qemuarm64</value>
+          <value>vexpressa9</value>
         </variable>
         <variable name="IMAGE_NAME">
           <value>orion-image</value>
