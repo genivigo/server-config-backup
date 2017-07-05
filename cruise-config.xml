@@ -4402,6 +4402,7 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>imagemagick</resource>
+        <resource>go-agent</resource>
       </resources>
     </agent>
   </agents>
