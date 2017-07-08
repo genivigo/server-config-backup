@@ -4215,6 +4215,7 @@
         <resource>charlie</resource>
       </resources>
     </agent>
+    <agent hostname="beetle" ipaddress="208.73.22.108" uuid="aa7340ee-38d1-43f8-9266-817f64982443" />
   </agents>
 </cruise>
 
