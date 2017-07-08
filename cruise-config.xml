@@ -2246,9 +2246,6 @@
   </pipelines>
   <pipelines group="Administration_for_go-agent-1">
     <authorization>
-      <view>
-        <user>guest</user>
-      </view>
       <admins>
         <user>GunnarA</user>
         <role>GDP_Developer</role>
