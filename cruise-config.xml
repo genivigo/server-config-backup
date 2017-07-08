@@ -4215,7 +4215,12 @@
         <resource>charlie</resource>
       </resources>
     </agent>
-    <agent hostname="beetle" ipaddress="172.17.0.9" uuid="aa7340ee-38d1-43f8-9266-817f64982443" />
+    <agent hostname="beetle" ipaddress="172.17.0.9" uuid="aa7340ee-38d1-43f8-9266-817f64982443">
+      <resources>
+        <resource>yocto_build</resource>
+        <resource>beetle</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
