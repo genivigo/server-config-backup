@@ -4208,7 +4208,6 @@
     <agent hostname="go-agent (Luxoft/Pelagicore)" ipaddress="172.31.173.125" uuid="5486b7c8-54b0-46f4-a1c2-ea181437b038">
       <resources>
         <resource>yocto_build</resource>
-        <resource>imagemagick</resource>
         <resource>go-agent</resource>
       </resources>
     </agent>
