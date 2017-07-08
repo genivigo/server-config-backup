@@ -4209,7 +4209,12 @@
         <resource>go-agent</resource>
       </resources>
     </agent>
-    <agent hostname="charlie" ipaddress="172.17.0.3" uuid="5aa0bf8a-dd72-4fed-b6c5-95f511b6063e" />
+    <agent hostname="charlie" ipaddress="172.17.0.3" uuid="5aa0bf8a-dd72-4fed-b6c5-95f511b6063e">
+      <resources>
+        <resource>yocto_build</resource>
+        <resource>charlie</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
