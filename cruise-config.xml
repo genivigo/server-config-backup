@@ -2331,7 +2331,7 @@
         <param name="dir_pattern">/var/cache/yocto/downloads/*</param>
         <param name="agent">go-agent2</param>
       </params>
-      <timer>0 0 6 1/14 * ?</timer>
+      <timer>0 0 6 1 * ?</timer>
       <materials>
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
       </materials>
