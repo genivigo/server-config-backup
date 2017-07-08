@@ -2269,11 +2269,12 @@
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
-    <pipeline name="Wipe_gdp_sstate_dir7" template="Wipe_dir_pattern">
+    <pipeline name="Wipe_gdp_sstate_dir7" isLocked="false" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/cache/yocto/sstate/*</param>
         <param name="agent">go-agent1</param>
       </params>
+      <timer>0 0 6 ? * THU</timer>
       <materials>
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
       </materials>
