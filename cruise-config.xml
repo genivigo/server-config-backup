@@ -4212,13 +4212,13 @@
         <resource>go-agent</resource>
       </resources>
     </agent>
-    <agent hostname="charlie" ipaddress="172.17.0.3" uuid="5aa0bf8a-dd72-4fed-b6c5-95f511b6063e" isDisabled="true">
+    <agent hostname="charlie" ipaddress="172.17.0.3" uuid="5aa0bf8a-dd72-4fed-b6c5-95f511b6063e">
       <resources>
         <resource>yocto_build</resource>
         <resource>charlie</resource>
       </resources>
     </agent>
-    <agent hostname="beetle" ipaddress="172.17.0.9" uuid="aa7340ee-38d1-43f8-9266-817f64982443" isDisabled="true">
+    <agent hostname="beetle" ipaddress="172.17.0.9" uuid="aa7340ee-38d1-43f8-9266-817f64982443">
       <resources>
         <resource>yocto_build</resource>
         <resource>beetle</resource>
