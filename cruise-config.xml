@@ -2691,7 +2691,7 @@
         <pipeline pipelineName="Release-minnowboard-chromium" stageName="build" materialName="minnowboard-chromium" />
       </materials>
     </pipeline>
-    <pipeline name="Wipe_deployment_dir" isLocked="false" template="Wipe_dir_pattern">
+    <pipeline name="Wipe_PCore_deployment_dir" isLocked="false" template="Wipe_dir_pattern">
       <params>
         <param name="agent">go-agent</param>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/__deploy</param>
