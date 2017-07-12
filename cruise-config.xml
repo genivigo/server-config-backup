@@ -2691,6 +2691,15 @@
         <pipeline pipelineName="Release-minnowboard-chromium" stageName="build" materialName="minnowboard-chromium" />
       </materials>
     </pipeline>
+    <pipeline name="Wipe_deployment_dir" template="Wipe_dir_pattern">
+      <params>
+        <param name="agent">go-agent</param>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/__deploy</param>
+      </params>
+      <materials>
+        <git url="https://github.com/GENIVI/baseline_ci_helper" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Feature_SDL">
     <pipeline name="SDL_minnowboard" template="Yocto_GDP_generic_script_with_artifacts">
