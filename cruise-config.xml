@@ -3360,7 +3360,7 @@
               </exec>
               <exec command="bash" workingdir="baseline_ci_helper">
                 <arg>-c</arg>
-                <arg>echo "This might fail for meta ivi version &lt;= 12, that's OK" &gt;&gt; ./checkout_layer_hash.sh meta-gplv2</arg>
+                <arg>if [ -d ../meta-gplv2 ] ; then ./checkout_layer_hash.sh meta-gplv2 ; fi</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
