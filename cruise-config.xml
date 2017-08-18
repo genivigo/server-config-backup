@@ -4183,7 +4183,7 @@
         <resource>yocto_build</resource>
       </resources>
     </agent>
-    <agent hostname="go-agent1 (GENIVI)" ipaddress="172.17.0.2" uuid="1bb12ac4-c35f-4111-9eba-a2e709d5cf7b">
+    <agent hostname="go-agent1 (GENIVI)" ipaddress="172.17.0.2" uuid="1bb12ac4-c35f-4111-9eba-a2e709d5cf7b" isDisabled="true">
       <resources>
         <resource>yocto_build</resource>
         <resource>go-agent1</resource>
@@ -4191,7 +4191,7 @@
         <resource>deploy_genivi</resource>
       </resources>
     </agent>
-    <agent hostname="go-agent2 (GENIVI)" ipaddress="172.17.0.2" uuid="198e29c2-fbfa-4e70-93c6-b9df35fa720b">
+    <agent hostname="go-agent2 (GENIVI)" ipaddress="172.17.0.2" uuid="198e29c2-fbfa-4e70-93c6-b9df35fa720b" isDisabled="true">
       <resources>
         <resource>yocto_build</resource>
         <resource>go-agent2</resource>
