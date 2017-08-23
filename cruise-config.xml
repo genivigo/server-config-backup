@@ -3048,6 +3048,34 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="Yocto_GDP_generic_release_renesas">
+      <stage name="build">
+        <approval type="manual" />
+        <environmentvariables>
+          <variable name="RELEASE_BUILD">
+            <value>true</value>
+          </variable>
+        </environmentvariables>
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>scripts/ci-build.sh CI_FLAG</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+              <resource>renesas_binaries</resource>
+            </resources>
+            <artifacts>
+              <artifact src="staging/" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
     <pipeline name="Yocto_GDP_generic_release">
       <authorization>
         <admins>
