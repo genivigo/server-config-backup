@@ -744,7 +744,7 @@
         <git url="https://github.com/gunnarx/genivi-dev-platform" branch="pyro_chromium" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Release-r-car-m3-starter-kit-chromium" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-r-car-m3-starter-kit-chromium" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
       <environmentvariables>
         <variable name="TARGET">
           <value>r-car-m3-starter-kit</value>
