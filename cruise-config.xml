@@ -3376,9 +3376,9 @@
                 <arg>no_email@genivigo.com</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="meta-ivi">
+              <exec command="bash" workingdir="meta-ivi/scripts">
                 <arg>-c</arg>
-                <arg>scripts/checkout</arg>
+                <arg>./checkout</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
