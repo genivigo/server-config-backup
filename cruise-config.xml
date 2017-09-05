@@ -4240,7 +4240,12 @@
         <resource>go-agent</resource>
       </resources>
     </agent>
-    <agent hostname="delta" ipaddress="172.17.0.2" uuid="4b262b48-0f33-442d-8063-6631302986c7" />
+    <agent hostname="delta" ipaddress="172.17.0.2" uuid="4b262b48-0f33-442d-8063-6631302986c7">
+      <resources>
+        <resource>yocto_build</resource>
+        <resource>delta</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
