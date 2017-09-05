@@ -1885,7 +1885,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="git://github.com/genivi/genivi-dev-platform" />
+        <git url="git://github.com/genivi/genivi-dev-platform" materialName="gdp" />
       </materials>
     </pipeline>
     <pipeline name="Franca-Eclipse-VM">
