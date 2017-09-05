@@ -4240,6 +4240,7 @@
         <resource>go-agent</resource>
       </resources>
     </agent>
+    <agent hostname="delta" ipaddress="104.218.17.42" uuid="4b262b48-0f33-442d-8063-6631302986c7" />
   </agents>
 </cruise>
 
