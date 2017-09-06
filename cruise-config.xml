@@ -3393,7 +3393,7 @@
               </exec>
               <exec command="bash" workingdir="meta-ivi/scripts">
                 <arg>-c</arg>
-                <arg>META_IVI_HOME=.. ./checkout</arg>
+                <arg>export META_IVI_HOME=.. &amp;&amp; ./checkout</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="meta-ivi">
