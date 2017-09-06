@@ -3381,9 +3381,9 @@
                 <arg>if [ -f scripts/checkout ]; then bash scripts/checkout; fi</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="meta-ivi">
+              <exec command="bash">
                 <arg>-c</arg>
-                <arg>export TEMPLATECONF=$PWD/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env</arg>
+                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash" workingdir="meta-ivi/build/conf">
