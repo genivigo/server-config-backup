@@ -3399,7 +3399,7 @@
               <exec command="bash" workingdir="meta-ivi">
                 <arg>-c</arg>
                 <arg>export TEMPLATECONF=$PWD/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env</arg>
-                <runif status="any" />
+                <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="meta-ivi/build/conf">
                 <arg>-c</arg>
