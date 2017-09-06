@@ -3378,7 +3378,7 @@
               </exec>
               <exec command="bash" workingdir="meta-ivi">
                 <arg>-c</arg>
-                <arg>bash ./checkout</arg>
+                <arg>if [ -f scripts/checkout ]; then bash scripts/checkout; fi</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="meta-ivi">
