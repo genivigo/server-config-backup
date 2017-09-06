@@ -3421,9 +3421,9 @@
                 <arg>if [ $(find . -name 'quasar-image.bb' | wc -l) -ne 0 ] ;  then echo 'quasar-image' &gt;IMG_NAME ; fi</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="meta-ivi">
+              <exec command="bash">
                 <arg>-c</arg>
-                <arg>source poky/oe-init-build-env &amp;&amp; bitbake $(cat ../IMG_NAME)</arg>
+                <arg>export IMG_NAME=`source poky/oe-init-build-env | grep  image | head -n 1` &amp;&amp; source poky/oe-init-build-env &amp;&amp; bitbake $IMG_NAME</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
