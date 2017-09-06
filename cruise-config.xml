@@ -3401,7 +3401,7 @@
                 <arg>export TEMPLATECONF=$PWD/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env</arg>
                 <runif status="any" />
               </exec>
-              <exec command="bash" workingdir="build/conf">
+              <exec command="bash" workingdir="meta-ivi/build/conf">
                 <arg>-c</arg>
                 <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
