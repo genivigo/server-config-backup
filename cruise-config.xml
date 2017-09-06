@@ -3398,11 +3398,6 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>if [ $(find . -name 'nostromo-image.bb' | wc -l) -ne 0 ] ; then echo 'nostromo-image' &gt;IMG_NAME ; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
                 <arg>if [ $(find . -name 'orion-image.bb' | wc -l) -ne 0 ] ; then echo 'orion-image' &gt;IMG_NAME ; fi</arg>
                 <runif status="passed" />
               </exec>
