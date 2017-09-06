@@ -3395,7 +3395,7 @@
                 <arg>META_IVI_HOME=.. ./checkout</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
+              <exec command="bash" workingdir="meta-ivi">
                 <arg>-c</arg>
                 <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env</arg>
                 <runif status="any" />
