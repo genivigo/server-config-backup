@@ -3386,7 +3386,7 @@
                 <arg>mv meta-openembedded meta-ivi/</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="meta-ivi/scripts">
+              <exec command="bash" workingdir="meta-ivi">
                 <arg>-c</arg>
                 <arg>./checkout</arg>
                 <runif status="passed" />
