@@ -3406,7 +3406,7 @@
                 <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
+              <exec command="bash" workingdir="meta-ivi">
                 <arg>-c</arg>
                 <arg>source poky/oe-init-build-env &amp;&amp; bitbake -c fetch linux-yocto</arg>
                 <runif status="passed" />
