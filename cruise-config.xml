@@ -3376,11 +3376,6 @@
                 <arg>no_email@genivigo.com</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>mv meta-gplv2 meta-ivi/</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash" workingdir="meta-ivi/scripts">
                 <arg>-c</arg>
                 <arg>export META_IVI_HOME=.. &amp;&amp; bash ./checkout</arg>
