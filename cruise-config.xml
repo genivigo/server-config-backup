@@ -4219,6 +4219,7 @@
       <resources>
         <resource>delta</resource>
         <resource>ga_test</resource>
+        <resource>yocto_build</resource>
       </resources>
     </agent>
   </agents>
