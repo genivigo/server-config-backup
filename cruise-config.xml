@@ -2721,7 +2721,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl" />
+        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
       </materials>
     </pipeline>
   </pipelines>
