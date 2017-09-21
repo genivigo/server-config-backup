@@ -499,7 +499,7 @@
     </pipeline>
     <pipeline name="GDP-Yocto-raspberrypi2_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
-        <param name="branch">master</param>
+        <param name="branch">sdk_work</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
@@ -513,12 +513,12 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="#{branch}" materialName="genivi-dev-platform.git" />
+        <git url="http://github.com/GUNNARX/genivi-dev-platform.git" branch="#{branch}" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-raspberrypi3_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
-        <param name="branch">master</param>
+        <param name="branch">sdk_work</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
@@ -532,10 +532,13 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="http://github.com/GENIVI/genivi-dev-platform.git" branch="#{branch}" materialName="genivi-dev-platform.git" />
+        <git url="http://github.com/GUNNARX/genivi-dev-platform.git" branch="#{branch}" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-Minnowboard_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
+      <params>
+        <param name="branch">sdk_work</param>
+      </params>
       <environmentvariables>
         <variable name="TARGET">
           <value>minnowboard</value>
@@ -548,10 +551,13 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+        <git url="http://github.com/GUNNARX/genivi-dev-platform.git" branch="#{branch}" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-qemux86-64_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
+      <params>
+        <param name="branch">sdk_work</param>
+      </params>
       <environmentvariables>
         <variable name="TARGET">
           <value>qemux86-64</value>
@@ -561,10 +567,13 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+        <git url="http://github.com/GUNNARX/genivi-dev-platform.git" branch="#{branch}" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="GDP-Yocto-dragonboard-410c_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
+      <params>
+        <param name="branch">sdk_work</param>
+      </params>
       <environmentvariables>
         <variable name="TARGET">
           <value>dragonboard-410c</value>
@@ -577,7 +586,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="http://github.com/GENIVI/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+        <git url="http://github.com/GUNNARX/genivi-dev-platform.git" branch="#{branch}" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="Eclipse-for-SDK-2">
