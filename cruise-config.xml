@@ -547,7 +547,7 @@
           <value>true</value>
         </variable>
         <variable name="REUSE_STANDARD_SSTATE_DIR">
-          <value>true</value>
+          <value>false</value>
         </variable>
       </environmentvariables>
       <materials>
