@@ -4188,7 +4188,6 @@
     </agent>
     <agent hostname="c8776aa52222 (gunnarx)" ipaddress="172.17.0.1" uuid="cfad499e-6530-4e20-9013-ac7f484f5523">
       <resources>
-        <resource>ga_test</resource>
         <resource>renesas_binaries</resource>
         <resource>c8776aa52222</resource>
         <resource>Qt-seeder</resource>
@@ -4227,7 +4226,6 @@
     <agent hostname="delta" ipaddress="172.17.0.3" uuid="4b262b48-0f33-442d-8063-6631302986c7">
       <resources>
         <resource>delta</resource>
-        <resource>ga_test</resource>
         <resource>yocto_build</resource>
       </resources>
     </agent>
