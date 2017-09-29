@@ -4231,7 +4231,7 @@
         <resource>yocto_build</resource>
       </resources>
     </agent>
-    <agent hostname="go-agent-genivi" ipaddress="176.10.244.80" uuid="0517aef9-4404-47f1-b4c1-318cc04839f3" />
+    <agent hostname="go-agent-genivi" ipaddress="172.17.0.2" uuid="0517aef9-4404-47f1-b4c1-318cc04839f3" />
   </agents>
 </cruise>
 
