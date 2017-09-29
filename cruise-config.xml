@@ -537,7 +537,7 @@
     </pipeline>
     <pipeline name="GDP-Yocto-Minnowboard_SDK" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
-        <param name="branch">master</param>
+        <param name="branch">ci15</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
