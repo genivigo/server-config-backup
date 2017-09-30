@@ -4237,6 +4237,7 @@
         <resource>ga_test</resource>
       </resources>
     </agent>
+    <agent hostname="go-agentest" ipaddress="104.227.2.122" uuid="83bf2022-1361-42fb-841b-3a1622301bc0" isDisabled="true" />
   </agents>
 </cruise>
 
