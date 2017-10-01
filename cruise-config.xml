@@ -4239,6 +4239,7 @@
       <resources>
         <resource>ga_test</resource>
         <resource>elmer</resource>
+        <resource>yocto_build</resource>
       </resources>
     </agent>
   </agents>
