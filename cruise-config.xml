@@ -4232,7 +4232,12 @@
         <resource>yocto_build</resource>
       </resources>
     </agent>
-    <agent hostname="elmer" ipaddress="172.17.0.2" uuid="c3330ca9-86d0-4e41-869b-95256e438c8b" />
+    <agent hostname="elmer" ipaddress="172.17.0.2" uuid="c3330ca9-86d0-4e41-869b-95256e438c8b">
+      <resources>
+        <resource>ga_test</resource>
+        <resource>elmer</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
