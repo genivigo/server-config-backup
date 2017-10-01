@@ -301,6 +301,9 @@
       </materials>
     </pipeline>
     <pipeline name="GDP-dragonboard-410c" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+      <params>
+        <param name="agent">elmer</param>
+      </params>
       <environmentvariables>
         <variable name="TARGET">
           <value>dragonboard-410c</value>
