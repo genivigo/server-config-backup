@@ -4235,7 +4235,7 @@
         <resource>yocto_build</resource>
       </resources>
     </agent>
-    <agent hostname="elmer" ipaddress="176.10.244.80" uuid="184e27f3-7008-4110-85b3-c6d0eeb1e68b" />
+    <agent hostname="elmer" ipaddress="172.17.0.2" uuid="184e27f3-7008-4110-85b3-c6d0eeb1e68b" />
   </agents>
 </cruise>
 
