@@ -4237,6 +4237,7 @@
         <resource>ga_test</resource>
       </resources>
     </agent>
+    <agent hostname="go-agent-genivi" ipaddress="176.10.244.80" uuid="3a776def-3721-42d0-9f4e-26dee799b840" isDisabled="true" />
   </agents>
 </cruise>
 
