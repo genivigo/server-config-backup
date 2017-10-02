@@ -4223,12 +4223,6 @@
         <resource>deploy_gunnarx</resource>
       </resources>
     </agent>
-    <agent hostname="go-agent (Luxoft/Pelagicore)" ipaddress="172.31.173.125" uuid="5486b7c8-54b0-46f4-a1c2-ea181437b038" isDisabled="true">
-      <resources>
-        <resource>yocto_build</resource>
-        <resource>go-agent</resource>
-      </resources>
-    </agent>
     <agent hostname="delta" ipaddress="172.17.0.3" uuid="4b262b48-0f33-442d-8063-6631302986c7">
       <resources>
         <resource>delta</resource>
