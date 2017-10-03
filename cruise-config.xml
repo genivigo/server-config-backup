@@ -3663,7 +3663,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>chmod 755 */results/sdk/oecore-*toolchain*.sh gdp-sdk/capi*/bin/*x86_64 || true</arg>
+                <arg>chmod 755 */results/staging/sdk/oecore-*toolchain*.sh gdp-sdk/capi*/bin/*x86_64 || true</arg>
                 <runif status="passed" />
               </exec>
               <exec command="chmod">
