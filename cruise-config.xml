@@ -3653,7 +3653,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv #{MACHINE}/results/genivi-dev-platform-*/license.manifest gdp-sdk/license.manifest.#{MACHINE}</arg>
+                <arg>mv #{MACHINE}/results/genivi-dev-platform-*/license.manifest gdp-sdk/license.manifest.#{MACHINE} || true</arg>
                 <runif status="passed" />
               </exec>
               <exec command="mkdir">
