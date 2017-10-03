@@ -3674,7 +3674,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv ./#{MACHINE}/results/sdk/oecore-*toolchain*.sh ./gdp-sdk/ &amp;&amp; mkdir -p ./gdp-sdk/yocto-sdk/#{MACHINE}</arg>
+                <arg>mv ./#{MACHINE}/results/staging/sdk/oecore-*toolchain*.sh ./gdp-sdk/ &amp;&amp; mkdir -p ./gdp-sdk/yocto-sdk/#{MACHINE}</arg>
                 <runif status="passed" />
               </exec>
               <exec command="tar">
