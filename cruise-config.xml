@@ -2409,7 +2409,7 @@
     <pipeline name="Wipe_tmp_dirs5" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp</param>
-        <param name="agent">Pelagic_Agent</param>
+        <param name="agent">pelagic-agent</param>
       </params>
       <materials>
         <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
