@@ -457,7 +457,7 @@
         <pipeline pipelineName="capicxx-core-tools" stageName="build" materialName="capicxx-core-tools" />
         <pipeline pipelineName="capicxx-dbus-tools" stageName="build" materialName="capicxx-dbus-tools" />
         <pipeline pipelineName="capicxx-someip-tools" stageName="build" materialName="capicxx-someip-tools" />
-        <pipeline pipelineName="GDP-Yocto-raspberrypi3_SDK" stageName="build" materialName="yocto-sdk-raspberrypi2" />
+        <pipeline pipelineName="GDP-Yocto-raspberrypi3_SDK" stageName="build" materialName="yocto-sdk-raspberrypi3" />
       </materials>
     </pipeline>
     <pipeline name="GDP-SDE-minnowboard" isLocked="false" template="GDP_SDE_generic">
