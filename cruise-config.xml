@@ -420,7 +420,7 @@
       </params>
       <environmentvariables>
         <variable name="VMNAME">
-          <value>gdp-sdk-#{MACHINE}</value>
+          <value>gdp-sde-#{MACHINE}</value>
         </variable>
         <variable name="VERSION">
           <value>snapshot</value>
@@ -443,7 +443,7 @@
       </params>
       <environmentvariables>
         <variable name="VMNAME">
-          <value>gdp-sdk-#{MACHINE}</value>
+          <value>gdp-sde-#{MACHINE}</value>
         </variable>
         <variable name="VERSION">
           <value>snapshot</value>
@@ -2155,7 +2155,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv gdp-sdk-*201* gdp-sdk</arg>
+                <arg>mv gdp-sde-*201* gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
@@ -2493,7 +2493,7 @@
       </params>
       <environmentvariables>
         <variable name="VMNAME">
-          <value>gdp-sdk-#{MACHINE}</value>
+          <value>gdp-sde-#{MACHINE}</value>
         </variable>
       </environmentvariables>
       <materials>
@@ -3626,13 +3626,13 @@
               </exec>
               <exec command="tar">
                 <arg>cfz</arg>
-                <arg>gdp-sdk-#{MACHINE}.tar.gz</arg>
+                <arg>gdp-sde-#{MACHINE}.tar.gz</arg>
                 <arg>gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
             <artifacts>
-              <artifact src="gdp-sdk-#{MACHINE}.tar.gz" />
+              <artifact src="gdp-sde-#{MACHINE}.tar.gz" />
             </artifacts>
           </job>
         </jobs>
@@ -3640,7 +3640,7 @@
       <stage name="CreateVM">
         <environmentvariables>
           <variable name="VMNAME">
-            <value>gdp-sdk-#{MACHINE}</value>
+            <value>gdp-sde-#{MACHINE}</value>
           </variable>
         </environmentvariables>
         <jobs>
@@ -3650,7 +3650,7 @@
                 <value>#{MACHINE}</value>
               </variable>
               <variable name="VMNAME">
-                <value>gdp-sdk-#{MACHINE}</value>
+                <value>gdp-sde-#{MACHINE}</value>
               </variable>
             </environmentvariables>
             <tasks>
@@ -3662,12 +3662,12 @@
                 <arg>tar xf ../Qt*.tar.bz2</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk-#{MACHINE}.tar.gz">
+              <fetchartifact pipeline="" stage="Assemble" job="gdp-sdk" srcfile="gdp-sde-#{MACHINE}.tar.gz">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="tar" workingdir="homedir">
                 <arg>xfz</arg>
-                <arg>../gdp-sdk-#{MACHINE}.tar.gz</arg>
+                <arg>../gdp-sde-#{MACHINE}.tar.gz</arg>
                 <runif status="passed" />
               </exec>
               <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="homedir">
@@ -3709,7 +3709,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>SIZE=$(du -hs vimage_temp | awk '{print $1}') &amp;&amp; mv vimage_temp gdp-sdk-#{MACHINE}-virtualbox-image_$(cat FILESTAMP)_\($SIZE\).tar.gz</arg>
+                <arg>SIZE=$(du -hs vimage_temp | awk '{print $1}') &amp;&amp; mv vimage_temp gdp-sde-#{MACHINE}-virtualbox-image_$(cat FILESTAMP)_\($SIZE\).tar.gz</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
@@ -3728,7 +3728,7 @@
               <resource>vagrant</resource>
             </resources>
             <artifacts>
-              <artifact src="gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz" dest="results" />
+              <artifact src="gdp-sde-#{MACHINE}-virtualbox-image*.tar.gz" dest="results" />
               <artifact src="sources.tar.gz" dest="results" />
             </artifacts>
           </job>
@@ -3784,7 +3784,7 @@
               </exec>
               <exec command="bash" workingdir="results">
                 <arg>-c</arg>
-                <arg>for f in gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz ; do md5sum "$f" &gt;"$f.md5" ; done</arg>
+                <arg>for f in gdp-sde-#{MACHINE}-virtualbox-image*.tar.gz ; do md5sum "$f" &gt;"$f.md5" ; done</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
@@ -3794,7 +3794,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp results/gdp-sdk-#{MACHINE}-virtualbox-image* "$RELEASE_DIR/$VERSION/"</arg>
+                <arg>cp results/gdp-sde-#{MACHINE}-virtualbox-image* "$RELEASE_DIR/$VERSION/"</arg>
                 <runif status="any" />
               </exec>
             </tasks>
@@ -3873,13 +3873,13 @@
               </exec>
               <exec command="tar">
                 <arg>cfz</arg>
-                <arg>gdp-sdk-#{MACHINE}.tar.gz</arg>
+                <arg>gdp-sde-#{MACHINE}.tar.gz</arg>
                 <arg>gdp-sdk</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
             <artifacts>
-              <artifact src="gdp-sdk-#{MACHINE}.tar.gz" />
+              <artifact src="gdp-sde-#{MACHINE}.tar.gz" />
             </artifacts>
           </job>
         </jobs>
@@ -3887,7 +3887,7 @@
       <stage name="CreateVM">
         <environmentvariables>
           <variable name="VMNAME">
-            <value>gdp-sdk-#{MACHINE}</value>
+            <value>gdp-sde-#{MACHINE}</value>
           </variable>
         </environmentvariables>
         <jobs>
@@ -3897,7 +3897,7 @@
                 <value>#{MACHINE}</value>
               </variable>
               <variable name="VMNAME">
-                <value>gdp-sdk-#{MACHINE}</value>
+                <value>gdp-sde-#{MACHINE}</value>
               </variable>
             </environmentvariables>
             <tasks>
@@ -3909,12 +3909,12 @@
                 <arg>tar xf ../Qt*.tar.bz2</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="" stage="Assemble" job="gdp-sdk" srcfile="gdp-sdk-#{MACHINE}.tar.gz">
+              <fetchartifact pipeline="" stage="Assemble" job="gdp-sdk" srcfile="gdp-sde-#{MACHINE}.tar.gz">
                 <runif status="passed" />
               </fetchartifact>
               <exec command="tar" workingdir="homedir">
                 <arg>xfz</arg>
-                <arg>../gdp-sdk-#{MACHINE}.tar.gz</arg>
+                <arg>../gdp-sde-#{MACHINE}.tar.gz</arg>
                 <runif status="passed" />
               </exec>
               <fetchartifact pipeline="DLT-Viewer" stage="stage" job="job" srcdir="dlt-viewer" dest="homedir">
@@ -3956,7 +3956,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>SIZE=$(du -hs vimage_temp | awk '{print $1}') &amp;&amp; mv vimage_temp gdp-sdk-#{MACHINE}-virtualbox-image_$(cat FILESTAMP)_\($SIZE\).tar.gz</arg>
+                <arg>SIZE=$(du -hs vimage_temp | awk '{print $1}') &amp;&amp; mv vimage_temp gdp-sde-#{MACHINE}-virtualbox-image_$(cat FILESTAMP)_\($SIZE\).tar.gz</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
@@ -3975,7 +3975,7 @@
               <resource>vagrant</resource>
             </resources>
             <artifacts>
-              <artifact src="gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz" dest="results" />
+              <artifact src="gdp-sde-#{MACHINE}-virtualbox-image*.tar.gz" dest="results" />
               <artifact src="sources.tar.gz" dest="results" />
             </artifacts>
           </job>
@@ -4031,7 +4031,7 @@
               </exec>
               <exec command="bash" workingdir="results">
                 <arg>-c</arg>
-                <arg>for f in gdp-sdk-#{MACHINE}-virtualbox-image*.tar.gz ; do md5sum "$f" &gt;"$f.md5" ; done</arg>
+                <arg>for f in gdp-sde-#{MACHINE}-virtualbox-image*.tar.gz ; do md5sum "$f" &gt;"$f.md5" ; done</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
@@ -4041,7 +4041,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp results/gdp-sdk-#{MACHINE}-virtualbox-image* "$RELEASE_DIR/$VERSION/"</arg>
+                <arg>cp results/gdp-sde-#{MACHINE}-virtualbox-image* "$RELEASE_DIR/$VERSION/"</arg>
                 <runif status="any" />
               </exec>
             </tasks>
