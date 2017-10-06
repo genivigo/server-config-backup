@@ -3794,7 +3794,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp results/gdp-sde-#{MACHINE}-virtualbox-image* "$RELEASE_DIR/$VERSION/"</arg>
+                <arg>cp results/gdp-sd[ke]-#{MACHINE}-virtualbox-image* "$RELEASE_DIR/$VERSION/"</arg>
                 <runif status="any" />
               </exec>
             </tasks>
@@ -4041,7 +4041,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp results/gdp-sde-#{MACHINE}-virtualbox-image* "$RELEASE_DIR/$VERSION/"</arg>
+                <arg>cp results/gdp-sd[ke]-#{MACHINE}-virtualbox-image* "$RELEASE_DIR/$VERSION/"</arg>
                 <runif status="any" />
               </exec>
             </tasks>
