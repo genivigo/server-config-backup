@@ -3784,7 +3784,7 @@
               </exec>
               <exec command="bash" workingdir="results">
                 <arg>-c</arg>
-                <arg>for f in gdp-sde-#{MACHINE}-virtualbox-image*.tar.gz ; do md5sum "$f" &gt;"$f.md5" ; done</arg>
+                <arg>for f in gdp-sd[ke]-#{MACHINE}-virtualbox-image*.tar.gz ; do md5sum "$f" &gt;"$f.md5" ; done</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
