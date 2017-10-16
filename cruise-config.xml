@@ -402,6 +402,241 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="GDP_Release_Builds">
+    <authorization>
+      <view>
+        <user>guest</user>
+        <role>Guest</role>
+      </view>
+      <admins>
+        <role>GDP_Developer</role>
+      </admins>
+    </authorization>
+    <pipeline name="Release-qemux86-64" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>qemux86-64</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>gdp-master-snapshot</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-minnowboard" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>gdp-master-snapshot</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-raspberrypi-2" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>raspberrypi2</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>gdp-master-snapshot</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-raspberrypi-3" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>raspberrypi3</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>gdp-master-snapshot</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-dragonboard-410c" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>dragonboard-410c</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>gdp-master-snapshot</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-r-car-m3-starter-kit" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>gdp-master-snapshot</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-minnowboard-chromium" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>chromium-snapshot</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-minnowboard-SDL" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>sdl-snapshot</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/genivi/genivi-dev-platform" branch="feature_sdl_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-r-car-m3-starter-kit-chromium-v13" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>chromium-snapshot</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-r-car-m3-starter-kit-chromium-v12" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>chromium-snapshot</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium_v12" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+  </pipelines>
+  <pipelines group="Feature_Chromium">
+    <pipeline name="Chromium-r-car-m3-starter-kit" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Chromium-minnowboard" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Chromium-qemu_x86-64" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>qemux86-64</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Chromium-raspberrypi2" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>raspberrypi2</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Chromium-raspberrypi3" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>raspberrypi3</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Chromium-dragonboard-410c" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>dragonboard-410c</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+  </pipelines>
+  <pipelines group="Feature_SDL">
+    <pipeline name="SDL_minnowboard" template="Yocto_GDP_generic_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
+      </materials>
+    </pipeline>
+    <pipeline name="SDL_r-car-m3-starter-kit" template="Yocto_GDP_renesas_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
+      </materials>
+    </pipeline>
+    <pipeline name="SDL_qemux86-64" template="Yocto_GDP_renesas_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>qemux86-64</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
+      </materials>
+    </pipeline>
+  </pipelines>
   <pipelines group="GDP_Software_Developer_Environment">
     <authorization>
       <view>
@@ -650,241 +885,6 @@
           </job>
         </jobs>
       </stage>
-    </pipeline>
-  </pipelines>
-  <pipelines group="GDP_Release_Builds">
-    <authorization>
-      <view>
-        <user>guest</user>
-        <role>Guest</role>
-      </view>
-      <admins>
-        <role>GDP_Developer</role>
-      </admins>
-    </authorization>
-    <pipeline name="Release-qemux86-64" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>qemux86-64</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>gdp-master-snapshot</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Release-minnowboard" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>minnowboard</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>gdp-master-snapshot</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Release-raspberrypi-2" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>raspberrypi2</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>gdp-master-snapshot</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Release-raspberrypi-3" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>raspberrypi3</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>gdp-master-snapshot</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Release-dragonboard-410c" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>dragonboard-410c</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>gdp-master-snapshot</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Release-r-car-m3-starter-kit" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>r-car-m3-starter-kit</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>gdp-master-snapshot</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Release-minnowboard-chromium" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>minnowboard</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>chromium-snapshot</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Release-minnowboard-SDL" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>minnowboard</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>sdl-snapshot</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform" branch="feature_sdl_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Release-r-car-m3-starter-kit-chromium-v13" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>r-car-m3-starter-kit</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>chromium-snapshot</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Release-r-car-m3-starter-kit-chromium-v12" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>r-car-m3-starter-kit</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>chromium-snapshot</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium_v12" autoUpdate="false" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-  </pipelines>
-  <pipelines group="Feature_Chromium">
-    <pipeline name="Chromium-r-car-m3-starter-kit" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>r-car-m3-starter-kit</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Chromium-minnowboard" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>minnowboard</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Chromium-qemu_x86-64" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>qemux86-64</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Chromium-raspberrypi2" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>raspberrypi2</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Chromium-raspberrypi3" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>raspberrypi3</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Chromium-dragonboard-410c" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>dragonboard-410c</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-  </pipelines>
-  <pipelines group="Feature_SDL">
-    <pipeline name="SDL_minnowboard" template="Yocto_GDP_generic_script_with_artifacts">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>minnowboard</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
-      </materials>
-    </pipeline>
-    <pipeline name="SDL_r-car-m3-starter-kit" template="Yocto_GDP_renesas_script_with_artifacts">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>r-car-m3-starter-kit</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
-      </materials>
-    </pipeline>
-    <pipeline name="SDL_qemux86-64" template="Yocto_GDP_renesas_script_with_artifacts">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>qemux86-64</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
-      </materials>
     </pipeline>
   </pipelines>
   <pipelines group="GDP_QtAS_Spin">
