@@ -1389,7 +1389,7 @@
               </exec>
             </tasks>
             <artifacts>
-              <artifact src="capicxx-dbus-runtime/build/*.so*" />
+              <artifact src="capicxx-dbus-runtime/build" />
             </artifacts>
           </job>
         </jobs>
