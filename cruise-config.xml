@@ -4106,6 +4106,7 @@
         <resource>c8776aa52222</resource>
         <resource>Qt-seeder</resource>
         <resource>yocto_build</resource>
+        <resource>cmake</resource>
       </resources>
     </agent>
     <agent hostname="go-agent1 (GENIVI)" ipaddress="172.17.0.2" uuid="1bb12ac4-c35f-4111-9eba-a2e709d5cf7b">
@@ -4114,6 +4115,7 @@
         <resource>go-agent1</resource>
         <resource>renesas_binaries</resource>
         <resource>deploy_genivi</resource>
+        <resource>cmake</resource>
       </resources>
     </agent>
     <agent hostname="go-agent2 (GENIVI)" ipaddress="172.17.0.2" uuid="198e29c2-fbfa-4e70-93c6-b9df35fa720b">
@@ -4121,6 +4123,7 @@
         <resource>yocto_build</resource>
         <resource>go-agent2</resource>
         <resource>renesas_binaries</resource>
+        <resource>cmake</resource>
       </resources>
     </agent>
     <agent hostname="vbox-agent" ipaddress="10.1.2.56" uuid="b8dcc090-1141-431e-8318-4d03edb96858">
@@ -4135,18 +4138,21 @@
       <resources>
         <resource>delta</resource>
         <resource>yocto_build</resource>
+        <resource>cmake</resource>
       </resources>
     </agent>
     <agent hostname="elmer" ipaddress="172.17.0.2" uuid="184e27f3-7008-4110-85b3-c6d0eeb1e68b">
       <resources>
         <resource>yocto_build</resource>
         <resource>elmer</resource>
+        <resource>cmake</resource>
       </resources>
     </agent>
     <agent hostname="pelagic-agent" ipaddress="172.17.0.2" uuid="f4bda6b1-3679-4bd9-8edb-e234953217f3">
       <resources>
         <resource>yocto_build</resource>
         <resource>pelagic-agent</resource>
+        <resource>cmake</resource>
       </resources>
     </agent>
   </agents>
