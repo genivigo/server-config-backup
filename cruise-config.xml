@@ -793,7 +793,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Chromium">
+  <pipelines group="Feature_Chromium">
     <pipeline name="Chromium-r-car-m3-starter-kit" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
       <environmentvariables>
         <variable name="TARGET">
@@ -852,6 +852,38 @@
       </environmentvariables>
       <materials>
         <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+  </pipelines>
+  <pipelines group="Feature_SDL">
+    <pipeline name="SDL_minnowboard" template="Yocto_GDP_generic_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
+      </materials>
+    </pipeline>
+    <pipeline name="SDL_r-car-m3-starter-kit" template="Yocto_GDP_renesas_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
+      </materials>
+    </pipeline>
+    <pipeline name="SDL_qemux86-64" template="Yocto_GDP_renesas_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>qemux86-64</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
       </materials>
     </pipeline>
   </pipelines>
@@ -2632,38 +2664,6 @@
       <timer>0 0 5 ? * SUN</timer>
       <materials>
         <git url="https://github.com/GENIVI/baseline_ci_helper" />
-      </materials>
-    </pipeline>
-  </pipelines>
-  <pipelines group="Feature_SDL">
-    <pipeline name="SDL_minnowboard" template="Yocto_GDP_generic_script_with_artifacts">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>minnowboard</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
-      </materials>
-    </pipeline>
-    <pipeline name="SDL_r-car-m3-starter-kit" template="Yocto_GDP_renesas_script_with_artifacts">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>r-car-m3-starter-kit</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
-      </materials>
-    </pipeline>
-    <pipeline name="SDL_qemux86-64" template="Yocto_GDP_renesas_script_with_artifacts">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>qemux86-64</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
       </materials>
     </pipeline>
   </pipelines>
