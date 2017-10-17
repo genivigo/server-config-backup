@@ -420,7 +420,7 @@
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
         </variable>
-        <variable name="STANDARD_RELASE_BUILD">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -436,7 +436,7 @@
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
         </variable>
-        <variable name="STANDARD_RELASE_BUILD">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -452,7 +452,7 @@
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
         </variable>
-        <variable name="STANDARD_RELASE_BUILD">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -468,7 +468,7 @@
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
         </variable>
-        <variable name="STANDARD_RELASE_BUILD">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -484,7 +484,7 @@
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
         </variable>
-        <variable name="STANDARD_RELASE_BUILD">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -500,7 +500,7 @@
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
         </variable>
-        <variable name="STANDARD_RELASE_BUILD">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -516,7 +516,7 @@
         <variable name="RELEASE">
           <value>chromium-snapshot</value>
         </variable>
-        <variable name="STANDARD_RELASE_BUILD">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -532,7 +532,7 @@
         <variable name="RELEASE">
           <value>sdl-snapshot</value>
         </variable>
-        <variable name="STANDARD_RELASE_BUILD">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -545,7 +545,7 @@
         <variable name="TARGET">
           <value>r-car-m3-starter-kit</value>
         </variable>
-        <variable name="STANDARD_RELASE_BUILD">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
         <variable name="RELEASE">
@@ -564,7 +564,7 @@
         <variable name="RELEASE">
           <value>chromium-snapshot</value>
         </variable>
-        <variable name="STANDARD_RELASE_BUILD">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -580,7 +580,7 @@
         <variable name="RELEASE">
           <value>chromium-snapshot</value>
         </variable>
-        <variable name="STANDARD_RELASE_BUILD">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -3046,7 +3046,7 @@
       <stage name="build">
         <approval type="manual" />
         <environmentvariables>
-          <variable name="STANDARD_RELASE_BUILD">
+          <variable name="STANDARD_RELEASE_BUILD">
             <value>true</value>
           </variable>
         </environmentvariables>
@@ -3079,7 +3079,7 @@
       <stage name="build">
         <approval type="manual" />
         <environmentvariables>
-          <variable name="STANDARD_RELASE_BUILD">
+          <variable name="STANDARD_RELEASE_BUILD">
             <value>true</value>
           </variable>
         </environmentvariables>
