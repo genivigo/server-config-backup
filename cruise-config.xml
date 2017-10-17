@@ -1317,7 +1317,6 @@
     </pipeline>
     <pipeline name="capicxx-core-runtime" labeltemplate="master:${capicxx-core-runtime.git[:8]}-build:${COUNT}" isLocked="false" template="CMAKE_build">
       <params>
-        <param name="WORKING_DIR">.</param>
         <param name="BUILD_DIR">build</param>
       </params>
       <materials>
@@ -1457,7 +1456,7 @@
     </pipeline>
     <pipeline name="vSomeIP" template="CMAKE_build">
       <params>
-        <param name="WORKING_DIR">vSomeIP</param>
+        <param name="BUILD_DIR">vSomeIP/build</param>
       </params>
       <environmentvariables>
         <variable name="GTEST_ROOT">
@@ -3272,21 +3271,21 @@
         <jobs>
           <job name="cmake_and_make">
             <tasks>
-              <exec command="rm" workingdir="#{WORKING_DIR}">
+              <exec command="rm">
                 <arg>-rf</arg>
-                <arg>build</arg>
+                <arg>#{BUILD_DIR}</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="mkdir" workingdir="#{WORKING_DIR}">
+              <exec command="mkdir">
                 <arg>-p</arg>
-                <arg>build</arg>
+                <arg>#{BUILD_DIR}</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="cmake" workingdir="#{WORKING_DIR}/build">
+              <exec command="cmake" workingdir="#{BUILD_DIR}">
                 <arg>..</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="make" workingdir="#{WORKING_DIR}/build">
+              <exec command="make" workingdir="#{BUILD_DIR}">
                 <arg>V=1</arg>
                 <arg>-j8</arg>
                 <runif status="passed" />
@@ -3296,7 +3295,7 @@
               <resource>cmake</resource>
             </resources>
             <artifacts>
-              <artifact src="#{WORKING_DIR}/build" />
+              <artifact src="#{BUILD_DIR}" />
             </artifacts>
           </job>
         </jobs>
