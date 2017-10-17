@@ -540,7 +540,7 @@
         <git url="https://github.com/genivi/genivi-dev-platform" branch="feature_sdl_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Release-r-car-m3-starter-kit-SDL" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-r-car-m3-starter-kit-SDL" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
       <environmentvariables>
         <variable name="TARGET">
           <value>r-car-m3-starter-kit</value>
