@@ -1318,6 +1318,7 @@
     <pipeline name="capicxx-core-runtime" labeltemplate="master:${capicxx-core-runtime.git[:8]}-build:${COUNT}" isLocked="false" template="CMAKE_build">
       <params>
         <param name="WORKING_DIR">.</param>
+        <param name="BUILD_DIR">build</param>
       </params>
       <materials>
         <git url="https://github.com/GENIVI/capicxx-core-runtime" materialName="capicxx-core-runtime.git" />
