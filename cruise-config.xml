@@ -420,6 +420,9 @@
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
         </variable>
+        <variable name="STANDARD_RELASE_BUILD">
+          <value>true</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
@@ -432,6 +435,9 @@
         </variable>
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
+        </variable>
+        <variable name="STANDARD_RELASE_BUILD">
+          <value>true</value>
         </variable>
       </environmentvariables>
       <materials>
@@ -446,6 +452,9 @@
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
         </variable>
+        <variable name="STANDARD_RELASE_BUILD">
+          <value>true</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
@@ -458,6 +467,9 @@
         </variable>
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
+        </variable>
+        <variable name="STANDARD_RELASE_BUILD">
+          <value>true</value>
         </variable>
       </environmentvariables>
       <materials>
@@ -472,6 +484,9 @@
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
         </variable>
+        <variable name="STANDARD_RELASE_BUILD">
+          <value>true</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
@@ -484,6 +499,9 @@
         </variable>
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
+        </variable>
+        <variable name="STANDARD_RELASE_BUILD">
+          <value>true</value>
         </variable>
       </environmentvariables>
       <materials>
@@ -498,6 +516,9 @@
         <variable name="RELEASE">
           <value>chromium-snapshot</value>
         </variable>
+        <variable name="STANDARD_RELASE_BUILD">
+          <value>true</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
@@ -507,6 +528,25 @@
       <environmentvariables>
         <variable name="TARGET">
           <value>minnowboard</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>sdl-snapshot</value>
+        </variable>
+        <variable name="STANDARD_RELASE_BUILD">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/genivi/genivi-dev-platform" branch="feature_sdl_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-r-car-m3-starter-kit-SDL" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+        <variable name="STANDARD_RELASE_BUILD">
+          <value>true</value>
         </variable>
         <variable name="RELEASE">
           <value>sdl-snapshot</value>
@@ -524,6 +564,9 @@
         <variable name="RELEASE">
           <value>chromium-snapshot</value>
         </variable>
+        <variable name="STANDARD_RELASE_BUILD">
+          <value>true</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
@@ -536,6 +579,9 @@
         </variable>
         <variable name="RELEASE">
           <value>chromium-snapshot</value>
+        </variable>
+        <variable name="STANDARD_RELASE_BUILD">
+          <value>true</value>
         </variable>
       </environmentvariables>
       <materials>
@@ -3000,7 +3046,7 @@
       <stage name="build">
         <approval type="manual" />
         <environmentvariables>
-          <variable name="RELEASE_BUILD">
+          <variable name="STANDARD_RELASE_BUILD">
             <value>true</value>
           </variable>
         </environmentvariables>
@@ -3033,7 +3079,7 @@
       <stage name="build">
         <approval type="manual" />
         <environmentvariables>
-          <variable name="RELEASE_BUILD">
+          <variable name="STANDARD_RELASE_BUILD">
             <value>true</value>
           </variable>
         </environmentvariables>
