@@ -484,7 +484,7 @@
           <value>raspberrypi3</value>
         </variable>
         <variable name="RELEASE">
-          <value>gdp-master-snapshot</value>
+          <value>13.0</value>
         </variable>
         <variable name="SOURCE_ARCHIVE">
           <value>true</value>
