@@ -448,6 +448,9 @@
         <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
+        <variable name="CREATE_RELEASE_DIR">
+          <value>true</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform" branch="release_master" autoUpdate="false" materialName="genivi-dev-platform.git" />
