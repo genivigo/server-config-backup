@@ -453,7 +453,7 @@
           <value>13.0</value>
         </variable>
         <variable name="REUSE_STANDARD_SSTATE_DIR">
-          <value>false</value>
+          <value>true</value>
         </variable>
         <variable name="SOURCE_ARCHIVE">
           <value>true</value>
