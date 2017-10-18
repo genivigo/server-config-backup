@@ -544,8 +544,8 @@
         <variable name="SOURCE_ARCHIVE">
           <value>true</value>
         </variable>
-        <variable name="REUSE_STANDARD_SSTATE_DIR">
-          <value>false</value>
+        <variable name="LAYER_ARCHIVE">
+          <value>true</value>
         </variable>
       </environmentvariables>
       <materials>
