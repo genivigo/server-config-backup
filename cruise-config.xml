@@ -532,8 +532,11 @@
         <variable name="RELEASE">
           <value>sdl-snapshot</value>
         </variable>
-        <variable name="STANDARD_RELEASE_BUILD">
+        <variable name="SOURCE_ARCHIVE">
           <value>true</value>
+        </variable>
+        <variable name="REUSE_STANDARD_SSTATE_DIR">
+          <value>false</value>
         </variable>
       </environmentvariables>
       <materials>
