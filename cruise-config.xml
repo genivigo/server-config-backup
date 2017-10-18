@@ -3141,6 +3141,7 @@
             </resources>
             <artifacts>
               <artifact src="staging/" />
+              <artifact src="releases" />
             </artifacts>
           </job>
         </jobs>
