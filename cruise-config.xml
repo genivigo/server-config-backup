@@ -581,6 +581,9 @@
         <variable name="LAYER_ARCHIVE">
           <value>true</value>
         </variable>
+        <variable name="COPY_LICENSES">
+          <value>false</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/genivi/genivi-dev-platform" branch="feature_sdl_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
