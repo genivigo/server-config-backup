@@ -458,6 +458,9 @@
         <variable name="SOURCE_ARCHIVE">
           <value>true</value>
         </variable>
+        <variable name="LAYER_ARCHIVE">
+          <value>true</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
