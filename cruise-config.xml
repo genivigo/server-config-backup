@@ -557,11 +557,14 @@
         <variable name="TARGET">
           <value>r-car-m3-starter-kit</value>
         </variable>
-        <variable name="STANDARD_RELEASE_BUILD">
+        <variable name="SOURCE_ARCHIVE">
           <value>true</value>
         </variable>
         <variable name="RELEASE">
           <value>sdl-snapshot</value>
+        </variable>
+        <variable name="LAYER_ARCHIVE">
+          <value>true</value>
         </variable>
       </environmentvariables>
       <materials>
