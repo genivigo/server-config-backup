@@ -429,7 +429,7 @@
         <variable name="REUSE_STANDARD_SSTATE_DIR">
           <value>false</value>
         </variable>
-        <variable name="CREATE_RELASE_DIR">
+        <variable name="CREATE_RELEASE_DIR">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -470,7 +470,7 @@
         <variable name="LAYER_ARCHIVE">
           <value>true</value>
         </variable>
-        <variable name="CREATE_RELASE_DIR">
+        <variable name="CREATE_RELEASE_DIR">
           <value>true</value>
         </variable>
       </environmentvariables>
