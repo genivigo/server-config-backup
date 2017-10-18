@@ -420,7 +420,7 @@
         <variable name="RELEASE">
           <value>gdp-master-snapshot</value>
         </variable>
-        <variable name="STANDARD_RELEASE_BUILD">
+        <variable name="SOURCE_ARCHIVE">
           <value>true</value>
         </variable>
       </environmentvariables>
