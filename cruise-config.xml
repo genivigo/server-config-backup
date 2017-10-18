@@ -2677,12 +2677,10 @@
       <materials>
         <git url="https://github.com/gunnarx/dummy" autoUpdate="false" />
         <pipeline pipelineName="Release-qemux86-64" stageName="build" materialName="qemux86-64" />
-        <pipeline pipelineName="Release-minnowboard" stageName="build" materialName="minnowboard" />
+        <pipeline pipelineName="Release-minnowboard-SDL" stageName="build" materialName="minnowboard" />
         <pipeline pipelineName="Release-raspberrypi-2" stageName="build" materialName="raspberrypi2" />
         <pipeline pipelineName="Release-raspberrypi-3" stageName="build" materialName="raspberrypi3" />
         <pipeline pipelineName="Release-dragonboard-410c" stageName="build" materialName="dragonboard-410c" />
-        <pipeline pipelineName="Release-r-car-m3-starter-kit" stageName="build" materialName="r-car-m3-starter-kit" />
-        <pipeline pipelineName="Release-minnowboard-chromium" stageName="build" materialName="minnowboard-chromium" />
       </materials>
     </pipeline>
     <pipeline name="Upload_PCore-SDL" isLocked="false">
@@ -2748,12 +2746,10 @@
       <materials>
         <git url="https://github.com/gunnarx/dummy" autoUpdate="false" />
         <pipeline pipelineName="Release-qemux86-64" stageName="build" materialName="qemux86-64" />
-        <pipeline pipelineName="Release-minnowboard" stageName="build" materialName="minnowboard" />
+        <pipeline pipelineName="Release-minnowboard-SDL" stageName="build" materialName="minnowboard" />
         <pipeline pipelineName="Release-raspberrypi-2" stageName="build" materialName="raspberrypi2" />
         <pipeline pipelineName="Release-raspberrypi-3" stageName="build" materialName="raspberrypi3" />
         <pipeline pipelineName="Release-dragonboard-410c" stageName="build" materialName="dragonboard-410c" />
-        <pipeline pipelineName="Release-r-car-m3-starter-kit" stageName="build" materialName="r-car-m3-starter-kit" />
-        <pipeline pipelineName="Release-minnowboard-chromium" stageName="build" materialName="minnowboard-chromium" />
       </materials>
     </pipeline>
     <pipeline name="Wipe_PCore_deployment_dir" isLocked="false" template="Wipe_dir_pattern">
@@ -4118,7 +4114,7 @@
               <fetchartifact pipeline="Release-dragonboard-410c" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_dragonboard">
                 <runif status="passed" />
               </fetchartifact>
-              <fetchartifact pipeline="Release-minnowboard" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_minnowboard">
+              <fetchartifact pipeline="Release-minnowboard-SDL" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_minnowboard">
                 <runif status="any" />
               </fetchartifact>
               <fetchartifact pipeline="Release-qemux86-64" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_qemux86-64">
@@ -4128,12 +4124,6 @@
                 <runif status="any" />
               </fetchartifact>
               <fetchartifact pipeline="Release-raspberrypi-3" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_raspberrypi3">
-                <runif status="any" />
-              </fetchartifact>
-              <fetchartifact pipeline="Release-r-car-m3-starter-kit" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_r-car-m3-starter-kit">
-                <runif status="any" />
-              </fetchartifact>
-              <fetchartifact pipeline="Release-minnowboard-chromium" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_minnowboard-chromium">
                 <runif status="any" />
               </fetchartifact>
               <exec command="bash">
