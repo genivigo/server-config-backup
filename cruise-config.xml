@@ -429,6 +429,9 @@
         <variable name="REUSE_STANDARD_SSTATE_DIR">
           <value>false</value>
         </variable>
+        <variable name="CREATE_RELASE_DIR">
+          <value>true</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/GENIVI/genivi-dev-platform" branch="release_master" autoUpdate="false" materialName="genivi-dev-platform.git" />
