@@ -450,7 +450,7 @@
           <value>raspberrypi2</value>
         </variable>
         <variable name="RELEASE">
-          <value>gdp-master-snapshot</value>
+          <value>13.0</value>
         </variable>
         <variable name="REUSE_STANDARD_SSTATE_DIR">
           <value>false</value>
