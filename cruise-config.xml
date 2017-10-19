@@ -417,19 +417,7 @@
         <variable name="TARGET">
           <value>qemux86-64</value>
         </variable>
-        <variable name="RELEASE">
-          <value>gdp-master-snapshot</value>
-        </variable>
-        <variable name="SOURCE_ARCHIVE">
-          <value>true</value>
-        </variable>
-        <variable name="LAYER_ARCHIVE">
-          <value>true</value>
-        </variable>
-        <variable name="REUSE_STANDARD_SSTATE_DIR">
-          <value>false</value>
-        </variable>
-        <variable name="CREATE_RELEASE_DIR">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -443,12 +431,9 @@
           <value>minnowboard</value>
         </variable>
         <variable name="RELEASE">
-          <value>gdp-master-snapshot</value>
+          <value>13.0</value>
         </variable>
         <variable name="STANDARD_RELEASE_BUILD">
-          <value>true</value>
-        </variable>
-        <variable name="CREATE_RELEASE_DIR">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -464,19 +449,7 @@
         <variable name="RELEASE">
           <value>13.0</value>
         </variable>
-        <variable name="REUSE_STANDARD_SSTATE_DIR">
-          <value>true</value>
-        </variable>
-        <variable name="SOURCE_ARCHIVE">
-          <value>true</value>
-        </variable>
-        <variable name="LAYER_ARCHIVE">
-          <value>true</value>
-        </variable>
-        <variable name="CREATE_RELEASE_DIR">
-          <value>true</value>
-        </variable>
-        <variable name="COPY_LICENSES">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -492,16 +465,7 @@
         <variable name="RELEASE">
           <value>13.0</value>
         </variable>
-        <variable name="SOURCE_ARCHIVE">
-          <value>true</value>
-        </variable>
-        <variable name="CREATE_RELEASE_DIR">
-          <value>true</value>
-        </variable>
-        <variable name="COPY_LICENSES">
-          <value>true</value>
-        </variable>
-        <variable name="LAYER_ARCHIVE">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -515,18 +479,9 @@
           <value>dragonboard-410c</value>
         </variable>
         <variable name="RELEASE">
-          <value>gdp-master-snapshot</value>
+          <value>13.0</value>
         </variable>
-        <variable name="SOURCE_ARCHIVE">
-          <value>true</value>
-        </variable>
-        <variable name="COPY_LICENSES">
-          <value>true</value>
-        </variable>
-        <variable name="LAYER_ARCHIVE">
-          <value>true</value>
-        </variable>
-        <variable name="CREATE_RELEASE_DIR">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -540,10 +495,19 @@
           <value>r-car-m3-starter-kit</value>
         </variable>
         <variable name="RELEASE">
-          <value>gdp-master-snapshot</value>
+          <value>13.0</value>
+        </variable>
+        <variable name="LAYER_ARCHIVE">
+          <value>true</value>
+        </variable>
+        <variable name="COPY_LICENSES">
+          <value>false</value>
+        </variable>
+        <variable name="CREATE_RELEASE_DIR">
+          <value>true</value>
         </variable>
         <variable name="STANDARD_RELEASE_BUILD">
-          <value>true</value>
+          <value>false</value>
         </variable>
       </environmentvariables>
       <materials>
@@ -556,7 +520,7 @@
           <value>minnowboard</value>
         </variable>
         <variable name="RELEASE">
-          <value>chromium-snapshot</value>
+          <value>13.0</value>
         </variable>
         <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
@@ -572,12 +536,9 @@
           <value>minnowboard</value>
         </variable>
         <variable name="RELEASE">
-          <value>sdl-snapshot</value>
+          <value>13.0</value>
         </variable>
-        <variable name="SOURCE_ARCHIVE">
-          <value>true</value>
-        </variable>
-        <variable name="LAYER_ARCHIVE">
+        <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
       </environmentvariables>
@@ -590,11 +551,11 @@
         <variable name="TARGET">
           <value>r-car-m3-starter-kit</value>
         </variable>
+        <variable name="RELEASE">
+          <value>13.0</value>
+        </variable>
         <variable name="SOURCE_ARCHIVE">
           <value>true</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>sdl-snapshot</value>
         </variable>
         <variable name="LAYER_ARCHIVE">
           <value>true</value>
@@ -619,7 +580,7 @@
           <value>r-car-m3-starter-kit</value>
         </variable>
         <variable name="RELEASE">
-          <value>chromium-snapshot</value>
+          <value>13.0</value>
         </variable>
         <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
@@ -635,10 +596,22 @@
           <value>r-car-m3-starter-kit</value>
         </variable>
         <variable name="RELEASE">
-          <value>chromium-snapshot</value>
+          <value>13.0</value>
+        </variable>
+        <variable name="SOURCE_ARCHIVE">
+          <value>true</value>
+        </variable>
+        <variable name="LAYER_ARCHIVE">
+          <value>true</value>
+        </variable>
+        <variable name="COPY_LICENSES">
+          <value>false</value>
+        </variable>
+        <variable name="CREATE_RELEASE_DIR">
+          <value>true</value>
         </variable>
         <variable name="STANDARD_RELEASE_BUILD">
-          <value>true</value>
+          <value>false</value>
         </variable>
       </environmentvariables>
       <materials>
