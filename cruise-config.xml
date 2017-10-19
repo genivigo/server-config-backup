@@ -3098,11 +3098,6 @@
     <pipeline name="Yocto_GDP_generic_release_renesas">
       <stage name="build">
         <approval type="manual" />
-        <environmentvariables>
-          <variable name="STANDARD_RELEASE_BUILD">
-            <value>true</value>
-          </variable>
-        </environmentvariables>
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
