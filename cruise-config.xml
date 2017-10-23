@@ -3149,6 +3149,11 @@
     <pipeline name="Yocto_GDP_generic_release_and_upload">
       <stage name="build">
         <approval type="manual" />
+        <environmentvariables>
+          <variable name="TARGET">
+            <value>#{TARGET}</value>
+          </variable>
+        </environmentvariables>
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
