@@ -4241,7 +4241,7 @@
         <resource>cmake</resource>
       </resources>
     </agent>
-    <agent hostname="elmer" ipaddress="172.17.0.2" uuid="184e27f3-7008-4110-85b3-c6d0eeb1e68b" isDisabled="true">
+    <agent hostname="elmer" ipaddress="172.17.0.2" uuid="184e27f3-7008-4110-85b3-c6d0eeb1e68b">
       <resources>
         <resource>yocto_build</resource>
         <resource>elmer</resource>
