@@ -336,6 +336,11 @@
         <role>GDP_Developer</role>
       </operate>
     </authorization>
+    <pipeline name="GDP-Yocto-minnowboard-Qt5.6.3" template="Yocto_GDP_generic_script_with_artifacts">
+      <materials>
+        <git url="https://github.com/chbae/genivi-dev-platform" branch="qt5.6.3" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Pull_Requests">
     <authorization>
