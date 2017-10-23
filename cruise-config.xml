@@ -337,6 +337,41 @@
       </operate>
     </authorization>
     <pipeline name="GDP-Yocto-minnowboard-Qt5.6.3" template="Yocto_GDP_generic_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/chbae/genivi-dev-platform" branch="qt5.6.3" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-r-car-m3-starter-kit-Qt5.6.3" template="Yocto_GDP_generic_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/chbae/genivi-dev-platform" branch="qt5.6.3" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-raspberrypi3-Qt5.6.3" template="Yocto_GDP_generic_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>raspberrypi3</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/chbae/genivi-dev-platform" branch="qt5.6.3" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-Yocto-dragonboard-410c-Qt5.6.3" template="Yocto_GDP_generic_script_with_artifacts">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>dragonboard-410c</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="https://github.com/chbae/genivi-dev-platform" branch="qt5.6.3" />
       </materials>
