@@ -3173,6 +3173,12 @@
         <jobs>
           <job name="copy_files">
             <tasks>
+              <fetchartifact pipeline="" stage="build" job="init_and_bitbake" srcdir="staging">
+                <runif status="passed" />
+              </fetchartifact>
+              <fetchartifact pipeline="" stage="build" job="init_and_bitbake" srcdir="release">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>date +%Y%m%d_%H%M%S &gt;timestamp</arg>
@@ -3193,9 +3199,6 @@
                 <arg>mv release $DEPLOY_DIR/$RELEASE/#{TARGET}/$(cat timestamp)/  || true</arg>
                 <runif status="any" />
               </exec>
-              <fetchartifact pipeline="" stage="build" job="init_and_bitbake" srcdir="staging">
-                <runif status="passed" />
-              </fetchartifact>
             </tasks>
             <resources>
               <resource>#{SERVER_RESOURCE}</resource>
