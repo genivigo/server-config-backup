@@ -630,32 +630,24 @@
         <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Release-r-car-m3-starter-kit-chromium-v12" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
+    <pipeline name="Release-upload-test" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_and_upload">
+      <params>
+        <param name="TARGET">minnowboard</param>
+        <param name="SERVER_RESOURCE">deploy_genivi</param>
+      </params>
       <environmentvariables>
         <variable name="TARGET">
-          <value>r-car-m3-starter-kit</value>
+          <value>#{TARGET}</value>
         </variable>
         <variable name="RELEASE">
           <value>13.0</value>
         </variable>
-        <variable name="SOURCE_ARCHIVE">
-          <value>true</value>
-        </variable>
-        <variable name="LAYER_ARCHIVE">
-          <value>true</value>
-        </variable>
-        <variable name="COPY_LICENSES">
-          <value>false</value>
-        </variable>
-        <variable name="CREATE_RELEASE_DIR">
-          <value>true</value>
-        </variable>
         <variable name="STANDARD_RELEASE_BUILD">
-          <value>false</value>
+          <value>true</value>
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium_v12" autoUpdate="false" materialName="genivi-dev-platform.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
   </pipelines>
@@ -3132,18 +3124,8 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_generic_release">
-      <authorization>
-        <admins>
-          <user>EBoto</user>
-        </admins>
-      </authorization>
       <stage name="build">
         <approval type="manual" />
-        <environmentvariables>
-          <variable name="STANDARD_RELEASE_BUILD">
-            <value>true</value>
-          </variable>
-        </environmentvariables>
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
@@ -3160,6 +3142,61 @@
               <artifact src="staging/" />
               <artifact src="release/" />
             </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="Yocto_GDP_generic_release_and_upload">
+      <stage name="build">
+        <approval type="manual" />
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>scripts/ci-build.sh CI_FLAG</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
+            <artifacts>
+              <artifact src="staging/" />
+              <artifact src="release/" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="deploy_files">
+        <approval type="manual" />
+        <jobs>
+          <job name="copy_files">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>date +%Y%m%d_%H%M%S &gt;timestamp</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mkdir -p $DEPLOY_DIR/$RELEASE/#{TARGET}/$(cat timestamp)</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mv staging $DEPLOY_DIR/$RELEASE/#{TARGET}/$(cat timestamp)/  || true</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mv release $DEPLOY_DIR/$RELEASE/#{TARGET}/$(cat timestamp)/  || true</arg>
+                <runif status="any" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>#{SERVER_RESOURCE}</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
