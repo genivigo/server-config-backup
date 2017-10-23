@@ -3193,6 +3193,9 @@
                 <arg>mv release $DEPLOY_DIR/$RELEASE/#{TARGET}/$(cat timestamp)/  || true</arg>
                 <runif status="any" />
               </exec>
+              <fetchartifact pipeline="" stage="build" job="init_and_bitbake" srcdir="staging">
+                <runif status="passed" />
+              </fetchartifact>
             </tasks>
             <resources>
               <resource>#{SERVER_RESOURCE}</resource>
