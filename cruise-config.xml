@@ -3142,8 +3142,8 @@
               <resource>yocto_build</resource>
             </resources>
             <artifacts>
-              <artifact src="staging/" />
-              <artifact src="release/" />
+              <artifact src="staging" />
+              <artifact src="release" />
             </artifacts>
           </job>
         </jobs>
