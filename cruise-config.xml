@@ -581,6 +581,9 @@
         <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
+        <variable name="CREATE_RELEASE_DIR">
+          <value>true</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/genivi/genivi-dev-platform" branch="feature_sdl_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
