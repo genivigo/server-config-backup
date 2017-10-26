@@ -645,7 +645,7 @@
     </pipeline>
     <pipeline name="Release-upload-test" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_and_upload">
       <params>
-        <param name="TARGET">minnowboard</param>
+        <param name="TARGET">raspberrypi2</param>
         <param name="SERVER_RESOURCE">deploy_genivi</param>
       </params>
       <environmentvariables>
