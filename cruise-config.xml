@@ -1635,6 +1635,11 @@
                 <arg>-c</arg>
                 <arg>meson build</arg>
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>ninja -C build</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
