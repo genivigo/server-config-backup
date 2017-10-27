@@ -1623,6 +1623,23 @@
         </jobs>
       </stage>
     </pipeline>
+    <pipeline name="casync">
+      <materials>
+        <git url="https://github.com/systemd/casync" autoUpdate="false" />
+      </materials>
+      <stage name="build">
+        <jobs>
+          <job name="meson-build">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>meson build</arg>
+              </exec>
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
   </pipelines>
   <pipelines group="Tools">
     <authorization>
