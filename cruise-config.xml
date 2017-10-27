@@ -4296,6 +4296,7 @@
         <resource>Qt-seeder</resource>
         <resource>yocto_build</resource>
         <resource>cmake</resource>
+        <resource>ga_test</resource>
       </resources>
     </agent>
     <agent hostname="go-agent1 (GENIVI)" ipaddress="172.17.0.2" uuid="1bb12ac4-c35f-4111-9eba-a2e709d5cf7b">
