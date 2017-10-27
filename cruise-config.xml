@@ -1640,14 +1640,14 @@
                 <arg>-c</arg>
                 <arg>meson build</arg>
               </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>ninja -C build</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="git">
                 <arg>checkout</arg>
                 <arg>$FIXED_VERSION</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>ninja -C build</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
