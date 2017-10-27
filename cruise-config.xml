@@ -1624,6 +1624,11 @@
       </stage>
     </pipeline>
     <pipeline name="casync">
+      <environmentvariables>
+        <variable name="FIXED_VERSION">
+          <value>v2</value>
+        </variable>
+      </environmentvariables>
       <materials>
         <git url="https://github.com/systemd/casync" autoUpdate="false" />
       </materials>
