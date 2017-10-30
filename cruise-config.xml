@@ -3253,7 +3253,7 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>mv release $DEPLOY_DIR/$RELEASE/#{TARGET}/$(cat timestamp)/  || true</arg>
-                <runif status="any" />
+                <runif status="passed" />
               </exec>
             </tasks>
             <resources>
