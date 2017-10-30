@@ -346,7 +346,7 @@
         <git url="https://github.com/chbae/genivi-dev-platform" branch="qt5.6.3" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-r-car-m3-starter-kit-Qt5.6.3" template="Yocto_GDP_Renesas_generic">
+    <pipeline name="GDP-Yocto-r-car-m3-starter-kit-Qt5.6.3" template="Yocto_GDP_renesas_script_with_artifacts">
       <environmentvariables>
         <variable name="TARGET">
           <value>r-car-m3-starter-kit</value>
