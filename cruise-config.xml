@@ -658,6 +658,9 @@
         <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
+        <variable name="DEPLOY_DIR">
+          <value>/var/lib/go-agent/pipelines/__deploy/deploy</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/genivi/genivi-dev-platform" branch="release_master" autoUpdate="false" materialName="genivi-dev-platform.git" />
