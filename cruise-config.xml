@@ -577,7 +577,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform" branch="feature_chromium_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="Release-minnowboard-SDL" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
@@ -640,7 +640,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform" branch="chromium_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform" branch="feature_chromium_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="Release-upload-test" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_and_upload">
@@ -675,7 +675,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="feature_chromium_pyro" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="Chromium-minnowboard" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
@@ -685,7 +685,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="feature_chromium_pyro" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="Chromium-qemu_x86-64" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
@@ -695,7 +695,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="feature_chromium_pyro" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="Chromium-raspberrypi2" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
@@ -705,7 +705,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="feature_chromium_pyro" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="Chromium-raspberrypi3" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
@@ -715,7 +715,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="feature_chromium_pyro" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="Chromium-dragonboard-410c" labeltemplate="gdp-chromium:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts">
@@ -725,7 +725,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="chromium_pyro" materialName="genivi-dev-platform.git" />
+        <git url="https://github.com/genivi/genivi-dev-platform.git" branch="feature_chromium_pyro" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
   </pipelines>
