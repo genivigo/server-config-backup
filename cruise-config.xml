@@ -659,7 +659,7 @@
           <value>true</value>
         </variable>
         <variable name="DEPLOY_DIR">
-          <value>/var/lib/go-agent/pipelines/__deploy</value>
+          <value>/var/lib/go-agent/pipelines/__deploy/deploy</value>
         </variable>
       </environmentvariables>
       <materials>
