@@ -3243,7 +3243,7 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>mkdir -p $DEPLOY_DIR/$RELEASE/#{TARGET}/$(cat timestamp)</arg>
-                <runif status="any" />
+                <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
