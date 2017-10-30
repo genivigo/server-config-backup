@@ -3238,7 +3238,7 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>date +%Y%m%d_%H%M%S &gt;timestamp</arg>
-                <runif status="any" />
+                <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
