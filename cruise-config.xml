@@ -563,6 +563,22 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
+    <pipeline name="Release-r-car-h3-starter-kit" labeltemplate="genivi-dev-platform:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-h3-starter-kit</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>13.0</value>
+        </variable>
+        <variable name="STANDARD_RELEASE_BUILD">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/GENIVI/genivi-dev-platform" autoUpdate="false" materialName="genivi-dev-platform.git" />
+      </materials>
+    </pipeline>
     <pipeline name="Release-minnowboard-chromium" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
       <environmentvariables>
         <variable name="TARGET">
