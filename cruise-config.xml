@@ -2655,6 +2655,11 @@
         <approval type="manual" />
         <jobs>
           <job name="init_and_bitbake">
+            <environmentvariables>
+              <variable name="BUILD_SDK">
+                <value>true</value>
+              </variable>
+            </environmentvariables>
             <tasks>
               <exec command="bash">
                 <arg>-c</arg>
