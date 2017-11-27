@@ -1065,7 +1065,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
+        <git url="https://github.com/gunnarx/genivi-dev-platform.git" branch="qtas_13.0_rebase" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
     <pipeline name="GammaRay" labeltemplate="2.6:${GammaRay.git[:8]}-build:${COUNT}" isLocked="false">
