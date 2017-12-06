@@ -725,9 +725,12 @@
         <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
       </materials>
     </pipeline>
-    <pipeline name="SDL_qemux86-64" labeltemplate="build:${COUNT}:#{BRANCH}:${gdp.git[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
+    <pipeline name="SDL_qemux86-64" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${gdp[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
       <params>
         <param name="BRANCH">feature_sdl_pyro</param>
+        <param name="FORK">GENIVI</param>
+        <param name="PROJECT">gdp</param>
+        <param name="REPO_IDENTIFIER">gdp</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
@@ -735,7 +738,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="#{BRANCH}" materialName="gdp.git" />
+        <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" materialName="gdp" />
       </materials>
     </pipeline>
   </pipelines>
