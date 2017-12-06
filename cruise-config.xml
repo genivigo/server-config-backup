@@ -611,7 +611,7 @@
           <value>13.0</value>
         </variable>
         <variable name="STANDARD_RELEASE_BUILD">
-          <value>true</value>
+          <value>false</value>
         </variable>
       </environmentvariables>
       <materials>
