@@ -555,53 +555,6 @@
         <git url="https://github.com/genivi/genivi-dev-platform" branch="feature_chromium_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
       </materials>
     </pipeline>
-    <pipeline name="Release-minnowboard-SDL" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>minnowboard</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>13.0</value>
-        </variable>
-        <variable name="STANDARD_RELEASE_BUILD">
-          <value>true</value>
-        </variable>
-        <variable name="CREATE_RELEASE_DIR">
-          <value>true</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform" branch="feature_sdl_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-    <pipeline name="Release-r-car-m3-starter-kit-SDL" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>r-car-m3-starter-kit</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>13.0</value>
-        </variable>
-        <variable name="SOURCE_ARCHIVE">
-          <value>true</value>
-        </variable>
-        <variable name="LAYER_ARCHIVE">
-          <value>true</value>
-        </variable>
-        <variable name="COPY_LICENSES">
-          <value>false</value>
-        </variable>
-        <variable name="CREATE_RELEASE_DIR">
-          <value>true</value>
-        </variable>
-        <variable name="REUSE_STANDARD_SSTATE_DIR">
-          <value>false</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/genivi/genivi-dev-platform" branch="feature_sdl_pyro" autoUpdate="false" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
     <pipeline name="Release-r-car-m3-starter-kit-chromium-v13" labeltemplate="gdp.git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
       <environmentvariables>
         <variable name="TARGET">
@@ -701,44 +654,6 @@
       </environmentvariables>
       <materials>
         <git url="https://github.com/genivi/genivi-dev-platform.git" branch="feature_chromium_pyro" materialName="genivi-dev-platform.git" />
-      </materials>
-    </pipeline>
-  </pipelines>
-  <pipelines group="Feature_SDL">
-    <pipeline name="SDL_minnowboard" template="Yocto_GDP_generic_script_with_artifacts">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>minnowboard</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
-      </materials>
-    </pipeline>
-    <pipeline name="SDL_r-car-m3-starter-kit" template="Yocto_GDP_renesas_script_with_artifacts">
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>r-car-m3-starter-kit</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" branch="feature_sdl_pyro" />
-      </materials>
-    </pipeline>
-    <pipeline name="SDL_qemux86-64" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${gdp[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
-      <params>
-        <param name="BRANCH">feature_sdl_pyro</param>
-        <param name="FORK">GENIVI</param>
-        <param name="PROJECT">gdp</param>
-        <param name="REPO_IDENTIFIER">gdp</param>
-      </params>
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>qemux86-64</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" materialName="gdp" />
       </materials>
     </pipeline>
   </pipelines>
@@ -2731,62 +2646,10 @@
       <materials>
         <git url="https://github.com/gunnarx/dummy" autoUpdate="false" />
         <pipeline pipelineName="Release-qemux86-64" stageName="build" materialName="qemux86-64" />
-        <pipeline pipelineName="Release-minnowboard-SDL" stageName="build" materialName="minnowboard" />
         <pipeline pipelineName="Release-raspberrypi-2" stageName="build" materialName="raspberrypi2" />
         <pipeline pipelineName="Release-raspberrypi-3" stageName="build" materialName="raspberrypi3" />
         <pipeline pipelineName="Release-dragonboard-410c" stageName="build" materialName="dragonboard-410c" />
       </materials>
-    </pipeline>
-    <pipeline name="Upload_PCore-SDL" isLocked="false">
-      <params>
-        <param name="SERVER_RESOURCE">deploy_pelagicore</param>
-      </params>
-      <environmentvariables>
-        <variable name="DEPLOY_DIR">
-          <value>/var/lib/go-agent/pipelines/__deploy</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <pipeline pipelineName="SDL_minnowboard" stageName="build" materialName="minnowboard-sdl" />
-        <pipeline pipelineName="SDL_r-car-m3-starter-kit" stageName="build" materialName="sdl_r-car-m3-starter-kit" />
-      </materials>
-      <stage name="copy">
-        <jobs>
-          <job name="copy_files">
-            <tasks>
-              <fetchartifact pipeline="SDL_minnowboard" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_minnowboard">
-                <runif status="any" />
-              </fetchartifact>
-              <fetchartifact pipeline="SDL_r-car-m3-starter-kit" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_r-car-m3-starter-kit">
-                <runif status="any" />
-              </fetchartifact>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>date +%Y%m%d_%H%M%S &gt;timestamp</arg>
-                <runif status="any" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>mkdir -p $DEPLOY_DIR/{minnowboard-sdl,r-car-m3-starter-kit-sdl}/$(cat timestamp)</arg>
-                <runif status="any" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>mv staging_r-car-m3-starter-kit $DEPLOY_DIR/r-car-m3-starter-kit-sdl/$(cat timestamp)/  || true</arg>
-                <runif status="any" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>mv staging_minnowboard $DEPLOY_DIR/minnowboard-sdl/$(cat timestamp)/  || true</arg>
-                <runif status="any" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>#{SERVER_RESOURCE}</resource>
-            </resources>
-          </job>
-        </jobs>
-      </stage>
     </pipeline>
     <pipeline name="Upload_GDP_Release_GENIVI" isLocked="false" template="Upload_Release_All_Targets_generic">
       <params>
@@ -2800,7 +2663,6 @@
       <materials>
         <git url="https://github.com/gunnarx/dummy" autoUpdate="false" />
         <pipeline pipelineName="Release-qemux86-64" stageName="build" materialName="qemux86-64" />
-        <pipeline pipelineName="Release-minnowboard-SDL" stageName="build" materialName="minnowboard" />
         <pipeline pipelineName="Release-raspberrypi-2" stageName="build" materialName="raspberrypi2" />
         <pipeline pipelineName="Release-raspberrypi-3" stageName="build" materialName="raspberrypi3" />
         <pipeline pipelineName="Release-dragonboard-410c" stageName="build" materialName="dragonboard-410c" />
@@ -4122,9 +3984,6 @@
             <tasks>
               <fetchartifact pipeline="Release-dragonboard-410c" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_dragonboard">
                 <runif status="passed" />
-              </fetchartifact>
-              <fetchartifact pipeline="Release-minnowboard-SDL" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_minnowboard">
-                <runif status="any" />
               </fetchartifact>
               <fetchartifact pipeline="Release-qemux86-64" stage="build" job="init_and_bitbake" srcdir="staging" dest="staging_qemux86-64">
                 <runif status="any" />
