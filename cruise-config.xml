@@ -408,6 +408,18 @@
         <variable name="LAYER_meta_openembedded_BRANCH">
           <value>pyro</value>
         </variable>
+        <variable name="LAYER_meta_genivi_dev_COMMIT">
+          <value>ea8bc937d07e0da60a4e2b224a564176e1217126</value>
+        </variable>
+        <variable name="FORK">
+          <value>frznlogic</value>
+        </variable>
+        <variable name="TAG">
+          <value>13.1</value>
+        </variable>
+        <variable name="LAYER_meta_intel_TAG">
+          <value>7.0-pyro-2.3</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
