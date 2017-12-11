@@ -408,7 +408,7 @@
         <variable name="LAYER_meta_openembedded_BRANCH">
           <value>pyro</value>
         </variable>
-        <variable name="LAYER_meta_genivi_dev_COMMIT">
+        <variable name="LAYER_meta_erlang_COMMIT">
           <value>ea8bc937d07e0da60a4e2b224a564176e1217126</value>
         </variable>
         <variable name="FORK">
