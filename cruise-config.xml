@@ -415,7 +415,7 @@
           <value>https://github.com/frznlogic/genivi-dev-platform</value>
         </variable>
         <variable name="TAG">
-          <value>13.1</value>
+          <value>v13.0</value>
         </variable>
         <variable name="LAYER_meta_intel_TAG">
           <value>7.0-pyro-2.3</value>
