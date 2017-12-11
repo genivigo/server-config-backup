@@ -365,7 +365,7 @@
       </params>
       <environmentvariables>
         <variable name="TARGET">
-          <value>r-car-m3-starter-kit</value>
+          <value>GDP-r-car-h3-starter-kit</value>
         </variable>
       </environmentvariables>
       <materials>
