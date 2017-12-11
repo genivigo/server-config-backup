@@ -379,6 +379,21 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-pyro-latest-minnowboard" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+      <params>
+        <param name="PROJECT">gdp</param>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">master</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_CI_Other">
     <authorization>
