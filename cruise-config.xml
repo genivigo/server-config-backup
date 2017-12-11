@@ -749,6 +749,7 @@
       <params>
         <param name="FORK">GUNNARX</param>
         <param name="BRANCH">sdk_build</param>
+        <param name="BUILD_SDK">true</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
