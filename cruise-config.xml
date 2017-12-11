@@ -694,11 +694,11 @@
         <param name="BRANCH">sdk_build</param>
       </params>
       <environmentvariables>
-        <variable name="TARGET">
-          <value>raspberrypi2</value>
-        </variable>
         <variable name="BUILD_SDK">
           <value>true</value>
+        </variable>
+        <variable name="TARGET">
+          <value>raspberrypi2</value>
         </variable>
       </environmentvariables>
       <materials>
