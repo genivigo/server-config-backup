@@ -564,26 +564,6 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform" autoUpdate="false" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="Release-r-car-h3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
-      <params>
-        <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
-      </params>
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>r-car-h3-starter-kit</value>
-        </variable>
-        <variable name="RELEASE">
-          <value>13.0</value>
-        </variable>
-        <variable name="STANDARD_RELEASE_BUILD">
-          <value>true</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/#{FORK}/genivi-dev-platform" autoUpdate="false" materialName="mainrepo" />
-      </materials>
-    </pipeline>
     <pipeline name="Release-upload-test" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release_and_upload">
       <params>
         <param name="FORK">GENIVI</param>
@@ -2484,6 +2464,26 @@
         </variable>
         <variable name="STANDARD_RELEASE_BUILD">
           <value>false</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform" autoUpdate="false" materialName="mainrepo" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-r-car-h3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">master</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-h3-starter-kit</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>13.0</value>
+        </variable>
+        <variable name="STANDARD_RELEASE_BUILD">
+          <value>true</value>
         </variable>
       </environmentvariables>
       <materials>
