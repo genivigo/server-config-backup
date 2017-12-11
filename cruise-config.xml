@@ -148,7 +148,7 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="yocto-baseline-11" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-11" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
       <params>
         <param name="PROJECT">meta-ivi</param>
         <param name="FORK">GENIVI</param>
@@ -169,7 +169,7 @@
         <git url="http://git.yoctoproject.org/git/poky.git" branch="krogoth" dest="poky" autoUpdate="false" materialName="poky_krogoth" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-12" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-12" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
       <params>
         <param name="PROJECT">meta-ivi</param>
         <param name="FORK">GENIVI</param>
@@ -187,7 +187,7 @@
         <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-13-qemux86-64" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-13-qemux86-64" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
       <params>
         <param name="PROJECT">meta-ivi</param>
         <param name="FORK">GENIVI</param>
@@ -209,7 +209,7 @@
         <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-13-qemuarm64" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-13-qemuarm64" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
       <params>
         <param name="PROJECT">meta-ivi</param>
         <param name="FORK">GENIVI</param>
@@ -231,7 +231,7 @@
         <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-13-qemux86" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-13-qemux86" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
       <params>
         <param name="PROJECT">meta-ivi</param>
         <param name="FORK">GENIVI</param>
@@ -253,7 +253,7 @@
         <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-13-vexpressa9" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-13-vexpressa9" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
       <params>
         <param name="PROJECT">meta-ivi</param>
         <param name="FORK">GENIVI</param>
@@ -275,7 +275,7 @@
         <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-GITHUB-PR-Check" labeltemplate="#{PROJECT}:#{FORK}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-GITHUB-PR-Check" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build">
       <params>
         <param name="PROJECT">meta-ivi</param>
         <param name="FORK">GENIVI</param>
@@ -304,7 +304,7 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="GDP-minnowboard" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP-minnowboard" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -319,7 +319,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-qemux86-64" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP-qemux86-64" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -334,7 +334,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-raspberrypi2" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP-raspberrypi2" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -349,7 +349,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-dragonboard-410c" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP-dragonboard-410c" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -364,7 +364,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-r-car-m3-starter-kit" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
+    <pipeline name="GDP-r-car-m3-starter-kit" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -468,7 +468,7 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="Release-qemux86-64" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-qemux86-64" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -486,7 +486,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform" autoUpdate="false" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="Release-minnowboard" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-minnowboard" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -507,7 +507,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform" autoUpdate="false" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="Release-raspberrypi-2" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-raspberrypi-2" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -528,7 +528,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform" autoUpdate="false" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="Release-raspberrypi-3" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-raspberrypi-3" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -549,7 +549,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform" autoUpdate="false" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="Release-dragonboard-410c" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
+    <pipeline name="Release-dragonboard-410c" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -570,7 +570,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform" autoUpdate="false" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="Release-r-car-m3-starter-kit" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
+    <pipeline name="Release-r-car-m3-starter-kit" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -600,7 +600,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform" autoUpdate="false" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="Release-r-car-h3-starter-kit" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
+    <pipeline name="Release-r-car-h3-starter-kit" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -621,7 +621,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform" autoUpdate="false" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="Release-upload-test" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release_and_upload">
+    <pipeline name="Release-upload-test" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release_and_upload">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -746,7 +746,7 @@
         <pipeline pipelineName="GDP-Yocto-dragonboard-410c_SDK" stageName="build" materialName="yocto-sdk-qemux86-64" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-raspberrypi2_SDK" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
+    <pipeline name="GDP-Yocto-raspberrypi2_SDK" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
         <param name="PROJECT">gdp-sdk</param>
         <param name="FORK">GUNNARX</param>
@@ -764,7 +764,7 @@
         <git url="http://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-raspberrypi3_SDK" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
+    <pipeline name="GDP-Yocto-raspberrypi3_SDK" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
         <param name="PROJECT">gdp-sdk</param>
         <param name="FORK">GUNNARX</param>
@@ -785,7 +785,7 @@
         <git url="http://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Minnowboard_SDK" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
+    <pipeline name="GDP-Yocto-Minnowboard_SDK" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
         <param name="PROJECT">gdp-sdk</param>
         <param name="FORK">GUNNARX</param>
@@ -806,7 +806,7 @@
         <git url="http://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-qemux86-64_SDK" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
+    <pipeline name="GDP-Yocto-qemux86-64_SDK" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
         <param name="PROJECT">gdp-sdk</param>
         <param name="FORK">GUNNARX</param>
@@ -827,7 +827,7 @@
         <git url="http://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-dragonboard-410c_SDK" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
+    <pipeline name="GDP-Yocto-dragonboard-410c_SDK" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
         <param name="PROJECT">gdp-sdk</param>
         <param name="FORK">GUNNARX</param>
@@ -924,7 +924,7 @@
         <user>EBoto</user>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-Minnowboard-QtAS_SDK" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
+    <pipeline name="GDP-Yocto-Minnowboard-QtAS_SDK" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
         <param name="PROJECT">gdp-sdk</param>
         <param name="FORK">Pelagicore</param>
@@ -942,7 +942,7 @@
         <git url="http://github.com/#{FORK}/genivi-dev-platform.git" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Minnowboard-QtAS" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
+    <pipeline name="GDP-Yocto-Minnowboard-QtAS" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">gunnarx</param>
@@ -1169,85 +1169,6 @@
             </resources>
             <artifacts>
               <artifact src="gdp-src-build/staging/" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
-    <pipeline name="GDP-Yocto-Porter-QtAS" labeltemplate="gdp-git:${genivi-dev-platform.git[:8]}-build:${COUNT}" isLocked="false">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>porter</value>
-        </variable>
-        <variable name="GFX_MACHINE">
-          <value>porter</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="git://github.com/Pelagicore/genivi-dev-platform.git" materialName="genivi-dev-platform.git" />
-      </materials>
-      <stage name="build">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="rm" workingdir="gdp-src-build">
-                <arg>-rf</arg>
-                <arg>tmp</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source ./init.sh $MACHINE</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]]; then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_gfx_software_$MACHINE.sh /var/go/sgx_bin; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]];  then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.name</arg>
-                <arg>Go Server</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
-                <runif status="any" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>renesas_binaries</resource>
-              <resource>yocto_build</resource>
-            </resources>
-            <artifacts>
-              <artifact src="logs.tar.gz" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/license.manifest" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/package.manifest" />
             </artifacts>
           </job>
         </jobs>
@@ -2017,19 +1938,6 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="reuse_tmp" isLocked="false" template="Yocto_GDP_generic_reuse_tmp">
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>qemux86-64</value>
-        </variable>
-        <variable name="GunnarA" secure="true">
-          <encryptedValue>M04ig7bgUbdk4Zo0Qs/5pg==</encryptedValue>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="git://github.com/genivi/genivi-dev-platform" materialName="gdp" />
-      </materials>
-    </pipeline>
     <pipeline name="Franca-Eclipse-VM">
       <environmentvariables>
         <variable name="ECLIPSE_INSTALL_DIR">
@@ -2306,7 +2214,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="yocto-baseline-testlayer" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-test">
+    <pipeline name="yocto-baseline-testlayer" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-test">
       <params>
         <param name="PROJECT">meta-ivi</param>
         <param name="FORK">GENIVI</param>
@@ -2536,7 +2444,7 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-r-car-m3-starter-kit_SDK" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false">
+    <pipeline name="GDP-Yocto-r-car-m3-starter-kit_SDK" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false">
       <params>
         <param name="PROJECT">gdp-sdk</param>
         <param name="FORK">GENIVI</param>
@@ -2602,7 +2510,7 @@
     </pipeline>
   </pipelines>
   <pipelines group="R-Car_Gen2">
-    <pipeline name="GDP-Yocto-Porter" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
+    <pipeline name="GDP-Yocto-Porter" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -2617,7 +2525,7 @@
         <git url="http://github.com/#{FORK}/genivi-dev-platform.git" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Silk" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
+    <pipeline name="GDP-Yocto-Silk" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -2632,7 +2540,7 @@
         <git url="http://github.com/#{FORK}/genivi-dev-platform.git" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-Yocto-Koelsch" labeltemplate="#{PROJECT}:#{FORK}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
+    <pipeline name="GDP-Yocto-Koelsch" labeltemplate="#{PROJECT}:#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
       <params>
         <param name="PROJECT">gdp</param>
         <param name="FORK">GENIVI</param>
@@ -4117,7 +4025,6 @@
     <agent hostname="pelagic-agent" ipaddress="172.17.0.2" uuid="f4bda6b1-3679-4bd9-8edb-e234953217f3">
       <resources>
         <resource>yocto_build</resource>
-        <resource>pelagic-agent</resource>
       </resources>
     </agent>
   </agents>
