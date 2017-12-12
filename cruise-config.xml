@@ -590,7 +590,7 @@
       </params>
       <environmentvariables>
         <variable name="TARGET">
-          <value>#{TARGET}</value>
+          <value>minnowboard</value>
         </variable>
         <variable name="RELEASE">
           <value>13.0</value>
