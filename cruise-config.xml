@@ -414,11 +414,8 @@
         <variable name="TARGET">
           <value>minnowboard</value>
         </variable>
-        <variable name="LAYER_poky_BRANCH">
-          <value>pyro</value>
-        </variable>
-        <variable name="LAYER_meta-openembedded_BRANCH">
-          <value>pyro</value>
+        <variable name="LAYER_meta-ivi_BRANCH">
+          <value>master</value>
         </variable>
       </environmentvariables>
       <materials>
