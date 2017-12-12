@@ -592,7 +592,7 @@
           <value>minnowboard</value>
         </variable>
         <variable name="RELEASE">
-          <value>13.0</value>
+          <value>uploadtest</value>
         </variable>
         <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
