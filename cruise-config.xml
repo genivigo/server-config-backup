@@ -372,6 +372,19 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
       </materials>
     </pipeline>
+  </pipelines>
+  <pipelines group="GDP_CI_Other">
+    <authorization>
+      <view>
+        <user>guest</user>
+        <role>Developer</role>
+        <role>Guest</role>
+        <role>GDP_Developer</role>
+      </view>
+      <operate>
+        <role>GDP_Developer</role>
+      </operate>
+    </authorization>
     <pipeline name="GDP-CI-poky-pyro-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
@@ -392,19 +405,6 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
       </materials>
     </pipeline>
-  </pipelines>
-  <pipelines group="GDP_CI_Other">
-    <authorization>
-      <view>
-        <user>guest</user>
-        <role>Developer</role>
-        <role>Guest</role>
-        <role>GDP_Developer</role>
-      </view>
-      <operate>
-        <role>GDP_Developer</role>
-      </operate>
-    </authorization>
   </pipelines>
   <pipelines group="GDP_Pull_Requests">
     <authorization>
