@@ -379,7 +379,13 @@
       </params>
       <environmentvariables>
         <variable name="TARGET">
-          <value>GDP-r-car-h3-starter-kit</value>
+          <value>minnowboard</value>
+        </variable>
+        <variable name="LAYER_poky_BRANCH">
+          <value>pyro</value>
+        </variable>
+        <variable name="LAYER_meta-openembedded_BRANCH">
+          <value>pyro</value>
         </variable>
       </environmentvariables>
       <materials>
