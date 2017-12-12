@@ -2917,7 +2917,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv staging $DEPLOY_DIR/$RELEASE/#{TARGET}/$(cat timestamp)/  || true</arg>
+                <arg>mv staging $DEPLOY_DIR/$RELEASE/$TARGET/$(cat timestamp)/  || true</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
