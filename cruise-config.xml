@@ -2922,7 +2922,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mv release $DEPLOY_DIR/$RELEASE/#{TARGET}/$(cat timestamp)/  || true</arg>
+                <arg>mv release $DEPLOY_DIR/$RELEASE/$TARGET/$(cat timestamp)/  || true</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
