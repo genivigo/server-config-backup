@@ -385,7 +385,7 @@
         <role>GDP_Developer</role>
       </operate>
     </authorization>
-    <pipeline name="GDP-CI-poky-pyro-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
+    <pipeline name="GDP-CI-poky-pyro-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
