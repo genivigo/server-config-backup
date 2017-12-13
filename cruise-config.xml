@@ -397,7 +397,7 @@
         <variable name="LAYER_poky_BRANCH">
           <value>pyro</value>
         </variable>
-        <variable name="LAYER_meta-openembedded_BRANCH">
+        <variable name="LAYER_meta_openembedded_BRANCH">
           <value>pyro</value>
         </variable>
       </environmentvariables>
@@ -414,7 +414,7 @@
         <variable name="TARGET">
           <value>qemux86-64</value>
         </variable>
-        <variable name="LAYER_meta-ivi_BRANCH">
+        <variable name="LAYER_meta_ivi_BRANCH">
           <value>master</value>
         </variable>
       </environmentvariables>
