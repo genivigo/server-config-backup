@@ -1687,6 +1687,26 @@
         <role>Developer</role>
       </admins>
     </authorization>
+    <pipeline name="meta-ivi-with-script" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">11.0</param>
+      </params>
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+        <variable name="IMAGE_NAME">
+          <value>miranda-image</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="krogoth" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded_krogoth" />
+        <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="krogoth" dest="poky" autoUpdate="false" materialName="poky_krogoth" />
+      </materials>
+    </pipeline>
     <pipeline name="FRANCA_IF_Validation" labeltemplate="master:${capicxx-core-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="git://github.com/genivi/capicxx-core-tools.git" dest="dest-capicxx-core-tools" materialName="capicxx-core-tools.git" />
@@ -3350,6 +3370,47 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>mv build/tmp/deploy/images/*/{*.bzImage,*.ext4,*.img}  staging/ || true</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
+            <artifacts>
+              <artifact src="logs_test.tar.gz" />
+              <artifact src="staging" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="meta-ivi-build-with-script">
+      <authorization>
+        <admins>
+          <user>tolkien</user>
+          <user>tpollard</user>
+          <user>RobertM</user>
+          <user>AndreasR</user>
+          <user>EBoto</user>
+        </admins>
+      </authorization>
+      <stage name="Build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="bash" workingdir="baseline_ci_helper">
+                <arg>-c</arg>
+                <arg>./checkout_layer_hash.sh poky</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="baseline_ci_helper">
+                <arg>-c</arg>
+                <arg>./checkout_layer_hash.sh meta-openembedded</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>scripts/ci-build.sh qemux86-64</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
