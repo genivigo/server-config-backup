@@ -431,7 +431,7 @@
         <variable name="TARGET">
           <value>minnowboard</value>
         </variable>
-        <variable name="LAYER_meta-intel_BRANCH">
+        <variable name="LAYER_meta_intel_BRANCH">
           <value>pyro</value>
         </variable>
       </environmentvariables>
