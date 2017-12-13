@@ -412,10 +412,112 @@
       </params>
       <environmentvariables>
         <variable name="TARGET">
-          <value>minnowboard</value>
+          <value>qemux86-64</value>
         </variable>
         <variable name="LAYER_meta-ivi_BRANCH">
           <value>master</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-CI-meta-intel" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">master</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="LAYER_meta-intel_BRANCH">
+          <value>pyro</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-CI-meta-iot-web" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">master</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="LAYER_meta_iot_web_BRANCH">
+          <value>master</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-CI-meta-linaro" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">master</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-h3-starter-kit</value>
+        </variable>
+        <variable name="LAYER_meta_linaro_BRANCH">
+          <value>pyro</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-CI-meta-qt5-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">master</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>qemux86-64</value>
+        </variable>
+        <variable name="LAYER_meta_qt5_BRANCH">
+          <value>5.6</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-CI-meta-raspberrypi" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">master</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>raspberrypi3</value>
+        </variable>
+        <variable name="LAYER_meta_raspberrypi_BRANCH">
+          <value>pyro</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP-CI-meta-flatpak-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">master</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>master</value>
+        </variable>
+        <variable name="LAYER_meta_flatpak_BRANCH">
+          <value>pyro</value>
         </variable>
       </environmentvariables>
       <materials>
