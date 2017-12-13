@@ -514,7 +514,7 @@
       </params>
       <environmentvariables>
         <variable name="TARGET">
-          <value>master</value>
+          <value>qemux86-64</value>
         </variable>
         <variable name="LAYER_meta_flatpak_BRANCH">
           <value>pyro</value>
