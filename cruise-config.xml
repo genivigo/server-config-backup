@@ -909,9 +909,6 @@
         <variable name="BUILD_SDK">
           <value>true</value>
         </variable>
-        <variable name="REUSE_STANDARD_SSTATE_DIR">
-          <value>false</value>
-        </variable>
       </environmentvariables>
       <materials>
         <git url="http://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
