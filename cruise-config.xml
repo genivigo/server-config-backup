@@ -2594,6 +2594,7 @@
       <params>
         <param name="MACHINE">r-car-m3-starter-kit</param>
       </params>
+      <timer>0 0 7 6 1 ?</timer>
       <environmentvariables>
         <variable name="VMNAME">
           <value>gdp-sde-#{MACHINE}</value>
