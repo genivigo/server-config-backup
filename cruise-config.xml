@@ -263,7 +263,7 @@
     <pipeline name="yocto-baseline-GITHUB-PR-Check" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">(pr)</param>
+        <param name="BRANCH">(pullreq)</param>
       </params>
       <environmentvariables>
         <variable name="MACHINE">
@@ -542,7 +542,7 @@
     <pipeline name="GDP-Yocto-QEMU_x86-64-GITHUB-PR" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">(pr)</param>
+        <param name="BRANCH">(pullreq)</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
@@ -556,7 +556,7 @@
     <pipeline name="GDP-Yocto-r-car-m3-starter-kit-GITHUB-PR" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">(pr)</param>
+        <param name="BRANCH">(pullreq)</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
@@ -570,7 +570,7 @@
     <pipeline name="GDP-Yocto-RPI2-GITHUB-PR" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">(pr)</param>
+        <param name="BRANCH">(pullreq)</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
@@ -584,7 +584,7 @@
     <pipeline name="GDP-Yocto-MINNOWBOARD-GITHUB-PR" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">(pr)</param>
+        <param name="BRANCH">(pullreq)</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
@@ -598,7 +598,7 @@
     <pipeline name="GDP-Yocto-Dragonboard-GITHUB-PR" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">(pr)</param>
+        <param name="BRANCH">(pullreq)</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
