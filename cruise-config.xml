@@ -287,7 +287,7 @@
           <value>qemux86-64</value>
         </variable>
         <variable name="IMAGE_NAME">
-          <value>orion-image</value>
+          <value>pulsar-image</value>
         </variable>
       </environmentvariables>
       <materials>
