@@ -279,8 +279,8 @@
     </pipeline>
     <pipeline name="yocto-baseline-14-frznlogic-qemux86--64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
       <params>
-        <param name="FORK">GENIVI</param>
-        <param name="BRANCH">13.0</param>
+        <param name="FORK">frznlogic</param>
+        <param name="BRANCH">bump-rocko</param>
       </params>
       <environmentvariables>
         <variable name="MACHINE">
