@@ -194,7 +194,6 @@
         <git url="git://git.openembedded.org/meta-openembedded" branch="pyro" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.pyro" />
         <git url="http://git.yoctoproject.org/git/poky.git" branch="pyro" dest="poky" autoUpdate="false" materialName="poky.pyro" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="pyro" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.pyro" />
-        <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-13-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
@@ -215,7 +214,6 @@
         <git url="git://git.openembedded.org/meta-openembedded" branch="pyro" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.pyro" />
         <git url="http://git.yoctoproject.org/git/poky.git" branch="pyro" dest="poky" autoUpdate="false" materialName="poky.pyro" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="pyro" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.pyro" />
-        <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-13-qemux86" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
@@ -236,7 +234,6 @@
         <git url="git://git.openembedded.org/meta-openembedded" branch="pyro" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.pyro" />
         <git url="http://git.yoctoproject.org/git/poky.git" branch="pyro" dest="poky" autoUpdate="false" materialName="poky.pyro" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="pyro" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.pyro" />
-        <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-13-vexpressa9" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
@@ -257,7 +254,6 @@
         <git url="git://git.openembedded.org/meta-openembedded" branch="pyro" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.pyro" />
         <git url="http://git.yoctoproject.org/git/poky.git" branch="pyro" dest="poky" autoUpdate="false" materialName="poky.pyro" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="pyro" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.pyro" />
-        <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-GITHUB-PR-Check" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build">
@@ -295,7 +291,6 @@
         <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
         <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky.rocko" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
-        <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
   </pipelines>
@@ -1532,7 +1527,7 @@
         <param name="SOURCE_DIR">/var/go</param>
       </params>
       <materials>
-        <git url="git://github.com/genivi/baseline_ci_helper" autoUpdate="false" materialName="dummy-not-used" />
+        <git url="https://github.com/GENIVI/admin_and_reporting" autoUpdate="false" materialName="dummy-not-used" />
       </materials>
       <stage name="stage">
         <jobs>
@@ -2381,7 +2376,7 @@
         <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work/*</param>
       </params>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
     <pipeline name="DiskStatistics-test" isLocked="false">
@@ -2437,7 +2432,7 @@
         <param name="agent">go-agent1</param>
       </params>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
     <pipeline name="Wipe_tmp_dirs7" template="Wipe_dir_pattern">
@@ -2446,7 +2441,7 @@
         <param name="agent">go-agent1</param>
       </params>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
     <pipeline name="Wipe_gdp_sstate_dir7" isLocked="false" template="Wipe_dir_pattern">
@@ -2456,7 +2451,7 @@
       </params>
       <timer>0 0 6 ? * THU</timer>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
     <pipeline name="Wipe_gdp_downloads_dir7" isLocked="false" template="Wipe_dir_pattern">
@@ -2466,7 +2461,7 @@
       </params>
       <timer>0 0 6 15 * ?</timer>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
   </pipelines>
@@ -2484,7 +2479,7 @@
         <param name="agent">go-agent2</param>
       </params>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
     <pipeline name="Wipe_tmp_dirs" template="Wipe_dir_pattern">
@@ -2493,7 +2488,7 @@
         <param name="agent">go-agent2</param>
       </params>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
     <pipeline name="Wipe_gdp_sstate_dir6" isLocked="false" template="Wipe_dir_pattern">
@@ -2503,7 +2498,7 @@
       </params>
       <timer>0 0 6 ? * SAT</timer>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
     <pipeline name="Wipe_gdp_downloads_dir6" isLocked="false" template="Wipe_dir_pattern">
@@ -2513,7 +2508,7 @@
       </params>
       <timer>0 0 6 1 * ?</timer>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
   </pipelines>
@@ -2531,7 +2526,7 @@
         <param name="agent">pelagic-agent</param>
       </params>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
     <pipeline name="Wipe_tmp_dirs5" template="Wipe_dir_pattern">
@@ -2540,7 +2535,7 @@
         <param name="agent">pelagic-agent</param>
       </params>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
     <pipeline name="Wipe_gdp_downloads_dir5" template="Wipe_dir_pattern">
@@ -2549,7 +2544,7 @@
         <param name="agent">pelagic-agent</param>
       </params>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
     <pipeline name="Wipe_gdp_sstate_dir5" template="Wipe_dir_pattern">
@@ -2558,7 +2553,7 @@
         <param name="agent">pelagic-agent</param>
       </params>
       <materials>
-        <git url="https://github.com/gunnarx/baseline_ci_helper.git" autoUpdate="false" materialName="not_used" />
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
   </pipelines>
@@ -2768,7 +2763,7 @@
       </params>
       <timer>0 0 5 ? * SUN</timer>
       <materials>
-        <git url="https://github.com/GENIVI/baseline_ci_helper" />
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
   </pipelines>
