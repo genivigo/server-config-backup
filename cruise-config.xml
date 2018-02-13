@@ -1026,23 +1026,6 @@
         <user>EBoto</user>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-Minnowboard-QtAS_SDK" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
-      <params>
-        <param name="FORK">Pelagicore</param>
-        <param name="BRANCH">master</param>
-      </params>
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>minnowboard</value>
-        </variable>
-        <variable name="BUILD_SDK">
-          <value>true</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="http://github.com/#{FORK}/genivi-dev-platform.git" materialName="mainrepo" />
-      </materials>
-    </pipeline>
     <pipeline name="GDP-Yocto-Minnowboard-QtAS" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
         <param name="FORK">gunnarx</param>
