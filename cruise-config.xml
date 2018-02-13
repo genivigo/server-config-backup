@@ -277,6 +277,27 @@
         <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="pyro" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2_pyro" />
       </materials>
     </pipeline>
+    <pipeline name="yocto-baseline-14-frznlogic-qemux86--64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">13.0</param>
+      </params>
+      <environmentvariables>
+        <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+        <variable name="IMAGE_NAME">
+          <value>orion-image</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="pyro" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.pyro" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="pyro" dest="poky" autoUpdate="false" materialName="poky.pyro" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="pyro" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.pyro" />
+        <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GENIVI_Development_Platform">
     <authorization>
