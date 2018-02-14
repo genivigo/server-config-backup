@@ -2458,6 +2458,7 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="GENIVI_Baseline_Community" />
   <templates>
     <pipeline name="Yocto_GDP_generic_script_with_artifacts">
       <stage name="build" cleanWorkingDir="true">
