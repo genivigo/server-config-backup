@@ -309,7 +309,7 @@
       <timer onlyOnChanges="true">0 0 2 ? * MON-SUN</timer>
       <environmentvariables>
         <variable name="TARGET">
-          <value>qemux86-64</value>
+          <value>qemuarm64</value>
         </variable>
         <variable name="LAYER_poky_BRANCH">
           <value>origin/pyro</value>
