@@ -326,7 +326,19 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="GENIVI_Baseline_Community" />
+  <pipelines group="GENIVI_Baseline_Community">
+    <authorization>
+      <view>
+        <role>Developer</role>
+      </view>
+      <operate>
+        <role>Developer</role>
+      </operate>
+      <admins>
+        <role>Developer</role>
+      </admins>
+    </authorization>
+  </pipelines>
   <pipelines group="GENIVI_Development_Platform">
     <authorization>
       <view>
