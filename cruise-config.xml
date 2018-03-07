@@ -593,6 +593,24 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-CI-meta-browser-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">master</param>
+      </params>
+      <timer>0 44 20 ? * MON-SUN</timer>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+        <variable name="LAYER_meta_browser_BRANCH">
+          <value>origin/master</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Pull_Requests">
     <authorization>
