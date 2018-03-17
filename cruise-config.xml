@@ -3283,7 +3283,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>./checkout_layer_hash.sh meta-openembedded</arg>
+                <arg>scripts/checkout_layer_hash.sh meta-openembedded</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
