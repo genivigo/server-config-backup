@@ -3278,7 +3278,7 @@
             <tasks>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>./checkout_layer_hash.sh poky</arg>
+                <arg>scripts/checkout_layer_hash.sh poky</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
