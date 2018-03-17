@@ -3276,11 +3276,6 @@
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
-              <exec command="bash" workingdir="meta-ivi/scripts">
-                <arg>-c</arg>
-                <arg>./checkout_layer_hash.sh meta-gplv2</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash" workingdir="meta-ivi">
                 <arg>-c</arg>
                 <arg>scripts/ci-build.sh $TARGET</arg>
