@@ -1567,7 +1567,7 @@
     <pipeline name="meta-ivi-with-script" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">11.0</param>
+        <param name="BRANCH">master</param>
       </params>
       <environmentvariables>
         <variable name="MACHINE">
