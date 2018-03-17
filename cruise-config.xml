@@ -3281,7 +3281,7 @@
                 <arg>scripts/checkout_layer_hash.sh poky</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash">
+              <exec command="bash" workingdir="meta-ivi">
                 <arg>-c</arg>
                 <arg>scripts/checkout_layer_hash.sh meta-openembedded</arg>
                 <runif status="passed" />
