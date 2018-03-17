@@ -3276,19 +3276,24 @@
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
-              <exec command="bash" workingdir="baseline_ci_helper">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>./checkout_layer_hash.sh poky</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bash" workingdir="baseline_ci_helper">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>./checkout_layer_hash.sh meta-openembedded</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>scripts/ci-build.sh qemux86-64</arg>
+                <arg>./checkout_layer_hash.sh meta-gplv2</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>scripts/ci-build.sh $TARGET</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
