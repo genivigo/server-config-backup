@@ -3276,7 +3276,7 @@
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
-              <exec command="bash">
+              <exec command="bash" workingdir="meta-ivi">
                 <arg>-c</arg>
                 <arg>scripts/checkout_layer_hash.sh poky</arg>
                 <runif status="passed" />
