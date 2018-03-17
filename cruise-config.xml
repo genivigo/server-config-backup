@@ -1566,8 +1566,8 @@
     </authorization>
     <pipeline name="meta-ivi-with-script" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
       <params>
-        <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="FORK">gunnarx</param>
+        <param name="BRANCH">ci_script_wip</param>
       </params>
       <environmentvariables>
         <variable name="MACHINE">
