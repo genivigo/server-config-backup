@@ -3285,10 +3285,6 @@
             <resources>
               <resource>yocto_build</resource>
             </resources>
-            <artifacts>
-              <artifact src="logs_test.tar.gz" />
-              <artifact src="staging" />
-            </artifacts>
           </job>
         </jobs>
       </stage>
