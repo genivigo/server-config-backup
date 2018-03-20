@@ -539,7 +539,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform/" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP-CI-meta-qt5-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP-CI-meta-qt5-5.6only-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
