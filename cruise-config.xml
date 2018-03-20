@@ -490,7 +490,7 @@
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
       </params>
-      <timer onlyOnChanges="true">0 0 2 ? * MON-SUN</timer>
+      <timer onlyOnChanges="true">0 0 2 ? * TUE,THU,SAT</timer>
       <environmentvariables>
         <variable name="TARGET">
           <value>minnowboard</value>
