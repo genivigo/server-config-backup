@@ -562,7 +562,7 @@
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
       </params>
-      <timer onlyOnChanges="true">0 0 2 ? * MON-SUN</timer>
+      <timer>0 0 2 ? * MON-SUN</timer>
       <environmentvariables>
         <variable name="TARGET">
           <value>raspberrypi3</value>
