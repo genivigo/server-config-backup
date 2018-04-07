@@ -3924,7 +3924,6 @@
     </agent>
     <agent hostname="c8776aa52222 (gunnarx)" ipaddress="172.17.0.1" uuid="cfad499e-6530-4e20-9013-ac7f484f5523">
       <resources>
-        <resource>renesas_binaries</resource>
         <resource>c8776aa52222</resource>
         <resource>Qt-seeder</resource>
         <resource>yocto_build</resource>
@@ -3936,7 +3935,6 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>go-agent1</resource>
-        <resource>renesas_binaries</resource>
         <resource>deploy_genivi</resource>
         <resource>cmake</resource>
       </resources>
@@ -3945,7 +3943,6 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>go-agent2</resource>
-        <resource>renesas_binaries</resource>
         <resource>cmake</resource>
       </resources>
     </agent>
