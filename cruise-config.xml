@@ -668,6 +668,20 @@
         <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-Yocto-RPI3-GITHUB-PR" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">(pullreq)</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>raspberrypi3</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
+      </materials>
+    </pipeline>
     <pipeline name="GDP-Yocto-MINNOWBOARD-GITHUB-PR" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
