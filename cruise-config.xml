@@ -2621,12 +2621,12 @@
             <tasks>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>scripts/ci-build.sh CI_FLAG</arg>
+                <arg>find /var/go/sgx_bin_gen3</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>find /var/go/sgx_bin_gen3</arg>
+                <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
