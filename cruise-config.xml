@@ -3975,6 +3975,7 @@
         <resource>yocto_build</resource>
       </resources>
     </agent>
+    <agent hostname="yournamehere-go-agent" ipaddress="10.100.10.1" uuid="96ef107d-e40d-4563-95ba-46670c957f3b" isDisabled="true" />
   </agents>
 </cruise>
 
