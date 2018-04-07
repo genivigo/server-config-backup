@@ -3929,6 +3929,7 @@
         <resource>yocto_build</resource>
         <resource>cmake</resource>
         <resource>ga_test</resource>
+        <resource>renesas_binaries</resource>
       </resources>
     </agent>
     <agent hostname="go-agent1 (GENIVI)" ipaddress="172.17.0.2" uuid="1bb12ac4-c35f-4111-9eba-a2e709d5cf7b" isDisabled="true">
@@ -3959,6 +3960,7 @@
         <resource>delta</resource>
         <resource>yocto_build</resource>
         <resource>cmake</resource>
+        <resource>renesas_binaries</resource>
       </resources>
     </agent>
     <agent hostname="elmer" ipaddress="172.17.0.2" uuid="184e27f3-7008-4110-85b3-c6d0eeb1e68b">
