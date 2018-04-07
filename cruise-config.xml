@@ -3979,6 +3979,7 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>go-agent1</resource>
+        <resource>renesas_binaries</resource>
       </resources>
     </agent>
   </agents>
