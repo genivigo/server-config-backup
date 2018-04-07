@@ -3921,12 +3921,6 @@
     </pipeline>
   </templates>
   <agents>
-    <agent hostname="ics-agent1 (ICS)" ipaddress="172.17.0.13" uuid="0d027f89-6a5b-4d2f-803d-394f4c5690ae" isDisabled="true">
-      <resources>
-        <resource>ics-agent1</resource>
-        <resource>yocto_build</resource>
-      </resources>
-    </agent>
     <agent hostname="c8776aa52222 (gunnarx)" ipaddress="172.17.0.1" uuid="cfad499e-6530-4e20-9013-ac7f484f5523">
       <resources>
         <resource>c8776aa52222</resource>
