@@ -763,8 +763,8 @@
     </pipeline>
     <pipeline name="Release-raspberrypi-2" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
-        <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="FORK">gunnarx</param>
+        <param name="BRANCH">rocko_combined</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
