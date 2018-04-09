@@ -2823,6 +2823,14 @@
     <pipeline name="Yocto_GDP_generic_release_and_upload">
       <stage name="build">
         <approval type="manual" />
+        <environmentvariables>
+          <variable name="STANDARD_RELEASE_BUILD">
+            <value>true</value>
+          </variable>
+          <variable name="RELEASE">
+            <value>14.0</value>
+          </variable>
+        </environmentvariables>
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
