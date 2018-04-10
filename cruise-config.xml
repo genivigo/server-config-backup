@@ -738,7 +738,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/#{FORK}/genivi-dev-platform" autoUpdate="false" materialName="mainrepo" />
+        <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" autoUpdate="false" materialName="mainrepo" />
       </materials>
     </pipeline>
     <pipeline name="Release-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
