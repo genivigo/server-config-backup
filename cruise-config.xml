@@ -3987,6 +3987,7 @@
     <agent hostname="pelagic-agent" ipaddress="172.17.0.2" uuid="f4bda6b1-3679-4bd9-8edb-e234953217f3">
       <resources>
         <resource>yocto_build</resource>
+        <resource>pelagic-agent</resource>
       </resources>
     </agent>
     <agent hostname="go-agent1" ipaddress="172.17.0.2" uuid="48bcb970-5747-49f1-910e-8087fbac7ea6">
