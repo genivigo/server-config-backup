@@ -744,7 +744,7 @@
     <pipeline name="Release-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="FORK">gunnarx</param>
-        <param name="BRANCH">rocko_combined</param>
+        <param name="BRANCH">hmi_test</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
