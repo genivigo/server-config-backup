@@ -829,7 +829,7 @@
       </params>
       <environmentvariables>
         <variable name="TARGET">
-          <value>qemu</value>
+          <value>qemux86-64</value>
         </variable>
         <variable name="RELEASE">
           <value>uploadtest</value>
