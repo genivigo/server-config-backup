@@ -829,7 +829,7 @@
       </params>
       <environmentvariables>
         <variable name="TARGET">
-          <value>minnowboard</value>
+          <value>qemu</value>
         </variable>
         <variable name="RELEASE">
           <value>uploadtest</value>
