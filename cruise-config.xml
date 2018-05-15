@@ -1000,8 +1000,8 @@
     </pipeline>
     <pipeline name="GDP-Yocto-qemux86-64_SDK" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
-        <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="FORK">gunnarx</param>
+        <param name="BRANCH">hmi_test</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
