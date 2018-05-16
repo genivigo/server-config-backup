@@ -3943,7 +3943,7 @@
     </pipeline>
   </templates>
   <agents>
-    <agent hostname="c8776aa52222 (gunnarx)" ipaddress="172.17.0.1" uuid="cfad499e-6530-4e20-9013-ac7f484f5523">
+    <agent hostname="c8776aa52222 (gunnarx)" ipaddress="172.17.0.1" uuid="cfad499e-6530-4e20-9013-ac7f484f5523" isDisabled="true">
       <resources>
         <resource>c8776aa52222</resource>
         <resource>Qt-seeder</resource>
