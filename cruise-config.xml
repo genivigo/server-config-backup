@@ -1578,6 +1578,40 @@
         <role>Developer</role>
       </admins>
     </authorization>
+    <pipeline name="SDK1" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
+      <params>
+        <param name="FORK">gunnarx</param>
+        <param name="BRANCH">hmi_test</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>qemux86-64</value>
+        </variable>
+        <variable name="BUILD_SDK">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="http://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
+      </materials>
+    </pipeline>
+    <pipeline name="SDK2" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
+      <params>
+        <param name="FORK">gunnarx</param>
+        <param name="BRANCH">hmi_test</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>qemux86-64</value>
+        </variable>
+        <variable name="BUILD_SDK">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="http://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
+      </materials>
+    </pipeline>
     <pipeline name="meta-ivi-with-script" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
       <params>
         <param name="FORK">gunnarx</param>
