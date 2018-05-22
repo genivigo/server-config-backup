@@ -4123,7 +4123,14 @@
       </resources>
     </agent>
     <agent hostname="elmer" ipaddress="176.10.244.80" uuid="a0b0783f-7328-4041-b7f1-06b191619611" isDisabled="true" />
-    <agent hostname="elmer" ipaddress="172.17.0.2" uuid="9f114dbb-65ca-4e05-a8c3-5423407492fc" />
+    <agent hostname="elmer" ipaddress="172.17.0.2" uuid="9f114dbb-65ca-4e05-a8c3-5423407492fc">
+      <resources>
+        <resource>test_qemux86-64</resource>
+        <resource>yocto_build</resource>
+        <resource>elmer</resource>
+        <resource>cmake</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
