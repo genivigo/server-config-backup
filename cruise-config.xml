@@ -2189,6 +2189,14 @@
       <stage name="stage">
         <jobs>
           <job name="build_and_export_test">
+            <environmentvariables>
+              <variable name="NO_ROOT_PASS">
+                <value>true</value>
+              </variable>
+              <variable name="EXPORT_TESTS">
+                <value>true</value>
+              </variable>
+            </environmentvariables>
             <tasks>
               <exec command="bash">
                 <arg>-c</arg>
