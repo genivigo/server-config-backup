@@ -2214,7 +2214,7 @@
       </stage>
       <stage name="test">
         <jobs>
-          <job name="foo">
+          <job name="start_qemu_and_run_test">
             <environmentvariables>
               <variable name="DISK_IMG">
                 <value>../artifacts/genivi-dev-platform-qemux86-64.ext4</value>
