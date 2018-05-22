@@ -2224,7 +2224,8 @@
                 <arg>testexport.tar.gz</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="python oe-test" workingdir="artifacts">
+              <exec command="python" workingdir="artifacts">
+                <arg>oe-test</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
