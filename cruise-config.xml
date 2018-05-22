@@ -2243,6 +2243,10 @@
             <resources>
               <resource>test_qemux86-64</resource>
             </resources>
+            <artifacts>
+              <test src="artifacts/genivi-dev-platform/remoteTarget.log" />
+              <test src="artifacts/genivi-dev-platform/runtime-results.log" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
