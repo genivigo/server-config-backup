@@ -2205,7 +2205,7 @@
               </exec>
             </tasks>
             <artifacts>
-              <artifact src="gdp-src-build/tmp/testimage/genivi-dev-platform/testexport.tar.gz" />
+              <artifact src="gdp-src-build/tmp/testexport/genivi-dev-platform/testexport.tar.gz" />
               <artifact src="gdp-src-build/tmp/deploy/images/qemux86-64/genivi-dev-platform-qemux86-64.ext4" />
               <artifact src="gdp-src-build/tmp/deploy/images/qemux86-64/bzImage" />
             </artifacts>
