@@ -2176,6 +2176,12 @@
         <variable name="TARGET">
           <value>qemux86-64</value>
         </variable>
+        <variable name="NO_ROOT_PASS">
+          <value>true</value>
+        </variable>
+        <variable name="EXPORT_TESTS">
+          <value>true</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/#{FORK}/genivi-dev-platform/" branch="#{BRANCH}" materialName="mainrepo" />
