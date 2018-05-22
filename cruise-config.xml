@@ -2212,6 +2212,15 @@
           </job>
         </jobs>
       </stage>
+      <stage name="test">
+        <jobs>
+          <job name="foo">
+            <tasks>
+              <exec command="true" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="Administration_for_c8776aa52222">
