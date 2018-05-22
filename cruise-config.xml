@@ -2190,7 +2190,7 @@
         <jobs>
           <job name="build_and_export_test">
             <environmentvariables>
-              <variable name="NO_ROOT_PASS">
+              <variable name="NO_ROOT_PASSWORD">
                 <value>true</value>
               </variable>
               <variable name="EXPORT_TESTS">
