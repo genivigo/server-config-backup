@@ -2182,7 +2182,15 @@
       </materials>
       <stage name="stage">
         <jobs>
-          <job name="foo" />
+          <job name="foo">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>scripts/ci-build.sh CI_FLAG</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+          </job>
         </jobs>
       </stage>
     </pipeline>
