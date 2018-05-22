@@ -2169,8 +2169,8 @@
     </pipeline>
     <pipeline name="gdp-acceptance-tests" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
       <params>
-        <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="FORK">mirzak</param>
+        <param name="BRANCH">GDP-668-genivi-testing</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
