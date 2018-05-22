@@ -2219,7 +2219,11 @@
               <fetchartifact pipeline="" stage="build" job="build_and_export_test" srcdir="artifacts">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="true" />
+              <exec command="tar" workingdir="artifacts">
+                <arg>-xvf</arg>
+                <arg>testexport.tar.gz</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
