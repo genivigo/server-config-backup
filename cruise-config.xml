@@ -2182,7 +2182,7 @@
       </materials>
       <stage name="stage">
         <jobs>
-          <job name="foo">
+          <job name="build_and_export_test">
             <tasks>
               <exec command="bash">
                 <arg>-c</arg>
