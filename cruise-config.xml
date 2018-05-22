@@ -2223,7 +2223,7 @@
                 <value>../artifacts/bzImage</value>
               </variable>
               <variable name="TEST_DIR">
-                <value>../artifacts</value>
+                <value>../artifacts/genivi-dev-platform</value>
               </variable>
             </environmentvariables>
             <tasks>
