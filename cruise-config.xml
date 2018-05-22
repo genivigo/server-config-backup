@@ -2195,11 +2195,6 @@
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="bitbake" workingdir="gdp-src-build">
-                <arg>-c</arg>
-                <arg>testexport genivi-dev-platform</arg>
-                <runif status="passed" />
-              </exec>
             </tasks>
             <artifacts>
               <artifact src="gdp-src-build/tmp/testimage/genivi-dev-platform/testexport.tar.gz" />
