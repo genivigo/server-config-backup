@@ -2236,7 +2236,8 @@
                 <runif status="passed" />
               </exec>
               <exec command="bash" workingdir="scripts">
-                <arg>-c acceptance-tests.sh</arg>
+                <arg>-c</arg>
+                <arg>acceptance-tests.sh</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
