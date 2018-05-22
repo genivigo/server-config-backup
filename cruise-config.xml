@@ -2219,6 +2219,9 @@
               <variable name="DISK_IMG">
                 <value>artifacts/genivi-dev-platform-qemux86-64.ext4</value>
               </variable>
+              <variable name="KERNEL_IMG">
+                <value>artifacts/bzImage</value>
+              </variable>
             </environmentvariables>
             <tasks>
               <fetchartifact pipeline="" stage="build" job="build_and_export_test" srcdir="artifacts">
