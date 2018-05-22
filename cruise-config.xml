@@ -2235,8 +2235,8 @@
                 <arg>testexport.tar.gz</arg>
                 <runif status="passed" />
               </exec>
-              <exec command="python" workingdir="artifacts">
-                <arg>oe-test</arg>
+              <exec command="bash" workingdir="scripts">
+                <arg>-c acceptance-tests.sh</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
