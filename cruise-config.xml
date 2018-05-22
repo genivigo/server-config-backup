@@ -2191,7 +2191,7 @@
               </exec>
               <exec command="bitbake" workingdir="gdp-src-build">
                 <arg>-c</arg>
-                <arg>testexport</arg>
+                <arg>testexport genivi-dev-platform</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
