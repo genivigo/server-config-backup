@@ -2240,6 +2240,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>test_qemux86-64</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
