@@ -2217,10 +2217,13 @@
           <job name="foo">
             <environmentvariables>
               <variable name="DISK_IMG">
-                <value>artifacts/genivi-dev-platform-qemux86-64.ext4</value>
+                <value>../artifacts/genivi-dev-platform-qemux86-64.ext4</value>
               </variable>
               <variable name="KERNEL_IMG">
-                <value>artifacts/bzImage</value>
+                <value>../artifacts/bzImage</value>
+              </variable>
+              <variable name="TEST_DIR">
+                <value>../artifacts</value>
               </variable>
             </environmentvariables>
             <tasks>
