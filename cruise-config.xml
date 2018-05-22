@@ -2216,10 +2216,10 @@
         <jobs>
           <job name="foo">
             <tasks>
-              <exec command="true" />
               <fetchartifact pipeline="" stage="build" job="build_and_export_test" srcdir="artifacts">
                 <runif status="passed" />
               </fetchartifact>
+              <exec command="true" />
             </tasks>
           </job>
         </jobs>
