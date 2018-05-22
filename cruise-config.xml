@@ -2186,7 +2186,7 @@
       <materials>
         <git url="https://github.com/#{FORK}/genivi-dev-platform/" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
-      <stage name="stage">
+      <stage name="build">
         <jobs>
           <job name="build_and_export_test">
             <environmentvariables>
