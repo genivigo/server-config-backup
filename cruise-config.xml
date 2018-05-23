@@ -4131,6 +4131,7 @@
         <resource>cmake</resource>
       </resources>
     </agent>
+    <agent hostname="elmer" ipaddress="176.10.244.80" uuid="dbaafc7d-65b9-4b11-8303-0d8dc4040769" />
   </agents>
 </cruise>
 
