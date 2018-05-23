@@ -984,7 +984,7 @@
     <pipeline name="GDP-Yocto-Minnowboard_SDK" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="BRANCH">rock</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
