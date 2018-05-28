@@ -4057,7 +4057,8 @@
               </exec>
             </tasks>
             <tabs>
-              <tab name="TestResult" path="runtime-results.log" />
+              <tab name="RemoteTargetLog" path="remoteTarget.log" />
+              <tab name="TestResults" path="runtime-results.log" />
             </tabs>
             <resources>
               <resource>test_qemux86-64</resource>
