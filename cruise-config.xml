@@ -4056,6 +4056,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <tabs>
+              <tab name="TestResult" path="runtime-results.log" />
+            </tabs>
             <resources>
               <resource>test_qemux86-64</resource>
             </resources>
