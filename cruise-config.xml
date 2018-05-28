@@ -629,7 +629,7 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="GDP-Yocto-QEMU_x86-64-GITHUB-PR" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP-Yocto-QEMU_x86-64-GITHUB-PR" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_acceptance_test">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">(pullreq)</param>
