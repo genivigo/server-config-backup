@@ -2167,7 +2167,7 @@
         <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
-    <pipeline name="gdp-acceptance-tests" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false">
+    <pipeline name="gdp-acceptance-tests" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_acceptance_test">
       <params>
         <param name="FORK">mirzak</param>
         <param name="BRANCH">GDP-668-genivi-testing</param>
@@ -2186,73 +2186,6 @@
       <materials>
         <git url="https://github.com/#{FORK}/genivi-dev-platform/" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
-      <stage name="build">
-        <jobs>
-          <job name="build_and_export_test">
-            <environmentvariables>
-              <variable name="NO_ROOT_PASSWORD">
-                <value>true</value>
-              </variable>
-              <variable name="EXPORT_TESTS">
-                <value>true</value>
-              </variable>
-            </environmentvariables>
-            <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>scripts/ci-build.sh CI_FLAG</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <artifacts>
-              <artifact src="gdp-src-build/tmp/testexport/genivi-dev-platform/testexport.tar.gz" dest="artifacts/" />
-              <artifact src="gdp-src-build/tmp/deploy/images/qemux86-64/genivi-dev-platform-qemux86-64.ext4" dest="artifacts/" />
-              <artifact src="gdp-src-build/tmp/deploy/images/qemux86-64/bzImage" dest="artifacts/" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-      <stage name="test">
-        <jobs>
-          <job name="start_qemu_and_run_test">
-            <environmentvariables>
-              <variable name="DISK_IMG">
-                <value>../artifacts/genivi-dev-platform-qemux86-64.ext4</value>
-              </variable>
-              <variable name="KERNEL_IMG">
-                <value>../artifacts/bzImage</value>
-              </variable>
-              <variable name="TEST_DIR">
-                <value>../artifacts/genivi-dev-platform</value>
-              </variable>
-              <variable name="MACHINE">
-                <value>qemux86-64</value>
-              </variable>
-            </environmentvariables>
-            <tasks>
-              <fetchartifact pipeline="" stage="build" job="build_and_export_test" srcdir="artifacts">
-                <runif status="passed" />
-              </fetchartifact>
-              <exec command="tar" workingdir="artifacts">
-                <arg>-xvf</arg>
-                <arg>testexport.tar.gz</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="scripts">
-                <arg>acceptance-tests.sh</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>test_qemux86-64</resource>
-            </resources>
-            <artifacts>
-              <test src="artifacts/genivi-dev-platform/remoteTarget.log" />
-              <test src="artifacts/genivi-dev-platform/runtime-results.log" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
     </pipeline>
   </pipelines>
   <pipelines group="Administration_for_c8776aa52222">
@@ -4061,6 +3994,75 @@
             <resources>
               <resource>#{SERVER_RESOURCE}</resource>
             </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="Yocto_GDP_generic_script_acceptance_test">
+      <stage name="build">
+        <jobs>
+          <job name="build_and_export_test">
+            <environmentvariables>
+              <variable name="NO_ROOT_PASSWORD">
+                <value>true</value>
+              </variable>
+              <variable name="EXPORT_TESTS">
+                <value>true</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>scripts/ci-build.sh CI_FLAG</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <artifacts>
+              <artifact src="gdp-src-build/tmp/testexport/genivi-dev-platform/testexport.tar.gz" dest="artifacts/" />
+              <artifact src="gdp-src-build/tmp/deploy/images/qemux86-64/genivi-dev-platform-qemux86-64.ext4" dest="artifacts/" />
+              <artifact src="gdp-src-build/tmp/deploy/images/qemux86-64/bzImage" dest="artifacts/" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="test">
+        <jobs>
+          <job name="start_qemu_and_run_test">
+            <environmentvariables>
+              <variable name="DISK_IMG">
+                <value>../artifacts/genivi-dev-platform-qemux86-64.ext4</value>
+              </variable>
+              <variable name="KERNEL_IMG">
+                <value>../artifacts/bzImage</value>
+              </variable>
+              <variable name="TEST_DIR">
+                <value>../artifacts/genivi-dev-platform</value>
+              </variable>
+              <variable name="MACHINE">
+                <value>qemux86-64</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <fetchartifact pipeline="" stage="build" job="build_and_export_test" srcdir="artifacts">
+                <runif status="passed" />
+              </fetchartifact>
+              <exec command="tar" workingdir="artifacts">
+                <arg>-xvf</arg>
+                <arg>testexport.tar.gz</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash" workingdir="scripts">
+                <arg>acceptance-tests.sh</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>test_qemux86-64</resource>
+            </resources>
+            <artifacts>
+              <test src="artifacts/genivi-dev-platform/remoteTarget.log" />
+              <test src="artifacts/genivi-dev-platform/runtime-results.log" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
