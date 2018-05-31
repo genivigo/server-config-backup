@@ -4126,6 +4126,7 @@
         <resource>yocto_build</resource>
         <resource>go-agent1</resource>
         <resource>renesas_binaries</resource>
+        <resource>deploy_genivi</resource>
       </resources>
     </agent>
     <agent hostname="elmer" ipaddress="176.10.244.80" uuid="a0b0783f-7328-4041-b7f1-06b191619611" isDisabled="true" />
