@@ -4107,14 +4107,6 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="elmer" ipaddress="172.17.0.2" uuid="184e27f3-7008-4110-85b3-c6d0eeb1e68b" isDisabled="true">
-      <resources>
-        <resource>yocto_build</resource>
-        <resource>elmer</resource>
-        <resource>cmake</resource>
-        <resource>test_qemux86-64</resource>
-      </resources>
-    </agent>
     <agent hostname="pelagic-agent" ipaddress="172.17.0.2" uuid="f4bda6b1-3679-4bd9-8edb-e234953217f3">
       <resources>
         <resource>yocto_build</resource>
@@ -4127,15 +4119,6 @@
         <resource>go-agent1</resource>
         <resource>renesas_binaries</resource>
         <resource>deploy_genivi</resource>
-      </resources>
-    </agent>
-    <agent hostname="elmer" ipaddress="176.10.244.80" uuid="a0b0783f-7328-4041-b7f1-06b191619611" isDisabled="true" />
-    <agent hostname="elmer" ipaddress="172.17.0.2" uuid="9f114dbb-65ca-4e05-a8c3-5423407492fc" isDisabled="true">
-      <resources>
-        <resource>test_qemux86-64</resource>
-        <resource>yocto_build</resource>
-        <resource>elmer</resource>
-        <resource>cmake</resource>
       </resources>
     </agent>
     <agent hostname="elmer" ipaddress="172.17.0.2" uuid="dbaafc7d-65b9-4b11-8303-0d8dc4040769">
