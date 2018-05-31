@@ -4053,7 +4053,7 @@
               </exec>
               <exec command="bash" workingdir="scripts">
                 <arg>acceptance-tests.sh</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
             </tasks>
             <tabs>
