@@ -4049,7 +4049,7 @@
               <exec command="tar" workingdir="artifacts">
                 <arg>-xvf</arg>
                 <arg>testexport.tar.gz</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
               <exec command="bash" workingdir="scripts">
                 <arg>acceptance-tests.sh</arg>
