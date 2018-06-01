@@ -2462,8 +2462,8 @@
     </pipeline>
     <pipeline name="Release-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
       <params>
-        <param name="FORK">gunnarx</param>
-        <param name="BRANCH">rocko_combined_chromium</param>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">rocko</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
