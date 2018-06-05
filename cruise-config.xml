@@ -1583,8 +1583,8 @@
     </authorization>
     <pipeline name="SDK1" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
-        <param name="FORK">gunnarx</param>
-        <param name="BRANCH">hmi_test</param>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">rocko</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
