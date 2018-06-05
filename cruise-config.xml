@@ -4129,6 +4129,7 @@
         <resource>cmake</resource>
       </resources>
     </agent>
+    <agent hostname="genivi-builder" ipaddress="94.130.167.172" uuid="8e17953f-6fa1-410d-a9fc-cb50d136fe69" />
   </agents>
 </cruise>
 
