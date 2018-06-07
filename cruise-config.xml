@@ -4088,6 +4088,7 @@
         <resource>yocto_build</resource>
         <resource>go-agent2</resource>
         <resource>cmake</resource>
+        <resource>renesas_binaries</resource>
       </resources>
     </agent>
     <agent hostname="vbox-agent" ipaddress="10.1.2.56" uuid="b8dcc090-1141-431e-8318-4d03edb96858">
@@ -4116,6 +4117,7 @@
         <resource>yocto_build</resource>
         <resource>go-agent1</resource>
         <resource>deploy_genivi</resource>
+        <resource>renesas_binaries</resource>
       </resources>
     </agent>
     <agent hostname="elmer" ipaddress="172.17.0.2" uuid="dbaafc7d-65b9-4b11-8303-0d8dc4040769">
