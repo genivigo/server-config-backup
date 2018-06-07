@@ -4081,7 +4081,6 @@
         <resource>yocto_build</resource>
         <resource>cmake</resource>
         <resource>ga_test</resource>
-        <resource>renesas_binaries</resource>
       </resources>
     </agent>
     <agent hostname="go-agent2 (GENIVI)" ipaddress="172.17.0.2" uuid="198e29c2-fbfa-4e70-93c6-b9df35fa720b">
@@ -4089,7 +4088,6 @@
         <resource>yocto_build</resource>
         <resource>go-agent2</resource>
         <resource>cmake</resource>
-        <resource>renesas_binaries</resource>
       </resources>
     </agent>
     <agent hostname="vbox-agent" ipaddress="10.1.2.56" uuid="b8dcc090-1141-431e-8318-4d03edb96858">
@@ -4105,7 +4103,6 @@
         <resource>delta</resource>
         <resource>yocto_build</resource>
         <resource>cmake</resource>
-        <resource>renesas_binaries</resource>
       </resources>
     </agent>
     <agent hostname="pelagic-agent" ipaddress="172.17.0.2" uuid="f4bda6b1-3679-4bd9-8edb-e234953217f3">
@@ -4118,7 +4115,6 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>go-agent1</resource>
-        <resource>renesas_binaries</resource>
         <resource>deploy_genivi</resource>
       </resources>
     </agent>
