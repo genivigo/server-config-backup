@@ -256,26 +256,6 @@
         <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2_pyro" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-14-frznlogic-qemux86--64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
-      <params>
-        <param name="FORK">frznlogic</param>
-        <param name="BRANCH">bump-rocko</param>
-      </params>
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>qemux86-64</value>
-        </variable>
-        <variable name="IMAGE_NAME">
-          <value>pulsar-image</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky.rocko" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
-      </materials>
-    </pipeline>
   </pipelines>
   <pipelines group="GENIVI_Baseline_CI_Other">
     <authorization>
