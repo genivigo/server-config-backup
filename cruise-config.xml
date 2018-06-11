@@ -804,6 +804,26 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" autoUpdate="false" materialName="mainrepo" />
       </materials>
     </pipeline>
+    <pipeline name="Release-raspberrypi-3-rocko" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">rocko</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>raspberrypi3</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>14.0</value>
+        </variable>
+        <variable name="STANDARD_RELEASE_BUILD">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" autoUpdate="false" materialName="mainrepo" />
+      </materials>
+    </pipeline>
     <pipeline name="Release-dragonboard-410c" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="FORK">GENIVI</param>
