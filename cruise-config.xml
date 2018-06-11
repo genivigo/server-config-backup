@@ -449,7 +449,7 @@
         <role>GDP_Developer</role>
       </operate>
     </authorization>
-    <pipeline name="GDP.CI-poky-pyro-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP.CI-poky-pyro-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
@@ -470,7 +470,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP.CI-meta-ivi-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP.CI-meta-ivi-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
@@ -488,7 +488,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP.CI-meta-intel" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP.CI-meta-intel" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
@@ -506,7 +506,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP.CI-meta-iot-web" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP.CI-meta-iot-web" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
@@ -542,7 +542,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP.CI-meta-qt5-5.6only-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP.CI-meta-qt5-5.6only-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
@@ -560,7 +560,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP.CI-meta-raspberrypi" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP.CI-meta-raspberrypi" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
@@ -578,7 +578,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP.CI-meta-flatpak-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP.CI-meta-flatpak-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
@@ -596,7 +596,7 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP.CI-meta-browser-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_NO_ARTIFACTS">
+    <pipeline name="GDP.CI-meta-browser-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
@@ -2651,6 +2651,28 @@
                 <arg>-c</arg>
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
+      <stage name="build" cleanWorkingDir="true">
+        <jobs>
+          <job name="init_and_bitbake">
+            <environmentvariables>
+              <variable name="RM_WORK">
+                <value>true</value>
+              </variable>
+            </environmentvariables>
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>scripts/ci-build.sh CI_FLAG</arg>
               </exec>
             </tasks>
             <resources>
