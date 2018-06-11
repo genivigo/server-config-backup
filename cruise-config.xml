@@ -2907,6 +2907,11 @@
                 <arg>find .  -size +100M -type f -print0 | xargs -0 ls -lS</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash" workingdir="staging">
+                <arg>-c</arg>
+                <arg>find .  -size +1000M -type f -print0 | xargs -0 ls -lS</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
