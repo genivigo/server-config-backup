@@ -231,6 +231,9 @@
         <variable name="MACHINE">
           <value>qemux86-64</value>
         </variable>
+        <variable name="TARGET">
+          <value>qemux86-64</value>
+        </variable>
       </environmentvariables>
       <materials>
         <scm ref="55fece0c-628e-4ceb-abe8-64c792a6b1ea" dest="meta-ivi" />
