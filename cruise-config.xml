@@ -2385,7 +2385,7 @@
     <pipeline name="GDP-Yocto-r-car-m3-starter-kit_SDK" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="BRANCH">rocko_combined_chromium</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
