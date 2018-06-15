@@ -4143,6 +4143,7 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>genivi-builder</resource>
+        <resource>renesas_binaries</resource>
       </resources>
     </agent>
   </agents>
