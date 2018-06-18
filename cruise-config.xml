@@ -946,7 +946,7 @@
     <pipeline name="Release-raspberrypi-3" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">os_tree</param>
+        <param name="BRANCH">rocko</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
