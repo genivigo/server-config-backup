@@ -658,7 +658,7 @@
           <value>minnowboard</value>
         </variable>
         <variable name="LAYER_meta_intel_BRANCH">
-          <value>pyro</value>
+          <value>rocko</value>
         </variable>
       </environmentvariables>
       <materials>
