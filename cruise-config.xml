@@ -3584,7 +3584,6 @@
             </tasks>
             <resources>
               <resource>yocto_build</resource>
-              <resource>genivi-builder</resource>
             </resources>
             <artifacts>
               <artifact src="staging" dest="results" />
@@ -4295,7 +4294,7 @@
         <resource>pelagic-agent</resource>
       </resources>
     </agent>
-    <agent hostname="go-agent1" ipaddress="172.17.0.2" uuid="48bcb970-5747-49f1-910e-8087fbac7ea6">
+    <agent hostname="go-agent1 (GENIVI)" ipaddress="172.17.0.2" uuid="48bcb970-5747-49f1-910e-8087fbac7ea6">
       <resources>
         <resource>yocto_build</resource>
         <resource>go-agent1</resource>
@@ -4310,7 +4309,7 @@
         <resource>cmake</resource>
       </resources>
     </agent>
-    <agent hostname="genivi-builder" ipaddress="172.17.0.2" uuid="8e17953f-6fa1-410d-a9fc-cb50d136fe69">
+    <agent hostname="genivi-builder (GENIVI)" ipaddress="172.17.0.2" uuid="8e17953f-6fa1-410d-a9fc-cb50d136fe69">
       <resources>
         <resource>yocto_build</resource>
         <resource>genivi-builder</resource>
