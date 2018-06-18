@@ -4326,6 +4326,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
+    <agent hostname="webblack" ipaddress="176.10.244.80" uuid="ae48aa65-2a44-47ee-92c8-fa9b21a51eca" />
   </agents>
 </cruise>
 
