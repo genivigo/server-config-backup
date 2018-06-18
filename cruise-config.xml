@@ -177,9 +177,9 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="pyro" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.pyro" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="pyro" dest="poky" autoUpdate="false" materialName="poky.pyro" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="pyro" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.pyro" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-14-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
@@ -197,9 +197,9 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.pyro" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky.pyro" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.pyro" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-14-qemux86" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
@@ -217,9 +217,9 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.pyro" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky.pyro" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.pyro" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-GITHUB-PR-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-with-script">
@@ -237,9 +237,9 @@
       </environmentvariables>
       <materials>
         <scm ref="55fece0c-628e-4ceb-abe8-64c792a6b1ea" dest="meta-ivi" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky_pyro" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe_pyro" />
-        <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2_pyro" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky.pyro" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe.rocko" />
+        <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-GITHUB-PR-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build">
@@ -254,9 +254,9 @@
       </environmentvariables>
       <materials>
         <scm ref="55fece0c-628e-4ceb-abe8-64c792a6b1ea" dest="meta-ivi" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky_pyro" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe_pyro" />
-        <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2_pyro" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe.rocko" />
+        <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
   </pipelines>
@@ -608,10 +608,10 @@
         <role>GDP_Developer</role>
       </operate>
     </authorization>
-    <pipeline name="GDP.CI-poky-pyro-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
+    <pipeline name="GDP.CI-poky-rocko-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="BRANCH">rocko</param>
       </params>
       <timer>0 0 2 ? * MON,THU,SAT,SUN</timer>
       <environmentvariables>
@@ -619,10 +619,10 @@
           <value>minnowboard</value>
         </variable>
         <variable name="LAYER_poky_BRANCH">
-          <value>pyro</value>
+          <value>rocko</value>
         </variable>
         <variable name="LAYER_meta_openembedded_BRANCH">
-          <value>pyro</value>
+          <value>rocko</value>
         </variable>
       </environmentvariables>
       <materials>
@@ -632,7 +632,7 @@
     <pipeline name="GDP.CI-meta-ivi-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="BRANCH">rocko</param>
       </params>
       <timer>0 48 20 ? * MON-SUN</timer>
       <environmentvariables>
@@ -650,7 +650,7 @@
     <pipeline name="GDP.CI-meta-intel" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="BRANCH">rocko</param>
       </params>
       <timer onlyOnChanges="true">0 0 2 ? * TUE,THU,SAT</timer>
       <environmentvariables>
@@ -668,7 +668,7 @@
     <pipeline name="GDP.CI-meta-iot-web" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="BRANCH">rocko</param>
       </params>
       <timer>0 0 2 ? * MON</timer>
       <environmentvariables>
@@ -686,7 +686,7 @@
     <pipeline name="GDP.CI-meta-linaro-r-car-h3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="BRANCH">rocko</param>
       </params>
       <timer>0 0 2 ? * MON,WED,FRI</timer>
       <environmentvariables>
@@ -694,7 +694,7 @@
           <value>r-car-h3-starter-kit</value>
         </variable>
         <variable name="LAYER_meta_linaro_BRANCH">
-          <value>pyro</value>
+          <value>rocko</value>
         </variable>
       </environmentvariables>
       <materials>
@@ -722,7 +722,7 @@
     <pipeline name="GDP.CI-meta-raspberrypi" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="BRANCH">rocko</param>
       </params>
       <timer>0 0 2 ? * MON-SUN</timer>
       <environmentvariables>
@@ -730,7 +730,7 @@
           <value>raspberrypi3</value>
         </variable>
         <variable name="LAYER_meta_raspberrypi_BRANCH">
-          <value>pyro</value>
+          <value>rocko</value>
         </variable>
       </environmentvariables>
       <materials>
@@ -740,7 +740,7 @@
     <pipeline name="GDP.CI-meta-flatpak-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="BRANCH">rocko</param>
       </params>
       <timer>0 44 20 ? * SUN</timer>
       <environmentvariables>
@@ -758,7 +758,7 @@
     <pipeline name="GDP.CI-meta-browser-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="BRANCH">rocko</param>
       </params>
       <timer>0 44 20 ? * MON-SUN</timer>
       <environmentvariables>
