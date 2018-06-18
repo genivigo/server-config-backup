@@ -4266,15 +4266,6 @@
     </pipeline>
   </templates>
   <agents>
-    <agent hostname="c8776aa52222 (gunnarx)" ipaddress="172.17.0.1" uuid="cfad499e-6530-4e20-9013-ac7f484f5523" isDisabled="true">
-      <resources>
-        <resource>c8776aa52222</resource>
-        <resource>Qt-seeder</resource>
-        <resource>yocto_build</resource>
-        <resource>cmake</resource>
-        <resource>ga_test</resource>
-      </resources>
-    </agent>
     <agent hostname="go-agent2 (GENIVI)" ipaddress="172.17.0.2" uuid="198e29c2-fbfa-4e70-93c6-b9df35fa720b">
       <resources>
         <resource>yocto_build</resource>
