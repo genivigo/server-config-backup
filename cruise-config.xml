@@ -157,8 +157,8 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="pyro" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.pyro" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="pyro" dest="poky" autoUpdate="false" materialName="poky.pyro" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="pyro" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.pyro" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="pyro" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.pyro" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="pyro" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.pyro" />
       </materials>
     </pipeline>
@@ -177,8 +177,8 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
@@ -197,8 +197,8 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
@@ -217,8 +217,8 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
@@ -237,8 +237,8 @@
       </environmentvariables>
       <materials>
         <scm ref="55fece0c-628e-4ceb-abe8-64c792a6b1ea" dest="meta-ivi" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky.pyro" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.pyro" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe.rocko" />
         <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
@@ -254,8 +254,8 @@
       </environmentvariables>
       <materials>
         <scm ref="55fece0c-628e-4ceb-abe8-64c792a6b1ea" dest="meta-ivi" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" dest="poky" autoUpdate="false" materialName="poky.rocko" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe.rocko" />
         <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
@@ -1806,8 +1806,8 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="pyro" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded_pyro" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="pyro" dest="poky" autoUpdate="false" materialName="poky_pyro" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="pyro" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded_pyro" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="pyro" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky_pyro" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="pyro" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2" />
       </materials>
     </pipeline>
@@ -2338,8 +2338,8 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="morty" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.morty" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="morty" dest="poky" autoUpdate="false" materialName="poky.morty" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="morty" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.morty" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="morty" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.morty" />
         <git url="https://github.com/genivi/baseline_ci_helper.git" dest="baseline_ci_helper" autoUpdate="false" materialName="baseline_ci_helper" />
       </materials>
     </pipeline>
