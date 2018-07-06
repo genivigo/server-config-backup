@@ -4316,11 +4316,6 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="yournamehere-go-agent" ipaddress="172.17.0.2" uuid="d7a7556d-13fd-4f7d-99a6-eb10b23d47f7" isDisabled="true">
-      <resources>
-        <resource>yournamehere-go-agent</resource>
-      </resources>
-    </agent>
     <agent hostname="webblack" ipaddress="172.17.0.2" uuid="ecaf772a-923c-4214-943c-94905e09901c">
       <resources>
         <resource>yocto_build</resource>
