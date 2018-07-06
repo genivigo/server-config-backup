@@ -4324,7 +4324,7 @@
       </resources>
     </agent>
     <agent hostname="webblack_with_qemu" ipaddress="176.10.244.80" uuid="403d89c7-e991-4c14-af6d-f5fadbf5693d" isDisabled="true" />
-    <agent hostname="webblack_qemu" ipaddress="176.10.244.80" uuid="baff5470-fe7a-4b0f-9e4b-f4c36f4268e7" />
+    <agent hostname="webblack_qemu" ipaddress="172.17.0.2" uuid="baff5470-fe7a-4b0f-9e4b-f4c36f4268e7" />
   </agents>
 </cruise>
 
