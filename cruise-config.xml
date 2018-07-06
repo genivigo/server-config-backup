@@ -640,7 +640,7 @@
           <value>qemux86-64</value>
         </variable>
         <variable name="LAYER_meta_ivi_BRANCH">
-          <value>master</value>
+          <value>origin/master</value>
         </variable>
       </environmentvariables>
       <materials>
