@@ -4323,6 +4323,7 @@
         <resource>test_qemux86-64</resource>
       </resources>
     </agent>
+    <agent hostname="webblack_with_qemu" ipaddress="176.10.244.80" uuid="403d89c7-e991-4c14-af6d-f5fadbf5693d" isDisabled="true" />
   </agents>
 </cruise>
 
