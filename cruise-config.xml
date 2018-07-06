@@ -4322,7 +4322,11 @@
         <resource>yocto_build</resource>
       </resources>
     </agent>
-    <agent hostname="yournamehere-go-agent" ipaddress="172.17.0.2" uuid="d7a7556d-13fd-4f7d-99a6-eb10b23d47f7" />
+    <agent hostname="yournamehere-go-agent" ipaddress="172.17.0.2" uuid="d7a7556d-13fd-4f7d-99a6-eb10b23d47f7">
+      <resources>
+        <resource>yournamehere-go-agent</resource>
+      </resources>
+    </agent>
   </agents>
 </cruise>
 
