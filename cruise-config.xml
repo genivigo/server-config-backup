@@ -4316,7 +4316,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="webblack" ipaddress="172.17.0.2" uuid="ecaf772a-923c-4214-943c-94905e09901c">
+    <agent hostname="webblack" ipaddress="172.17.0.2" uuid="ecaf772a-923c-4214-943c-94905e09901c" isDisabled="true">
       <resources>
         <resource>yocto_build</resource>
         <resource>webblack</resource>
