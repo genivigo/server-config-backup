@@ -4321,6 +4321,7 @@
         <resource>yournamehere-go-agent</resource>
       </resources>
     </agent>
+    <agent hostname="webblack" ipaddress="176.10.244.80" uuid="ecaf772a-923c-4214-943c-94905e09901c" />
   </agents>
 </cruise>
 
