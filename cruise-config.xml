@@ -4323,6 +4323,7 @@
         <resource>test_qemux86-64</resource>
       </resources>
     </agent>
+    <agent hostname="yournamehere-go-qemu-agent" ipaddress="176.10.244.80" uuid="352948af-c46c-483f-a7ee-3bbb5cff6c07" isDisabled="true" />
   </agents>
 </cruise>
 
