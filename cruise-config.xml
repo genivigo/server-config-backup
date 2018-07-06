@@ -1991,7 +1991,6 @@
               </exec>
             </tasks>
             <resources>
-              <resource>systemd-build-deps</resource>
               <resource>yournamehere-go-agent</resource>
             </resources>
             <artifacts>
