@@ -4327,6 +4327,7 @@
       <resources>
         <resource>test_qemux86-64</resource>
         <resource>webblack</resource>
+        <resource>yocto_build</resource>
       </resources>
     </agent>
   </agents>
