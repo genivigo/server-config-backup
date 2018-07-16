@@ -3054,7 +3054,7 @@
           <job name="init_and_bitbake">
             <tasks>
               <exec command="bash">
-                <arg>-c</arg>
+                <arg>-x</arg>
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
               </exec>
