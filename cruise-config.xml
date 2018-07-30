@@ -329,6 +329,7 @@
         <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
         <git url="https://github.com/renesas-rcar/meta-renesas.git" branch="rocko" shallowClone="true" dest="meta-renesas" autoUpdate="false" materialName="meta-renesas.rocko" />
+        <git url="https://github.com/GENIVI/meta-ivi-renesas.git" branch="genivi-14.x" dest="meta-ivi-renesas" autoUpdate="false" materialName="meta-ivi-renesas" />
       </materials>
     </pipeline>
   </pipelines>
