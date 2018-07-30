@@ -328,6 +328,7 @@
         <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
         <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+        <git url="https://github.com/renesas-rcar/meta-renesas.git" branch="rocko" shallowClone="true" dest="meta-renesas" autoUpdate="false" materialName="meta-renesas.rocko" />
       </materials>
     </pipeline>
   </pipelines>
