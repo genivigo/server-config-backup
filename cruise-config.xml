@@ -4393,7 +4393,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>ls -alR "#{TARGET_LOCATION}"</arg>
+                <arg>ls -alR "#{TARGET_LOCATION}/#{ARTIFACT}"</arg>
                 <runif status="any" />
               </exec>
             </tasks>
