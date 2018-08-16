@@ -4463,6 +4463,8 @@
       <resources>
         <resource>webblack</resource>
         <resource>webblack_qemu</resource>
+        <resource>yocto_build</resource>
+        <resource>renesas_binaries</resource>
       </resources>
     </agent>
     <agent hostname="go-agent1" ipaddress="172.17.0.2" uuid="d44a573e-ed56-40df-bcb1-88432438c955">
