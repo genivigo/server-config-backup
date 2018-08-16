@@ -142,33 +142,16 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="yocto-baseline-13-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
-      <params>
-        <param name="FORK">GENIVI</param>
-        <param name="BRANCH">13.0</param>
-      </params>
-      <environmentvariables>
-        <variable name="MACHINE">
-          <value>qemux86-64</value>
-        </variable>
-        <variable name="IMAGE_NAME">
-          <value>orion-image</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="pyro" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.pyro" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="pyro" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.pyro" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="pyro" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.pyro" />
-      </materials>
-    </pipeline>
-    <pipeline name="yocto-baseline-14-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-13-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
       </params>
       <environmentvariables>
         <variable name="MACHINE">
+          <value>qemux86-64</value>
+        </variable>
+        <variable name="TARGET">
           <value>qemux86-64</value>
         </variable>
         <variable name="IMAGE_NAME">
@@ -182,13 +165,16 @@
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-14-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-14-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
       </params>
       <environmentvariables>
         <variable name="MACHINE">
+          <value>qemuarm64</value>
+        </variable>
+        <variable name="TARGET">
           <value>qemuarm64</value>
         </variable>
         <variable name="IMAGE_NAME">
@@ -202,13 +188,16 @@
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-14-qemux86" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-14-qemux86" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
       </params>
       <environmentvariables>
         <variable name="MACHINE">
+          <value>qemux86</value>
+        </variable>
+        <variable name="TARGET">
           <value>qemux86</value>
         </variable>
         <variable name="IMAGE_NAME">
@@ -242,13 +231,16 @@
         <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-GITHUB-PR-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-GITHUB-PR-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-with-script">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">(pullreq)</param>
       </params>
       <environmentvariables>
         <variable name="MACHINE">
+          <value>qemuarm64</value>
+        </variable>
+        <variable name="TARGET">
           <value>qemuarm64</value>
         </variable>
       </environmentvariables>
@@ -310,13 +302,16 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="yocto-baseline-14-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
+    <pipeline name="yocto-baseline-14-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
       </params>
       <environmentvariables>
         <variable name="MACHINE">
+          <value>qemuarm64</value>
+        </variable>
+        <variable name="TARGET">
           <value>qemuarm64</value>
         </variable>
         <variable name="IMAGE_NAME">
@@ -3756,6 +3751,9 @@
           <job name="run_vagrant">
             <environmentvariables>
               <variable name="MACHINE">
+                <value>#{MACHINE}</value>
+              </variable>
+              <variable name="TARGET">
                 <value>#{MACHINE}</value>
               </variable>
               <variable name="VMNAME">
