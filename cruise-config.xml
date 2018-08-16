@@ -2418,6 +2418,26 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
+    <pipeline name="Seed_rcar_binaries" isLocked="false" template="seed_dir_template">
+      <params>
+        <param name="SEED_LOCATION">/var/lib/go-agent/pipelines/newrcar/rcar-gen3</param>
+        <param name="ARTIFACT_LOCATION">seed</param>
+        <param name="SEEDER_AGENT_RESOURCE">delta</param>
+      </params>
+      <materials>
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
+    <pipeline name="Fetch_rcar_binaries" isLocked="false" template="fetch_dir_template">
+      <params>
+        <param name="ARTIFACT_LOCATION">seed</param>
+        <param name="TARGET_LOCATION">/var/go/rcar-gen3</param>
+        <param name="AGENT_RESOURCE">webblack_qemu</param>
+      </params>
+      <materials>
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
     <pipeline name="Wipe_gdp_work_dir" isLocked="false" template="Wipe_dir_pattern">
       <params>
         <param name="agent">c8776aa52222</param>
@@ -4300,6 +4320,80 @@
             <artifacts>
               <artifact src="artifacts/genivi-dev-platform/remoteTarget.log" />
               <artifact src="artifacts/genivi-dev-platform/runtime-results.log" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="seed_dir_template">
+      <stage name="copy_artifact">
+        <approval type="manual" />
+        <jobs>
+          <job name="copy_artifact">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>test -n "#{SEED_LOCATION}" -a -n "#{ARTIFACT_LOCATION}"</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>cp -a #{SEED_LOCATION} #{ARTIFACT_LOCATION}</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>ls -alR "#{SEED_LOCATION}"</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>ls -alR "#{ARTIFACT_LOCATION}"</arg>
+                <runif status="any" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>#{SEEDER_AGENT_RESOURCE}</resource>
+            </resources>
+            <artifacts>
+              <artifact src="#{ARTIFACT_LOCATION}" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="fetch_dir_template">
+      <stage name="sync_artifact">
+        <approval type="manual" />
+        <jobs>
+          <job name="sync_artifact">
+            <tasks>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>test -n "#{TARGET_LOCATION}" -a -n "#{ARTIFACT_LOCATION}"</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>rsync -rva "#{ARTIFACT_LOCATION}" "#{TARGET_LOCATION}"</arg>
+                <runif status="passed" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>ls -alR "#{ARTIFACT_LOCATION}"</arg>
+                <runif status="any" />
+              </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>ls -alR "#{TARGET_LOCATION}"</arg>
+                <runif status="any" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>#{AGENT_RESOURCE}</resource>
+            </resources>
+            <artifacts>
+              <artifact src="#{ARTIFACT_LOCATION}" />
             </artifacts>
           </job>
         </jobs>
