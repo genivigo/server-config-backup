@@ -2420,7 +2420,7 @@
     </authorization>
     <pipeline name="Seed_rcar_binaries" isLocked="false" template="seed_dir_template">
       <params>
-        <param name="SEED_LOCATION">/var/lib/go-agent/pipelines/newrcar/rcar-gen3</param>
+        <param name="SEED_LOCATION">/var/lib/go-agent/pipelines/__rcar_seed/rcar-gen3</param>
         <param name="ARTIFACT_LOCATION">seed</param>
         <param name="SEEDER_AGENT_RESOURCE">delta</param>
       </params>
