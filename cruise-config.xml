@@ -2737,12 +2737,6 @@
   </pipelines>
   <pipelines group="Deployments">
     <authorization>
-      <view>
-        <user>GDP_Developer</user>
-      </view>
-      <operate>
-        <user>GDP_Developer</user>
-      </operate>
       <admins>
         <user>GDP_Developer</user>
       </admins>
