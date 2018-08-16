@@ -2435,7 +2435,6 @@
         <param name="AGENT_RESOURCE">webblack_qemu</param>
       </params>
       <materials>
-        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
         <pipeline pipelineName="Seed_rcar_binaries" stageName="copy_artifact" materialName="seed" />
       </materials>
     </pipeline>
