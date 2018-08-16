@@ -2418,16 +2418,6 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="Fetch_rcar_binaries" isLocked="false" template="fetch_dir_template">
-      <params>
-        <param name="TARGET_LOCATION">/var/go</param>
-        <param name="AGENT_RESOURCE">webblack_qemu</param>
-        <param name="ARTIFACT">rcar-gen3</param>
-      </params>
-      <materials>
-        <pipeline pipelineName="Seed_rcar_binaries" stageName="copy_artifact" materialName="seed" />
-      </materials>
-    </pipeline>
     <pipeline name="Wipe_gdp_work_dir" isLocked="false" template="Wipe_dir_pattern">
       <params>
         <param name="agent">c8776aa52222</param>
@@ -2832,6 +2822,16 @@
       </params>
       <materials>
         <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
+    <pipeline name="Fetch_rcar_binaries" isLocked="false" template="fetch_dir_template">
+      <params>
+        <param name="TARGET_LOCATION">/var/go</param>
+        <param name="AGENT_RESOURCE">webblack_qemu</param>
+        <param name="ARTIFACT">rcar-gen3</param>
+      </params>
+      <materials>
+        <pipeline pipelineName="Seed_rcar_binaries" stageName="copy_artifact" materialName="seed" />
       </materials>
     </pipeline>
   </pipelines>
