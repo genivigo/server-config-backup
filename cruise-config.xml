@@ -4400,9 +4400,6 @@
             <resources>
               <resource>#{AGENT_RESOURCE}</resource>
             </resources>
-            <artifacts>
-              <artifact src="#{ARTIFACT}" />
-            </artifacts>
           </job>
         </jobs>
       </stage>
