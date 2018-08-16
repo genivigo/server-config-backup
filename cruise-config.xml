@@ -4383,13 +4383,13 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>rsync -rva "#{ARTIFACT_LOCATION}" "#{TARGET_LOCATION}"</arg>
-                <runif status="passed" />
+                <arg>ls -alR "#{ARTIFACT_LOCATION}"</arg>
+                <runif status="any" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>ls -alR "#{ARTIFACT_LOCATION}"</arg>
-                <runif status="any" />
+                <arg>rsync -rva "#{ARTIFACT_LOCATION}" "#{TARGET_LOCATION}"</arg>
+                <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
