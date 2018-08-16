@@ -160,9 +160,9 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="sumo" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="sumo" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="sumo" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-14-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
@@ -183,9 +183,9 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="rocko" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="rocko" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="rocko" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="sumo" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="sumo" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="sumo" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-14-qemux86" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
