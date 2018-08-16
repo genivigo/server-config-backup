@@ -2433,6 +2433,7 @@
         <param name="ARTIFACT_LOCATION">seed/rcar-gen3</param>
         <param name="TARGET_LOCATION">/var/go/rcar-gen3</param>
         <param name="AGENT_RESOURCE">webblack_qemu</param>
+        <param name="ARTIFACT">seed/rcar-gen3</param>
       </params>
       <materials>
         <pipeline pipelineName="Seed_rcar_binaries" stageName="copy_artifact" materialName="seed" />
