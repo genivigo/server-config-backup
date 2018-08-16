@@ -2418,16 +2418,6 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="Seed_rcar_binaries" isLocked="false" template="seed_dir_template">
-      <params>
-        <param name="SEED_LOCATION">/var/lib/go-agent/pipelines/__rcar_seed/rcar-gen3</param>
-        <param name="ARTIFACT_LOCATION">seed</param>
-        <param name="SEEDER_AGENT_RESOURCE">delta</param>
-      </params>
-      <materials>
-        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
-      </materials>
-    </pipeline>
     <pipeline name="Fetch_rcar_binaries" isLocked="false" template="fetch_dir_template">
       <params>
         <param name="TARGET_LOCATION">/var/go</param>
@@ -2830,6 +2820,16 @@
         <param name="dir_pattern">/var/lib/go-agent/pipelines/__deploy</param>
       </params>
       <timer>0 0 5 ? * SUN</timer>
+      <materials>
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
+    <pipeline name="Seed_rcar_binaries" isLocked="false" template="seed_dir_template">
+      <params>
+        <param name="SEED_LOCATION">/var/lib/go-agent/pipelines/__rcar_seed/rcar-gen3</param>
+        <param name="ARTIFACT_LOCATION">seed</param>
+        <param name="SEEDER_AGENT_RESOURCE">delta</param>
+      </params>
       <materials>
         <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
