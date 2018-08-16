@@ -145,7 +145,7 @@
     <pipeline name="yocto-baseline-13-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="BRANCH">13.0</param>
         <param name="LAYERBRANCH">rocko</param>
       </params>
       <environmentvariables>
