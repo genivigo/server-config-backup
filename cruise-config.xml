@@ -4383,7 +4383,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>test -n "#{TARGET_LOCATION}" -a -n "#{ARTIFACT_LOCATION}"</arg>
+                <arg>test -n "#{TARGET_LOCATION}"</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
