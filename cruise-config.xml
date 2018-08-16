@@ -4351,6 +4351,11 @@
                 <arg>ls -alR "#{ARTIFACT_LOCATION}"</arg>
                 <runif status="any" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>mkdir "#{ARTIFACT_LOCATION}"</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>#{SEEDER_AGENT_RESOURCE}</resource>
