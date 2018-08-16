@@ -4371,7 +4371,7 @@
       <stage name="sync_artifact">
         <approval type="manual" />
         <jobs>
-          <job name="sync_artifact">
+          <job name="sync_artifact" runOnAllAgents="true">
             <tasks>
               <fetchartifact pipeline="Seed_rcar_binaries" stage="copy_artifact" job="copy_artifact" srcdir="seed">
                 <runif status="passed" />
