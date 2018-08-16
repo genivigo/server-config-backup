@@ -2736,6 +2736,17 @@
     </pipeline>
   </pipelines>
   <pipelines group="Deployments">
+    <authorization>
+      <view>
+        <user>GDP_Developer</user>
+      </view>
+      <operate>
+        <user>GDP_Developer</user>
+      </operate>
+      <admins>
+        <user>GDP_Developer</user>
+      </admins>
+    </authorization>
     <pipeline name="Upload_GDP_Release_PCore" isLocked="false" template="Upload_Release_All_Targets_generic">
       <params>
         <param name="SERVER_RESOURCE">deploy_pelagicore</param>
