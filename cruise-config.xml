@@ -2737,8 +2737,14 @@
   </pipelines>
   <pipelines group="Deployments">
     <authorization>
+      <view>
+        <role>GDP_Developer</role>
+      </view>
+      <operate>
+        <role>GDP_Developer</role>
+      </operate>
       <admins>
-        <user>GDP_Developer</user>
+        <role>GDP_Developer</role>
       </admins>
     </authorization>
     <pipeline name="Upload_GDP_Release_PCore" isLocked="false" template="Upload_Release_All_Targets_generic">
