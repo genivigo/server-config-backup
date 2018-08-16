@@ -4402,7 +4402,7 @@
               <resource>#{AGENT_RESOURCE}</resource>
             </resources>
             <artifacts>
-              <artifact src="#{ARTIFACT_LOCATION}" />
+              <artifact src="#{ARTIFACT}" />
             </artifacts>
           </job>
         </jobs>
