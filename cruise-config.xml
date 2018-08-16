@@ -4388,14 +4388,14 @@
                 <arg>ls -alR "#{ARTIFACT_LOCATION}"</arg>
                 <runif status="any" />
               </exec>
+              <fetchartifact pipeline="Seed_rcar_binaries" stage="copy_artifact" job="copy_artifact" srcdir="seed">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>ls -alR "#{TARGET_LOCATION}"</arg>
                 <runif status="any" />
               </exec>
-              <fetchartifact pipeline="Seed_rcar_binaries" stage="copy_artifact" job="copy_artifact" srcdir="seed">
-                <runif status="passed" />
-              </fetchartifact>
             </tasks>
             <resources>
               <resource>#{AGENT_RESOURCE}</resource>
