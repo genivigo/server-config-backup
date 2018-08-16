@@ -4338,12 +4338,12 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>cp -a #{SEED_LOCATION} #{ARTIFACT_LOCATION}</arg>
+                <arg>mkdir "#{ARTIFACT_LOCATION}"</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>mkdir "#{ARTIFACT_LOCATION}"</arg>
+                <arg>cp -a #{SEED_LOCATION} #{ARTIFACT_LOCATION}</arg>
                 <runif status="passed" />
               </exec>
               <exec command="bash">
