@@ -4378,14 +4378,14 @@
                 <arg>test -n "#{TARGET_LOCATION}" -a -n "#{ARTIFACT_LOCATION}"</arg>
                 <runif status="passed" />
               </exec>
+              <fetchartifact pipeline="Seed_rcar_binaries" stage="copy_artifact" job="copy_artifact" srcdir="seed">
+                <runif status="passed" />
+              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>rsync -rva "#{ARTIFACT_LOCATION}" "#{TARGET_LOCATION}"</arg>
                 <runif status="passed" />
               </exec>
-              <fetchartifact pipeline="Seed_rcar_binaries" stage="copy_artifact" job="copy_artifact" srcdir="seed">
-                <runif status="passed" />
-              </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>ls -alR "#{ARTIFACT_LOCATION}"</arg>
