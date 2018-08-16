@@ -4380,7 +4380,6 @@
     </pipeline>
     <pipeline name="fetch_dir_template">
       <stage name="sync_artifact">
-        <approval type="manual" />
         <jobs>
           <job name="sync_artifact" runOnAllAgents="true">
             <tasks>
