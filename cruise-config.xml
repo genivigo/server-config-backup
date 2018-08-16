@@ -4378,7 +4378,7 @@
               </fetchartifact>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>ls -alR "#{ARTIFACT_LOCATION}"</arg>
+                <arg>ls -alR</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
