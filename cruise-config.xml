@@ -4437,6 +4437,8 @@
       <resources>
         <resource>delta</resource>
         <resource>cmake</resource>
+        <resource>yocto_build</resource>
+        <resource>renesas_binaries</resource>
       </resources>
     </agent>
     <agent hostname="pelagic-agent" ipaddress="172.17.0.2" uuid="f4bda6b1-3679-4bd9-8edb-e234953217f3">
