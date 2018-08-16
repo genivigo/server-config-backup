@@ -4455,6 +4455,7 @@
       <resources>
         <resource>test_qemux86-64</resource>
         <resource>webblack</resource>
+        <resource>webblack_qemu</resource>
       </resources>
     </agent>
     <agent hostname="go-agent1" ipaddress="172.17.0.3" uuid="d44a573e-ed56-40df-bcb1-88432438c955">
