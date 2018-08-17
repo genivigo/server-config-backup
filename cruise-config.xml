@@ -146,7 +146,7 @@
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">13.0</param>
-        <param name="LAYERBRANCH">rocko</param>
+        <param name="LAYERBRANCH">pyro</param>
       </params>
       <environmentvariables>
         <variable name="MACHINE">
