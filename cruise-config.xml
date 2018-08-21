@@ -4321,7 +4321,7 @@
               <fetchartifact pipeline="" stage="build" job="build_and_export_test" srcdir="artifacts">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="bash">
+              <exec command="bash" workingdir="artifacts">
                 <arg>-c</arg>
                 <arg>gunzip genivi-dev-*.ext4.gz</arg>
                 <runif status="passed" />
