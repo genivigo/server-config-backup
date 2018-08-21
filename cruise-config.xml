@@ -4321,15 +4321,15 @@
               <fetchartifact pipeline="" stage="build" job="build_and_export_test" srcdir="artifacts">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="tar" workingdir="artifacts">
-                <arg>-xvf</arg>
-                <arg>testexport.tar.gz</arg>
-                <runif status="any" />
-              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>gunzip genivi-dev-*.ext4.gz</arg>
                 <runif status="passed" />
+              </exec>
+              <exec command="tar" workingdir="artifacts">
+                <arg>-xvf</arg>
+                <arg>testexport.tar.gz</arg>
+                <runif status="any" />
               </exec>
               <exec command="bash" workingdir="scripts">
                 <arg>acceptance-tests.sh</arg>
