@@ -4330,6 +4330,11 @@
                 <arg>acceptance-tests.sh</arg>
                 <runif status="any" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>gunzip genivi-dev-*.ext4.gz</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <tabs>
               <tab name="RemoteTargetLog" path="remoteTarget.log" />
