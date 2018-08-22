@@ -4283,7 +4283,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>gzip -2 gdp-src-build/tmp/deploy/images/qemux86-64/genivi-dev-platform-qemux86-64.ext4</arg>
+                <arg>gzip -2c gdp-src-build/tmp/deploy/images/qemux86-64/genivi-dev-platform-qemux86-64.ext4 &gt;genivi-dev-platform-qemux86-64.ext4.gz</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
