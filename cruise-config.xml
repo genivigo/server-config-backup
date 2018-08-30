@@ -2692,6 +2692,15 @@
         <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
+        <variable name="COPY_LICENSES">
+          <value>true</value>
+        </variable>
+        <variable name="COPY_LIC_MANIFESTS">
+          <value>true</value>
+        </variable>
+        <variable name="COPY_LIC_DIRS">
+          <value>true</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" autoUpdate="false" materialName="mainrepo" />
