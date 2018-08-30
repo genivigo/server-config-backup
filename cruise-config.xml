@@ -2677,10 +2677,6 @@
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
-        <param name="REUSE_STANDARD_SSTATE_DIR">false</param>
-        <param name="COPY_LICENSES">true</param>
-        <param name="COPY_LIC_MANIFEST">true</param>
-        <param name="COPY_LIC_DIRS">true</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
