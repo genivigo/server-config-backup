@@ -2676,8 +2676,7 @@
     <pipeline name="Release-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release_renesas">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko_os_tree</param>
-        <param name="STANDARD_RELEASE_BUILD">true</param>
+        <param name="BRANCH">master</param>
         <param name="REUSE_STANDARD_SSTATE_DIR">false</param>
         <param name="COPY_LICENSES">true</param>
         <param name="COPY_LIC_MANIFEST">true</param>
