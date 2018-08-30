@@ -1256,7 +1256,7 @@
     <pipeline name="GDP-Yocto-dragonboard-410c_SDK" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_SDK_generic_script_with_artifacts">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko</param>
+        <param name="BRANCH">master</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
