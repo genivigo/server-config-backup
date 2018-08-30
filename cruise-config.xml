@@ -349,6 +349,34 @@
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
+    <pipeline name="yocto-baseline-14x-sumo-CI-dependent_layers" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="meta-ivi-build-with-script">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">14.x</param>
+        <param name="LAYERBRANCH">rocko</param>
+      </params>
+      <timer onlyOnChanges="true">0 0 2 ? * MON-SUN</timer>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>qemuarm64</value>
+        </variable>
+        <variable name="LAYER_poky_BRANCH">
+          <value>origin/rocko</value>
+        </variable>
+        <variable name="LAYER_meta_openembedded_BRANCH">
+          <value>origin/rocko</value>
+        </variable>
+        <variable name="LAYER_meta_gplv2_BRANCH">
+          <value>origin/rocko</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GENIVI_Baseline_Community">
     <authorization>
