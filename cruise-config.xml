@@ -170,7 +170,7 @@
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">14.x</param>
-        <param name="LAYERBRANCH">sumo</param>
+        <param name="LAYERBRANCH">rocko</param>
       </params>
       <environmentvariables>
         <variable name="MACHINE">
