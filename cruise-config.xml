@@ -333,13 +333,13 @@
           <value>qemuarm64</value>
         </variable>
         <variable name="LAYER_poky_BRANCH">
-          <value>origin/rocko</value>
+          <value>origin/#{LAYERBRANCH}</value>
         </variable>
         <variable name="LAYER_meta_openembedded_BRANCH">
-          <value>origin/rocko</value>
+          <value>origin/#{LAYERBRANCH}</value>
         </variable>
         <variable name="LAYER_meta_gplv2_BRANCH">
-          <value>origin/rocko</value>
+          <value>origin/#{LAYERBRANCH}</value>
         </variable>
       </environmentvariables>
       <materials>
