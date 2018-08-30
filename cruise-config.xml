@@ -324,8 +324,8 @@
     <pipeline name="yocto-baseline-14-CI-dependent_layers" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="meta-ivi-build-with-script">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
-        <param name="LAYERBRANCH">sumo</param>
+        <param name="BRANCH">14.x</param>
+        <param name="LAYERBRANCH">rocko</param>
       </params>
       <timer onlyOnChanges="true">0 0 2 ? * MON-SUN</timer>
       <environmentvariables>
