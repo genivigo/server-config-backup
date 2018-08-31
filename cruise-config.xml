@@ -2429,78 +2429,14 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="Administration_for_c8776aa52222">
-    <authorization>
-      <view>
-        <user>GunnarA</user>
-        <role>GDP_Developer</role>
-      </view>
-      <operate>
-        <user>GunnarA</user>
-        <role>GDP_Developer</role>
-      </operate>
-      <admins>
-        <user>GunnarA</user>
-        <role>GDP_Developer</role>
-      </admins>
-    </authorization>
-    <pipeline name="Wipe_gdp_work_dir" isLocked="false" template="Wipe_dir_pattern">
-      <params>
-        <param name="agent">c8776aa52222</param>
-        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work/*</param>
-      </params>
-      <materials>
-        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
-      </materials>
-    </pipeline>
-    <pipeline name="DiskStatistics-test" isLocked="false">
-      <materials>
-        <git url="http://github.com/gunnarx/gocd-setup.git" />
-      </materials>
-      <stage name="stage">
-        <approval type="manual" />
-        <jobs>
-          <job name="disk_usage">
-            <tasks>
-              <exec command="uname">
-                <arg>-a</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="df">
-                <arg>-h</arg>
-              </exec>
-            </tasks>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
-    <pipeline name="Wipe_sstate_cache" template="Wipe_dir_pattern">
-      <params>
-        <param name="dir_pattern">/var/lib/go-agent/pipelines/__sstate_cache/*</param>
-        <param name="agent">c8776aa52222</param>
-      </params>
-      <materials>
-        <pipeline pipelineName="Wipe_gdp_work_dir" stageName="stage" />
-      </materials>
-    </pipeline>
-    <pipeline name="Wipe_downloads" template="Wipe_dir_pattern">
-      <params>
-        <param name="dir_pattern">/var/lib/go-agent/pipelines/__downloads_cache/*</param>
-        <param name="agent">c8776aa52222</param>
-      </params>
-      <materials>
-        <pipeline pipelineName="Wipe_gdp_work_dir" stageName="stage" />
-      </materials>
-    </pipeline>
-  </pipelines>
-  <pipelines group="Administration_for_go-agent-1">
+  <pipelines group="Administration_for_agents">
     <authorization>
       <admins>
         <user>GunnarA</user>
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="Wipe_gdp_work_dir7" template="Wipe_dir_pattern">
+    <pipeline name="Wipe_all_tmp_work" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work/*</param>
         <param name="agent">go-agent1</param>
@@ -2509,7 +2445,7 @@
         <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
-    <pipeline name="Wipe_tmp_dirs7" template="Wipe_dir_pattern">
+    <pipeline name="Wipe_all_tmp" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp</param>
         <param name="agent">go-agent1</param>
@@ -2518,114 +2454,21 @@
         <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
-    <pipeline name="Wipe_gdp_sstate_dir7" isLocked="false" template="Wipe_dir_pattern">
+    <pipeline name="Wipe_sstate" isLocked="false" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/cache/yocto/sstate/*</param>
         <param name="agent">go-agent1</param>
       </params>
-      <timer>0 0 6 ? * THU</timer>
       <materials>
         <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
-    <pipeline name="Wipe_gdp_downloads_dir7" isLocked="false" template="Wipe_dir_pattern">
+    <pipeline name="Wipe_downloads" isLocked="false" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/cache/yocto/downloads/*</param>
         <param name="agent">go-agent1</param>
       </params>
       <timer>0 0 6 15 * ?</timer>
-      <materials>
-        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
-      </materials>
-    </pipeline>
-  </pipelines>
-  <pipelines group="Administration_for_go-agent-2">
-    <authorization>
-      <admins>
-        <user>GunnarA</user>
-        <user>tpollard</user>
-        <role>GDP_Developer</role>
-      </admins>
-    </authorization>
-    <pipeline name="Wipe_gdp_work_dir4" template="Wipe_dir_pattern">
-      <params>
-        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work/*</param>
-        <param name="agent">go-agent2</param>
-      </params>
-      <materials>
-        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
-      </materials>
-    </pipeline>
-    <pipeline name="Wipe_tmp_dirs" template="Wipe_dir_pattern">
-      <params>
-        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp</param>
-        <param name="agent">go-agent2</param>
-      </params>
-      <materials>
-        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
-      </materials>
-    </pipeline>
-    <pipeline name="Wipe_gdp_sstate_dir6" isLocked="false" template="Wipe_dir_pattern">
-      <params>
-        <param name="dir_pattern">/var/cache/yocto/sstate/*</param>
-        <param name="agent">go-agent2</param>
-      </params>
-      <timer>0 0 6 ? * SAT</timer>
-      <materials>
-        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
-      </materials>
-    </pipeline>
-    <pipeline name="Wipe_gdp_downloads_dir6" isLocked="false" template="Wipe_dir_pattern">
-      <params>
-        <param name="dir_pattern">/var/cache/yocto/downloads/*</param>
-        <param name="agent">go-agent2</param>
-      </params>
-      <timer>0 0 6 1 * ?</timer>
-      <materials>
-        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
-      </materials>
-    </pipeline>
-  </pipelines>
-  <pipelines group="Administration_for_Pelagic_Agent">
-    <authorization>
-      <admins>
-        <user>GunnarA</user>
-        <user>tpollard</user>
-        <role>GDP_Developer</role>
-      </admins>
-    </authorization>
-    <pipeline name="Wipe_gdp_work_dir5" template="Wipe_dir_pattern">
-      <params>
-        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp/work/*</param>
-        <param name="agent">pelagic-agent</param>
-      </params>
-      <materials>
-        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
-      </materials>
-    </pipeline>
-    <pipeline name="Wipe_tmp_dirs5" template="Wipe_dir_pattern">
-      <params>
-        <param name="dir_pattern">/var/lib/go-agent/pipelines/*/*build/tmp</param>
-        <param name="agent">pelagic-agent</param>
-      </params>
-      <materials>
-        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
-      </materials>
-    </pipeline>
-    <pipeline name="Wipe_gdp_downloads_dir5" template="Wipe_dir_pattern">
-      <params>
-        <param name="dir_pattern">/var/cache/yocto/downloads/*</param>
-        <param name="agent">pelagic-agent</param>
-      </params>
-      <materials>
-        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
-      </materials>
-    </pipeline>
-    <pipeline name="Wipe_gdp_sstate_dir5" template="Wipe_dir_pattern">
-      <params>
-        <param name="dir_pattern">/var/cache/yocto/sstate/*</param>
-        <param name="agent">pelagic-agent</param>
-      </params>
       <materials>
         <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
