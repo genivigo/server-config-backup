@@ -594,7 +594,7 @@
     <pipeline name="GDP.CI-poky-rocko-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko</param>
+        <param name="BRANCH">master</param>
       </params>
       <timer>0 0 2 ? * MON,THU,SAT,SUN</timer>
       <environmentvariables>
@@ -615,7 +615,7 @@
     <pipeline name="GDP.CI-meta-ivi-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko</param>
+        <param name="BRANCH">master</param>
       </params>
       <timer>0 48 20 ? * MON-SUN</timer>
       <environmentvariables>
@@ -633,7 +633,7 @@
     <pipeline name="GDP.CI-meta-intel" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko</param>
+        <param name="BRANCH">master</param>
       </params>
       <timer>0 0 2 ? * TUE,THU,SAT</timer>
       <environmentvariables>
@@ -651,7 +651,7 @@
     <pipeline name="GDP.CI-meta-iot-web" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko</param>
+        <param name="BRANCH">master</param>
       </params>
       <timer>0 0 2 ? * MON</timer>
       <environmentvariables>
@@ -669,7 +669,7 @@
     <pipeline name="GDP.CI-meta-linaro-r-car-h3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko</param>
+        <param name="BRANCH">master</param>
       </params>
       <timer>0 0 2 ? * MON,WED,FRI</timer>
       <environmentvariables>
@@ -705,7 +705,7 @@
     <pipeline name="GDP.CI-meta-raspberrypi" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko</param>
+        <param name="BRANCH">master</param>
       </params>
       <timer>0 0 2 ? * MON-SUN</timer>
       <environmentvariables>
@@ -723,7 +723,7 @@
     <pipeline name="GDP.CI-meta-flatpak-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko</param>
+        <param name="BRANCH">master</param>
       </params>
       <timer>0 44 20 ? * SUN</timer>
       <environmentvariables>
@@ -741,7 +741,7 @@
     <pipeline name="GDP.CI-meta-browser-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko</param>
+        <param name="BRANCH">master</param>
       </params>
       <timer>0 44 20 ? * MON-SUN</timer>
       <environmentvariables>
