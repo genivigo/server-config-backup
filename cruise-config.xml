@@ -2699,6 +2699,7 @@
     </pipeline>
     <pipeline name="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <stage name="build" cleanWorkingDir="true">
+        <approval type="manual" />
         <jobs>
           <job name="init_and_bitbake">
             <environmentvariables>
