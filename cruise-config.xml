@@ -311,7 +311,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="GENIVI_Baseline_CI_Other">
+  <pipelines group="GENIVI_Baseline_Continuous_Layer_Integration">
     <authorization>
       <view>
         <user>guest</user>
@@ -579,7 +579,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="GDP_CI_Other">
+  <pipelines group="GDP_Continuous_Layer_Integration">
     <authorization>
       <view>
         <user>guest</user>
