@@ -2315,8 +2315,8 @@
     </pipeline>
     <pipeline name="GDP_log_files" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
       <params>
-        <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="FORK">gunnarx</param>
+        <param name="BRANCH">log_files</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
