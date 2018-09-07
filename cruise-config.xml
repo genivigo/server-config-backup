@@ -947,6 +947,9 @@
         <variable name="STANDARD_RELEASE_BUILD">
           <value>true</value>
         </variable>
+        <variable name="REUSE_STANDARD_SSTATE_DIR">
+          <value>false</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" autoUpdate="false" materialName="mainrepo" />
