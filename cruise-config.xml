@@ -2689,6 +2689,9 @@
                 <runif status="any" />
               </exec>
             </tasks>
+            <tabs>
+              <tab name="Detailed_Logs" path="artifacts/error_logs/*" />
+            </tabs>
             <resources>
               <resource>yocto_build</resource>
               <resource>webblack_qemu</resource>
