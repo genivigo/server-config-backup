@@ -937,6 +937,7 @@
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
       </params>
+      <timer>0 59 23 ? * SAT</timer>
       <environmentvariables>
         <variable name="TARGET">
           <value>raspberrypi3</value>
