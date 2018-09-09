@@ -2694,7 +2694,7 @@
               </exec>
             </tasks>
             <tabs>
-              <tab name="Yocto_Errors" path="error_logs/" />
+              <tab name="Yocto-Log-Files" path="error_logs/" />
             </tabs>
             <resources>
               <resource>yocto_build</resource>
