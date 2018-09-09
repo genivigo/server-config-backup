@@ -2694,7 +2694,7 @@
               </exec>
             </tasks>
             <tabs>
-              <tab name="Detailed_Logs" path="artifacts/error_logs/*" />
+              <tab name="Detailed_Logs" path="artifacts/error_logs/all_logs_combined.txt" />
             </tabs>
             <resources>
               <resource>yocto_build</resource>
