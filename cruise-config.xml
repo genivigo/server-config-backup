@@ -2317,20 +2317,6 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP_log_files" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_with_artifacts_and_logs">
-      <params>
-        <param name="FORK">gunnarx</param>
-        <param name="BRANCH">log_files</param>
-      </params>
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>qemux86-64</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
-      </materials>
-    </pipeline>
   </pipelines>
   <pipelines group="Administration_for_agents">
     <authorization>
@@ -2666,27 +2652,6 @@
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
               </exec>
-            </tasks>
-            <resources>
-              <resource>yocto_build</resource>
-            </resources>
-            <artifacts>
-              <artifact src="staging" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
-    <pipeline name="Yocto_GDP_generic_script_with_artifacts_and_logs">
-      <stage name="build" cleanWorkingDir="true">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>scripts/ci-build.sh CI_FLAG</arg>
-                <runif status="passed" />
-              </exec>
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>[ -e scripts/publish_error_log_files.sh ] &amp;&amp; scripts/publish_error_log_files.sh</arg>
@@ -2694,11 +2659,10 @@
               </exec>
             </tasks>
             <tabs>
-              <tab name="Yocto-Log-Files" path="error_logs/" />
+              <tab name="Yocto-Err-Logs" path="error_logs/" />
             </tabs>
             <resources>
               <resource>yocto_build</resource>
-              <resource>webblack_qemu</resource>
             </resources>
             <artifacts>
               <artifact src="staging" />
@@ -2718,10 +2682,21 @@
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ -e scripts/publish_error_log_files.sh ] &amp;&amp; scripts/publish_error_log_files.sh</arg>
+                <runif status="any" />
+              </exec>
             </tasks>
+            <tabs>
+              <tab name="Yocto-Err-Logs" path="error_logs/" />
+            </tabs>
             <resources>
               <resource>yocto_build</resource>
             </resources>
+            <artifacts>
+              <artifact src="artifacts/error_logs" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
@@ -2741,10 +2716,18 @@
                 <arg>-c</arg>
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ -e scripts/publish_error_log_files.sh ] &amp;&amp; scripts/publish_error_log_files.sh</arg>
+                <runif status="any" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
             </resources>
+            <artifacts>
+              <artifact src="artifacts/error_logs" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
@@ -2764,10 +2747,18 @@
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ -e scripts/publish_error_log_files.sh ] &amp;&amp; scripts/publish_error_log_files.sh</arg>
+                <runif status="any" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
             </resources>
+            <artifacts>
+              <artifact src="artifacts/error_logs" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
@@ -2782,6 +2773,11 @@
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ -e scripts/publish_error_log_files.sh ] &amp;&amp; scripts/publish_error_log_files.sh</arg>
+                <runif status="any" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
@@ -2789,6 +2785,7 @@
             </resources>
             <artifacts>
               <artifact src="staging" />
+              <artifact src="artifacts/error_logs" />
             </artifacts>
           </job>
         </jobs>
@@ -2804,11 +2801,19 @@
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ -e scripts/publish_error_log_files.sh ] &amp;&amp; scripts/publish_error_log_files.sh</arg>
+                <runif status="any" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
               <resource>renesas_binaries</resource>
             </resources>
+            <artifacts>
+              <artifact src="artifacts/error_logs" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
@@ -2828,11 +2833,19 @@
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ -e scripts/publish_error_log_files.sh ] &amp;&amp; scripts/publish_error_log_files.sh</arg>
+                <runif status="any" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
               <resource>renesas_binaries</resource>
             </resources>
+            <artifacts>
+              <artifact src="artifacts/error_logs" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
@@ -2848,6 +2861,11 @@
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ -e scripts/publish_error_log_files.sh ] &amp;&amp; scripts/publish_error_log_files.sh</arg>
+                <runif status="any" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
@@ -2855,6 +2873,8 @@
             </resources>
             <artifacts>
               <artifact src="staging/" />
+              <artifact src="release/" />
+              <artifact src="artifacts/error_logs" />
             </artifacts>
           </job>
         </jobs>
@@ -2871,12 +2891,19 @@
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ -e scripts/publish_error_log_files.sh ] &amp;&amp; scripts/publish_error_log_files.sh</arg>
+                <runif status="any" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
             </resources>
             <artifacts>
-              <artifact src="release" />
+              <artifact src="staging/" />
+              <artifact src="release/" />
+              <artifact src="artifacts/error_logs" />
             </artifacts>
           </job>
         </jobs>
@@ -2901,6 +2928,11 @@
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ -e scripts/publish_error_log_files.sh ] &amp;&amp; scripts/publish_error_log_files.sh</arg>
+                <runif status="any" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
@@ -2908,6 +2940,7 @@
             <artifacts>
               <artifact src="staging/" />
               <artifact src="release/" />
+              <artifact src="artifacts/error_logs" />
             </artifacts>
           </job>
         </jobs>
@@ -2947,174 +2980,6 @@
             <resources>
               <resource>#{SERVER_RESOURCE}</resource>
             </resources>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
-    <pipeline name="Yocto_GDP_generic_latest_meta_genivi_demo">
-      <authorization>
-        <admins>
-          <user>tpollard</user>
-          <user>RobertM</user>
-          <user>AndreasR</user>
-          <user>EBoto</user>
-        </admins>
-      </authorization>
-      <stage name="build">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="bash" workingdir="gdp/gdp-src-build/">
-                <arg>-c</arg>
-                <arg>rm -rf tmp</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "dragonboard-410c" ]]; then source ./init.sh $MACHINE accept-eula; else source ./init.sh $MACHINE; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]]; then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_gfx_software_$MACHINE.sh /var/go/sgx_bin; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]];  then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="rm" workingdir="gdp">
-                <arg>-rf</arg>
-                <arg>meta-genivi-dev</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="mv" workingdir="gdp">
-                <arg>../meta-genivi-dev</arg>
-                <arg>meta-genivi-dev</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp/gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.name</arg>
-                <arg>Go Server</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp/gdp-src-build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
-                <runif status="any" />
-              </exec>
-              <exec command="mkdir">
-                <arg>-p</arg>
-                <arg>staging/images</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>mv gdp/gdp-src-build/tmp/deploy/images/*/* staging/</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>mv staging/{*201*ext*,*201*rootfs*,*sdimg*,*hddimg*,bzImage*201*} staging/images/ || true</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>yocto_build</resource>
-            </resources>
-            <artifacts>
-              <artifact src="logs.tar.gz" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
-    <pipeline name="Yocto_GDP_generic_reuse_tmp">
-      <authorization>
-        <admins>
-          <user>tpollard</user>
-          <user>RobertM</user>
-          <user>AndreasR</user>
-          <user>EBoto</user>
-        </admins>
-      </authorization>
-      <stage name="build">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source ./init.sh $MACHINE</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]]; then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_gfx_software_$MACHINE.sh /var/go/sgx_bin; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>if [[ "$MACHINE" == "porter" || "$MACHINE" == silk ]];  then cd meta-renesas/meta-rcar-gen2 &amp;&amp; ./copy_mm_software_lcb.sh /var/go/sgx_bin/; fi</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="gdp-src-build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.name</arg>
-                <arg>Go Server</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git">
-                <arg>config</arg>
-                <arg>--global</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env gdp-src-build &amp;&amp; bitbake genivi-dev-platform</arg>
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find gdp-src-build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar</arg>
-                <runif status="any" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>ga_test</resource>
-            </resources>
-            <artifacts>
-              <artifact src="logs.tar.gz" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/license.manifest" />
-              <artifact src="gdp-src-build/tmp/deploy/licenses/genivi-dev-platform*/package.manifest" />
-            </artifacts>
           </job>
         </jobs>
       </stage>
