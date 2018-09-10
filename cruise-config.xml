@@ -321,7 +321,7 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="yocto-baseline-14-CI-dependent_layers" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="meta-ivi-build-with-script">
+    <pipeline name="yocto-baseline-14x-rocko-CI-dependent_layers" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="meta-ivi-build-with-script">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">14.x-rocko</param>
