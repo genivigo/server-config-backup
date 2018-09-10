@@ -2689,7 +2689,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>scripts/publish_error_log_files.sh</arg>
+                <arg>[ -e scripts/publish_error_log_files.sh ] &amp;&amp; scripts/publish_error_log_files.sh</arg>
                 <runif status="any" />
               </exec>
             </tasks>
