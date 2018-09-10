@@ -2666,7 +2666,6 @@
             </resources>
             <artifacts>
               <artifact src="staging" />
-              <artifact src="artifacts/error_logs" />
             </artifacts>
           </job>
         </jobs>
@@ -2694,9 +2693,6 @@
             <resources>
               <resource>yocto_build</resource>
             </resources>
-            <artifacts>
-              <artifact src="artifacts/error_logs" />
-            </artifacts>
           </job>
         </jobs>
       </stage>
@@ -2728,9 +2724,6 @@
             <resources>
               <resource>yocto_build</resource>
             </resources>
-            <artifacts>
-              <artifact src="artifacts/error_logs" />
-            </artifacts>
           </job>
         </jobs>
       </stage>
@@ -2762,9 +2755,6 @@
             <resources>
               <resource>yocto_build</resource>
             </resources>
-            <artifacts>
-              <artifact src="artifacts/error_logs" />
-            </artifacts>
           </job>
         </jobs>
       </stage>
@@ -2794,7 +2784,6 @@
             </resources>
             <artifacts>
               <artifact src="staging" />
-              <artifact src="artifacts/error_logs" />
             </artifacts>
           </job>
         </jobs>
@@ -2823,9 +2812,6 @@
               <resource>yocto_build</resource>
               <resource>renesas_binaries</resource>
             </resources>
-            <artifacts>
-              <artifact src="artifacts/error_logs" />
-            </artifacts>
           </job>
         </jobs>
       </stage>
@@ -2858,9 +2844,6 @@
               <resource>yocto_build</resource>
               <resource>renesas_binaries</resource>
             </resources>
-            <artifacts>
-              <artifact src="artifacts/error_logs" />
-            </artifacts>
           </job>
         </jobs>
       </stage>
@@ -2892,7 +2875,6 @@
             <artifacts>
               <artifact src="staging/" />
               <artifact src="release/" />
-              <artifact src="artifacts/error_logs" />
             </artifacts>
           </job>
         </jobs>
@@ -2924,7 +2906,6 @@
             <artifacts>
               <artifact src="staging/" />
               <artifact src="release/" />
-              <artifact src="artifacts/error_logs" />
             </artifacts>
           </job>
         </jobs>
@@ -2964,7 +2945,6 @@
             <artifacts>
               <artifact src="staging/" />
               <artifact src="release/" />
-              <artifact src="artifacts/error_logs" />
             </artifacts>
           </job>
         </jobs>
