@@ -2722,6 +2722,9 @@
                 <runif status="any" />
               </exec>
             </tasks>
+            <tabs>
+              <tab name="Yocto-Err-Logs" path="error_logs/" />
+            </tabs>
             <resources>
               <resource>yocto_build</resource>
             </resources>
@@ -2753,6 +2756,9 @@
                 <runif status="any" />
               </exec>
             </tasks>
+            <tabs>
+              <tab name="Yocto-Err-Logs" path="error_logs/" />
+            </tabs>
             <resources>
               <resource>yocto_build</resource>
             </resources>
@@ -2779,6 +2785,9 @@
                 <runif status="any" />
               </exec>
             </tasks>
+            <tabs>
+              <tab name="Yocto-Err-Logs" path="error_logs/" />
+            </tabs>
             <resources>
               <resource>yocto_build</resource>
               <resource>renesas_binaries</resource>
@@ -2807,6 +2816,9 @@
                 <runif status="any" />
               </exec>
             </tasks>
+            <tabs>
+              <tab name="Yocto-Err-Logs" path="error_logs/" />
+            </tabs>
             <resources>
               <resource>yocto_build</resource>
               <resource>renesas_binaries</resource>
@@ -2839,6 +2851,9 @@
                 <runif status="any" />
               </exec>
             </tasks>
+            <tabs>
+              <tab name="Yocto-Err-Logs" path="error_logs/" />
+            </tabs>
             <resources>
               <resource>yocto_build</resource>
               <resource>renesas_binaries</resource>
@@ -2867,6 +2882,9 @@
                 <runif status="any" />
               </exec>
             </tasks>
+            <tabs>
+              <tab name="Yocto-Err-Logs" path="error_logs/" />
+            </tabs>
             <resources>
               <resource>yocto_build</resource>
               <resource>renesas_binaries</resource>
@@ -2897,6 +2915,9 @@
                 <runif status="any" />
               </exec>
             </tasks>
+            <tabs>
+              <tab name="Yocto-Err-Logs" path="error_logs/" />
+            </tabs>
             <resources>
               <resource>yocto_build</resource>
             </resources>
@@ -2934,6 +2955,9 @@
                 <runif status="any" />
               </exec>
             </tasks>
+            <tabs>
+              <tab name="Yocto-Err-Logs" path="error_logs/" />
+            </tabs>
             <resources>
               <resource>yocto_build</resource>
             </resources>
