@@ -1180,6 +1180,7 @@
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
       </params>
+      <timer>0 0 0 ? * SUN</timer>
       <environmentvariables>
         <variable name="TARGET">
           <value>qemux86-64</value>
