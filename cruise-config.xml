@@ -1020,6 +1020,29 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" autoUpdate="false" materialName="mainrepo" />
       </materials>
     </pipeline>
+    <pipeline name="Release-test" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
+      <params>
+        <param name="FORK">gunnarx</param>
+        <param name="BRANCH">meta-ivi-P1.0</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>qemux86-64</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>14.0</value>
+        </variable>
+        <variable name="STANDARD_RELEASE_BUILD">
+          <value>true</value>
+        </variable>
+        <variable name="REUSE_STANDARD_SSTATE_DIR">
+          <value>false</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" autoUpdate="false" materialName="mainrepo" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Software_Developer_Environment">
     <authorization>
