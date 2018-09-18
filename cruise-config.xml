@@ -1027,7 +1027,7 @@
       </params>
       <environmentvariables>
         <variable name="TARGET">
-          <value>rasp</value>
+          <value>r-car-h3-starter-kit</value>
         </variable>
         <variable name="RELEASE">
           <value>14.0</value>
