@@ -2310,9 +2310,6 @@
         <variable name="BUILD_TEST_IMAGE">
           <value>true</value>
         </variable>
-        <variable name="IMAGE_NAME">
-          <value>pulsar-image</value>
-        </variable>
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
