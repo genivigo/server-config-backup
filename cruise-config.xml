@@ -1027,7 +1027,7 @@
       </params>
       <environmentvariables>
         <variable name="TARGET">
-          <value>qemux86-64</value>
+          <value>rasp</value>
         </variable>
         <variable name="RELEASE">
           <value>14.0</value>
