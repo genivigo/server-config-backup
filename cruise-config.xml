@@ -1765,26 +1765,6 @@
         <git url="http://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="meta-ivi-with-script" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
-      <params>
-        <param name="FORK">gunnarx</param>
-        <param name="BRANCH">ci_script_wip</param>
-      </params>
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>qemux86-64</value>
-        </variable>
-        <variable name="IMAGE_NAME">
-          <value>miranda-image</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="pyro" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded_pyro" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="pyro" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky_pyro" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="pyro" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2" />
-      </materials>
-    </pipeline>
     <pipeline name="FRANCA_IF_Validation" labeltemplate="master:${capicxx-core-tools.git[:8]}-build:${COUNT}" isLocked="false">
       <materials>
         <git url="git://github.com/genivi/capicxx-core-tools.git" dest="dest-capicxx-core-tools" materialName="capicxx-core-tools.git" />
