@@ -2311,7 +2311,7 @@
           <value>true</value>
         </variable>
         <variable name="IMAGE_NAME">
-          <value>nostromo-image</value>
+          <value>pulsar-image</value>
         </variable>
       </environmentvariables>
       <materials>
