@@ -25,9 +25,7 @@
             <user>ChrisSchulenberg</user>
             <user>JBocklage</user>
             <user>GunnarA</user>
-            <user>RobertM</user>
             <user>EBoto</user>
-            <user>AndreasR</user>
             <user>tmohammad</user>
             <user>alejalonso</user>
             <user>zeenix</user>
@@ -53,7 +51,6 @@
             <user>ChrisSchulenberg</user>
             <user>JBocklage</user>
             <user>GunnarA</user>
-            <user>RobertM</user>
             <user>EBoto</user>
             <user>buildmonitor</user>
             <user>AndreasR</user>
@@ -68,14 +65,7 @@
         <role name="GDP_Developer">
           <users>
             <user>StephenL</user>
-            <user>PedroA</user>
-            <user>tpollard</user>
-            <user>jonathanmaw</user>
             <user>GunnarA</user>
-            <user>RobertM</user>
-            <user>EBoto</user>
-            <user>AndreasR</user>
-            <user>zeenix</user>
             <user>dunderroffe</user>
             <user>OscarA</user>
             <user>MirzaK</user>
@@ -1051,7 +1041,6 @@
         <role>Guest</role>
       </view>
       <admins>
-        <user>AndreasR</user>
         <user>EBoto</user>
         <role>GDP_Developer</role>
       </admins>
@@ -2388,6 +2377,15 @@
         <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
       </materials>
     </pipeline>
+    <pipeline name="Wipe_pipeline_working_dirs" template="Wipe_dir_pattern">
+      <params>
+        <param name="dir_pattern">/var/lib/go-agent/pipelines/[a-Z]*</param>
+        <param name="agent">webblack_qemu</param>
+      </params>
+      <materials>
+        <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="Internal_no_license_to_distribute_artifacts">
     <authorization>
@@ -3163,8 +3161,6 @@
         <admins>
           <user>tolkien</user>
           <user>tpollard</user>
-          <user>RobertM</user>
-          <user>AndreasR</user>
           <user>EBoto</user>
         </admins>
       </authorization>
@@ -3251,8 +3247,6 @@
         <admins>
           <user>tolkien</user>
           <user>tpollard</user>
-          <user>RobertM</user>
-          <user>AndreasR</user>
           <user>EBoto</user>
         </admins>
       </authorization>
@@ -3304,7 +3298,6 @@
       <authorization>
         <admins>
           <user>tpollard</user>
-          <user>RobertM</user>
         </admins>
       </authorization>
       <stage name="stage" fetchMaterials="false">
@@ -3333,9 +3326,6 @@
     <pipeline name="GDP_SDE_generic">
       <authorization>
         <admins>
-          <user>tpollard</user>
-          <user>RobertM</user>
-          <user>AndreasR</user>
           <user>EBoto</user>
         </admins>
       </authorization>
