@@ -2297,7 +2297,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="yocto-baseline-testlayer" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-test">
+    <pipeline name="yocto-baseline-testimage" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
@@ -2306,6 +2306,9 @@
       <environmentvariables>
         <variable name="MACHINE">
           <value>qemux86-64</value>
+        </variable>
+        <variable name="BUILD_TEST_IMAGE">
+          <value>true</value>
         </variable>
         <variable name="IMAGE_NAME">
           <value>nostromo-image</value>
@@ -3151,92 +3154,6 @@
             </resources>
             <artifacts>
               <artifact src="logs.tar.gz" />
-            </artifacts>
-          </job>
-        </jobs>
-      </stage>
-    </pipeline>
-    <pipeline name="meta-ivi-build-with-test">
-      <authorization>
-        <admins>
-          <user>tolkien</user>
-          <user>tpollard</user>
-          <user>EBoto</user>
-        </admins>
-      </authorization>
-      <stage name="Build">
-        <jobs>
-          <job name="init_and_bitbake">
-            <tasks>
-              <exec command="git" workingdir="meta-ivi">
-                <arg>config</arg>
-                <arg>user.name</arg>
-                <arg>Go Agent</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="git" workingdir="meta-ivi">
-                <arg>config</arg>
-                <arg>user.email</arg>
-                <arg>no_email@genivigo.com</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="baseline_ci_helper">
-                <arg>-c</arg>
-                <arg>./checkout_layer_hash.sh poky</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="baseline_ci_helper">
-                <arg>-c</arg>
-                <arg>./checkout_layer_hash.sh meta-openembedded</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>export TEMPLATECONF=$PWD/meta-ivi/meta-ivi/conf &amp;&amp; source poky/oe-init-build-env</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="build/conf">
-                <arg>-c</arg>
-                <arg>/bin/echo -e 'DL_DIR = "/var/cache/yocto/downloads"\nSSTATE_DIR = "/var/cache/yocto/sstate"' &gt;&gt;local.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash" workingdir="build/conf">
-                <arg>-c</arg>
-                <arg>echo 'BBLAYERS += "${TOPDIR}/../meta-ivi/meta-ivi-test/"' &gt;&gt;bblayers.conf</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env &amp;&amp; bitbake -c fetch linux-yocto</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>source poky/oe-init-build-env &amp;&amp; bitbake test-image</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>rm -f logs.tar logs.tar.gz &amp;&amp; find build/tmp/work \( -name "*.log" -o -name "log.*" -o -name "run.*" \) -print0 | xargs -0 tar uf logs.tar &amp;&amp; gzip logs.tar ; touch logs.tar.gz</arg>
-                <runif status="any" />
-              </exec>
-              <exec command="mkdir">
-                <arg>-p</arg>
-                <arg>staging</arg>
-                <runif status="passed" />
-              </exec>
-              <exec command="bash">
-                <arg>-c</arg>
-                <arg>mv build/tmp/deploy/images/*/{*.bzImage,*.ext4,*.img}  staging/ || true</arg>
-                <runif status="passed" />
-              </exec>
-            </tasks>
-            <resources>
-              <resource>yocto_build</resource>
-            </resources>
-            <artifacts>
-              <artifact src="logs_test.tar.gz" />
-              <artifact src="staging" />
             </artifacts>
           </job>
         </jobs>
