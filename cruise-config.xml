@@ -2284,7 +2284,7 @@
         <param name="LAYERBRANCH">master</param>
       </params>
       <environmentvariables>
-        <variable name="MACHINE">
+        <variable name="TARGET">
           <value>qemux86-64</value>
         </variable>
         <variable name="BUILD_TEST_IMAGE">
