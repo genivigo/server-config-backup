@@ -3209,6 +3209,11 @@
                 <arg>rm -rf #{dir_pattern}</arg>
                 <runif status="any" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>echo "(AFTER): dir-pattern glob matches: " &amp;&amp; ls #{dir_pattern} || true</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>#{agent}</resource>
