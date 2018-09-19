@@ -3201,7 +3201,7 @@
             <tasks>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>echo "dir-pattern glob matches: " &amp;&amp; ls #{dir_pattern} || true</arg>
+                <arg>echo "(BEFORE): dir-pattern glob matches: " &amp;&amp; ls #{dir_pattern} || true</arg>
                 <runif status="any" />
               </exec>
               <exec command="bash">
