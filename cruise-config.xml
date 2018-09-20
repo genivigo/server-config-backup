@@ -3215,7 +3215,7 @@
               </exec>
               <exec command="bash">
                 <arg>-c</arg>
-                <arg>echo "(AFTER): dir-pattern glob matches: " &amp;&amp; ls #{dir_pattern} || true</arg>
+                <arg>echo "(AFTER): listing contents of dir-pattern: " &amp;&amp; ls #{dir_pattern} || true</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
