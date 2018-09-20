@@ -502,7 +502,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="GDP_Branch_rocko_os_tree">
+  <pipelines group="GDP_Branch_libostree">
     <authorization>
       <view>
         <user>guest</user>
@@ -512,10 +512,10 @@
         <role>GDP_Developer</role>
       </admins>
     </authorization>
-    <pipeline name="GDP.rocko_os_tree.minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
+    <pipeline name="GDP.libostree.minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko_os_tree</param>
+        <param name="BRANCH">libostree</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
@@ -526,10 +526,10 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP.rocko_os_tree.qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
+    <pipeline name="GDP.libostree.qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko_os_tree</param>
+        <param name="BRANCH">libostree</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
@@ -540,10 +540,10 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP.rocko_os_tree.raspberrypi2" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
+    <pipeline name="GDP.libostree.raspberrypi2" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko_os_tree</param>
+        <param name="BRANCH">libostree</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
@@ -554,10 +554,10 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP.rocko_os_tree.raspberrypi3" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
+    <pipeline name="GDP.libostree.raspberrypi3" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko_os_tree</param>
+        <param name="BRANCH">libostree</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
@@ -859,7 +859,7 @@
     <pipeline name="Release-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko_os_tree</param>
+        <param name="BRANCH">libostree</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
@@ -882,7 +882,7 @@
     <pipeline name="Release-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko_os_tree</param>
+        <param name="BRANCH">libostree</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
@@ -949,7 +949,7 @@
     <pipeline name="Release-raspberrypi-3-rocko" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">rocko_os_tree</param>
+        <param name="BRANCH">libostree</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
