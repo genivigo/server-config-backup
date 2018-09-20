@@ -2445,7 +2445,7 @@
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
       </params>
-      <timer>0 3 0 ? * THU</timer>
+      <timer>0 3 0 ? * TUE</timer>
       <environmentvariables>
         <variable name="TARGET">
           <value>r-car-m3-starter-kit</value>
