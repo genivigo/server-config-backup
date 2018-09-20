@@ -2456,13 +2456,7 @@
           <value>true</value>
         </variable>
         <variable name="COPY_LICENSES">
-          <value>true</value>
-        </variable>
-        <variable name="COPY_LIC_MANIFESTS">
-          <value>true</value>
-        </variable>
-        <variable name="COPY_LIC_DIRS">
-          <value>true</value>
+          <value>false</value>
         </variable>
         <variable name="REUSE_STANDARD_SSTATE_DIR">
           <value>false</value>
