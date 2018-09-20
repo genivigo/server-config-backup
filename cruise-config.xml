@@ -1013,7 +1013,7 @@
     <pipeline name="Release-test" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="FORK">gunnarx</param>
-        <param name="BRANCH">meta-ivi-P1.0</param>
+        <param name="BRANCH">junk_test_lconf</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
