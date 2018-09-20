@@ -1028,6 +1028,9 @@
         <variable name="REUSE_STANDARD_SSTATE_DIR">
           <value>false</value>
         </variable>
+        <variable name="COPY_LICENSES">
+          <value>false</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" autoUpdate="false" materialName="mainrepo" />
