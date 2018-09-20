@@ -2363,7 +2363,7 @@
     <pipeline name="Wipe_pipeline_working_dirs" template="Wipe_dir_pattern">
       <params>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/[a-Z]*</param>
-        <param name="agent">genivi-builder</param>
+        <param name="agent">pelagic-agent</param>
       </params>
       <materials>
         <git url="https://github.com/GENIVI/admin_and_reporting.git" autoUpdate="false" materialName="not_used" />
