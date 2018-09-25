@@ -969,7 +969,7 @@
     <pipeline name="Release-dragonboard-410c" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">libostree</param>
+        <param name="BRANCH">master</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
