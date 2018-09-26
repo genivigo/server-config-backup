@@ -387,14 +387,14 @@
         <param name="LAYERBRANCH">rocko</param>
       </params>
       <environmentvariables>
-        <variable name="MACHINE">
-          <value>qemuarm64</value>
-        </variable>
         <variable name="TARGET">
-          <value>qemuarm64</value>
+          <value>r-car-m3-starter-kit</value>
         </variable>
         <variable name="IMAGE_NAME">
-          <value>orion-image</value>
+          <value>pulsar-image</value>
+        </variable>
+        <variable name="SDX_DRIVERS">
+          <value>/path/to/gfx-drivers</value>
         </variable>
       </environmentvariables>
       <materials>
