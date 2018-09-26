@@ -526,7 +526,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
+        <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" invertFilter="true" materialName="mainrepo" />
       </materials>
     </pipeline>
   </pipelines>
