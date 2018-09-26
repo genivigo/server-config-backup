@@ -393,7 +393,7 @@
         <variable name="IMAGE_NAME">
           <value>pulsar-image</value>
         </variable>
-        <variable name="SGX_DRIVERS">
+        <variable name="SGX_GEN_3_DRIVERS">
           <value>/var/go/rcar-gen3/gfx-mmp_ybsp-390_20180627</value>
         </variable>
       </environmentvariables>
