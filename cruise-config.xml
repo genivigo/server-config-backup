@@ -501,6 +501,20 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
+    <pipeline name="GDP.r-car-m3-salvator-x" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">master</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-salvator-x</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Branch_libostree">
     <authorization>
@@ -2299,20 +2313,6 @@
         <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.morty" />
         <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.morty" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
-      </materials>
-    </pipeline>
-    <pipeline name="GDP.r-car-m3-salvator-x" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
-      <params>
-        <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
-      </params>
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>r-car-m3-salvator-x</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
       </materials>
     </pipeline>
   </pipelines>
