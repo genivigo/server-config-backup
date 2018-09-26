@@ -520,6 +520,7 @@
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
       </params>
+      <timer>0 30 5 ? * THU</timer>
       <environmentvariables>
         <variable name="TARGET">
           <value>r-car-h3-salvator-x</value>
