@@ -396,6 +396,9 @@
         <variable name="SDX_DRIVERS">
           <value>/path/to/gfx-drivers</value>
         </variable>
+        <variable name="SGX_DRIVERS">
+          <value>/var/go/rcar-gen3/gfx-mmp_ybsp-390_20180627</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
