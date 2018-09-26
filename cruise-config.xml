@@ -2282,9 +2282,9 @@
     </pipeline>
     <pipeline name="yocto-baseline-testimage" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
       <params>
-        <param name="FORK">gunnarx</param>
-        <param name="BRANCH">pr_79</param>
-        <param name="LAYERBRANCH">master</param>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">master</param>
+        <param name="LAYERBRANCH">sumo</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
