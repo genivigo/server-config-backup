@@ -3167,7 +3167,7 @@
           <job name="init_and_bitbake">
             <tasks>
               <exec command="bash" workingdir="meta-ivi">
-                <arg>-c</arg>
+                <arg>-xc</arg>
                 <arg>scripts/ci-build.sh $TARGET</arg>
                 <runif status="passed" />
               </exec>
