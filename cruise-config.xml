@@ -297,7 +297,7 @@
         <scm ref="55fece0c-628e-4ceb-abe8-64c792a6b1ea" dest="meta-ivi" />
         <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
         <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe.rocko" />
-        <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="#{LAYERBRANCH}" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+        <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
   </pipelines>
