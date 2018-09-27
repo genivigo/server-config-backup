@@ -151,9 +151,9 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-14-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
@@ -172,9 +172,9 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-14-qemux86" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
@@ -193,9 +193,9 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-14.50-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
@@ -214,9 +214,9 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-14.50-qemux86" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
@@ -235,9 +235,9 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-GITHUB-PR-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-with-script">
@@ -256,9 +256,9 @@
       </environmentvariables>
       <materials>
         <scm ref="55fece0c-628e-4ceb-abe8-64c792a6b1ea" dest="meta-ivi" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" dest="poky" autoUpdate="false" materialName="poky.pyro" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe.rocko" />
-        <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="#{LAYERBRANCH}" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky.pyro" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe.rocko" />
+        <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-GITHUB-PR-qemux86" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-with-script">
@@ -274,9 +274,9 @@
       </environmentvariables>
       <materials>
         <scm ref="55fece0c-628e-4ceb-abe8-64c792a6b1ea" dest="meta-ivi" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" dest="poky" autoUpdate="false" materialName="poky.pyro" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe.rocko" />
-        <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="#{LAYERBRANCH}" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky.pyro" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe.rocko" />
+        <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
     <pipeline name="yocto-baseline-GITHUB-PR-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-with-script">
@@ -399,9 +399,9 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.rocko" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky.rocko" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
         <git url="https://github.com/renesas-rcar/meta-renesas.git" branch="#{LAYERBRANCH}" shallowClone="true" dest="meta-renesas" autoUpdate="false" materialName="meta-renesas.rocko" />
         <git url="https://github.com/GENIVI/meta-ivi-renesas.git" branch="genivi-14.x" dest="meta-ivi-renesas" autoUpdate="false" materialName="meta-ivi-renesas" />
       </materials>
