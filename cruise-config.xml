@@ -198,7 +198,7 @@
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-14.50-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
+    <pipeline name="yocto-baseline-14.50-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">14.x-sumo</param>
@@ -219,7 +219,7 @@
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-14.50-qemux86" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
+    <pipeline name="yocto-baseline-14.50-qemux86" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">14.x-sumo</param>
@@ -240,7 +240,7 @@
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-GITHUB-PR-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-with-script">
+    <pipeline name="yocto-baseline-GITHUB-PR-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-with-script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">(pullreq)</param>
@@ -261,7 +261,7 @@
         <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-GITHUB-PR-qemux86" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-with-script">
+    <pipeline name="yocto-baseline-GITHUB-PR-qemux86" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-with-script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">(pullreq)</param>
@@ -279,7 +279,7 @@
         <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-GITHUB-PR-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-with-script">
+    <pipeline name="yocto-baseline-GITHUB-PR-qemuarm64" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-with-script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">(pullreq)</param>
@@ -311,7 +311,7 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="yocto-baseline-14x-rocko-CI-dependent_layers" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="meta-ivi-build-with-script">
+    <pipeline name="yocto-baseline-14x-rocko-CI-dependent_layers" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="meta-ivi-build-with-script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">14.x-rocko</param>
@@ -339,7 +339,7 @@
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
-    <pipeline name="yocto-baseline-14x-sumo-CI-dependent_layers" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="meta-ivi-build-with-script">
+    <pipeline name="yocto-baseline-14x-sumo-CI-dependent_layers" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="meta-ivi-build-with-script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">14.x-sumo</param>
@@ -380,7 +380,7 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="yocto-baseline-14-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
+    <pipeline name="yocto-baseline-14-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script_NO_ARTIFACTS">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
@@ -2326,9 +2326,9 @@
       </environmentvariables>
       <materials>
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
-        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.morty" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" dest="poky" autoUpdate="false" materialName="poky.morty" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded.morty" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky.morty" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
       </materials>
     </pipeline>
   </pipelines>
@@ -3155,13 +3155,28 @@
       </stage>
     </pipeline>
     <pipeline name="meta-ivi-build-with-script">
-      <authorization>
-        <admins>
-          <user>tolkien</user>
-          <user>tpollard</user>
-          <user>EBoto</user>
-        </admins>
-      </authorization>
+      <stage name="Build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="bash" workingdir="meta-ivi">
+                <arg>-c</arg>
+                <arg>scripts/ci-build.sh $TARGET</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
+            <artifacts>
+              <artifact src="staging" />
+              <artifact src="release" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="meta-ivi-build-with-script_NO_ARTIFACTS">
       <stage name="Build">
         <jobs>
           <job name="init_and_bitbake">
