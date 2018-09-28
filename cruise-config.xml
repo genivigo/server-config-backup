@@ -911,8 +911,8 @@
     </pipeline>
     <pipeline name="Release-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
-        <param name="FORK">mirzak</param>
-        <param name="BRANCH">GDP-810-image-fstype-cleanup</param>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">master</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
