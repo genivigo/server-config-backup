@@ -3170,7 +3170,6 @@
             </resources>
             <artifacts>
               <artifact src="staging" />
-              <artifact src="release" />
             </artifacts>
           </job>
         </jobs>
