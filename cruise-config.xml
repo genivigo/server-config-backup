@@ -2310,7 +2310,7 @@
         </jobs>
       </stage>
     </pipeline>
-    <pipeline name="yocto-baseline-testimage" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
+    <pipeline name="yocto-baseline-testimage" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script-and-test">
       <params>
         <param name="FORK">gunnarx</param>
         <param name="BRANCH">ci_build_rcar</param>
@@ -3162,6 +3162,49 @@
               <exec command="bash" workingdir="meta-ivi">
                 <arg>-c</arg>
                 <arg>scripts/ci-build.sh $TARGET</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
+            <artifacts>
+              <artifact src="staging" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+    <pipeline name="meta-ivi-build-with-script-and-test">
+      <stage name="Build">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <exec command="bash" workingdir="meta-ivi">
+                <arg>-c</arg>
+                <arg>scripts/ci-build.sh $TARGET</arg>
+                <runif status="passed" />
+              </exec>
+            </tasks>
+            <resources>
+              <resource>yocto_build</resource>
+            </resources>
+            <artifacts>
+              <artifact src="staging" />
+            </artifacts>
+          </job>
+        </jobs>
+      </stage>
+      <stage name="Test">
+        <jobs>
+          <job name="init_and_bitbake">
+            <tasks>
+              <fetchartifact stage="Build" job="init_and_bitbake" srcdir="staging">
+                <runif status="passed" />
+              </fetchartifact>
+              <exec command="bash" workingdir="meta-ivi">
+                <arg>-c</arg>
+                <arg>ls -alR staging</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
