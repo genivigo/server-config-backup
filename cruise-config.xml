@@ -2328,7 +2328,7 @@
         <git url="git://github.com/#{FORK}/meta-ivi.git" branch="#{BRANCH}" dest="meta-ivi" materialName="mainrepo" />
         <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded" />
         <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky" />
-        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2.rocko" />
+        <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2" />
       </materials>
     </pipeline>
   </pipelines>
