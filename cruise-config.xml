@@ -3202,7 +3202,7 @@
               <fetchartifact stage="Build" job="init_and_bitbake" srcdir="staging">
                 <runif status="passed" />
               </fetchartifact>
-              <exec command="bash" workingdir="meta-ivi">
+              <exec command="bash">
                 <arg>-c</arg>
                 <arg>ls -alR staging</arg>
                 <runif status="passed" />
