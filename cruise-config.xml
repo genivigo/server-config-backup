@@ -3197,7 +3197,7 @@
       </stage>
       <stage name="Test">
         <jobs>
-          <job name="init_and_bitbake">
+          <job name="start_qemu_and_run_test">
             <tasks>
               <fetchartifact stage="Build" job="init_and_bitbake" srcdir="staging">
                 <runif status="passed" />
