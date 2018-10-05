@@ -4035,7 +4035,7 @@
     </pipeline>
   </templates>
   <agents>
-    <agent hostname="go-agent2 (GENIVI)" ipaddress="172.17.0.2" uuid="198e29c2-fbfa-4e70-93c6-b9df35fa720b" isDisabled="true">
+    <agent hostname="go-agent2 (GENIVI)" ipaddress="172.17.0.2" uuid="198e29c2-fbfa-4e70-93c6-b9df35fa720b">
       <resources>
         <resource>yocto_build</resource>
         <resource>go-agent2</resource>
