@@ -4051,7 +4051,7 @@
         <resource>deploy_gunnarx</resource>
       </resources>
     </agent>
-    <agent hostname="pelagic-agent (Luxoft)" ipaddress="172.17.0.2" uuid="f4bda6b1-3679-4bd9-8edb-e234953217f3">
+    <agent hostname="pelagic-agent (Luxoft)" ipaddress="172.17.0.2" uuid="f4bda6b1-3679-4bd9-8edb-e234953217f3" isDisabled="true">
       <resources>
         <resource>yocto_build</resource>
         <resource>pelagic-agent</resource>
@@ -4065,7 +4065,7 @@
         <resource>cmake</resource>
       </resources>
     </agent>
-    <agent hostname="genivi-builder (GENIVI)" ipaddress="172.17.0.2" uuid="8e17953f-6fa1-410d-a9fc-cb50d136fe69">
+    <agent hostname="genivi-builder (GENIVI)" ipaddress="172.17.0.2" uuid="8e17953f-6fa1-410d-a9fc-cb50d136fe69" isDisabled="true">
       <resources>
         <resource>yocto_build</resource>
         <resource>genivi-builder</resource>
@@ -4081,7 +4081,7 @@
         <resource>test_qemux86-64</resource>
       </resources>
     </agent>
-    <agent hostname="go-agent1 (GENIVI)" ipaddress="172.17.0.2" uuid="d44a573e-ed56-40df-bcb1-88432438c955">
+    <agent hostname="go-agent1 (GENIVI)" ipaddress="172.17.0.2" uuid="d44a573e-ed56-40df-bcb1-88432438c955" isDisabled="true">
       <resources>
         <resource>yocto_build</resource>
         <resource>go-agent1</resource>
@@ -4089,7 +4089,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="delta" ipaddress="172.17.0.3" uuid="4b262b48-0f33-442d-8063-6631302986c7">
+    <agent hostname="delta" ipaddress="172.17.0.3" uuid="4b262b48-0f33-442d-8063-6631302986c7" isDisabled="true">
       <resources>
         <resource>delta</resource>
         <resource>yocto_build</resource>
