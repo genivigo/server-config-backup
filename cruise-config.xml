@@ -3890,6 +3890,10 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>webblack_qemu</resource>
+              <resource>yocto_build</resource>
+            </resources>
             <artifacts>
               <artifact src="gdp-src-build/tmp/testexport/genivi-dev-platform/testexport.tar.gz" dest="artifacts/" />
               <artifact src="gdp-src-build/tmp/deploy/images/qemux86-64/genivi-dev-platform-qemux86-64.ext4.gz" dest="artifacts/" />
