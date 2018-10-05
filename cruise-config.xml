@@ -4047,7 +4047,7 @@
         <resource>deploy_gunnarx</resource>
       </resources>
     </agent>
-    <agent hostname="pelagic-agent (Luxoft)" ipaddress="172.17.0.2" uuid="f4bda6b1-3679-4bd9-8edb-e234953217f3">
+    <agent hostname="pelagic-agent (Luxoft)" ipaddress="172.17.0.2" uuid="f4bda6b1-3679-4bd9-8edb-e234953217f3" isDisabled="true">
       <resources>
         <resource>yocto_build</resource>
         <resource>pelagic-agent</resource>
