@@ -882,7 +882,7 @@
       </params>
       <environmentvariables>
         <variable name="TARGET">
-          <value>r-car-h3-starter-kit</value>
+          <value>r-car-h3-salvator-x</value>
         </variable>
       </environmentvariables>
       <materials>
