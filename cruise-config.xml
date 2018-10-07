@@ -4134,7 +4134,7 @@
         <resource>test_qemux86-64</resource>
       </resources>
     </agent>
-    <agent hostname="go-agent1 (GENIVI)" ipaddress="172.17.0.2" uuid="d44a573e-ed56-40df-bcb1-88432438c955" isDisabled="true">
+    <agent hostname="go-agent1 (GENIVI)" ipaddress="172.17.0.2" uuid="d44a573e-ed56-40df-bcb1-88432438c955">
       <resources>
         <resource>yocto_build</resource>
         <resource>go-agent1</resource>
