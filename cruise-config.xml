@@ -985,6 +985,9 @@
         <variable name="REUSE_STANDARD_SSTATE_DIR">
           <value>false</value>
         </variable>
+        <variable name="RM_WORK">
+          <value>true</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" autoUpdate="false" materialName="mainrepo" />
