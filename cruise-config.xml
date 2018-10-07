@@ -875,6 +875,20 @@
         <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-Yocto-r-car-h3-salvator-x-GITHUB-PR" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">(pullreq)</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Release_Builds">
     <authorization>
