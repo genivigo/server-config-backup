@@ -541,6 +541,9 @@
         <variable name="TARGET">
           <value>minnowboard</value>
         </variable>
+        <variable name="IMAGE_NAME">
+          <value>genivi-dev-platform-core</value>
+        </variable>
       </environmentvariables>
       <materials>
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
