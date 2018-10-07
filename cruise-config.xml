@@ -535,7 +535,6 @@
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
-        <param name="IMAGE_NAME">genivi-dev-platform-core</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
