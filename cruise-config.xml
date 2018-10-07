@@ -955,7 +955,7 @@
     <pipeline name="Release-raspberrypi-3" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">libostree</param>
+        <param name="BRANCH">sumo</param>
       </params>
       <timer>0 59 23 ? * SAT</timer>
       <environmentvariables>
