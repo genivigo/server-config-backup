@@ -531,23 +531,6 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" invertFilter="true" materialName="mainrepo" />
       </materials>
     </pipeline>
-    <pipeline name="GDP.core.minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
-      <params>
-        <param name="FORK">mirzak</param>
-        <param name="BRANCH">profiles</param>
-      </params>
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>minnowboard</value>
-        </variable>
-        <variable name="IMAGE_NAME">
-          <value>genivi-dev-platform-core</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
-      </materials>
-    </pipeline>
   </pipelines>
   <pipelines group="GDP_Branch_libostree">
     <authorization>
@@ -2697,7 +2680,25 @@
       </stage>
     </pipeline>
   </pipelines>
-  <pipelines group="GDP_Variants" />
+  <pipelines group="GDP_Variants">
+    <pipeline name="GDP.core.minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
+      <params>
+        <param name="FORK">mirzak</param>
+        <param name="BRANCH">profiles</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="IMAGE_NAME">
+          <value>genivi-dev-platform-core</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
+      </materials>
+    </pipeline>
+  </pipelines>
   <templates>
     <pipeline name="Yocto_GDP_generic_script_with_artifacts">
       <stage name="build" cleanWorkingDir="true">
