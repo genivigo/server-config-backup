@@ -890,6 +890,42 @@
       </materials>
     </pipeline>
   </pipelines>
+  <pipelines group="GDP_Variants">
+    <pipeline name="GDP.core.minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
+      <params>
+        <param name="FORK">mirzak</param>
+        <param name="BRANCH">profiles</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="IMAGE_NAME">
+          <value>genivi-dev-platform-core</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
+      </materials>
+    </pipeline>
+    <pipeline name="GDP.data-raspberrypi3" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
+      <params>
+        <param name="FORK">mirzak</param>
+        <param name="BRANCH">profiles</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>raspberrypi3</value>
+        </variable>
+        <variable name="IMAGE_NAME">
+          <value>genivi-dev-platform-data</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
+      </materials>
+    </pipeline>
+  </pipelines>
   <pipelines group="GDP_Release_Builds">
     <authorization>
       <view>
@@ -2678,42 +2714,6 @@
           </job>
         </jobs>
       </stage>
-    </pipeline>
-  </pipelines>
-  <pipelines group="GDP_Variants">
-    <pipeline name="GDP.core.minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
-      <params>
-        <param name="FORK">mirzak</param>
-        <param name="BRANCH">profiles</param>
-      </params>
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>minnowboard</value>
-        </variable>
-        <variable name="IMAGE_NAME">
-          <value>genivi-dev-platform-core</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
-      </materials>
-    </pipeline>
-    <pipeline name="GDP.data-raspberrypi3" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
-      <params>
-        <param name="FORK">mirzak</param>
-        <param name="BRANCH">profiles</param>
-      </params>
-      <environmentvariables>
-        <variable name="TARGET">
-          <value>raspberrypi3</value>
-        </variable>
-        <variable name="IMAGE_NAME">
-          <value>genivi-dev-platform-data</value>
-        </variable>
-      </environmentvariables>
-      <materials>
-        <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
-      </materials>
     </pipeline>
   </pipelines>
   <templates>
