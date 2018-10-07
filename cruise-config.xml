@@ -2708,7 +2708,7 @@
           <value>raspberrypi3</value>
         </variable>
         <variable name="IMAGE_NAME">
-          <value>genivi-dev-platform-a</value>
+          <value>genivi-dev-platform-data</value>
         </variable>
       </environmentvariables>
       <materials>
