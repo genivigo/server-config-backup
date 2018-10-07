@@ -2705,10 +2705,10 @@
       </params>
       <environmentvariables>
         <variable name="TARGET">
-          <value>minnowboard</value>
+          <value>raspberrypi3</value>
         </variable>
         <variable name="IMAGE_NAME">
-          <value>genivi-dev-platform-core</value>
+          <value>genivi-dev-platform-a</value>
         </variable>
       </environmentvariables>
       <materials>
