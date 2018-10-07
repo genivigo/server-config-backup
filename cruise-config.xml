@@ -533,8 +533,8 @@
     </pipeline>
     <pipeline name="GDP.core.minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
       <params>
-        <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="FORK">mirzak</param>
+        <param name="BRANCH">profiles</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
