@@ -2653,7 +2653,7 @@
     </pipeline>
     <pipeline name="Wipe_PCore_deployment_dir" isLocked="false" template="Wipe_dir_pattern">
       <params>
-        <param name="agent">go-agent</param>
+        <param name="agent">pelagic-agent</param>
         <param name="dir_pattern">/var/lib/go-agent/pipelines/__deploy</param>
       </params>
       <timer>0 0 5 ? * SUN</timer>
