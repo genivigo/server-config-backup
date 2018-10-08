@@ -503,8 +503,8 @@
     </pipeline>
     <pipeline name="GDP.r-car-m3-salvator-x" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
       <params>
-        <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="FORK">gunnarx</param>
+        <param name="BRANCH">salvator</param>
       </params>
       <timer>0 30 2 ? * THU</timer>
       <environmentvariables>
