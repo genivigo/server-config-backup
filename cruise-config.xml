@@ -2561,7 +2561,7 @@
       </materials>
     </pipeline>
   </pipelines>
-  <pipelines group="R-Car_Gen2">
+  <pipelines group="R-Car_Gen2_Unsupported">
     <pipeline name="GDP-Yocto-Porter" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_with_artifacts">
       <params>
         <param name="FORK">GENIVI</param>
