@@ -962,7 +962,7 @@
     <pipeline name="Release-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="BRANCH">sumo</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
