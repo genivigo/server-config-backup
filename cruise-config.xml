@@ -545,6 +545,20 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" invertFilter="true" materialName="mainrepo" />
       </materials>
     </pipeline>
+    <pipeline name="GDP-qemux86-64-ondemand-autotest" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_acceptance_test">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">(pullreq)</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>qemux86-64</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Branch_libostree">
     <authorization>
