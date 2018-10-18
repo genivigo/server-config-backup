@@ -97,6 +97,14 @@
           <key>url</key>
           <value>https://github.com/GENIVI/genivi-dev-platform</value>
         </property>
+        <property>
+          <key>username</key>
+          <value>GunnarA</value>
+        </property>
+        <property>
+          <key>password</key>
+          <encryptedValue>M04ig7bgUbdk4Zo0Qs/5pg==</encryptedValue>
+        </property>
       </configuration>
     </scm>
     <scm id="077cfe93-bc9e-461a-9a5c-e82796ccb710" name="FIDL_Files">
@@ -556,7 +564,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" />
+        <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" dest="dummy" />
       </materials>
     </pipeline>
   </pipelines>
