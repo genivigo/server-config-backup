@@ -564,7 +564,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/GENIVI/genivi-dev-platform" shallowClone="true" dest="a" autoUpdate="false" materialName="mainrepo" />
+        <git url="https://github.com/GENIVI/genivi-dev-platform" shallowClone="true" autoUpdate="false" materialName="mainrepo" />
       </materials>
     </pipeline>
   </pipelines>
