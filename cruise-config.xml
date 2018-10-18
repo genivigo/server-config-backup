@@ -565,6 +565,7 @@
       </environmentvariables>
       <materials>
         <scm ref="a1a82896-a41b-4684-a7e8-4d43bf691438" dest="dummy" />
+        <git url="https://github.com/GENIVI/genivi-dev-platform" shallowClone="true" dest="a" autoUpdate="false" materialName="mainrepo" />
       </materials>
     </pipeline>
   </pipelines>
