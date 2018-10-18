@@ -548,7 +548,7 @@
     <pipeline name="GDP-qemux86-64-ondemand-autotest" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_script_acceptance_test">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">(pullreq)</param>
+        <param name="BRANCH">master</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
