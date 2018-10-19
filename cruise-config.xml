@@ -2119,6 +2119,10 @@
             <resources>
               <resource>yocto_build</resource>
             </resources>
+            <artifacts>
+              <artifact src="build/tmp/deploy/images/qemux86-64/*2018*.ext4" dest="images" />
+              <artifact src="build/tmp/deploy/images/qemux86-64/bzImage*2018*.bin" dest="images" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
