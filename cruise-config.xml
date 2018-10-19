@@ -2080,7 +2080,7 @@
       </stage>
     </pipeline>
     <pipeline name="AGL_meta_agl_demo_plus_homescreen" isLocked="false">
-      <timer onlyOnChanges="true">0 0 3 ? * SUN-MON</timer>
+      <timer>0 0 3 ? * SAT</timer>
       <materials>
         <git url="https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo" />
       </materials>
