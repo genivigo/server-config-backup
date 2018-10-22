@@ -388,7 +388,7 @@
         <role>Developer</role>
       </admins>
     </authorization>
-    <pipeline name="yocto-baseline-14-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script_NO_ARTIFACTS">
+    <pipeline name="yocto-baseline-14-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
       <params>
         <param name="FORK">gunnarx</param>
         <param name="BRANCH">ci_build_rcar</param>
