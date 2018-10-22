@@ -381,6 +381,9 @@
       <view>
         <role>GDP_Developer</role>
       </view>
+      <admins>
+        <role>GDP_Developer</role>
+      </admins>
     </authorization>
     <pipeline name="yocto-baseline-14-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
       <params>
