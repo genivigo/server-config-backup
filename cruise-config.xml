@@ -410,7 +410,7 @@
         <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-openembedded" />
         <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2" />
-        <git url="https://github.com/renesas-rcar/meta-renesas.git" branch="#{LAYERBRANCH}" shallowClone="true" dest="meta-renesas" autoUpdate="false" materialName="meta-renesas" />
+        <git url="https://github.com/renesas-rcar/meta-renesas.git" branch="sumo-dev" shallowClone="true" dest="meta-renesas" autoUpdate="false" materialName="meta-renesas" />
         <git url="https://github.com/GENIVI/meta-ivi-renesas.git" branch="genivi-14.x" dest="meta-ivi-renesas" autoUpdate="false" materialName="meta-ivi-renesas" />
       </materials>
     </pipeline>
