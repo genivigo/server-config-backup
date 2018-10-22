@@ -390,9 +390,9 @@
     </authorization>
     <pipeline name="yocto-baseline-14-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script_NO_ARTIFACTS">
       <params>
-        <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
-        <param name="LAYERBRANCH">rocko</param>
+        <param name="FORK">gunnarx</param>
+        <param name="BRANCH">ci_build_rcar</param>
+        <param name="LAYERBRANCH">sumo</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
