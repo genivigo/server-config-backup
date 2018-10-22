@@ -379,14 +379,8 @@
   <pipelines group="GENIVI_Baseline_Community">
     <authorization>
       <view>
-        <role>Developer</role>
+        <role>GDP_Developer</role>
       </view>
-      <operate>
-        <role>Developer</role>
-      </operate>
-      <admins>
-        <role>Developer</role>
-      </admins>
     </authorization>
     <pipeline name="yocto-baseline-14-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script">
       <params>
