@@ -4253,7 +4253,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="webblack_qemu" ipaddress="172.17.0.2" uuid="baff5470-fe7a-4b0f-9e4b-f4c36f4268e7" isDisabled="true">
+    <agent hostname="webblack_qemu" ipaddress="172.17.0.2" uuid="baff5470-fe7a-4b0f-9e4b-f4c36f4268e7">
       <resources>
         <resource>webblack</resource>
         <resource>webblack_qemu</resource>
