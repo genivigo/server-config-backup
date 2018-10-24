@@ -2837,6 +2837,9 @@
             <resources>
               <resource>yocto_build</resource>
             </resources>
+            <artifacts>
+              <artifact src="bitbake-cookerdaemon.log" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
