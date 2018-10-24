@@ -3261,7 +3261,7 @@
             </resources>
             <artifacts>
               <artifact src="staging" />
-              <artifact src="build/bitbake-cookerdaemon.log" />
+              <artifact src="bitbake-cookerdaemon.log" />
             </artifacts>
           </job>
         </jobs>
