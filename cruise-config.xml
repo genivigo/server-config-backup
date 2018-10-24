@@ -409,7 +409,7 @@
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2" />
         <git url="https://github.com/renesas-rcar/meta-renesas.git" branch="sumo-dev" shallowClone="true" dest="meta-renesas" autoUpdate="false" materialName="meta-renesas" />
         <git url="https://github.com/GENIVI/meta-ivi-renesas.git" branch="genivi-14.x" dest="meta-ivi-renesas" autoUpdate="false" materialName="meta-ivi-renesas" />
-        <git url="https://git.linaro.org/openembedded/meta-linaro.git" shallowClone="true" dest="#{LAYERBRANCH}" materialName="meta-linaro" />
+        <git url="https://git.linaro.org/openembedded/meta-linaro.git" branch="#{LAYERBRANCH}" shallowClone="true" dest="meta-linaro" materialName="meta-linaro" />
       </materials>
     </pipeline>
   </pipelines>
