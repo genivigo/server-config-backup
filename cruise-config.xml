@@ -4282,6 +4282,7 @@
       </resources>
     </agent>
     <agent hostname="yournamehere-go-agent" ipaddress="176.10.244.80" uuid="ae2befeb-063c-4208-a7c3-8ee3e320c34c" isDisabled="true" />
+    <agent hostname="webblack_qemu" ipaddress="176.10.244.80" uuid="02863898-0bd9-4fba-94b8-1e4338d63d21" />
   </agents>
 </cruise>
 
