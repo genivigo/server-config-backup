@@ -4257,7 +4257,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="webblack_qemu" ipaddress="172.17.0.2" uuid="baff5470-fe7a-4b0f-9e4b-f4c36f4268e7">
+    <agent hostname="webblack_qemu" ipaddress="172.17.0.2" uuid="baff5470-fe7a-4b0f-9e4b-f4c36f4268e7" isDisabled="true">
       <resources>
         <resource>webblack</resource>
         <resource>webblack_qemu</resource>
@@ -4281,6 +4281,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
+    <agent hostname="yournamehere-go-agent" ipaddress="176.10.244.80" uuid="ae2befeb-063c-4208-a7c3-8ee3e320c34c" isDisabled="true" />
   </agents>
 </cruise>
 
