@@ -1106,7 +1106,7 @@
     <pipeline name="Release-upload-test" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release_and_upload">
       <params>
         <param name="FORK">GENIVI</param>
-        <param name="BRANCH">master</param>
+        <param name="BRANCH">sumo</param>
         <param name="SERVER_RESOURCE">deploy_genivi</param>
       </params>
       <environmentvariables>
