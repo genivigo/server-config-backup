@@ -4220,7 +4220,7 @@
     </pipeline>
   </templates>
   <agents>
-    <agent hostname="go-agent2 (GENIVI)" ipaddress="172.17.0.2" uuid="198e29c2-fbfa-4e70-93c6-b9df35fa720b">
+    <agent hostname="go-agent2 (GENIVI)" ipaddress="172.17.0.2" uuid="198e29c2-fbfa-4e70-93c6-b9df35fa720b" isDisabled="true">
       <resources>
         <resource>yocto_build</resource>
         <resource>go-agent2</resource>
@@ -4265,7 +4265,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="delta" ipaddress="172.17.0.3" uuid="4b262b48-0f33-442d-8063-6631302986c7">
+    <agent hostname="delta" ipaddress="172.17.0.3" uuid="4b262b48-0f33-442d-8063-6631302986c7" isDisabled="true">
       <resources>
         <resource>delta</resource>
         <resource>yocto_build</resource>
