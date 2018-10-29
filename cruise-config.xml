@@ -3057,6 +3057,7 @@
             </tabs>
             <resources>
               <resource>yocto_build</resource>
+              <resource>webblack_qemu</resource>
             </resources>
             <artifacts>
               <artifact src="staging/" />
