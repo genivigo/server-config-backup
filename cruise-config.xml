@@ -4219,7 +4219,6 @@
       <resources>
         <resource>yocto_build</resource>
         <resource>go-agent2</resource>
-        <resource>cmake</resource>
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
