@@ -2432,6 +2432,11 @@
                 <arg>mkdir -p "$DEPLOY_DIR/downloads"</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="/bin/bash">
+                <arg>-c</arg>
+                <arg>rsync -av --times --update /var/cache/yocto/downloads/ "$DEPLOY_DIR/downloads/"</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
           </job>
         </jobs>
