@@ -2443,6 +2443,9 @@
                 <runif status="passed" />
               </exec>
             </tasks>
+            <resources>
+              <resource>deploy_genivi</resource>
+            </resources>
           </job>
         </jobs>
       </stage>
