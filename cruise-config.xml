@@ -2426,6 +2426,11 @@
       <stage name="stage">
         <jobs>
           <job name="job_rsync_to_mirror">
+            <environmentvariables>
+              <variable name="DEPLOY_DIR">
+                <value>/var/lib/go-agent/pipelines/__deploy/deploy</value>
+              </variable>
+            </environmentvariables>
             <tasks>
               <exec command="/bin/bash">
                 <arg>-c</arg>
