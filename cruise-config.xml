@@ -282,7 +282,7 @@
       </environmentvariables>
       <materials>
         <scm ref="55fece0c-628e-4ceb-abe8-64c792a6b1ea" dest="meta-ivi" />
-        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky.pyro" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky.pyro" />
         <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe" />
         <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2" />
       </materials>
