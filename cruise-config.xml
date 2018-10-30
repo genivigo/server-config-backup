@@ -3189,6 +3189,14 @@
       <stage name="Build">
         <jobs>
           <job name="init_and_bitbake">
+            <environmentvariables>
+              <variable name="REUSE_STANDARD_SSTATE_DIR">
+                <value>true</value>
+              </variable>
+              <variable name="REUSE_STANDARD_DL_DIR">
+                <value>true</value>
+              </variable>
+            </environmentvariables>
             <tasks>
               <exec command="git" workingdir="meta-ivi">
                 <arg>config</arg>
@@ -3247,6 +3255,14 @@
       <stage name="Build">
         <jobs>
           <job name="init_and_bitbake">
+            <environmentvariables>
+              <variable name="REUSE_STANDARD_SSTATE_DIR">
+                <value>true</value>
+              </variable>
+              <variable name="REUSE_STANDARD_DL_DIR">
+                <value>true</value>
+              </variable>
+            </environmentvariables>
             <tasks>
               <exec command="bash" workingdir="meta-ivi">
                 <arg>-c</arg>
@@ -3269,6 +3285,14 @@
       <stage name="Build">
         <jobs>
           <job name="init_and_bitbake">
+            <environmentvariables>
+              <variable name="REUSE_STANDARD_SSTATE_DIR">
+                <value>true</value>
+              </variable>
+              <variable name="REUSE_STANDARD_DL_DIR">
+                <value>true</value>
+              </variable>
+            </environmentvariables>
             <tasks>
               <exec command="bash" workingdir="meta-ivi">
                 <arg>-c</arg>
