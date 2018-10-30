@@ -2439,12 +2439,12 @@
               </exec>
               <exec command="/bin/bash">
                 <arg>-c</arg>
-                <arg>rsync -av --times --update /var/cache/yocto/downloads/ "$DEPLOY_DIR/downloads/"</arg>
+                <arg>echo "Files in source dir:"  &amp;&amp; ls -R /var/cache/yocto/downloads | wc -l</arg>
                 <runif status="passed" />
               </exec>
               <exec command="/bin/bash">
                 <arg>-c</arg>
-                <arg>echo "Files in source dir:"  &amp;&amp; ls -R /var/cache/yocto/downloads | wc -l</arg>
+                <arg>rsync -av --times --update /var/cache/yocto/downloads/ "$DEPLOY_DIR/downloads/"</arg>
                 <runif status="passed" />
               </exec>
             </tasks>
