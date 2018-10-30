@@ -2419,7 +2419,7 @@
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2" />
       </materials>
     </pipeline>
-    <pipeline name="Update_downloads_mirror_from_all_agents">
+    <pipeline name="Update_downloads_mirror_from_go_agent1">
       <materials>
         <git url="https://github.com/GENIVI/baseline_ci_helper" shallowClone="true" />
       </materials>
