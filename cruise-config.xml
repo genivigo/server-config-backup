@@ -213,9 +213,6 @@
         <param name="LAYERBRANCH">sumo</param>
       </params>
       <environmentvariables>
-        <variable name="MACHINE">
-          <value>qemuarm64</value>
-        </variable>
         <variable name="TARGET">
           <value>qemuarm64</value>
         </variable>
@@ -234,9 +231,6 @@
         <param name="LAYERBRANCH">sumo</param>
       </params>
       <environmentvariables>
-        <variable name="MACHINE">
-          <value>qemux86</value>
-        </variable>
         <variable name="TARGET">
           <value>qemux86</value>
         </variable>
@@ -255,9 +249,6 @@
         <param name="LAYERBRANCH">sumo</param>
       </params>
       <environmentvariables>
-        <variable name="MACHINE">
-          <value>qemux86-64</value>
-        </variable>
         <variable name="TARGET">
           <value>qemux86-64</value>
         </variable>
@@ -294,9 +285,6 @@
         <param name="LAYERBRANCH">sumo</param>
       </params>
       <environmentvariables>
-        <variable name="MACHINE">
-          <value>qemuarm64</value>
-        </variable>
         <variable name="TARGET">
           <value>qemuarm64</value>
         </variable>
@@ -306,6 +294,27 @@
         <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky" />
         <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe" />
         <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2" />
+      </materials>
+    </pipeline>
+    <pipeline name="yocto-baseline-GITHUB-PR-r-car-h3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${meta-ivi[:8]}" isLocked="false" template="meta-ivi-build-with-script_NO_ARTIFACTS">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">(pullreq)</param>
+        <param name="LAYERBRANCH">sumo</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-h3-starter-kit</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <scm ref="55fece0c-628e-4ceb-abe8-64c792a6b1ea" dest="meta-ivi" />
+        <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky" />
+        <git url="git://git.openembedded.org/meta-openembedded" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="meta-openembedded" autoUpdate="false" materialName="meta-oe" />
+        <git url="https://git.yoctoproject.org/git/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2" />
+        <git url="https://github.com/renesas-rcar/meta-renesas.git" branch="sumo-dev" shallowClone="true" dest="meta-renesas" autoUpdate="false" materialName="meta-renesas" />
+        <git url="https://github.com/GENIVI/meta-ivi-renesas.git" branch="genivi-14.x-sumo" dest="meta-ivi-renesas" autoUpdate="false" materialName="meta-ivi-renesas" />
+        <git url="https://git.linaro.org/openembedded/meta-linaro.git" branch="#{LAYERBRANCH}" shallowClone="true" dest="meta-linaro" materialName="meta-linaro" />
       </materials>
     </pipeline>
   </pipelines>
@@ -408,7 +417,7 @@
         <git url="http://git.yoctoproject.org/git/poky.git" branch="#{LAYERBRANCH}" shallowClone="true" invertFilter="true" dest="poky" autoUpdate="false" materialName="poky" />
         <git url="git://git.yoctoproject.org/meta-gplv2" branch="#{LAYERBRANCH}" invertFilter="true" dest="meta-gplv2" autoUpdate="false" materialName="meta-gplv2" />
         <git url="https://github.com/renesas-rcar/meta-renesas.git" branch="sumo-dev" shallowClone="true" dest="meta-renesas" autoUpdate="false" materialName="meta-renesas" />
-        <git url="https://github.com/GENIVI/meta-ivi-renesas.git" branch="genivi-14.x" dest="meta-ivi-renesas" autoUpdate="false" materialName="meta-ivi-renesas" />
+        <git url="https://github.com/GENIVI/meta-ivi-renesas.git" branch="genivi-14.x-sumo" dest="meta-ivi-renesas" autoUpdate="false" materialName="meta-ivi-renesas" />
         <git url="https://git.linaro.org/openembedded/meta-linaro.git" branch="#{LAYERBRANCH}" shallowClone="true" dest="meta-linaro" materialName="meta-linaro" />
       </materials>
     </pipeline>
