@@ -4312,7 +4312,7 @@
         <resource>cmake</resource>
       </resources>
     </agent>
-    <agent hostname="genivi-builder (GENIVI)" ipaddress="172.17.0.2" uuid="8e17953f-6fa1-410d-a9fc-cb50d136fe69" isDisabled="true">
+    <agent hostname="genivi-builder (GENIVI)" ipaddress="172.17.0.2" uuid="8e17953f-6fa1-410d-a9fc-cb50d136fe69">
       <resources>
         <resource>yocto_build</resource>
         <resource>genivi-builder</resource>
