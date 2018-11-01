@@ -2948,7 +2948,7 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_renesas_script_NO_ARTIFACTS">
-      <stage name="build" cleanWorkingDir="true">
+      <stage name="build">
         <jobs>
           <job name="init_and_bitbake">
             <tasks>
