@@ -527,7 +527,7 @@
         </variable>
       </environmentvariables>
       <materials>
-        <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" materialName="mainrepo" />
+        <git url="https://github.com/#{FORK}/genivi-dev-platform.git" branch="#{BRANCH}" shallowClone="true" materialName="mainrepo" />
       </materials>
     </pipeline>
     <pipeline name="GDP.r-car-m3-salvator-x" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_renesas_script_NO_ARTIFACTS">
