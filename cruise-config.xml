@@ -4324,7 +4324,7 @@
         <resource>cmake</resource>
       </resources>
     </agent>
-    <agent hostname="genivi-builder (GENIVI)" ipaddress="172.17.0.2" uuid="8e17953f-6fa1-410d-a9fc-cb50d136fe69" isDisabled="true">
+    <agent hostname="genivi-builder (GENIVI)" ipaddress="172.17.0.2" uuid="8e17953f-6fa1-410d-a9fc-cb50d136fe69">
       <resources>
         <resource>yocto_build</resource>
         <resource>genivi-builder</resource>
@@ -4346,7 +4346,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="webblack_qemu" ipaddress="172.17.0.3" uuid="02863898-0bd9-4fba-94b8-1e4338d63d21" isDisabled="true">
+    <agent hostname="webblack_qemu" ipaddress="172.17.0.3" uuid="02863898-0bd9-4fba-94b8-1e4338d63d21">
       <resources>
         <resource>test_qemux86-64</resource>
         <resource>yocto_build</resource>
