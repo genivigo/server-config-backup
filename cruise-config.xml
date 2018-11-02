@@ -654,7 +654,7 @@
         <role>GDP_Developer</role>
       </operate>
     </authorization>
-    <pipeline name="GDP.CI-poky-rocko-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
+    <pipeline name="GDP.CI-poky-sumo-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}-modified" isLocked="false" template="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
       <params>
         <param name="FORK">GENIVI</param>
         <param name="BRANCH">master</param>
@@ -665,10 +665,10 @@
           <value>minnowboard</value>
         </variable>
         <variable name="LAYER_poky_BRANCH">
-          <value>rocko</value>
+          <value>sumo</value>
         </variable>
         <variable name="LAYER_meta_openembedded_BRANCH">
-          <value>rocko</value>
+          <value>sumo</value>
         </variable>
       </environmentvariables>
       <materials>
@@ -704,7 +704,7 @@
           <value>minnowboard</value>
         </variable>
         <variable name="LAYER_meta_intel_BRANCH">
-          <value>rocko</value>
+          <value>sumo</value>
         </variable>
       </environmentvariables>
       <materials>
@@ -740,7 +740,7 @@
           <value>r-car-h3-starter-kit</value>
         </variable>
         <variable name="LAYER_meta_linaro_BRANCH">
-          <value>rocko</value>
+          <value>sumo</value>
         </variable>
       </environmentvariables>
       <materials>
@@ -776,7 +776,7 @@
           <value>raspberrypi3</value>
         </variable>
         <variable name="LAYER_meta_raspberrypi_BRANCH">
-          <value>rocko</value>
+          <value>sumo</value>
         </variable>
       </environmentvariables>
       <materials>
