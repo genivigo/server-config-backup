@@ -2556,6 +2556,11 @@
                 <arg>scripts/ci-build.sh CI_FLAG</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="mkdir">
+                <arg>-p</arg>
+                <arg>staging</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
