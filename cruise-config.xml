@@ -3325,7 +3325,7 @@
             </resources>
             <artifacts>
               <artifact src="staging" />
-              <artifact src="gdp-source-build/bitbake-cookerdaemon.log" />
+              <artifact src="gdp-src-build/bitbake-cookerdaemon.log" />
             </artifacts>
           </job>
         </jobs>
