@@ -2885,7 +2885,7 @@
               <resource>yocto_build</resource>
             </resources>
             <artifacts>
-              <artifact src="meta-ivi/build/bitbake-cookerdaemon.log" />
+              <artifact src="build/bitbake-cookerdaemon.log" />
             </artifacts>
           </job>
         </jobs>
