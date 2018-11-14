@@ -137,7 +137,7 @@
         <role>Guest</role>
       </view>
       <admins>
-        <role>Developer</role>
+        <role>GDP_Developer</role>
       </admins>
     </authorization>
     <pipeline name="yocto-baseline-13-qemux86-64" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build">
