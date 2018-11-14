@@ -133,6 +133,7 @@
   <pipelines group="GENIVI_Baseline">
     <authorization>
       <view>
+        <user>guest</user>
         <role>Guest</role>
       </view>
       <admins>
