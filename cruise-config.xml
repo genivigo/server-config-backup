@@ -134,7 +134,6 @@
     <authorization>
       <view>
         <user>guest</user>
-        <role>Guest</role>
       </view>
       <admins>
         <role>GDP_Developer</role>
