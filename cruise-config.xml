@@ -132,10 +132,6 @@
   </scms>
   <pipelines group="GENIVI_Baseline">
     <authorization>
-      <view>
-        <user>guest</user>
-        <role>Guest</role>
-      </view>
       <admins>
         <role>Developer</role>
       </admins>
@@ -320,10 +316,6 @@
   </pipelines>
   <pipelines group="GENIVI_Baseline_Continuous_Layer_Integration">
     <authorization>
-      <view>
-        <user>guest</user>
-        <role>Guest</role>
-      </view>
       <admins>
         <role>Developer</role>
       </admins>
@@ -2803,6 +2795,11 @@
   </pipelines>
   <templates>
     <pipeline name="Yocto_GDP_generic_script_with_artifacts">
+      <authorization>
+        <admins>
+          <role>Developer</role>
+        </admins>
+      </authorization>
       <stage name="build" cleanWorkingDir="true">
         <jobs>
           <job name="init_and_bitbake">
@@ -2832,6 +2829,11 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_generic_script_NO_ARTIFACTS">
+      <authorization>
+        <admins>
+          <role>Developer</role>
+        </admins>
+      </authorization>
       <stage name="build" cleanWorkingDir="true">
         <jobs>
           <job name="init_and_bitbake">
@@ -2858,6 +2860,11 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS_no_auto">
+      <authorization>
+        <admins>
+          <role>Developer</role>
+        </admins>
+      </authorization>
       <stage name="build" cleanWorkingDir="true">
         <approval type="manual" />
         <jobs>
@@ -2892,6 +2899,11 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_generic_script_rm_work_NO_ARTIFACTS">
+      <authorization>
+        <admins>
+          <role>Developer</role>
+        </admins>
+      </authorization>
       <stage name="build" cleanWorkingDir="true">
         <jobs>
           <job name="init_and_bitbake">
@@ -2923,6 +2935,11 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_renesas_script_with_artifacts">
+      <authorization>
+        <admins>
+          <role>Developer</role>
+        </admins>
+      </authorization>
       <stage name="build" cleanWorkingDir="true">
         <jobs>
           <job name="init_and_bitbake">
@@ -2953,6 +2970,11 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_renesas_script_NO_ARTIFACTS">
+      <authorization>
+        <admins>
+          <role>Developer</role>
+        </admins>
+      </authorization>
       <stage name="build" cleanWorkingDir="true">
         <jobs>
           <job name="init_and_bitbake">
@@ -2980,6 +3002,11 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_renesas_script_rm_work_NO_ARTIFACTS">
+      <authorization>
+        <admins>
+          <role>Developer</role>
+        </admins>
+      </authorization>
       <stage name="build" cleanWorkingDir="true">
         <jobs>
           <job name="init_and_bitbake">
@@ -3012,6 +3039,11 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_generic_release_renesas">
+      <authorization>
+        <admins>
+          <role>Developer</role>
+        </admins>
+      </authorization>
       <stage name="build">
         <approval type="manual" />
         <jobs>
@@ -3044,6 +3076,11 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_generic_release">
+      <authorization>
+        <admins>
+          <role>Developer</role>
+        </admins>
+      </authorization>
       <stage name="build" cleanWorkingDir="true">
         <approval type="manual" />
         <jobs>
@@ -3075,6 +3112,11 @@
       </stage>
     </pipeline>
     <pipeline name="Yocto_GDP_generic_release_and_upload">
+      <authorization>
+        <admins>
+          <role>Developer</role>
+        </admins>
+      </authorization>
       <stage name="build">
         <approval type="manual" />
         <environmentvariables>
@@ -3229,11 +3271,7 @@
     <pipeline name="meta-ivi-build">
       <authorization>
         <admins>
-          <user>EBoto</user>
-          <user>tolkien</user>
-          <user>StephenL</user>
-          <user>dunderroffe</user>
-          <user>OscarA</user>
+          <role>Developer</role>
         </admins>
       </authorization>
       <stage name="Build">
