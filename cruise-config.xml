@@ -132,6 +132,9 @@
   </scms>
   <pipelines group="GENIVI_Baseline">
     <authorization>
+      <view>
+        <role>Guest</role>
+      </view>
       <admins>
         <role>Developer</role>
       </admins>
