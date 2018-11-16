@@ -4401,6 +4401,7 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
+    <agent hostname="yournamehere-go-agent" ipaddress="176.10.244.80" uuid="998d581f-c429-4d77-b8d4-a5985c840d20" isDisabled="true" />
   </agents>
 </cruise>
 
