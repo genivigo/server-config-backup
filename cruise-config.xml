@@ -4392,15 +4392,6 @@
         <resource>renesas_binaries</resource>
       </resources>
     </agent>
-    <agent hostname="webblack_qemu" ipaddress="172.17.0.3" uuid="02863898-0bd9-4fba-94b8-1e4338d63d21" isDisabled="true">
-      <resources>
-        <resource>test_qemux86-64</resource>
-        <resource>yocto_build</resource>
-        <resource>webblack_qemu</resource>
-        <resource>webblack</resource>
-        <resource>renesas_binaries</resource>
-      </resources>
-    </agent>
     <agent hostname="webblack_qemu" ipaddress="172.17.0.3" uuid="cf98cebc-9b35-4c40-a251-6d8832442fa9" isDisabled="true">
       <resources>
         <resource>test_qemux86-64</resource>
