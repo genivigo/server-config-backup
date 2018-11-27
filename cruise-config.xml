@@ -3449,6 +3449,7 @@
             </resources>
             <artifacts>
               <artifact src="build/bitbake-cookerdaemon.log" />
+              <artifact src="bitbake-cookerdaemon.log" />
             </artifacts>
           </job>
         </jobs>
