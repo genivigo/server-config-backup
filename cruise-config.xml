@@ -3443,6 +3443,11 @@
                 <arg>scripts/ci-build.sh $TARGET</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>touch {.,build}/bitbake-cookerdaemon.log</arg>
+                <runif status="passed" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
