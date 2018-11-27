@@ -3446,7 +3446,7 @@
               <exec command="bash">
                 <arg>-c</arg>
                 <arg>touch {.,build}/bitbake-cookerdaemon.log</arg>
-                <runif status="passed" />
+                <runif status="any" />
               </exec>
             </tasks>
             <resources>
