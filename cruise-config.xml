@@ -2632,7 +2632,7 @@
           <value>14.0</value>
         </variable>
         <variable name="STANDARD_RELEASE_BUILD">
-          <value>true</value>
+          <value>false</value>
         </variable>
         <variable name="COPY_LICENSES">
           <value>false</value>
