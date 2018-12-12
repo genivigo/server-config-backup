@@ -2408,7 +2408,7 @@
       <params>
         <param name="FORK">gunnarx</param>
         <param name="BRANCH">master</param>
-        <param name="LAYERBRANCH">sumo</param>
+        <param name="LAYERBRANCH">thud</param>
       </params>
       <environmentvariables>
         <variable name="TARGET">
