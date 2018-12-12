@@ -2407,7 +2407,7 @@
     <pipeline name="yocto-baseline-testimage" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="meta-ivi-build-with-script-and-test">
       <params>
         <param name="FORK">gunnarx</param>
-        <param name="BRANCH">ci_build_rcar</param>
+        <param name="BRANCH">master</param>
         <param name="LAYERBRANCH">sumo</param>
       </params>
       <environmentvariables>
