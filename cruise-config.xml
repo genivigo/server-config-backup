@@ -2968,6 +2968,7 @@
               <resource>renesas_binaries</resource>
             </resources>
             <artifacts>
+              <artifact src="gdp-src-build/bitbake-cookerdaemon.log" />
               <artifact src="staging" />
             </artifacts>
           </job>
@@ -3002,6 +3003,9 @@
               <resource>yocto_build</resource>
               <resource>renesas_binaries</resource>
             </resources>
+            <artifacts>
+              <artifact src="gdp-src-build/bitbake-cookerdaemon.log" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
@@ -3039,6 +3043,9 @@
               <resource>yocto_build</resource>
               <resource>renesas_binaries</resource>
             </resources>
+            <artifacts>
+              <artifact src="gdp-src-build/bitbake-cookerdaemon.log" />
+            </artifacts>
           </job>
         </jobs>
       </stage>
@@ -3073,6 +3080,7 @@
               <resource>renesas_binaries</resource>
             </resources>
             <artifacts>
+              <artifact src="gdp-src-build/bitbake-cookerdaemon.log" />
               <artifact src="staging/" />
               <artifact src="release/" />
             </artifacts>
@@ -3362,13 +3370,18 @@
                 <arg>scripts/ci-build.sh $TARGET</arg>
                 <runif status="passed" />
               </exec>
+              <exec command="bash">
+                <arg>-c</arg>
+                <arg>[ -e scripts/publish_error_log_files.sh ] &amp;&amp; scripts/publish_error_log_files.sh || true</arg>
+                <runif status="any" />
+              </exec>
             </tasks>
             <resources>
               <resource>yocto_build</resource>
             </resources>
             <artifacts>
-              <artifact src="staging" />
               <artifact src="gdp-src-build/bitbake-cookerdaemon.log" />
+              <artifact src="staging" />
             </artifacts>
           </job>
         </jobs>
