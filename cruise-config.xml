@@ -1159,6 +1159,104 @@
         <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" autoUpdate="false" materialName="mainrepo" />
       </materials>
     </pipeline>
+    <pipeline name="Release-fara-r-car-h3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">ces_demo</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-h3-starter-kit</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>14.2</value>
+        </variable>
+        <variable name="STANDARD_RELEASE_BUILD">
+          <value>true</value>
+        </variable>
+        <variable name="REUSE_STANDARD_SSTATE_DIR">
+          <value>true</value>
+        </variable>
+        <variable name="COPY_LICENSES">
+          <value>false</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" autoUpdate="false" materialName="mainrepo" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-fara-r-car-m3-starter-kit" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">ces_demo</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>r-car-m3-starter-kit</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>14.2</value>
+        </variable>
+        <variable name="STANDARD_RELEASE_BUILD">
+          <value>true</value>
+        </variable>
+        <variable name="REUSE_STANDARD_SSTATE_DIR">
+          <value>true</value>
+        </variable>
+        <variable name="COPY_LICENSES">
+          <value>false</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" autoUpdate="false" materialName="mainrepo" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-fara-minnowboard" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">ces_demo</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>minnowboard</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>14.2</value>
+        </variable>
+        <variable name="STANDARD_RELEASE_BUILD">
+          <value>true</value>
+        </variable>
+        <variable name="REUSE_STANDARD_SSTATE_DIR">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" autoUpdate="false" materialName="mainrepo" />
+      </materials>
+    </pipeline>
+    <pipeline name="Release-fara-raspberrypi3" labeltemplate="#{FORK}:#{BRANCH}:${mainrepo[:8]}" isLocked="false" template="Yocto_GDP_generic_release">
+      <params>
+        <param name="FORK">GENIVI</param>
+        <param name="BRANCH">ces_demo</param>
+      </params>
+      <environmentvariables>
+        <variable name="TARGET">
+          <value>raspberrypi3</value>
+        </variable>
+        <variable name="RELEASE">
+          <value>14.2</value>
+        </variable>
+        <variable name="STANDARD_RELEASE_BUILD">
+          <value>true</value>
+        </variable>
+        <variable name="REUSE_STANDARD_SSTATE_DIR">
+          <value>true</value>
+        </variable>
+      </environmentvariables>
+      <materials>
+        <git url="https://github.com/#{FORK}/genivi-dev-platform" branch="#{BRANCH}" autoUpdate="false" materialName="mainrepo" />
+      </materials>
+    </pipeline>
   </pipelines>
   <pipelines group="GDP_Software_Developer_Environment">
     <authorization>
