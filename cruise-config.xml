@@ -4528,6 +4528,7 @@
         <resource>test_qemux86-64</resource>
         <resource>yocto_build</resource>
         <resource>webblack_qemu</resource>
+        <resource>renesas_binaries</resource>
       </resources>
     </agent>
   </agents>
