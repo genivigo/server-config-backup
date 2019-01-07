@@ -2866,7 +2866,7 @@
     <pipeline name="Fetch_rcar_binaries" isLocked="false" template="fetch_dir_template">
       <params>
         <param name="TARGET_LOCATION">/var/go</param>
-        <param name="AGENT_RESOURCE">pelagic-agent</param>
+        <param name="AGENT_RESOURCE">renesas_binaries</param>
         <param name="ARTIFACT">rcar-gen3</param>
       </params>
       <materials>
